@@ -1,3 +1,11 @@
+Fork of the original OAD (Open Age of Decadence) project, focused on WebAssembly compatibility and browser-based execution. All original code, assets, copyrights, and licensing remain with their respective authors and contributors.
+
+
+
+
+
+
+
 # 0 A.D. Introductory Information
 
 [![FreeBSD Build Status](https://jenkins.wildfiregames.com/job/0ad-freebsd/job/main/badge/icon?subject=FreeBSD&style=plastic)](https://jenkins.wildfiregames.com/job/0ad-freebsd/job/main/)
