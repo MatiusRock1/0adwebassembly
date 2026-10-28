@@ -1,0 +1,54 @@
+--- a/source/renderer/WaterManager.h
++++ b/source/renderer/WaterManager.h
+@@ -46,9 +46,12 @@
+  * Anything that affects gameplay should go in CcmpWaterManager.cpp and passed to this (possibly as copy).
+  */
+ 
++class CTerrain;
++
+ class WaterManager
+ {
+ public:
++ void SetTerrain(const CTerrain* terrain) { m_ExplicitTerrain = terrain; }
+ 	CTexturePtr m_WaterTexture[60];
+ 	CTexturePtr m_NormalMap[60];
+ 
+@@ -217,6 +220,9 @@
+ 
+ private:
+ 	Renderer::Backend::IDevice* m_Device = nullptr;
++
++private:
++ const CTerrain* m_ExplicitTerrain = nullptr;
+ };
+ 
+ 
+--- a/source/renderer/WaterManager.cpp
++++ b/source/renderer/WaterManager.cpp
+@@ -528,7 +528,7 @@
+ // Calculate our binary heightmap from the terrain heightmap.
+ void WaterManager::RecomputeDistanceHeightmap()
+ {
+-	const CTerrain& terrain = g_Game->GetWorld()->GetTerrain();
++	const CTerrain& terrain = (m_ExplicitTerrain ? *m_ExplicitTerrain : g_Game->GetWorld()->GetTerrain());
+ 	if (!terrain.GetHeightMap())
+ 		return;
+ 
+@@ -558,7 +558,7 @@
+ 	if (m_MapSize == 0)
+ 		return;
+ 
+-	const CTerrain& terrain = g_Game->GetWorld()->GetTerrain();
++	const CTerrain& terrain = (m_ExplicitTerrain ? *m_ExplicitTerrain : g_Game->GetWorld()->GetTerrain());
+ 	if (!terrain.GetHeightMap())
+ 		return;
+ 
+@@ -1039,7 +1039,7 @@
+ 	if (!m_WindStrength)
+ 		m_WindStrength = std::make_unique<float[]>(m_MapSize * m_MapSize);
+ 
+-	const CTerrain& terrain = g_Game->GetWorld()->GetTerrain();
++	const CTerrain& terrain = (m_ExplicitTerrain ? *m_ExplicitTerrain : g_Game->GetWorld()->GetTerrain());
+ 	if (!terrain.GetHeightMap())
+ 		return;
+ 

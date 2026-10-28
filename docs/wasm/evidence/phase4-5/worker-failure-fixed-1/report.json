@@ -1,0 +1,24 @@
+{
+  "passed": false,
+  "phase45Accepted": false,
+  "performanceAcceptance": false,
+  "scope": "Controlled SDK worker error, not reproduction or resolution of the native null-function fault",
+  "errors": [],
+  "console": [],
+  "buildSHA256": {
+    "pyrogenesis-application.mjs": "8b4c2bbbf7baf76f429b29f7bca8ae72443d0b42b24ec9a9a65c7524eb47c454",
+    "pyrogenesis-application.wasm": "d7cc122be72ea67f443b4f9c7d245c3f9a26582cb7f7b2f0fb8d2e0478ae40e5",
+    "application.html": "a95439568efb0c65fe6c728ec2241470a4bc384679080ee5c4936be1a68433ce",
+    "application.mjs": "89c9a54b383a5c9b41c9091909668af752867338758693d6dcf29050803c5a7d",
+    "application-data.json": "5b84e2a95559994231e6408e51f4bd45f2048d274e63e9d0e8b7fc6f704c810a",
+    "webgpu-shaders.json": "8d9280a27514b940ed61a9d0710ad92c39c8b425ff013b2d29c8b4fb33f08085",
+    "renderer-session.mjs": "95058d8db9311e844a5b69d3a895d7eb40c80e17b1f08691451b452a463f63c4",
+    "webgpu-engine.mjs": "fc808918332b98430a4f1be58db4b41ac1560275d6ec4296265a08816fbcdb5e",
+    "webgpu-border.mjs": "e9a7d9a88ac447b908249dc863e8adf9907b07830615019699588cbb2d695e8b",
+    "application-pointer.mjs": "0e781c584dff24c3005f875b070f715046dabe3ea1e388edfecd3f998b36bb47",
+    "application-failure.mjs": "6f5b5d70105db9366e978fd0ba7a51578db9b22298c1272f24795f23b591ccc1"
+  },
+  "failure": "Page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8095/application.html?automation=1\nCall log:\n  - navigating to \"http://localhost:8095/application.html?automation=1\", waiting until \"load\"\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\jorlu\\OneDrive\\Documentos\\emprendimiento\\0 AD\\0adwebassembly\\wasm\\scripts\\verify-phase4-5-worker-failure.py\", line 22, in <module>\n    start_application(page)\n    ~~~~~~~~~~~~~~~~~^^^^^^\n  File \"C:\\Users\\jorlu\\OneDrive\\Documentos\\emprendimiento\\0 AD\\0adwebassembly\\wasm\\scripts\\phase4_browser.py\", line 26, in start_application\n    page.goto(url)\n    ~~~~~~~~~^^^^^\n  File \"C:\\Users\\jorlu\\OneDrive\\Documentos\\emprendimiento\\0 AD\\0adwebassembly\\wasm\\.venv-phase3\\Lib\\site-packages\\playwright\\sync_api\\_generated.py\", line 9019, in goto\n    self._sync(\n    ~~~~~~~~~~^\n        self._impl_obj.goto(\n        ^^^^^^^^^^^^^^^^^^^^\n            url=url, timeout=timeout, waitUntil=wait_until, referer=referer\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n        )\n        ^\n    )\n    ^\n  File \"C:\\Users\\jorlu\\OneDrive\\Documentos\\emprendimiento\\0 AD\\0adwebassembly\\wasm\\.venv-phase3\\Lib\\site-packages\\playwright\\_impl\\_sync_base.py\", line 115, in _sync\n    return task.result()\n           ~~~~~~~~~~~^^\n  File \"C:\\Users\\jorlu\\OneDrive\\Documentos\\emprendimiento\\0 AD\\0adwebassembly\\wasm\\.venv-phase3\\Lib\\site-packages\\playwright\\_impl\\_page.py\", line 555, in goto\n    return await self._main_frame.goto(**locals_to_params(locals()))\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\jorlu\\OneDrive\\Documentos\\emprendimiento\\0 AD\\0adwebassembly\\wasm\\.venv-phase3\\Lib\\site-packages\\playwright\\_impl\\_frame.py\", line 153, in goto\n    await self._channel.send(\n        \"goto\", self._navigation_timeout, locals_to_params(locals())\n    )\n  File \"C:\\Users\\jorlu\\OneDrive\\Documentos\\emprendimiento\\0 AD\\0adwebassembly\\wasm\\.venv-phase3\\Lib\\site-packages\\playwright\\_impl\\_connection.py\", line 69, in send\n    return await self._connection.wrap_api_call(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    ...<3 lines>...\n    )\n    ^\n  File \"C:\\Users\\jorlu\\OneDrive\\Documentos\\emprendimiento\\0 AD\\0adwebassembly\\wasm\\.venv-phase3\\Lib\\site-packages\\playwright\\_impl\\_connection.py\", line 559, in wrap_api_call\n    raise rewrite_error(error, f\"{parsed_st['apiName']}: {error}\") from None\nplaywright._impl._errors.Error: Page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8095/application.html?automation=1\nCall log:\n  - navigating to \"http://localhost:8095/application.html?automation=1\", waiting until \"load\"\n\n",
+  "teardownFailure": "Page.evaluate: TypeError: Cannot read properties of undefined (reading 'getApplicationWorkerState')\n    at eval (eval at evaluate (:290:30), <anonymous>:1:20)\n    at eval (<anonymous>)\n    at UtilityScript.evaluate (<anonymous>:290:30)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+}

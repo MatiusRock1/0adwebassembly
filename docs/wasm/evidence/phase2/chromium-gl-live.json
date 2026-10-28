@@ -1,0 +1,56 @@
+{
+  "browser": "chromium",
+  "console": [],
+  "errors": [
+    "ErrorEvent",
+    "Cannot read properties of undefined (reading 'getParameter')"
+  ],
+  "workerEvents": [
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-gl.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-gl.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-gl.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-gl.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-gl.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-gl.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-gl.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-gl.mjs"
+    }
+  ],
+  "cycleMetrics": [],
+  "version": "141.0.7390.37",
+  "headers": {
+    "cache-control": "no-store",
+    "content-length": "402",
+    "content-type": "text/html",
+    "cross-origin-embedder-policy": "require-corp",
+    "cross-origin-opener-policy": "same-origin",
+    "cross-origin-resource-policy": "same-origin",
+    "date": "Sun, 11 Oct 2026 23:19:06 GMT",
+    "last-modified": "Sun, 11 Oct 2026 23:13:30 GMT",
+    "server": "SimpleHTTP/0.6 Python/3.12.3"
+  },
+  "isolated": true
+}

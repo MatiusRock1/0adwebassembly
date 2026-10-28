@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "phase45Accepted": false,
+  "scope": "Native unit probe of browser frame-time integration; no game or GPU performance claim",
+  "result": {
+    "passed": true,
+    "checks": 6,
+    "mixedElapsedSeconds": 902
+  },
+  "exitCode": 0,
+  "sourceSHA256": {
+    "wasm\\probes\\application-frame-time.cpp": "b692d7c497e3faf53d65fa5127181ac173dd117b3696724fd4b3317df37e645e",
+    "wasm\\harness\\application-frame-time.h": "67dcf18508f305a4bf177a77ca08d970b80165274efb97a28b71c9bcde9698d7",
+    "wasm\\build\\phase4-5\\application-frame-time.exe": "b66a9797ff2f16a872ef02a7acd59eac0688ddb23e5129b649ab1aeaf82355b7"
+  }
+}

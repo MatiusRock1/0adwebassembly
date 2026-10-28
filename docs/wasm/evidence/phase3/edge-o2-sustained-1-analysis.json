@@ -1,0 +1,39 @@
+{
+  "samples": 56237,
+  "measuredSeconds": 899.9848000488281,
+  "submittedFps": 62.485499751716866,
+  "medianFrameMs": 16.01513671875,
+  "p95FrameMs": 17.324951171875,
+  "p99FrameMs": 18.349853515625,
+  "onePercentLowFps": 48.17883712371644,
+  "onePercentLowFormula": "1000 / mean(slowest ceil(N*0.01) frame intervals in ms)",
+  "pausesOver100Ms": 1,
+  "cpuMeanMs": {
+    "tickMs": 0.059123352952682395,
+    "interpolateMs": 0.08076026459448406,
+    "uploadMs": 0.015901897327382328,
+    "rendererMs": 0.675308071198677,
+    "presentMs": 0.7108022298486761
+  },
+  "maxBacklogMs": 199.995,
+  "hardware": {
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 Edg/155.0.0.0",
+    "concurrency": 16,
+    "deviceMemoryGiB": 32,
+    "dpr": 1.0000000149011612,
+    "renderer": "ANGLE (AMD, AMD Radeon(TM) Graphics (0x00001638) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "gpuTimerAvailable": true,
+    "offscreenAvailable": true
+  },
+  "acceptance": "PENDING",
+  "limitations": [
+    "No physical presentation feedback",
+    "GPU optional/asynchronous; GC callback windows are nested in CPU subsystem timings; scripting not separated",
+    "Hardware identity, parity and three repetitions require independent evidence"
+  ],
+  "submissionGate30": true,
+  "submissionGate60": false,
+  "tickRate": 5.000084445599365,
+  "simulationRateValid": true,
+  "gpuSamples": 0
+}

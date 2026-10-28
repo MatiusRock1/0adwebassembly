@@ -1,0 +1,69 @@
+{
+  "paused": true,
+  "localTime": "2026-10-18 23:04 America/Bogota",
+  "phase45Accepted": false,
+  "activeTests": false,
+  "activeCompilers": false,
+  "files": {
+    "wasm/dist/application-phase4-5-audio-error/link-report.json": {
+      "bytes": 64883,
+      "SHA256": "b7e6178e71fd8c2a2ea1b860e7a8e4e5272e2b092717a80e8005f79f26244c12"
+    },
+    "wasm/dist/application-phase4-5-audio-error/pyrogenesis-application.mjs": {
+      "bytes": 351016,
+      "SHA256": "436933b4ec2f90894713d48d61bb9a6f6ac1078080e54ee469e8498ae2d6d951"
+    },
+    "wasm/dist/application-phase4-5-audio-error/pyrogenesis-application.wasm": {
+      "bytes": 14585131,
+      "SHA256": "6d3cb9913bf7cb829b525de7e5afa452e96e73be9348030bd233cfdf1cbb588f"
+    },
+    "wasm/dist/application-phase4-5-audio-worker/link-report.json": {
+      "bytes": 64926,
+      "SHA256": "09100aaac0abbea00164cacfc970f4c2cf694d9d9e2c3bc69406f6d7847105b0"
+    },
+    "wasm/dist/application-phase4-5-audio-worker/pyrogenesis-application.wasm": {
+      "bytes": 14589558,
+      "SHA256": "2df6d1a497d60e60ba967f03662ac0904cd8f1fbc5bdd2b1bfd7909109b276b9"
+    },
+    "wasm/dist/application-phase4-5-cache-count/link-report.json": {
+      "bytes": 66769,
+      "SHA256": "7d4469dfc93bd0cb4a593ba4627cdaa80bc6fbb4d77abbd3f2b69caa8d967384"
+    },
+    "wasm/build/phase4-5/application-wasm-eh/compile-report.json": {
+      "bytes": 1075865,
+      "SHA256": "0f51dfca9a8d2bfb721ae61cec1d85a2414e7158b8edd331612cbeefad043326"
+    },
+    "wasm/build/phase4-5/application-audio-error/compile-report.json": {
+      "bytes": 1078437,
+      "SHA256": "1e3fab5191d1b42624474909a66d711f34c1848e73e902cd12ac602ecfa27a0e"
+    },
+    "wasm/build/phase4-5/linked-audio-error/link-report.json": {
+      "bytes": 66769,
+      "SHA256": "7d4469dfc93bd0cb4a593ba4627cdaa80bc6fbb4d77abbd3f2b69caa8d967384"
+    },
+    "wasm/build/phase4-5/application-audio-worker/compile-report.json": {
+      "bytes": 1078832,
+      "SHA256": "a61b29af28fa163d37224219e76e72e78c2180b41ce0dff056228303bb09ec94"
+    },
+    "wasm/experiments/audio-worker/application-audio-ensure.h": {
+      "bytes": 3076,
+      "SHA256": "27a4c02a384435b5e3334d5986c12ba51baf8fe5111184c779bcf9e59d250e69"
+    },
+    "wasm/scripts/phase45_audio_worker.py": {
+      "bytes": 4915,
+      "SHA256": "21754bf6f3d035d4a4eb8e9f161720ce039d1d7ca2a37db1936902994219a106"
+    },
+    "docs/wasm/evidence/phase4-5/cpu-profile-cache-count-1/cacheir-counts.json": {
+      "bytes": 2924,
+      "SHA256": "c33e44587fbe0c949c960ee4d3c48c303b66e92b700c06466d41ae51c40af07d"
+    },
+    "docs/wasm/evidence/phase4-5/performance-audio-worker-diagnostic-1/summary.json": {
+      "bytes": 2377,
+      "SHA256": "83a8c0ed8b2fb1a547941f740402c51a8da85f5d5a9185ab7520add972cf256e"
+    },
+    "wasm/build/phase4-5/cacheir-review/upstream-PortableBaselineInterpret.cpp": {
+      "bytes": 330222,
+      "SHA256": "5239167f0866c67f9cdc292ee9cea19cf32eb402729939134e811fdb152856de"
+    }
+  }
+}

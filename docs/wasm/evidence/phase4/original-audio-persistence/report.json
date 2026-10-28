@@ -1,0 +1,558 @@
+{
+  "passed": true,
+  "phase4Accepted": false,
+  "errors": [],
+  "console": [
+    "warning: unsupported syscall: __syscall_madvise\n",
+    "Main log written to '/logs/mainlog.html'",
+    "Interesting log written to '/logs/interestinglog.html'",
+    "Sound: AlcInit success, using Emscripten OpenAL",
+    "Hardware details written to '/logs/system_info.txt'",
+    "Failed to query SDL WM info: That operation is not supportedUserReport written to '/logs/userreport_hwdetect.txt'",
+    "Failed to load resource: the server responded with a status of 404 (File not found)",
+    "user callback triggered after runtime exited or application aborted.  Ignoring.",
+    "warning: unsupported syscall: __syscall_madvise\n",
+    "Main log written to '/logs/mainlog.html'",
+    "Interesting log written to '/logs/interestinglog.html'",
+    "Sound: AlcInit success, using Emscripten OpenAL",
+    "Hardware details written to '/logs/system_info.txt'",
+    "Failed to query SDL WM info: That operation is not supportedUserReport written to '/logs/userreport_hwdetect.txt'",
+    "Failed to load resource: the server responded with a status of 404 (File not found)",
+    "user callback triggered after runtime exited or application aborted.  Ignoring."
+  ],
+  "originalAudio": {
+    "contexts": [
+      {
+        "id": 2,
+        "state": "running",
+        "sampleRate": 48000,
+        "sources": 64,
+        "gain": 0.8999999761581421,
+        "playingSources": 1
+      }
+    ],
+    "decodedBuffers": [
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 241
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 383
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 382
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 383
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 383
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 383
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 384
+      }
+    ],
+    "closed": []
+  },
+  "savedConfig": "gui.splashscreen.enable = \"true\"\ngui.splashscreen.version = \"54612afb83b1888b49e92b06116ba4e3\"\nplayername.singleplayer = \"Local player\"\nsound.mastergain = \"0.4\"\nuserreport.enabledversion = \"0\"\nuserreport.id = \"14da8acebbbfbb1f\"\n",
+  "muteVerified": true,
+  "firstShutdown": {
+    "samples": [
+      {
+        "seconds": 0.003162899985909462,
+        "sdk": {
+          "running": [],
+          "pooled": [],
+          "pthreads": []
+        },
+        "workers": [
+          "http://localhost:8091/pyrogenesis-application.mjs"
+        ]
+      },
+      {
+        "seconds": 0.2627626000030432,
+        "sdk": {
+          "running": [],
+          "pooled": [],
+          "pthreads": []
+        },
+        "workers": [
+          "http://localhost:8091/pyrogenesis-application.mjs"
+        ]
+      },
+      {
+        "seconds": 0.5284435999928974,
+        "sdk": {
+          "running": [],
+          "pooled": [],
+          "pthreads": []
+        },
+        "workers": [
+          "http://localhost:8091/pyrogenesis-application.mjs"
+        ]
+      },
+      {
+        "seconds": 0.7910586000070907,
+        "sdk": {
+          "running": [],
+          "pooled": [],
+          "pthreads": []
+        },
+        "workers": [
+          "http://localhost:8091/pyrogenesis-application.mjs"
+        ]
+      },
+      {
+        "seconds": 1.05344150000019,
+        "sdk": {
+          "running": [],
+          "pooled": [],
+          "pthreads": []
+        },
+        "workers": [
+          "http://localhost:8091/pyrogenesis-application.mjs"
+        ]
+      },
+      {
+        "seconds": 1.3181414999999106,
+        "sdk": {
+          "running": [],
+          "pooled": [],
+          "pthreads": []
+        },
+        "workers": [
+          "http://localhost:8091/pyrogenesis-application.mjs"
+        ]
+      },
+      {
+        "seconds": 1.5858274000056554,
+        "sdk": {
+          "running": [],
+          "pooled": [],
+          "pthreads": []
+        },
+        "workers": [
+          "http://localhost:8091/pyrogenesis-application.mjs"
+        ]
+      },
+      {
+        "seconds": 1.8509195999940857,
+        "sdk": {
+          "running": [],
+          "pooled": [],
+          "pthreads": []
+        },
+        "workers": [
+          "http://localhost:8091/pyrogenesis-application.mjs"
+        ]
+      },
+      {
+        "seconds": 2.1132606999890413,
+        "sdk": {
+          "running": [],
+          "pooled": [],
+          "pthreads": []
+        },
+        "workers": []
+      }
+    ],
+    "sdk": {
+      "running": [],
+      "pooled": [],
+      "pthreads": []
+    },
+    "workers": [],
+    "liveApplicationTargets": []
+  },
+  "reloadedGain": 0.4000000059604645,
+  "secondShutdown": {
+    "samples": [
+      {
+        "seconds": 0.004110799985937774,
+        "sdk": {
+          "running": [],
+          "pooled": [],
+          "pthreads": []
+        },
+        "workers": [
+          "http://localhost:8091/pyrogenesis-application.mjs"
+        ]
+      },
+      {
+        "seconds": 0.2628416999941692,
+        "sdk": {
+          "running": [],
+          "pooled": [],
+          "pthreads": []
+        },
+        "workers": [
+          "http://localhost:8091/pyrogenesis-application.mjs"
+        ]
+      },
+      {
+        "seconds": 0.5265878000063822,
+        "sdk": {
+          "running": [],
+          "pooled": [],
+          "pthreads": []
+        },
+        "workers": [
+          "http://localhost:8091/pyrogenesis-application.mjs"
+        ]
+      },
+      {
+        "seconds": 0.7880081000039354,
+        "sdk": {
+          "running": [],
+          "pooled": [],
+          "pthreads": []
+        },
+        "workers": [
+          "http://localhost:8091/pyrogenesis-application.mjs"
+        ]
+      },
+      {
+        "seconds": 1.053930299996864,
+        "sdk": {
+          "running": [],
+          "pooled": [],
+          "pthreads": []
+        },
+        "workers": [
+          "http://localhost:8091/pyrogenesis-application.mjs"
+        ]
+      },
+      {
+        "seconds": 1.3172174000064842,
+        "sdk": {
+          "running": [],
+          "pooled": [],
+          "pthreads": []
+        },
+        "workers": [
+          "http://localhost:8091/pyrogenesis-application.mjs"
+        ]
+      },
+      {
+        "seconds": 1.5833895000105258,
+        "sdk": {
+          "running": [],
+          "pooled": [],
+          "pthreads": []
+        },
+        "workers": [
+          "http://localhost:8091/pyrogenesis-application.mjs"
+        ]
+      },
+      {
+        "seconds": 1.8488300000026356,
+        "sdk": {
+          "running": [],
+          "pooled": [],
+          "pthreads": []
+        },
+        "workers": [
+          "http://localhost:8091/pyrogenesis-application.mjs"
+        ]
+      },
+      {
+        "seconds": 2.1154558999987785,
+        "sdk": {
+          "running": [],
+          "pooled": [],
+          "pthreads": []
+        },
+        "workers": []
+      }
+    ],
+    "sdk": {
+      "running": [],
+      "pooled": [],
+      "pthreads": []
+    },
+    "workers": [],
+    "liveApplicationTargets": []
+  },
+  "engineErrors": []
+}

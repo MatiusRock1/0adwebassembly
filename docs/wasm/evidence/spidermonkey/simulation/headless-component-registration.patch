@@ -1,0 +1,25 @@
+--- a/simulation2/system/ComponentManager.cpp
++++ b/simulation2/system/ComponentManager.cpp
+@@ -88,7 +88,7 @@
+ 	// these functions, so we skip registering them here in those cases
+ 	if (!skipScriptFunctions)
+ 	{
+-		JSI_VFS::RegisterScriptFunctions_ReadOnlySimulation(m_ScriptInterface);
++		// Headless fixture loads its script from C++; JS VFS APIs are excluded.
+ 		Script::Request rq(m_ScriptInterface);
+ 		constexpr Script::Function::ObjectGetter<CComponentManager> Getter = &Script::Interface::ObjectFromCBData<CComponentManager>;
+ 		Script::Function::Register<&CComponentManager::Script_RegisterComponentType, Getter>(rq, "RegisterComponentType");
+@@ -145,11 +145,11 @@
+ 	RegisterMessageType(MT_##name, #name);
+ #define INTERFACE(name) \
+ 	extern void RegisterComponentInterface_##name(Script::Interface&); \
+-	RegisterComponentInterface_##name(m_ScriptInterface);
++	if constexpr (IID_##name == IID_Test1 || IID_##name == IID_Test2) RegisterComponentInterface_##name(m_ScriptInterface);
+ #define COMPONENT(name) \
+ 	extern void RegisterComponentType_##name(CComponentManager&); \
+ 	m_CurrentComponent = CID_##name; \
+-	RegisterComponentType_##name(*this);
++	if constexpr (CID_##name == CID_Test1A || CID_##name == CID_Test1B || CID_##name == CID_Test2A || CID_##name == CID_Test1Scripted || CID_##name == CID_Test2Scripted) RegisterComponentType_##name(*this);
+ 
+ #include "simulation2/TypeList.h"
+ 

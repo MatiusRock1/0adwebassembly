@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "sameSourceSHA256": "209d3290877f0ebef415a4b349547b74ea32020f1072de8ede499a25aa792885",
+  "sameInputArchive": true,
+  "controlObjectBytes": 766676,
+  "objectBytes": 767964,
+  "vmSHA256": "609d1d7829dcad020b29a94a4182e0efb24d42fd9d95a9db2b7fc063c1a9100d",
+  "performanceAcceptance": false
+}

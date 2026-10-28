@@ -1,0 +1,3657 @@
+{
+  "mapTerrainTags": [
+    "grass1_spring",
+    "desert_city_tile_plaza",
+    "desert_city_tile",
+    "medit_grass_wild",
+    "desert_cliff_1"
+  ],
+  "files": [
+    {
+      "path": "art/actors/particle/destruction_dust_med.xml",
+      "bytes": 181,
+      "sha256": "09c7298981c1b604f7379ad6f5c2a9ee65f3c5fce56fd952d718f198bf6c3ea8"
+    },
+    {
+      "path": "art/actors/particle/destruction_dust_med_gray.xml",
+      "bytes": 186,
+      "sha256": "7ca9668a4f3857b48870841258a97ea03df2f76515b4f4e1f69ffe56b5609050"
+    },
+    {
+      "path": "art/actors/particle/destruction_smoke_med.xml",
+      "bytes": 182,
+      "sha256": "3429ee5122f0f66cebf4c93399cc8eb7a853b18501aa3ed9cbfa6d814348cc77"
+    },
+    {
+      "path": "art/actors/particle/dust_cav.xml",
+      "bytes": 169,
+      "sha256": "68d1366600168cf9003d65e302082ea8702e05bd0268c6edd20137b3bc18dc10"
+    },
+    {
+      "path": "art/actors/props/horse/cav_rein_leather.xml",
+      "bytes": 1665,
+      "sha256": "089a542f49dc674ee5b877aee329e6c8c3efd9c9174aafc7b3fadfdf67dfe5bc"
+    },
+    {
+      "path": "art/actors/props/horse/chest_colorband_trader.xml",
+      "bytes": 1483,
+      "sha256": "fd298956af125fb8ec9f497742a87b1d21e6becb2b218b225c3f8158ed9fef6e"
+    },
+    {
+      "path": "art/actors/props/horse/horse_hair_mane_beige.xml",
+      "bytes": 1413,
+      "sha256": "52a4a93150558b8762a1b3ed4c842986787f5ae82e57519aa8aaec1186bfd42a"
+    },
+    {
+      "path": "art/actors/props/horse/horse_hair_mane_black.xml",
+      "bytes": 1322,
+      "sha256": "028dc83d755e5914dce583ef7f320674f8fcdd1f82f7f52e9c1f9976599cd2ef"
+    },
+    {
+      "path": "art/actors/props/horse/horse_hair_mane_black_brown.xml",
+      "bytes": 1500,
+      "sha256": "78bdf30e850dffc4dc4a75ea299ac82c92dd4e18919741036a55ae8a76690c45"
+    },
+    {
+      "path": "art/actors/props/horse/horse_hair_mane_blonde.xml",
+      "bytes": 1413,
+      "sha256": "9d2f73fb9d34d3ec3e912ceedbcc0dc09b78021adc1e386871f24487ee5a86bf"
+    },
+    {
+      "path": "art/actors/props/horse/horse_hair_mane_gray_black.xml",
+      "bytes": 1409,
+      "sha256": "b805d378c05e47d0c89193bf0e7d4f20efd8ac81680dee2f2cd92e1c0e9c5568"
+    },
+    {
+      "path": "art/actors/props/horse/horse_hair_tail_beige.xml",
+      "bytes": 1429,
+      "sha256": "396a82c26d700157d43d5d9c74a6017fb1703606e4e04a26bc5c56d144e959f0"
+    },
+    {
+      "path": "art/actors/props/horse/horse_hair_tail_black.xml",
+      "bytes": 1338,
+      "sha256": "5899d109c860432f8a96bae2220a200cb2873745c20bbc7f75f667e42d3c727e"
+    },
+    {
+      "path": "art/actors/props/horse/horse_hair_tail_black_brown.xml",
+      "bytes": 1516,
+      "sha256": "5414878ea06567cbe1528cc614350f4b99d7207f6ac5ccd97512d017483a500f"
+    },
+    {
+      "path": "art/actors/props/horse/horse_hair_tail_blonde.xml",
+      "bytes": 1429,
+      "sha256": "f66248f05030c63e3da17828d6c064be549f0d6343b5e0b0a917079e497a6727"
+    },
+    {
+      "path": "art/actors/props/horse/horse_hair_tail_gray_black.xml",
+      "bytes": 1425,
+      "sha256": "9fb4f618b425d7c50ec5f3559d0b0b6845cd1cd8c8cb6db6600e476a7f10b55b"
+    },
+    {
+      "path": "art/actors/props/horse/trader_blanket.xml",
+      "bytes": 1281,
+      "sha256": "dba4d0bc46cde4468a9ecde6f97411c2a160fe65180cd89a840bc140bc2e827e"
+    },
+    {
+      "path": "art/actors/props/special/common/garrison_flag_hele.xml",
+      "bytes": 600,
+      "sha256": "6ba985f4c3be2add4cfdd7ace92a360c9e2b35b400a2644443f6b0e18231abb3"
+    },
+    {
+      "path": "art/actors/props/structures/athenians/barracks_decor.xml",
+      "bytes": 544,
+      "sha256": "9805fd7c4590990d2b69cf27c20772f8f7a646a3da6c3c23ad2da758eca94eba"
+    },
+    {
+      "path": "art/actors/props/structures/athenians/barracks_props_a.xml",
+      "bytes": 552,
+      "sha256": "b33a161e63077bf2bcc2ac69ba730da8c2c80bafe8f0c35571097107f5bea388"
+    },
+    {
+      "path": "art/actors/props/structures/athenians/barracks_props_shields.xml",
+      "bytes": 479,
+      "sha256": "b80382f9edda71c19a716576e65c2bee9bde3e84f1c4838954a3a3ee206ab609"
+    },
+    {
+      "path": "art/actors/props/structures/athenians/barracks_struct_b.xml",
+      "bytes": 609,
+      "sha256": "290b5d37d7bcc36964598124d99e395f1722325e0d7d43cb658598cebff320a2"
+    },
+    {
+      "path": "art/actors/props/structures/athenians/barracks_tile_c.xml",
+      "bytes": 548,
+      "sha256": "6bb57acf4175573c2bb0b6bfcbadf4ff1466e6c121f8d556d2b6135a860b2363"
+    },
+    {
+      "path": "art/actors/props/structures/athenians/bireme_main_sail.xml",
+      "bytes": 1106,
+      "sha256": "ffb7528837647252fd48c8cbb91c347fa491eb52593c8843eb56169979239763"
+    },
+    {
+      "path": "art/actors/props/structures/athenians/dock_decor.xml",
+      "bytes": 518,
+      "sha256": "ac7c6c5766aee3efbeaac0272777f159c484c12e53df030ad5d9728996fbc78c"
+    },
+    {
+      "path": "art/actors/props/structures/athenians/dock_fishing_boat.xml",
+      "bytes": 527,
+      "sha256": "266a170c02cac7f3d9bdf59b3b5619a3970ebb0861a742570a3fb48940bcba96"
+    },
+    {
+      "path": "art/actors/props/structures/athenians/dock_props.xml",
+      "bytes": 524,
+      "sha256": "f9f39b75d8a0575cad4949b636d64344dff0288d99b5cec404b1c802401fac4f"
+    },
+    {
+      "path": "art/actors/props/structures/athenians/dock_struct_b.xml",
+      "bytes": 606,
+      "sha256": "c1160e211c40aab4f541aba5cfc800684e8906700fb34b507c5862f3227b2f5f"
+    },
+    {
+      "path": "art/actors/props/structures/athenians/dock_tiles.xml",
+      "bytes": 521,
+      "sha256": "e5a5fdc12f88d678cdd52269d1dfe05c1cc790e6de4d457224bc68bd11a723a8"
+    },
+    {
+      "path": "art/actors/props/structures/athenians/dock_warship.xml",
+      "bytes": 529,
+      "sha256": "93a611de48d988e453b8f65c76368eae1328004bb6e454b108857993ebafaa0f"
+    },
+    {
+      "path": "art/actors/props/structures/decals/dirt_6x6.xml",
+      "bytes": 530,
+      "sha256": "dd50b6c2f614d304d3afc2914ef375b23587ee49be3d23c6aa6dd511ce22f831"
+    },
+    {
+      "path": "art/actors/props/structures/hellenes/merchantship_cargo.xml",
+      "bytes": 436,
+      "sha256": "b194dcdcbc7bc109e50c590e9f8c1a5bfdd44509cdcb34e262e9b88a211f3b05"
+    },
+    {
+      "path": "art/actors/props/structures/hellenes/merchantship_sail.xml",
+      "bytes": 899,
+      "sha256": "3d3effd1b765273c2e7da05ec7f9e072c26e21c4e768b3e3d9429c61356c3bc3"
+    },
+    {
+      "path": "art/actors/props/structures/hellenes/merchantship_shield.xml",
+      "bytes": 441,
+      "sha256": "56d7e792707425052258e8bf7ebb8a75174c779c43336025c8d16365501c81a9"
+    },
+    {
+      "path": "art/actors/props/units/blood_01.xml",
+      "bytes": 2187,
+      "sha256": "656f50a90ee8b9c19e4ccad0574f61d4fdee6c30c7c64b8e08b1d8654e482a35"
+    },
+    {
+      "path": "art/actors/props/units/heads/new/head_hele_b.xml",
+      "bytes": 1872,
+      "sha256": "4956b46a80ad1ab4fcebd05ac361fad08887c25565681bca29f92a757b3e28a0"
+    },
+    {
+      "path": "art/actors/props/units/helmets/hele_boeotian.xml",
+      "bytes": 620,
+      "sha256": "d722ee3bd5e1922655fb02bbbf9529921ef2d0e200579f84353531cdf4b4aa37"
+    },
+    {
+      "path": "art/actors/props/units/helmets/hele_chalcidean_b1.xml",
+      "bytes": 1184,
+      "sha256": "0a51054dd60d3c7575651ad39bb2abc835baad036c9a3f24ea27833033d544dd"
+    },
+    {
+      "path": "art/actors/props/units/helmets/hele_chalcidean_b2.xml",
+      "bytes": 652,
+      "sha256": "557ad71a2a7581049a856d96870078cce23b4de6ab07220868ca38eff1da8c0e"
+    },
+    {
+      "path": "art/actors/props/units/helmets/hele_chalcidean_b3.xml",
+      "bytes": 1184,
+      "sha256": "bbbadc86ae60cac5a45b5edba3fee6efffc9f2b2dafe960a2a8bbf175f73470b"
+    },
+    {
+      "path": "art/actors/props/units/helmets/hele_chalcidean_b4.xml",
+      "bytes": 650,
+      "sha256": "54e4754fcec677c4314e9dbe3f4bfeaa075ca694f9a2ce7afca8a4bc78a4adf1"
+    },
+    {
+      "path": "art/actors/props/units/helmets/hele_chalcidean_b5.xml",
+      "bytes": 650,
+      "sha256": "49d32d966217e3bea792204a8111e228a57758569a62194a5c48386d037922ed"
+    },
+    {
+      "path": "art/actors/props/units/helmets/hele_illyrian_b1_crested.xml",
+      "bytes": 775,
+      "sha256": "da2f2c358a923411d6ec6a666d140a6f54a7b8fedd0a140fbd6aed56890a8d96"
+    },
+    {
+      "path": "art/actors/props/units/helmets/hele_illyrian_b2_crested.xml",
+      "bytes": 775,
+      "sha256": "763d8d604b1945c30cf44d7bbf604b56695b0a96bac6da97218fb96ea9860832"
+    },
+    {
+      "path": "art/actors/props/units/helmets/hele_pilos.xml",
+      "bytes": 622,
+      "sha256": "7735e8dd491bd397b5e4db075374ac412258bc52b45d62d3cb03b7b19276e372"
+    },
+    {
+      "path": "art/actors/props/units/helmets/hele_straw_01.xml",
+      "bytes": 647,
+      "sha256": "d7450222e1f68d3b7fbd7a874005abdf8ada829dc983debadf680cae7d6cab80"
+    },
+    {
+      "path": "art/actors/props/units/helmets/props/hele_attic_mask_b1.xml",
+      "bytes": 576,
+      "sha256": "eddb5985f65325e3402f6953224c2e679d26498ad9089b143233df24fe6982cb"
+    },
+    {
+      "path": "art/actors/props/units/helmets/props/hele_chalcidean_mask_b1.xml",
+      "bytes": 588,
+      "sha256": "09616fff850ad6877a99f12a30fcc7448ca8b5f815ac35747f338ecd1f9ad215"
+    },
+    {
+      "path": "art/actors/props/units/helmets/props/hele_crest_bronze_illyrian_01.xml",
+      "bytes": 1301,
+      "sha256": "1a63326d32acfb38cb719a7d2ef38807688edd1be974be79a064da6beab67c9f"
+    },
+    {
+      "path": "art/actors/props/units/helmets/props/hele_crest_hair_illyrian_01.xml",
+      "bytes": 678,
+      "sha256": "8fbd111b188b77e5358048fd54c95298aaa334ca4f12ec3a8e10cb97e32db1dc"
+    },
+    {
+      "path": "art/actors/props/units/rome_rock_packed.xml",
+      "bytes": 513,
+      "sha256": "575d60ca3712a84a27fd05ca68c70f48dd1f7bbd50c4edfc6aa924260f4c75a6"
+    },
+    {
+      "path": "art/actors/props/units/shields/aspis_athen_b.xml",
+      "bytes": 798,
+      "sha256": "383bced5ae6036d3655563ff2a5951765d8cb3c7f85ebd4b0477c4752db2fba5"
+    },
+    {
+      "path": "art/actors/props/units/shields/props/aspis_back_bronze_01.xml",
+      "bytes": 505,
+      "sha256": "32a47276717dfffefb8a12a6d84c96524bddc858900a8516a0f720a033a80503"
+    },
+    {
+      "path": "art/actors/props/units/shields/props/aspis_handgrip_bronze_01.xml",
+      "bytes": 623,
+      "sha256": "97b09e194338b7819c744c5fd6670c2bf58d6a7a6e3c2978791153b4e638c97a"
+    },
+    {
+      "path": "art/actors/props/units/shuttle_basket_back.xml",
+      "bytes": 484,
+      "sha256": "e4bbf6f556728fd0d86bda0385fe0322ade90cd211c258526bf60b22d493d891"
+    },
+    {
+      "path": "art/actors/props/units/shuttle_meat_male_L.xml",
+      "bytes": 442,
+      "sha256": "b272993b37dd9ad8d1cbc9ac62c9790ad535f7e7680b1fb7f8ab7d67fa717dcb"
+    },
+    {
+      "path": "art/actors/props/units/shuttle_meat_male_R.xml",
+      "bytes": 442,
+      "sha256": "5590cbc17dcf35eae7393b6b8e4253523ae4c3445799acb7eac230c3f7d17c91"
+    },
+    {
+      "path": "art/actors/props/units/shuttle_metal.xml",
+      "bytes": 490,
+      "sha256": "922fd1818c99e7b2d2beb9c2500a3c46eaca11dbf292a58330d53bb4c36ce62a"
+    },
+    {
+      "path": "art/actors/props/units/shuttle_stone.xml",
+      "bytes": 490,
+      "sha256": "7fb10fdc594125fb979ded9938bd877cac52b2f5554be90cc0cb964f4d8c16e2"
+    },
+    {
+      "path": "art/actors/props/units/shuttle_wood.xml",
+      "bytes": 429,
+      "sha256": "a05e812fbd9301df0acb1f15a5d897ff25e49052220cbdd0974e0bbc23230897"
+    },
+    {
+      "path": "art/actors/props/units/tools/axe.xml",
+      "bytes": 456,
+      "sha256": "d0a14fbd1b2b1df055289b2b8c8c8287d2c0a11131c6874a6f814cec24904eab"
+    },
+    {
+      "path": "art/actors/props/units/tools/basket_berries.xml",
+      "bytes": 520,
+      "sha256": "960160bbf3018edfa9814bf6131329d0df1b0238f42d196644b6967ab044200e"
+    },
+    {
+      "path": "art/actors/props/units/tools/hoe.xml",
+      "bytes": 731,
+      "sha256": "d55fd4d5e66deef0376a3e5ba6d7517b7d664181eeab0cee6b186daab5d5a342"
+    },
+    {
+      "path": "art/actors/props/units/tools/mallet.xml",
+      "bytes": 494,
+      "sha256": "bbbd400e2cb9dbfebc48abcbd2af5b6f661fd043b37d74583e2389bdedc311c3"
+    },
+    {
+      "path": "art/actors/props/units/tools/pick.xml",
+      "bytes": 457,
+      "sha256": "909404049e86282743e78f0ad7901d3a66737fc2a7e40f81d7df3b501829314a"
+    },
+    {
+      "path": "art/actors/props/units/weapons/bolt_tower.xml",
+      "bytes": 560,
+      "sha256": "ee7000e3f88516289c215a55d2afb668f3e51811ab95740a98c37ee8c1776f0b"
+    },
+    {
+      "path": "art/actors/props/units/weapons/dagger.xml",
+      "bytes": 465,
+      "sha256": "4b127f4094285cfe055e2a801cb38f93967d81a2df7dc677e035a0f2da7ddd7f"
+    },
+    {
+      "path": "art/actors/props/units/weapons/falcata.xml",
+      "bytes": 972,
+      "sha256": "47d7d441a0f3fc61ac9bef95bffb9c211ff3de9a1b3655d9d05889ac56838f63"
+    },
+    {
+      "path": "art/actors/props/units/weapons/rock.xml",
+      "bytes": 476,
+      "sha256": "44fae7c1689ee56fee8447277058ba84ef8114cd07de7c6977c6174e8d381097"
+    },
+    {
+      "path": "art/actors/props/units/weapons/spear_hoplite.xml",
+      "bytes": 445,
+      "sha256": "f8210a6fcdd623180b60dd94608b684cffc64af481689b7409bd6c66ed2deb0f"
+    },
+    {
+      "path": "art/actors/props/units/weapons/spear_lance_cavalry_reverse.xml",
+      "bytes": 459,
+      "sha256": "73b06b6422d276558e8f78e4d89847035f0edea507557475cf2f5206050253fb"
+    },
+    {
+      "path": "art/actors/props/units/weapons/xiphos.xml",
+      "bytes": 967,
+      "sha256": "352d4255193e19d2930b47b651a9027d71004573ef214e7e2e76047f3c011d7d"
+    },
+    {
+      "path": "art/actors/structures/athenians/barracks.xml",
+      "bytes": 2056,
+      "sha256": "e407498a6e5ac47892f9b3ef4851e75c0557d2145e82253127362f5cfa47e2f9"
+    },
+    {
+      "path": "art/actors/structures/athenians/dock.xml",
+      "bytes": 2044,
+      "sha256": "6ebef50310bb11ba1c1afe7d7e8db42949195e5210cc29bade6eda969523fc02"
+    },
+    {
+      "path": "art/actors/structures/athenians/pentekonter_scout.xml",
+      "bytes": 903,
+      "sha256": "e6d5a3d853f3e3f54a7a23e984e9bf402ac1c90e69f6555522b2e3af60deb227"
+    },
+    {
+      "path": "art/actors/structures/hellenes/merchant.xml",
+      "bytes": 1017,
+      "sha256": "8bceacc8b32813bf4e36ee20fb21c27b74a4972ece05fb74734476fd50986492"
+    },
+    {
+      "path": "art/actors/units/athenians/ballista_infantry_a.xml",
+      "bytes": 2521,
+      "sha256": "a1aa4216c11241bc236d591eafd5230d8cacd08c9b005e1e1c9f69cd62661ebf"
+    },
+    {
+      "path": "art/actors/units/athenians/ballista_infantry_b.xml",
+      "bytes": 2521,
+      "sha256": "29e8c7d36401228556bdf83ae5472a33e2221246fd0130c8e1e3f162d15918b6"
+    },
+    {
+      "path": "art/actors/units/athenians/cavalry_swordsman_b_m.xml",
+      "bytes": 1664,
+      "sha256": "4b69d11f8a3819f6e710e63b8aa08b6be936e7eec73fa68b8167e17890435dd2"
+    },
+    {
+      "path": "art/actors/units/athenians/cavalry_swordsman_b_r.xml",
+      "bytes": 1694,
+      "sha256": "038ff8d5852105d1d42de9815d4bb0627b9fbf0232d646ed02040090a8e44e92"
+    },
+    {
+      "path": "art/actors/units/athenians/infantry_spearman_b.xml",
+      "bytes": 3469,
+      "sha256": "0c69b560640e603bf48a1ada8a82637306690b82fc7dcfca869240ed43e74718"
+    },
+    {
+      "path": "art/actors/units/athenians/siege_rock_packed.xml",
+      "bytes": 1242,
+      "sha256": "922b96640686aec0b0dc641368aee04cc83eb3859517471b6dee84edb68b0949"
+    },
+    {
+      "path": "art/actors/units/hellenes/trader_h.xml",
+      "bytes": 1556,
+      "sha256": "2575bcb847fae106624c9819fa32fbefd0df2bc43e262ece5157bda243af5f0b"
+    },
+    {
+      "path": "art/animation/biped/citizen/build.dae",
+      "bytes": 710838,
+      "sha256": "f05c74d89ca076ebbb3c50837e18f4dbc4cbbbb53388d50f24d27ce4e4b4d162"
+    },
+    {
+      "path": "art/animation/biped/citizen/idle_relax_m_a.dae",
+      "bytes": 1350706,
+      "sha256": "414f3ce18f609a3478532ede3a6a21bc29fee64d2d40bd7e06efbbbe3a445656"
+    },
+    {
+      "path": "art/animation/biped/citizen/idle_relax_m_b.dae",
+      "bytes": 1349384,
+      "sha256": "25b22e14a4c718f8e107815ce36099196cbb881351b08723e5340f9d8d2e02cb"
+    },
+    {
+      "path": "art/animation/biped/citizen/idle_relax_m_c.dae",
+      "bytes": 1349215,
+      "sha256": "93e5801e49eaa13bf8ed3ff050840ccdff21e4a2c7e4cdacc13ae77d3cd59bcf"
+    },
+    {
+      "path": "art/animation/biped/citizen/idle_relax_m_d.dae",
+      "bytes": 1351947,
+      "sha256": "a12b49051c428040f3c0a45450a029e6b2d5dbcb75bd4a711e234dbc67df5780"
+    },
+    {
+      "path": "art/animation/biped/citizen/idle_relax_m_e.dae",
+      "bytes": 1350621,
+      "sha256": "9aea3cabf181446f2683ee9ea03735e36a9138276e13d512050a2fca1c430db7"
+    },
+    {
+      "path": "art/animation/biped/citizen/idle_relax_m_f.dae",
+      "bytes": 1349380,
+      "sha256": "7f9c525a60fa3f13f609ca72e438bc2c5889eb2c6c4ea22644d1259e7e04423c"
+    },
+    {
+      "path": "art/animation/biped/citizen/idle_relax_m_g.dae",
+      "bytes": 1348048,
+      "sha256": "cd7efc19b1565213ce095aae226ed4033029e7452ea16d75b3a1bb4d0074a52b"
+    },
+    {
+      "path": "art/animation/biped/citizen/pray.dae",
+      "bytes": 1300855,
+      "sha256": "f0a3ba8e5b853b756e17923bb69d4db0e6fc903ac1778825b70b9c6ddea03ade"
+    },
+    {
+      "path": "art/animation/biped/citizen/run.dae",
+      "bytes": 729957,
+      "sha256": "5f27bf322e0d467f92e2183fcf7c3f6a305e752072929eedb82bb26d1531e1fc"
+    },
+    {
+      "path": "art/animation/biped/citizen/walk_relax_m.dae",
+      "bytes": 1042890,
+      "sha256": "45e39259780aab388506495d6564a49a0b84fbd0a6e35228326b9cd38e190b1d"
+    },
+    {
+      "path": "art/animation/biped/citizen/walk_relax_m_aggresive.dae",
+      "bytes": 1048638,
+      "sha256": "149e92d063637b95b667d6ca2f9f262456c1213db9340bbc1fa1840be5ceff16"
+    },
+    {
+      "path": "art/animation/biped/gatherer/carry_grain_m.dae",
+      "bytes": 865403,
+      "sha256": "64f6f9d9e8f18586b88d93332c748e7483d704d01ff6fee23bd143635291fdb6"
+    },
+    {
+      "path": "art/animation/biped/gatherer/carry_meat_m.dae",
+      "bytes": 866272,
+      "sha256": "363f9e5ed6c6136cebd2809226af75aa1e87168e5e3500c7c8da6c60f5209f17"
+    },
+    {
+      "path": "art/animation/biped/gatherer/carry_ore_m.dae",
+      "bytes": 864436,
+      "sha256": "67b5ccb357d6b50121e6bf6ce1c25542c2437b47d0f6f38d810f1a10e1bf81e5"
+    },
+    {
+      "path": "art/animation/biped/gatherer/carry_wood_m.dae",
+      "bytes": 865804,
+      "sha256": "20c2cf018fdd6e43b70b0287d8c375fb12fb0de4bc5b9faff733bcb77cd71a9d"
+    },
+    {
+      "path": "art/animation/biped/gatherer/farming.dae",
+      "bytes": 1376157,
+      "sha256": "83b9c44a4a6426007a1cb5617f2a021feb4bc9df8585da163c52da1dfc3a83f8"
+    },
+    {
+      "path": "art/animation/biped/gatherer/gather_fruit_m.dae",
+      "bytes": 2826750,
+      "sha256": "69280082247a8da547cf4a6857f03804d49f5751dbd5328b31ad50d2f403d50c"
+    },
+    {
+      "path": "art/animation/biped/gatherer/gather_meat.dae",
+      "bytes": 1903031,
+      "sha256": "b36f748d595f9ebb9257d353076f77a433289824e48176a197c1f1de7eb2ef4a"
+    },
+    {
+      "path": "art/animation/biped/gatherer/gather_mine.dae",
+      "bytes": 1515301,
+      "sha256": "39ce3347086a086be36201f254e0ed4e3f786f996d3554306b85fd8f577d98a2"
+    },
+    {
+      "path": "art/animation/biped/gatherer/gather_wood.dae",
+      "bytes": 1357986,
+      "sha256": "ab6cb5f61b1adf287c17bcfbf58de427d93fec1549fba505c1e364b9fba2269d"
+    },
+    {
+      "path": "art/animation/biped/gatherer/idle_axe_01.dae",
+      "bytes": 1356312,
+      "sha256": "eccc2309e2a89ad4b62ee050157c346f50b9f094aea6dfb3ee0d2ba421c8647a"
+    },
+    {
+      "path": "art/animation/biped/gatherer/idle_carry_grain_m.dae",
+      "bytes": 1336754,
+      "sha256": "b0c139965965cecfc261fc076f4b34f5dd398888d0a890e19cc3bd17baf7673a"
+    },
+    {
+      "path": "art/animation/biped/gatherer/idle_carry_meat_m.dae",
+      "bytes": 1326434,
+      "sha256": "bedb9eee212861b4b0cdefcf4693bd4a6797897d97af34b81a9a255dc0b163ac"
+    },
+    {
+      "path": "art/animation/biped/gatherer/idle_carry_ore_m.dae",
+      "bytes": 1327419,
+      "sha256": "a1411b91c981a57cf98578ab59b04b0cc88fe499acc3eec18d389a0d96deb977"
+    },
+    {
+      "path": "art/animation/biped/gatherer/idle_carry_wood_m.dae",
+      "bytes": 1326374,
+      "sha256": "b7f652b7d332347baedcfd289a49f70837d8ca72c1225bade3624146f593bbfe"
+    },
+    {
+      "path": "art/animation/biped/gatherer/idle_hoe_01.dae",
+      "bytes": 1350447,
+      "sha256": "9d7c92a8abb776f8f31edcf8f495297bae9f34230ae075e8f27518c5ae1681cc"
+    },
+    {
+      "path": "art/animation/biped/gatherer/slaughter.dae",
+      "bytes": 1155365,
+      "sha256": "e2425a7896b6f22f35134d2db75021853c1324f0676b29d03f8393dc7874ba8d"
+    },
+    {
+      "path": "art/animation/biped/gatherer/walk_axe.dae",
+      "bytes": 1050063,
+      "sha256": "29d16003e00c859536dcac904206b99096b8896d7228da1f39eff419b4f8e8a2"
+    },
+    {
+      "path": "art/animation/biped/gatherer/walk_hoe.dae",
+      "bytes": 1042376,
+      "sha256": "287dd216fcbf8ee3d8179c1b0961ce9fb08a20e391e15bd0bbdf8d3d4e693715"
+    },
+    {
+      "path": "art/animation/biped/gatherer/walk_pickaxe.dae",
+      "bytes": 1053787,
+      "sha256": "d7b9f8733e796a41c5079579f5b99b4230545a2b27698246aa4151e57748005b"
+    },
+    {
+      "path": "art/animation/biped/infantry/capturing_a.dae",
+      "bytes": 900703,
+      "sha256": "39b2c904bb9ed7fdb919dcb051e8a0d49c8c7ee5ebf07f8e2a0f339aa35af2ab"
+    },
+    {
+      "path": "art/animation/biped/infantry/death_a.dae",
+      "bytes": 867565,
+      "sha256": "78802e0531e0881c38ffa28fb6b281ea18edcd8c95f3acfa2a883e287f1f8df4"
+    },
+    {
+      "path": "art/animation/biped/infantry/death_b.dae",
+      "bytes": 1102893,
+      "sha256": "46793fd672b98bdd301b4e4fe9607634d2b05a639b6651cea50419497b1eda9d"
+    },
+    {
+      "path": "art/animation/biped/infantry/hoplite/attack_melee_04.dae",
+      "bytes": 966225,
+      "sha256": "b8bf6b300fbd0b60950706de9b7348a8f5d74f2125277b92700a98bf4e5ba4ca"
+    },
+    {
+      "path": "art/animation/biped/infantry/hoplite/attack_melee_05.dae",
+      "bytes": 971958,
+      "sha256": "daaf7edad547587c6527e0ae613af2d49af5d0d13baa6fadfa0ceb96aa0f4319"
+    },
+    {
+      "path": "art/animation/biped/infantry/hoplite/idle_ready_01.dae",
+      "bytes": 1434453,
+      "sha256": "36e89912f711e265fab55372b55c5c10b6857de52fe8a5ccb18a0d589c17736b"
+    },
+    {
+      "path": "art/animation/biped/infantry/hoplite/idle_ready_back.dae",
+      "bytes": 1420339,
+      "sha256": "2a75f328445613007acd734a4021ec653e2ad64f9a04dd227e2da0b72a569545"
+    },
+    {
+      "path": "art/animation/biped/infantry/hoplite/idle_ready_front.dae",
+      "bytes": 1351880,
+      "sha256": "f11e07d32c426c20f5655229e5ba4fdae4adfbdb8ae2e8d9f570aff2beefed3d"
+    },
+    {
+      "path": "art/animation/biped/infantry/hoplite/idle_relax_01.dae",
+      "bytes": 1392557,
+      "sha256": "d3d24e10285d95c7fbce3ccffe078447e24604e3a091087bf63b5b5f7eb53f32"
+    },
+    {
+      "path": "art/animation/biped/infantry/hoplite/idle_relax_02.dae",
+      "bytes": 1391293,
+      "sha256": "f702728dca535ca814460f31f7fda8f7cb7976598977a75fb6ab28e69d6ef9b7"
+    },
+    {
+      "path": "art/animation/biped/infantry/hoplite/idle_relax_03.dae",
+      "bytes": 1390981,
+      "sha256": "e96cb3b6e5cda2bd1df0a09999b3c2a70bb6313bd930b65aa7744e0be7b5e54b"
+    },
+    {
+      "path": "art/animation/biped/infantry/hoplite/idle_relax_04.dae",
+      "bytes": 1391163,
+      "sha256": "e51bc8bbda5fd5a1ffe7ce22d971bcee1d2aa7b08db8d9a338d861b79afe953d"
+    },
+    {
+      "path": "art/animation/biped/infantry/hoplite/idle_relax_05.dae",
+      "bytes": 1397625,
+      "sha256": "33768a396212b1c69dfc6ea8d51e4c7c3c63527add00e48e9a4b333c23cb2754"
+    },
+    {
+      "path": "art/animation/biped/infantry/hoplite/idle_relax_06.dae",
+      "bytes": 1398570,
+      "sha256": "13cb14bb08ed7683f266b992f311917cf595ea928fb96853c6d3bbc10788e27e"
+    },
+    {
+      "path": "art/animation/biped/infantry/hoplite/idle_relax_long_01.dae",
+      "bytes": 3457592,
+      "sha256": "0e310b6885c4d353f1a1311aad1cbf832bf34a6b70aac33ff32836dc71cab2b4"
+    },
+    {
+      "path": "art/animation/biped/infantry/hoplite/jog_ready.dae",
+      "bytes": 740300,
+      "sha256": "dae7dc6c9c5ea6dcd2b22182c984dc050c095511a919d4c135603a12e3f2c740"
+    },
+    {
+      "path": "art/animation/biped/infantry/hoplite/run_ready.dae",
+      "bytes": 765563,
+      "sha256": "f71a144be3a016521e0454f48c3d7c3961e323f6c38fe10c2625940714f98d74"
+    },
+    {
+      "path": "art/animation/biped/infantry/hoplite/run_relax.dae",
+      "bytes": 841331,
+      "sha256": "cb056a8c44517b7d9101b3120e4ed021f307d6f600335d0d076a9b2dfa31ff79"
+    },
+    {
+      "path": "art/animation/biped/infantry/hoplite/walk_ready.dae",
+      "bytes": 1016422,
+      "sha256": "768a07ffaa0505525191a6a7313eb5e32b69af8452b47b7839f8190ee4b79646"
+    },
+    {
+      "path": "art/animation/biped/infantry/hoplite/walk_ready_front.dae",
+      "bytes": 1017215,
+      "sha256": "cfa6b7c5c01463d2257cd26ad117e2aef28c2752670dd0dbfc9dfc71d6cb3580"
+    },
+    {
+      "path": "art/animation/biped/infantry/hoplite/walk_relax.dae",
+      "bytes": 1056959,
+      "sha256": "2386226422203d277cac7c35fda725e60365471d23f32962f9f277b3e43c09a7"
+    },
+    {
+      "path": "art/animation/biped/infantry/promotion.dae",
+      "bytes": 1183318,
+      "sha256": "dd3ef1e5ff428c2f64eed319c2b888a99e507af35eb20e8683f9d61531b3f5c4"
+    },
+    {
+      "path": "art/animation/biped/infantry/siege_operators/lithobolos_attack_a.dae",
+      "bytes": 827504,
+      "sha256": "175089821b91d0614fd86c970b64a0fc5044dd1feeb7a6eb1cecf8f151ca4e2f"
+    },
+    {
+      "path": "art/animation/biped/infantry/siege_operators/lithobolos_attack_b.dae",
+      "bytes": 821985,
+      "sha256": "4ef522b48374924851010e04a86b096dd3c53d7b2da0a5eb7ce5c6f274a2b924"
+    },
+    {
+      "path": "art/animation/biped/rider/cavalry/generic/attack_capture.dae",
+      "bytes": 1168527,
+      "sha256": "fa0d1ed6d73119098ae070190c1bbec7fce9e6294adfbbc84963f93b68d0848c"
+    },
+    {
+      "path": "art/animation/biped/rider/cavalry/generic/attack_melee_01.dae",
+      "bytes": 1020514,
+      "sha256": "581b6b26da69a93158651ee1b1f9e80be079fbff8ad0f90e2e86b7fc0aecf395"
+    },
+    {
+      "path": "art/animation/biped/rider/cavalry/generic/attack_melee_02.dae",
+      "bytes": 1021505,
+      "sha256": "acc874681ae47fbf6d25cc613f336586d1db49c34292c66e98a5f9e47ee73665"
+    },
+    {
+      "path": "art/animation/biped/rider/cavalry/generic/attack_melee_03.dae",
+      "bytes": 1020920,
+      "sha256": "39932f8c8f6ff4b85bdc970ad63cd608740d4918f2fd45b34b2dd2f5c7146c52"
+    },
+    {
+      "path": "art/animation/biped/rider/cavalry/generic/carry_meat.dae",
+      "bytes": 732544,
+      "sha256": "3106cb5216c9c6a923097117da4b9098f4f9ef28165895150a2b253ca3b338b2"
+    },
+    {
+      "path": "art/animation/biped/rider/cavalry/generic/death_01.dae",
+      "bytes": 1459976,
+      "sha256": "4d88ac230d2b04e7ea358ee072bc149aa8b575e82f52ca0c9aedcedb0e7123e7"
+    },
+    {
+      "path": "art/animation/biped/rider/cavalry/generic/death_02.dae",
+      "bytes": 1462252,
+      "sha256": "b11d9bcf005b9fb6a7897f3996d37cd724a9871a0f572f1874b55cd3ca3a6e6b"
+    },
+    {
+      "path": "art/animation/biped/rider/cavalry/generic/gallop_ready.dae",
+      "bytes": 731386,
+      "sha256": "4fbef04685509f2cbe053f9c8fc97ce0d8ac002218c6b83bb85e849055c13924"
+    },
+    {
+      "path": "art/animation/biped/rider/cavalry/generic/idle_carry_meat.dae",
+      "bytes": 1308677,
+      "sha256": "86eb02bc6a1abbc18b7267aad73243c8f43a4a1192f886b08dfe6624d6a973e4"
+    },
+    {
+      "path": "art/animation/biped/rider/cavalry/generic/idle_relax_01.dae",
+      "bytes": 1310956,
+      "sha256": "cd39fa15d63298f6894e9541b967d9d61a7dc43838c71592bc697c3cb182ea6b"
+    },
+    {
+      "path": "art/animation/biped/rider/cavalry/generic/idle_relax_02.dae",
+      "bytes": 1308970,
+      "sha256": "ef1679cbfb565f928c1302381911825e1ebbc10333e4a29d7fc9f421d85cea3a"
+    },
+    {
+      "path": "art/animation/biped/rider/cavalry/generic/idle_relax_03.dae",
+      "bytes": 1309253,
+      "sha256": "74bc5012dfc6195be84f28e2877568e08a83c2e3d8389b51939e67282f89897e"
+    },
+    {
+      "path": "art/animation/biped/rider/cavalry/generic/idle_relax_04.dae",
+      "bytes": 2188331,
+      "sha256": "afd99d16b5b7f2c80dbc0c9209880d597dfa46e47eb0a74c84f1cfb0ce88a4ce"
+    },
+    {
+      "path": "art/animation/biped/rider/cavalry/generic/idle_relax_05.dae",
+      "bytes": 2188770,
+      "sha256": "596450a93fa66755ffed1df6b0fd6545b25a3e3059178af3fc3084309d40cf3f"
+    },
+    {
+      "path": "art/animation/biped/rider/cavalry/generic/trot_relax.dae",
+      "bytes": 731324,
+      "sha256": "6128ab4ff5d31d96430e3d18040b41ab44e11f4a490084be48134e1ae4f58fb5"
+    },
+    {
+      "path": "art/animation/biped/rider/cavalry/promotion.dae",
+      "bytes": 1761416,
+      "sha256": "e15f952c8886548e264e8bb8e7a461500478db350321d680ee9eca3e3db4e25d"
+    },
+    {
+      "path": "art/animation/mechanical/garrison_flag_idle.dae",
+      "bytes": 39241,
+      "sha256": "5d8a9de54e262aad4a8e0c85134e93f8325a3cb31c41c348b7013818084ad242"
+    },
+    {
+      "path": "art/animation/mechanical/wagon_four_wheel_empty_idle.dae",
+      "bytes": 438333,
+      "sha256": "8ccbe6e4ea867c0509ec471451fc8c1bdce75fe6937a0ce00bc766fd61ebeb07"
+    },
+    {
+      "path": "art/animation/mechanical/wagon_four_wheel_empty_move.dae",
+      "bytes": 418731,
+      "sha256": "6677af8cb0610a697fd5c7820819733f177ba82724085d25eb76d10e887a5a44"
+    },
+    {
+      "path": "art/animation/other/main_sail_idle.dae",
+      "bytes": 1118456,
+      "sha256": "9e078e182a719cb9a296b3c47de4cc848fe178b78394f2448042dd19344b7e1c"
+    },
+    {
+      "path": "art/animation/other/main_sail_move.dae",
+      "bytes": 876942,
+      "sha256": "5d30f10804db0a73d79f3e5c18522ed861c20d5a735153039d53b07c126f32d4"
+    },
+    {
+      "path": "art/animation/quadraped/horse_attack_01.dae",
+      "bytes": 997094,
+      "sha256": "1a1d51faebd9dac240beb560dec1ffe82ca08d902e95baaa7bf5ae964824ff6d"
+    },
+    {
+      "path": "art/animation/quadraped/horse_attack_02.dae",
+      "bytes": 997487,
+      "sha256": "e1e0def3ac3c8893ac10525f5e7bfaa24f160824a216c6809870dbea50185358"
+    },
+    {
+      "path": "art/animation/quadraped/horse_attack_03.dae",
+      "bytes": 1003815,
+      "sha256": "f631ab596994aaa2b41b2853f4b926393d86cdb88e78befe7c93bed4a2631067"
+    },
+    {
+      "path": "art/animation/quadraped/horse_attack_ranged_jav_01.dae",
+      "bytes": 1240462,
+      "sha256": "ea69afebadb9454e4a5c469c5e48fe84f3ad2305d7e2f8c34ce863f663c925c6"
+    },
+    {
+      "path": "art/animation/quadraped/horse_attack_ranged_jav_02.dae",
+      "bytes": 1232476,
+      "sha256": "6879ad5b5ca5497917db564218de4392c90beee2e013db79b9b69c0c720e6448"
+    },
+    {
+      "path": "art/animation/quadraped/horse_death_01.dae",
+      "bytes": 1364459,
+      "sha256": "326e5e915953db6ada835f0b2958c986c7c8b130bdbaa07cbf1246ac0ed072d1"
+    },
+    {
+      "path": "art/animation/quadraped/horse_death_02.dae",
+      "bytes": 1353496,
+      "sha256": "773541f89e507b12c0769fbba97c768d8a54a36182a1f427e1acb480976b189f"
+    },
+    {
+      "path": "art/animation/quadraped/horse_gallop.dae",
+      "bytes": 759875,
+      "sha256": "7843cc1e9e869fefd7b815ed68fbb433101f78b90bb59bc72e24c59390de3eb9"
+    },
+    {
+      "path": "art/animation/quadraped/horse_gather_meat.dae",
+      "bytes": 1075268,
+      "sha256": "69528f68dc5e0715aca262d1c25e86f13ea7c06034d95f752a90e61b65366da1"
+    },
+    {
+      "path": "art/animation/quadraped/horse_idle_01.dae",
+      "bytes": 1224960,
+      "sha256": "2e3fdacf89b2888c616971627a7dc24eaae47bda966bf4de76d8d13bd5b620bd"
+    },
+    {
+      "path": "art/animation/quadraped/horse_idle_02.dae",
+      "bytes": 1225015,
+      "sha256": "b595dd008b0b751e3312cef9493e912fe5d7adfa5b6dbaed26b63038c8d2ff79"
+    },
+    {
+      "path": "art/animation/quadraped/horse_idle_03.dae",
+      "bytes": 1224041,
+      "sha256": "de1cfae3b2b446a3ec3b42141825f6584e687d0a61cbfd4140bc6af786a98442"
+    },
+    {
+      "path": "art/animation/quadraped/horse_idle_04.dae",
+      "bytes": 1921025,
+      "sha256": "9dae07a28bf1e5c0130c606bee7f4a2d807b467c53fb0cdd587f96f79a8b344c"
+    },
+    {
+      "path": "art/animation/quadraped/horse_idle_05.dae",
+      "bytes": 1920967,
+      "sha256": "273a6c8838ee343bb090c54442a0df01e820554c926d951d0c899fa2b81d870f"
+    },
+    {
+      "path": "art/animation/quadraped/horse_pace.dae",
+      "bytes": 767877,
+      "sha256": "936280b17935b3d9bff10dcecbe59561473231779f82eb314787542fe0336d39"
+    },
+    {
+      "path": "art/animation/quadraped/horse_promotion.dae",
+      "bytes": 1594661,
+      "sha256": "8ff5b79f2fac249334b7426f7c300779174b970afdbf26533a41e61b1f7aebd8"
+    },
+    {
+      "path": "art/animation/quadraped/horse_trot.dae",
+      "bytes": 750906,
+      "sha256": "b32b4e9c4588ac4c51d1e1e94d499723bd4c4d9a3ee794511a87367f3bf2e048"
+    },
+    {
+      "path": "art/animation/quadraped/horse_walk.dae",
+      "bytes": 782640,
+      "sha256": "d48b6f71e70bf9062221d2f635b82c54776d724261f3737a340a080a10a6cf78"
+    },
+    {
+      "path": "art/materials/aura_norm_spec.xml",
+      "bytes": 756,
+      "sha256": "d261c5103a69ab8c381a5a3c842b0b83a0d8f810a52b99dfe765e6f80af60d80"
+    },
+    {
+      "path": "art/materials/basic_glow_norm_spec.xml",
+      "bytes": 974,
+      "sha256": "592fa67b6fcb65e6ed39cf8001732245829ba42e08517e25e9e1a4b4d42d17b7"
+    },
+    {
+      "path": "art/materials/basic_glow_wind_norm_spec.xml",
+      "bytes": 1087,
+      "sha256": "c160534e6ff146056ec03759615f9018c3106ec943bc7e39360c8b7263fe4fc5"
+    },
+    {
+      "path": "art/materials/basic_trans.xml",
+      "bytes": 707,
+      "sha256": "945d0f4a13cbf5e5ab419f07407360ff995ff69941cc71ecd602cfec271d2bcc"
+    },
+    {
+      "path": "art/materials/basic_trans_ao_norm_spec.xml",
+      "bytes": 981,
+      "sha256": "30969d6f268cbd708b32c852a3d9613628369502ba7036f2a5fa89a168386ec0"
+    },
+    {
+      "path": "art/materials/basic_trans_ao_parallax_spec.xml",
+      "bytes": 1035,
+      "sha256": "30d9cab583a5597e5998ad16600b28e9a5dc83d5ffacdf618845b64c708ff88c"
+    },
+    {
+      "path": "art/materials/basic_trans_norm_spec.xml",
+      "bytes": 926,
+      "sha256": "3762d4c27638a69e246f3dcf6a0e61290c9771cca9eb6fe14a270abf6ada4d83"
+    },
+    {
+      "path": "art/materials/basic_trans_parallax_spec.xml",
+      "bytes": 982,
+      "sha256": "a3a5bb07ad9220ad623d87f4073344f474d7c52441709e80ed1fac8d7e5a0205"
+    },
+    {
+      "path": "art/materials/basic_trans_wind.xml",
+      "bytes": 879,
+      "sha256": "56706182ef13667eb0a0b585c94f75c8990a30da9621fb989dea5b82c7d1029c"
+    },
+    {
+      "path": "art/materials/basic_trans_wind_grain.xml",
+      "bytes": 879,
+      "sha256": "88dd1b1565ea103a72a9fb0731f70233fff3d73faf11e50a651c875ed77dd3f4"
+    },
+    {
+      "path": "art/materials/basic_trans_wind_grain_norm_spec.xml",
+      "bytes": 1112,
+      "sha256": "bcfab684c3826170d5518004e79be7a8f4c114a3081da329bbc33967cd14a0e2"
+    },
+    {
+      "path": "art/materials/basic_trans_wind_norm_spec.xml",
+      "bytes": 1067,
+      "sha256": "33e912c9806b7daf789cbc2bb70d0882a37b6b3deca2c012221e9442da6ce952"
+    },
+    {
+      "path": "art/materials/default.xml",
+      "bytes": 546,
+      "sha256": "0f92e056c23ca6794232471587e403c9df19d8e9679f6efcba39d213286f33ab"
+    },
+    {
+      "path": "art/materials/no_trans_ao_norm_spec.xml",
+      "bytes": 818,
+      "sha256": "6b2def260535a79c3f5f71806f625c47acf4ccf269f68e29e20e60afff5c3965"
+    },
+    {
+      "path": "art/materials/no_trans_ao_parallax_spec.xml",
+      "bytes": 873,
+      "sha256": "5bfbc758f5b5e32b5bce7c02629a56168be45dc7dbdee635fa08246871eb2cc3"
+    },
+    {
+      "path": "art/materials/no_trans_norm_spec.xml",
+      "bytes": 759,
+      "sha256": "7a7a1653bcec1ab34d1e82b072d7cde6f8e0467d43aa3db849067124a12f9bd2"
+    },
+    {
+      "path": "art/materials/no_trans_parallax_spec.xml",
+      "bytes": 820,
+      "sha256": "0c30de95aea6c12477c291e4997d9a29b12ba0701152b95ecd3d9428227c7e88"
+    },
+    {
+      "path": "art/materials/objectcolor.xml",
+      "bytes": 591,
+      "sha256": "efe320661b8f33adca55f3a9e46a46bd1d98bbd9b8d568c64443ebee0c74568c"
+    },
+    {
+      "path": "art/materials/objectcolor_norm_spec.xml",
+      "bytes": 816,
+      "sha256": "56d830d673d305642c8dc665c70063a695b0589d5ef54088ef8e4a561a0cc314"
+    },
+    {
+      "path": "art/materials/player_trans.xml",
+      "bytes": 591,
+      "sha256": "efe5ad8209e48d7c2580087b7260805d0ffd6ac607235ea1701523e0773b2cfc"
+    },
+    {
+      "path": "art/materials/player_trans_ao_norm_spec.xml",
+      "bytes": 892,
+      "sha256": "4e4b283d9bb701859a5d01b04ceac6410497310d24e67808c3b294d14a53894c"
+    },
+    {
+      "path": "art/materials/player_trans_ao_parallax_spec.xml",
+      "bytes": 932,
+      "sha256": "0399d6f9fc924ec0d310dd641cc746959fac8fda40acb56725f1da5522b7d190"
+    },
+    {
+      "path": "art/materials/player_trans_ao_spec.xml",
+      "bytes": 867,
+      "sha256": "6bcc5e02c3999b0fa7c4bf3d4d4ccbe0c76b844066b864cd52c14ed21c49ceec"
+    },
+    {
+      "path": "art/materials/player_trans_norm_spec.xml",
+      "bytes": 808,
+      "sha256": "68c3d4184bc69ef712443ac4510171becdfe65b5da7661c1fbe0e8432a7c8cd7"
+    },
+    {
+      "path": "art/materials/player_trans_norm_spec_helmet.xml",
+      "bytes": 817,
+      "sha256": "7ad64a8f01115853b257c7b991cab9267676346b5a1fe7f24b1f774141d10260"
+    },
+    {
+      "path": "art/materials/player_trans_parallax_spec.xml",
+      "bytes": 868,
+      "sha256": "6d8b217136c4f86aa0cc81fc88b1f08a489d196986a2ea1e690006f55dc4a429"
+    },
+    {
+      "path": "art/materials/player_trans_parallax_spec_helmet.xml",
+      "bytes": 831,
+      "sha256": "60ec6cc9b5c935e641f1c83b0ee21c885ec18c9b0b400b26bc9fe8f08be26e01"
+    },
+    {
+      "path": "art/materials/player_water.xml",
+      "bytes": 864,
+      "sha256": "f70014ed1abf50ee91f463d71ed551038465f0b4cf8a8959a41dd417bab688f9"
+    },
+    {
+      "path": "art/materials/rock_norm_spec.xml",
+      "bytes": 815,
+      "sha256": "77c34e6bcf61605a63eca39b5e1de77c6a40fc572c0b53df9fc517465120adee"
+    },
+    {
+      "path": "art/materials/rock_norm_spec_ao.xml",
+      "bytes": 878,
+      "sha256": "8b8d0d262132e56b6f816681b4021ecfc1a9720e187233a47c2734ac4063594e"
+    },
+    {
+      "path": "art/materials/rock_normstrong_spec.xml",
+      "bytes": 814,
+      "sha256": "1e0570180f0a2b0c98edb98ce791362e0408ebb38577b87d44992688beefbf81"
+    },
+    {
+      "path": "art/materials/rock_normstrong_spec_ao.xml",
+      "bytes": 825,
+      "sha256": "37daed3d9ffaa2db55e33ff5270ae048cda7703c957fa0fd3a2d5bf72b418d5b"
+    },
+    {
+      "path": "art/materials/terrain_norm_spec.xml",
+      "bytes": 561,
+      "sha256": "eb16b70b44dd4ff9b270e0a9295152114283592f240d164f74beb0c5d406d50a"
+    },
+    {
+      "path": "art/materials/terrain_normstrong_spec.xml",
+      "bytes": 561,
+      "sha256": "dfd0aa1fdbede34abab357844aedf7c02bb2c9ca09532c1d479bcf4dbbce10a4"
+    },
+    {
+      "path": "art/materials/terrain_normweak_spec.xml",
+      "bytes": 561,
+      "sha256": "85c0040c55090e1c526a4ba31ed72895991b2b94f1eb7e277234c135c31e24c3"
+    },
+    {
+      "path": "art/materials/waterfall.xml",
+      "bytes": 601,
+      "sha256": "8ab441a06c0046a2b4fad3adccca61fbca0890e00e36564711c1c91442e774ed"
+    },
+    {
+      "path": "art/meshes/props/athen_barracks_decor.dae",
+      "bytes": 295447,
+      "sha256": "1eb5916825a81f2ae15b2592ae742c6af4f706c3a8d6ea3ce19a3191f479de1d"
+    },
+    {
+      "path": "art/meshes/props/athen_barracks_props_a.dae",
+      "bytes": 562021,
+      "sha256": "b08ca75623121958141875e539757022ac29a094b223defdd71020792e4c0119"
+    },
+    {
+      "path": "art/meshes/props/athen_barracks_shields.dae",
+      "bytes": 69895,
+      "sha256": "c8e67de861c808027d5cc3be5b999b205e9e13659aa871d90a91986a962ae6f6"
+    },
+    {
+      "path": "art/meshes/props/athen_barracks_struct_b.dae",
+      "bytes": 51630,
+      "sha256": "e37abf254abe854a13a953540688a53578e708b4152321bc59c47169df6eaebf"
+    },
+    {
+      "path": "art/meshes/props/athen_barracks_tile_c.dae",
+      "bytes": 107654,
+      "sha256": "69e9456a9d1a340ba49dc9f34b4a80a865862c972e44c3bbb804c8db8daca4c4"
+    },
+    {
+      "path": "art/meshes/props/athen_dock_decor.dae",
+      "bytes": 124665,
+      "sha256": "cfb56de3c35e6878c938b535fcc73f8d571bf89be4b56c23ca0d0be26adcc33f"
+    },
+    {
+      "path": "art/meshes/props/athen_dock_fishboat.dae",
+      "bytes": 193014,
+      "sha256": "83957aeafd7a5ad518fd7e42c6839dc02831ccc5d5241310e73218df14bfbf2b"
+    },
+    {
+      "path": "art/meshes/props/athen_dock_pentekonter.dae",
+      "bytes": 315169,
+      "sha256": "102b563ebb331c6429bd8f8c11ee11b56f5dec3c56924fb78bb09d40d1094399"
+    },
+    {
+      "path": "art/meshes/props/athen_dock_props.dae",
+      "bytes": 605990,
+      "sha256": "4e74e265d5931a65c859b08d2800ced96ed19221adcc5c9a436cc8cecaa2b439"
+    },
+    {
+      "path": "art/meshes/props/athen_dock_tiles.dae",
+      "bytes": 106009,
+      "sha256": "d5167d1ced7f5e3204c430d8d9f97214f96c53000196d5930aafd47ced52ed7f"
+    },
+    {
+      "path": "art/meshes/props/berry_basket.dae",
+      "bytes": 26767,
+      "sha256": "65b7d23a2ad619cc271874b3754566381945d370e2b577611d2e89b53ed6caa5"
+    },
+    {
+      "path": "art/meshes/props/bolt_tower_projectile.dae",
+      "bytes": 13308,
+      "sha256": "8857088551022cc972f511b357f34c78b5bc5ce4ca9b0a8d09852bb1f3538441"
+    },
+    {
+      "path": "art/meshes/props/garrison_flag.dae",
+      "bytes": 39037,
+      "sha256": "97fc78b256eaf65225c7057f23a34a28490f3ff4739d9e8ec67ff2bd1b2bd702"
+    },
+    {
+      "path": "art/meshes/props/hele_bireme_sail.dae",
+      "bytes": 180944,
+      "sha256": "f215ce73c03f007b6af630ae41c1936c93d6e738fd54f1514ba306316ebba7f3"
+    },
+    {
+      "path": "art/meshes/props/helmet/hele_boeotian_a.dae",
+      "bytes": 29742,
+      "sha256": "33bb75782f9ab9a407131c5df6683d5e4cc1de6e8a2912f56f3f6e3acccbaee4"
+    },
+    {
+      "path": "art/meshes/props/helmet/hele_chalcidean_a.dae",
+      "bytes": 40472,
+      "sha256": "0900b692c80fffbe5589103f27868f37b3543a8f7bd544c954fc9ac884371478"
+    },
+    {
+      "path": "art/meshes/props/helmet/hele_chalcidean_b.dae",
+      "bytes": 47434,
+      "sha256": "286705e13ad4c3444b5a69f722e8ea39ca4a912b794f2b7734f8c38a254ba86e"
+    },
+    {
+      "path": "art/meshes/props/helmet/hele_chalcidean_c.dae",
+      "bytes": 42026,
+      "sha256": "45bc53368b5e38bee69bb6a0a34e29644a9c1892fb9fcc4aaf3159639fe96803"
+    },
+    {
+      "path": "art/meshes/props/helmet/hele_chalcidean_d.dae",
+      "bytes": 55142,
+      "sha256": "d07df15071b7eb0c7dfe74a50150d003436ea0b1822e4da92c1a8fcc0c35efa6"
+    },
+    {
+      "path": "art/meshes/props/helmet/hele_chalcidean_e.dae",
+      "bytes": 55064,
+      "sha256": "4c68072faed2f81b914156f0a262ee2fded1b97a72460d542ca457aba854402c"
+    },
+    {
+      "path": "art/meshes/props/helmet/hele_illyrian_a.dae",
+      "bytes": 53111,
+      "sha256": "60c6ab413ea69fa7303c94aef0ab57473fbefd5c0ad212e090fde9d5a049f0a3"
+    },
+    {
+      "path": "art/meshes/props/helmet/hele_illyrian_b.dae",
+      "bytes": 53138,
+      "sha256": "06c6f9bbcc86bf806ab63d80c94edfc9d2fa9fe7ae3c62d29e3827de3d6b837c"
+    },
+    {
+      "path": "art/meshes/props/helmet/hele_pilos_a1.dae",
+      "bytes": 29909,
+      "sha256": "0ba87320e84f1188be12486016f8b2fef6981e362d29d8d392669ed1876e24a7"
+    },
+    {
+      "path": "art/meshes/props/helmet/hele_straw_01.dae",
+      "bytes": 41133,
+      "sha256": "fa7feea9c9cd8f9eeb9e5aa7b7df6c782cd04beeeff875779a00f6be509ba078"
+    },
+    {
+      "path": "art/meshes/props/helmet/props/hele_attic_mask_a1.dae",
+      "bytes": 11785,
+      "sha256": "ef4bfb7caa75b7ede63ba4ba9441fdc364d005c99ae52d9f0047bf54fa630f9a"
+    },
+    {
+      "path": "art/meshes/props/helmet/props/hele_chalcidean_mask_a.dae",
+      "bytes": 12098,
+      "sha256": "63c3a84f788af4a80389d392484c186b7e6a6e6989a46b487c14e062fa373c0d"
+    },
+    {
+      "path": "art/meshes/props/helmet/props/hele_crest_hair_illyrian_a.dae",
+      "bytes": 23390,
+      "sha256": "d14229efbfce7af646bf4d4b1412e905377f88e39116af5f396013fbbec7f6da"
+    },
+    {
+      "path": "art/meshes/props/helmet/props/hele_crest_hair_illyrian_b.dae",
+      "bytes": 23370,
+      "sha256": "67403c16030b8c1b5e100096c925fb089fcb4f0386839282b1bc446b8cc5c864"
+    },
+    {
+      "path": "art/meshes/props/helmet/props/hele_crest_illyrian.dae",
+      "bytes": 27015,
+      "sha256": "d4e0b2d8f53860d6366518c7b8be4a9650f995024eb849ec80562093bdc582da"
+    },
+    {
+      "path": "art/meshes/props/horse/blanket.dae",
+      "bytes": 94009,
+      "sha256": "0c9f6fef55af6d51ea1c64c8c5f50b618542972e655e5c366c15d90c6c0b0702"
+    },
+    {
+      "path": "art/meshes/props/horse/chest_colorband_01.dae",
+      "bytes": 88032,
+      "sha256": "e97f78c7e24e629d7b9dd78820f6021060f1a3b1bcf204b43196f45989c71502"
+    },
+    {
+      "path": "art/meshes/props/horse/hair_mane_01.dae",
+      "bytes": 96483,
+      "sha256": "59ad146c1af5f430db71bc63f5a06baec6487e22160e8366baf1cd895934947e"
+    },
+    {
+      "path": "art/meshes/props/horse/hair_tail_01.dae",
+      "bytes": 84691,
+      "sha256": "072888a3c60ed59d5f802f155110e37ca090627533c88f57ba6785b649f384c9"
+    },
+    {
+      "path": "art/meshes/props/horse/rein_01.dae",
+      "bytes": 116317,
+      "sha256": "13ad1621d63d8a7ea01f9208df2b1cb821eaa8f5283917354b01e4b1cd5dd8a1"
+    },
+    {
+      "path": "art/meshes/props/kyrenia_cargo.dae",
+      "bytes": 143862,
+      "sha256": "450b54acc7292087608c3d19a8c9ca22674b6793d670a885dfe73b578a571210"
+    },
+    {
+      "path": "art/meshes/props/kyrenia_sail.dae",
+      "bytes": 41400,
+      "sha256": "3c604f7539ca53293b8eeeb9a0fa4114471fbcbaacd365c3d37d070afe1461c3"
+    },
+    {
+      "path": "art/meshes/props/kyrenia_shield.dae",
+      "bytes": 10028,
+      "sha256": "ed0699bfdc19a6fb8b514ab5a1666f613a28ea4288d14d77908376203b323527"
+    },
+    {
+      "path": "art/meshes/props/new/dude_head.dae",
+      "bytes": 24596,
+      "sha256": "cd9b853b175feb8d89ada520ca5079edfa2de8e9aa20292c1d0ad3366740795e"
+    },
+    {
+      "path": "art/meshes/props/onager_projectile.dae",
+      "bytes": 13666,
+      "sha256": "87fa59348ff4605dbd6c94d3cf0bf5ca227dd915a2717ba191a8918935998709"
+    },
+    {
+      "path": "art/meshes/props/prop_mallet.dae",
+      "bytes": 8136,
+      "sha256": "8320fcd5af6d9dfe5af6cae9d37f92c2a38073c2989d6d139ae3f9555bceb289"
+    },
+    {
+      "path": "art/meshes/props/shield/aspis_01_back.dae",
+      "bytes": 14459,
+      "sha256": "a71d5714a6683093118dc1cbc142eec7439736609b85cae23082350dfe9d97f4"
+    },
+    {
+      "path": "art/meshes/props/shield/aspis_01_front.dae",
+      "bytes": 30957,
+      "sha256": "85e7d300af2072da5f69a3ff17de83609025f2031d49256e7004b51378cf19f1"
+    },
+    {
+      "path": "art/meshes/props/shield/props/aspis_handgrip_01.dae",
+      "bytes": 8900,
+      "sha256": "a13ce210ea3672409745cdc7f6bf2d1efb6b35447100ad656b037f08a73ef9aa"
+    },
+    {
+      "path": "art/meshes/props/shield/props/aspis_handgrip_04.dae",
+      "bytes": 9092,
+      "sha256": "6169510d2a03ee39a9385cef6873e35e4b3a6ad0b3f6d0d63d203d1c0b90b30c"
+    },
+    {
+      "path": "art/meshes/props/shuttle_meat_male_l.dae",
+      "bytes": 14371,
+      "sha256": "2ffec45309395a64610f6d4aee0d80dc8f5968c7835608560bb62f4a7ee50355"
+    },
+    {
+      "path": "art/meshes/props/shuttle_meat_male_r.dae",
+      "bytes": 14301,
+      "sha256": "ab9193bf641f7a584e042c195128697151cdfeab5cd1347ab69f004da39af6c4"
+    },
+    {
+      "path": "art/meshes/props/shuttle_wood.dae",
+      "bytes": 13565,
+      "sha256": "d0ea419df2479e7286035b328c02e3071bba7dde443cdc157f52cff4acd8354c"
+    },
+    {
+      "path": "art/meshes/props/spear_hoplite.dae",
+      "bytes": 12889,
+      "sha256": "14c44f11ea2a33cd6cec8311125b3dc6013480e029f5e271ebbc0159bd8eb8fd"
+    },
+    {
+      "path": "art/meshes/props/spear_lance_cavalry_reverse.dae",
+      "bytes": 12919,
+      "sha256": "3d19977dc338e237635160e9171296f879e07c5b738dc1e7087f1b6cf55c4995"
+    },
+    {
+      "path": "art/meshes/props/special/luggage_female_back.dae",
+      "bytes": 10203,
+      "sha256": "6f99bf921ff89677cfa22adace4ccb09de8d821470e292ababed269fd8b1820c"
+    },
+    {
+      "path": "art/meshes/props/special/metal_block.dae",
+      "bytes": 4375,
+      "sha256": "c0fd5e523778f0a513bc3f289345c60dc9c2fd2b1533057d58902bb7ac0ac705"
+    },
+    {
+      "path": "art/meshes/props/special/rome_rock_packed.dae",
+      "bytes": 191409,
+      "sha256": "a9e94ffa7cede981f006013d7198e43df72069baf83de9327c96cae1e0d291f5"
+    },
+    {
+      "path": "art/meshes/props/special/stone_block.dae",
+      "bytes": 5544,
+      "sha256": "bd9ebb9f8ad92aea03555251db6c1d7355b39d9514f646ed05469557db2eaee9"
+    },
+    {
+      "path": "art/meshes/props/special/wagon_four_wheel_empty.dae",
+      "bytes": 354384,
+      "sha256": "f89ac4317b8aeddc513bf62b92d338b618c580bfd752400a8add6dc67a0fbaf1"
+    },
+    {
+      "path": "art/meshes/props/tool_axe.dae",
+      "bytes": 15669,
+      "sha256": "82ac131057bad1b55afccb987ae4387c0138ea513f80707105ff7a6386cba17b"
+    },
+    {
+      "path": "art/meshes/props/tool_hoe.dae",
+      "bytes": 6536,
+      "sha256": "a2ac36ff6b6c98f50f3d7c10ea7e001c7560fa999ef32d8a1e243b8501baa452"
+    },
+    {
+      "path": "art/meshes/props/tool_hoe2.dae",
+      "bytes": 4881,
+      "sha256": "847ad4524ce83f3b05730f57c81baf558897b4172e3b31848b5a8549d6149627"
+    },
+    {
+      "path": "art/meshes/props/tool_pick.dae",
+      "bytes": 15549,
+      "sha256": "3585d5c5de3c46279627c870da4913b2b9bfafd61abf4141a24ad99af9731853"
+    },
+    {
+      "path": "art/meshes/props/weap_falcata_a.dae",
+      "bytes": 17727,
+      "sha256": "4a76693a438c09f493e6c62d5fa76b7fbffe8555c99061bafdb6ad90d6da36b4"
+    },
+    {
+      "path": "art/meshes/props/weap_falcata_b.dae",
+      "bytes": 17726,
+      "sha256": "459209d6e138efb3d8a3cb4c5ff432c1cb649c254a699adb7fbd9b1e9feae9ed"
+    },
+    {
+      "path": "art/meshes/props/weap_falcata_c.dae",
+      "bytes": 17736,
+      "sha256": "5425f6f939dce2dcbcdc638f6fdc9d1fb09cb08a57ea24a54e09e7ea2a7f07ec"
+    },
+    {
+      "path": "art/meshes/props/weap_falcata_d.dae",
+      "bytes": 17728,
+      "sha256": "90b3b35c25e1bfe10ffc228031d31e2cb95d9a37f0f587ede1403287a99b2fc7"
+    },
+    {
+      "path": "art/meshes/props/weap_falcata_e.dae",
+      "bytes": 17688,
+      "sha256": "6bc634fe6eb6a8e17c2623575227fc8970e149c413f4e9bee324332fecd55073"
+    },
+    {
+      "path": "art/meshes/props/weap_xiphos_a.dae",
+      "bytes": 12888,
+      "sha256": "0eac1319b765c03603e519006627e867664cd12264df77e89c350d06e3970074"
+    },
+    {
+      "path": "art/meshes/props/weap_xiphos_c.dae",
+      "bytes": 12874,
+      "sha256": "af3ba19dad1d4d43960c1d62da71a4c05e2f6c9aff4f04471cce64ad833bc71f"
+    },
+    {
+      "path": "art/meshes/props/weap_xiphos_d.dae",
+      "bytes": 12870,
+      "sha256": "b074d014e4a473992106e962241bb54dd99f23b31d0b4bfe14fe158b37d5836a"
+    },
+    {
+      "path": "art/meshes/props/weap_xiphos_e.dae",
+      "bytes": 12916,
+      "sha256": "aa2ae9466cdaa5cbc5f5617f23c5adbb8a1045875d7b6a7eecbf897de1f81528"
+    },
+    {
+      "path": "art/meshes/props/weap_xiphos_f.dae",
+      "bytes": 12911,
+      "sha256": "214d342a4d58cc86169ff502b77b727b5ced3041a852cb2e7b0f74bc7656f43b"
+    },
+    {
+      "path": "art/meshes/props/weapons/dagger_01.dae",
+      "bytes": 17585,
+      "sha256": "81d100658b3249ad5836529f1d27876b912474ee75aac62a3d73b444e1322531"
+    },
+    {
+      "path": "art/meshes/skeletal/horse_tessalian.dae",
+      "bytes": 325789,
+      "sha256": "4f59ed0093a1336fde75890a7d24cde55c701af33d36bb77fb02b88d6f1d0e55"
+    },
+    {
+      "path": "art/meshes/skeletal/new/m_armor_tunic_short.dae",
+      "bytes": 304317,
+      "sha256": "9c8164ab958933dd0116c4154d18bb11640c321364eb3c7794c99908abc15319"
+    },
+    {
+      "path": "art/meshes/skeletal/new/m_tunic_short.dae",
+      "bytes": 226271,
+      "sha256": "749666d1046f4a0f2b3f42fed0715ecc3bd5a00a8514acfb521a0b3dd3e93e98"
+    },
+    {
+      "path": "art/meshes/structural/athen_barracks_struct.dae",
+      "bytes": 515929,
+      "sha256": "12a7486f33a2c90eda2eecff2c2c6a7db383ea76894b5f603feec25bbee51a29"
+    },
+    {
+      "path": "art/meshes/structural/athen_dock_struct.dae",
+      "bytes": 309032,
+      "sha256": "9b1ae5d53e2d3a416617b536463438ca9aa5d08b3af10950f361ecae1e8e988d"
+    },
+    {
+      "path": "art/meshes/structural/athen_dock_struct_b.dae",
+      "bytes": 126353,
+      "sha256": "602a0129ea60db430004a87172567038122c37c1d1b2f8c6c84ffc170cc5d8a6"
+    },
+    {
+      "path": "art/meshes/structural/hele_kyrenia.dae",
+      "bytes": 99886,
+      "sha256": "c2eb15353c1b9f70b8642f9edc14823053e30f7b3f2a5206ca52bbc817f41557"
+    },
+    {
+      "path": "art/meshes/structural/hele_ship_bireme.dae",
+      "bytes": 1029373,
+      "sha256": "12e0fcae052b00f247642076b2925cf36c6df465f5cd22efa4097c3c7a02e20e"
+    },
+    {
+      "path": "art/particles/destruction_dust_med.xml",
+      "bytes": 782,
+      "sha256": "c532d28e8db6ecd6111273bf411fa4a3a198aa5b22ad82740346a677a102b1fc"
+    },
+    {
+      "path": "art/particles/destruction_dust_med_gray.xml",
+      "bytes": 780,
+      "sha256": "4234bcf601813da7b13f9e37138f78a12f81787bcc63d6a6d628bf08b86b691d"
+    },
+    {
+      "path": "art/particles/destruction_smoke_med.xml",
+      "bytes": 891,
+      "sha256": "f1c06cd1ca44e26dec7eb9e006ef8c513fb305aa7625f19536c4d1aac2b79a04"
+    },
+    {
+      "path": "art/particles/dust_cav.xml",
+      "bytes": 714,
+      "sha256": "5bbcbc1a6e541a98a263de75a7cb9c0fa22662438e018b7c8644d5b7ffc12463"
+    },
+    {
+      "path": "art/skeletons/aspron.xml",
+      "bytes": 3302,
+      "sha256": "d61da29d79b27909dae5171186ff4cecc9f352503f68dec9a3e6a11b48c56e23"
+    },
+    {
+      "path": "art/skeletons/ballista.xml",
+      "bytes": 944,
+      "sha256": "d3aed4ea420a58f5e47ba35e6514d5c66c548bbc5bb2fcf5bee891329a6c9d7a"
+    },
+    {
+      "path": "art/skeletons/biped.xml",
+      "bytes": 6898,
+      "sha256": "5363c95083f0ce520e239be9405dde4a16f8247550de54e8bc99e262e0de6273"
+    },
+    {
+      "path": "art/skeletons/boar.xml",
+      "bytes": 4370,
+      "sha256": "44fce37f8cde473b0eded6c1a71d636421165aa9db182e5ba78093fc1eca275e"
+    },
+    {
+      "path": "art/skeletons/bovidae_skeleton.xml",
+      "bytes": 6274,
+      "sha256": "28d075b55d08693a3a0ef0f9fcffeb6304302d17c5812ecefd93017eb9b74bf0"
+    },
+    {
+      "path": "art/skeletons/bow.xml",
+      "bytes": 684,
+      "sha256": "85ef2f41943429380e5c5f5a36310a87547b5bc40c818f092947f82ab083e730"
+    },
+    {
+      "path": "art/skeletons/camelus.xml",
+      "bytes": 8953,
+      "sha256": "aba1e841aa73bed52ee1a1d13dfa2a6790bed8aea19085084525c10e89d1f865"
+    },
+    {
+      "path": "art/skeletons/celt_sail.xml",
+      "bytes": 3026,
+      "sha256": "4708c4ec77572027360dbc9e217222cb49e1ecc813e9bf7a8c18e0a2341f7dad"
+    },
+    {
+      "path": "art/skeletons/chariot.xml",
+      "bytes": 2107,
+      "sha256": "71066b10b6bbd4049916b08c77ec0cdc972c342a3be15cb5fcd88266c80d101b"
+    },
+    {
+      "path": "art/skeletons/chariot_rein.xml",
+      "bytes": 2690,
+      "sha256": "61a046f42f069f623070e07a9459561a1af6e36b6a6a358c6c216c16b82ef1cc"
+    },
+    {
+      "path": "art/skeletons/chicken.xml",
+      "bytes": 1727,
+      "sha256": "6ea9fcddf5c4d9ef1ddc2748466bf02dfac6ef8f763e654bfeb678eca5936fdb"
+    },
+    {
+      "path": "art/skeletons/crocodile.xml",
+      "bytes": 2583,
+      "sha256": "bece49934872b589560e559334d26207c7a1b647c7e2871832cbe0ac7e9bb294"
+    },
+    {
+      "path": "art/skeletons/deer.xml",
+      "bytes": 3578,
+      "sha256": "cdb69f2eadc4afee0570ad8041095cd9ef2fbed4a7869b295a2c84dc83d95487"
+    },
+    {
+      "path": "art/skeletons/elephant_3ds.xml",
+      "bytes": 4401,
+      "sha256": "61016bcbad6bdd8a4bcbe7ba43914e801caca7d64ac69f32b9d1047aed084d2f"
+    },
+    {
+      "path": "art/skeletons/elephant_blender.xml",
+      "bytes": 8301,
+      "sha256": "207a375e113d4d03cb4399e8d818662e8c1de7cdc462f2447af4fe148c0cc546"
+    },
+    {
+      "path": "art/skeletons/elephantidae_african.xml",
+      "bytes": 11544,
+      "sha256": "5b0b17f573f592ee9d031d478390f366b818aceeeaab0900c3719650f63d7f8b"
+    },
+    {
+      "path": "art/skeletons/elephantidae_african_bush.xml",
+      "bytes": 11544,
+      "sha256": "5b0b17f573f592ee9d031d478390f366b818aceeeaab0900c3719650f63d7f8b"
+    },
+    {
+      "path": "art/skeletons/elephantidae_asian.xml",
+      "bytes": 11544,
+      "sha256": "5b0b17f573f592ee9d031d478390f366b818aceeeaab0900c3719650f63d7f8b"
+    },
+    {
+      "path": "art/skeletons/feline_blender.xml",
+      "bytes": 4673,
+      "sha256": "9de4997d826ac939d7b6e29ec1055125dadae13933c3392ee77717d5e49f83fa"
+    },
+    {
+      "path": "art/skeletons/fish.xml",
+      "bytes": 890,
+      "sha256": "0e7162e81faf655411e77c9bf89589ec36a3982027a2253b8da315b235c89b11"
+    },
+    {
+      "path": "art/skeletons/fish_shoal.xml",
+      "bytes": 3013,
+      "sha256": "d7b38589afdc7c798f5691bdc82578a58091ccdd0bcecee8425457affabea35e"
+    },
+    {
+      "path": "art/skeletons/fish_single.xml",
+      "bytes": 1275,
+      "sha256": "6809746aea207110f8edfdee4a786684d9e6fd75cebe9db174aaabaa484977d7"
+    },
+    {
+      "path": "art/skeletons/fishing_net.xml",
+      "bytes": 4073,
+      "sha256": "d261faadeb57a7b1ba03e6d6238c862fd710a06cf211bbc8731446c42cdc2e1c"
+    },
+    {
+      "path": "art/skeletons/flare-marker-armature.xml",
+      "bytes": 817,
+      "sha256": "82be335f78b720e395963801141a110b2ecd3f063a63de8739a2f1c75ee68bf1"
+    },
+    {
+      "path": "art/skeletons/floating_barrels.xml",
+      "bytes": 876,
+      "sha256": "b4a8dc48f31e5b7e7af3d5ef4417085241bdbe95afb405000c0a582989966956"
+    },
+    {
+      "path": "art/skeletons/fox_armature.xml",
+      "bytes": 6595,
+      "sha256": "cf3ea2fd0dfb0e57521d25f50abfc708de8bb00c9712bc24d31dbad957892a47"
+    },
+    {
+      "path": "art/skeletons/gastraphetes.xml",
+      "bytes": 4571,
+      "sha256": "3c58967431f46eaedb1ac5cf2b47022a0bb921e7dfe93097337749ef5ac6564f"
+    },
+    {
+      "path": "art/skeletons/gate.xml",
+      "bytes": 841,
+      "sha256": "33639b505a0354f9cd8b02194e328035e58a53401af059f5edde8e451e9c4a88"
+    },
+    {
+      "path": "art/skeletons/giraffe.xml",
+      "bytes": 3994,
+      "sha256": "63ce4999597cf58bab4cdaaa85c940e4cc40ed724b9c2ae067ed1794c5da04d2"
+    },
+    {
+      "path": "art/skeletons/goat.xml",
+      "bytes": 5345,
+      "sha256": "c64b446fb54b5a8fe9f9ca2a4f1d30d5fc43e5cd6c0528cf8080fa64fbbf2117"
+    },
+    {
+      "path": "art/skeletons/han_bow.xml",
+      "bytes": 647,
+      "sha256": "606e06f5a8b22490d68a97b125cc0d3071c953edda376e2021e1562b133af144"
+    },
+    {
+      "path": "art/skeletons/han_forge_wheel.xml",
+      "bytes": 587,
+      "sha256": "b5e99573594330012999d0261f2f07ad64ba5f8d7e83560f9eafaaf54c5df4bd"
+    },
+    {
+      "path": "art/skeletons/han_mangonel.xml",
+      "bytes": 6147,
+      "sha256": "db9cbea6760c4e5eea4c67d6bf968a9d2e98b9560347f05138a175b40174dc97"
+    },
+    {
+      "path": "art/skeletons/han_nu.xml",
+      "bytes": 1079,
+      "sha256": "da574ce933114c5df2ad5ebfa1142639064cca58d7a43ae0115bfc25ec8fb031"
+    },
+    {
+      "path": "art/skeletons/han_ram.xml",
+      "bytes": 513,
+      "sha256": "649f4b7a300b78661c395f4b5010d1895a2e5fda33741a51fe8835fbfdf14123"
+    },
+    {
+      "path": "art/skeletons/han_shoushe.xml",
+      "bytes": 4296,
+      "sha256": "64221a49a2338709ebafceaff4520d279d83304a4d8a6b1f6f0136ea82a81f8c"
+    },
+    {
+      "path": "art/skeletons/hawk.xml",
+      "bytes": 1002,
+      "sha256": "fbb5beebd907dcf9b308318d3a81656fd69f8b118a5b355d0f331825655e0e71"
+    },
+    {
+      "path": "art/skeletons/hele_lithobolos.xml",
+      "bytes": 1252,
+      "sha256": "28ff78355316ea8db7f7110af726b087cd9132bd4005539ffa48ae396b209231"
+    },
+    {
+      "path": "art/skeletons/hippopotamus_armature.xml",
+      "bytes": 8700,
+      "sha256": "e536ca02f745a7a1b15bc5145022532ebe9d4def3641cf55153c4a6000f88b23"
+    },
+    {
+      "path": "art/skeletons/horse.xml",
+      "bytes": 8094,
+      "sha256": "3956f0850038123d075649234ca5fa7a5dbdc3ba8e61cc57dbdfeda720209bd7"
+    },
+    {
+      "path": "art/skeletons/horse_old.xml",
+      "bytes": 4253,
+      "sha256": "bfdb774f6184508bfbad85d8c2621410bba10efc786d603044cc55fa704f46f6"
+    },
+    {
+      "path": "art/skeletons/horse_rein.xml",
+      "bytes": 4271,
+      "sha256": "ccfd077f7f4809546b2aaac929650ae0ac5ec05668b1c39074be8f3e05875df8"
+    },
+    {
+      "path": "art/skeletons/lian_nu_crossbow.xml",
+      "bytes": 1869,
+      "sha256": "d7b431fa39b26ab4a49c290f1bbc8120fe5988e666b64880824a57d4095654b5"
+    },
+    {
+      "path": "art/skeletons/lithobolos_light.xml",
+      "bytes": 6295,
+      "sha256": "24c48b2617770a135cf2d0cc5d6c47a4342ef904fe786b2eb693404628cc97c4"
+    },
+    {
+      "path": "art/skeletons/longboat.xml",
+      "bytes": 2400,
+      "sha256": "c9d1bbdb8431962e77c3c94c94f2dcb6f681791f00b7e701aeab88678177cc81"
+    },
+    {
+      "path": "art/skeletons/mastiff.xml",
+      "bytes": 4689,
+      "sha256": "c9a15b057d77c144462d6a76204c20a84f5271ae6523fb95cbd9f50f82d74958"
+    },
+    {
+      "path": "art/skeletons/maur_ch.xml",
+      "bytes": 799,
+      "sha256": "34b25977be5c7e47b6408993828f6c0969c6ac7c142d55164ca8aa0df51fbbad"
+    },
+    {
+      "path": "art/skeletons/norse_sail.xml",
+      "bytes": 6491,
+      "sha256": "d0ff0c151965f3b95b7e46d69d96de1a373466d258dacf41f24efe266b30634c"
+    },
+    {
+      "path": "art/skeletons/oxybeles.xml",
+      "bytes": 6864,
+      "sha256": "2b52843555d1847b691fdac5b243fefcff30668e8403eb0a73464dc6da9e8b46"
+    },
+    {
+      "path": "art/skeletons/peacock.xml",
+      "bytes": 3985,
+      "sha256": "00214cfe793513e89ae56d15ffe10c5ff38577513bb4b2d05031d0b4d321e2a9"
+    },
+    {
+      "path": "art/skeletons/pers_ram.xml",
+      "bytes": 830,
+      "sha256": "a1b9145ba02fee201328da92eae1fb2953ee1f05399ae70ab59db65ccec607f3"
+    },
+    {
+      "path": "art/skeletons/polybolos.xml",
+      "bytes": 4947,
+      "sha256": "65bb18e27d9c4c1c89bb4d843ec1ad83ece9aefc62d89de79fd4a3e37d8ec055"
+    },
+    {
+      "path": "art/skeletons/pony.xml",
+      "bytes": 4890,
+      "sha256": "37d0e0b1855e5010d7f9164b8f9deb4601a1678f928adf61a6de0ab56834633b"
+    },
+    {
+      "path": "art/skeletons/ptol_polybolos.xml",
+      "bytes": 1322,
+      "sha256": "6ad11efb74d5fc93bc1635f86f26295ff2af68e5aa2e9d054972e67d25e8a4f1"
+    },
+    {
+      "path": "art/skeletons/readme.txt",
+      "bytes": 655,
+      "sha256": "ccb5374bbc4fd29417f8b9b3b3634f8c6ce7161babfa678ea13fb4c9e392e5b7"
+    },
+    {
+      "path": "art/skeletons/rhino.xml",
+      "bytes": 2624,
+      "sha256": "74ad836a5a689c403e4650cc44499f056c66fdad417c0671361a6adbe7fd24cf"
+    },
+    {
+      "path": "art/skeletons/rome_bridge.xml",
+      "bytes": 1014,
+      "sha256": "69ad43b8ec7941459ff4fd2d45dc4c92e790ce8917794bc8e1068c82ead7a0b3"
+    },
+    {
+      "path": "art/skeletons/rotary_mill_grinder.xml",
+      "bytes": 902,
+      "sha256": "7fd87ca6be81fb89443eb5a8ada20b6269462970415682502405adb6a6f406f9"
+    },
+    {
+      "path": "art/skeletons/rowing_boat.xml",
+      "bytes": 520,
+      "sha256": "0314540b71885555f9f1708968e7c7e606659c9dffa788687cb935f76ce41408"
+    },
+    {
+      "path": "art/skeletons/scorpio.xml",
+      "bytes": 5648,
+      "sha256": "88aecb26cb045dc6f7bdb4fce003a25094fb95175b82107020eb60ec81bfbabe"
+    },
+    {
+      "path": "art/skeletons/shark.xml",
+      "bytes": 1078,
+      "sha256": "1fa6ddb6dd001e6d27796444317134a260bcb86d4f0271a7ecf706ac5657a21a"
+    },
+    {
+      "path": "art/skeletons/sheep.xml",
+      "bytes": 2635,
+      "sha256": "9704515082e8fcc0f2d5ef9e054f138502414d0f129369dfe477de9711edd7ea"
+    },
+    {
+      "path": "art/skeletons/ship_one_row.xml",
+      "bytes": 546,
+      "sha256": "8e591ab7b3cb124ba2e18d12481fdaf7ea39b23deb6daf72fd6ffe095cfc3fc1"
+    },
+    {
+      "path": "art/skeletons/ship_row.xml",
+      "bytes": 515,
+      "sha256": "2a4770b6663e99e2593573c01a1b70b1a0992cbd5b3214b0288ea1c988a35e10"
+    },
+    {
+      "path": "art/skeletons/ship_sail.xml",
+      "bytes": 6942,
+      "sha256": "484ffdd2fdaaf45ad04f5a0d1c7402071b7095899171559817b6bc695d24217f"
+    },
+    {
+      "path": "art/skeletons/ship_three_row.xml",
+      "bytes": 1016,
+      "sha256": "c1805dd22d95a81e1a2fd7dbeff919be882443c31e0ff997312752607306088b"
+    },
+    {
+      "path": "art/skeletons/ship_two_row.xml",
+      "bytes": 773,
+      "sha256": "1ad4f10d79e49333677432e2a2cb15ad47de458d87e20c54fded83c3ae74bad2"
+    },
+    {
+      "path": "art/skeletons/siege_onager.xml",
+      "bytes": 881,
+      "sha256": "003472d5e2768cd500f71fd70ff35b827bdcea8f26d9e2ada6c3c3abe75d4a20"
+    },
+    {
+      "path": "art/skeletons/six_wheeler.xml",
+      "bytes": 1097,
+      "sha256": "1bea00f232c9516fad71d7ba0781802b62c7150ea5f8d66299fcf6d51cdcfde8"
+    },
+    {
+      "path": "art/skeletons/sling.xml",
+      "bytes": 950,
+      "sha256": "62b935c13523e7f7b63553d3f4c7168b7acb7601eedbdabed6c961722718aab0"
+    },
+    {
+      "path": "art/skeletons/target_marker.xml",
+      "bytes": 8340,
+      "sha256": "89a93924c7d628b443f0775ba7c60ab7b0b11618d97e998d93d2fbea4433080c"
+    },
+    {
+      "path": "art/skeletons/tuna.xml",
+      "bytes": 2418,
+      "sha256": "f71547e754cea46adc7a3979d9763bc131b6a4163abcc0881f554872b3e6a882"
+    },
+    {
+      "path": "art/skeletons/ursidae_armature.xml",
+      "bytes": 8081,
+      "sha256": "cc8d1007f07b1e15ff9891f621f34fa3685544df152e043caf8fa1302bd66b04"
+    },
+    {
+      "path": "art/skeletons/vehicle_four_wheel.xml",
+      "bytes": 835,
+      "sha256": "068e1185cb9c4f4deff1c2eee4d41f4866b03a1c5038f2596fb0ee2a83fc7988"
+    },
+    {
+      "path": "art/skeletons/vehicle_six_wheel.xml",
+      "bytes": 926,
+      "sha256": "75a83f11cf53b88a805a73e3789bf0db164a68c351a3d48718ef6b51414c4959"
+    },
+    {
+      "path": "art/skeletons/vehicle_two_wheel.xml",
+      "bytes": 592,
+      "sha256": "02c2acb16a3919565517281757325999e5280e9c92fa5faffab279879e897e8d"
+    },
+    {
+      "path": "art/skeletons/whale.xml",
+      "bytes": 924,
+      "sha256": "c96d15e272972d28f188064fb565e574ddb338e3be46957da00cca1ab6d74e5a"
+    },
+    {
+      "path": "art/skeletons/wolf.xml",
+      "bytes": 3584,
+      "sha256": "a76ec27c9b4d5a7d5ab21068636ba288a9d9c04d167fc68d695f95eb82b105fb"
+    },
+    {
+      "path": "art/skeletons/wolfhound.xml",
+      "bytes": 4545,
+      "sha256": "7f85bdeba8c5ebe597d8cdb35df286c3058f152db054771e54c77df852a7a9fa"
+    },
+    {
+      "path": "art/skeletons/zebra.xml",
+      "bytes": 5066,
+      "sha256": "1880952b5b9dc0cb7f71a5ddb1c5b02fe2444fc572fa72d6171ef1cc4139d537"
+    },
+    {
+      "path": "art/skeletons/zebu.xml",
+      "bytes": 3877,
+      "sha256": "188826195929273d55a66d7c5b0d0da1b126ba7ea916318176b82784cb28ff2e"
+    },
+    {
+      "path": "art/terrains/biome-desert/desert_city_tile.xml",
+      "bytes": 324,
+      "sha256": "0f769b568cd6bf806ff9b8330e1b2042590c62a67f5360791c4db5b489689085"
+    },
+    {
+      "path": "art/terrains/biome-desert/desert_city_tile_plaza.xml",
+      "bytes": 342,
+      "sha256": "f2ff1f9a4b21f5e4fa1e68cb4dcc0dfbaa044084c4bb356f1f2fef6c966e3f01"
+    },
+    {
+      "path": "art/terrains/biome-desert/desert_cliff_1.xml",
+      "bytes": 312,
+      "sha256": "ad1b276f4026b7aa525240bfbc455f28b7104adc9d818014dd18474b07a6fdf2"
+    },
+    {
+      "path": "art/terrains/biome-desert/terrains.xml",
+      "bytes": 114,
+      "sha256": "193d928d14f88d12116a16a9816604884d0b9e67c2150847d60db50b4648f75a"
+    },
+    {
+      "path": "art/terrains/biome-mediterranean/medit_grass_wild.xml",
+      "bytes": 359,
+      "sha256": "b9fc0e68204c35e8db90a4e777e0966521dcd3de813b6c42b80d193cd9a1ad61"
+    },
+    {
+      "path": "art/terrains/biome-mediterranean/terrains.xml",
+      "bytes": 121,
+      "sha256": "4ac753a409f4ec72df09e5fb59eadee3d6232abacab2c71196daeedff98ede34"
+    },
+    {
+      "path": "art/terrains/grass/grass1_spring.xml",
+      "bytes": 316,
+      "sha256": "ef51e82da6f8cd80645762c15bc40ec81493253049854f3d2b29e19032155a98"
+    },
+    {
+      "path": "art/terrains/grass/terrains.xml",
+      "bytes": 107,
+      "sha256": "f80dd95f6cc4f5991274f79f5c5fadcf18d70eedaec4f2c2659691f36981c60f"
+    },
+    {
+      "path": "art/textures/selection/128x128/arrow.png",
+      "bytes": 1472,
+      "sha256": "fa3b9a5d6773eff9a4040f9ba10d0e568f7b7ec12b97bfa5a4ade0282ee96e3d"
+    },
+    {
+      "path": "art/textures/selection/128x128/arrow_mask.png",
+      "bytes": 1483,
+      "sha256": "d6827caf077030c9385a3d4cd8b4b6d7c17d9f71638e5fc5b874f741d83bce0d"
+    },
+    {
+      "path": "art/textures/selection/128x128/ellipse.png",
+      "bytes": 6043,
+      "sha256": "44d558c0129ee50625d9db04552cc71d6570ca422773c9f84c50c59f3b85106b"
+    },
+    {
+      "path": "art/textures/selection/128x128/ellipse_mask.png",
+      "bytes": 4042,
+      "sha256": "9ddd2fa7e1da0500a74c1aeed97f7ede72caaf3b64db8e96cdee1ed3d80700c2"
+    },
+    {
+      "path": "art/textures/selection/128x128/octagram.png",
+      "bytes": 1794,
+      "sha256": "eda9560fa68e25d28f4f4777a87bca4db1e35bdfd5a3b605f0423096f4b04a0e"
+    },
+    {
+      "path": "art/textures/selection/128x128/octagram_mask.png",
+      "bytes": 1648,
+      "sha256": "ab272f12e18c13f985265110d36151189a3571c356e082e142157016bea95a9b"
+    },
+    {
+      "path": "art/textures/selection/128x128/plus.png",
+      "bytes": 977,
+      "sha256": "318471d79059fe30b8fdb2ccc636770d3561bbc39b8b64940347fe3984e35442"
+    },
+    {
+      "path": "art/textures/selection/128x128/plus_mask.png",
+      "bytes": 692,
+      "sha256": "3f0a7fa2db9fa51e9c78914ff02a07bdbcc7c759742adfc68786815eca108b28"
+    },
+    {
+      "path": "art/textures/selection/128x128/rectangle.png",
+      "bytes": 529,
+      "sha256": "95880d8d1c6299332a257c421bcb44d82c2a81734d867e7c08d93e5e10ef3777"
+    },
+    {
+      "path": "art/textures/selection/128x128/rectangle_mask.png",
+      "bytes": 505,
+      "sha256": "96208e169d069436c1ef1d23c7b669f75bbab06794d1d0e019d83c7475f139ea"
+    },
+    {
+      "path": "art/textures/selection/128x128/rhombus.png",
+      "bytes": 1042,
+      "sha256": "b75f615cd1f89b7cbb952acdf455c7c1cbacc627090860fc559ce224032da841"
+    },
+    {
+      "path": "art/textures/selection/128x128/rhombus_mask.png",
+      "bytes": 1037,
+      "sha256": "86cab094129a9061182ee28e0cc1e4bf11b413c75922a78e622a0ff4a99e908c"
+    },
+    {
+      "path": "art/textures/selection/128x128/rounded_rectangle.png",
+      "bytes": 4038,
+      "sha256": "c4c352b8d88e6bfce1ee3f7c0ff5fc213228b1453903f67fac6bf8fe77e94ec6"
+    },
+    {
+      "path": "art/textures/selection/128x128/rounded_rectangle_mask.png",
+      "bytes": 2804,
+      "sha256": "bd3191142d3751a3b3af18635d15443bedb2299cffd3863d29cef433e2de3f3f"
+    },
+    {
+      "path": "art/textures/selection/128x128/star.png",
+      "bytes": 6038,
+      "sha256": "7dd0f0c7d80d9e842029d3cd2a98f5f4a67e19afdb19eb1da7ed6e55516ff67e"
+    },
+    {
+      "path": "art/textures/selection/128x128/star_mask.png",
+      "bytes": 3954,
+      "sha256": "dde76ddf46701a62768d897be12bcc63d1c0f419845818d47ab0cbf725a324d9"
+    },
+    {
+      "path": "art/textures/selection/128x256/cartouche.png",
+      "bytes": 6692,
+      "sha256": "704771979782bea3f0b759d8acc72b28143757659888703ef268fd89abcad8d7"
+    },
+    {
+      "path": "art/textures/selection/128x256/cartouche_mask.png",
+      "bytes": 4575,
+      "sha256": "ae94ff17df9eafcbfe87297bebfec971ef7c341a4731f3829de751f0b8f050f6"
+    },
+    {
+      "path": "art/textures/selection/128x256/ellipse.png",
+      "bytes": 9300,
+      "sha256": "55ba713fd564d2caa09545f9833205b2d62a24b9055eb2d8b2aef7e5797bd150"
+    },
+    {
+      "path": "art/textures/selection/128x256/ellipse_mask.png",
+      "bytes": 6305,
+      "sha256": "d29bd327fdc2e24c75d844cff45d689c9948fafff28640313c8e7bc3318c854d"
+    },
+    {
+      "path": "art/textures/selection/128x256/rectangle.png",
+      "bytes": 833,
+      "sha256": "f6e2e6fc137f622eabed311ce559c7954150289f8eddf07671793a3365612ae9"
+    },
+    {
+      "path": "art/textures/selection/128x256/rectangle_mask.png",
+      "bytes": 809,
+      "sha256": "c0c1f007179e402b48cd086264fbb0e3ef7a6bfc4c575fb44102be0653cac38f"
+    },
+    {
+      "path": "art/textures/selection/128x256/rounded_rectangle.png",
+      "bytes": 4535,
+      "sha256": "e6f46ac6ff4998e8734ed3ce10b6cb6ab76d2b8d6559608ff4e9012ecbeefbae"
+    },
+    {
+      "path": "art/textures/selection/128x256/rounded_rectangle_mask.png",
+      "bytes": 3230,
+      "sha256": "2212f5fd5a2f1968d2de609400176e12a76dc0b21854a82b1e2196025dc49d3e"
+    },
+    {
+      "path": "art/textures/selection/128x512/cartouche.png",
+      "bytes": 7531,
+      "sha256": "1a0dae2a4732429f6a1685c58b5d24da93d3c3970d6e0cac04af0ce0b6716484"
+    },
+    {
+      "path": "art/textures/selection/128x512/cartouche_mask.png",
+      "bytes": 5360,
+      "sha256": "c0724dafff2095a0dc30b7e7ff0d2242e2bac84dfe7f8f285a1eed31ccc07a60"
+    },
+    {
+      "path": "art/textures/selection/128x512/ellipse.png",
+      "bytes": 13931,
+      "sha256": "a1999449108af4c7e0713c1e15db21252e1ab4dbf809d06a9e19372994229269"
+    },
+    {
+      "path": "art/textures/selection/128x512/ellipse_mask.png",
+      "bytes": 9616,
+      "sha256": "b12de2cd593131bf32e4d7d33317f46889527e7ba953664cf82f4325b975eb41"
+    },
+    {
+      "path": "art/textures/selection/128x512/rectangle.png",
+      "bytes": 1441,
+      "sha256": "2d1d729101cd2cbd478c9adcff6e200da723d6a4f67bacaed9fead24b8f6a0bc"
+    },
+    {
+      "path": "art/textures/selection/128x512/rectangle_mask.png",
+      "bytes": 1417,
+      "sha256": "2e288f705881c5061cfc7aecb5573d60e4457ce1295223e19416aa0da734b6bf"
+    },
+    {
+      "path": "art/textures/selection/128x512/rounded_rectangle.png",
+      "bytes": 5304,
+      "sha256": "dec3513b705299dabee2a0dacb2c3bc53adaf35c411a32f114e42eea526c8c92"
+    },
+    {
+      "path": "art/textures/selection/128x512/rounded_rectangle_mask.png",
+      "bytes": 3942,
+      "sha256": "c1f97b1a1056cba59b33e6349a975d9acb5cb1f5e49928f64f71b6642c7da71c"
+    },
+    {
+      "path": "art/textures/selection/256x256/arrow.png",
+      "bytes": 2566,
+      "sha256": "1c2397ab6d5ac0118e1c2f21d4aa88d45683a25d1df2f864b9778b2e88e904e1"
+    },
+    {
+      "path": "art/textures/selection/256x256/arrow_mask.png",
+      "bytes": 3119,
+      "sha256": "183fc1cc710e575b4e8441fc3965612a5ed7084dacf5681a3607066e20558d2b"
+    },
+    {
+      "path": "art/textures/selection/256x256/ellipse.png",
+      "bytes": 13896,
+      "sha256": "bdd249b0c2439d30f9c8d8a0140a36af388bca9e0a975129365652732c5579f7"
+    },
+    {
+      "path": "art/textures/selection/256x256/ellipse_mask.png",
+      "bytes": 9469,
+      "sha256": "11009c43eac186e11823a1ce8fae3f7e4fcbac1890dfb79de54da08733a2d1eb"
+    },
+    {
+      "path": "art/textures/selection/256x256/octagram.png",
+      "bytes": 3463,
+      "sha256": "f940382975b18b467960629caa7ae036be933243085e50b8e0a344390b55245a"
+    },
+    {
+      "path": "art/textures/selection/256x256/octagram_mask.png",
+      "bytes": 3112,
+      "sha256": "cff5be4034bd2cdfac5e4006983d1401f55ff17f357cc705429497c560b3c1df"
+    },
+    {
+      "path": "art/textures/selection/256x256/plus.png",
+      "bytes": 1433,
+      "sha256": "93ccc3a7ead7ba44162643db699675821b2fdd944af5261d9e1ddb1be968a2b4"
+    },
+    {
+      "path": "art/textures/selection/256x256/plus_mask.png",
+      "bytes": 1161,
+      "sha256": "428c2143569744a79a73204081b8781f2deb6b586545cb9eb0e8b78de2240b1a"
+    },
+    {
+      "path": "art/textures/selection/256x256/rectangle.png",
+      "bytes": 992,
+      "sha256": "84b05cabd01c859625faa926cc333ce041d66cc13863aa194db3160cfe237036"
+    },
+    {
+      "path": "art/textures/selection/256x256/rectangle_mask.png",
+      "bytes": 969,
+      "sha256": "f1871f275ac691df6cd53d5e3143670d68e93c01749e75eeae339b7617ef0ddd"
+    },
+    {
+      "path": "art/textures/selection/256x256/rhombus.png",
+      "bytes": 1779,
+      "sha256": "caf55ce19ca9f193bd686e9214c58e279208a2b60ad7779c667e9575c5bb3965"
+    },
+    {
+      "path": "art/textures/selection/256x256/rhombus_mask.png",
+      "bytes": 2674,
+      "sha256": "038e20054289982c2e5a6c2b8084314a15fe801c0bd52f6c229f318195519d57"
+    },
+    {
+      "path": "art/textures/selection/256x256/rounded_rectangle.png",
+      "bytes": 4874,
+      "sha256": "8414da293d3000c45e08e5a6d2572d6701ca45dffece80e6c74564b23a2aea1f"
+    },
+    {
+      "path": "art/textures/selection/256x256/rounded_rectangle_mask.png",
+      "bytes": 3764,
+      "sha256": "e03360e753d6f73c3cbf4e5294dbb43f5f92b36fcb872d1d45af9f566baae5ae"
+    },
+    {
+      "path": "art/textures/selection/256x256/star.png",
+      "bytes": 11352,
+      "sha256": "f4d3573494b971a066e7a34d700003d399de747b72b538d67c88d29cb8df0dd4"
+    },
+    {
+      "path": "art/textures/selection/256x256/star_mask.png",
+      "bytes": 8321,
+      "sha256": "46e38f2ab29e340719c807d12026edb0df6dd5f400d5f8d556f6d8e40c12d94c"
+    },
+    {
+      "path": "art/textures/selection/auras/test/1024x1024_aura.png",
+      "bytes": 535301,
+      "sha256": "148bfdb278a02fc64a74ea5cfc48c4f1434e8f7b90bbc44ab6ee76441d413daa"
+    },
+    {
+      "path": "art/textures/selection/auras/test/1024x1024_aura_mask.png",
+      "bytes": 143714,
+      "sha256": "bcf22d4a51a18f9b18c1501f79ce0b74459437c1d0594dd3a912ff52b4850f93"
+    },
+    {
+      "path": "art/textures/selection/heal_overlay_range.png",
+      "bytes": 3008,
+      "sha256": "b96ee16bba2f331579fccd08b125b581569f5305a345963e5332d96306099f01"
+    },
+    {
+      "path": "art/textures/selection/heal_overlay_range_mask.png",
+      "bytes": 2942,
+      "sha256": "ca8b4e6d90f59f8eea06946c41d9870ba3c786bf7bcbab434f65b525a6c93465"
+    },
+    {
+      "path": "art/textures/selection/outline_border.png",
+      "bytes": 2835,
+      "sha256": "087df3b384298c99dfe8d45984cb397d0aa6ac95697eb4875bea825a81d8db9a"
+    },
+    {
+      "path": "art/textures/selection/outline_border_02.png",
+      "bytes": 861,
+      "sha256": "e9cb8a35106e354687ad6294238978250c8150d19f6376d358927cd10fe28fe4"
+    },
+    {
+      "path": "art/textures/selection/outline_border_02_mask.png",
+      "bytes": 835,
+      "sha256": "461444c40a541b653cc2e145b8b595d658cc91d3cb7c90f800df56b1c71f2fad"
+    },
+    {
+      "path": "art/textures/selection/outline_border_mask.png",
+      "bytes": 2826,
+      "sha256": "99e23d7caf55d7181c5f74041178951b2565bbe201b08edff6568be2688e1c0f"
+    },
+    {
+      "path": "art/textures/skins/default_norm.png",
+      "bytes": 69,
+      "sha256": "b1ba25ca729a28c798a99a1a0bcf9310d0994a55b4f9d1a36f163fb31676cecf"
+    },
+    {
+      "path": "art/textures/skins/gaia/stone_temperate_granite.dds",
+      "bytes": 22000,
+      "sha256": "2e12611d1c991b413d696ce86f891fe023308ab830998dd4342882dec2a14f9c"
+    },
+    {
+      "path": "art/textures/skins/null_black.dds",
+      "bytes": 152,
+      "sha256": "1b2fefc88f9523c56af637318150f92722e88bf93f3876d38b6c039114b21c7a"
+    },
+    {
+      "path": "art/textures/skins/null_white.dds",
+      "bytes": 152,
+      "sha256": "8ce14a1e0f8acdde95f4982a60d784e0595b3e1efda2d28af7740ead3b1002ec"
+    },
+    {
+      "path": "art/textures/skins/props/athen_prop_shields.png",
+      "bytes": 514504,
+      "sha256": "fce3911710a106ba02fe6e5166ad4456b5e9b45e56a5b2814a7e95f051dac417"
+    },
+    {
+      "path": "art/textures/skins/props/basket_iber_1.dds",
+      "bytes": 5608,
+      "sha256": "b1a021d7e0d0b25d457254938c1369ebd556f3b2794c8346cc483fb40f539f28"
+    },
+    {
+      "path": "art/textures/skins/props/basket_rome_1.dds",
+      "bytes": 5608,
+      "sha256": "99cad757afd470a9ec119512650f902da9e0a014d3f5d144f2e7360df6e513ee"
+    },
+    {
+      "path": "art/textures/skins/props/blood_01.dds",
+      "bytes": 5616,
+      "sha256": "1bec3917c1491c6c9401efb23ba851a1198552caa4d35573a8f14d0c8ecbe78a"
+    },
+    {
+      "path": "art/textures/skins/props/blood_02.dds",
+      "bytes": 5616,
+      "sha256": "bb25cffb871bcc1345252d42300c74b1e72ce844a4c69ed088d2d8000756b0cc"
+    },
+    {
+      "path": "art/textures/skins/props/blood_03.dds",
+      "bytes": 5616,
+      "sha256": "100924157e0410c6dd0bbecb40c032fd12e5503bf188238b9bb83e6030022923"
+    },
+    {
+      "path": "art/textures/skins/props/blood_04.dds",
+      "bytes": 5616,
+      "sha256": "234c137c576f13df8294cbcedb2522333367e61ed79124885dfdbc955ac1829c"
+    },
+    {
+      "path": "art/textures/skins/props/blood_05.dds",
+      "bytes": 5616,
+      "sha256": "7e9ab24ef38b541daa7d97306e52169468fa438254db780c1e0d3c30fc77be89"
+    },
+    {
+      "path": "art/textures/skins/props/blood_06.dds",
+      "bytes": 5616,
+      "sha256": "fe4317f2f5adff873500f49d457994950ffad3d6d7862ed0ce9d7bfd9572ad19"
+    },
+    {
+      "path": "art/textures/skins/props/blood_07.dds",
+      "bytes": 5616,
+      "sha256": "5f17145b835f074702001eba984a603f0344ddfcd859de8d34366c78242e3e59"
+    },
+    {
+      "path": "art/textures/skins/props/blood_08.dds",
+      "bytes": 5616,
+      "sha256": "10c96b3ed36a2dd33ffa202f530ed01965efa3320648e5bd037598311c0ddac8"
+    },
+    {
+      "path": "art/textures/skins/props/blood_09.dds",
+      "bytes": 5616,
+      "sha256": "d5c5b7fedafbbaebf7cee514746e0f44b99a5929ecab0d35a59fd8d126e835b0"
+    },
+    {
+      "path": "art/textures/skins/props/blood_10.dds",
+      "bytes": 5616,
+      "sha256": "44bb50ce3182cf3c12da726c40137b4dabd1578fd408bf0ac41d259f8dc5f22e"
+    },
+    {
+      "path": "art/textures/skins/props/blood_11.dds",
+      "bytes": 5616,
+      "sha256": "8d176f37f9defbe9f8fd94cb225948bbecedb63b338b55f7968520e3b08d67e6"
+    },
+    {
+      "path": "art/textures/skins/props/decal_struct_sand_large.png",
+      "bytes": 10955754,
+      "sha256": "43a99d30051f3dab5bf98c3e9816dd138a92560565f929c70823faab970a5826"
+    },
+    {
+      "path": "art/textures/skins/props/decal_struct_sand_large_norm.png",
+      "bytes": 11634149,
+      "sha256": "42634cbd1cbc8e7069831bbf608798a9410297be21a3a66f0afea64473f745a4"
+    },
+    {
+      "path": "art/textures/skins/props/decal_struct_sand_large_spec.png",
+      "bytes": 616750,
+      "sha256": "d495591f4b3054ec41f7f1ec402ce0a30aa123eaca1be9fb4f47536775ae7f98"
+    },
+    {
+      "path": "art/textures/skins/props/garrison_hele_1.png",
+      "bytes": 11679,
+      "sha256": "da7257a73e1ff2a7a0c180bd4b98d3dafe42e914abab2e535e6026ad5f48fa0a"
+    },
+    {
+      "path": "art/textures/skins/props/head/generic_a.dds",
+      "bytes": 5616,
+      "sha256": "fefe6be4f6df816802fb313c2b4c74a3b8d47aa9f44bc0622e87c95901b031fe"
+    },
+    {
+      "path": "art/textures/skins/props/head/hele_a.dds",
+      "bytes": 5616,
+      "sha256": "a31c83a6066ded08fe863767798e8cbdcafca2301532ed01ba01d5135d1e6849"
+    },
+    {
+      "path": "art/textures/skins/props/head/hele_b.dds",
+      "bytes": 22000,
+      "sha256": "ab37e87b42a75cd1899082584193130ac24650f0dff9ac51e631204d81e95a7a"
+    },
+    {
+      "path": "art/textures/skins/props/head/hele_h.dds",
+      "bytes": 5616,
+      "sha256": "9a7d9026068f0c48c971b1ff54d25607c008d6c47bcc6ac9c3dac7cbd7d048ee"
+    },
+    {
+      "path": "art/textures/skins/props/head/hele_i.dds",
+      "bytes": 5616,
+      "sha256": "8b97e5b076c729ff70afe605ae54dd98af449b8e6b8d5c0bd75c67b2368d6809"
+    },
+    {
+      "path": "art/textures/skins/props/hele_decor.png",
+      "bytes": 2002629,
+      "sha256": "53206951440d85b794d2acb5118192c68a12653b20f28c19113673d35eda636b"
+    },
+    {
+      "path": "art/textures/skins/props/hele_decor_norm.png",
+      "bytes": 1936556,
+      "sha256": "52144e7ec6c89497a6391b376bcae2754cbdf50f7fbda3598f8933ab827a09bd"
+    },
+    {
+      "path": "art/textures/skins/props/hele_decor_spec.png",
+      "bytes": 241653,
+      "sha256": "43e4ee6ad8b4ab6d11a551156d0e914c6c1793fead88d06f53f3a7b772c529c6"
+    },
+    {
+      "path": "art/textures/skins/props/hele_props_a.dds",
+      "bytes": 174928,
+      "sha256": "88a111a8bab3c9b137fc0bc74b16e8c9d3cb84a033306ed2369e8caab77a5fb1"
+    },
+    {
+      "path": "art/textures/skins/props/hele_props_a_norm.png",
+      "bytes": 237362,
+      "sha256": "ea02284a51d7d08ac0e23be9426b56e2838a7f9ad69a697a4d7dfe53b7675533"
+    },
+    {
+      "path": "art/textures/skins/props/hele_props_a_spec.png",
+      "bytes": 132182,
+      "sha256": "f159107602b988013f33370db0ff87a53f39971bd12ba6c08bc739c6b1aa3e7b"
+    },
+    {
+      "path": "art/textures/skins/props/hele_props_b.dds",
+      "bytes": 349680,
+      "sha256": "971ee879952557876459e79b4e0ebd26ffe426f3680232aa013dc12d0dff3039"
+    },
+    {
+      "path": "art/textures/skins/props/hele_sail_1.png",
+      "bytes": 533804,
+      "sha256": "f0cc445ebc13897459a53f76213fbd84c20b66a789fd345748595b29ecd3741f"
+    },
+    {
+      "path": "art/textures/skins/props/hele_sail_2.png",
+      "bytes": 588105,
+      "sha256": "4a5c9f08245cc7ce39b3c2bf6db3020fc792eeef941395b48c5119f6a19f9de0"
+    },
+    {
+      "path": "art/textures/skins/props/hele_sail_3.png",
+      "bytes": 532414,
+      "sha256": "7156fdfa0ad1fdfd6bf29a650f3866d5a8e14420d48406ef65735a6b2753f382"
+    },
+    {
+      "path": "art/textures/skins/props/hele_sail_4.png",
+      "bytes": 528946,
+      "sha256": "03d0b725fbb20e80b84973d816d7e21b230fa3fcf73c01e0a97e5209a27600f4"
+    },
+    {
+      "path": "art/textures/skins/props/hele_sail_5.png",
+      "bytes": 490234,
+      "sha256": "2a5bc7d70ceec4b56f10a2ed567d25aec644e2877a551566ae517a05600f2d80"
+    },
+    {
+      "path": "art/textures/skins/props/hele_sail_6.png",
+      "bytes": 491004,
+      "sha256": "9b58966ab965dac4d453332e6a7e806ef68d09743da1577e6bec92ae8a37c91d"
+    },
+    {
+      "path": "art/textures/skins/props/hele_sail_7.png",
+      "bytes": 487106,
+      "sha256": "73957ecac0645379f07ba15b64ec67dd76e0289a383ad0a832a1584b73c66b9d"
+    },
+    {
+      "path": "art/textures/skins/props/hele_tile_c.dds",
+      "bytes": 699216,
+      "sha256": "29ca35c15a8718c1493e09805aa00eeb71f7363cedf9d69e636dfbcf5b1afad1"
+    },
+    {
+      "path": "art/textures/skins/props/hele_tile_c_norm.png",
+      "bytes": 826903,
+      "sha256": "e1f13903c85f1eaf8f7dd08673df69a48f3e0a14f8ec85722d6bf3decee901be"
+    },
+    {
+      "path": "art/textures/skins/props/hele_tile_c_spec.png",
+      "bytes": 65597,
+      "sha256": "2e0b669915c7268c8026d496385c7fe3c6360b1e2dfb93b2cafe90bcc89780f3"
+    },
+    {
+      "path": "art/textures/skins/props/helmet/crest_01_bronze.png",
+      "bytes": 108230,
+      "sha256": "584393a9d1f15cf84fbea6c2ebceab6a8925c35e7b8a85f49c2e62ae60f1ece6"
+    },
+    {
+      "path": "art/textures/skins/props/helmet/crest_01_bronze_spec.png",
+      "bytes": 133848,
+      "sha256": "67abf397c7e7aa0c80fbb9bd31c47f43e65ae8fef67a49e1063ab5512521f1cf"
+    },
+    {
+      "path": "art/textures/skins/props/helmet/crest_01_norm.png",
+      "bytes": 14945,
+      "sha256": "d648a6acd5d5c5c26a4b916ee990413625e4bb5afe15b39b31d1b24dc9ab7efe"
+    },
+    {
+      "path": "art/textures/skins/props/helmet/crest_02_bronze.png",
+      "bytes": 108426,
+      "sha256": "5b189bdab6bb6bcd830a195e50be6ca8cfa492b98a3cd8069299097cbe480521"
+    },
+    {
+      "path": "art/textures/skins/props/helmet/crest_03_bronze.png",
+      "bytes": 111230,
+      "sha256": "5cbaf11f3613aa8b6525c4c8d12ba848cb5dc66b7c3b04283fb6d54647e3ffa5"
+    },
+    {
+      "path": "art/textures/skins/props/helmet/crest_04_bronze.png",
+      "bytes": 109086,
+      "sha256": "5abf47f705ac66d4fdd6fa27653a8cc2d353d1ac98ad28b1e8e21ae4b9741078"
+    },
+    {
+      "path": "art/textures/skins/props/helmet/hele_attic_01_bronze.png",
+      "bytes": 93898,
+      "sha256": "22b1300f8d63c875e24237175a98042c39bdecedbddf0b9a6b0b601ee4ca8093"
+    },
+    {
+      "path": "art/textures/skins/props/helmet/hele_attic_01_bronze_spec.png",
+      "bytes": 98964,
+      "sha256": "2526f5e6aa70163051c8e082063cae250f42314dbf5862ac5ba0b2ee93a8fca8"
+    },
+    {
+      "path": "art/textures/skins/props/helmet/hele_attic_01_norm.png",
+      "bytes": 38903,
+      "sha256": "eb6e8ced773a2a41b42b47d5a252fed3db2fcab22616bf3bc50bd0319af5800c"
+    },
+    {
+      "path": "art/textures/skins/props/helmet/hele_boeotian_01_bronze.png",
+      "bytes": 82417,
+      "sha256": "ce37040ec5469a411566faff55e20884d7496e7fcc4a1f60bfc96edfef8ea5c3"
+    },
+    {
+      "path": "art/textures/skins/props/helmet/hele_boeotian_01_bronze_spec.png",
+      "bytes": 87221,
+      "sha256": "267f2544bcbb466168aab6c94f28d61d0881cd306055037f420b16a703941633"
+    },
+    {
+      "path": "art/textures/skins/props/helmet/hele_boeotian_01_norm.png",
+      "bytes": 27525,
+      "sha256": "c4b5aae49f9bac30b4902e4b880457d1afad421ff43000df409ebd44b3371469"
+    },
+    {
+      "path": "art/textures/skins/props/helmet/hele_chalcidean_01_bronze.png",
+      "bytes": 100082,
+      "sha256": "aaf295c0f94b30181df5ba493dd46a50c7d62486a3de8663ab23fdb164729a55"
+    },
+    {
+      "path": "art/textures/skins/props/helmet/hele_chalcidean_01_bronze_spec.png",
+      "bytes": 112009,
+      "sha256": "5046b56de0785411eb853697cb793085f27a562673d7d63856abbf26bf0a61ae"
+    },
+    {
+      "path": "art/textures/skins/props/helmet/hele_chalcidean_01_norm.png",
+      "bytes": 40524,
+      "sha256": "200b16ce64174bd4a09c7f16e18c16b4fbb3766e0c4572e1e5f8d0bf2078f761"
+    },
+    {
+      "path": "art/textures/skins/props/helmet/hele_chalcidean_01_spec.png",
+      "bytes": 14053,
+      "sha256": "4b9fda97bba7b9deabcffff9f17363f01b208080c192b024e74ebeb0ad40006a"
+    },
+    {
+      "path": "art/textures/skins/props/helmet/hele_chalcidean_02_bronze.png",
+      "bytes": 85295,
+      "sha256": "74d5582578c3df38f16fd18e69c459c01c788af4e925e9bae2144bb4fe37a8a8"
+    },
+    {
+      "path": "art/textures/skins/props/helmet/hele_chalcidean_02_bronze_spec.png",
+      "bytes": 93637,
+      "sha256": "7f2e7708cc3e27e2daab08de3f123d291f766c6f3e3a548d3f3c0ee96b76ba95"
+    },
+    {
+      "path": "art/textures/skins/props/helmet/hele_chalcidean_02_norm.png",
+      "bytes": 35127,
+      "sha256": "9a5009916c562e0a1e65f30c38a43c81f77b94267504fd54f35451117137d699"
+    },
+    {
+      "path": "art/textures/skins/props/helmet/hele_chalcidean_03_bronze.png",
+      "bytes": 75794,
+      "sha256": "06857df895fedf03898ef629ba33061699eb81aab0eac5e4c6b8b73ee19e88a8"
+    },
+    {
+      "path": "art/textures/skins/props/helmet/hele_chalcidean_03_bronze_spec.png",
+      "bytes": 89218,
+      "sha256": "31348fc4b7d8b897eacce33e96d37d1d30b55c07c47b44e4d9b1dcf20cc891f5"
+    },
+    {
+      "path": "art/textures/skins/props/helmet/hele_chalcidean_03_norm.png",
+      "bytes": 35142,
+      "sha256": "c5307107a083e6b9f61b76c137fccc2e8abfe566a2a38b7013ac344ee468a87e"
+    },
+    {
+      "path": "art/textures/skins/props/helmet/hele_chalcidean_04_bronze.png",
+      "bytes": 86594,
+      "sha256": "a58e776daa7d4b267c734eea40eda918c4d0df3a81f75104e0c07a7e1a3953f1"
+    },
+    {
+      "path": "art/textures/skins/props/helmet/hele_chalcidean_04_bronze_spec.png",
+      "bytes": 96526,
+      "sha256": "676136def29fd7083e5f07844e7f3b0a67ae6137914fdca107fe9e87f6c8470c"
+    },
+    {
+      "path": "art/textures/skins/props/helmet/hele_chalcidean_04_norm.png",
+      "bytes": 36015,
+      "sha256": "9c84d67a7a28e5d149f37dfc38d7ada4a8d89b7e4ca4ba772fde8a1f00566684"
+    },
+    {
+      "path": "art/textures/skins/props/helmet/hele_chalcidean_05_bronze.png",
+      "bytes": 86439,
+      "sha256": "856455a753bffa5ca6e861590e97a5dcf8dca3f24ea5a6721a1e855dfad7579f"
+    },
+    {
+      "path": "art/textures/skins/props/helmet/hele_chalcidean_05_bronze_spec.png",
+      "bytes": 95476,
+      "sha256": "2bb7eadc481863867331dc7e0faa902640f15e909e8bf7d830e1042b31f55e67"
+    },
+    {
+      "path": "art/textures/skins/props/helmet/hele_chalcidean_05_norm.png",
+      "bytes": 37331,
+      "sha256": "21439742f749f766eeb480aa224ed275873f0f521d707c743213a6da2ebaf9b7"
+    },
+    {
+      "path": "art/textures/skins/props/helmet/hele_illyrian_01_bronze.png",
+      "bytes": 96648,
+      "sha256": "8e351bf08856fe9bb2f00109f4e335bbfd0f49c233b26c5f98b391cf23a6eb0f"
+    },
+    {
+      "path": "art/textures/skins/props/helmet/hele_illyrian_01_bronze_spec.png",
+      "bytes": 104457,
+      "sha256": "65008b14b995ea9c092579c4acc4dedba65d98db58fb18b95880bd017ccd3987"
+    },
+    {
+      "path": "art/textures/skins/props/helmet/hele_illyrian_01_norm.png",
+      "bytes": 49862,
+      "sha256": "a2d75f17470cbd0731c2e4f900655384a799ef9281cdf7bdde30a3d2e28c9f06"
+    },
+    {
+      "path": "art/textures/skins/props/helmet/hele_illyrian_02_bronze.png",
+      "bytes": 98331,
+      "sha256": "9c6b57018e79db1663d16c500f81b65506c6b430eb3c1172fae19ca9d6963252"
+    },
+    {
+      "path": "art/textures/skins/props/helmet/hele_illyrian_02_bronze_spec.png",
+      "bytes": 107492,
+      "sha256": "25c859cb6b9cf51411d61a1ed3dd3472af6e0e3e875f88cbe19c02e60cd97372"
+    },
+    {
+      "path": "art/textures/skins/props/helmet/hele_illyrian_02_norm.png",
+      "bytes": 52647,
+      "sha256": "99da686cdf0fc90ebf323ac22edc12c2f6847a7f0b9fe90b631d0d22637f1747"
+    },
+    {
+      "path": "art/textures/skins/props/helmet/hele_pilos_01_bronze.png",
+      "bytes": 82717,
+      "sha256": "16362ed9b51ce83fb23cd412a74ae75b6cd93cf928df61ea8ce509a495f41905"
+    },
+    {
+      "path": "art/textures/skins/props/helmet/hele_pilos_01_bronze_spec.png",
+      "bytes": 109998,
+      "sha256": "92d7ff1377e11f971ffc2725ad4f43a74051ac1034d8529658a0813dedf1247f"
+    },
+    {
+      "path": "art/textures/skins/props/helmet/hele_pilos_01_norm.png",
+      "bytes": 31827,
+      "sha256": "5f3cfa3c2be6f6e32fbe4dc23a056f55c6d784c5f5500d5c3feda39799a72b17"
+    },
+    {
+      "path": "art/textures/skins/props/helmet/hele_straw_01.png",
+      "bytes": 235661,
+      "sha256": "4189d7281dadc4b87099baeeead511556ac3ed355a01efbfdf141e630c3651e5"
+    },
+    {
+      "path": "art/textures/skins/props/helmet/hele_straw_01_norm.png",
+      "bytes": 297372,
+      "sha256": "7fd1005f8e35a565be6a964aa0dffa3cd61ae3fc1ce2af80e75e03852237fa95"
+    },
+    {
+      "path": "art/textures/skins/props/helmet/hele_straw_01_spec.png",
+      "bytes": 104731,
+      "sha256": "905ae85a729160859aba1ea0ea4c883d795a02358c3d05d579581302d8058d85"
+    },
+    {
+      "path": "art/textures/skins/props/helmet/old/hele_a3.dds",
+      "bytes": 5616,
+      "sha256": "e078af9ae8f69e6b2946cb221feea70e06ec446c567455b9c845c508fbc3c904"
+    },
+    {
+      "path": "art/textures/skins/props/horse/blanket_trader.png",
+      "bytes": 751306,
+      "sha256": "7c0098132ada2a75c43eef3a76ebbadee64d6e4c750bdcba6381831566a04b2f"
+    },
+    {
+      "path": "art/textures/skins/props/horse/hair_beige.png",
+      "bytes": 81761,
+      "sha256": "76b8dc66787b67f14a63673c104b6a6d9624bde229ca01f7df37b7ff54414a7a"
+    },
+    {
+      "path": "art/textures/skins/props/horse/hair_black.png",
+      "bytes": 74271,
+      "sha256": "98b070cd0befdb3bd07cb411d965c9c3618a1c43e29f96df1c75cef0b862b828"
+    },
+    {
+      "path": "art/textures/skins/props/horse/hair_blonde.png",
+      "bytes": 84200,
+      "sha256": "758f662f2dad4650bfc9a7cf14ca0b836e3aaa72a26d2f01d90baabeabdcc71d"
+    },
+    {
+      "path": "art/textures/skins/props/horse/hair_brown.png",
+      "bytes": 78253,
+      "sha256": "5f96f126a9d1c56b62861156658d807e6efcb320cd7bc0b31ce5f1afa04fb42c"
+    },
+    {
+      "path": "art/textures/skins/props/horse/hair_gray.png",
+      "bytes": 71575,
+      "sha256": "82ebe04b1d789f04a5468929e4186c830056ac08896eaecfe3136c81d690d381"
+    },
+    {
+      "path": "art/textures/skins/props/horse/hair_norm.png",
+      "bytes": 91778,
+      "sha256": "a37d8b6262d9f1a693ee79911b65665a7606e91e4d755fb5b10619308cfb0f07"
+    },
+    {
+      "path": "art/textures/skins/props/horse/hair_spec.png",
+      "bytes": 39392,
+      "sha256": "9bd09b01c84eb103ffc808d3f88666cf6266ab35145f99e9dae26637eefcc93e"
+    },
+    {
+      "path": "art/textures/skins/props/horse/hair_white.png",
+      "bytes": 78997,
+      "sha256": "3116b6f06091c47216c46b92b60770b5341f8fe13bf9e4d02b051277e0d10749"
+    },
+    {
+      "path": "art/textures/skins/props/horse/head_straps.png",
+      "bytes": 141008,
+      "sha256": "cd0204b5828c164ae324ac4397db32ded6b21035b7af16a4a74781a32d96ebc6"
+    },
+    {
+      "path": "art/textures/skins/props/horse/head_straps_norm.png",
+      "bytes": 81099,
+      "sha256": "b801445ff901906113ffa7ec1cafe93f95ede2d4f025434a98b71ca3916c4262"
+    },
+    {
+      "path": "art/textures/skins/props/horse/head_straps_spec.png",
+      "bytes": 48538,
+      "sha256": "60b4e7485490a7c22e2ae67204d801f535af6c9601a3d090afb9a0550d50ce13"
+    },
+    {
+      "path": "art/textures/skins/props/horse/peytral_iron_03.png",
+      "bytes": 43990,
+      "sha256": "9ac8298aca08acd84877fffd4e8074c4cd044458ab45ef528c280fa13cb3f357"
+    },
+    {
+      "path": "art/textures/skins/props/horse/peytral_norm.png",
+      "bytes": 48660,
+      "sha256": "a726b2830764651f85d3ed9824c233f2cf87745e3ed123935a1d8155e13080fe"
+    },
+    {
+      "path": "art/textures/skins/props/horse/peytral_spec.png",
+      "bytes": 23535,
+      "sha256": "9c29abeaf47b9a476be66518637d5dc77e11a109d6efe5fca21c02dc7333acfb"
+    },
+    {
+      "path": "art/textures/skins/props/kart_merchant_sail_a.png",
+      "bytes": 483433,
+      "sha256": "56ffaa833dc69658b1dbdfb5d66cbfa1776144d42f52cd6ca2ef7b39242105a2"
+    },
+    {
+      "path": "art/textures/skins/props/prop_weap.dds",
+      "bytes": 87536,
+      "sha256": "761a9987655353d96cf5093d3d713a62dca98f5f605c8fef52311eac0b3a1bde"
+    },
+    {
+      "path": "art/textures/skins/props/ptol_sail_norm.png",
+      "bytes": 198629,
+      "sha256": "2400745e4897177c24f4cc68ca21b6d556d17081e35ae6ec559a706345e91a14"
+    },
+    {
+      "path": "art/textures/skins/props/sail_spec_1.png",
+      "bytes": 47755,
+      "sha256": "4e6245698a1b292795e4f12977aa01e77405972e7a22ae3e827d7ab2d09ea2a4"
+    },
+    {
+      "path": "art/textures/skins/props/sail_stripes_1.png",
+      "bytes": 397860,
+      "sha256": "0f91384a08ca86f0e15526dc47c7963c770c6e91ea0ee5df5c728782406aadb3"
+    },
+    {
+      "path": "art/textures/skins/props/sail_stripes_2.png",
+      "bytes": 428365,
+      "sha256": "3c57be3c62718b0f017db4b775816dbcd0d9fa9d9845c2277b51ff411e18d63e"
+    },
+    {
+      "path": "art/textures/skins/props/shield/aspis_01_norm.png",
+      "bytes": 99023,
+      "sha256": "c45aad2e1d70fbc46dcc9b05f5a67f0f0a1c73083d3d8668809ed78068f14d9a"
+    },
+    {
+      "path": "art/textures/skins/props/shield/aspis_athen_01.png",
+      "bytes": 123593,
+      "sha256": "a7ce97e5803c643aa8497d7718aa13262d692e385b2d2603100bee5108e1a905"
+    },
+    {
+      "path": "art/textures/skins/props/shield/aspis_athen_02.png",
+      "bytes": 154825,
+      "sha256": "0f8c6183457b7a16c4dedb346d45c8c35a033112d758acc48deec9c3b39fc165"
+    },
+    {
+      "path": "art/textures/skins/props/shield/aspis_athen_03.png",
+      "bytes": 148126,
+      "sha256": "8fe4cd7295b4833a55d5f66bc0972f8ee4fb31e3d665b805f38b03c328910294"
+    },
+    {
+      "path": "art/textures/skins/props/shield/aspis_athen_04.png",
+      "bytes": 110564,
+      "sha256": "f4494a9a70a0e6b9ced9c7b55941c0c7af3e3ae9d242210c8ec122085d7a0fd5"
+    },
+    {
+      "path": "art/textures/skins/props/shield/aspis_back_bronze.png",
+      "bytes": 134018,
+      "sha256": "25efd41fc1bdd6bee2cc7e87235ea75d471b33c9c0284174d5b75259ea49be71"
+    },
+    {
+      "path": "art/textures/skins/props/shield/aspis_back_norm.png",
+      "bytes": 94746,
+      "sha256": "da824d606e877cac1224b43067b02476598e143a6a476d9c4d4377d357d8e91f"
+    },
+    {
+      "path": "art/textures/skins/props/shield/aspis_back_spec.png",
+      "bytes": 150186,
+      "sha256": "fc711fc2e4afb240e2dd55041f27e1f467d7feaaed768bc8e29f6a6be75ad563"
+    },
+    {
+      "path": "art/textures/skins/props/shield/aspis_spec_bronze.png",
+      "bytes": 49642,
+      "sha256": "1fc14a1403231a41d5baa46e7852634253a8bcecbe8610dc15777180ae44e87c"
+    },
+    {
+      "path": "art/textures/skins/props/shield/aspis_thespian_01_norm.png",
+      "bytes": 119238,
+      "sha256": "4ee02680443ca73c7e13eee0123a6a9606f28752f0fbbf5a843d0b4e43bf0672"
+    },
+    {
+      "path": "art/textures/skins/props/shield/handgrips_01_bronze.png",
+      "bytes": 439895,
+      "sha256": "aa51e63ea88950d79ac030a6d9958653bcf4753f14b2e20fc439e47972f1f22d"
+    },
+    {
+      "path": "art/textures/skins/props/shield/handgrips_01_norm.png",
+      "bytes": 274282,
+      "sha256": "386ce538d972a7ee2f88d17b29fb18cf2d302baf00eb34dc1c1b37ac41587e3f"
+    },
+    {
+      "path": "art/textures/skins/props/shield/handgrips_01_spec.png",
+      "bytes": 14911,
+      "sha256": "58c26b9ec8c4b077cd4ae93fa1ad58c8809549f83fa48b7327a4a34f9bd1fe79"
+    },
+    {
+      "path": "art/textures/skins/props/shuttle_blocks.png",
+      "bytes": 46025,
+      "sha256": "14f42d2c565a801efeb9f736877592e19443386f446b3270b3e986fbac177474"
+    },
+    {
+      "path": "art/textures/skins/props/shuttle_blocks_norm.png",
+      "bytes": 75357,
+      "sha256": "2c317c36120e1c3dbfd1e02ae9f3ded9bde0cb621ec87a1c4675c81cb2e5aeb0"
+    },
+    {
+      "path": "art/textures/skins/props/shuttle_blocks_spec.png",
+      "bytes": 19242,
+      "sha256": "15709402666b2eb4f4ee59f88d8f2a4c1338af1b71ec325a93c8d1a1100845cc"
+    },
+    {
+      "path": "art/textures/skins/props/shuttle_meat.png",
+      "bytes": 17132,
+      "sha256": "5e5dccac02fce6f58f688f0725561ebf5972ec06e4fe8f747ff524938b97ed7e"
+    },
+    {
+      "path": "art/textures/skins/props/wood_e.png",
+      "bytes": 131643,
+      "sha256": "684e69bc656a6aba35f5de5c8e5eca68e8a3e2e878f22302a4ad05ff0baa8608"
+    },
+    {
+      "path": "art/textures/skins/props/wooden_wagon.png",
+      "bytes": 168461,
+      "sha256": "d662d1b9d4e778af162aa11edface74bf1f85036bfb72e98a3fc21f7eb72c74f"
+    },
+    {
+      "path": "art/textures/skins/skeletal/athen/epilektos_01.png",
+      "bytes": 132243,
+      "sha256": "573d3ef3717544da3ec96440d85be1f44b9518e52e3d46bd13d0980ea6ac5345"
+    },
+    {
+      "path": "art/textures/skins/skeletal/athen/epilektos_02.png",
+      "bytes": 145194,
+      "sha256": "fd5eeb9e91deaa4e8a3ca66e747df71aea89a3402a50f2704125dc58c10eb721"
+    },
+    {
+      "path": "art/textures/skins/skeletal/hele/tunic_02_01.png",
+      "bytes": 98096,
+      "sha256": "43f5bb8d5ec8b4aeb966bb7b89eeaa16a552efb006a7804e4155d4e5df9dbc72"
+    },
+    {
+      "path": "art/textures/skins/skeletal/hele/tunic_02_02.png",
+      "bytes": 106865,
+      "sha256": "2ac4b890da844fa3e2501c43ab3f9e9381dee5068c5524c25c5ae193b7c6c348"
+    },
+    {
+      "path": "art/textures/skins/skeletal/hele/tunic_02_03.png",
+      "bytes": 92297,
+      "sha256": "3f390676d70342f609d36ec7bd7246a80f9ef710f76ed5a2a154091dc2b104ea"
+    },
+    {
+      "path": "art/textures/skins/skeletal/hele/tunic_03_01.png",
+      "bytes": 92253,
+      "sha256": "c56dd10e2d40b9ec9485db26ac62d6928421cb4fbc0a3af87ceebae6cab1d09e"
+    },
+    {
+      "path": "art/textures/skins/skeletal/hele/tunic_03_02.png",
+      "bytes": 101041,
+      "sha256": "682efaab9a974a629852e811af99cebaf54406090e16061e59a940f91b43fbae"
+    },
+    {
+      "path": "art/textures/skins/skeletal/hele/tunic_03_03.png",
+      "bytes": 85892,
+      "sha256": "ea14a3b096bd55c8d53f228a419c568f9ddf474bbedd9388f7207b8aa66c9ab3"
+    },
+    {
+      "path": "art/textures/skins/skeletal/horse_bay_01.png",
+      "bytes": 187395,
+      "sha256": "d3025a702094ca684d55224728e519aeae3e7760d73351afccdaae3d1d69172d"
+    },
+    {
+      "path": "art/textures/skins/skeletal/horse_bay_02.png",
+      "bytes": 210353,
+      "sha256": "a31e509d38c719ff062b889ff5c18e4551779b3980e239e79a25092bfc280ed9"
+    },
+    {
+      "path": "art/textures/skins/skeletal/horse_beige.png",
+      "bytes": 91583,
+      "sha256": "adc039a32c262be0a4ed1bd5f56309e51a8b39eee541c61d1f6cd390667606b5"
+    },
+    {
+      "path": "art/textures/skins/skeletal/horse_black.png",
+      "bytes": 53172,
+      "sha256": "75a37dfb093e47cda8908e0efe94ab94b850107db8dc77feb41adbc4eb67f91c"
+    },
+    {
+      "path": "art/textures/skins/skeletal/horse_brown.png",
+      "bytes": 195649,
+      "sha256": "3e6549478bfd81305dce532714808038a7341194150b4a80ba0d4301b7189c2a"
+    },
+    {
+      "path": "art/textures/skins/skeletal/horse_cherrybay.png",
+      "bytes": 209681,
+      "sha256": "37ae9a32f0180071ed5e37bfd073c8a5332f17db192fadfaba394b834f4c3aac"
+    },
+    {
+      "path": "art/textures/skins/skeletal/horse_dark_chestnut.png",
+      "bytes": 193944,
+      "sha256": "c1d05ce878b39ac8a4d1a3ec43fd01d2c8a1d97e8f720fc63dce74aa1b3de7fb"
+    },
+    {
+      "path": "art/textures/skins/skeletal/horse_fading_black.png",
+      "bytes": 31719,
+      "sha256": "f136da0e9d1305fbe8327d66e9ef7a6e60dfe016a668af26927a98301cc08315"
+    },
+    {
+      "path": "art/textures/skins/skeletal/horse_gray.png",
+      "bytes": 90674,
+      "sha256": "ae0058cef8a817efa3aa3b05b1d1a16cf0369ceb7a71a87a25d832b920a41764"
+    },
+    {
+      "path": "art/textures/skins/skeletal/horse_halflinger.png",
+      "bytes": 86238,
+      "sha256": "4b514b8ee78f8859e141f5383f67ae912970545f84dc1e2ebb4185fee11a0821"
+    },
+    {
+      "path": "art/textures/skins/skeletal/horse_norm.png",
+      "bytes": 61660,
+      "sha256": "7095a26efdc09c1cd1fb9980697bd7ec376bd5de715671b246ab334806128448"
+    },
+    {
+      "path": "art/textures/skins/skeletal/horse_palomino_01.png",
+      "bytes": 86793,
+      "sha256": "16e2ab8a1bc0413af808d29e17eee0787b77e725114efcfab245e5f475f159d7"
+    },
+    {
+      "path": "art/textures/skins/skeletal/horse_palomino_02.png",
+      "bytes": 88138,
+      "sha256": "d341a9f2511a2257567f74dd73559e5012f59a0fae1e1e6632f451c38c0dad99"
+    },
+    {
+      "path": "art/textures/skins/skeletal/horse_spec.png",
+      "bytes": 32504,
+      "sha256": "212e0d92b11cfa320a3a458241164586b7e763f9881ddf0a2120930d7165129f"
+    },
+    {
+      "path": "art/textures/skins/skeletal/horse_tan.png",
+      "bytes": 53076,
+      "sha256": "93f34fde391f99274ff49e444b6fbf82494d6774045b01afbd0bfbebffae1c4c"
+    },
+    {
+      "path": "art/textures/skins/skeletal/horse_white.png",
+      "bytes": 93785,
+      "sha256": "05370c4f648388a12eba78a8a2c3da866d95ad0b721e47672a46eed8b9ca14a7"
+    },
+    {
+      "path": "art/textures/skins/structural/ao/athen_barracks.png",
+      "bytes": 279578,
+      "sha256": "eefd46ce4a22d6525ad95ff496c35112c0205c360658c56b0dd8d588b8c1c8be"
+    },
+    {
+      "path": "art/textures/skins/structural/ao/athen_dock.png",
+      "bytes": 322693,
+      "sha256": "6a15c4d91f7c0d4a44e54010bdbcde356b59b1f6afc3a65e0aca3bb4a159cae7"
+    },
+    {
+      "path": "art/textures/skins/structural/ao/hele_bireme.png",
+      "bytes": 196339,
+      "sha256": "e874283ec1affbeb956269b3494b9e8b6cf98d00e01ee0d23b43caa418a7709a"
+    },
+    {
+      "path": "art/textures/skins/structural/hele_bireme.png",
+      "bytes": 637523,
+      "sha256": "1442ede0c7f086aebac6b37e9a77654c15e859e956a041973c7d9e9b217f0a66"
+    },
+    {
+      "path": "art/textures/skins/structural/hele_bireme_norm.png",
+      "bytes": 1055385,
+      "sha256": "e6dd82f84af585511836b924310e2ef886d744fe9b03568dc0b229c8a1cb15ea"
+    },
+    {
+      "path": "art/textures/skins/structural/hele_bireme_spec.png",
+      "bytes": 60881,
+      "sha256": "3f4abbe5a7a18018073d8510a85d9fbaee32bb16a3cd9d8e478d8f699a3fa304"
+    },
+    {
+      "path": "art/textures/skins/structural/hele_fishing_boat.dds",
+      "bytes": 87536,
+      "sha256": "4a3d4b8bd07d8e56734270c33ba56b67d30880f4f140af3b4552f7b191121ffc"
+    },
+    {
+      "path": "art/textures/skins/structural/hele_pentekonter.png",
+      "bytes": 718533,
+      "sha256": "93c2df807ed6990ee3b180324a2fa73fc08e7db2e81c781235214ee20ea7c2ad"
+    },
+    {
+      "path": "art/textures/skins/structural/hele_struct.dds",
+      "bytes": 699216,
+      "sha256": "8b3c9339a0f1ab86e0d7ef812434c848a0815c52759d11dfbc827a21b1a2911b"
+    },
+    {
+      "path": "art/textures/skins/structural/hele_struct_b.png",
+      "bytes": 1429849,
+      "sha256": "5da908b9e4d0565501398810fbff71abc33ba1f429a1443becbf99cca19c6c84"
+    },
+    {
+      "path": "art/textures/skins/structural/hele_struct_b_norm.png",
+      "bytes": 1292078,
+      "sha256": "c3340f69772222820afe63a06746f511061dfb36d79a30a33aec936e706638a0"
+    },
+    {
+      "path": "art/textures/skins/structural/hele_struct_b_spec.png",
+      "bytes": 505047,
+      "sha256": "b8ee44c0b925c688addffe50ef68e01439e3814f714968f328d6545d259fa930"
+    },
+    {
+      "path": "art/textures/skins/structural/hele_struct_norm.png",
+      "bytes": 1510187,
+      "sha256": "8e213eb84273c3e9eaea0793c3d0241a427bcf5ef494f675d3881adaa50d9992"
+    },
+    {
+      "path": "art/textures/skins/structural/hele_struct_spec.png",
+      "bytes": 517159,
+      "sha256": "f33919d2790a0409f66f939d3288d864f5c7e64fd96649ad1d4056b00e417d12"
+    },
+    {
+      "path": "art/textures/skins/structural/kyrenia.dds",
+      "bytes": 349680,
+      "sha256": "56d6fc7ad2dd8dbce5a060b8d17ebb6314443d713d4c5777294296b47e620676"
+    },
+    {
+      "path": "art/textures/skins/structural/rome_ballista.png",
+      "bytes": 574352,
+      "sha256": "b0c4602e6091274cd63993891d527e31bcbb7c0cff7fafaac85b85f14e0078ba"
+    },
+    {
+      "path": "art/textures/skins/structural/rome_struct.png",
+      "bytes": 2054558,
+      "sha256": "9700e6298865a4c464cc908e32d3fb46c1f28efd22c0cbaefa028e75908ab51a"
+    },
+    {
+      "path": "art/textures/skins/structural/rome_struct_norm.png",
+      "bytes": 1252578,
+      "sha256": "1abbdc198d206863eda6b85bccb5f58501e605bea6b807e3fc02f0ccd46ef619"
+    },
+    {
+      "path": "art/textures/skins/structural/rome_struct_spec.png",
+      "bytes": 295370,
+      "sha256": "dd6bf1b9c2868257d3c73384488fdf77d1dc0df63aa89f9055add47f274b32a9"
+    },
+    {
+      "path": "art/textures/terrain/alphamaps/standard/blendbad.png",
+      "bytes": 896,
+      "sha256": "a85c2814d8c7beb7ef1297740fcecd2bf1ce8e974943915449566dd2bb035c02"
+    },
+    {
+      "path": "art/textures/terrain/alphamaps/standard/blendcircle.png",
+      "bytes": 3895,
+      "sha256": "38ecf296dbbdadad2a96aa469a43b6216715849a0a860dcb5262ff75b5f0bf7d"
+    },
+    {
+      "path": "art/textures/terrain/alphamaps/standard/blendcorner.png",
+      "bytes": 1102,
+      "sha256": "b372e4485182416b7d38db02cedbd971bb2e7bd72a63fbab743c01c045886207"
+    },
+    {
+      "path": "art/textures/terrain/alphamaps/standard/blendedge.png",
+      "bytes": 2193,
+      "sha256": "f8487413b0d7571fd460b6ce39a3295724fedfab330451fcdc6033edbd5d6503"
+    },
+    {
+      "path": "art/textures/terrain/alphamaps/standard/blendedgecorner.png",
+      "bytes": 2622,
+      "sha256": "983564bc8da0e4a15419e19651ffd79f31bde64c3cb8df449286ba1d3f19854c"
+    },
+    {
+      "path": "art/textures/terrain/alphamaps/standard/blendedgetwocorners.png",
+      "bytes": 2879,
+      "sha256": "18039fdfda9167e256e95550e58e012629e1446989519c4a4aa6da707a8b9390"
+    },
+    {
+      "path": "art/textures/terrain/alphamaps/standard/blendfourcorners.png",
+      "bytes": 2840,
+      "sha256": "d53cc9b792d538878603017660c3baacaa5ef6fc9e0d933757a86a3ec84f68c1"
+    },
+    {
+      "path": "art/textures/terrain/alphamaps/standard/blendlshape.png",
+      "bytes": 3284,
+      "sha256": "9f73358efff3b63ab2bd9c4ad3b040eb237a8ecf0adcf73105410525bf74bf44"
+    },
+    {
+      "path": "art/textures/terrain/alphamaps/standard/blendlshapecorner.png",
+      "bytes": 2721,
+      "sha256": "e5c6874d4970cc80d630631261306897e4fd05c745df025520add410882c68ad"
+    },
+    {
+      "path": "art/textures/terrain/alphamaps/standard/blendthreecorners.png",
+      "bytes": 2422,
+      "sha256": "a7c4c57bb0cb330a0b10bb4c5c86fb5b0aef6130f87a64fa8e3772b4d5d2706a"
+    },
+    {
+      "path": "art/textures/terrain/alphamaps/standard/blendtwocorners.png",
+      "bytes": 1753,
+      "sha256": "f276e1a13398dbd64ac026f8cd3a646eb59c83f7a962b86ad32379e3c974d234"
+    },
+    {
+      "path": "art/textures/terrain/alphamaps/standard/blendtwoedges.png",
+      "bytes": 2835,
+      "sha256": "4673f414d95c717fdf87b7df1ff281a41434f9cf76f181694f16c434c9711d8e"
+    },
+    {
+      "path": "art/textures/terrain/alphamaps/standard/blendtwooppositecorners.png",
+      "bytes": 1956,
+      "sha256": "66b319fe0217c840e54b4a49a5c358878458db5428ce1de7ed1db6b662710d06"
+    },
+    {
+      "path": "art/textures/terrain/alphamaps/standard/blendushape.png",
+      "bytes": 2750,
+      "sha256": "bb663289e5d4cd23c7ed07d4f79bd647e1b55aef41e6f0a2770b68c73eaa8bdb"
+    },
+    {
+      "path": "art/textures/terrain/types/blackness.dds",
+      "bytes": 176,
+      "sha256": "e6269a91b4a841754dc0df5894f14ff363945115c0efb2bb1edc9c610f5699b1"
+    },
+    {
+      "path": "art/textures/terrain/types/default_norm.png",
+      "bytes": 69,
+      "sha256": "b1ba25ca729a28c798a99a1a0bcf9310d0994a55b4f9d1a36f163fb31676cecf"
+    },
+    {
+      "path": "art/textures/terrain/types/desert_city_tile.dds",
+      "bytes": 349680,
+      "sha256": "45fddd9a630b8223c7fe359e9d9b7191be9f82350afea32b4311fe55f209637d"
+    },
+    {
+      "path": "art/textures/terrain/types/desert_city_tile_norm.png",
+      "bytes": 731915,
+      "sha256": "3c835035950cc24575ca73cdc8949c278b488db6a887ea4c537b358061b04d94"
+    },
+    {
+      "path": "art/textures/terrain/types/desert_city_tile_plaza.dds",
+      "bytes": 349680,
+      "sha256": "0bfd65c1bd5631704cc854b3f67c1c2f9d32dd428470f19e98d0f18626da596c"
+    },
+    {
+      "path": "art/textures/terrain/types/desert_city_tile_plaza_norm.png",
+      "bytes": 770920,
+      "sha256": "07df9ced92d0a1f4f38e068622d21040fa12033d0d1c74ab8353bb39d0f9bfbc"
+    },
+    {
+      "path": "art/textures/terrain/types/desert_city_tile_plaza_spec.png",
+      "bytes": 170197,
+      "sha256": "61767d7770970686651373405817b652f56480bccf74de01df516b561abc38fd"
+    },
+    {
+      "path": "art/textures/terrain/types/desert_city_tile_spec.png",
+      "bytes": 141845,
+      "sha256": "48a48853c08c50662268ca740c35cff180c1e09039997ac836ff803715ca4063"
+    },
+    {
+      "path": "art/textures/terrain/types/desert_cliff_1.dds",
+      "bytes": 1398256,
+      "sha256": "34468d8ea4db9bb512723bd103bcfd6134e377235c7625f92dd08f1891b4f36b"
+    },
+    {
+      "path": "art/textures/terrain/types/grass1_spring.dds",
+      "bytes": 1398256,
+      "sha256": "01a93c18b7cdd47b97f6d6c3f9fec61b23378c42e6f6e3e63db5a5a53824cc26"
+    },
+    {
+      "path": "art/textures/terrain/types/grass1_spring_norm.png",
+      "bytes": 2542528,
+      "sha256": "0fd86baf9283afd11f07aba5597b053da885c2c22c04ad027ca49d916df6b49c"
+    },
+    {
+      "path": "art/textures/terrain/types/grass1_spring_spec.png",
+      "bytes": 426904,
+      "sha256": "129f414a1630b4f1c7ac8379f4498cfcf70f90ca7317cfba530b6768b21095e7"
+    },
+    {
+      "path": "art/textures/terrain/types/medit_grass_wild.dds",
+      "bytes": 699192,
+      "sha256": "84496d9216c1087245e5fd9019d644f399d6ca0dffddb58c67e37e1b2b4ad4f4"
+    },
+    {
+      "path": "art/textures/terrain/types/medit_grass_wild_norm.png",
+      "bytes": 2929997,
+      "sha256": "ce9bb8808d4d8289efe1adeafc72a2d62a7a7b93c5df89c2f6643ba665269f76"
+    },
+    {
+      "path": "art/textures/terrain/types/medit_grass_wild_spec.png",
+      "bytes": 235275,
+      "sha256": "1bf502f3e181e27c762c5b9d1758aa4fb5e69a56390c6beae7603b6745907679"
+    },
+    {
+      "path": "art/variants/biped/approach_fruit.xml",
+      "bytes": 582,
+      "sha256": "77f75dd8bfb268c5fa99a2e91945df8b0415a1959176ff2b754c4c67bf57f324"
+    },
+    {
+      "path": "art/variants/biped/approach_grain.xml",
+      "bytes": 634,
+      "sha256": "d6dd3b5853e4c89a49cbc415f796387a571310e4aba4b6470ac3a40028381ec3"
+    },
+    {
+      "path": "art/variants/biped/approach_meat.xml",
+      "bytes": 615,
+      "sha256": "4babd88da4fc04913babb5e1a187f818007a4d13308c76b9eaa0fe35e40fa9b6"
+    },
+    {
+      "path": "art/variants/biped/approach_ore.xml",
+      "bytes": 610,
+      "sha256": "3e100b27deb7e317d8f1c8f460d555aba9a8fa366269891d34f89ef17b19d463"
+    },
+    {
+      "path": "art/variants/biped/approach_praise.xml",
+      "bytes": 632,
+      "sha256": "97b602baa34d909aca1e5812f511195d3e89ef86f0c9ee34749ce93fb08e7f80"
+    },
+    {
+      "path": "art/variants/biped/approach_rock.xml",
+      "bytes": 611,
+      "sha256": "a442c8a4cc84a75ba60c5c279efa5c1aeb3b7e3aa8b58b8643b9bb19009ac8ce"
+    },
+    {
+      "path": "art/variants/biped/approach_ruins.xml",
+      "bytes": 612,
+      "sha256": "a58db3e6cd9b433151f4b751573cecd76fe14304b739b86d8e8f7afa19521ec3"
+    },
+    {
+      "path": "art/variants/biped/approach_tree.xml",
+      "bytes": 602,
+      "sha256": "6337869ae00531aa2b2ae457332b4b1908f740075ffc105bd2b9e0123ac9f2f9"
+    },
+    {
+      "path": "art/variants/biped/attack_capture.xml",
+      "bytes": 202,
+      "sha256": "17104845b2fb1ce6711f879ac422165852f1546e5d257be346d92813d912aba6"
+    },
+    {
+      "path": "art/variants/biped/attack_ranged_lithobolos_fire_a.xml",
+      "bytes": 237,
+      "sha256": "965feeeac87b76d130b5c52e74ff118c7b2f2d766cba0ef5f147ba6f31da03df"
+    },
+    {
+      "path": "art/variants/biped/attack_ranged_lithobolos_fire_b.xml",
+      "bytes": 395,
+      "sha256": "dc9da97044b61bd8df6d76b4a26a39ab85a8e2aab016c853967968198fcde90b"
+    },
+    {
+      "path": "art/variants/biped/attack_slaughter.xml",
+      "bytes": 484,
+      "sha256": "89e0a9839367d678f0026d52b64050339132785a0ec4ca3d1b1b79b5f82a4959"
+    },
+    {
+      "path": "art/variants/biped/base_citizen_soldier.xml",
+      "bytes": 1380,
+      "sha256": "491a9bb6fe1e180e9a5c83dd9790a84108fbb210b7d7e9ac61394b6488657cc5"
+    },
+    {
+      "path": "art/variants/biped/base_death_infantry.xml",
+      "bytes": 172,
+      "sha256": "07cc21ddf39b73d75462b7373f17b79cdce34f2bc7b81e5416d299e0d45ff279"
+    },
+    {
+      "path": "art/variants/biped/base_hoplite.xml",
+      "bytes": 1798,
+      "sha256": "a7fc5470e9a0945220e796c9c58f7af45900a04ad92cd176135cad84263fd65c"
+    },
+    {
+      "path": "art/variants/biped/build.xml",
+      "bytes": 420,
+      "sha256": "5fa1bdbb803f9e4c2b520f26ecdfd78bb295725c587928c489db4d778d2f17ad"
+    },
+    {
+      "path": "art/variants/biped/build_farm.xml",
+      "bytes": 430,
+      "sha256": "87d2a744bf89e8cdc3d1b83467289304233bcf22bb6d091373ea2cc34c37a2bd"
+    },
+    {
+      "path": "art/variants/biped/carry_food.xml",
+      "bytes": 657,
+      "sha256": "d98a0b7ad05fe24f5c2e872474625f184065fd5224c8011e4705bfc08f1fcd3b"
+    },
+    {
+      "path": "art/variants/biped/carry_meat.xml",
+      "bytes": 667,
+      "sha256": "88682d41b452a17b577c9271fb3e2d0219283f9606e1ad6f8f8ae9192b4a3891"
+    },
+    {
+      "path": "art/variants/biped/carry_metal.xml",
+      "bytes": 615,
+      "sha256": "66b81c134d8313f4f5871a04c0ffca5a8801d42459ae1c2463875c4a3e576a6e"
+    },
+    {
+      "path": "art/variants/biped/carry_stone.xml",
+      "bytes": 615,
+      "sha256": "264e1008b08b4a658fbb9a7f00f8301e82d3dbaf015363041d27ecfff58d0a36"
+    },
+    {
+      "path": "art/variants/biped/carry_wood.xml",
+      "bytes": 616,
+      "sha256": "fa6a262a1831b2a8a1bf69fb5208e5c780ba60e0e9307573dcec39a485e24911"
+    },
+    {
+      "path": "art/variants/biped/death_infantry.xml",
+      "bytes": 302,
+      "sha256": "711eb6a9a21647f2142e0ee90b291c2841c1df5461f0d49169a5632cb3167387"
+    },
+    {
+      "path": "art/variants/biped/formations/phalanx_back.xml",
+      "bytes": 527,
+      "sha256": "581e8a974f0e5044ca9d2d5b8ac287c200aa5ab14382346fac3f425a5efceeec"
+    },
+    {
+      "path": "art/variants/biped/formations/phalanx_front.xml",
+      "bytes": 537,
+      "sha256": "c25b64b9e83c40431c0aa2af77a678c016bead73a1cdb8cf7081778386db1982"
+    },
+    {
+      "path": "art/variants/biped/formations/phalanx_mid.xml",
+      "bytes": 520,
+      "sha256": "b6881ec8e17bcb177b8481457c368b536c3275bd20af1edc6a06ab4b4e05a2ca"
+    },
+    {
+      "path": "art/variants/biped/gather_fruit.xml",
+      "bytes": 518,
+      "sha256": "c0154cef6b8de9c1abf7bb185cb1f11399743d48d04d628b08b24bf9f79d69fe"
+    },
+    {
+      "path": "art/variants/biped/gather_grain.xml",
+      "bytes": 488,
+      "sha256": "7b4c37f7094c9175f72807319021b214b6b51c981f576abe50ff3db9a3ab88af"
+    },
+    {
+      "path": "art/variants/biped/gather_meat.xml",
+      "bytes": 476,
+      "sha256": "1016ed551c2937ad5c09126695ca2a15d36e37aabb4322a05b0cd6c85effa7c0"
+    },
+    {
+      "path": "art/variants/biped/gather_ore.xml",
+      "bytes": 470,
+      "sha256": "8b006a3a3e16af3159a0e21b7bcdca8ef0938746de1b5cb30439f348af22e0fc"
+    },
+    {
+      "path": "art/variants/biped/gather_praise.xml",
+      "bytes": 673,
+      "sha256": "2b72d843670ee7bf5cecb0822542c5290bf64418dacd5a4dc01c9ff5acacf0e8"
+    },
+    {
+      "path": "art/variants/biped/gather_rock.xml",
+      "bytes": 472,
+      "sha256": "a8805c4a21bf520645a0c59d7558c297fe3e378cd63ef367938d4a4b929f8c32"
+    },
+    {
+      "path": "art/variants/biped/gather_ruins.xml",
+      "bytes": 474,
+      "sha256": "d045c72a7980e7aa97d53d6f295ef84e616babe9208bfae4202e3750db868567"
+    },
+    {
+      "path": "art/variants/biped/gather_tree.xml",
+      "bytes": 472,
+      "sha256": "2c3cf8ae0a19d0f376be54fb63c3835c7873314b84b88a0335dec3d2cea7943b"
+    },
+    {
+      "path": "art/variants/biped/rider/attack_slaughter.xml",
+      "bytes": 379,
+      "sha256": "da724ef2368dbad8b251ee5cd24d6de591ea6db89b788501ab744e847905ea26"
+    },
+    {
+      "path": "art/variants/biped/rider/attack_slaughter_hele.xml",
+      "bytes": 195,
+      "sha256": "8035bb07658516684b5bb1743bd2f869478ebf4030f6a8b96b30793be2881d8c"
+    },
+    {
+      "path": "art/variants/biped/rider/base_carry_meat.xml",
+      "bytes": 293,
+      "sha256": "f0e0924d332cb437769b5556890bd38ef5e9a246fe3272f5ef33d04441dffa44"
+    },
+    {
+      "path": "art/variants/biped/rider/carry_meat.xml",
+      "bytes": 300,
+      "sha256": "9f269f100cf7489a7cec8d5325c08abd516a8f2995061e79f8ae0fb5e7924c47"
+    },
+    {
+      "path": "art/variants/biped/rider/cavalry/base_swordsman_relax.xml",
+      "bytes": 1937,
+      "sha256": "42eeebd4f41c2f0fddcd684fa80dd4fa9f97befa234f75e09d2ae7a131ac666f"
+    },
+    {
+      "path": "art/variants/biped/rider/death.xml",
+      "bytes": 308,
+      "sha256": "fc9f213f0f71b2432463786d5015ab7f7d08e012839ea40a092166ba8c80a0e5"
+    },
+    {
+      "path": "art/variants/biped/rider/promotion.xml",
+      "bytes": 195,
+      "sha256": "a0cee53936a0b2be9732b8cfe4a8644d3622d14bc1998010fa2c920468543227"
+    },
+    {
+      "path": "art/variants/others/ships/hele_sail_01.xml",
+      "bytes": 224,
+      "sha256": "5fc0b2044597438233c47b05ce2ea711ce858eb0397f7966e32c5fc4cedba12a"
+    },
+    {
+      "path": "art/variants/others/ships/hele_sail_02.xml",
+      "bytes": 228,
+      "sha256": "ebdeee1e55476698ca3632571a6c165102b09294bf300076778502e5d525938e"
+    },
+    {
+      "path": "art/variants/others/ships/hele_sail_03.xml",
+      "bytes": 227,
+      "sha256": "97be6e53f4bdab645557cccc858390646c3829195d24c61fd5b320b42851683f"
+    },
+    {
+      "path": "art/variants/others/ships/hele_sail_04.xml",
+      "bytes": 225,
+      "sha256": "a813ab84a447d53908da28e673892bc6ecd684e1f99a3ef169deda72de36d08a"
+    },
+    {
+      "path": "art/variants/others/ships/hele_sail_05.xml",
+      "bytes": 225,
+      "sha256": "ee697fc7bb87728760eddca3888ed28e64b22af8b79b1bb95df41bcaabe856bf"
+    },
+    {
+      "path": "art/variants/others/ships/hele_sail_06.xml",
+      "bytes": 227,
+      "sha256": "bd634fc7167b7414021cb50e6e03affc5923454c8a2e019286912eef9db62f0d"
+    },
+    {
+      "path": "art/variants/others/ships/hele_sail_base.xml",
+      "bytes": 262,
+      "sha256": "f282b85586d5d294ddf106b14dcd7117b14cb8e8374c5537868d199676e61496"
+    },
+    {
+      "path": "art/variants/others/ships/main_sail_base.xml",
+      "bytes": 267,
+      "sha256": "f6ed3f80e47932436acf146d25f163c5167351187207a3bade5976e43e4149df"
+    },
+    {
+      "path": "art/variants/quadraped/base_horse_archer.xml",
+      "bytes": 1797,
+      "sha256": "4633043f4f53ec251c18ec050ca6b177ae197ebff0e03ad0d227ce52a4dcefcf"
+    },
+    {
+      "path": "art/variants/quadraped/base_horse_archer_fast.xml",
+      "bytes": 1920,
+      "sha256": "a21a4584751ae88d857ce8385fa6ed04468975219661cca782bf7253c2de888a"
+    },
+    {
+      "path": "art/variants/quadraped/base_horse_chariot.xml",
+      "bytes": 950,
+      "sha256": "d754e34d3827de3d565da145dea164048939313fa485119a0bea78d890cd9158"
+    },
+    {
+      "path": "art/variants/quadraped/base_horse_death.xml",
+      "bytes": 371,
+      "sha256": "e7571cc968f0ae20c70167f7c39cd9f3c3fba91b486f1df24c44bd4da5fe66f1"
+    },
+    {
+      "path": "art/variants/quadraped/base_horse_fauna.xml",
+      "bytes": 1183,
+      "sha256": "91810ba0723bfdfa77602b698461d173cb12de0463299208f64d1f13fd2d8593"
+    },
+    {
+      "path": "art/variants/quadraped/base_horse_gather_meat.xml",
+      "bytes": 258,
+      "sha256": "17eab082a883a153e06e2526100058673cd947d472171b0c4547de353dd72931"
+    },
+    {
+      "path": "art/variants/quadraped/base_horse_javelin.xml",
+      "bytes": 1681,
+      "sha256": "9d9f96c1b859bb5f784f582ee0fe01323882ee4c55157a5c4fd85dbf731eb353"
+    },
+    {
+      "path": "art/variants/quadraped/base_horse_javelin_fast.xml",
+      "bytes": 1702,
+      "sha256": "0798d0e187699d8445dbb12aecff9a36ffcb0a16b24d1bc7a1a7183685d1f8d7"
+    },
+    {
+      "path": "art/variants/quadraped/base_horse_pace.xml",
+      "bytes": 1761,
+      "sha256": "bf26803b6f4cff3776db48f23209b77090e8f8e355a79b3620e96cac2a30c949"
+    },
+    {
+      "path": "art/variants/quadraped/base_horse_run.xml",
+      "bytes": 258,
+      "sha256": "894f67c6dfe6e4bd39bb63686ec3960d00df43875cb15964f5cdaf5ca949d10f"
+    },
+    {
+      "path": "art/variants/quadraped/base_horse_trader.xml",
+      "bytes": 966,
+      "sha256": "202097c91a15b8ebce49deb8c2f860457e97eb4264e87a9ab16db3d0ebd6d5ec"
+    },
+    {
+      "path": "art/variants/quadraped/base_horse_trot.xml",
+      "bytes": 1761,
+      "sha256": "c8dc9bc76ea09e6ea27c02b69851f5d2ebb02343b4adcb5eb1d398f98cf9dca9"
+    },
+    {
+      "path": "art/variants/quadraped/base_horse_walk.xml",
+      "bytes": 1500,
+      "sha256": "0e36367b26888bd08472568d505701b91f081a7fabd61a8b30d1182942998a34"
+    },
+    {
+      "path": "art/variants/quadraped/horse/base.xml",
+      "bytes": 244,
+      "sha256": "19402f08e2abe7c32ad402dca0a67c10c49da22eda9a5c7404d2ea548457c5d7"
+    },
+    {
+      "path": "art/variants/quadraped/horse/bay_01.xml",
+      "bytes": 398,
+      "sha256": "413715f3aaccf1027e90ac353c80e9266d4855a317fed60120e08a5ff16a6d70"
+    },
+    {
+      "path": "art/variants/quadraped/horse/bay_02.xml",
+      "bytes": 398,
+      "sha256": "4436473f48c4aefa8c4f1c98e078c94a93e2de08d0c80e909df6844c8f527630"
+    },
+    {
+      "path": "art/variants/quadraped/horse/beige.xml",
+      "bytes": 396,
+      "sha256": "eb963a8571e4115c60b83bfb0f9b05bfb2a3617cd2dca3631bf23b74eaefc243"
+    },
+    {
+      "path": "art/variants/quadraped/horse/black.xml",
+      "bytes": 394,
+      "sha256": "8c7bde5b767c2d42cd81644b07c662f289d27f39d8681d789a9fe8d470710238"
+    },
+    {
+      "path": "art/variants/quadraped/horse/brown.xml",
+      "bytes": 396,
+      "sha256": "b93316bd1e0ba6bff2778895982cf2db3909273729b28101959c9e3130655fd8"
+    },
+    {
+      "path": "art/variants/quadraped/horse/cherrybay.xml",
+      "bytes": 404,
+      "sha256": "eadfdf786a5489f11df6be93fe67feb24324c3c15b22cb8abc14b04bffab583c"
+    },
+    {
+      "path": "art/variants/quadraped/horse/chestnut_01.xml",
+      "bytes": 398,
+      "sha256": "a14f87bb38ff56c2150415e49a5362b9a046ad4ef3512901f0be727de9910fcc"
+    },
+    {
+      "path": "art/variants/quadraped/horse/chestnut_02.xml",
+      "bytes": 398,
+      "sha256": "4b6eebf29321c19b2111efd782302526a25a419c8f6ab7176b3f91bf47b31670"
+    },
+    {
+      "path": "art/variants/quadraped/horse/dark_chestnut.xml",
+      "bytes": 412,
+      "sha256": "8e8d21eb264f47e54fb1e1c0785516672f7dc109d70c7d628117d4efcf1a507d"
+    },
+    {
+      "path": "art/variants/quadraped/horse/fading_black.xml",
+      "bytes": 408,
+      "sha256": "847c525262684e705f180fbb035cbb77ad55d86f2f204b69e6f3d7ecadbc4df9"
+    },
+    {
+      "path": "art/variants/quadraped/horse/gray.xml",
+      "bytes": 392,
+      "sha256": "b9c7e397d16c608deff12493c24371f82aea456ad358c05fad7b1f75b76b0916"
+    },
+    {
+      "path": "art/variants/quadraped/horse/halflinger.xml",
+      "bytes": 395,
+      "sha256": "64c2de0f82464bc9aadc48e60813ec3c281ab5cfdd15376976f7da56ec1604a8"
+    },
+    {
+      "path": "art/variants/quadraped/horse/props/hair_base.xml",
+      "bytes": 240,
+      "sha256": "187b19d65e730d463e7cad235c788834630283a94d7fb1cdb582f0571d290275"
+    },
+    {
+      "path": "art/variants/quadraped/horse/props/hair_beige.xml",
+      "bytes": 222,
+      "sha256": "09b3a81016fa2a03bbb1087157925bbcf035488650c9edf6bfa6ab295d686a8f"
+    },
+    {
+      "path": "art/variants/quadraped/horse/props/hair_black.xml",
+      "bytes": 222,
+      "sha256": "d73a7923ff7f6d3489891b6299be83151b9f9ddc5c26859e5bcee1c3a6b02777"
+    },
+    {
+      "path": "art/variants/quadraped/horse/props/hair_blonde.xml",
+      "bytes": 224,
+      "sha256": "700a7a4ddcdb82167a4c2d845fe3af1282caf1a862a8bc0b362b9c72cbcbe478"
+    },
+    {
+      "path": "art/variants/quadraped/horse/props/hair_brown.xml",
+      "bytes": 222,
+      "sha256": "4e8431524522857c0ea7bd672e5cd05807bf69b62eae0de148d16619da391428"
+    },
+    {
+      "path": "art/variants/quadraped/horse/props/hair_gray.xml",
+      "bytes": 220,
+      "sha256": "37f829932bc13f57e040096b706ab541f1d14ebbef1d6d0a8c2214e3ff2e6d5e"
+    },
+    {
+      "path": "art/variants/quadraped/horse/props/hair_white.xml",
+      "bytes": 222,
+      "sha256": "66ff268ee73202be84e501b62ae89f57fe118c123db43d7d9c3c2b246b118502"
+    },
+    {
+      "path": "art/variants/quadraped/horse/pure_black.xml",
+      "bytes": 384,
+      "sha256": "b47ef2f36d90601bff76fec2ffec569a83aadf6b098e352bf3f4c4208529af2b"
+    },
+    {
+      "path": "art/variants/quadraped/horse/tan.xml",
+      "bytes": 392,
+      "sha256": "ee6977ef2b811392d071caf6228f0a61a69b621601070a398fe03bb72b77e50e"
+    },
+    {
+      "path": "art/variants/quadraped/horse/white.xml",
+      "bytes": 394,
+      "sha256": "2e988ae32ca16ad333821daaadfdc715eb552ab4f0b1d976b0fcfbd3561b73f0"
+    },
+    {
+      "path": "art/variants/shields/aspis_base_01.xml",
+      "bytes": 294,
+      "sha256": "db9fe3c00da14ad058e87c18c8f94019da7b5517ec7503d52af744fd067b9eb8"
+    },
+    {
+      "path": "art/variants/shields/aspis_handgrip_bronze_01.xml",
+      "bytes": 327,
+      "sha256": "8459b72a2482daca68823467b6316fe1f61b0686456cc304cd9a79e5ba8a0412"
+    },
+    {
+      "path": "art/variants/shields/athen_aspis_basic_01.xml",
+      "bytes": 217,
+      "sha256": "c763f09bfc30499d29c0e12c443d3dced38a6d0c883aae383b0599db563dc543"
+    },
+    {
+      "path": "art/variants/shields/athen_aspis_basic_02.xml",
+      "bytes": 295,
+      "sha256": "522dbb1c7cd27d14491dde860e84a4785e5071309a69754c0654a2fc371b72e7"
+    },
+    {
+      "path": "art/variants/shields/athen_aspis_basic_03.xml",
+      "bytes": 217,
+      "sha256": "8c9e10346fde48b532b7d7780222b6edbe1085b76977818203b901fc07f09bcd"
+    },
+    {
+      "path": "art/variants/shields/athen_aspis_basic_04.xml",
+      "bytes": 217,
+      "sha256": "073ca95b425abe3abaf0c1e5c5a6b1d0fcefb4242c10edc01a4674e631b96e0a"
+    },
+    {
+      "path": "art/variants/structures/base_destruction.xml",
+      "bytes": 604,
+      "sha256": "ff987eee6b848a80b3715bb45e2dbeff8519d834a0cea617021c09711f4f08d9"
+    },
+    {
+      "path": "art/variants/structures/destruction_medium.xml",
+      "bytes": 345,
+      "sha256": "3f41f0586457fbaabbb1d8769a1b476c56307cabf29d556cac5dcc0915381b99"
+    }
+  ],
+  "totalBytes": 194443328
+}

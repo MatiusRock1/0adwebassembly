@@ -1,0 +1,11 @@
+<!doctype html>
+<html lang="es">
+<meta charset="utf-8">
+<title>0 A.D. — diagnóstico WebGPU</title>
+<p>Sonda de acceso a la API. No ejecuta el renderer ni acredita la fase 4.5.</p>
+<button id="probe">Comprobar WebGPU</button>
+<button id="dispose" disabled>Liberar dispositivo</button>
+<canvas id="canvas" width="16" height="16" hidden></canvas>
+<pre id="result"></pre>
+<script type="module" src="webgpu-probe.mjs"></script>
+</html>

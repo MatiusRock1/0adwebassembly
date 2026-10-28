@@ -1,0 +1,2644 @@
+{
+  "passed": false,
+  "phase4Accepted": false,
+  "errors": [],
+  "console": [
+    "The powerPreference option is currently ignored when calling requestAdapter() on Windows. See https://crbug.com/369219127",
+    "{\"type\":\"ready\",\"backend\":\"webgpu\",\"powerPreference\":\"high-performance\",\"owner\":\"main-thread\",\"adapter\":{\"vendor\":\"nvidia\",\"architecture\":\"ampere\",\"device\":\"\",\"description\":\"\"},\"adapterFeatures\":[\"bgra8unorm-storage\",\"clip-distances\",\"core-features-and-limits\",\"depth-clip-control\",\"depth32float-stencil8\",\"dual-source-blending\",\"float32-blendable\",\"float32-filterable\",\"indirect-first-instance\",\"primitive-index\",\"rg11b10ufloat-renderable\",\"shader-f16\",\"subgroup-size-control\",\"subgroups\",\"texture-component-swizzle\",\"texture-compression-bc\",\"texture-compression-bc-sliced-3d\",\"texture-formats-tier1\",\"texture-formats-tier2\",\"timestamp-query\"],\"adapterLimits\":{\"maxTextureDimension1D\":16384,\"maxTextureDimension2D\":16384,\"maxTextureDimension3D\":2048,\"maxTextureArrayLayers\":2048,\"maxBindGroups\":4,\"maxBindGroupsPlusVertexBuffers\":24,\"maxBindingsPerBindGroup\":1000,\"maxDynamicUniformBuffersPerPipelineLayout\":10,\"maxDynamicStorageBuffersPerPipelineLayout\":8,\"maxSampledTexturesPerShaderStage\":48,\"maxSamplersPerShaderStage\":16,\"maxStorageBuffersPerShaderStage\":16,\"maxStorageTexturesPerShaderStage\":8,\"maxUniformBuffersPerShaderStage\":12,\"maxUniformBufferBindingSize\":65536,\"maxStorageBufferBindingSize\":2147483644,\"minUniformBufferOffsetAlignment\":256,\"minStorageBufferOffsetAlignment\":256,\"maxVertexBuffers\":8,\"maxBufferSize\":2147483648,\"maxVertexAttributes\":30,\"maxVertexBufferArrayStride\":2048,\"maxInterStageShaderVariables\":28,\"maxColorAttachments\":8,\"maxColorAttachmentBytesPerSample\":128,\"maxComputeWorkgroupStorageSize\":32768,\"maxComputeInvocationsPerWorkgroup\":1024,\"maxComputeWorkgroupSizeX\":1024,\"maxComputeWorkgroupSizeY\":1024,\"maxComputeWorkgroupSizeZ\":64,\"maxComputeWorkgroupsPerDimension\":65535,\"maxImmediateSize\":64,\"maxStorageBuffersInFragmentStage\":16,\"maxStorageTexturesInFragmentStage\":8,\"maxStorageBuffersInVertexStage\":16,\"maxStorageTexturesInVertexStage\":8},\"deviceFeatures\":[\"core-features-and-limits\",\"depth32float-stencil8\",\"dual-source-blending\",\"float32-blendable\",\"float32-filterable\",\"rg11b10ufloat-renderable\",\"texture-compression-bc\"],\"deviceLimits\":{\"maxTextureDimension1D\":8192,\"maxTextureDimension2D\":8192,\"maxTextureDimension3D\":2048,\"maxTextureArrayLayers\":256,\"maxBindGroups\":4,\"maxBindGroupsPlusVertexBuffers\":24,\"maxBindingsPerBindGroup\":1000,\"maxDynamicUniformBuffersPerPipelineLayout\":8,\"maxDynamicStorageBuffersPerPipelineLayout\":4,\"maxSampledTexturesPerShaderStage\":16,\"maxSamplersPerShaderStage\":16,\"maxStorageBuffersPerShaderStage\":8,\"maxStorageTexturesPerShaderStage\":4,\"maxUniformBuffersPerShaderStage\":12,\"maxUniformBufferBindingSize\":65536,\"maxStorageBufferBindingSize\":134217728,\"minUniformBufferOffsetAlignment\":256,\"minStorageBufferOffsetAlignment\":256,\"maxVertexBuffers\":8,\"maxBufferSize\":268435456,\"maxVertexAttributes\":16,\"maxVertexBufferArrayStride\":2048,\"maxInterStageShaderVariables\":16,\"maxColorAttachments\":8,\"maxColorAttachmentBytesPerSample\":32,\"maxComputeWorkgroupStorageSize\":16384,\"maxComputeInvocationsPerWorkgroup\":256,\"maxComputeWorkgroupSizeX\":256,\"maxComputeWorkgroupSizeY\":256,\"maxComputeWorkgroupSizeZ\":64,\"maxComputeWorkgroupsPerDimension\":65535,\"maxImmediateSize\":64,\"maxStorageBuffersInFragmentStage\":8,\"maxStorageTexturesInFragmentStage\":4,\"maxStorageBuffersInVertexStage\":8,\"maxStorageTexturesInVertexStage\":4},\"unavailableOptionalFeatures\":[],\"fallbackAdapter\":null,\"format\":\"bgra8unorm\"}",
+    "Main log written to '/logs/mainlog.html'",
+    "Interesting log written to '/logs/interestinglog.html'",
+    "Sound: AlcInit success, using Emscripten OpenAL",
+    "Hardware details written to '/logs/system_info.txt'",
+    "Failed to query SDL WM info: That operation is not supportedUserReport written to '/logs/userreport_hwdetect.txt'",
+    "Failed to load resource: the server responded with a status of 404 (File not found)",
+    "JSON data written to '/data/config/matchsettings.json'",
+    "SCENE_ACTOR_QUALITY_HOOK_BEGIN",
+    "SCENE_QUALITY_GET_BEGIN",
+    "SCENE_QUALITY_GET_END 200 100",
+    "SCENE_QUALITY_INTERPOLATE_BEGIN",
+    "SCENE_QUALITY_INTERPOLATE_END",
+    "SCENE_ACTOR_QUALITY_HOOK_END",
+    "SCENE_ACTOR_VALIDATOR_BEGIN",
+    "Replay written to '/data/replays/0.29.0/2026-10-17_0001'",
+    "{\"type\":\"sampler-address-emulation\",\"label\":\"art/textures/skins/props/decal_struct_sand_large.png\",\"requested\":[3,3,0],\"effective\":\"portable border filtering in the original shader sampling path\"}",
+    "GAME STARTED, ALL INIT COMPLETE",
+    "{\"type\":\"sampler-address-emulation\",\"label\":\"art/textures/misc/territory_border.png\",\"requested\":[3,2,0],\"effective\":\"portable border filtering in the original shader sampling path\"}"
+  ],
+  "checkpoints": [
+    {
+      "simulationMs": 10000,
+      "SHA256": "88cd7fabf347a7f5415f00d0e01059cf518218acbe3d45cafa6d9ffb84152f10",
+      "nativeSHA256": "88cd7fabf347a7f5415f00d0e01059cf518218acbe3d45cafa6d9ffb84152f10",
+      "dumpMatches": true,
+      "state": {
+        "players": [
+          {
+            "name": "Gaia",
+            "civ": "gaia",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            },
+            "entity": 2,
+            "controlsAll": false,
+            "popCount": 0,
+            "popLimit": 0,
+            "popMax": 300,
+            "panelEntities": [],
+            "resourceCounts": {
+              "food": 300,
+              "wood": 300,
+              "stone": 300,
+              "metal": 300
+            },
+            "resourceGatherers": {
+              "food": 0,
+              "wood": 0,
+              "stone": 0,
+              "metal": 0
+            },
+            "trainingBlocked": false,
+            "state": "active",
+            "team": -1,
+            "teamLocked": false,
+            "disabledTemplates": {},
+            "disabledTechnologies": {},
+            "hasSharedLos": null,
+            "spyCostMultiplier": 1,
+            "phase": "",
+            "isAlly": [
+              true,
+              false,
+              false,
+              false
+            ],
+            "isMutualAlly": [
+              true,
+              false,
+              false,
+              false
+            ],
+            "isNeutral": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "isEnemy": [
+              false,
+              true,
+              true,
+              true
+            ],
+            "entityLimits": null,
+            "entityCounts": null,
+            "matchEntityCounts": null,
+            "entityLimitChangers": null,
+            "researchQueued": null,
+            "researchedTechs": null,
+            "classCounts": null,
+            "typeCountsByClass": null,
+            "canBarter": false,
+            "barterPrices": {
+              "buy": {
+                "food": 110,
+                "wood": 110,
+                "stone": 110,
+                "metal": 110
+              },
+              "sell": {
+                "food": 90,
+                "wood": 90,
+                "stone": 90,
+                "metal": 90
+              }
+            }
+          },
+          {
+            "name": "Phase4Human",
+            "civ": "rome",
+            "color": {
+              "r": 0.1803921568627451,
+              "g": 0.1803921568627451,
+              "b": 0.7843137254901961,
+              "a": 1
+            },
+            "entity": 3,
+            "controlsAll": false,
+            "popCount": 10,
+            "popLimit": 40,
+            "popMax": 200,
+            "panelEntities": [],
+            "resourceCounts": {
+              "food": 10000,
+              "wood": 10000,
+              "stone": 10000,
+              "metal": 10000
+            },
+            "resourceGatherers": {
+              "food": 0,
+              "wood": 0,
+              "stone": 0,
+              "metal": 0
+            },
+            "trainingBlocked": false,
+            "state": "active",
+            "team": 0,
+            "teamLocked": false,
+            "disabledTemplates": {},
+            "disabledTechnologies": {},
+            "hasSharedLos": false,
+            "spyCostMultiplier": 1,
+            "phase": "village",
+            "isAlly": [
+              false,
+              true,
+              true,
+              true
+            ],
+            "isMutualAlly": [
+              false,
+              true,
+              true,
+              true
+            ],
+            "isNeutral": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "isEnemy": [
+              true,
+              false,
+              false,
+              false
+            ],
+            "entityLimits": {
+              "Animal": 50,
+              "Centurion": 8,
+              "CivilCentre": 1,
+              "Gladiator": 0,
+              "Hero": 1,
+              "Juggernaut": 1,
+              "Kennel": 2,
+              "Library": 1,
+              "Lighthouse": 1,
+              "Monument": 5,
+              "Palace": 1,
+              "Pillar": 0,
+              "PyramidLarge": 2,
+              "TempleOfAmun": 1,
+              "TempleOfIsis": 1,
+              "TempleOfVesta": 1,
+              "Theater": 1,
+              "WarDog": 0,
+              "Wonder": 1,
+              "Yakhchal": 5
+            },
+            "entityCounts": {
+              "Animal": 0,
+              "Centurion": 0,
+              "CivilCentre": 2,
+              "Gladiator": 0,
+              "Hero": 0,
+              "Juggernaut": 0,
+              "Kennel": 0,
+              "Library": 0,
+              "Lighthouse": 0,
+              "Monument": 0,
+              "Palace": 0,
+              "Pillar": 0,
+              "PyramidLarge": 0,
+              "TempleOfAmun": 0,
+              "TempleOfIsis": 0,
+              "TempleOfVesta": 0,
+              "Theater": 0,
+              "WarDog": 0,
+              "Wonder": 0,
+              "Yakhchal": 0
+            },
+            "matchEntityCounts": {},
+            "entityLimitChangers": {
+              "Gladiator": {
+                "Amphitheater": 15
+              },
+              "Juggernaut": {
+                "PtolemyIV": 4
+              },
+              "Pillar": {
+                "Ashoka": 5
+              },
+              "WarDog": {
+                "Kennel": 10
+              }
+            },
+            "researchQueued": {},
+            "researchedTechs": {},
+            "classCounts": {
+              "Structure": 8,
+              "ConquestCritical": 4,
+              "CivCentre": 2,
+              "Civic": 2,
+              "Defensive": 2,
+              "CivilCentre": 2,
+              "Barter": 3,
+              "Economic": 5,
+              "Trade": 5,
+              "Town": 3,
+              "Market": 3,
+              "Unit": 10,
+              "Organic": 8,
+              "Human": 8,
+              "Support": 8,
+              "Trader": 10,
+              "Bribable": 10,
+              "Military": 2,
+              "Naval": 2,
+              "Village": 2,
+              "Dock": 2,
+              "Ship": 2,
+              "City": 1,
+              "TriumphalArch": 1
+            },
+            "typeCountsByClass": {
+              "Structure": {
+                "structures/rome/civil_centre": 2,
+                "structures/rome/market": 3,
+                "structures/rome/dock": 2,
+                "structures/rome/arch": 1
+              },
+              "ConquestCritical": {
+                "structures/rome/civil_centre": 2,
+                "structures/rome/dock": 2
+              },
+              "CivCentre": {
+                "structures/rome/civil_centre": 2
+              },
+              "Civic": {
+                "structures/rome/civil_centre": 2
+              },
+              "Defensive": {
+                "structures/rome/civil_centre": 2
+              },
+              "CivilCentre": {
+                "structures/rome/civil_centre": 2
+              },
+              "Barter": {
+                "structures/rome/market": 3
+              },
+              "Economic": {
+                "structures/rome/market": 3,
+                "structures/rome/dock": 2
+              },
+              "Trade": {
+                "structures/rome/market": 3,
+                "structures/rome/dock": 2
+              },
+              "Town": {
+                "structures/rome/market": 3
+              },
+              "Market": {
+                "structures/rome/market": 3
+              },
+              "Unit": {
+                "units/cart/support_trader": 1,
+                "units/rome/support_trader": 1,
+                "units/athen/support_trader": 1,
+                "units/achae/support_trader": 3,
+                "units/gaul/support_trader": 1,
+                "units/iber/support_trader": 1,
+                "units/rome/ship_merchant": 1,
+                "units/cart/ship_merchant": 1
+              },
+              "Organic": {
+                "units/cart/support_trader": 1,
+                "units/rome/support_trader": 1,
+                "units/athen/support_trader": 1,
+                "units/achae/support_trader": 3,
+                "units/gaul/support_trader": 1,
+                "units/iber/support_trader": 1
+              },
+              "Human": {
+                "units/cart/support_trader": 1,
+                "units/rome/support_trader": 1,
+                "units/athen/support_trader": 1,
+                "units/achae/support_trader": 3,
+                "units/gaul/support_trader": 1,
+                "units/iber/support_trader": 1
+              },
+              "Support": {
+                "units/cart/support_trader": 1,
+                "units/rome/support_trader": 1,
+                "units/athen/support_trader": 1,
+                "units/achae/support_trader": 3,
+                "units/gaul/support_trader": 1,
+                "units/iber/support_trader": 1
+              },
+              "Trader": {
+                "units/cart/support_trader": 1,
+                "units/rome/support_trader": 1,
+                "units/athen/support_trader": 1,
+                "units/achae/support_trader": 3,
+                "units/gaul/support_trader": 1,
+                "units/iber/support_trader": 1,
+                "units/rome/ship_merchant": 1,
+                "units/cart/ship_merchant": 1
+              },
+              "Bribable": {
+                "units/cart/support_trader": 1,
+                "units/rome/support_trader": 1,
+                "units/athen/support_trader": 1,
+                "units/achae/support_trader": 3,
+                "units/gaul/support_trader": 1,
+                "units/iber/support_trader": 1,
+                "units/rome/ship_merchant": 1,
+                "units/cart/ship_merchant": 1
+              },
+              "Military": {
+                "structures/rome/dock": 2
+              },
+              "Naval": {
+                "structures/rome/dock": 2
+              },
+              "Village": {
+                "structures/rome/dock": 2
+              },
+              "Dock": {
+                "structures/rome/dock": 2
+              },
+              "Ship": {
+                "units/rome/ship_merchant": 1,
+                "units/cart/ship_merchant": 1
+              },
+              "City": {
+                "structures/rome/arch": 1
+              },
+              "TriumphalArch": {
+                "structures/rome/arch": 1
+              }
+            },
+            "canBarter": true,
+            "barterPrices": {
+              "buy": {
+                "food": 110,
+                "wood": 110,
+                "stone": 110,
+                "metal": 110
+              },
+              "sell": {
+                "food": 90,
+                "wood": 90,
+                "stone": 90,
+                "metal": 90
+              }
+            },
+            "statistics": {
+              "resourcesGathered": {
+                "vegetarianFood": 0,
+                "food": 0,
+                "wood": 0,
+                "stone": 0,
+                "metal": 0
+              },
+              "percentMapExplored": 14
+            }
+          },
+          {
+            "name": "Phase4Opponent",
+            "civ": "achae",
+            "color": {
+              "r": 0.5882352941176471,
+              "g": 0.0784313725490196,
+              "b": 0.0784313725490196,
+              "a": 1
+            },
+            "entity": 4,
+            "controlsAll": false,
+            "popCount": 0,
+            "popLimit": 20,
+            "popMax": 220,
+            "panelEntities": [],
+            "resourceCounts": {
+              "food": 10000,
+              "wood": 10000,
+              "stone": 10000,
+              "metal": 10000
+            },
+            "resourceGatherers": {
+              "food": 0,
+              "wood": 0,
+              "stone": 0,
+              "metal": 0
+            },
+            "trainingBlocked": false,
+            "state": "active",
+            "team": 0,
+            "teamLocked": false,
+            "disabledTemplates": {},
+            "disabledTechnologies": {},
+            "hasSharedLos": false,
+            "spyCostMultiplier": 1,
+            "phase": "village",
+            "isAlly": [
+              false,
+              true,
+              true,
+              true
+            ],
+            "isMutualAlly": [
+              false,
+              true,
+              true,
+              true
+            ],
+            "isNeutral": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "isEnemy": [
+              true,
+              false,
+              false,
+              false
+            ],
+            "entityLimits": {
+              "Animal": 50,
+              "Centurion": 8,
+              "CivilCentre": 1,
+              "Gladiator": 0,
+              "Hero": 1,
+              "Juggernaut": 1,
+              "Kennel": 2,
+              "Library": 1,
+              "Lighthouse": 1,
+              "Monument": 5,
+              "Palace": 1,
+              "Pillar": 0,
+              "PyramidLarge": 2,
+              "TempleOfAmun": 1,
+              "TempleOfIsis": 1,
+              "TempleOfVesta": 1,
+              "Theater": 1,
+              "WarDog": 0,
+              "Wonder": 1,
+              "Yakhchal": 5
+            },
+            "entityCounts": {
+              "Animal": 0,
+              "Centurion": 0,
+              "CivilCentre": 1,
+              "Gladiator": 0,
+              "Hero": 0,
+              "Juggernaut": 0,
+              "Kennel": 0,
+              "Library": 0,
+              "Lighthouse": 0,
+              "Monument": 0,
+              "Palace": 0,
+              "Pillar": 0,
+              "PyramidLarge": 0,
+              "TempleOfAmun": 0,
+              "TempleOfIsis": 0,
+              "TempleOfVesta": 0,
+              "Theater": 0,
+              "WarDog": 0,
+              "Wonder": 0,
+              "Yakhchal": 0
+            },
+            "matchEntityCounts": {},
+            "entityLimitChangers": {
+              "Gladiator": {
+                "Amphitheater": 15
+              },
+              "Juggernaut": {
+                "PtolemyIV": 4
+              },
+              "Pillar": {
+                "Ashoka": 5
+              },
+              "WarDog": {
+                "Kennel": 10
+              }
+            },
+            "researchQueued": {},
+            "researchedTechs": {},
+            "classCounts": {
+              "Structure": 3,
+              "ConquestCritical": 2,
+              "CivCentre": 1,
+              "Civic": 1,
+              "Defensive": 1,
+              "CivilCentre": 1,
+              "Barter": 1,
+              "Economic": 2,
+              "Trade": 2,
+              "Town": 1,
+              "Market": 1,
+              "Military": 1,
+              "Naval": 1,
+              "Village": 1,
+              "Dock": 1
+            },
+            "typeCountsByClass": {
+              "Structure": {
+                "structures/achae/civil_centre": 1,
+                "structures/achae/market": 1,
+                "structures/achae/dock": 1
+              },
+              "ConquestCritical": {
+                "structures/achae/civil_centre": 1,
+                "structures/achae/dock": 1
+              },
+              "CivCentre": {
+                "structures/achae/civil_centre": 1
+              },
+              "Civic": {
+                "structures/achae/civil_centre": 1
+              },
+              "Defensive": {
+                "structures/achae/civil_centre": 1
+              },
+              "CivilCentre": {
+                "structures/achae/civil_centre": 1
+              },
+              "Barter": {
+                "structures/achae/market": 1
+              },
+              "Economic": {
+                "structures/achae/market": 1,
+                "structures/achae/dock": 1
+              },
+              "Trade": {
+                "structures/achae/market": 1,
+                "structures/achae/dock": 1
+              },
+              "Town": {
+                "structures/achae/market": 1
+              },
+              "Market": {
+                "structures/achae/market": 1
+              },
+              "Military": {
+                "structures/achae/dock": 1
+              },
+              "Naval": {
+                "structures/achae/dock": 1
+              },
+              "Village": {
+                "structures/achae/dock": 1
+              },
+              "Dock": {
+                "structures/achae/dock": 1
+              }
+            },
+            "canBarter": true,
+            "barterPrices": {
+              "buy": {
+                "food": 110,
+                "wood": 110,
+                "stone": 110,
+                "metal": 110
+              },
+              "sell": {
+                "food": 90,
+                "wood": 90,
+                "stone": 90,
+                "metal": 90
+              }
+            },
+            "statistics": {
+              "resourcesGathered": {
+                "vegetarianFood": 0,
+                "food": 0,
+                "wood": 0,
+                "stone": 0,
+                "metal": 0
+              },
+              "percentMapExplored": 7
+            }
+          },
+          {
+            "name": "Phase4Third",
+            "civ": "cart",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 0,
+              "a": 1
+            },
+            "entity": 5,
+            "controlsAll": false,
+            "popCount": 0,
+            "popLimit": 20,
+            "popMax": 200,
+            "panelEntities": [],
+            "resourceCounts": {
+              "food": 10000,
+              "wood": 10000,
+              "stone": 10000,
+              "metal": 10000
+            },
+            "resourceGatherers": {
+              "food": 0,
+              "wood": 0,
+              "stone": 0,
+              "metal": 0
+            },
+            "trainingBlocked": false,
+            "state": "active",
+            "team": 0,
+            "teamLocked": false,
+            "disabledTemplates": {},
+            "disabledTechnologies": {},
+            "hasSharedLos": false,
+            "spyCostMultiplier": 1,
+            "phase": "village",
+            "isAlly": [
+              false,
+              true,
+              true,
+              true
+            ],
+            "isMutualAlly": [
+              false,
+              true,
+              true,
+              true
+            ],
+            "isNeutral": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "isEnemy": [
+              true,
+              false,
+              false,
+              false
+            ],
+            "entityLimits": {
+              "Animal": 50,
+              "Centurion": 8,
+              "CivilCentre": 1,
+              "Gladiator": 0,
+              "Hero": 1,
+              "Juggernaut": 1,
+              "Kennel": 2,
+              "Library": 1,
+              "Lighthouse": 1,
+              "Monument": 5,
+              "Palace": 1,
+              "Pillar": 0,
+              "PyramidLarge": 2,
+              "TempleOfAmun": 1,
+              "TempleOfIsis": 1,
+              "TempleOfVesta": 1,
+              "Theater": 1,
+              "WarDog": 0,
+              "Wonder": 1,
+              "Yakhchal": 5
+            },
+            "entityCounts": {
+              "Animal": 0,
+              "Centurion": 0,
+              "CivilCentre": 1,
+              "Gladiator": 0,
+              "Hero": 0,
+              "Juggernaut": 0,
+              "Kennel": 0,
+              "Library": 0,
+              "Lighthouse": 0,
+              "Monument": 0,
+              "Palace": 0,
+              "Pillar": 0,
+              "PyramidLarge": 0,
+              "TempleOfAmun": 0,
+              "TempleOfIsis": 0,
+              "TempleOfVesta": 0,
+              "Theater": 0,
+              "WarDog": 0,
+              "Wonder": 0,
+              "Yakhchal": 0
+            },
+            "matchEntityCounts": {},
+            "entityLimitChangers": {
+              "Gladiator": {
+                "Amphitheater": 15
+              },
+              "Juggernaut": {
+                "PtolemyIV": 4
+              },
+              "Pillar": {
+                "Ashoka": 5
+              },
+              "WarDog": {
+                "Kennel": 10
+              }
+            },
+            "researchQueued": {},
+            "researchedTechs": {},
+            "classCounts": {
+              "Structure": 4,
+              "ConquestCritical": 1,
+              "CivCentre": 1,
+              "Civic": 1,
+              "Defensive": 1,
+              "CivilCentre": 1,
+              "Barter": 2,
+              "Economic": 2,
+              "Trade": 2,
+              "Town": 2,
+              "Market": 2,
+              "City": 1,
+              "TriumphalArch": 1
+            },
+            "typeCountsByClass": {
+              "Structure": {
+                "structures/cart/civil_centre": 1,
+                "structures/cart/market": 2,
+                "structures/rome/arch": 1
+              },
+              "ConquestCritical": {
+                "structures/cart/civil_centre": 1
+              },
+              "CivCentre": {
+                "structures/cart/civil_centre": 1
+              },
+              "Civic": {
+                "structures/cart/civil_centre": 1
+              },
+              "Defensive": {
+                "structures/cart/civil_centre": 1
+              },
+              "CivilCentre": {
+                "structures/cart/civil_centre": 1
+              },
+              "Barter": {
+                "structures/cart/market": 2
+              },
+              "Economic": {
+                "structures/cart/market": 2
+              },
+              "Trade": {
+                "structures/cart/market": 2
+              },
+              "Town": {
+                "structures/cart/market": 2
+              },
+              "Market": {
+                "structures/cart/market": 2
+              },
+              "City": {
+                "structures/rome/arch": 1
+              },
+              "TriumphalArch": {
+                "structures/rome/arch": 1
+              }
+            },
+            "canBarter": true,
+            "barterPrices": {
+              "buy": {
+                "food": 110,
+                "wood": 110,
+                "stone": 110,
+                "metal": 110
+              },
+              "sell": {
+                "food": 90,
+                "wood": 90,
+                "stone": 90,
+                "metal": 90
+              }
+            },
+            "statistics": {
+              "resourcesGathered": {
+                "vegetarianFood": 0,
+                "food": 0,
+                "wood": 0,
+                "stone": 0,
+                "metal": 0
+              },
+              "percentMapExplored": 7
+            }
+          }
+        ],
+        "circularMap": true,
+        "mapSize": 1024,
+        "timeElapsed": 10000,
+        "ceasefireActive": false,
+        "ceasefireTimeRemaining": 0,
+        "cinemaPathPlaying": false,
+        "victoryConditions": [],
+        "alliedVictory": true,
+        "populationCapType": "player",
+        "populationCap": 200
+      },
+      "GUIStateMatches": true
+    },
+    {
+      "simulationMs": 200000,
+      "SHA256": "b2fb36569f9071e03ed5015910b8a05fba37fad69ac86425a4fdd9f4253a2f9c",
+      "nativeSHA256": "b2fb36569f9071e03ed5015910b8a05fba37fad69ac86425a4fdd9f4253a2f9c",
+      "dumpMatches": true,
+      "state": {
+        "players": [
+          {
+            "name": "Gaia",
+            "civ": "gaia",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            },
+            "entity": 2,
+            "controlsAll": false,
+            "popCount": 0,
+            "popLimit": 0,
+            "popMax": 300,
+            "panelEntities": [],
+            "resourceCounts": {
+              "food": 300,
+              "wood": 300,
+              "stone": 300,
+              "metal": 300
+            },
+            "resourceGatherers": {
+              "food": 0,
+              "wood": 0,
+              "stone": 0,
+              "metal": 0
+            },
+            "trainingBlocked": false,
+            "state": "active",
+            "team": -1,
+            "teamLocked": false,
+            "disabledTemplates": {},
+            "disabledTechnologies": {},
+            "hasSharedLos": null,
+            "spyCostMultiplier": 1,
+            "phase": "",
+            "isAlly": [
+              true,
+              false,
+              false,
+              false
+            ],
+            "isMutualAlly": [
+              true,
+              false,
+              false,
+              false
+            ],
+            "isNeutral": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "isEnemy": [
+              false,
+              true,
+              true,
+              true
+            ],
+            "entityLimits": null,
+            "entityCounts": null,
+            "matchEntityCounts": null,
+            "entityLimitChangers": null,
+            "researchQueued": null,
+            "researchedTechs": null,
+            "classCounts": null,
+            "typeCountsByClass": null,
+            "canBarter": true,
+            "barterPrices": {
+              "buy": {
+                "food": 110,
+                "wood": 110,
+                "stone": 110,
+                "metal": 110
+              },
+              "sell": {
+                "food": 90,
+                "wood": 90,
+                "stone": 90,
+                "metal": 90
+              }
+            }
+          },
+          {
+            "name": "Phase4Human",
+            "civ": "rome",
+            "color": {
+              "r": 0.1803921568627451,
+              "g": 0.1803921568627451,
+              "b": 0.7843137254901961,
+              "a": 1
+            },
+            "entity": 3,
+            "controlsAll": false,
+            "popCount": 40,
+            "popLimit": 40,
+            "popMax": 200,
+            "panelEntities": [],
+            "resourceCounts": {
+              "food": 8500,
+              "wood": 8800,
+              "stone": 10000,
+              "metal": 9700
+            },
+            "resourceGatherers": {
+              "food": 0,
+              "wood": 0,
+              "stone": 0,
+              "metal": 0
+            },
+            "trainingBlocked": false,
+            "state": "active",
+            "team": 0,
+            "teamLocked": false,
+            "disabledTemplates": {},
+            "disabledTechnologies": {},
+            "hasSharedLos": false,
+            "spyCostMultiplier": 1,
+            "phase": "village",
+            "isAlly": [
+              false,
+              true,
+              false,
+              true
+            ],
+            "isMutualAlly": [
+              false,
+              true,
+              false,
+              true
+            ],
+            "isNeutral": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "isEnemy": [
+              true,
+              false,
+              true,
+              false
+            ],
+            "entityLimits": {
+              "Animal": 50,
+              "Centurion": 8,
+              "CivilCentre": 1,
+              "Gladiator": 0,
+              "Hero": 1,
+              "Juggernaut": 1,
+              "Kennel": 2,
+              "Library": 1,
+              "Lighthouse": 1,
+              "Monument": 5,
+              "Palace": 1,
+              "Pillar": 0,
+              "PyramidLarge": 2,
+              "TempleOfAmun": 1,
+              "TempleOfIsis": 1,
+              "TempleOfVesta": 1,
+              "Theater": 1,
+              "WarDog": 0,
+              "Wonder": 1,
+              "Yakhchal": 5
+            },
+            "entityCounts": {
+              "Animal": 0,
+              "Centurion": 0,
+              "CivilCentre": 2,
+              "Gladiator": 0,
+              "Hero": 0,
+              "Juggernaut": 0,
+              "Kennel": 0,
+              "Library": 0,
+              "Lighthouse": 0,
+              "Monument": 0,
+              "Palace": 0,
+              "Pillar": 0,
+              "PyramidLarge": 0,
+              "TempleOfAmun": 0,
+              "TempleOfIsis": 0,
+              "TempleOfVesta": 0,
+              "Theater": 0,
+              "WarDog": 0,
+              "Wonder": 0,
+              "Yakhchal": 0
+            },
+            "matchEntityCounts": {},
+            "entityLimitChangers": {
+              "Gladiator": {
+                "Amphitheater": 15
+              },
+              "Juggernaut": {
+                "PtolemyIV": 4
+              },
+              "Pillar": {
+                "Ashoka": 5
+              },
+              "WarDog": {
+                "Kennel": 10
+              }
+            },
+            "researchQueued": {},
+            "researchedTechs": {},
+            "classCounts": {
+              "Structure": 7,
+              "ConquestCritical": 34,
+              "CivCentre": 2,
+              "Civic": 2,
+              "Defensive": 2,
+              "CivilCentre": 2,
+              "Barter": 2,
+              "Economic": 4,
+              "Trade": 4,
+              "Town": 2,
+              "Market": 2,
+              "Unit": 40,
+              "Organic": 38,
+              "Human": 38,
+              "Support": 8,
+              "Trader": 10,
+              "Bribable": 10,
+              "Military": 2,
+              "Naval": 2,
+              "Village": 2,
+              "Dock": 2,
+              "Ship": 2,
+              "City": 1,
+              "TriumphalArch": 1,
+              "CitizenSoldier": 30,
+              "Builder": 30,
+              "Citizen": 30,
+              "Worker": 30,
+              "Soldier": 30,
+              "Infantry": 30,
+              "Melee": 30,
+              "Swordsman": 30,
+              "Basic": 30
+            },
+            "typeCountsByClass": {
+              "Structure": {
+                "structures/rome/civil_centre": 2,
+                "structures/rome/market": 2,
+                "structures/rome/dock": 2,
+                "structures/rome/arch": 1
+              },
+              "ConquestCritical": {
+                "structures/rome/civil_centre": 2,
+                "structures/rome/dock": 2,
+                "units/rome/infantry_swordsman_b": 30
+              },
+              "CivCentre": {
+                "structures/rome/civil_centre": 2
+              },
+              "Civic": {
+                "structures/rome/civil_centre": 2
+              },
+              "Defensive": {
+                "structures/rome/civil_centre": 2
+              },
+              "CivilCentre": {
+                "structures/rome/civil_centre": 2
+              },
+              "Barter": {
+                "structures/rome/market": 2
+              },
+              "Economic": {
+                "structures/rome/market": 2,
+                "structures/rome/dock": 2
+              },
+              "Trade": {
+                "structures/rome/market": 2,
+                "structures/rome/dock": 2
+              },
+              "Town": {
+                "structures/rome/market": 2
+              },
+              "Market": {
+                "structures/rome/market": 2
+              },
+              "Unit": {
+                "units/cart/support_trader": 1,
+                "units/rome/support_trader": 1,
+                "units/athen/support_trader": 1,
+                "units/achae/support_trader": 3,
+                "units/gaul/support_trader": 1,
+                "units/iber/support_trader": 1,
+                "units/rome/ship_merchant": 1,
+                "units/cart/ship_merchant": 1,
+                "units/rome/infantry_swordsman_b": 30
+              },
+              "Organic": {
+                "units/cart/support_trader": 1,
+                "units/rome/support_trader": 1,
+                "units/athen/support_trader": 1,
+                "units/achae/support_trader": 3,
+                "units/gaul/support_trader": 1,
+                "units/iber/support_trader": 1,
+                "units/rome/infantry_swordsman_b": 30
+              },
+              "Human": {
+                "units/cart/support_trader": 1,
+                "units/rome/support_trader": 1,
+                "units/athen/support_trader": 1,
+                "units/achae/support_trader": 3,
+                "units/gaul/support_trader": 1,
+                "units/iber/support_trader": 1,
+                "units/rome/infantry_swordsman_b": 30
+              },
+              "Support": {
+                "units/cart/support_trader": 1,
+                "units/rome/support_trader": 1,
+                "units/athen/support_trader": 1,
+                "units/achae/support_trader": 3,
+                "units/gaul/support_trader": 1,
+                "units/iber/support_trader": 1
+              },
+              "Trader": {
+                "units/cart/support_trader": 1,
+                "units/rome/support_trader": 1,
+                "units/athen/support_trader": 1,
+                "units/achae/support_trader": 3,
+                "units/gaul/support_trader": 1,
+                "units/iber/support_trader": 1,
+                "units/rome/ship_merchant": 1,
+                "units/cart/ship_merchant": 1
+              },
+              "Bribable": {
+                "units/cart/support_trader": 1,
+                "units/rome/support_trader": 1,
+                "units/athen/support_trader": 1,
+                "units/achae/support_trader": 3,
+                "units/gaul/support_trader": 1,
+                "units/iber/support_trader": 1,
+                "units/rome/ship_merchant": 1,
+                "units/cart/ship_merchant": 1
+              },
+              "Military": {
+                "structures/rome/dock": 2
+              },
+              "Naval": {
+                "structures/rome/dock": 2
+              },
+              "Village": {
+                "structures/rome/dock": 2
+              },
+              "Dock": {
+                "structures/rome/dock": 2
+              },
+              "Ship": {
+                "units/rome/ship_merchant": 1,
+                "units/cart/ship_merchant": 1
+              },
+              "City": {
+                "structures/rome/arch": 1
+              },
+              "TriumphalArch": {
+                "structures/rome/arch": 1
+              },
+              "CitizenSoldier": {
+                "units/rome/infantry_swordsman_b": 30
+              },
+              "Builder": {
+                "units/rome/infantry_swordsman_b": 30
+              },
+              "Citizen": {
+                "units/rome/infantry_swordsman_b": 30
+              },
+              "Worker": {
+                "units/rome/infantry_swordsman_b": 30
+              },
+              "Soldier": {
+                "units/rome/infantry_swordsman_b": 30
+              },
+              "Infantry": {
+                "units/rome/infantry_swordsman_b": 30
+              },
+              "Melee": {
+                "units/rome/infantry_swordsman_b": 30
+              },
+              "Swordsman": {
+                "units/rome/infantry_swordsman_b": 30
+              },
+              "Basic": {
+                "units/rome/infantry_swordsman_b": 30
+              }
+            },
+            "canBarter": true,
+            "barterPrices": {
+              "buy": {
+                "food": 110,
+                "wood": 110,
+                "stone": 110,
+                "metal": 110
+              },
+              "sell": {
+                "food": 90,
+                "wood": 90,
+                "stone": 90,
+                "metal": 90
+              }
+            },
+            "statistics": {
+              "resourcesGathered": {
+                "vegetarianFood": 0,
+                "food": 0,
+                "wood": 0,
+                "stone": 0,
+                "metal": 0
+              },
+              "percentMapExplored": 14
+            }
+          },
+          {
+            "name": "Phase4Opponent",
+            "civ": "achae",
+            "color": {
+              "r": 0.5882352941176471,
+              "g": 0.0784313725490196,
+              "b": 0.0784313725490196,
+              "a": 1
+            },
+            "entity": 4,
+            "controlsAll": false,
+            "popCount": 0,
+            "popLimit": 20,
+            "popMax": 220,
+            "panelEntities": [],
+            "resourceCounts": {
+              "food": 10000,
+              "wood": 10000,
+              "stone": 10000,
+              "metal": 10000
+            },
+            "resourceGatherers": {
+              "food": 0,
+              "wood": 0,
+              "stone": 0,
+              "metal": 0
+            },
+            "trainingBlocked": false,
+            "state": "active",
+            "team": 0,
+            "teamLocked": false,
+            "disabledTemplates": {},
+            "disabledTechnologies": {},
+            "hasSharedLos": false,
+            "spyCostMultiplier": 1,
+            "phase": "village",
+            "isAlly": [
+              false,
+              false,
+              true,
+              true
+            ],
+            "isMutualAlly": [
+              false,
+              false,
+              true,
+              true
+            ],
+            "isNeutral": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "isEnemy": [
+              true,
+              true,
+              false,
+              false
+            ],
+            "entityLimits": {
+              "Animal": 50,
+              "Centurion": 8,
+              "CivilCentre": 1,
+              "Gladiator": 0,
+              "Hero": 1,
+              "Juggernaut": 1,
+              "Kennel": 2,
+              "Library": 1,
+              "Lighthouse": 1,
+              "Monument": 5,
+              "Palace": 1,
+              "Pillar": 0,
+              "PyramidLarge": 2,
+              "TempleOfAmun": 1,
+              "TempleOfIsis": 1,
+              "TempleOfVesta": 1,
+              "Theater": 1,
+              "WarDog": 0,
+              "Wonder": 1,
+              "Yakhchal": 5
+            },
+            "entityCounts": {
+              "Animal": 0,
+              "Centurion": 0,
+              "CivilCentre": 1,
+              "Gladiator": 0,
+              "Hero": 0,
+              "Juggernaut": 0,
+              "Kennel": 0,
+              "Library": 0,
+              "Lighthouse": 0,
+              "Monument": 0,
+              "Palace": 0,
+              "Pillar": 0,
+              "PyramidLarge": 0,
+              "TempleOfAmun": 0,
+              "TempleOfIsis": 0,
+              "TempleOfVesta": 0,
+              "Theater": 0,
+              "WarDog": 0,
+              "Wonder": 0,
+              "Yakhchal": 0
+            },
+            "matchEntityCounts": {},
+            "entityLimitChangers": {
+              "Gladiator": {
+                "Amphitheater": 15
+              },
+              "Juggernaut": {
+                "PtolemyIV": 4
+              },
+              "Pillar": {
+                "Ashoka": 5
+              },
+              "WarDog": {
+                "Kennel": 10
+              }
+            },
+            "researchQueued": {},
+            "researchedTechs": {},
+            "classCounts": {
+              "Structure": 3,
+              "ConquestCritical": 2,
+              "CivCentre": 1,
+              "Civic": 1,
+              "Defensive": 1,
+              "CivilCentre": 1,
+              "Barter": 1,
+              "Economic": 2,
+              "Trade": 2,
+              "Town": 1,
+              "Market": 1,
+              "Military": 1,
+              "Naval": 1,
+              "Village": 1,
+              "Dock": 1
+            },
+            "typeCountsByClass": {
+              "Structure": {
+                "structures/achae/civil_centre": 1,
+                "structures/achae/market": 1,
+                "structures/achae/dock": 1
+              },
+              "ConquestCritical": {
+                "structures/achae/civil_centre": 1,
+                "structures/achae/dock": 1
+              },
+              "CivCentre": {
+                "structures/achae/civil_centre": 1
+              },
+              "Civic": {
+                "structures/achae/civil_centre": 1
+              },
+              "Defensive": {
+                "structures/achae/civil_centre": 1
+              },
+              "CivilCentre": {
+                "structures/achae/civil_centre": 1
+              },
+              "Barter": {
+                "structures/achae/market": 1
+              },
+              "Economic": {
+                "structures/achae/market": 1,
+                "structures/achae/dock": 1
+              },
+              "Trade": {
+                "structures/achae/market": 1,
+                "structures/achae/dock": 1
+              },
+              "Town": {
+                "structures/achae/market": 1
+              },
+              "Market": {
+                "structures/achae/market": 1
+              },
+              "Military": {
+                "structures/achae/dock": 1
+              },
+              "Naval": {
+                "structures/achae/dock": 1
+              },
+              "Village": {
+                "structures/achae/dock": 1
+              },
+              "Dock": {
+                "structures/achae/dock": 1
+              }
+            },
+            "canBarter": true,
+            "barterPrices": {
+              "buy": {
+                "food": 110,
+                "wood": 110,
+                "stone": 110,
+                "metal": 110
+              },
+              "sell": {
+                "food": 90,
+                "wood": 90,
+                "stone": 90,
+                "metal": 90
+              }
+            },
+            "statistics": {
+              "resourcesGathered": {
+                "vegetarianFood": 0,
+                "food": 0,
+                "wood": 0,
+                "stone": 0,
+                "metal": 0
+              },
+              "percentMapExplored": 7
+            }
+          },
+          {
+            "name": "Phase4Third",
+            "civ": "cart",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 0,
+              "a": 1
+            },
+            "entity": 5,
+            "controlsAll": false,
+            "popCount": 0,
+            "popLimit": 20,
+            "popMax": 200,
+            "panelEntities": [],
+            "resourceCounts": {
+              "food": 10000,
+              "wood": 10000,
+              "stone": 10000,
+              "metal": 10000
+            },
+            "resourceGatherers": {
+              "food": 0,
+              "wood": 0,
+              "stone": 0,
+              "metal": 0
+            },
+            "trainingBlocked": false,
+            "state": "active",
+            "team": 0,
+            "teamLocked": false,
+            "disabledTemplates": {},
+            "disabledTechnologies": {},
+            "hasSharedLos": false,
+            "spyCostMultiplier": 1,
+            "phase": "village",
+            "isAlly": [
+              false,
+              true,
+              true,
+              true
+            ],
+            "isMutualAlly": [
+              false,
+              true,
+              true,
+              true
+            ],
+            "isNeutral": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "isEnemy": [
+              true,
+              false,
+              false,
+              false
+            ],
+            "entityLimits": {
+              "Animal": 50,
+              "Centurion": 8,
+              "CivilCentre": 1,
+              "Gladiator": 0,
+              "Hero": 1,
+              "Juggernaut": 1,
+              "Kennel": 2,
+              "Library": 1,
+              "Lighthouse": 1,
+              "Monument": 5,
+              "Palace": 1,
+              "Pillar": 0,
+              "PyramidLarge": 2,
+              "TempleOfAmun": 1,
+              "TempleOfIsis": 1,
+              "TempleOfVesta": 1,
+              "Theater": 1,
+              "WarDog": 0,
+              "Wonder": 1,
+              "Yakhchal": 5
+            },
+            "entityCounts": {
+              "Animal": 0,
+              "Centurion": 0,
+              "CivilCentre": 1,
+              "Gladiator": 0,
+              "Hero": 0,
+              "Juggernaut": 0,
+              "Kennel": 0,
+              "Library": 0,
+              "Lighthouse": 0,
+              "Monument": 0,
+              "Palace": 0,
+              "Pillar": 0,
+              "PyramidLarge": 0,
+              "TempleOfAmun": 0,
+              "TempleOfIsis": 0,
+              "TempleOfVesta": 0,
+              "Theater": 0,
+              "WarDog": 0,
+              "Wonder": 0,
+              "Yakhchal": 0
+            },
+            "matchEntityCounts": {},
+            "entityLimitChangers": {
+              "Gladiator": {
+                "Amphitheater": 15
+              },
+              "Juggernaut": {
+                "PtolemyIV": 4
+              },
+              "Pillar": {
+                "Ashoka": 5
+              },
+              "WarDog": {
+                "Kennel": 10
+              }
+            },
+            "researchQueued": {},
+            "researchedTechs": {},
+            "classCounts": {
+              "Structure": 3,
+              "ConquestCritical": 1,
+              "CivCentre": 1,
+              "Civic": 1,
+              "Defensive": 1,
+              "CivilCentre": 1,
+              "Barter": 1,
+              "Economic": 1,
+              "Trade": 1,
+              "Town": 1,
+              "Market": 1,
+              "City": 1,
+              "TriumphalArch": 1
+            },
+            "typeCountsByClass": {
+              "Structure": {
+                "structures/cart/civil_centre": 1,
+                "structures/cart/market": 1,
+                "structures/rome/arch": 1
+              },
+              "ConquestCritical": {
+                "structures/cart/civil_centre": 1
+              },
+              "CivCentre": {
+                "structures/cart/civil_centre": 1
+              },
+              "Civic": {
+                "structures/cart/civil_centre": 1
+              },
+              "Defensive": {
+                "structures/cart/civil_centre": 1
+              },
+              "CivilCentre": {
+                "structures/cart/civil_centre": 1
+              },
+              "Barter": {
+                "structures/cart/market": 1
+              },
+              "Economic": {
+                "structures/cart/market": 1
+              },
+              "Trade": {
+                "structures/cart/market": 1
+              },
+              "Town": {
+                "structures/cart/market": 1
+              },
+              "Market": {
+                "structures/cart/market": 1
+              },
+              "City": {
+                "structures/rome/arch": 1
+              },
+              "TriumphalArch": {
+                "structures/rome/arch": 1
+              }
+            },
+            "canBarter": true,
+            "barterPrices": {
+              "buy": {
+                "food": 110,
+                "wood": 110,
+                "stone": 110,
+                "metal": 110
+              },
+              "sell": {
+                "food": 90,
+                "wood": 90,
+                "stone": 90,
+                "metal": 90
+              }
+            },
+            "statistics": {
+              "resourcesGathered": {
+                "vegetarianFood": 0,
+                "food": 0,
+                "wood": 0,
+                "stone": 0,
+                "metal": 0
+              },
+              "percentMapExplored": 7
+            }
+          }
+        ],
+        "circularMap": true,
+        "mapSize": 1024,
+        "timeElapsed": 200000,
+        "ceasefireActive": false,
+        "ceasefireTimeRemaining": 0,
+        "cinemaPathPlaying": false,
+        "victoryConditions": [],
+        "alliedVictory": true,
+        "populationCapType": "player",
+        "populationCap": 200
+      },
+      "GUIStateMatches": true
+    },
+    {
+      "simulationMs": 400000,
+      "SHA256": "e4f2fc286358e8629e40dab4eea4c63b8874203f5bef4a1f48d620e680a19b1a",
+      "nativeSHA256": "ac9756cf5447960344b9a490567b85adcc4d7a532df7d01b8f3f8eccecc20d7f",
+      "dumpMatches": false,
+      "state": {
+        "players": [
+          {
+            "name": "Gaia",
+            "civ": "gaia",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            },
+            "entity": 2,
+            "controlsAll": false,
+            "popCount": 0,
+            "popLimit": 0,
+            "popMax": 300,
+            "panelEntities": [],
+            "resourceCounts": {
+              "food": 300,
+              "wood": 300,
+              "stone": 300,
+              "metal": 300
+            },
+            "resourceGatherers": {
+              "food": 0,
+              "wood": 0,
+              "stone": 0,
+              "metal": 0
+            },
+            "trainingBlocked": false,
+            "state": "active",
+            "team": -1,
+            "teamLocked": false,
+            "disabledTemplates": {},
+            "disabledTechnologies": {},
+            "hasSharedLos": null,
+            "spyCostMultiplier": 1,
+            "phase": "",
+            "isAlly": [
+              true,
+              false,
+              false,
+              false
+            ],
+            "isMutualAlly": [
+              true,
+              false,
+              false,
+              false
+            ],
+            "isNeutral": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "isEnemy": [
+              false,
+              true,
+              true,
+              true
+            ],
+            "entityLimits": null,
+            "entityCounts": null,
+            "matchEntityCounts": null,
+            "entityLimitChangers": null,
+            "researchQueued": null,
+            "researchedTechs": null,
+            "classCounts": null,
+            "typeCountsByClass": null,
+            "canBarter": true,
+            "barterPrices": {
+              "buy": {
+                "food": 110,
+                "wood": 110,
+                "stone": 110,
+                "metal": 110
+              },
+              "sell": {
+                "food": 90,
+                "wood": 90,
+                "stone": 90,
+                "metal": 90
+              }
+            }
+          },
+          {
+            "name": "Phase4Human",
+            "civ": "rome",
+            "color": {
+              "r": 0.1803921568627451,
+              "g": 0.1803921568627451,
+              "b": 0.7843137254901961,
+              "a": 1
+            },
+            "entity": 3,
+            "controlsAll": false,
+            "popCount": 28,
+            "popLimit": 40,
+            "popMax": 200,
+            "panelEntities": [],
+            "resourceCounts": {
+              "food": 8500,
+              "wood": 8800,
+              "stone": 10000,
+              "metal": 9700
+            },
+            "resourceGatherers": {
+              "food": 0,
+              "wood": 0,
+              "stone": 0,
+              "metal": 0
+            },
+            "trainingBlocked": false,
+            "state": "active",
+            "team": 0,
+            "teamLocked": false,
+            "disabledTemplates": {},
+            "disabledTechnologies": {},
+            "hasSharedLos": false,
+            "spyCostMultiplier": 1,
+            "phase": "village",
+            "isAlly": [
+              false,
+              true,
+              false,
+              true
+            ],
+            "isMutualAlly": [
+              false,
+              true,
+              false,
+              true
+            ],
+            "isNeutral": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "isEnemy": [
+              true,
+              false,
+              true,
+              false
+            ],
+            "entityLimits": {
+              "Animal": 50,
+              "Centurion": 8,
+              "CivilCentre": 1,
+              "Gladiator": 0,
+              "Hero": 1,
+              "Juggernaut": 1,
+              "Kennel": 2,
+              "Library": 1,
+              "Lighthouse": 1,
+              "Monument": 5,
+              "Palace": 1,
+              "Pillar": 0,
+              "PyramidLarge": 2,
+              "TempleOfAmun": 1,
+              "TempleOfIsis": 1,
+              "TempleOfVesta": 1,
+              "Theater": 1,
+              "WarDog": 0,
+              "Wonder": 1,
+              "Yakhchal": 5
+            },
+            "entityCounts": {
+              "Animal": 0,
+              "Centurion": 0,
+              "CivilCentre": 2,
+              "Gladiator": 0,
+              "Hero": 0,
+              "Juggernaut": 0,
+              "Kennel": 0,
+              "Library": 0,
+              "Lighthouse": 0,
+              "Monument": 0,
+              "Palace": 0,
+              "Pillar": 0,
+              "PyramidLarge": 0,
+              "TempleOfAmun": 0,
+              "TempleOfIsis": 0,
+              "TempleOfVesta": 0,
+              "Theater": 0,
+              "WarDog": 0,
+              "Wonder": 0,
+              "Yakhchal": 0
+            },
+            "matchEntityCounts": {},
+            "entityLimitChangers": {
+              "Gladiator": {
+                "Amphitheater": 15
+              },
+              "Juggernaut": {
+                "PtolemyIV": 4
+              },
+              "Pillar": {
+                "Ashoka": 5
+              },
+              "WarDog": {
+                "Kennel": 10
+              }
+            },
+            "researchQueued": {},
+            "researchedTechs": {},
+            "classCounts": {
+              "Structure": 8,
+              "ConquestCritical": 22,
+              "CivCentre": 2,
+              "Civic": 2,
+              "Defensive": 2,
+              "CivilCentre": 2,
+              "Barter": 3,
+              "Economic": 5,
+              "Trade": 5,
+              "Town": 3,
+              "Market": 3,
+              "Unit": 28,
+              "Organic": 26,
+              "Human": 26,
+              "Support": 8,
+              "Trader": 10,
+              "Bribable": 10,
+              "Military": 2,
+              "Naval": 2,
+              "Village": 2,
+              "Dock": 2,
+              "Ship": 2,
+              "City": 1,
+              "TriumphalArch": 1,
+              "CitizenSoldier": 18,
+              "Builder": 18,
+              "Citizen": 18,
+              "Worker": 18,
+              "Soldier": 18,
+              "Infantry": 18,
+              "Melee": 18,
+              "Swordsman": 18,
+              "Basic": 18
+            },
+            "typeCountsByClass": {
+              "Structure": {
+                "structures/rome/civil_centre": 2,
+                "structures/rome/market": 2,
+                "structures/rome/dock": 2,
+                "structures/rome/arch": 1,
+                "structures/achae/market": 1
+              },
+              "ConquestCritical": {
+                "structures/rome/civil_centre": 2,
+                "structures/rome/dock": 2,
+                "units/rome/infantry_swordsman_b": 18
+              },
+              "CivCentre": {
+                "structures/rome/civil_centre": 2
+              },
+              "Civic": {
+                "structures/rome/civil_centre": 2
+              },
+              "Defensive": {
+                "structures/rome/civil_centre": 2
+              },
+              "CivilCentre": {
+                "structures/rome/civil_centre": 2
+              },
+              "Barter": {
+                "structures/rome/market": 2,
+                "structures/achae/market": 1
+              },
+              "Economic": {
+                "structures/rome/market": 2,
+                "structures/rome/dock": 2,
+                "structures/achae/market": 1
+              },
+              "Trade": {
+                "structures/rome/market": 2,
+                "structures/rome/dock": 2,
+                "structures/achae/market": 1
+              },
+              "Town": {
+                "structures/rome/market": 2,
+                "structures/achae/market": 1
+              },
+              "Market": {
+                "structures/rome/market": 2,
+                "structures/achae/market": 1
+              },
+              "Unit": {
+                "units/cart/support_trader": 1,
+                "units/rome/support_trader": 1,
+                "units/athen/support_trader": 1,
+                "units/achae/support_trader": 3,
+                "units/gaul/support_trader": 1,
+                "units/iber/support_trader": 1,
+                "units/rome/ship_merchant": 1,
+                "units/cart/ship_merchant": 1,
+                "units/rome/infantry_swordsman_b": 18
+              },
+              "Organic": {
+                "units/cart/support_trader": 1,
+                "units/rome/support_trader": 1,
+                "units/athen/support_trader": 1,
+                "units/achae/support_trader": 3,
+                "units/gaul/support_trader": 1,
+                "units/iber/support_trader": 1,
+                "units/rome/infantry_swordsman_b": 18
+              },
+              "Human": {
+                "units/cart/support_trader": 1,
+                "units/rome/support_trader": 1,
+                "units/athen/support_trader": 1,
+                "units/achae/support_trader": 3,
+                "units/gaul/support_trader": 1,
+                "units/iber/support_trader": 1,
+                "units/rome/infantry_swordsman_b": 18
+              },
+              "Support": {
+                "units/cart/support_trader": 1,
+                "units/rome/support_trader": 1,
+                "units/athen/support_trader": 1,
+                "units/achae/support_trader": 3,
+                "units/gaul/support_trader": 1,
+                "units/iber/support_trader": 1
+              },
+              "Trader": {
+                "units/cart/support_trader": 1,
+                "units/rome/support_trader": 1,
+                "units/athen/support_trader": 1,
+                "units/achae/support_trader": 3,
+                "units/gaul/support_trader": 1,
+                "units/iber/support_trader": 1,
+                "units/rome/ship_merchant": 1,
+                "units/cart/ship_merchant": 1
+              },
+              "Bribable": {
+                "units/cart/support_trader": 1,
+                "units/rome/support_trader": 1,
+                "units/athen/support_trader": 1,
+                "units/achae/support_trader": 3,
+                "units/gaul/support_trader": 1,
+                "units/iber/support_trader": 1,
+                "units/rome/ship_merchant": 1,
+                "units/cart/ship_merchant": 1
+              },
+              "Military": {
+                "structures/rome/dock": 2
+              },
+              "Naval": {
+                "structures/rome/dock": 2
+              },
+              "Village": {
+                "structures/rome/dock": 2
+              },
+              "Dock": {
+                "structures/rome/dock": 2
+              },
+              "Ship": {
+                "units/rome/ship_merchant": 1,
+                "units/cart/ship_merchant": 1
+              },
+              "City": {
+                "structures/rome/arch": 1
+              },
+              "TriumphalArch": {
+                "structures/rome/arch": 1
+              },
+              "CitizenSoldier": {
+                "units/rome/infantry_swordsman_b": 18
+              },
+              "Builder": {
+                "units/rome/infantry_swordsman_b": 18
+              },
+              "Citizen": {
+                "units/rome/infantry_swordsman_b": 18
+              },
+              "Worker": {
+                "units/rome/infantry_swordsman_b": 18
+              },
+              "Soldier": {
+                "units/rome/infantry_swordsman_b": 18
+              },
+              "Infantry": {
+                "units/rome/infantry_swordsman_b": 18
+              },
+              "Melee": {
+                "units/rome/infantry_swordsman_b": 18
+              },
+              "Swordsman": {
+                "units/rome/infantry_swordsman_b": 18
+              },
+              "Basic": {
+                "units/rome/infantry_swordsman_b": 18
+              }
+            },
+            "canBarter": true,
+            "barterPrices": {
+              "buy": {
+                "food": 110,
+                "wood": 110,
+                "stone": 110,
+                "metal": 110
+              },
+              "sell": {
+                "food": 90,
+                "wood": 90,
+                "stone": 90,
+                "metal": 90
+              }
+            },
+            "statistics": {
+              "resourcesGathered": {
+                "vegetarianFood": 0,
+                "food": 0,
+                "wood": 0,
+                "stone": 0,
+                "metal": 0
+              },
+              "percentMapExplored": 22
+            }
+          },
+          {
+            "name": "Phase4Opponent",
+            "civ": "achae",
+            "color": {
+              "r": 0.5882352941176471,
+              "g": 0.0784313725490196,
+              "b": 0.0784313725490196,
+              "a": 1
+            },
+            "entity": 4,
+            "controlsAll": false,
+            "popCount": 0,
+            "popLimit": 20,
+            "popMax": 220,
+            "panelEntities": [],
+            "resourceCounts": {
+              "food": 10060,
+              "wood": 10048,
+              "stone": 10000,
+              "metal": 10012
+            },
+            "resourceGatherers": {
+              "food": 0,
+              "wood": 0,
+              "stone": 0,
+              "metal": 0
+            },
+            "trainingBlocked": false,
+            "state": "active",
+            "team": 0,
+            "teamLocked": false,
+            "disabledTemplates": {},
+            "disabledTechnologies": {},
+            "hasSharedLos": false,
+            "spyCostMultiplier": 1,
+            "phase": "village",
+            "isAlly": [
+              false,
+              false,
+              true,
+              true
+            ],
+            "isMutualAlly": [
+              false,
+              false,
+              true,
+              true
+            ],
+            "isNeutral": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "isEnemy": [
+              true,
+              true,
+              false,
+              false
+            ],
+            "entityLimits": {
+              "Animal": 50,
+              "Centurion": 8,
+              "CivilCentre": 1,
+              "Gladiator": 0,
+              "Hero": 1,
+              "Juggernaut": 1,
+              "Kennel": 2,
+              "Library": 1,
+              "Lighthouse": 1,
+              "Monument": 5,
+              "Palace": 1,
+              "Pillar": 0,
+              "PyramidLarge": 2,
+              "TempleOfAmun": 1,
+              "TempleOfIsis": 1,
+              "TempleOfVesta": 1,
+              "Theater": 1,
+              "WarDog": 0,
+              "Wonder": 1,
+              "Yakhchal": 5
+            },
+            "entityCounts": {
+              "Animal": 0,
+              "Centurion": 0,
+              "CivilCentre": 1,
+              "Gladiator": 0,
+              "Hero": 0,
+              "Juggernaut": 0,
+              "Kennel": 0,
+              "Library": 0,
+              "Lighthouse": 0,
+              "Monument": 0,
+              "Palace": 0,
+              "Pillar": 0,
+              "PyramidLarge": 0,
+              "TempleOfAmun": 0,
+              "TempleOfIsis": 0,
+              "TempleOfVesta": 0,
+              "Theater": 0,
+              "WarDog": 0,
+              "Wonder": 0,
+              "Yakhchal": 0
+            },
+            "matchEntityCounts": {},
+            "entityLimitChangers": {
+              "Gladiator": {
+                "Amphitheater": 15
+              },
+              "Juggernaut": {
+                "PtolemyIV": 4
+              },
+              "Pillar": {
+                "Ashoka": 5
+              },
+              "WarDog": {
+                "Kennel": 10
+              }
+            },
+            "researchQueued": {},
+            "researchedTechs": {},
+            "classCounts": {
+              "Structure": 2,
+              "ConquestCritical": 2,
+              "CivCentre": 1,
+              "Civic": 1,
+              "Defensive": 1,
+              "CivilCentre": 1,
+              "Economic": 1,
+              "Trade": 1,
+              "Military": 1,
+              "Naval": 1,
+              "Village": 1,
+              "Dock": 1
+            },
+            "typeCountsByClass": {
+              "Structure": {
+                "structures/achae/civil_centre": 1,
+                "structures/achae/dock": 1
+              },
+              "ConquestCritical": {
+                "structures/achae/civil_centre": 1,
+                "structures/achae/dock": 1
+              },
+              "CivCentre": {
+                "structures/achae/civil_centre": 1
+              },
+              "Civic": {
+                "structures/achae/civil_centre": 1
+              },
+              "Defensive": {
+                "structures/achae/civil_centre": 1
+              },
+              "CivilCentre": {
+                "structures/achae/civil_centre": 1
+              },
+              "Barter": {},
+              "Economic": {
+                "structures/achae/dock": 1
+              },
+              "Trade": {
+                "structures/achae/dock": 1
+              },
+              "Town": {},
+              "Market": {},
+              "Military": {
+                "structures/achae/dock": 1
+              },
+              "Naval": {
+                "structures/achae/dock": 1
+              },
+              "Village": {
+                "structures/achae/dock": 1
+              },
+              "Dock": {
+                "structures/achae/dock": 1
+              }
+            },
+            "canBarter": false,
+            "barterPrices": {
+              "buy": {
+                "food": 110,
+                "wood": 110,
+                "stone": 110,
+                "metal": 110
+              },
+              "sell": {
+                "food": 90,
+                "wood": 90,
+                "stone": 90,
+                "metal": 90
+              }
+            },
+            "statistics": {
+              "resourcesGathered": {
+                "vegetarianFood": 0,
+                "food": 0,
+                "wood": 0,
+                "stone": 0,
+                "metal": 0
+              },
+              "percentMapExplored": 7
+            }
+          },
+          {
+            "name": "Phase4Third",
+            "civ": "cart",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 0,
+              "a": 1
+            },
+            "entity": 5,
+            "controlsAll": false,
+            "popCount": 0,
+            "popLimit": 20,
+            "popMax": 200,
+            "panelEntities": [],
+            "resourceCounts": {
+              "food": 10000,
+              "wood": 10000,
+              "stone": 10000,
+              "metal": 10000
+            },
+            "resourceGatherers": {
+              "food": 0,
+              "wood": 0,
+              "stone": 0,
+              "metal": 0
+            },
+            "trainingBlocked": false,
+            "state": "active",
+            "team": 0,
+            "teamLocked": false,
+            "disabledTemplates": {},
+            "disabledTechnologies": {},
+            "hasSharedLos": false,
+            "spyCostMultiplier": 1,
+            "phase": "village",
+            "isAlly": [
+              false,
+              true,
+              true,
+              true
+            ],
+            "isMutualAlly": [
+              false,
+              true,
+              true,
+              true
+            ],
+            "isNeutral": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "isEnemy": [
+              true,
+              false,
+              false,
+              false
+            ],
+            "entityLimits": {
+              "Animal": 50,
+              "Centurion": 8,
+              "CivilCentre": 1,
+              "Gladiator": 0,
+              "Hero": 1,
+              "Juggernaut": 1,
+              "Kennel": 2,
+              "Library": 1,
+              "Lighthouse": 1,
+              "Monument": 5,
+              "Palace": 1,
+              "Pillar": 0,
+              "PyramidLarge": 2,
+              "TempleOfAmun": 1,
+              "TempleOfIsis": 1,
+              "TempleOfVesta": 1,
+              "Theater": 1,
+              "WarDog": 0,
+              "Wonder": 1,
+              "Yakhchal": 5
+            },
+            "entityCounts": {
+              "Animal": 0,
+              "Centurion": 0,
+              "CivilCentre": 1,
+              "Gladiator": 0,
+              "Hero": 0,
+              "Juggernaut": 0,
+              "Kennel": 0,
+              "Library": 0,
+              "Lighthouse": 0,
+              "Monument": 0,
+              "Palace": 0,
+              "Pillar": 0,
+              "PyramidLarge": 0,
+              "TempleOfAmun": 0,
+              "TempleOfIsis": 0,
+              "TempleOfVesta": 0,
+              "Theater": 0,
+              "WarDog": 0,
+              "Wonder": 0,
+              "Yakhchal": 0
+            },
+            "matchEntityCounts": {},
+            "entityLimitChangers": {
+              "Gladiator": {
+                "Amphitheater": 15
+              },
+              "Juggernaut": {
+                "PtolemyIV": 4
+              },
+              "Pillar": {
+                "Ashoka": 5
+              },
+              "WarDog": {
+                "Kennel": 10
+              }
+            },
+            "researchQueued": {},
+            "researchedTechs": {},
+            "classCounts": {
+              "Structure": 3,
+              "ConquestCritical": 1,
+              "CivCentre": 1,
+              "Civic": 1,
+              "Defensive": 1,
+              "CivilCentre": 1,
+              "Barter": 1,
+              "Economic": 1,
+              "Trade": 1,
+              "Town": 1,
+              "Market": 1,
+              "City": 1,
+              "TriumphalArch": 1
+            },
+            "typeCountsByClass": {
+              "Structure": {
+                "structures/cart/civil_centre": 1,
+                "structures/cart/market": 1,
+                "structures/rome/arch": 1
+              },
+              "ConquestCritical": {
+                "structures/cart/civil_centre": 1
+              },
+              "CivCentre": {
+                "structures/cart/civil_centre": 1
+              },
+              "Civic": {
+                "structures/cart/civil_centre": 1
+              },
+              "Defensive": {
+                "structures/cart/civil_centre": 1
+              },
+              "CivilCentre": {
+                "structures/cart/civil_centre": 1
+              },
+              "Barter": {
+                "structures/cart/market": 1
+              },
+              "Economic": {
+                "structures/cart/market": 1
+              },
+              "Trade": {
+                "structures/cart/market": 1
+              },
+              "Town": {
+                "structures/cart/market": 1
+              },
+              "Market": {
+                "structures/cart/market": 1
+              },
+              "City": {
+                "structures/rome/arch": 1
+              },
+              "TriumphalArch": {
+                "structures/rome/arch": 1
+              }
+            },
+            "canBarter": true,
+            "barterPrices": {
+              "buy": {
+                "food": 110,
+                "wood": 110,
+                "stone": 110,
+                "metal": 110
+              },
+              "sell": {
+                "food": 90,
+                "wood": 90,
+                "stone": 90,
+                "metal": 90
+              }
+            },
+            "statistics": {
+              "resourcesGathered": {
+                "vegetarianFood": 0,
+                "food": 0,
+                "wood": 0,
+                "stone": 0,
+                "metal": 0
+              },
+              "percentMapExplored": 7
+            }
+          }
+        ],
+        "circularMap": true,
+        "mapSize": 1024,
+        "timeElapsed": 400000,
+        "ceasefireActive": false,
+        "ceasefireTimeRemaining": 0,
+        "cinemaPathPlaying": false,
+        "victoryConditions": [],
+        "alliedVictory": true,
+        "populationCapType": "player",
+        "populationCap": 200
+      },
+      "GUIStateMatches": true
+    }
+  ],
+  "browserVersion": "155.0.8059.80",
+  "fullscreen": {
+    "window": {
+      "windowId": 1693801407,
+      "bounds": {
+        "left": 0,
+        "top": 0,
+        "width": 2560,
+        "height": 1080,
+        "windowState": "fullscreen"
+      }
+    },
+    "dimensions": {
+      "inner": [
+        2560,
+        1080
+      ],
+      "screen": [
+        2560,
+        1080
+      ],
+      "dpr": 1,
+      "focused": true
+    },
+    "internalResolution": [
+      1920,
+      1080
+    ]
+  },
+  "attributes": {
+    "settings": {
+      "Ceasefire": 0,
+      "CheatsEnabled": false,
+      "CircularMap": true,
+      "DisableSpies": false,
+      "DisableTreasures": false,
+      "LastManStanding": false,
+      "LockTeams": false,
+      "RevealMap": true,
+      "ExploreMap": false,
+      "AllyView": false,
+      "mapName": "Trading Demo",
+      "mapPreview": "cropped:0.78125,0.5859375:session/icons/mappreview/nopreview.png",
+      "PlayerData": [
+        {
+          "AI": false,
+          "Civ": "rome",
+          "Color": {
+            "b": 200,
+            "g": 46,
+            "r": 46
+          },
+          "Name": "Phase4Human",
+          "Removed": false,
+          "Team": 0
+        },
+        {
+          "AI": false,
+          "Civ": "achae",
+          "Color": {
+            "b": 20,
+            "g": 20,
+            "r": 150
+          },
+          "Name": "Phase4Opponent",
+          "Removed": false,
+          "Team": 0
+        },
+        {
+          "AI": false,
+          "Civ": "cart",
+          "Color": {
+            "b": 0,
+            "g": 255,
+            "r": 255
+          },
+          "Name": "Phase4Third",
+          "Removed": false,
+          "Team": 0
+        }
+      ],
+      "PopulationCapType": "player",
+      "PopulationCap": 200,
+      "Seed": 12345,
+      "AISeed": 54321,
+      "StartingResources": 10000,
+      "TriggerScripts": [],
+      "VictoryConditions": []
+    },
+    "gameSpeed": 1,
+    "map": "maps/scenarios/demo_trading",
+    "mapType": "scenario"
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "passed": false,
+  "visualParityAccepted": false,
+  "phase45Accepted": false,
+  "errors": [],
+  "console": [],
+  "buildSHA256": {
+    "pyrogenesis-application.mjs": "44d1564346f38ea31f3a05c540f970e0bd9b2060b95c9f9058e566548c806928",
+    "pyrogenesis-application.wasm": "0481767fa2cc38865ce2d83f19d9227643e1a40d60d5463919c8a74b413745a4",
+    "application.html": "d5025169c58b15b3d283edb7bd9963f68e6b25c426622258b56001a328303fe1",
+    "application.mjs": "b2d12d20ddd9b5680ac713307a740a4666d0c5dc59fd130f2530d9d202b9e419",
+    "application-data.json": "5b84e2a95559994231e6408e51f4bd45f2048d274e63e9d0e8b7fc6f704c810a",
+    "webgpu-shaders.json": "8d9280a27514b940ed61a9d0710ad92c39c8b425ff013b2d29c8b4fb33f08085",
+    "renderer-session.mjs": "95058d8db9311e844a5b69d3a895d7eb40c80e17b1f08691451b452a463f63c4",
+    "webgpu-engine.mjs": "69a01f723b9dfc001eca6d2e03ac5a06a22be48d704e4a349b9ce75a871efc1f",
+    "webgpu-border.mjs": "e9a7d9a88ac447b908249dc863e8adf9907b07830615019699588cbb2d695e8b",
+    "application-pointer.mjs": "0e781c584dff24c3005f875b070f715046dabe3ea1e388edfecd3f998b36bb47"
+  },
+  "visualContract": {
+    "version": 3,
+    "scope": "Matched original persistent render framebuffer including GUI, captured at original frame completion; internal 1920x1080 unchanged. Pixel thresholds fixed before these captures.",
+    "simulationMs": 10000,
+    "resolution": [
+      1920,
+      1080
+    ],
+    "graphicsProfile": {
+      "vsync": "true",
+      "adaptivefps.session": "60",
+      "shadows": "true",
+      "shadowpcf": "true",
+      "shadowquality": "2",
+      "shadowscascadecount": "1",
+      "shadowscascadedistanceratio": "1.7",
+      "shadowscutoffdistance": "300.0",
+      "shadowscovermap": "false",
+      "postproc": "true",
+      "particles": "true",
+      "gpuskinning": "true",
+      "silhouettes": "true",
+      "watereffects": "true",
+      "waterfancyeffects": "false",
+      "waterrealdepth": "true",
+      "waterreflection": "true",
+      "waterrefraction": "true",
+      "textures.quality": "2",
+      "textures.maxanisotropy": "2",
+      "antialiasing": "disabled",
+      "renderactors": "true",
+      "max_actor_quality": "200",
+      "materialmgr.quality": "10.0"
+    },
+    "captures": [
+      "original-matched.png",
+      "original-shadow-hard.png",
+      "original-shadow-pcf.png"
+    ],
+    "maximumMeanAbsoluteRGBDifference": 2.0,
+    "perPixelMaximumChannelDifference": 8,
+    "maximumOutlierPixelFraction": 0.02,
+    "rationale": "Small animation and floating-point filtering differences may affect a limited area. Large missing effects, geometry, text, fog or color changes must fail. Numerical thresholds do not replace inspecting shadows and sampler edges.",
+    "captureMethod": "original-persistent-framebuffer-rgba-1920x1080",
+    "fixedFrameFrequency": 60,
+    "clockScope": "Original fixed-frame-frequency=60 CLI option for functional image comparison only; forbidden in performance measurements"
+  },
+  "browserVersion": "155.0.8059.80",
+  "archivedLinkerOverrides": {
+    "directory": "wasm\\build\\phase4-5\\legacy-visual-artifacts",
+    "SHA256": {
+      "pyrogenesis-application.mjs": "44d1564346f38ea31f3a05c540f970e0bd9b2060b95c9f9058e566548c806928",
+      "pyrogenesis-application.wasm": "0481767fa2cc38865ce2d83f19d9227643e1a40d60d5463919c8a74b413745a4"
+    }
+  },
+  "applicationURL": "http://localhost:8095/application.html?automation=1&functional-frame-frequency=60",
+  "failure": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"http://localhost:8095/application.html?automation=1&functional-frame-frequency=60\", waiting until \"load\"\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\jorlu\\OneDrive\\Documentos\\emprendimiento\\0 AD\\0adwebassembly\\wasm\\scripts\\verify-phase4-5-visual.py\", line 93, in <module>\n    start_application(page,application_url)\n    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\jorlu\\OneDrive\\Documentos\\emprendimiento\\0 AD\\0adwebassembly\\wasm\\scripts\\phase4_browser.py\", line 26, in start_application\n    page.goto(url)\n    ~~~~~~~~~^^^^^\n  File \"C:\\Users\\jorlu\\OneDrive\\Documentos\\emprendimiento\\0 AD\\0adwebassembly\\wasm\\.venv-phase3\\Lib\\site-packages\\playwright\\sync_api\\_generated.py\", line 9019, in goto\n    self._sync(\n    ~~~~~~~~~~^\n        self._impl_obj.goto(\n        ^^^^^^^^^^^^^^^^^^^^\n            url=url, timeout=timeout, waitUntil=wait_until, referer=referer\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n        )\n        ^\n    )\n    ^\n  File \"C:\\Users\\jorlu\\OneDrive\\Documentos\\emprendimiento\\0 AD\\0adwebassembly\\wasm\\.venv-phase3\\Lib\\site-packages\\playwright\\_impl\\_sync_base.py\", line 115, in _sync\n    return task.result()\n           ~~~~~~~~~~~^^\n  File \"C:\\Users\\jorlu\\OneDrive\\Documentos\\emprendimiento\\0 AD\\0adwebassembly\\wasm\\.venv-phase3\\Lib\\site-packages\\playwright\\_impl\\_page.py\", line 555, in goto\n    return await self._main_frame.goto(**locals_to_params(locals()))\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\jorlu\\OneDrive\\Documentos\\emprendimiento\\0 AD\\0adwebassembly\\wasm\\.venv-phase3\\Lib\\site-packages\\playwright\\_impl\\_frame.py\", line 153, in goto\n    await self._channel.send(\n        \"goto\", self._navigation_timeout, locals_to_params(locals())\n    )\n  File \"C:\\Users\\jorlu\\OneDrive\\Documentos\\emprendimiento\\0 AD\\0adwebassembly\\wasm\\.venv-phase3\\Lib\\site-packages\\playwright\\_impl\\_connection.py\", line 69, in send\n    return await self._connection.wrap_api_call(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    ...<3 lines>...\n    )\n    ^\n  File \"C:\\Users\\jorlu\\OneDrive\\Documentos\\emprendimiento\\0 AD\\0adwebassembly\\wasm\\.venv-phase3\\Lib\\site-packages\\playwright\\_impl\\_connection.py\", line 559, in wrap_api_call\n    raise rewrite_error(error, f\"{parsed_st['apiName']}: {error}\") from None\nplaywright._impl._errors.TimeoutError: Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"http://localhost:8095/application.html?automation=1&functional-frame-frequency=60\", waiting until \"load\"\n\n",
+  "teardownFailure": "Page.evaluate: [Errno 22] Invalid argument: \"<Request url='http:\\\\localhost:8095\\\\pyrogenesis-application.mjs' method='GET'>\""
+}

@@ -1,0 +1,71 @@
+{
+  "passed": false,
+  "package": "C:\\Users\\jorlu\\OneDrive\\Documentos\\emprendimiento\\0 AD\\0adwebassembly\\wasm\\dist\\application-phase4-5-ring-1",
+  "chromeGpuPreference": "GpuPreference=0;SwapEffectUpgradeEnable=1;",
+  "runs": [
+    {
+      "transport": "relay",
+      "cache": "nocache",
+      "menu": {
+        "stats": {
+          "pipelineCompiles": 1,
+          "pipelineWarmCompiles": 0,
+          "pipelineWarmHits": 0,
+          "pipelineContentHits": 0,
+          "pipelineWaits": 1,
+          "pipelineWaitMilliseconds": 48.07500000298023,
+          "pipelineCompileMilliseconds": 48.689999997615814,
+          "frames": 5,
+          "draws": 555,
+          "stageMilliseconds": 23.769999995827675
+        },
+        "commandRing": {
+          "attached": false
+        },
+        "pipelineCache": null
+      }
+    }
+  ],
+  "errors": [],
+  "console": [
+    "Failed to load resource: the server responded with a status of 404 (File not found)",
+    "{\"type\":\"ready\",\"backend\":\"webgpu\",\"powerPreference\":\"high-performance\",\"owner\":\"render-worker\",\"adapter\":{\"vendor\":\"nvidia\",\"architecture\":\"ampere\",\"device\":\"\",\"description\":\"\"},\"adapterFeatures\":[\"bgra8unorm-storage\",\"clip-distances\",\"core-features-and-limits\",\"depth-clip-control\",\"depth32float-stencil8\",\"dual-source-blending\",\"float32-blendable\",\"float32-filterable\",\"indirect-first-instance\",\"primitive-index\",\"rg11b10ufloat-renderable\",\"shader-f16\",\"subgroup-size-control\",\"subgroups\",\"texture-component-swizzle\",\"texture-compression-bc\",\"texture-compression-bc-sliced-3d\",\"texture-compression-unaligned\",\"texture-formats-tier1\",\"texture-formats-tier2\",\"timestamp-query\"],\"adapterLimits\":{\"maxTextureDimension1D\":16384,\"maxTextureDimension2D\":16384,\"maxTextureDimension3D\":2048,\"maxTextureArrayLayers\":2048,\"maxBindGroups\":4,\"maxBindGroupsPlusVertexBuffers\":24,\"maxBindingsPerBindGroup\":1000,\"maxDynamicUniformBuffersPerPipelineLayout\":10,\"maxDynamicStorageBuffersPerPipelineLayout\":8,\"maxSampledTexturesPerShaderStage\":48,\"maxSamplersPerShaderStage\":16,\"maxStorageBuffersPerShaderStage\":16,\"maxStorageTexturesPerShaderStage\":8,\"maxUniformBuffersPerShaderStage\":12,\"maxUniformBufferBindingSize\":65536,\"maxStorageBufferBindingSize\":2147483644,\"minUniformBufferOffsetAlignment\":256,\"minStorageBufferOffsetAlignment\":256,\"maxVertexBuffers\":8,\"maxBufferSize\":2147483648,\"maxVertexAttributes\":30,\"maxVertexBufferArrayStride\":2048,\"maxInterStageShaderVariables\":28,\"maxColorAttachments\":8,\"maxColorAttachmentBytesPerSample\":128,\"maxComputeWorkgroupStorageSize\":32768,\"maxComputeInvocationsPerWorkgroup\":1024,\"maxComputeWorkgroupSizeX\":1024,\"maxComputeWorkgroupSizeY\":1024,\"maxComputeWorkgroupSizeZ\":64,\"maxComputeWorkgroupsPerDimension\":65535,\"maxImmediateSize\":64,\"maxStorageBuffersInFragmentStage\":16,\"maxStorageTexturesInFragmentStage\":8,\"maxStorageBuffersInVertexStage\":16,\"maxStorageTexturesInVertexStage\":8},\"deviceFeatures\":[\"core-features-and-limits\",\"depth32float-stencil8\",\"dual-source-blending\",\"float32-blendable\",\"float32-filterable\",\"rg11b10ufloat-renderable\",\"texture-compression-bc\"],\"deviceLimits\":{\"maxTextureDimension1D\":8192,\"maxTextureDimension2D\":8192,\"maxTextureDimension3D\":2048,\"maxTextureArrayLayers\":256,\"maxBindGroups\":4,\"maxBindGroupsPlusVertexBuffers\":24,\"maxBindingsPerBindGroup\":1000,\"maxDynamicUniformBuffersPerPipelineLayout\":8,\"maxDynamicStorageBuffersPerPipelineLayout\":4,\"maxSampledTexturesPerShaderStage\":16,\"maxSamplersPerShaderStage\":16,\"maxStorageBuffersPerShaderStage\":8,\"maxStorageTexturesPerShaderStage\":4,\"maxUniformBuffersPerShaderStage\":12,\"maxUniformBufferBindingSize\":65536,\"maxStorageBufferBindingSize\":134217728,\"minUniformBufferOffsetAlignment\":256,\"minStorageBufferOffsetAlignment\":256,\"maxVertexBuffers\":8,\"maxBufferSize\":268435456,\"maxVertexAttributes\":16,\"maxVertexBufferArrayStride\":2048,\"maxInterStageShaderVariables\":16,\"maxColorAttachments\":8,\"maxColorAttachmentBytesPerSample\":32,\"maxComputeWorkgroupStorageSize\":16384,\"maxComputeInvocationsPerWorkgroup\":256,\"maxComputeWorkgroupSizeX\":256,\"maxComputeWorkgroupSizeY\":256,\"maxComputeWorkgroupSizeZ\":64,\"maxComputeWorkgroupsPerDimension\":65535,\"maxImmediateSize\":64,\"maxStorageBuffersInFragmentStage\":8,\"maxStorageTexturesInFragmentStage\":4,\"maxStorageBuffersInVertexStage\":8,\"maxStorageTexturesInVertexStage\":4},\"unavailableOptionalFeatures\":[],\"fallbackAdapter\":null,\"format\":\"bgra8unorm\"}",
+    "{\"type\":\"graphics-profile\",\"mode\":\"auto\",\"profile\":\"original\",\"gpu\":{\"category\":\"capable\",\"weak\":false,\"name\":\"NVIDIA GeForce RTX 3060 Laptop GPU\",\"renderer\":\"ANGLE (NVIDIA, NVIDIA GeForce RTX 3060 Laptop GPU (0x00002520) Direct3D11 vs_5_0 ps_5_0, D3D11)\",\"source\":\"webgl-renderer\"},\"settings\":{}}",
+    "Main log written to '/logs/mainlog.html'",
+    "Interesting log written to '/logs/interestinglog.html'",
+    "Sound: AlcInit success, using Emscripten OpenAL",
+    "Hardware details written to '/logs/system_info.txt'",
+    "Failed to query SDL WM info: That operation is not supportedUserReport written to '/logs/userreport_hwdetect.txt'",
+    "Failed to load resource: the server responded with a status of 404 (File not found)",
+    "JSON data written to '/data/config/matchsettings.json'",
+    "SCENE_ACTOR_QUALITY_HOOK_BEGIN",
+    "SCENE_QUALITY_GET_BEGIN",
+    "SCENE_QUALITY_GET_END 200 100",
+    "SCENE_QUALITY_INTERPOLATE_BEGIN",
+    "SCENE_QUALITY_INTERPOLATE_END",
+    "SCENE_ACTOR_QUALITY_HOOK_END",
+    "SCENE_ACTOR_VALIDATOR_BEGIN",
+    "Replay written to '/data/replays/0.29.0/2026-10-27_0001'",
+    "Setting biome generic/temperate.",
+    "Creating playerbases...",
+    "Creating bumps...",
+    "Creating mountains...",
+    "Creating forests...",
+    "Creating dirt patches...",
+    "Creating grass patches...",
+    "Creating metal mines...",
+    "Creating stone mines...",
+    "Creating decoration...",
+    "Creating food...",
+    "Creating food...",
+    "Creating straggler trees...",
+    "Map generation finished.",
+    "Total entities: 3001, Terrain entities: 1961, Textures: 10.",
+    "{\"type\":\"sampler-address-emulation\",\"label\":\"art/textures/skins/props/decal_struct_paving_aegean_large.png\",\"requested\":[3,3,0],\"effective\":\"portable border filtering in the original shader sampling path\"}",
+    "GAME STARTED, ALL INIT COMPLETE",
+    "{\"type\":\"sampler-address-emulation\",\"label\":\"art/textures/misc/territory_border.png\",\"requested\":[3,2,0],\"effective\":\"portable border filtering in the original shader sampling path\"}"
+  ],
+  "browserVersion": "156.0.8078.48",
+  "failure": "Page.evaluate: Error: El motor no respondi\u00f3 a la prueba de GUI.\n    at window.evaluateOriginalGUI (http://localhost:8099/application.mjs:373:9)\n    at async <anonymous>:316:30",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\jorlu\\OneDrive\\Documentos\\emprendimiento\\0 AD\\0adwebassembly\\wasm\\scripts\\verify-render-transport.py\", line 120, in main\n    run['attributes'] = open_original_match(gui, MANIFEST['settings'])\n                        ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\jorlu\\OneDrive\\Documentos\\emprendimiento\\0 AD\\0adwebassembly\\wasm\\scripts\\phase4_flow.py\", line 58, in open_original_match\n    wait_gui(gui, 'typeof g_Selection !== \"undefined\" && !!g_Selection', timeout=300)\n    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\jorlu\\OneDrive\\Documentos\\emprendimiento\\0 AD\\0adwebassembly\\wasm\\scripts\\phase4_flow.py\", line 10, in wait_gui\n    if gui('String(' + expression + ')') == 'true':\n       ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\jorlu\\OneDrive\\Documentos\\emprendimiento\\0 AD\\0adwebassembly\\wasm\\scripts\\verify-render-transport.py\", line 106, in <lambda>\n    gui = lambda code: page.evaluate('(code)=>window.evaluateOriginalGUI(code)', code)\n                       ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\jorlu\\OneDrive\\Documentos\\emprendimiento\\0 AD\\0adwebassembly\\wasm\\.venv-phase3\\Lib\\site-packages\\playwright\\sync_api\\_generated.py\", line 8531, in evaluate\n    self._sync(\n    ~~~~~~~~~~^\n        self._impl_obj.evaluate(expression=expression, arg=mapping.to_impl(arg))\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    )\n    ^\n  File \"C:\\Users\\jorlu\\OneDrive\\Documentos\\emprendimiento\\0 AD\\0adwebassembly\\wasm\\.venv-phase3\\Lib\\site-packages\\playwright\\_impl\\_sync_base.py\", line 115, in _sync\n    return task.result()\n           ~~~~~~~~~~~^^\n  File \"C:\\Users\\jorlu\\OneDrive\\Documentos\\emprendimiento\\0 AD\\0adwebassembly\\wasm\\.venv-phase3\\Lib\\site-packages\\playwright\\_impl\\_page.py\", line 467, in evaluate\n    return await self._main_frame.evaluate(expression, arg)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\jorlu\\OneDrive\\Documentos\\emprendimiento\\0 AD\\0adwebassembly\\wasm\\.venv-phase3\\Lib\\site-packages\\playwright\\_impl\\_frame.py\", line 320, in evaluate\n    await self._channel.send(\n    ...<6 lines>...\n    )\n  File \"C:\\Users\\jorlu\\OneDrive\\Documentos\\emprendimiento\\0 AD\\0adwebassembly\\wasm\\.venv-phase3\\Lib\\site-packages\\playwright\\_impl\\_connection.py\", line 69, in send\n    return await self._connection.wrap_api_call(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    ...<3 lines>...\n    )\n    ^\n  File \"C:\\Users\\jorlu\\OneDrive\\Documentos\\emprendimiento\\0 AD\\0adwebassembly\\wasm\\.venv-phase3\\Lib\\site-packages\\playwright\\_impl\\_connection.py\", line 559, in wrap_api_call\n    raise rewrite_error(error, f\"{parsed_st['apiName']}: {error}\") from None\nplaywright._impl._errors.Error: Page.evaluate: Error: El motor no respondi\u00f3 a la prueba de GUI.\n    at window.evaluateOriginalGUI (http://localhost:8099/application.mjs:373:9)\n    at async <anonymous>:316:30\n"
+}

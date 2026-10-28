@@ -1,0 +1,38 @@
+{
+  "samples": 938,
+  "measuredSeconds": 14.99225,
+  "submittedFps": 62.49895779486068,
+  "medianFrameMs": 16.044921875,
+  "p95FrameMs": 17.47998046875,
+  "p99FrameMs": 18.315185546875,
+  "onePercentLowFps": 48.424947833231855,
+  "onePercentLowFormula": "1000 / mean(slowest ceil(N*0.01) frame intervals in ms)",
+  "pausesOver100Ms": 0,
+  "cpuMeanMs": {
+    "tickMs": 0.07565565031982942,
+    "interpolateMs": 0.10110341151385928,
+    "uploadMs": 0.017761194029850748,
+    "rendererMs": 0.8482089552238806,
+    "presentMs": 0.8432356076759062
+  },
+  "maxBacklogMs": 199.97,
+  "hardware": {
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 Edg/155.0.0.0",
+    "concurrency": 16,
+    "deviceMemoryGiB": 32,
+    "dpr": 1.0000000149011612,
+    "renderer": "ANGLE (AMD, AMD Radeon(TM) Graphics (0x00001638) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "gpuTimerAvailable": true,
+    "offscreenAvailable": true
+  },
+  "acceptance": "PENDING",
+  "limitations": [
+    "No physical presentation feedback",
+    "GPU and GC timing unavailable",
+    "Hardware identity, parity and three repetitions require independent evidence"
+  ],
+  "submissionGate30": true,
+  "submissionGate60": false,
+  "tickRate": 5.002584668745518,
+  "simulationRateValid": true
+}

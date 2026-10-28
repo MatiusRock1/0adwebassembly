@@ -1,0 +1,61 @@
+{
+  "passed": false,
+  "phase4Accepted": false,
+  "errors": [
+    "ErrorEvent",
+    "Aborted(Assertion failed: target_thread, at: /emsdk/emscripten/system/lib/pthread/proxying_legacy.c,350,normalize_thread)"
+  ],
+  "console": [
+    "Failed to load resource: the server responded with a status of 404 (File not found)",
+    "warning: unsupported syscall: __syscall_madvise\n",
+    "Main log written to '/data/logs/mainlog.html'",
+    "Interesting log written to '/data/logs/interestinglog.html'",
+    "GetDirectoryEntries: failed to get directory entries for'/data/data/mods', reason: filesystem error: in directory_iterator::directory_iterator(...): No such file or directory [\"/data/data/mods\"]",
+    "GetDirectoryEntries: failed to get directory entries for'/data/data/mods', reason: filesystem error: in directory_iterator::directory_iterator(...): No such file or directory [\"/data/data/mods\"]",
+    "Sound: AlcInit success, using Emscripten OpenAL",
+    "ERROR: CVFSFile: file audio/sound_group.rng couldn't be opened (vfs_load: -110100)",
+    "ERROR: CXeromyces: failed adding validator for 'audio/sound_group.rng'",
+    "ERROR: CSoundManager: failed to load grammar file 'audio/sound_group.rng'",
+    "ERROR: Failed to query audio device names",
+    "emscripten_set_main_loop_timing: Cannot set timing mode for main loop since a main loop does not exist! Call emscripten_set_main_loop first to set one up.",
+    "WARNING: Window icon not found.",
+    "Hardware details written to '/data/logs/system_info.txt'",
+    "ERROR: CVFSFile: file hwdetect/hwdetect.js couldn't be opened (vfs_load: -110100)",
+    "ERROR: Failed to load hardware detection script",
+    "ERROR: CVFSFile: file gui/gui_page.rng couldn't be opened (vfs_load: -110100)",
+    "ERROR: CXeromyces: failed adding validator for 'gui/gui_page.rng'",
+    "ERROR: CGUIManager: failed to load GUI page grammar file 'gui/gui_page.rng'",
+    "ERROR: CVFSFile: file gui/gui.rng couldn't be opened (vfs_load: -110100)",
+    "ERROR: CXeromyces: failed adding validator for 'gui/gui.rng'",
+    "ERROR: CGUIManager: failed to load GUI XML grammar file 'gui/gui.rng'",
+    "ERROR: CVFSFile: file shaders/program.rng couldn't be opened (vfs_load: -110100)",
+    "ERROR: CXeromyces: failed adding validator for 'shaders/program.rng'",
+    "ERROR: CShaderManager: failed to load grammar shaders/program.rng",
+    "Aborted(Assertion failed: target_thread, at: /emsdk/emscripten/system/lib/pthread/proxying_legacy.c,350,normalize_thread)",
+    "worker: onmessage() captured an uncaught exception: RuntimeError: Aborted(Assertion failed: target_thread, at: /emsdk/emscripten/system/lib/pthread/proxying_legacy.c,350,normalize_thread)",
+    "RuntimeError: Aborted(Assertion failed: target_thread, at: /emsdk/emscripten/system/lib/pthread/proxying_legacy.c,350,normalize_thread)\n    at abort (http://localhost:8090/pyrogenesis-application.mjs:762:41)\n    at ___assert_fail (http://localhost:8090/pyrogenesis-application.mjs:1533:10)\n    at pyrogenesis-application.wasm.normalize_thread (http://localhost:8090/pyrogenesis-application.wasm:wasm-function[34068]:0xdf3f7f)\n    at pyrogenesis-application.wasm.do_dispatch_to_thread (http://localhost:8090/pyrogenesis-application.wasm:wasm-function[34065]:0xdf3e25)\n    at pyrogenesis-application.wasm.emscripten_dispatch_to_thread_args (http://localhost:8090/pyrogenesis-application.wasm:wasm-function[34063]:0xdf3deb)\n    at pyrogenesis-application.wasm.emscripten_dispatch_to_thread_ (http://localhost:8090/pyrogenesis-application.wasm:wasm-function[34072]:0xdf46aa)\n    at pyrogenesis-application.wasm.glTexImage2D (http://localhost:8090/pyrogenesis-application.wasm:wasm-function[33541]:0xde1162)\n    at invoke_viiiiiiiii (http://localhost:8090/pyrogenesis-application.mjs:18319:29)\n    at pyrogenesis-application.wasm.Renderer::Backend::GL::CTexture::Create(Renderer::Backend::GL::CDevice*, char const*, Renderer::Backend::ITexture::Type, unsigned int, Renderer::Backend::Format, unsigned int, unsigned int, Renderer::Backend::Sampler::Desc const&, unsigned int, unsigned int) (http://localhost:8090/pyrogenesis-application.wasm:wasm-function[8133]:0x3e5b28)\n    at pyrogenesis-application.wasm.Renderer::Backend::GL::CDevice::CreateTexture2D(char const*, unsigned int, Renderer::Backend::Format, unsigned int, unsigned int, Renderer::Backend::Sampler::Desc const&, unsigned int, unsigned int) (http://localhost:8090/pyrogenesis-application.wasm:wasm-function[7943]:0x3d1d0c)",
+    "Pthread 0x00760030 sent an error! http://localhost:8090/pyrogenesis-application.mjs:762: Uncaught RuntimeError: Aborted(Assertion failed: target_thread, at: /emsdk/emscripten/system/lib/pthread/proxying_legacy.c,350,normalize_thread)"
+  ],
+  "physicalPresentationVerified": false,
+  "originalGUIExecuted": false,
+  "headers": {
+    "cache-control": "no-store",
+    "content-length": "995",
+    "content-type": "text/html",
+    "cross-origin-embedder-policy": "require-corp",
+    "cross-origin-opener-policy": "same-origin",
+    "cross-origin-resource-policy": "same-origin",
+    "date": "Tue, 13 Oct 2026 03:40:45 GMT",
+    "last-modified": "Tue, 13 Oct 2026 03:13:44 GMT",
+    "server": "SimpleHTTP/0.6 Python/3.13.1"
+  },
+  "browserVersion": "155.0.4283.45",
+  "failure": "{'error': 'Assertion failed: target_thread, at: /emsdk/emscripten/system/lib/pthread/proxying_legacy.c,350,normalize_thread'}",
+  "stateAtFailure": {
+    "status": "Error del motor: Assertion failed: target_thread, at: /emsdk/emscripten/system/lib/pthread/proxying_legacy.c,350,normalize_thread",
+    "result": {
+      "error": "Assertion failed: target_thread, at: /emsdk/emscripten/system/lib/pthread/proxying_legacy.c,350,normalize_thread"
+    },
+    "state": null
+  }
+}

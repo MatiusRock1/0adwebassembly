@@ -1,0 +1,113 @@
+{
+  "passed": false,
+  "phase4Accepted": false,
+  "errors": [
+    "function signature mismatch"
+  ],
+  "console": [
+    "warning: unsupported syscall: __syscall_madvise\n",
+    "Main log written to '/logs/mainlog.html'",
+    "Interesting log written to '/logs/interestinglog.html'",
+    "Sound: AlcInit success, using Emscripten OpenAL",
+    "Hardware details written to '/logs/system_info.txt'",
+    "Failed to query SDL WM info: That operation is not supportedUserReport written to '/logs/userreport_hwdetect.txt'",
+    "Failed to load resource: the server responded with a status of 404 (File not found)",
+    "JSON data written to '/data/config/matchsettings.json'",
+    "SCENE_ACTOR_QUALITY_HOOK_BEGIN",
+    "SCENE_QUALITY_GET_BEGIN",
+    "SCENE_QUALITY_GET_END 200 100",
+    "SCENE_QUALITY_INTERPOLATE_BEGIN",
+    "SCENE_QUALITY_INTERPOLATE_END",
+    "SCENE_ACTOR_QUALITY_HOOK_END",
+    "SCENE_ACTOR_VALIDATOR_BEGIN",
+    "Replay written to '/data/replays/0.29.0/2026-10-14_0001'",
+    "Setting biome generic/temperate.",
+    "Creating playerbases...",
+    "Creating bumps...",
+    "Creating mountains...",
+    "Creating forests...",
+    "Creating dirt patches...",
+    "Creating grass patches...",
+    "Creating metal mines...",
+    "Creating stone mines...",
+    "Creating decoration...",
+    "Creating food...",
+    "Creating food...",
+    "Creating straggler trees...",
+    "Map generation finished.",
+    "Total entities: 3001, Terrain entities: 1961, Textures: 10."
+  ],
+  "frames": [],
+  "samples": [],
+  "commandTrace": [],
+  "workload": "skirmish",
+  "warmupSeconds": 10,
+  "durationSeconds": 30,
+  "manifest": {
+    "version": 1,
+    "baseCommit": "40b8794eecb9618da69e10bacffa8814c561aa51",
+    "scope": "Full original CGame, GUI, Petra and components. Original cheat createunits is used only to prepare and replenish benchmark load; functional command tests run with cheats disabled.",
+    "settings": {
+      "mapType": "random",
+      "map": "maps/random/mainland",
+      "settings": {
+        "Size": 256,
+        "Biome": "generic/temperate",
+        "PlayerPlacement": "circle",
+        "Seed": 12345,
+        "AISeed": 54321,
+        "PopulationCap": 200,
+        "StartingResources": 10000,
+        "CheatsEnabled": true,
+        "VictoryConditions": [],
+        "PlayerData": [
+          {
+            "Civ": "athen",
+            "Name": "Phase4Human"
+          },
+          {
+            "Civ": "mace",
+            "Name": "Phase4Petra",
+            "AI": "petra",
+            "AIDiff": 3,
+            "AIBehavior": "balanced"
+          }
+        ]
+      }
+    },
+    "resolution": [
+      1920,
+      1080
+    ],
+    "gameSpeed": 1,
+    "presentationSync": "Browser RAF/display synchronization; native comparison requests vsync=true. Both retain the original 60 FPS session cap.",
+    "minimumLiveUnits": 200,
+    "targetUnitsPerPlayer": 125,
+    "preparationTemplates": [
+      "units/athen/infantry_spearman_e",
+      "units/mace/infantry_pikeman_e"
+    ],
+    "workloads": {
+      "skirmish": {
+        "camera": "human civic centre",
+        "orders": "continuous original patrol near civic centre; original Petra controls opponent",
+        "reinforcementSeconds": 30
+      },
+      "combat": {
+        "camera": "midpoint between civic centres",
+        "orders": "original attack-walk commands towards midpoint for both armies; Petra remains active",
+        "reinforcementSeconds": 30,
+        "allowCapture": false
+      }
+    },
+    "warmupSeconds": 120,
+    "durationSeconds": 900,
+    "repetitions": 3,
+    "requiredDisplayedFPS": 30,
+    "maximumP95Milliseconds": 33.4
+  },
+  "manifestSHA256": "9a80731789b3f36899ede10595175af768388ee32c232b6f1c21655bbb583fae",
+  "failure": "Page.evaluate: Error: El motor no respondi\u00f3 a la prueba de GUI.\n    at window.evaluateOriginalGUI (http://localhost:8091/application.mjs:193:9)\n    at async <anonymous>:316:30",
+  "presentmonEventsLost": 0,
+  "teardownFailure": "Page.wait_for_function: Timeout 60000ms exceeded."
+}

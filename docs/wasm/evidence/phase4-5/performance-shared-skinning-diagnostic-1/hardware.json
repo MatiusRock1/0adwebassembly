@@ -1,0 +1,33 @@
+{
+  "platform": "Windows-11-10.0.26300-SP0",
+  "inventory": {
+    "CPU": [
+      {
+        "Name": "AMD Ryzen 7 5800H with Radeon Graphics         ",
+        "NumberOfCores": 8,
+        "NumberOfLogicalProcessors": 16
+      }
+    ],
+    "GPU": [
+      {
+        "Name": "Parsec Virtual Display Adapter",
+        "DriverVersion": "0.45.0.0",
+        "PNPDeviceID": "ROOT\\DISPLAY\\0000"
+      },
+      {
+        "Name": "AMD Radeon(TM) Graphics",
+        "DriverVersion": "31.0.21923.11000",
+        "PNPDeviceID": "PCI\\VEN_1002&DEV_1638&SUBSYS_16A21043&REV_C5\\4&12C9051D&0&0041"
+      },
+      {
+        "Name": "NVIDIA GeForce RTX 3060 Laptop GPU",
+        "DriverVersion": "32.0.16.1742",
+        "PNPDeviceID": "PCI\\VEN_10DE&DEV_2520&SUBSYS_16A21043&REV_A1\\4&1AB417BC&0&0009"
+      }
+    ],
+    "RAM": 68079124480,
+    "PowerPlan": "Power Scheme GUID: 27fa6203-3987-4dcc-918d-748559d549ec  (Performance)"
+  },
+  "collectionError": null,
+  "externalGPUApplicationsClosed": "Operator prerequisite; not automatically verified"
+}

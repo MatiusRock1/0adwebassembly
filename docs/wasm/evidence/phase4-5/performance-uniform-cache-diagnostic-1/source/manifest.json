@@ -1,0 +1,12 @@
+{
+  "retired": true,
+  "reason": "No physical presentation gain: 35.50 displayed FPS and 66.79ms p95; retain the simpler direct-copy baseline for the next VM experiment",
+  "sourceSHA256": {
+    "source/renderer/backend/webgpu/Device.cpp": "04441c0389344d23b92ce0eccc7cf01be35410ad0467fb7b9ae631d106dc0040",
+    "source/renderer/backend/webgpu/UniformCache.h": "89246b2e47d2444e96d0cf9312ef69a4ad9b99186bfa30a4046784d5def73140",
+    "source/renderer/backend/webgpu/CommandData.h": "be85a18ab95bb46b492a88fcd4b654c04d092c48f800496fd5b662dd516a5524",
+    "wasm/probes/webgpu-uniform-cache.cpp": "06c59349a5308cf654b92d586773c40d0c91a961f7151b45e457333037796ba9",
+    "wasm/scripts/verify-phase4-5-command-queue.py": "ef40e766b72014fdc93fa07c82f11bf6cbedc91e9fc77b4bf5c285a2ec3b056c",
+    "wasm/scripts/phase4-5-engine-build.py": "11cd5bed7177e8fae3290dcc6717249fd184a457b4bf528d2f949a4a7013fbf4"
+  }
+}

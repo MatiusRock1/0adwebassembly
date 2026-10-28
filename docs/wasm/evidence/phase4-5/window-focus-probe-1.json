@@ -1,0 +1,5 @@
+{
+  "passed": false,
+  "scope": "Setup-only real foreground ownership, empty own Chrome window; no performance data",
+  "failure": "Benchmark browser lost real Windows foreground focus: {'hwnd': 789246, 'ownerProcessId': 14472, 'expectedProcessId': 41856, 'clientSize': [1536, 824]}"
+}

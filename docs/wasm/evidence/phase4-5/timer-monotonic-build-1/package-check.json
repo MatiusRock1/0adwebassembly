@@ -1,0 +1,30 @@
+{
+  "package": "wasm\\dist\\application-phase4-5-timer-monotonic",
+  "changedObjects": [
+    "lib/timer.cpp"
+  ],
+  "retainedObjects": 482,
+  "timeSourceCodeUnchanged": true,
+  "staticFilesMatchBest": {
+    "application.html": true,
+    "application.mjs": true,
+    "application-pointer.mjs": true,
+    "application-failure.mjs": true,
+    "renderer-session.mjs": true,
+    "webgpu-engine.mjs": true,
+    "webgpu-border.mjs": true,
+    "webgpu-upload.mjs": true,
+    "webgpu-dispatch.mjs": true,
+    "webgpu-upload-probe.mjs": true,
+    "webgpu-shaders.json": true,
+    "application-data.json": true
+  },
+  "vmMatchesBest": true,
+  "vmSHA256": "dd057a4ea34a1a5028660d9992bef5b749c9116a3502828611a240c2df07b642",
+  "artifacts": {
+    "pyrogenesis-application.mjs": "2fefb23591bb8572a573eb7774f804b74e9a5ffb6d1f2d784c1ab8da9cf2d8fd",
+    "pyrogenesis-application.mjs.symbols": "b54dfc28fafc411e81c7ff92c375bb8f40a5c375534f584eb77307f3e6aefb91",
+    "pyrogenesis-application.wasm": "d6994e646efe5f4092a9c88b8c6f667f3298f84893df2d57cc79326ccf66f6e9"
+  },
+  "phase45Accepted": false
+}

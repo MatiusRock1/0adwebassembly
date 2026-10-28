@@ -1,0 +1,107 @@
+{
+  "nativeProfile": "native-final-camera-smoke.json",
+  "originalRecordedContract": {
+    "baseCommit": "40b8794eecb9618da69e10bacffa8814c561aa51",
+    "map": "maps/scenarios/pathfinding_terrain_demo",
+    "seed": 12345,
+    "assetsContentSHA256": "e379daed68efc79c151f70e1a18a0b380bb8cac5a9b526b1533fec2849d7229d",
+    "commandsSHA256": "6f10f0aca0642d7267f0ad2da1aa279e95d72c2f8e13072d3cb2ca892b198941",
+    "camera": {
+      "x": 155,
+      "z": 245,
+      "elevation": 120,
+      "fovRadians": 0.785398
+    },
+    "internalResolution": [
+      1920,
+      1080
+    ],
+    "frameCap": 60,
+    "swapIntervalRequested": 0,
+    "simulationTickMs": 200,
+    "interactiveCommandsDuringMeasurement": false,
+    "renderOptions": {
+      "maxActorQuality": 100,
+      "shadows": false,
+      "waterEffects": false,
+      "waterFancy": false,
+      "waterReflection": false,
+      "waterRefraction": false,
+      "postProcessing": false,
+      "gpuSkinning": false,
+      "silhouettes": false,
+      "smoothLOS": false
+    },
+    "scope": "Phase3 original-engine 37-entity scene; not full-game FPS acceptance"
+  },
+  "immutableContract": {
+    "baseCommit": "40b8794eecb9618da69e10bacffa8814c561aa51",
+    "map": "maps/scenarios/pathfinding_terrain_demo",
+    "seed": 12345,
+    "assetsContentSHA256": "4aa1bc5a596a10ef89eee40576f9f23a3d81a1c705e7d055ede54d874e172168",
+    "commandsSHA256": "6f10f0aca0642d7267f0ad2da1aa279e95d72c2f8e13072d3cb2ca892b198941",
+    "camera": {
+      "x": 155,
+      "z": 245,
+      "elevation": 120,
+      "fovRadians": 0.785398
+    },
+    "internalResolution": [
+      1920,
+      1080
+    ],
+    "frameCap": 60,
+    "swapIntervalRequested": 0,
+    "simulationTickMs": 200,
+    "interactiveCommandsDuringMeasurement": false,
+    "renderOptions": {
+      "maxActorQuality": 100,
+      "shadows": false,
+      "waterEffects": false,
+      "waterFancy": false,
+      "waterReflection": false,
+      "waterRefraction": false,
+      "postProcessing": false,
+      "gpuSkinning": false,
+      "silhouettes": false,
+      "smoothLOS": false
+    },
+    "scope": "Phase3 original-engine 37-entity scene; not full-game FPS acceptance"
+  },
+  "browserContract": {
+    "baseCommit": "40b8794eecb9618da69e10bacffa8814c561aa51",
+    "map": "maps/scenarios/pathfinding_terrain_demo",
+    "seed": 12345,
+    "assetsContentSHA256": "4aa1bc5a596a10ef89eee40576f9f23a3d81a1c705e7d055ede54d874e172168",
+    "commandsSHA256": "6f10f0aca0642d7267f0ad2da1aa279e95d72c2f8e13072d3cb2ca892b198941",
+    "camera": {
+      "x": 155,
+      "z": 245,
+      "elevation": 120,
+      "fovRadians": 0.785398
+    },
+    "internalResolution": [
+      1920,
+      1080
+    ],
+    "frameCap": 60,
+    "swapIntervalRequested": 0,
+    "simulationTickMs": 200,
+    "interactiveCommandsDuringMeasurement": false,
+    "renderOptions": {
+      "maxActorQuality": 100,
+      "shadows": false,
+      "waterEffects": false,
+      "waterFancy": false,
+      "waterReflection": false,
+      "waterRefraction": false,
+      "postProcessing": false,
+      "gpuSkinning": false,
+      "silhouettes": false,
+      "smoothLOS": false
+    },
+    "scope": "Phase3 original-engine 37-entity scene; not full-game FPS acceptance"
+  },
+  "equalImmutableInputs": true,
+  "difference": "Native runtime generated 96 files under public/cache. Original asset files have identical hashes; exclude derived cache files from immutable scene identity."
+}

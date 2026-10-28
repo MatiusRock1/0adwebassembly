@@ -1,0 +1,116 @@
+--- a/js/src/gc/Memory.cpp
++++ b/js/src/gc/Memory.cpp
+@@ -27,12 +27,12 @@
+ #  include <errno.h>
+ #  include <unistd.h>
+ 
+-#  if !defined(__wasi__)
++#  if !defined(__wasi__) && !defined(__EMSCRIPTEN__)
+ #    include <sys/mman.h>
+ #    include <sys/resource.h>
+ #    include <sys/stat.h>
+ #    include <sys/types.h>
+-#  endif  // !defined(__wasi__)
++#  endif  // !defined(__wasi__) && !defined(__EMSCRIPTEN__)
+ 
+ #endif  // !XP_WIN
+ 
+@@ -143,7 +143,7 @@
+   ReadExecute = PAGE_EXECUTE_READ,
+   ReadWriteExecute = PAGE_EXECUTE_READWRITE,
+ };
+-#elif defined(__wasi__)
++#elif defined(__wasi__) || defined(__EMSCRIPTEN__)
+ enum class PageAccess : int {
+   None = 0,
+   Read = 0,
+@@ -167,7 +167,7 @@
+ static bool TryToAlignChunk(void** aRegion, void** aRetainedRegion,
+                             size_t length, size_t alignment);
+ 
+-#ifndef __wasi__
++#if !defined(__wasi__) && !defined(__EMSCRIPTEN__)
+ static void* MapAlignedPagesSlow(size_t length, size_t alignment);
+ #endif  // wasi
+ static void* MapAlignedPagesLastDitch(size_t length, size_t alignment);
+@@ -194,7 +194,7 @@
+   DWORD flags =
+       (commit == Commit::Yes ? MEM_RESERVE | MEM_COMMIT : MEM_RESERVE);
+   region = VirtualAlloc(desired, length, flags, DWORD(prot));
+-#elif defined(__wasi__)
++#elif defined(__wasi__) || defined(__EMSCRIPTEN__)
+   if (int err = posix_memalign(&region, gc::SystemPageSize(), length)) {
+     MOZ_RELEASE_ASSERT(err == ENOMEM);
+     return nullptr;
+@@ -219,7 +219,7 @@
+ 
+ #ifdef XP_WIN
+   MOZ_RELEASE_ASSERT(VirtualFree(region, 0, MEM_RELEASE) != 0);
+-#elif defined(__wasi__)
++#elif defined(__wasi__) || defined(__EMSCRIPTEN__)
+   free(region);
+ #else
+   if (munmap(region, length)) {
+@@ -433,7 +433,7 @@
+     alignment = allocGranularity;
+   }
+ 
+-#ifdef __wasi__
++#if defined(__wasi__) || defined(__EMSCRIPTEN__)
+   void* region = nullptr;
+   if (int err = posix_memalign(&region, alignment, length)) {
+     MOZ_ASSERT(err == ENOMEM);
+@@ -585,7 +585,7 @@
+ 
+ #endif  // defined(JS_64BIT)
+ 
+-#ifndef __wasi__
++#if !defined(__wasi__) && !defined(__EMSCRIPTEN__)
+ static void* MapAlignedPagesSlow(size_t length, size_t alignment) {
+   void* alignedRegion = nullptr;
+   do {
+@@ -808,7 +808,7 @@
+ #if defined(XP_WIN)
+   return VirtualAlloc(region, length, MEM_RESET,
+                       DWORD(PageAccess::ReadWrite)) == region;
+-#elif defined(__wasi__)
++#elif defined(__wasi__) || defined(__EMSCRIPTEN__)
+   return 0;
+ #else
+   int status;
+@@ -881,7 +881,7 @@
+     return 0;
+   }
+   return pmc.PageFaultCount;
+-#elif defined(__wasi__)
++#elif defined(__wasi__) || defined(__EMSCRIPTEN__)
+   return 0;
+ #else
+   struct rusage usage;
+@@ -895,7 +895,7 @@
+ 
+ void* AllocateMappedContent(int fd, size_t offset, size_t length,
+                             size_t alignment) {
+-#ifdef __wasi__
++#if defined(__wasi__) || defined(__EMSCRIPTEN__)
+   MOZ_CRASH("Not yet supported for WASI");
+ #else
+   if (length == 0 || alignment == 0 || offset % alignment != 0 ||
+@@ -994,7 +994,7 @@
+ }
+ 
+ void DeallocateMappedContent(void* region, size_t length) {
+-#ifdef __wasi__
++#if defined(__wasi__) || defined(__EMSCRIPTEN__)
+   MOZ_CRASH("Not yet supported for WASI");
+ #else
+   if (!region) {
+@@ -1027,7 +1027,7 @@
+   DWORD oldProtect;
+   MOZ_RELEASE_ASSERT(VirtualProtect(region, length, DWORD(prot), &oldProtect) !=
+                      0);
+-#elif defined(__wasi__)
++#elif defined(__wasi__) || defined(__EMSCRIPTEN__)
+   /* nothing */
+ #else
+   MOZ_RELEASE_ASSERT(mprotect(region, length, int(prot)) == 0);

@@ -1,0 +1,50 @@
+{
+  "samples": 1775,
+  "measuredSeconds": 29.98431982421875,
+  "submittedFps": 59.1642568649203,
+  "medianFrameMs": 16.0400390625,
+  "p95FrameMs": 18.795166015625,
+  "p99FrameMs": 32.43017578125,
+  "onePercentLowFps": 19.109701683062717,
+  "onePercentLowFormula": "1000 / mean(slowest ceil(N*0.01) frame intervals in ms)",
+  "pausesOver100Ms": 3,
+  "cpuMeanMs": {
+    "tickMs": 0.06901690140845071,
+    "interpolateMs": 0.08375211267605634,
+    "uploadMs": 0.027332394366197183,
+    "rendererMs": 1.0165633802816902,
+    "presentMs": 0.7083323943661972
+  },
+  "maxBacklogMs": 195.73,
+  "hardware": {
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 Edg/155.0.0.0",
+    "concurrency": 16,
+    "timeOriginMs": 1791832841345.275,
+    "deviceMemoryGiB": 32,
+    "dpr": 1.0000000149011612,
+    "renderer": "ANGLE (AMD, AMD Radeon(TM) Graphics (0x00001638) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "gpuTimerAvailable": true,
+    "offscreenAvailable": true
+  },
+  "acceptance": "PENDING",
+  "limitations": [
+    "No physical presentation feedback",
+    "GPU optional/asynchronous; GC and inclusive script callback windows overlap CPU subsystem timings",
+    "Hardware identity, parity and three repetitions require independent evidence"
+  ],
+  "submissionGate30": true,
+  "submissionGate60": false,
+  "tickRate": 5.002614729277365,
+  "simulationRateValid": true,
+  "scriptMsMean": 0.05222704225352113,
+  "scriptMsMax": 2.104,
+  "gcMsMean": 0.0008056338028169013,
+  "gcMsMax": 1.43,
+  "gpuProbeProxyMsMean": 0,
+  "gpuProbeProxyMsMax": 0,
+  "receiveCostMsMean": 0.011588732264411282,
+  "receiveCostMsMax": 0.034999996423721313,
+  "wasmHeapBytesMean": 240582656,
+  "wasmHeapBytesMax": 240582656,
+  "gpuSamples": 0
+}

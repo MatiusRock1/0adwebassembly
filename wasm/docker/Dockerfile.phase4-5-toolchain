@@ -1,0 +1,6 @@
+# Preserve the game pin and the existing SDK; cache the pinned SDK port at build
+# time. No compiler or bindings are fetched by the game at runtime.
+FROM 0ad-wasm-phase4:dependencies
+ENV EMCC_CORES=2 BINARYEN_CORES=2
+RUN printf '#include <webgpu/webgpu.h>\nint main(){auto i=wgpuCreateInstance(nullptr);wgpuInstanceRelease(i);}\n' > /tmp/webgpu-port.cpp \
+    && em++ /tmp/webgpu-port.cpp --use-port=emdawnwebgpu -o /tmp/webgpu-port.js

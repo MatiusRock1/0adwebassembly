@@ -1,0 +1,11 @@
+{
+  "passed": false,
+  "minimumDisplayedFps": 30,
+  "maximumP95FrameMs": 33.4,
+  "warmupSeconds": 120,
+  "durationSeconds": 900,
+  "runs": [],
+  "scope": "Phase 3 original 37-entity scene; full game performance requires phase 4",
+  "nativeParity": "Optimization objective, not the operator-authorized minimum",
+  "failure": "Draw or simulation gate failed"
+}

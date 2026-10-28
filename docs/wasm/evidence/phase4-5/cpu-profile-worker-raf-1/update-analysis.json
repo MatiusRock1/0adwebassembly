@@ -1,0 +1,257 @@
+{
+  "diagnosticOnly": true,
+  "scope": "Sampled inclusive wall stack residence under CGame::Update, not exclusive CPU or physical FPS",
+  "profiles": [
+    {
+      "file": "cpu-15.cpuprofile",
+      "groupsSeconds": {
+        "other-update": 4.919495,
+        "AI": 4.115273
+      },
+      "self": [
+        {
+          "function": "js::pbl::PortableBaselineInterpret(JSContext*, js::pbl::State&, js::pbl::Stack&, js::pbl::StackVal*, JSObject*, JS::Value*)",
+          "seconds": 3.520244
+        },
+        {
+          "function": "CUnitAnimation::Update(float)",
+          "seconds": 0.569499
+        },
+        {
+          "function": "CModel::InvalidatePosition()",
+          "seconds": 0.413144
+        },
+        {
+          "function": "_emscripten_get_now",
+          "seconds": 0.244824
+        },
+        {
+          "function": "CCmpUnitRenderer::HandleMessage(CMessage const&, bool)",
+          "seconds": 0.166204
+        },
+        {
+          "function": "js::jit::ICScript::interpreterICEntryFromPCOffset(unsigned int)",
+          "seconds": 0.160278
+        },
+        {
+          "function": "js::InternalCallOrConstruct(JSContext*, JS::CallArgs const&, js::MaybeConstruct, js::CallReason)",
+          "seconds": 0.10601
+        },
+        {
+          "function": "js::NativeGetPropertyNoGC(JSContext*, js::NativeObject*, JS::Value const&, JS::PropertyKey, JS::Value*)",
+          "seconds": 0.10181
+        },
+        {
+          "function": "CComponentManager::BroadcastMessage(CMessage const&)",
+          "seconds": 0.100173
+        },
+        {
+          "function": "emscripten_builtin_malloc",
+          "seconds": 0.094597
+        },
+        {
+          "function": "CComponentManager::PostMessage(unsigned int, CMessage const&)",
+          "seconds": 0.092252
+        },
+        {
+          "function": "js::jit::DoCallFallback(JSContext*, js::jit::BaselineFrame*, js::jit::ICFallbackStub*, unsigned int, JS::Value*, JS::MutableHandle<JS::Value>)",
+          "seconds": 0.084385
+        },
+        {
+          "function": "js::jit::CacheIRReader::CacheIRReader(js::jit::CacheIRStubInfo const*)",
+          "seconds": 0.082352
+        },
+        {
+          "function": "std::__2::pair<std::__2::__hash_iterator<std::__2::__hash_node<Path, void*>*>, bool> std::__2::__hash_table<Path, std::__2::hash<Path>, std::__2::equal_to<Path>, std::__2::allocator<Path>>::__emplace_unique_key_args<Path, Path const&>(Path const&, Path const&)",
+          "seconds": 0.080474
+        },
+        {
+          "function": "CObjectBase::CalculateRandomRemainingSelections(std::__2::mersenne_twister_engine<unsigned int, 32ul, 624ul, 397ul, 31ul, 2567483615u, 11ul, 4294967295u, 7ul, 2636928640u, 15ul, 4022730752u, 18ul, 1812433253u>&, std::__2::vector<std::__2::set<CStr8, std::__2::less<CStr8>, std::__2::allocator<CStr8>>, std::__2::allocator<std::__2::set<CStr8, std::__2::less<CStr8>, std::__2::allocator<CStr8>>>> const&) const",
+          "seconds": 0.078854
+        },
+        {
+          "function": "CCmpUnitMotionManager::Move(EntityMap<CCmpUnitMotionManager::MotionState>&, CFixed<int, 2147483647, 32, 15, 16, 65536>)",
+          "seconds": 0.075292
+        },
+        {
+          "function": "js::GetElementNoGC(JSContext*, JSObject*, JS::Value const&, unsigned int, JS::Value*)",
+          "seconds": 0.066185
+        },
+        {
+          "function": "js::jit::MaybeForwardedScriptFromCalleeToken(void*)",
+          "seconds": 0.06406
+        },
+        {
+          "function": "CCmpObstructionManager::TestLine(IObstructionTestFilter const&, CFixed<int, 2147483647, 32, 15, 16, 65536>, CFixed<int, 2147483647, 32, 15, 16, 65536>, CFixed<int, 2147483647, 32, 15, 16, 65536>, CFixed<int, 2147483647, 32, 15, 16, 65536>, CFixed<int, 2147483647, 32, 15, 16, 65536>, bool) const",
+          "seconds": 0.063196
+        },
+        {
+          "function": "js::pbl::getEnvironmentFromCoordinate(js::jit::BaselineFrame*, js::EnvironmentCoordinate)",
+          "seconds": 0.062831
+        },
+        {
+          "function": "js::jit::MaybeEnterJit(JSContext*, js::RunState&)",
+          "seconds": 0.060212
+        },
+        {
+          "function": "CCmpRangeManager::TestEntityQuery((anonymous namespace)::Query const&, unsigned int, (anonymous namespace)::EntityData const&) const",
+          "seconds": 0.055642
+        },
+        {
+          "function": "js::NativeGetProperty(JSContext*, JS::Handle<js::NativeObject*>, JS::Handle<JS::Value>, JS::Handle<JS::PropertyKey>, JS::MutableHandle<JS::Value>)",
+          "seconds": 0.052478
+        },
+        {
+          "function": "js::TypedArrayObject::getElementPure(unsigned long, JS::Value*)",
+          "seconds": 0.050921
+        },
+        {
+          "function": "emscripten_futex_wait",
+          "seconds": 0.050712
+        },
+        {
+          "function": "bool Script::Function::ToJSNative<&CComponentManager::QueryInterface(unsigned int, int) const, &CComponentManager* Script::Interface::ObjectFromCBData<CComponentManager>(Script::Request const&, JS::CallArgs&)>(JSContext*, unsigned int, JS::Value*)",
+          "seconds": 0.04624
+        },
+        {
+          "function": "CObjectEntry::GetAnimations(CStr8 const&, CStr8 const&) const",
+          "seconds": 0.04616
+        },
+        {
+          "function": "__pthread_mutex_lock",
+          "seconds": 0.046045
+        },
+        {
+          "function": "js::jit::GetNativeDataPropertyPureWithCacheLookup(JSContext*, JSObject*, JS::PropertyKey, js::MegamorphicCacheEntry*, JS::Value*)",
+          "seconds": 0.046008
+        },
+        {
+          "function": "now",
+          "seconds": 0.043946
+        }
+      ],
+      "inclusive": [
+        {
+          "function": "main",
+          "seconds": 9.034768
+        },
+        {
+          "function": "_main_thread",
+          "seconds": 9.034768
+        },
+        {
+          "function": "CGame::Update(double, bool)",
+          "seconds": 9.034768
+        },
+        {
+          "function": "(root)",
+          "seconds": 9.034768
+        },
+        {
+          "function": "CTurnManager::Update(float, unsigned long, std::__2::function<void (std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>> const&, std::__2::optional<JS::HandleValueArray>)> const&)",
+          "seconds": 7.203987
+        },
+        {
+          "function": "CSimulation2Impl::Update(int, std::__2::vector<SimulationCommand, std::__2::allocator<SimulationCommand>> const&)",
+          "seconds": 7.202474
+        },
+        {
+          "function": "CSimulation2Impl::UpdateComponents(CSimContext&, CFixed<int, 2147483647, 32, 15, 16, 65536>, std::__2::vector<SimulationCommand, std::__2::allocator<SimulationCommand>> const&)",
+          "seconds": 7.196205
+        },
+        {
+          "function": "JS_CallFunctionValue(JSContext*, JS::Handle<JSObject*>, JS::Handle<JS::Value>, JS::HandleValueArray const&, JS::MutableHandle<JS::Value>)",
+          "seconds": 6.089306
+        },
+        {
+          "function": "js::Call(JSContext*, JS::Handle<JS::Value>, JS::Handle<JS::Value>, js::AnyInvokeArgs const&, JS::MutableHandle<JS::Value>, js::CallReason)",
+          "seconds": 6.087868
+        },
+        {
+          "function": "js::InternalCallOrConstruct(JSContext*, JS::CallArgs const&, js::MaybeConstruct, js::CallReason)",
+          "seconds": 6.084754
+        },
+        {
+          "function": "js::RunScript(JSContext*, js::RunState&)",
+          "seconds": 6.078837
+        },
+        {
+          "function": "js::jit::MaybeEnterJit(JSContext*, js::RunState&)",
+          "seconds": 5.982663
+        },
+        {
+          "function": "js::pbl::PortableBaselineInterpret(JSContext*, js::pbl::State&, js::pbl::Stack&, js::pbl::StackVal*, JSObject*, JS::Value*)",
+          "seconds": 5.926827
+        },
+        {
+          "function": "CAIWorker::PerformComputation()",
+          "seconds": 4.115273
+        },
+        {
+          "function": "CCmpAIManager::PushCommands()",
+          "seconds": 4.115273
+        },
+        {
+          "function": "CComponentManager::BroadcastMessage(CMessage const&)",
+          "seconds": 4.108522
+        },
+        {
+          "function": "bool Script::Function::Call_<Script::Function::IgnoreResult_t, JS::PersistentRooted<JS::Value>>(Script::Request const&, JS::Handle<JS::Value>, char const*, Script::Function::IgnoreResult_t&, JS::PersistentRooted<JS::Value> const&)",
+          "seconds": 2.921779
+        },
+        {
+          "function": "js::jit::DoCallFallback(JSContext*, js::jit::BaselineFrame*, js::jit::ICFallbackStub*, unsigned int, JS::Value*, JS::MutableHandle<JS::Value>)",
+          "seconds": 2.567507
+        },
+        {
+          "function": "CCmpUnitMotionManager::HandleMessage(CMessage const&, bool)",
+          "seconds": 1.463438
+        },
+        {
+          "function": "CComponentTypeScript::HandleMessage(CMessage const&, bool)",
+          "seconds": 1.424811
+        },
+        {
+          "function": "CCmpTest1Scripted::HandleMessage(CMessage const&, bool)",
+          "seconds": 1.416999
+        },
+        {
+          "function": "bool Script::Function::Call_<Script::Function::IgnoreResult_t, JS::Rooted<JS::Value>>(Script::Request const&, JS::Handle<JS::Value>, char const*, Script::Function::IgnoreResult_t&, JS::Rooted<JS::Value> const&)",
+          "seconds": 1.402957
+        },
+        {
+          "function": "CTurnManager::Interpolate(float, float)",
+          "seconds": 1.34258
+        },
+        {
+          "function": "CSimulation2::Interpolate(float, float, float)",
+          "seconds": 1.339575
+        },
+        {
+          "function": "CCmpUnitMotionManager::Move(EntityMap<CCmpUnitMotionManager::MotionState>&, CFixed<int, 2147483647, 32, 15, 16, 65536>)",
+          "seconds": 1.297733
+        },
+        {
+          "function": "CCmpUnitRenderer::HandleMessage(CMessage const&, bool)",
+          "seconds": 1.202715
+        },
+        {
+          "function": "CUnitAnimation::Update(float)",
+          "seconds": 1.024178
+        },
+        {
+          "function": "js::fun_apply(JSContext*, unsigned int, JS::Value*)",
+          "seconds": 0.869327
+        },
+        {
+          "function": "CComponentManager::PostMessage(unsigned int, CMessage const&)",
+          "seconds": 0.711575
+        },
+        {
+          "function": "CCmpVisualActor::SelectAnimation(std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>> const&, bool, CFixed<int, 2147483647, 32, 15, 16, 65536>)",
+          "seconds": 0.604222
+        }
+      ]
+    }
+  ]
+}

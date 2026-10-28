@@ -1,0 +1,119 @@
+{
+  "passed": true,
+  "surfaces": [
+    {
+      "canvas": [
+        800,
+        600
+      ],
+      "drawingBuffer": [
+        800,
+        600
+      ],
+      "proxiedDepthAttachment": [
+        800,
+        600
+      ],
+      "viewport": [
+        0,
+        0,
+        800,
+        600
+      ],
+      "fullscreen": false,
+      "innerSize": [
+        1028,
+        706
+      ],
+      "dpr": 1.25
+    },
+    {
+      "canvas": [
+        1920,
+        1080
+      ],
+      "drawingBuffer": [
+        1920,
+        1080
+      ],
+      "proxiedDepthAttachment": [
+        1920,
+        1080
+      ],
+      "viewport": [
+        0,
+        0,
+        1920,
+        1080
+      ],
+      "fullscreen": false,
+      "innerSize": [
+        1028,
+        706
+      ],
+      "dpr": 1.25
+    },
+    {
+      "canvas": [
+        640,
+        480
+      ],
+      "drawingBuffer": [
+        640,
+        480
+      ],
+      "proxiedDepthAttachment": [
+        640,
+        480
+      ],
+      "viewport": [
+        0,
+        0,
+        640,
+        480
+      ],
+      "fullscreen": false,
+      "innerSize": [
+        1028,
+        706
+      ],
+      "dpr": 1.25
+    },
+    {
+      "canvas": [
+        1920,
+        1080
+      ],
+      "drawingBuffer": [
+        1920,
+        1080
+      ],
+      "proxiedDepthAttachment": [
+        1920,
+        1080
+      ],
+      "viewport": [
+        0,
+        0,
+        1920,
+        1080
+      ],
+      "fullscreen": true,
+      "innerSize": [
+        1536,
+        864
+      ],
+      "dpr": 1.25
+    }
+  ],
+  "window": {
+    "windowId": 1801514405,
+    "bounds": {
+      "left": 0,
+      "top": 0,
+      "width": 1536,
+      "height": 864,
+      "windowState": "fullscreen"
+    }
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "passed": true,
+  "minimumDisplayedFps": 30,
+  "maximumP95FrameMs": 33.4,
+  "warmupSeconds": 120,
+  "durationSeconds": 900,
+  "runs": [
+    {
+      "profile": "docs\\wasm\\evidence\\phase3\\final-restart-release\\msedge-1.json",
+      "drawAnalysis": "docs\\wasm\\evidence\\phase3\\final-restart-release\\msedge-1-draw-analysis.json",
+      "displayAnalysis": "docs\\wasm\\evidence\\phase3\\final-restart-release\\msedge-1-display-analysis.json",
+      "displayedFps": 59.99999791333341,
+      "p95FrameMs": 27.7906,
+      "p99FrameMs": 27.8131,
+      "onePercentLowFps": 35.775228532159865,
+      "pausesOver100Ms": 0,
+      "tickRate": 5.000079722679541,
+      "wasmHeapMinBytes": 240582656,
+      "wasmHeapMaxBytes": 240582656
+    },
+    {
+      "profile": "docs\\wasm\\evidence\\phase3\\final-restart-release\\msedge-2.json",
+      "drawAnalysis": "docs\\wasm\\evidence\\phase3\\final-restart-release\\msedge-2-draw-analysis.json",
+      "displayAnalysis": "docs\\wasm\\evidence\\phase3\\final-restart-release\\msedge-2-display-analysis.json",
+      "displayedFps": 59.999995980000264,
+      "p95FrameMs": 27.7939,
+      "p99FrameMs": 27.8203,
+      "onePercentLowFps": 35.673470026803656,
+      "pausesOver100Ms": 0,
+      "tickRate": 5.000077612153062,
+      "wasmHeapMinBytes": 240582656,
+      "wasmHeapMaxBytes": 240582656
+    },
+    {
+      "profile": "docs\\wasm\\evidence\\phase3\\final-restart-release\\msedge-3.json",
+      "drawAnalysis": "docs\\wasm\\evidence\\phase3\\final-restart-release\\msedge-3-draw-analysis.json",
+      "displayAnalysis": "docs\\wasm\\evidence\\phase3\\final-restart-release\\msedge-3-display-analysis.json",
+      "displayedFps": 59.999999839999994,
+      "p95FrameMs": 27.7942,
+      "p99FrameMs": 27.8229,
+      "onePercentLowFps": 35.6511445192558,
+      "pausesOver100Ms": 0,
+      "tickRate": 5.00008147376681,
+      "wasmHeapMinBytes": 240582656,
+      "wasmHeapMaxBytes": 240582656
+    }
+  ],
+  "scope": "Phase 3 original 37-entity scene; full game performance requires phase 4",
+  "nativeParity": "Optimization objective, not the operator-authorized minimum",
+  "identity": {
+    "contract": {
+      "baseCommit": "40b8794eecb9618da69e10bacffa8814c561aa51",
+      "map": "maps/scenarios/pathfinding_terrain_demo",
+      "seed": 12345,
+      "assetsContentSHA256": "4aa1bc5a596a10ef89eee40576f9f23a3d81a1c705e7d055ede54d874e172168",
+      "commandsSHA256": "6f10f0aca0642d7267f0ad2da1aa279e95d72c2f8e13072d3cb2ca892b198941",
+      "camera": {
+        "x": 155,
+        "z": 245,
+        "elevation": 120,
+        "fovRadians": 0.785398
+      },
+      "internalResolution": [
+        1920,
+        1080
+      ],
+      "frameCap": 60,
+      "swapIntervalRequested": 0,
+      "simulationTickMs": 200,
+      "interactiveCommandsDuringMeasurement": false,
+      "renderOptions": {
+        "maxActorQuality": 100,
+        "shadows": false,
+        "waterEffects": false,
+        "waterFancy": false,
+        "waterReflection": false,
+        "waterRefraction": false,
+        "postProcessing": false,
+        "gpuSkinning": false,
+        "silhouettes": false,
+        "smoothLOS": false
+      },
+      "scope": "Phase3 original-engine 37-entity scene; not full-game FPS acceptance"
+    },
+    "applicationSourceSHA256": "2f52d396d3eb5200d5e2500ace9bda4bd8749f50cd68c8917d8f50b3aeeacd37",
+    "artifacts": {
+      "index.html": "454d2ca12b57a96a232e396de0243c72d655a9799433d51b64fb66f851f8c66b",
+      "pyrogenesis-scene.data": "c4b0699f8c55d389f9c94a87e0113f4fec7c41c6415b3b9df1291ee2bc6f7ad9",
+      "pyrogenesis-scene.mjs": "0851307fa15f4aa045ea544614d852877a6c2947c5504c03efa9064753fae0cc",
+      "pyrogenesis-scene.wasm": "34854ace041b0556087bed6e7d50fe1b7cd89ca491d4fc689e92dfc24f5e4609",
+      "pyrogenesis-scene.wasm.debug.wasm": "41be0ce46879b77e333a552d6295ca17271795f42446f0a6c1ce767c892c8499",
+      "scene.html": "454d2ca12b57a96a232e396de0243c72d655a9799433d51b64fb66f851f8c66b",
+      "scene.mjs": "998553addfa187467ecce43d495d4d06ada34222b3dc1f31fbcc1161b14c7cb1"
+    },
+    "hardware": {
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 Edg/155.0.0.0",
+      "concurrency": 16,
+      "deviceMemoryGiB": 32,
+      "dpr": 1.25,
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 3060 Laptop GPU (0x00002520) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "gpuTimerAvailable": true,
+      "offscreenAvailable": true,
+      "rendererSource": "actual scene context",
+      "requestedPowerPreference": "high-performance"
+    },
+    "browserVersion": "155.0.4283.45",
+    "playerColors": [
+      [
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        0.082353,
+        0.215686,
+        0.584314,
+        1
+      ]
+    ]
+  }
+}

@@ -1,0 +1,128 @@
+{
+  "browser": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/141.0.7390.37 Safari/537.36",
+  "crossOriginIsolated": true,
+  "cycles": [
+    {
+      "type": "fixture-result",
+      "code": 0,
+      "state": "{\"scenario\":\"component-ticks-01\",\"seed\":12345,\"ticks\":100,\"rng\":1658515168,\"promise\":9,\"entities\":[{\"id\":2,\"x\":11100},{\"id\":3,\"x\":203500}]}",
+      "logs": [
+        "warning: unsupported syscall: __syscall_madvise\n",
+        "{\"scenario\":\"component-ticks-01\",\"seed\":12345,\"ticks\":100,\"rng\":1658515168,\"promise\":9,\"entities\":[{\"id\":2,\"x\":11100},{\"id\":3,\"x\":203500}]}",
+        "0ad-browser-wasm-memory-bytes=34930688"
+      ],
+      "wasmMemoryBytes": 34930688,
+      "durationMs": 489.179999999702
+    },
+    {
+      "type": "fixture-result",
+      "code": 0,
+      "state": "{\"scenario\":\"component-ticks-01\",\"seed\":12345,\"ticks\":100,\"rng\":1658515168,\"promise\":9,\"entities\":[{\"id\":2,\"x\":11100},{\"id\":3,\"x\":203500}]}",
+      "logs": [
+        "warning: unsupported syscall: __syscall_madvise\n",
+        "{\"scenario\":\"component-ticks-01\",\"seed\":12345,\"ticks\":100,\"rng\":1658515168,\"promise\":9,\"entities\":[{\"id\":2,\"x\":11100},{\"id\":3,\"x\":203500}]}",
+        "0ad-browser-wasm-memory-bytes=34930688"
+      ],
+      "wasmMemoryBytes": 34930688,
+      "durationMs": 394.1999999997206
+    },
+    {
+      "type": "fixture-result",
+      "code": 0,
+      "state": "{\"scenario\":\"component-ticks-01\",\"seed\":12345,\"ticks\":100,\"rng\":1658515168,\"promise\":9,\"entities\":[{\"id\":2,\"x\":11100},{\"id\":3,\"x\":203500}]}",
+      "logs": [
+        "warning: unsupported syscall: __syscall_madvise\n",
+        "{\"scenario\":\"component-ticks-01\",\"seed\":12345,\"ticks\":100,\"rng\":1658515168,\"promise\":9,\"entities\":[{\"id\":2,\"x\":11100},{\"id\":3,\"x\":203500}]}",
+        "0ad-browser-wasm-memory-bytes=34930688"
+      ],
+      "wasmMemoryBytes": 34930688,
+      "durationMs": 305.3000000002794
+    },
+    {
+      "type": "fixture-result",
+      "code": 0,
+      "state": "{\"scenario\":\"component-ticks-01\",\"seed\":12345,\"ticks\":100,\"rng\":1658515168,\"promise\":9,\"entities\":[{\"id\":2,\"x\":11100},{\"id\":3,\"x\":203500}]}",
+      "logs": [
+        "warning: unsupported syscall: __syscall_madvise\n",
+        "{\"scenario\":\"component-ticks-01\",\"seed\":12345,\"ticks\":100,\"rng\":1658515168,\"promise\":9,\"entities\":[{\"id\":2,\"x\":11100},{\"id\":3,\"x\":203500}]}",
+        "0ad-browser-wasm-memory-bytes=34930688"
+      ],
+      "wasmMemoryBytes": 34930688,
+      "durationMs": 287.9850000003353
+    },
+    {
+      "type": "fixture-result",
+      "code": 0,
+      "state": "{\"scenario\":\"component-ticks-01\",\"seed\":12345,\"ticks\":100,\"rng\":1658515168,\"promise\":9,\"entities\":[{\"id\":2,\"x\":11100},{\"id\":3,\"x\":203500}]}",
+      "logs": [
+        "warning: unsupported syscall: __syscall_madvise\n",
+        "{\"scenario\":\"component-ticks-01\",\"seed\":12345,\"ticks\":100,\"rng\":1658515168,\"promise\":9,\"entities\":[{\"id\":2,\"x\":11100},{\"id\":3,\"x\":203500}]}",
+        "0ad-browser-wasm-memory-bytes=34930688"
+      ],
+      "wasmMemoryBytes": 34930688,
+      "durationMs": 213.88499999977648
+    },
+    {
+      "type": "fixture-result",
+      "code": 0,
+      "state": "{\"scenario\":\"component-ticks-01\",\"seed\":12345,\"ticks\":100,\"rng\":1658515168,\"promise\":9,\"entities\":[{\"id\":2,\"x\":11100},{\"id\":3,\"x\":203500}]}",
+      "logs": [
+        "warning: unsupported syscall: __syscall_madvise\n",
+        "{\"scenario\":\"component-ticks-01\",\"seed\":12345,\"ticks\":100,\"rng\":1658515168,\"promise\":9,\"entities\":[{\"id\":2,\"x\":11100},{\"id\":3,\"x\":203500}]}",
+        "0ad-browser-wasm-memory-bytes=34930688"
+      ],
+      "wasmMemoryBytes": 34930688,
+      "durationMs": 379.8950000000186
+    },
+    {
+      "type": "fixture-result",
+      "code": 0,
+      "state": "{\"scenario\":\"component-ticks-01\",\"seed\":12345,\"ticks\":100,\"rng\":1658515168,\"promise\":9,\"entities\":[{\"id\":2,\"x\":11100},{\"id\":3,\"x\":203500}]}",
+      "logs": [
+        "warning: unsupported syscall: __syscall_madvise\n",
+        "{\"scenario\":\"component-ticks-01\",\"seed\":12345,\"ticks\":100,\"rng\":1658515168,\"promise\":9,\"entities\":[{\"id\":2,\"x\":11100},{\"id\":3,\"x\":203500}]}",
+        "0ad-browser-wasm-memory-bytes=34930688"
+      ],
+      "wasmMemoryBytes": 34930688,
+      "durationMs": 271.45999999996275
+    },
+    {
+      "type": "fixture-result",
+      "code": 0,
+      "state": "{\"scenario\":\"component-ticks-01\",\"seed\":12345,\"ticks\":100,\"rng\":1658515168,\"promise\":9,\"entities\":[{\"id\":2,\"x\":11100},{\"id\":3,\"x\":203500}]}",
+      "logs": [
+        "warning: unsupported syscall: __syscall_madvise\n",
+        "{\"scenario\":\"component-ticks-01\",\"seed\":12345,\"ticks\":100,\"rng\":1658515168,\"promise\":9,\"entities\":[{\"id\":2,\"x\":11100},{\"id\":3,\"x\":203500}]}",
+        "0ad-browser-wasm-memory-bytes=34930688"
+      ],
+      "wasmMemoryBytes": 34930688,
+      "durationMs": 297.0600000000559
+    },
+    {
+      "type": "fixture-result",
+      "code": 0,
+      "state": "{\"scenario\":\"component-ticks-01\",\"seed\":12345,\"ticks\":100,\"rng\":1658515168,\"promise\":9,\"entities\":[{\"id\":2,\"x\":11100},{\"id\":3,\"x\":203500}]}",
+      "logs": [
+        "warning: unsupported syscall: __syscall_madvise\n",
+        "{\"scenario\":\"component-ticks-01\",\"seed\":12345,\"ticks\":100,\"rng\":1658515168,\"promise\":9,\"entities\":[{\"id\":2,\"x\":11100},{\"id\":3,\"x\":203500}]}",
+        "0ad-browser-wasm-memory-bytes=34930688"
+      ],
+      "wasmMemoryBytes": 34930688,
+      "durationMs": 366.87000000011176
+    },
+    {
+      "type": "fixture-result",
+      "code": 0,
+      "state": "{\"scenario\":\"component-ticks-01\",\"seed\":12345,\"ticks\":100,\"rng\":1658515168,\"promise\":9,\"entities\":[{\"id\":2,\"x\":11100},{\"id\":3,\"x\":203500}]}",
+      "logs": [
+        "warning: unsupported syscall: __syscall_madvise\n",
+        "{\"scenario\":\"component-ticks-01\",\"seed\":12345,\"ticks\":100,\"rng\":1658515168,\"promise\":9,\"entities\":[{\"id\":2,\"x\":11100},{\"id\":3,\"x\":203500}]}",
+        "0ad-browser-wasm-memory-bytes=34930688"
+      ],
+      "wasmMemoryBytes": 34930688,
+      "durationMs": 278.054999999702
+    }
+  ],
+  "started": "2026-10-11T22:08:42.275Z",
+  "status": "TEN_CYCLES_PARITY_PASSED"
+}

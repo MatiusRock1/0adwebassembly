@@ -1,0 +1,19 @@
+--- a/lib/external_libraries/opengles2_wrapper.h
++++ b/lib/external_libraries/opengles2_wrapper.h
+@@ -61,11 +61,11 @@
+ #define glUniformMatrix4fvARB glUniformMatrix4fv
+ #define glUseProgramObjectARB glUseProgram
+ #define glVertexAttribPointerARB glVertexAttribPointer
+-#define glBindBuffer glBindBuffer
+-#define glBufferData glBufferData
+-#define glBufferSubData glBufferSubData
+-#define glDeleteBuffers glDeleteBuffers
+-#define glGenBuffers glGenBuffers
++
++
++
++
++
+ #define glBindFramebufferEXT glBindFramebuffer
+ #define glCheckFramebufferStatusEXT glCheckFramebufferStatus
+ #define glDeleteFramebuffersEXT glDeleteFramebuffers

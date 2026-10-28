@@ -1,0 +1,71 @@
+{
+  "passed": true,
+  "phase45Accepted": false,
+  "scope": "CPU validation only; no GPU, physical presentation or phase acceptance",
+  "runs": [
+    {
+      "command": [
+        "node",
+        "--test",
+        "wasm/scripts/test-renderer-session.mjs",
+        "wasm/scripts/test-webgpu-textures.mjs",
+        "wasm/scripts/test-webgpu-lifetime.mjs",
+        "wasm/scripts/test-webgpu-formats.mjs",
+        "wasm/scripts/test-webgpu-command-data.mjs",
+        "wasm/scripts/test-webgpu-state.mjs"
+      ],
+      "exitCode": 0,
+      "stdout": "\u2714 WebGPU owns its canvas, records prototype limits and drains before destruction (5.0912ms)\n\u2714 missing API, isolation or required feature never fall back to GL (1.8037ms)\n\u2714 canvas configuration failure destroys the requested device (0.9662ms)\n\u2714 validation scopes unwind on thrown work and surface validation errors (0.871ms)\n\u2714 device loss is reported and prevents further work (0.5437ms)\n\u2714 rejected queue completion still releases the device and canvas (0.5157ms)\n\u2714 WebGL selection creates only GL and reports the effective renderer (0.4738ms)\n\u2714 optional capabilities are requested only when available and absence is recorded (0.5799ms)\n\u2714 binary uniforms preserve float32 values, draw order and std140 matrix stride (5.0929ms)\n\u2714 binary vertex and index ranges retain exact bytes and original slot/offset (0.5444ms)\n\u2714 invalid binary ranges fail before any out-of-bounds upload (0.8128ms)\n\u2714 arena uploads precede submission, retain each draw and safely reuse the next frame (1.5626ms)\n\u2714 binary command stream preserves interleaved state, uniforms and signed base vertex (0.8793ms)\n\u2714 optional sampled/renderable formats follow enabled device features (2.0677ms)\n\u2714 queue failure during engine disposal still frees resources and closes the session (4.4616ms)\n\u2714 retirement waits for submitted work and drops shader bindings and pipeline cache entries (1.2497ms)\n\u2714 retired textures drop only bind groups that retain their views after queue completion (0.4923ms)\n\u2714 draw state cache omits redundant setters but applies changed buffers and new passes (5.1409ms)\n\u2714 bind group reuse is scoped to a pass and includes every dynamic offset (0.6684ms)\n\u2714 1x1 BC1 original texture retains its logical texel and dimensions (4.5195ms)\n\u2714 BC1 interpolation and cropped block rows preserve palette order (0.4237ms)\n\u2714 BC1 RGB and RGBA differ only in the transparent palette entry (0.3697ms)\n\u2714 BC2 explicit alpha and BC3 endpoint/interpolated alpha are retained (0.4062ms)\n\u2714 truncated compressed resource data fails explicitly (0.6885ms)\n\u2139 tests 24\n\u2139 suites 0\n\u2139 pass 24\n\u2139 fail 0\n\u2139 cancelled 0\n\u2139 skipped 0\n\u2139 todo 0\n\u2139 duration_ms 212.4209\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\jorlu\\OneDrive\\Documentos\\emprendimiento\\0 AD\\0adwebassembly\\wasm\\.venv-phase3\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "wasm/scripts",
+        "-p",
+        "test_phase45_*.py",
+        "-v"
+      ],
+      "exitCode": 0,
+      "stdout": "PLAN_ONLY_NO_GPU C:\\Users\\jorlu\\OneDrive\\Documentos\\emprendimiento\\0 AD\\0adwebassembly\\wasm\\build\\phase4-5\\test-tmp\\tmpx25hglgz\\plan\r\nPLAN_ONLY_NO_GPU C:\\Users\\jorlu\\OneDrive\\Documentos\\emprendimiento\\0 AD\\0adwebassembly\\wasm\\build\\phase4-5\\test-tmp\\tmpza2ky4ka\\plan\r\n",
+      "stderr": "test_duplicate_repetition_does_not_count_three_times (test_phase45_benchmark_contract.AcceptanceContract.test_duplicate_repetition_does_not_count_three_times) ... ok\r\ntest_missing_or_partial_run_cannot_pass (test_phase45_benchmark_contract.AcceptanceContract.test_missing_or_partial_run_cannot_pass) ... ok\r\ntest_missing_overlapping_or_invalid_observation_times_fail (test_phase45_benchmark_contract.AcceptanceContract.test_missing_overlapping_or_invalid_observation_times_fail) ... ok\r\ntest_observation_uncertainty_cannot_hide_slow_or_fast_simulation (test_phase45_benchmark_contract.AcceptanceContract.test_observation_uncertainty_cannot_hide_slow_or_fast_simulation) ... ok\r\ntest_original_turn_backlog_must_be_observed_and_not_grow (test_phase45_benchmark_contract.AcceptanceContract.test_original_turn_backlog_must_be_observed_and_not_grow) ... ok\r\ntest_plan_is_serial_and_validates_arguments (test_phase45_benchmark_contract.AcceptanceContract.test_plan_is_serial_and_validates_arguments) ... ok\r\ntest_short_measured_duration_cannot_use_long_plan (test_phase45_benchmark_contract.AcceptanceContract.test_short_measured_duration_cannot_use_long_plan) ... ok\r\ntest_simulation_speed_uses_actual_state_reads_after_deadline (test_phase45_benchmark_contract.AcceptanceContract.test_simulation_speed_uses_actual_state_reads_after_deadline) ... ok\r\ntest_single_workload_diagnostic_never_accepts_both_workloads (test_phase45_benchmark_contract.AcceptanceContract.test_single_workload_diagnostic_never_accepts_both_workloads) ... ok\r\ntest_six_complete_runs_pass_performance_but_never_accept_phase (test_phase45_benchmark_contract.AcceptanceContract.test_six_complete_runs_pass_performance_but_never_accept_phase) ... ok\r\ntest_wrong_backend_adapter_errors_lost_events_or_slow_simulation_fail (test_phase45_benchmark_contract.AcceptanceContract.test_wrong_backend_adapter_errors_lost_events_or_slow_simulation_fail) ... ok\r\ntest_original_simulation_bytes_and_complete_archive_are_preserved (test_phase45_simulation_snapshot.SimulationSnapshotContract.test_original_simulation_bytes_and_complete_archive_are_preserved) ... ok\r\ntest_render_local_decay_is_separate_from_every_nonlocal_component (test_phase45_simulation_snapshot.SimulationSnapshotContract.test_render_local_decay_is_separate_from_every_nonlocal_component) ... ok\r\ntest_dry_modes_never_spawn_processes_or_connect_to_browser (test_phase45_standalone_safety.StandaloneSafety.test_dry_modes_never_spawn_processes_or_connect_to_browser) ... ok\r\ntest_occupied_port_is_rejected_before_a_browser_can_be_launched (test_phase45_standalone_safety.StandaloneSafety.test_occupied_port_is_rejected_before_a_browser_can_be_launched) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 15 tests in 0.080s\r\n\r\nOK\r\n"
+    },
+    {
+      "command": [
+        "C:\\Users\\jorlu\\OneDrive\\Documentos\\emprendimiento\\0 AD\\0adwebassembly\\wasm\\.venv-phase3\\Scripts\\python.exe",
+        "wasm/scripts/test-presentation.py"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "...........\r\n----------------------------------------------------------------------\r\nRan 11 tests in 0.030s\r\n\r\nOK\r\n"
+    }
+  ],
+  "sourceSHA256": {
+    "wasm\\scripts\\test-renderer-session.mjs": "b03dad833d5327d5cabb1fba2cc1f207820a2a084450532cacc3cf5ee92ad776",
+    "wasm\\scripts\\test-webgpu-textures.mjs": "8ee61323406d0cffe909cbb3c5610299fb70d021675eda5a31a0aa723aeb2ca4",
+    "wasm\\scripts\\test-webgpu-lifetime.mjs": "b04d663513b5eac0d4164049c79ef57e344aab233b127f564bb275eda94777c1",
+    "wasm\\scripts\\test-webgpu-formats.mjs": "480c88b3716e7554b89a2bf663f8cb6751f7bd2a3baa708448c2f8ae7b5a3202",
+    "wasm\\scripts\\test-webgpu-command-data.mjs": "6e0e27eeaf7f6ccab84df554f4520cb00f5f85dbf7ac44b29adc59fa0c9b8bbb",
+    "wasm\\scripts\\test-webgpu-state.mjs": "b48a5da8d18ae5cfde5e5714554d3ce35becded8758cee98ee9208338390b902",
+    "wasm\\scripts\\test_phase45_benchmark_contract.py": "d26a5b512b321da8a589c5eac5d6cb7d00c9db9e7d08bcb986694393fc9c3ccd",
+    "wasm\\scripts\\test_phase45_simulation_snapshot.py": "cbc2b8933c86c835c5829fe1167e4af0c12fa6b382d8492deb02cba74f2e2f1c",
+    "wasm\\scripts\\test_phase45_standalone_safety.py": "b0b7ad9d01cec2d5470ba90b953c9c093805c0ceb397888eab32a2a072d71d94",
+    "wasm\\scripts\\test-presentation.py": "3ee72a05bdc014583ee651b9528b3fcfe10e9adae7f1e667a22e2688a9a18a61",
+    "wasm\\browser\\webgpu-engine.mjs": "fc808918332b98430a4f1be58db4b41ac1560275d6ec4296265a08816fbcdb5e",
+    "source\\renderer\\backend\\webgpu\\Device.cpp": "5f9d443b5e045c9ac0eefca0cd998ac2128e46894d27f61c9193c82ab7a5664c",
+    "wasm\\scripts\\phase4-link.py": "2d315a3c49ff6398353d5c03f08beac0ceba4b9f1a1eed97911867dbf5bc15d5",
+    "wasm\\scripts\\phase4-5-scripting-build.py": "c6794f2220082468182adcb27acaf89d7c39b49b24257f4568053b1a3305e9a9",
+    "wasm\\scripts\\phase45_window_focus.py": "8085fe8fec923abfbde45cae0fafe4f1e283d7afeca963a7b5cb6a3b9356cc15",
+    "wasm\\scripts\\phase4_browser.py": "6f2b83493b129c3779b6e12a91e64104ff3f13b1747941b85af4c0d45a676ee4",
+    "wasm\\scripts\\benchmark-phase4.py": "1207b5bce8f708a636795d942956dc4434bf507678cddb729f001921f46c0dce",
+    "wasm\\scripts\\benchmark-native-phase4.py": "8b0f6c238ecc7df1b5ada672dc908aa86fd5255c3e77bcabba51e528e2a9a660",
+    "wasm\\scripts\\phase45_benchmark_contract.py": "5a0eb047b8f0049c91ba0d5312b737bb60f08c10b29cb76f85f723bbba53a0d2",
+    "wasm\\scripts\\phase4-5-portable-scripting-build.py": "0ff8947f3b1b19878eedb6c66d17af79b19778658fa5aa8746fe65e66043e9b6",
+    "wasm\\browser\\application-audio-state.js": "65d399e1914c37fd67f373bcda1d3b4cea8deea304fabcb1944333042fe8e6eb",
+    "wasm\\harness\\application-frame-time.h": "67dcf18508f305a4bf177a77ca08d970b80165274efb97a28b71c9bcde9698d7"
+  }
+}

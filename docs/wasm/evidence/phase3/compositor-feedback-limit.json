@@ -1,0 +1,6 @@
+{
+  "feedbackEvents": 1060,
+  "frameIdExposed": false,
+  "physicalFreshFrameGate": "PENDING",
+  "reason": "Trace feedback events lack linkage to native scene frame ids"
+}

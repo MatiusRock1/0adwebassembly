@@ -1,0 +1,14 @@
+dist/
+build/
+build-*/
+dist-*/
+*.data
+*.wasm.map
+*.symbols
+.venv-phase3/
+.venv*/
+*.cpuprofile
+*.heapprofile
+*.heapsnapshot
+*.etl
+*.dmp

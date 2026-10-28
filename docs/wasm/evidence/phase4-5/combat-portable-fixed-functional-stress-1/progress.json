@@ -1,0 +1,14 @@
+[
+  {
+    "elapsedSeconds": 30.62643479999997,
+    "liveUnitsAfterReplenishment": 306
+  },
+  {
+    "elapsedSeconds": 62.03913270000021,
+    "liveUnitsAfterReplenishment": 274
+  },
+  {
+    "elapsedSeconds": 93.17763250000007,
+    "liveUnitsAfterReplenishment": 261
+  }
+]

@@ -1,0 +1,13 @@
+{
+  "phase45Accepted": false,
+  "performanceMeasured": false,
+  "allPlannedChecksPassed": false,
+  "checks": [
+    {
+      "name": "native-systems",
+      "passed": false,
+      "exitCode": 1,
+      "report": "C:\\Users\\jorlu\\OneDrive\\Documentos\\emprendimiento\\0 AD\\0adwebassembly\\docs\\wasm\\evidence\\phase4-5\\functional-20261016T002908Z\\native-systems\\report.json"
+    }
+  ]
+}

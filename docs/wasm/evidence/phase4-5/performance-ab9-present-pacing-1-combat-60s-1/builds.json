@@ -1,0 +1,27 @@
+{
+  "webgpu": {
+    "pyrogenesis-application.mjs": "cfd24e80fb387d7fa811442aba18a1560ab56c1e06f57e8b0c3541f12c3aef9d",
+    "pyrogenesis-application.wasm": "201c66e38830d3a35477b16a9de177592cf27f2c64458821a32d06b6b1db3c8d",
+    "application.html": "9d76e77fae999d877dfb3cd0f977f8e262a8fceab5ce7bc7d28dbb31d8bb6653",
+    "application.mjs": "0cdc65e98d2b4668db00b8ec7cbbb45e7c901d24fd4b69d19e57f2acff7f0e2d",
+    "application-data.json": "218ac5bee7c01beb2e900170b9d70a6804333fdcb0bfa6f04631ffcc38e52d62",
+    "webgpu-shaders.json": "8d9280a27514b940ed61a9d0710ad92c39c8b425ff013b2d29c8b4fb33f08085",
+    "renderer-session.mjs": "970bb6a44961f620da6a62bedb93bc18c62169373eb86cbbf9b9a7b56ecf0076",
+    "webgpu-engine.mjs": "16d8678be8fcd0b80a1f4b4d8baec80903f09a574a75ce48418691ae52d5c076",
+    "webgpu-border.mjs": "e9a7d9a88ac447b908249dc863e8adf9907b07830615019699588cbb2d695e8b",
+    "webgpu-upload.mjs": "0ecfdb50d3f48d9e6edbf3dc53caf7a51da545db34ba732426ea6433ee387970",
+    "webgpu-dispatch.mjs": "49cbe7a352ccfae51bc7762d531e3c5930fa62737d82ba79673e03a7d2bb6287",
+    "webgpu-upload-probe.mjs": "a205ddc484108ee989dbd062203512d8e5ea08f2a65821ff01c6db6c36d44d5b",
+    "application-pointer.mjs": "0e781c584dff24c3005f875b070f715046dabe3ea1e388edfecd3f998b36bb47",
+    "application-failure.mjs": "6f5b5d70105db9366e978fd0ba7a51578db9b22298c1272f24795f23b591ccc1",
+    "shared-request.mjs": "bca23eebff9eb199449b1cd3959804162cda310cc64ae689a7d601599eadfb8d",
+    "webgpu-worker-bridge.mjs": "5a50dff2872e302afe38cb8041a57bb59398a102b4841a197ad95f1d0d41092c",
+    "webgpu-render-worker.mjs": "c0c55f6fe742b9d265c183d1f10fc869c747d44b309c4572a3651d3c5d0e651a",
+    "webgpu-worker-present.mjs": "94b8ba8fae5c547820830282e96b19521835a7377234f63344e7ba183a18fe29",
+    "webgpu-pipeline-pending.mjs": "7b02f374a8f2527739d4af53495f7337e2a40deb53740795c74f5016a54c284d",
+    "application-archives.mjs": "c0f8ef033999894af7be1904d347c35f38cbba21ce2158521eb5c634956ce7da",
+    "archive-worker.mjs": "eeb540c8b915421bc2a09bce894ce789f5c0649928329c12434d7c0cfea81965",
+    "archive-blocks.mjs": "8aadd5a67450b402a94c47ea0a7405b71ab5e376d816f71ded958a2a4fae5c41",
+    "archive-blocks.json": "71bf0f1a917f53a7234698f7bf74eb4ec83df2a0a1401c98c93f6db20e699f93"
+  }
+}

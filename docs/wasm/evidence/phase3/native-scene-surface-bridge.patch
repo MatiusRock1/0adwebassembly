@@ -1,0 +1,74 @@
+--- a/source/renderer/Renderer.h
++++ b/source/renderer/Renderer.h
+@@ -19,6 +19,7 @@
+ #define INCLUDED_RENDERER
+ 
+ #include "ps/Singleton.h"
++#include "ps/Input.h"
+ #include "renderer/RenderingOptions.h"
+ 
+ #include <cstring>
+@@ -79,6 +80,7 @@
+ 
+ public:
+ 	CRenderer(Renderer::Backend::IDevice* device);
++ CRenderer(Renderer::Backend::IDevice* device, Input::Manager& inputManager, uint32_t width, uint32_t height);
+ 	~CRenderer();
+ 
+ 	// open up the renderer: performs any necessary initialisation
+--- a/source/renderer/Renderer.cpp
++++ b/source/renderer/Renderer.cpp
+@@ -397,16 +397,15 @@
+ 		}
+ 	};
+ 
+-	Input::Handler<InputHandler> m_InputHandler{g_VideoMode.m_InputManager, Input::Slot::SCREENSHOT,
+-		{m_ScreenShotType}};
+-
+-	Internals(Renderer::Backend::IDevice* device) :
++	Input::Handler<InputHandler> m_InputHandler;
++
++	Internals(Renderer::Backend::IDevice* device, Input::Manager& inputManager) :
+ 		device(device),
+ 		deviceCommandContext(device->CreateCommandContext()),
+ 		IsOpen(false), ShadersDirty(true), profileTable(g_Renderer.m_Stats, linearAllocator),
+ 		backendProfileTable(*device),
+ 		shaderManager(device), textureManager(g_VFS, false, device), vertexBufferManager(device),
+-		postprocManager(device), sceneRenderer(device), fontManager(device)
++		postprocManager(device), sceneRenderer(device), fontManager(device), m_InputHandler(inputManager, Input::Slot::SCREENSHOT, {m_ScreenShotType})
+ 	{
+ 	}
+ };
+@@ -428,14 +427,18 @@
+ 	return seed;
+ }
+ 
+-CRenderer::CRenderer(Renderer::Backend::IDevice* device)
++CRenderer::CRenderer(Renderer::Backend::IDevice* device) : CRenderer(device, g_VideoMode.m_InputManager, g_VideoMode.GetWindowWidth(), g_VideoMode.GetWindowHeight()) {}
++
++CRenderer::CRenderer(Renderer::Backend::IDevice* device, Input::Manager& inputManager, uint32_t width, uint32_t height)
+ {
+ 	PROFILE2("InitRenderer");
+ 
+-	m = std::make_unique<Internals>(device);
+-
+-	g_ProfileViewer.AddRootTable(&m->profileTable);
+-	g_ProfileViewer.AddRootTable(&m->backendProfileTable);
++	m = std::make_unique<Internals>(device, inputManager);
++
++	if (CProfileViewer::IsInitialised()) {
++ g_ProfileViewer.AddRootTable(&m->profileTable);
++ g_ProfileViewer.AddRootTable(&m->backendProfileTable);
++ }
+ 
+ 	m_Width = 0;
+ 	m_Height = 0;
+@@ -445,7 +448,7 @@
+ 	// Create terrain related stuff.
+ 	new CTerrainTextureManager(device);
+ 
+-	Open(g_VideoMode.GetWindowWidth(), g_VideoMode.GetWindowHeight());
++	Open(width, height);
+ 
+ 	// Setup lighting environment. Since the Renderer accesses the
+ 	// lighting environment through a pointer, this has to be done before

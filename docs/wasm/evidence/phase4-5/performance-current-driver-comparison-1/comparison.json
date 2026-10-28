@@ -1,0 +1,33 @@
+{
+  "diagnosticOnly": true,
+  "phase45Accepted": false,
+  "complete": false,
+  "runs": [
+    {
+      "label": "reference",
+      "package": "C:\\Users\\jorlu\\OneDrive\\Documentos\\emprendimiento\\0 AD\\0adwebassembly\\wasm\\dist\\application-phase4-5-browser-perf-raf-1",
+      "command": [
+        "C:\\Users\\jorlu\\OneDrive\\Documentos\\emprendimiento\\0 AD\\0adwebassembly\\wasm\\.venv-phase3\\Scripts\\python.exe",
+        "C:\\Users\\jorlu\\OneDrive\\Documentos\\emprendimiento\\0 AD\\0adwebassembly\\wasm\\scripts\\benchmark-phase4-5-standalone.py",
+        "--webgpu-directory",
+        "C:\\Users\\jorlu\\OneDrive\\Documentos\\emprendimiento\\0 AD\\0adwebassembly\\wasm\\dist\\application-phase4-5-browser-perf-raf-1",
+        "--backends",
+        "webgpu",
+        "--workloads",
+        "skirmish",
+        "--repetitions",
+        "1",
+        "--warmup-seconds",
+        "120",
+        "--duration-seconds",
+        "120",
+        "--upload-probe",
+        "--output",
+        "docs\\wasm\\evidence\\phase4-5\\performance-current-driver-comparison-1\\reference"
+      ],
+      "runnerExitCode": 1
+    }
+  ],
+  "scope": "Two sequential fullscreen WASM diagnostics, 120+120 s each; not statistical significance or full phase acceptance",
+  "failure": "Invalid runtime capture for reference: Page.wait_for_timeout: Target page, context or browser has been closed"
+}

@@ -1,0 +1,6 @@
+35a36
+> #include "simulation2/helpers/AIDeferredStart.h"
+479a481,483
+> 
+> 	// This frame's Present is already dispatched to the render worker.
+> 	AIDeferredStart::Run();

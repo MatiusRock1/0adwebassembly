@@ -1,0 +1,793 @@
+{
+  "repository": "snuri00/psp-web-recomp",
+  "defaultBranch": "main",
+  "commit": "37826ab881d9a593efb842fe47adfae2e9118b5d",
+  "commitDate": "2026-10-15T09:19:44Z",
+  "license": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "tree": {
+    "sha": "37826ab881d9a593efb842fe47adfae2e9118b5d",
+    "url": "https://api.github.com/repos/snuri00/psp-web-recomp/git/trees/37826ab881d9a593efb842fe47adfae2e9118b5d",
+    "tree": [
+      {
+        "path": ".gitignore",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "3af3eda5511c1fab3aafdaad255fdf56f6683b9a",
+        "size": 351,
+        "url": "https://api.github.com/repos/snuri00/psp-web-recomp/git/blobs/3af3eda5511c1fab3aafdaad255fdf56f6683b9a"
+      },
+      {
+        "path": "LICENSE",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e62184c7a74b59b4183b4134e7c4985415ed3bd3",
+        "size": 1067,
+        "url": "https://api.github.com/repos/snuri00/psp-web-recomp/git/blobs/e62184c7a74b59b4183b4134e7c4985415ed3bd3"
+      },
+      {
+        "path": "README.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "ba26035a3411b3650a55d1c5fab5eecd5e30d554",
+        "size": 7747,
+        "url": "https://api.github.com/repos/snuri00/psp-web-recomp/git/blobs/ba26035a3411b3650a55d1c5fab5eecd5e30d554"
+      },
+      {
+        "path": "docs",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "8fd6a9e7a786b900a932dd20319e0740743c59b9",
+        "url": "https://api.github.com/repos/snuri00/psp-web-recomp/git/trees/8fd6a9e7a786b900a932dd20319e0740743c59b9"
+      },
+      {
+        "path": "docs/internals.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "9007ab9785eb66941eddb6d8f00d1812e689401c",
+        "size": 7790,
+        "url": "https://api.github.com/repos/snuri00/psp-web-recomp/git/blobs/9007ab9785eb66941eddb6d8f00d1812e689401c"
+      },
+      {
+        "path": "docs/media",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "624b4d8a109307cd57c96bbb0b83f2584854d2f2",
+        "url": "https://api.github.com/repos/snuri00/psp-web-recomp/git/trees/624b4d8a109307cd57c96bbb0b83f2584854d2f2"
+      },
+      {
+        "path": "docs/media/demo.mp4",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "a9b53e2a4ef51f2ea948b63515bb353ef0db8cfb",
+        "size": 9105473,
+        "url": "https://api.github.com/repos/snuri00/psp-web-recomp/git/blobs/a9b53e2a4ef51f2ea948b63515bb353ef0db8cfb"
+      },
+      {
+        "path": "docs/media/demo.webp",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "94631d9ac781b2a11ee0d8ba5fff35dd88e6ae84",
+        "size": 2186652,
+        "url": "https://api.github.com/repos/snuri00/psp-web-recomp/git/blobs/94631d9ac781b2a11ee0d8ba5fff35dd88e6ae84"
+      },
+      {
+        "path": "patches",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "7e155f8de579cec907cd885e4d022af84ff7aa11",
+        "url": "https://api.github.com/repos/snuri00/psp-web-recomp/git/trees/7e155f8de579cec907cd885e4d022af84ff7aa11"
+      },
+      {
+        "path": "patches/0001-codegen-fix-import-stub-loop-chain-non-entry-jumps-l.patch",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "285b2998c45b6681582a9fa547ac9bd964ed0499",
+        "size": 8518,
+        "url": "https://api.github.com/repos/snuri00/psp-web-recomp/git/blobs/285b2998c45b6681582a9fa547ac9bd964ed0499"
+      },
+      {
+        "path": "patches/0002-context-tolerate-VFPU-register-numbers-past-the-cont.patch",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e0ec1e7bdefd5ccfede0a4dc76fa51c7999d7344",
+        "size": 2180,
+        "url": "https://api.github.com/repos/snuri00/psp-web-recomp/git/blobs/e0ec1e7bdefd5ccfede0a4dc76fa51c7999d7344"
+      },
+      {
+        "path": "patches/0003-decoder-decode-ADDI.patch",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "58f21d31c205b4aa6d0773c31bf37d981e886913",
+        "size": 1177,
+        "url": "https://api.github.com/repos/snuri00/psp-web-recomp/git/blobs/58f21d31c205b4aa6d0773c31bf37d981e886913"
+      },
+      {
+        "path": "patches/0004-memory-map-the-16-KiB-scratchpad-at-0x00010000.patch",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "ee5b0802975e5d45ef5706463bb96a04575103ac",
+        "size": 5401,
+        "url": "https://api.github.com/repos/snuri00/psp-web-recomp/git/blobs/ee5b0802975e5d45ef5706463bb96a04575103ac"
+      },
+      {
+        "path": "patches/0005-analysis-seed-functions-at-prologues-that-follow-a-r.patch",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "4ecef30d5058c722e844b8e9f90d976251471b4a",
+        "size": 1981,
+        "url": "https://api.github.com/repos/snuri00/psp-web-recomp/git/blobs/4ecef30d5058c722e844b8e9f90d976251471b4a"
+      },
+      {
+        "path": "patches/0006-codegen-runtime-translate-and-unload-a-game-s-own-PR.patch",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "86011c8571e5884d9449253384d0379215e062de",
+        "size": 13691,
+        "url": "https://api.github.com/repos/snuri00/psp-web-recomp/git/blobs/86011c8571e5884d9449253384d0379215e062de"
+      },
+      {
+        "path": "patches/0007-vfpu-random-numbers-integer-and-colour-packing.patch",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "41cadbc616310cdb6e8590e407d8502c0aebb692",
+        "size": 8020,
+        "url": "https://api.github.com/repos/snuri00/psp-web-recomp/git/blobs/41cadbc616310cdb6e8590e407d8502c0aebb692"
+      },
+      {
+        "path": "patches/0008-analysis-seed-code-pointers-from-HI16-LO16-relocatio.patch",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "93c8ce78d4c783c219e182a9a77aac0567a2ff83",
+        "size": 2042,
+        "url": "https://api.github.com/repos/snuri00/psp-web-recomp/git/blobs/93c8ce78d4c783c219e182a9a77aac0567a2ff83"
+      },
+      {
+        "path": "patches/0009-codegen-bound-backward-local-branches.patch",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d40b10d6e40d6ab41902ff504e1cd8a172528687",
+        "size": 3904,
+        "url": "https://api.github.com/repos/snuri00/psp-web-recomp/git/blobs/d40b10d6e40d6ab41902ff504e1cd8a172528687"
+      },
+      {
+        "path": "patches/0010-runtime-interpret-untranslated-code-and-cache-code-w.patch",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "ea8f5d4b6f749df67ec13e28cc9c571613713efa",
+        "size": 41181,
+        "url": "https://api.github.com/repos/snuri00/psp-web-recomp/git/blobs/ea8f5d4b6f749df67ec13e28cc9c571613713efa"
+      },
+      {
+        "path": "profile",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "55c4461d4a07490c6630cf4bf06ef682d7e8acdc",
+        "url": "https://api.github.com/repos/snuri00/psp-web-recomp/git/trees/55c4461d4a07490c6630cf4bf06ef682d7e8acdc"
+      },
+      {
+        "path": "profile/CMakeLists.txt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "95199e78199f4696065d283001d60179d659d3f8",
+        "size": 4405,
+        "url": "https://api.github.com/repos/snuri00/psp-web-recomp/git/blobs/95199e78199f4696065d283001d60179d659d3f8"
+      },
+      {
+        "path": "profile/host",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "4bdec64f67968275e1d27a60b343807f4d74dcec",
+        "url": "https://api.github.com/repos/snuri00/psp-web-recomp/git/trees/4bdec64f67968275e1d27a60b343807f4d74dcec"
+      },
+      {
+        "path": "profile/host/atrac.cpp",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "4b86ba5e84440e20c65824b29284cda305b4a8db",
+        "size": 21488,
+        "url": "https://api.github.com/repos/snuri00/psp-web-recomp/git/blobs/4b86ba5e84440e20c65824b29284cda305b4a8db"
+      },
+      {
+        "path": "profile/host/devices.cpp",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "65b5c8e79a552d7d8f7eed846eeb2ba5499b98ec",
+        "size": 27721,
+        "url": "https://api.github.com/repos/snuri00/psp-web-recomp/git/blobs/65b5c8e79a552d7d8f7eed846eeb2ba5499b98ec"
+      },
+      {
+        "path": "profile/host/font.cpp",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "60d7cb868e645c3f541070c602ed5a94007aa384",
+        "size": 20171,
+        "url": "https://api.github.com/repos/snuri00/psp-web-recomp/git/blobs/60d7cb868e645c3f541070c602ed5a94007aa384"
+      },
+      {
+        "path": "profile/host/ge.cpp",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "133bb234fc193bf1986bd45a83334b86791d3dad",
+        "size": 82076,
+        "url": "https://api.github.com/repos/snuri00/psp-web-recomp/git/blobs/133bb234fc193bf1986bd45a83334b86791d3dad"
+      },
+      {
+        "path": "profile/host/ge.hpp",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "15fb828b36c8b0dcc1e09f94c11e161d2bdd86fc",
+        "size": 10292,
+        "url": "https://api.github.com/repos/snuri00/psp-web-recomp/git/blobs/15fb828b36c8b0dcc1e09f94c11e161d2bdd86fc"
+      },
+      {
+        "path": "profile/host/ge_gl.cpp",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "70263dbeb7aa11617ba71ae85163f12674b8d572",
+        "size": 74991,
+        "url": "https://api.github.com/repos/snuri00/psp-web-recomp/git/blobs/70263dbeb7aa11617ba71ae85163f12674b8d572"
+      },
+      {
+        "path": "profile/host/ge_gl.hpp",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "39cb8690720ad1780ef823844762051ae4aff493",
+        "size": 15266,
+        "url": "https://api.github.com/repos/snuri00/psp-web-recomp/git/blobs/39cb8690720ad1780ef823844762051ae4aff493"
+      },
+      {
+        "path": "profile/host/ge_worker.cpp",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "82b1bf6c190c06390de360d7ca5f4ef1a1b26567",
+        "size": 6043,
+        "url": "https://api.github.com/repos/snuri00/psp-web-recomp/git/blobs/82b1bf6c190c06390de360d7ca5f4ef1a1b26567"
+      },
+      {
+        "path": "profile/host/ge_worker.hpp",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "546732905fada494f50434929be4c808561b88ee",
+        "size": 3317,
+        "url": "https://api.github.com/repos/snuri00/psp-web-recomp/git/blobs/546732905fada494f50434929be4c808561b88ee"
+      },
+      {
+        "path": "profile/host/generated_modules.hpp",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "902a293f12d3df7fde0100bea8cf0ea9a57a2ba3",
+        "size": 636,
+        "url": "https://api.github.com/repos/snuri00/psp-web-recomp/git/blobs/902a293f12d3df7fde0100bea8cf0ea9a57a2ba3"
+      },
+      {
+        "path": "profile/host/io.cpp",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "1789a5866ebbbc8468c2ae23ecc0e6e71b6f16f3",
+        "size": 28515,
+        "url": "https://api.github.com/repos/snuri00/psp-web-recomp/git/blobs/1789a5866ebbbc8468c2ae23ecc0e6e71b6f16f3"
+      },
+      {
+        "path": "profile/host/kernel.cpp",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "2c45b2d4b1308fa5e196fcb09bbbde5bab3d4f2f",
+        "size": 69405,
+        "url": "https://api.github.com/repos/snuri00/psp-web-recomp/git/blobs/2c45b2d4b1308fa5e196fcb09bbbde5bab3d4f2f"
+      },
+      {
+        "path": "profile/host/kernel.hpp",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "16bb2e6443b92f478c248a0116faec1a4d46db92",
+        "size": 23689,
+        "url": "https://api.github.com/repos/snuri00/psp-web-recomp/git/blobs/16bb2e6443b92f478c248a0116faec1a4d46db92"
+      },
+      {
+        "path": "profile/host/main.cpp",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "7a0e55650e39cafe44312d138abd6bf3302b2024",
+        "size": 25639,
+        "url": "https://api.github.com/repos/snuri00/psp-web-recomp/git/blobs/7a0e55650e39cafe44312d138abd6bf3302b2024"
+      },
+      {
+        "path": "profile/host/modules.cpp",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "c54b73c79f5f22befbd598211b22b0b022ab51b5",
+        "size": 13804,
+        "url": "https://api.github.com/repos/snuri00/psp-web-recomp/git/blobs/c54b73c79f5f22befbd598211b22b0b022ab51b5"
+      },
+      {
+        "path": "profile/host/mpeg.cpp",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "73a6c30e304d17140191720d642bbfe60f326871",
+        "size": 10708,
+        "url": "https://api.github.com/repos/snuri00/psp-web-recomp/git/blobs/73a6c30e304d17140191720d642bbfe60f326871"
+      },
+      {
+        "path": "profile/host/no_dynamic_code.cpp",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "ec8b674591d48da474e631ab349120e50efbab44",
+        "size": 81,
+        "url": "https://api.github.com/repos/snuri00/psp-web-recomp/git/blobs/ec8b674591d48da474e631ab349120e50efbab44"
+      },
+      {
+        "path": "profile/host/no_modules.cpp",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "1e333edba0a538964b914d55d9fa7012b59ff523",
+        "size": 207,
+        "url": "https://api.github.com/repos/snuri00/psp-web-recomp/git/blobs/1e333edba0a538964b914d55d9fa7012b59ff523"
+      },
+      {
+        "path": "profile/host/pgd.cpp",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "315dcfbe7e1dbf949a08c75b321a1fb7c14eb966",
+        "size": 11272,
+        "url": "https://api.github.com/repos/snuri00/psp-web-recomp/git/blobs/315dcfbe7e1dbf949a08c75b321a1fb7c14eb966"
+      },
+      {
+        "path": "profile/host/pgd.hpp",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "202688d2d33af86de884978aae9157c3730d46e0",
+        "size": 1038,
+        "url": "https://api.github.com/repos/snuri00/psp-web-recomp/git/blobs/202688d2d33af86de884978aae9157c3730d46e0"
+      },
+      {
+        "path": "profile/host/sas.cpp",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f1c7554dac2be34dfccce01fd3da06699169b323",
+        "size": 16674,
+        "url": "https://api.github.com/repos/snuri00/psp-web-recomp/git/blobs/f1c7554dac2be34dfccce01fd3da06699169b323"
+      },
+      {
+        "path": "profile/host/savedata.cpp",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "ccd4bb4d55745e58eb4d1096b66367dc4e138728",
+        "size": 26843,
+        "url": "https://api.github.com/repos/snuri00/psp-web-recomp/git/blobs/ccd4bb4d55745e58eb4d1096b66367dc4e138728"
+      },
+      {
+        "path": "profile/host/webfs.cpp",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "a57160eaba96ed40af8c8df59923ca1771493e43",
+        "size": 9040,
+        "url": "https://api.github.com/repos/snuri00/psp-web-recomp/git/blobs/a57160eaba96ed40af8c8df59923ca1771493e43"
+      },
+      {
+        "path": "profile/host/webfs.hpp",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "3ec9a335623905f87f7a2f4acd267ff3a35c57fe",
+        "size": 2822,
+        "url": "https://api.github.com/repos/snuri00/psp-web-recomp/git/blobs/3ec9a335623905f87f7a2f4acd267ff3a35c57fe"
+      },
+      {
+        "path": "profile/third_party",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "6ebb3d2b19ddb2bda0be2858c641d6558a2fa928",
+        "url": "https://api.github.com/repos/snuri00/psp-web-recomp/git/trees/6ebb3d2b19ddb2bda0be2858c641d6558a2fa928"
+      },
+      {
+        "path": "profile/third_party/README.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "dc0fc125bc1b24bc143d28c5aedcd57d2feec51d",
+        "size": 446,
+        "url": "https://api.github.com/repos/snuri00/psp-web-recomp/git/blobs/dc0fc125bc1b24bc143d28c5aedcd57d2feec51d"
+      },
+      {
+        "path": "profile/third_party/at3_shim",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "7c36d0c9ce60e795888dcbc26f40659653f0184d",
+        "url": "https://api.github.com/repos/snuri00/psp-web-recomp/git/trees/7c36d0c9ce60e795888dcbc26f40659653f0184d"
+      },
+      {
+        "path": "profile/third_party/at3_shim/Common",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "288b2610b22fed57b3af32624abdf28e2c8e1482",
+        "url": "https://api.github.com/repos/snuri00/psp-web-recomp/git/trees/288b2610b22fed57b3af32624abdf28e2c8e1482"
+      },
+      {
+        "path": "profile/third_party/at3_shim/Common/Log.h",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e3dba0077fbe41c1514c05b3daad0d135e12596d",
+        "size": 323,
+        "url": "https://api.github.com/repos/snuri00/psp-web-recomp/git/blobs/e3dba0077fbe41c1514c05b3daad0d135e12596d"
+      },
+      {
+        "path": "profile/third_party/at3_shim/Common/MemoryUtil.h",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "3ef694ac90e0e131451bab75298a2b1d59471e22",
+        "size": 371,
+        "url": "https://api.github.com/repos/snuri00/psp-web-recomp/git/blobs/3ef694ac90e0e131451bab75298a2b1d59471e22"
+      },
+      {
+        "path": "profile/third_party/at3_shim/ppsspp_config.h",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "5f372ba3d5815a48b611ed01c21e85f446df5808",
+        "size": 115,
+        "url": "https://api.github.com/repos/snuri00/psp-web-recomp/git/blobs/5f372ba3d5815a48b611ed01c21e85f446df5808"
+      },
+      {
+        "path": "profile/third_party/at3_standalone",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "b9de9370320ad4c9798bd18e39fb012ecd6f31b7",
+        "url": "https://api.github.com/repos/snuri00/psp-web-recomp/git/trees/b9de9370320ad4c9798bd18e39fb012ecd6f31b7"
+      },
+      {
+        "path": "profile/third_party/at3_standalone/CMakeLists.txt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "ced9df1024a8a627099f24590c8774d3f4b6954f",
+        "size": 397,
+        "url": "https://api.github.com/repos/snuri00/psp-web-recomp/git/blobs/ced9df1024a8a627099f24590c8774d3f4b6954f"
+      },
+      {
+        "path": "profile/third_party/at3_standalone/COPYING.LGPLv2.1",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "40924c2a6da76a2b0c639f6fe7ef0b2d095a6adb",
+        "size": 26517,
+        "url": "https://api.github.com/repos/snuri00/psp-web-recomp/git/blobs/40924c2a6da76a2b0c639f6fe7ef0b2d095a6adb"
+      },
+      {
+        "path": "profile/third_party/at3_standalone/README.txt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "640a77f8eb1c64b33e9ed8311ed9bc8d1d541839",
+        "size": 88,
+        "url": "https://api.github.com/repos/snuri00/psp-web-recomp/git/blobs/640a77f8eb1c64b33e9ed8311ed9bc8d1d541839"
+      },
+      {
+        "path": "profile/third_party/at3_standalone/SOURCE_COMMIT",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "082027280af3214c3c48ca3ff424c98ab1d9e21d",
+        "size": 41,
+        "url": "https://api.github.com/repos/snuri00/psp-web-recomp/git/blobs/082027280af3214c3c48ca3ff424c98ab1d9e21d"
+      },
+      {
+        "path": "profile/third_party/at3_standalone/aac_defines.h",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d9aa087fc323ef9adf4728f930188ccdf5653563",
+        "size": 4860,
+        "url": "https://api.github.com/repos/snuri00/psp-web-recomp/git/blobs/d9aa087fc323ef9adf4728f930188ccdf5653563"
+      },
+      {
+        "path": "profile/third_party/at3_standalone/at3_decoders.h",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "019ebe306d17252dafc9d010313f9c0eaf47fee0",
+        "size": 1040,
+        "url": "https://api.github.com/repos/snuri00/psp-web-recomp/git/blobs/019ebe306d17252dafc9d010313f9c0eaf47fee0"
+      },
+      {
+        "path": "profile/third_party/at3_standalone/atrac.cpp",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "7fce83e40cef63d9321ecc1568296b21e4ea03e7",
+        "size": 5006,
+        "url": "https://api.github.com/repos/snuri00/psp-web-recomp/git/blobs/7fce83e40cef63d9321ecc1568296b21e4ea03e7"
+      },
+      {
+        "path": "profile/third_party/at3_standalone/atrac.h",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "3a68c8e0929e7520b9d9b0d5eab50de4cb81561d",
+        "size": 3391,
+        "url": "https://api.github.com/repos/snuri00/psp-web-recomp/git/blobs/3a68c8e0929e7520b9d9b0d5eab50de4cb81561d"
+      },
+      {
+        "path": "profile/third_party/at3_standalone/atrac3.cpp",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "186dcff6f70f1bf41700cace79efe2739bf04eea",
+        "size": 30107,
+        "url": "https://api.github.com/repos/snuri00/psp-web-recomp/git/blobs/186dcff6f70f1bf41700cace79efe2739bf04eea"
+      },
+      {
+        "path": "profile/third_party/at3_standalone/atrac3data.h",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "5d91274f489316270b5437a96765cc2b70c04907",
+        "size": 4245,
+        "url": "https://api.github.com/repos/snuri00/psp-web-recomp/git/blobs/5d91274f489316270b5437a96765cc2b70c04907"
+      },
+      {
+        "path": "profile/third_party/at3_standalone/atrac3plus.cpp",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "0844deed59b49eda360be61fb68a7f44ac1be37b",
+        "size": 70559,
+        "url": "https://api.github.com/repos/snuri00/psp-web-recomp/git/blobs/0844deed59b49eda360be61fb68a7f44ac1be37b"
+      },
+      {
+        "path": "profile/third_party/at3_standalone/atrac3plus.h",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "c2d2759ca088ffc8b467027c40354030b0be2125",
+        "size": 9683,
+        "url": "https://api.github.com/repos/snuri00/psp-web-recomp/git/blobs/c2d2759ca088ffc8b467027c40354030b0be2125"
+      },
+      {
+        "path": "profile/third_party/at3_standalone/atrac3plus_data.h",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "2a107eef1fa0b4fa0096d7b8aecbf62672d42746",
+        "size": 93362,
+        "url": "https://api.github.com/repos/snuri00/psp-web-recomp/git/blobs/2a107eef1fa0b4fa0096d7b8aecbf62672d42746"
+      },
+      {
+        "path": "profile/third_party/at3_standalone/atrac3plusdec.cpp",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "bf37fac83a026d3f668dde21eff6391a88c66648",
+        "size": 14083,
+        "url": "https://api.github.com/repos/snuri00/psp-web-recomp/git/blobs/bf37fac83a026d3f668dde21eff6391a88c66648"
+      },
+      {
+        "path": "profile/third_party/at3_standalone/atrac3plusdsp.cpp",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "c920eb01c1026ab17b3e6ee658efdb7d251be39f",
+        "size": 40305,
+        "url": "https://api.github.com/repos/snuri00/psp-web-recomp/git/blobs/c920eb01c1026ab17b3e6ee658efdb7d251be39f"
+      },
+      {
+        "path": "profile/third_party/at3_standalone/compat.cpp",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "33dbe59a5dce1ea8c5bf922c006c92f0c2394f51",
+        "size": 630,
+        "url": "https://api.github.com/repos/snuri00/psp-web-recomp/git/blobs/33dbe59a5dce1ea8c5bf922c006c92f0c2394f51"
+      },
+      {
+        "path": "profile/third_party/at3_standalone/compat.h",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f282f0c9c58ed00d2ff50a92b86379dee302c379",
+        "size": 2886,
+        "url": "https://api.github.com/repos/snuri00/psp-web-recomp/git/blobs/f282f0c9c58ed00d2ff50a92b86379dee302c379"
+      },
+      {
+        "path": "profile/third_party/at3_standalone/fft.cpp",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "2e3d040acedbb2b7b3525382cb9635246c301fa6",
+        "size": 9498,
+        "url": "https://api.github.com/repos/snuri00/psp-web-recomp/git/blobs/2e3d040acedbb2b7b3525382cb9635246c301fa6"
+      },
+      {
+        "path": "profile/third_party/at3_standalone/fft.h",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "9df03ca19b7699b8fc0c5a7a2545a0bf4ff9021e",
+        "size": 3002,
+        "url": "https://api.github.com/repos/snuri00/psp-web-recomp/git/blobs/9df03ca19b7699b8fc0c5a7a2545a0bf4ff9021e"
+      },
+      {
+        "path": "profile/third_party/at3_standalone/float_dsp.h",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "c9664a814b5eab748524cbf1bf1d2219f66bc09f",
+        "size": 1826,
+        "url": "https://api.github.com/repos/snuri00/psp-web-recomp/git/blobs/c9664a814b5eab748524cbf1bf1d2219f66bc09f"
+      },
+      {
+        "path": "profile/third_party/at3_standalone/get_bits.cpp",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "18374d80dd172641f5b5e4333c149a94cb161c8d",
+        "size": 13190,
+        "url": "https://api.github.com/repos/snuri00/psp-web-recomp/git/blobs/18374d80dd172641f5b5e4333c149a94cb161c8d"
+      },
+      {
+        "path": "profile/third_party/at3_standalone/get_bits.h",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "9366026eea6a195b61d7bef521d4b1bfd879c146",
+        "size": 16010,
+        "url": "https://api.github.com/repos/snuri00/psp-web-recomp/git/blobs/9366026eea6a195b61d7bef521d4b1bfd879c146"
+      },
+      {
+        "path": "profile/third_party/at3_standalone/intreadwrite.h",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "c6d776c10e0a242d84255809873b834be3534412",
+        "size": 9989,
+        "url": "https://api.github.com/repos/snuri00/psp-web-recomp/git/blobs/c6d776c10e0a242d84255809873b834be3534412"
+      },
+      {
+        "path": "profile/third_party/at3_standalone/mem.cpp",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "37e6787b622ef9c82347481273583d72a94bcb7e",
+        "size": 2266,
+        "url": "https://api.github.com/repos/snuri00/psp-web-recomp/git/blobs/37e6787b622ef9c82347481273583d72a94bcb7e"
+      },
+      {
+        "path": "profile/third_party/at3_standalone/mem.h",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "0e01ff92a465dbbfe139a766f992b651bea5df2c",
+        "size": 4559,
+        "url": "https://api.github.com/repos/snuri00/psp-web-recomp/git/blobs/0e01ff92a465dbbfe139a766f992b651bea5df2c"
+      },
+      {
+        "path": "profile/web",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "b7840290ab5e69b96eabd2def13561ee8b7c018d",
+        "url": "https://api.github.com/repos/snuri00/psp-web-recomp/git/trees/b7840290ab5e69b96eabd2def13561ee8b7c018d"
+      },
+      {
+        "path": "profile/web/shell.html",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "eab338eba3d96246fd3ee7dcd38c896078f78154",
+        "size": 41021,
+        "url": "https://api.github.com/repos/snuri00/psp-web-recomp/git/blobs/eab338eba3d96246fd3ee7dcd38c896078f78154"
+      },
+      {
+        "path": "scripts",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "59311f7123c65cd8084392670dfeda2892259969",
+        "url": "https://api.github.com/repos/snuri00/psp-web-recomp/git/trees/59311f7123c65cd8084392670dfeda2892259969"
+      },
+      {
+        "path": "scripts/build_native.sh",
+        "mode": "100755",
+        "type": "blob",
+        "sha": "eac102cfad6b8e2a7e1db01c03eb9ad8d87bf850",
+        "size": 575,
+        "url": "https://api.github.com/repos/snuri00/psp-web-recomp/git/blobs/eac102cfad6b8e2a7e1db01c03eb9ad8d87bf850"
+      },
+      {
+        "path": "scripts/build_tools.sh",
+        "mode": "100755",
+        "type": "blob",
+        "sha": "f603a295be30fd8a27387ad3f7ff7b5d372320f4",
+        "size": 324,
+        "url": "https://api.github.com/repos/snuri00/psp-web-recomp/git/blobs/f603a295be30fd8a27387ad3f7ff7b5d372320f4"
+      },
+      {
+        "path": "scripts/build_web.sh",
+        "mode": "100755",
+        "type": "blob",
+        "sha": "00b71dbd94c63925809a1b3fe0bbfb9e26b7deb8",
+        "size": 838,
+        "url": "https://api.github.com/repos/snuri00/psp-web-recomp/git/blobs/00b71dbd94c63925809a1b3fe0bbfb9e26b7deb8"
+      },
+      {
+        "path": "scripts/common.sh",
+        "mode": "100755",
+        "type": "blob",
+        "sha": "e910e4d9b18cf508bf65587fed09cd4e414ffd6b",
+        "size": 195,
+        "url": "https://api.github.com/repos/snuri00/psp-web-recomp/git/blobs/e910e4d9b18cf508bf65587fed09cd4e414ffd6b"
+      },
+      {
+        "path": "scripts/decrypt.sh",
+        "mode": "100755",
+        "type": "blob",
+        "sha": "bbee526a8082ab23636084f6b5fa70607c27585a",
+        "size": 852,
+        "url": "https://api.github.com/repos/snuri00/psp-web-recomp/git/blobs/bbee526a8082ab23636084f6b5fa70607c27585a"
+      },
+      {
+        "path": "scripts/dynamic.sh",
+        "mode": "100755",
+        "type": "blob",
+        "sha": "44ffc3a7d57d9e146d0740aabce7052fe1a9b305",
+        "size": 274,
+        "url": "https://api.github.com/repos/snuri00/psp-web-recomp/git/blobs/44ffc3a7d57d9e146d0740aabce7052fe1a9b305"
+      },
+      {
+        "path": "scripts/extract_iso.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "1f4560aeda7c000c95739c75923e7235c4e6113f",
+        "size": 2550,
+        "url": "https://api.github.com/repos/snuri00/psp-web-recomp/git/blobs/1f4560aeda7c000c95739c75923e7235c4e6113f"
+      },
+      {
+        "path": "scripts/generate.sh",
+        "mode": "100755",
+        "type": "blob",
+        "sha": "7c9a22bc2649af1d9ea784b8aef79df7b34492a8",
+        "size": 442,
+        "url": "https://api.github.com/repos/snuri00/psp-web-recomp/git/blobs/7c9a22bc2649af1d9ea784b8aef79df7b34492a8"
+      },
+      {
+        "path": "scripts/manifest.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "c968a9efd6dbb70937fcefc897de1606598d48b9",
+        "size": 666,
+        "url": "https://api.github.com/repos/snuri00/psp-web-recomp/git/blobs/c968a9efd6dbb70937fcefc897de1606598d48b9"
+      },
+      {
+        "path": "scripts/modules.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f1845e337ecfd5f33fc8f51bafb713137e7b6964",
+        "size": 3950,
+        "url": "https://api.github.com/repos/snuri00/psp-web-recomp/git/blobs/f1845e337ecfd5f33fc8f51bafb713137e7b6964"
+      },
+      {
+        "path": "scripts/modules.sh",
+        "mode": "100755",
+        "type": "blob",
+        "sha": "1fb557c92c45b3f8df5ec266a1089aa524f6c153",
+        "size": 593,
+        "url": "https://api.github.com/repos/snuri00/psp-web-recomp/git/blobs/1fb557c92c45b3f8df5ec266a1089aa524f6c153"
+      },
+      {
+        "path": "scripts/port.sh",
+        "mode": "100755",
+        "type": "blob",
+        "sha": "6a28b72b8bd72aca10d2407992d10ebc9ce60f72",
+        "size": 3356,
+        "url": "https://api.github.com/repos/snuri00/psp-web-recomp/git/blobs/6a28b72b8bd72aca10d2407992d10ebc9ce60f72"
+      },
+      {
+        "path": "scripts/ppm2png.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f833afe36c60f3102550eecde603159f2eb2d9b1",
+        "size": 823,
+        "url": "https://api.github.com/repos/snuri00/psp-web-recomp/git/blobs/f833afe36c60f3102550eecde603159f2eb2d9b1"
+      },
+      {
+        "path": "scripts/serve.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "130114e08cd3d919efd56bd69fe2fd101554924d",
+        "size": 4357,
+        "url": "https://api.github.com/repos/snuri00/psp-web-recomp/git/blobs/130114e08cd3d919efd56bd69fe2fd101554924d"
+      },
+      {
+        "path": "scripts/serve.sh",
+        "mode": "100755",
+        "type": "blob",
+        "sha": "418e0eca0097d78bb77514b3e9b084086c96268e",
+        "size": 746,
+        "url": "https://api.github.com/repos/snuri00/psp-web-recomp/git/blobs/418e0eca0097d78bb77514b3e9b084086c96268e"
+      },
+      {
+        "path": "scripts/setup.sh",
+        "mode": "100755",
+        "type": "blob",
+        "sha": "95f97afe1f851bcf559f28d56d8de1703ee4292e",
+        "size": 1282,
+        "url": "https://api.github.com/repos/snuri00/psp-web-recomp/git/blobs/95f97afe1f851bcf559f28d56d8de1703ee4292e"
+      }
+    ],
+    "truncated": false
+  }
+}

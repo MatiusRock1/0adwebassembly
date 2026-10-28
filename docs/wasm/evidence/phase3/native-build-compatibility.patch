@@ -1,0 +1,10 @@
+--- a/source/soundmanager/scripting/SoundGroup.cpp
++++ b/source/soundmanager/scripting/SoundGroup.cpp
+@@ -16,6 +16,7 @@
+  */
+ 
+ #include "precompiled.h"
++#include <numbers>
+ 
+ #include "SoundGroup.h"
+ 

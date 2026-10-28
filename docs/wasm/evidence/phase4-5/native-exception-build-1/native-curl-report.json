@@ -1,0 +1,32 @@
+{
+  "passed": true,
+  "command": [
+    "emcc",
+    "-DHAVE_CONFIG_H",
+    "-I/spike/phase4-deps/src/curl-8.5.0/include",
+    "-I/spike/phase4-deps/src/curl-8.5.0/lib",
+    "-DBUILDING_LIBCURL",
+    "-DCURL_STATICLIB",
+    "-DCURL_HIDDEN_SYMBOLS",
+    "-pthread",
+    "-fvisibility=hidden",
+    "-O2",
+    "-Qunused-arguments",
+    "-Wno-pointer-bool-conversion",
+    "-sSUPPORT_LONGJMP=wasm",
+    "-c",
+    "/spike/phase4-deps/src/curl-8.5.0/lib/hostip.c",
+    "-o",
+    "/phase45-build/native-deps/curl-wasm-sjlj/libcurl_la-hostip.o"
+  ],
+  "originalArchiveSHA256": "771762ffb275b44e2a1e635d090344b173f92820807ceaaf399a1d1b07052d04",
+  "sourceSHA256": {
+    "/spike/phase4-deps/src/curl-8.5.0/lib/hostip.c": "d6a1b07375242b749c3337f623189733d47e20258edf3a3c099cedfd92a6b45a",
+    "/spike/phase4-deps/src/curl-8.5.0/lib/curl_config.h": "dec406529d54385beaf8121563c734fd051cea038b630946d810ad8e272bd745"
+  },
+  "scope": "Same configured curl 8.5.0, headers, feature defines and O2 flags. Only hostip.o longjmp handling changes; all other archive members are retained. Original cache remains unchanged.",
+  "compileExitCode": 0,
+  "archive": "/phase45-build/native-deps/curl-wasm-sjlj/libcurl.a",
+  "archiveSHA256": "b539fb0badf6ca077bfeac1f0893f912e792798afd7020cf55e7bc61d0872b92",
+  "objectSHA256": "92c06e8c010d06426daa4bea4b2d0c66ee01c5f97cdfc4ea650343b9bd14549d"
+}

@@ -1,0 +1,71 @@
+{
+  "passed": true,
+  "cases": [
+    {
+      "scale": "1",
+      "leftSelectionPassed": true,
+      "rightCommandPassed": true,
+      "surfaceVerified": true,
+      "metrics": {
+        "frame": 150,
+        "tick": 14,
+        "restarts": 0,
+        "paused": false,
+        "selected": 8,
+        "x": 155.364,
+        "z": 243.105,
+        "screenX": 954.475,
+        "screenY": 306.446,
+        "terrainTriangles": 3616,
+        "modelTriangles": 6998,
+        "drawCalls": 12,
+        "width": 1920,
+        "height": 1080
+      }
+    },
+    {
+      "scale": "0.75",
+      "leftSelectionPassed": true,
+      "rightCommandPassed": true,
+      "surfaceVerified": true,
+      "metrics": {
+        "frame": 330,
+        "tick": 0,
+        "restarts": 1,
+        "paused": true,
+        "selected": 8,
+        "x": 155.364,
+        "z": 243.105,
+        "screenX": 715.856,
+        "screenY": 229.835,
+        "terrainTriangles": 3616,
+        "modelTriangles": 6998,
+        "drawCalls": 12,
+        "width": 1440,
+        "height": 810
+      }
+    },
+    {
+      "scale": "0.5",
+      "leftSelectionPassed": true,
+      "rightCommandPassed": true,
+      "surfaceVerified": true,
+      "metrics": {
+        "frame": 510,
+        "tick": 0,
+        "restarts": 2,
+        "paused": true,
+        "selected": 8,
+        "x": 155.364,
+        "z": 243.105,
+        "screenX": 477.237,
+        "screenY": 153.223,
+        "terrainTriangles": 3616,
+        "modelTriangles": 6998,
+        "drawCalls": 12,
+        "width": 960,
+        "height": 540
+      }
+    }
+  ]
+}

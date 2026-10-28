@@ -1,0 +1,165 @@
+{
+  "passed": false,
+  "phase45Accepted": false,
+  "edges": {
+    "right": {
+      "position": [
+        1919,
+        539
+      ],
+      "before": {
+        "z": 381.58465576171875,
+        "y": 92.23143768310547,
+        "x": 249.59442138671875
+      },
+      "after": {
+        "z": 373.2925720214844,
+        "y": 91.99359893798828,
+        "x": 378.57489013671875
+      },
+      "cameraDistance": 129.2469594961269
+    },
+    "bottom": {
+      "position": [
+        969,
+        1079
+      ],
+      "before": {
+        "z": 296.73895263671875,
+        "y": 92.04177856445312,
+        "x": 304.59210205078125
+      },
+      "after": {
+        "z": 180.24795532226562,
+        "y": 94.37815856933594,
+        "x": 304.59210205078125
+      },
+      "cameraDistance": 116.51442454410159
+    }
+  },
+  "errors": [],
+  "attributes": {
+    "settings": {
+      "Biome": "generic/temperate",
+      "Ceasefire": 0,
+      "CheatsEnabled": false,
+      "CircularMap": true,
+      "DisableSpies": false,
+      "DisableTreasures": false,
+      "LastManStanding": false,
+      "LockTeams": false,
+      "RevealMap": false,
+      "ExploreMap": false,
+      "AllyView": false,
+      "mapName": "Mainland",
+      "mapPreview": "cropped:0.78125,0.5859375:session/icons/mappreview/mainland.png",
+      "Size": 128,
+      "Nomad": false,
+      "PlayerData": [
+        {
+          "AI": false,
+          "Civ": "athen",
+          "Color": {
+            "r": 10,
+            "g": 10,
+            "b": 190
+          },
+          "Name": "Phase4Human",
+          "Removed": false,
+          "Team": -1
+        },
+        {
+          "AI": "petra",
+          "AIDiff": 3,
+          "AIBehavior": "balanced",
+          "Civ": "mace",
+          "Color": {
+            "r": 230,
+            "g": 10,
+            "b": 10
+          },
+          "Name": "Phase4Petra",
+          "Removed": false,
+          "Team": -1
+        }
+      ],
+      "PlayerPlacement": "circle",
+      "PopulationCapType": "player",
+      "PopulationCap": 200,
+      "Seed": 12345,
+      "AISeed": 54321,
+      "StartingResources": 1000,
+      "TriggerScripts": [],
+      "VictoryConditions": [
+        "conquest"
+      ]
+    },
+    "gameSpeed": 1,
+    "map": "maps/random/mainland",
+    "mapType": "random",
+    "script": "mainland.js"
+  },
+  "fullscreen": {
+    "window": {
+      "windowId": 1693801319,
+      "bounds": {
+        "left": 0,
+        "top": 0,
+        "width": 2560,
+        "height": 1080,
+        "windowState": "fullscreen"
+      }
+    },
+    "dimensions": {
+      "inner": [
+        2560,
+        1080
+      ],
+      "screen": [
+        2560,
+        1080
+      ],
+      "dpr": 1,
+      "focused": true
+    },
+    "internalResolution": [
+      1920,
+      1080
+    ]
+  },
+  "browserVersion": "155.0.8059.80",
+  "desktop": {
+    "monitors": 3,
+    "virtualWidth": 4480,
+    "virtualHeight": 1949
+  },
+  "failure": "('left', [478, 0])",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\jorlu\\OneDrive\\Documentos\\emprendimiento\\0 AD\\0adwebassembly\\wasm\\scripts\\verify-phase4-5-pointer.py\", line 60, in <module>\n    assert (at_edge[0] == 1919 if name=='right' else at_edge[1] == 1079 if name=='bottom'\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n            else at_edge[0] == 0 if name=='left' else at_edge[1] == 0), (name,at_edge)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: ('left', [478, 0])\n",
+  "diagnostic": {
+    "locked": "canvas",
+    "full": "game-surface",
+    "status": "0 A.D. en ejecuci\u00f3n.",
+    "cursor": "url(\"data:image/png;base64,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\"), auto",
+    "position": 478
+  },
+  "shutdown": {
+    "samples": [
+      {
+        "seconds": 0.003627099998993799,
+        "sdk": {
+          "running": [],
+          "pooled": [],
+          "pthreads": []
+        },
+        "workers": []
+      }
+    ],
+    "sdk": {
+      "running": [],
+      "pooled": [],
+      "pthreads": []
+    },
+    "workers": [],
+    "liveApplicationTargets": []
+  }
+}

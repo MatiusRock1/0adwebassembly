@@ -1,0 +1,49 @@
+{
+  "gamePin": "40b8794eecb9618da69e10bacffa8814c561aa51",
+  "runs": [
+    {
+      "backend": "webgpu",
+      "workload": "skirmish",
+      "repetition": 1,
+      "warmupSeconds": 120,
+      "durationSeconds": 900
+    },
+    {
+      "backend": "webgpu",
+      "workload": "combat",
+      "repetition": 1,
+      "warmupSeconds": 120,
+      "durationSeconds": 900
+    },
+    {
+      "backend": "webgpu",
+      "workload": "skirmish",
+      "repetition": 2,
+      "warmupSeconds": 120,
+      "durationSeconds": 900
+    },
+    {
+      "backend": "webgpu",
+      "workload": "combat",
+      "repetition": 2,
+      "warmupSeconds": 120,
+      "durationSeconds": 900
+    },
+    {
+      "backend": "webgpu",
+      "workload": "skirmish",
+      "repetition": 3,
+      "warmupSeconds": 120,
+      "durationSeconds": 900
+    },
+    {
+      "backend": "webgpu",
+      "workload": "combat",
+      "repetition": 3,
+      "warmupSeconds": 120,
+      "durationSeconds": 900
+    }
+  ],
+  "screenshots": false,
+  "computerUse": false
+}

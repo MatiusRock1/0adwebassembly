@@ -1,0 +1,30 @@
+{
+  "passed": true,
+  "checks": 36,
+  "exitCode": 0,
+  "performanceAcceptance": false,
+  "phase45Accepted": false,
+  "command": [
+    "node",
+    "--test",
+    "wasm/scripts/test-webgpu-command-data.mjs",
+    "wasm/scripts/test-webgpu-dispatch.mjs",
+    "wasm/scripts/test-webgpu-formats.mjs",
+    "wasm/scripts/test-webgpu-lifetime.mjs",
+    "wasm/scripts/test-webgpu-state.mjs",
+    "wasm/scripts/test-webgpu-textures.mjs",
+    "wasm/scripts/test-webgpu-upload.mjs"
+  ],
+  "sourceSHA256": {
+    "wasm/scripts/test-webgpu-command-data.mjs": "395955ef297f5f8031814dc769f8a23ed25fe27a6c8184c844a33fe9e1fc479b",
+    "wasm/scripts/test-webgpu-dispatch.mjs": "51d841a3cf7156835b588e1077a0f7372490812f45262b5c1857d3fbf9d9fa56",
+    "wasm/scripts/test-webgpu-formats.mjs": "480c88b3716e7554b89a2bf663f8cb6751f7bd2a3baa708448c2f8ae7b5a3202",
+    "wasm/scripts/test-webgpu-lifetime.mjs": "bb9f922c60e9910aa7e524d24636cf1e1ec105b0d2d51db01cd839dcedf8fd23",
+    "wasm/scripts/test-webgpu-state.mjs": "6956e6e721189b491ab2e574f8120c7b62afdfdb9828351997439a19e2141a30",
+    "wasm/scripts/test-webgpu-textures.mjs": "8ee61323406d0cffe909cbb3c5610299fb70d021675eda5a31a0aa723aeb2ca4",
+    "wasm/scripts/test-webgpu-upload.mjs": "d712535d0fd4dd7099456bc532ad49dc5b56f20e5bbef7848c77460a1d722d9e",
+    "source/renderer/backend/webgpu/Device.cpp": "14c5371e3cab620fbd640cb0ed6aba8e263f0410520cc8f8398b0ee6df7f05ea",
+    "wasm/browser/webgpu-engine.mjs": "8525f4b4846ff1dd64dbe1afb2bf117bdc53e28ae093bb838aa97005c4b2e19f"
+  },
+  "scope": "CPU equivalence of binary texture staging to old synchronous staging, including R8/RGBA/RGB/alpha/luminance/BC1/decompressed BC1 bytes, mip/layer metadata, immutable snapshots, draw ordering and invalid-range rejection. GPU byte probe is separate and pending."
+}

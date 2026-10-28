@@ -1,0 +1,187 @@
+{
+  "diagnosticOnly": true,
+  "phase45Accepted": false,
+  "refreshMs": 16.6702,
+  "refreshSource": "median single-refresh interval of the reference captures",
+  "reference": [
+    {
+      "capture": "performance-ab11-present-pacing-2-combat-60s-1",
+      "valid": true,
+      "displayedFps": 29.832615063404653,
+      "p95FrameMs": 49.9558,
+      "p99FrameMs": 66.6337,
+      "onePercentLowFps": 12.412281373178962,
+      "pausesOver100Ms": 4,
+      "p95WithinTwoRefreshes": false,
+      "intervalShareByRefreshes": {
+        "1": 0.06927374301675977,
+        "2": 0.8687150837988827,
+        "3": 0.05195530726256983,
+        "4+": 0.01005586592178771
+      },
+      "turnFrames": 300,
+      "turnMedianMs": 25.072511999994163,
+      "turnP90Ms": 44.73208319999742,
+      "turnsOver60Ms": 10,
+      "turnsOver100Ms": 0,
+      "rate": 0.9997889322639114,
+      "rateWithinTolerance": true,
+      "units": [
+        221,
+        274
+      ],
+      "workerPacing": {
+        "presents": 3617,
+        "holds": 3103,
+        "intervals": [
+          0,
+          3573,
+          15,
+          19,
+          10
+        ]
+      }
+    },
+    {
+      "capture": "performance-ab11-present-pacing-2-combat-60s-2",
+      "valid": true,
+      "displayedFps": 29.774314445368546,
+      "p95FrameMs": 42.1463,
+      "p99FrameMs": 66.61110000000001,
+      "onePercentLowFps": 12.063201525432042,
+      "pausesOver100Ms": 4,
+      "p95WithinTwoRefreshes": false,
+      "intervalShareByRefreshes": {
+        "1": 0.05707890318970341,
+        "2": 0.8903189703413542,
+        "3": 0.042529378847229994,
+        "4+": 0.010072747621712367
+      },
+      "turnFrames": 300,
+      "turnMedianMs": 26.11737600000197,
+      "turnP90Ms": 47.12296959998811,
+      "turnsOver60Ms": 10,
+      "turnsOver100Ms": 1,
+      "rate": 0.9997133768485078,
+      "rateWithinTolerance": true,
+      "units": [
+        223,
+        274
+      ],
+      "workerPacing": {
+        "presents": 3604,
+        "holds": 3125,
+        "intervals": [
+          0,
+          3547,
+          31,
+          12,
+          14
+        ]
+      }
+    }
+  ],
+  "candidate": [
+    {
+      "capture": "performance-ab11-present-pacing-2-nosound-combat-60s-1",
+      "valid": true,
+      "displayedFps": 29.807503293766626,
+      "p95FrameMs": 33.515,
+      "p99FrameMs": 50.1311,
+      "onePercentLowFps": 11.671500180713728,
+      "pausesOver100Ms": 5,
+      "p95WithinTwoRefreshes": true,
+      "intervalShareByRefreshes": {
+        "1": 0.053691275167785234,
+        "2": 0.901565995525727,
+        "3": 0.03523489932885906,
+        "4+": 0.009507829977628635
+      },
+      "turnFrames": 300,
+      "turnMedianMs": 26.03008000001239,
+      "turnP90Ms": 45.23932159999618,
+      "turnsOver60Ms": 10,
+      "turnsOver100Ms": 2,
+      "rate": 0.9995851979518111,
+      "rateWithinTolerance": true,
+      "units": [
+        216,
+        280
+      ],
+      "workerPacing": {
+        "presents": 3624,
+        "holds": 3324,
+        "intervals": [
+          0,
+          3586,
+          18,
+          9,
+          11
+        ]
+      }
+    },
+    {
+      "capture": "performance-ab11-present-pacing-2-nosound-combat-60s-2",
+      "valid": true,
+      "displayedFps": 29.77431345319197,
+      "p95FrameMs": 38.3804,
+      "p99FrameMs": 66.65910000000001,
+      "onePercentLowFps": 12.26959991902064,
+      "pausesOver100Ms": 4,
+      "p95WithinTwoRefreshes": false,
+      "intervalShareByRefreshes": {
+        "1": 0.050923335198656966,
+        "2": 0.9043088975937326,
+        "3": 0.03301622831561276,
+        "4+": 0.011751538891997761
+      },
+      "turnFrames": 300,
+      "turnMedianMs": 25.232639999998696,
+      "turnP90Ms": 42.450432000018175,
+      "turnsOver60Ms": 12,
+      "turnsOver100Ms": 2,
+      "rate": 0.9992567299105386,
+      "rateWithinTolerance": true,
+      "units": [
+        223,
+        280
+      ],
+      "workerPacing": {
+        "presents": 3624,
+        "holds": 3355,
+        "intervals": [
+          0,
+          3587,
+          18,
+          8,
+          11
+        ]
+      }
+    }
+  ],
+  "scope": "Short decision captures in alternating order; differences under the run-to-run spread are not attributed.",
+  "referenceMean": {
+    "displayedFps": 29.8034647543866,
+    "p95FrameMs": 46.051050000000004,
+    "p99FrameMs": 66.6224,
+    "onePercentLowFps": 12.237741449305503,
+    "pausesOver100Ms": 4,
+    "turnMedianMs": 25.594943999998065,
+    "turnP90Ms": 45.927526399992765,
+    "turnsOver60Ms": 10,
+    "turnsOver100Ms": 0.5,
+    "rate": 0.9997511545562097
+  },
+  "candidateMean": {
+    "displayedFps": 29.790908373479297,
+    "p95FrameMs": 35.9477,
+    "p99FrameMs": 58.395100000000006,
+    "onePercentLowFps": 11.970550049867185,
+    "pausesOver100Ms": 4.5,
+    "turnMedianMs": 25.631360000005543,
+    "turnP90Ms": 43.84487680000718,
+    "turnsOver60Ms": 11,
+    "turnsOver100Ms": 2,
+    "rate": 0.9994209639311749
+  }
+}

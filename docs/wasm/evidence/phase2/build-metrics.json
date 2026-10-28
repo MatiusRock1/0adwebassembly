@@ -1,0 +1,37 @@
+{
+  "stages": [
+    {
+      "stage": "browser-build",
+      "durationSeconds": 77.61258559999987,
+      "exitCode": 0
+    },
+    {
+      "stage": "verify-image",
+      "durationSeconds": 1.6631567000003997,
+      "exitCode": 0
+    },
+    {
+      "stage": "verify-chromium",
+      "durationSeconds": 5.878657600000224,
+      "exitCode": 0
+    },
+    {
+      "stage": "verify-firefox",
+      "durationSeconds": 12.38297010000042,
+      "exitCode": 0
+    },
+    {
+      "stage": "native-map",
+      "durationSeconds": 16.12833210000008,
+      "exitCode": 0
+    },
+    {
+      "stage": "compile-audit",
+      "durationSeconds": 1.7818778999999267,
+      "exitCode": 0
+    }
+  ],
+  "jobs": 2,
+  "memoryLimitGiB": 8,
+  "artifactBytes": 5780700
+}

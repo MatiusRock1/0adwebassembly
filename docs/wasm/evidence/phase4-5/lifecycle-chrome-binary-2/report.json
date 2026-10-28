@@ -1,0 +1,488 @@
+{
+  "passed": true,
+  "phase45Accepted": false,
+  "checks": {
+    "fullscreenResize": true,
+    "emulatedDPR": true,
+    "minimizeRestore": true,
+    "browserFreezeResume": true,
+    "lossCleanupAndPersistence": true,
+    "explicitRestartSameBackend": true
+  },
+  "errors": [],
+  "console": [
+    "The powerPreference option is currently ignored when calling requestAdapter() on Windows. See https://crbug.com/369219127",
+    "{\"type\":\"ready\",\"backend\":\"webgpu\",\"powerPreference\":\"high-performance\",\"owner\":\"main-thread\",\"adapter\":{\"vendor\":\"nvidia\",\"architecture\":\"ampere\",\"device\":\"\",\"description\":\"\"},\"adapterFeatures\":[\"bgra8unorm-storage\",\"clip-distances\",\"core-features-and-limits\",\"depth-clip-control\",\"depth32float-stencil8\",\"dual-source-blending\",\"float32-blendable\",\"float32-filterable\",\"indirect-first-instance\",\"primitive-index\",\"rg11b10ufloat-renderable\",\"shader-f16\",\"subgroup-size-control\",\"subgroups\",\"texture-component-swizzle\",\"texture-compression-bc\",\"texture-compression-bc-sliced-3d\",\"texture-formats-tier1\",\"texture-formats-tier2\",\"timestamp-query\"],\"adapterLimits\":{\"maxTextureDimension1D\":16384,\"maxTextureDimension2D\":16384,\"maxTextureDimension3D\":2048,\"maxTextureArrayLayers\":2048,\"maxBindGroups\":4,\"maxBindGroupsPlusVertexBuffers\":24,\"maxBindingsPerBindGroup\":1000,\"maxDynamicUniformBuffersPerPipelineLayout\":10,\"maxDynamicStorageBuffersPerPipelineLayout\":8,\"maxSampledTexturesPerShaderStage\":48,\"maxSamplersPerShaderStage\":16,\"maxStorageBuffersPerShaderStage\":16,\"maxStorageTexturesPerShaderStage\":8,\"maxUniformBuffersPerShaderStage\":12,\"maxUniformBufferBindingSize\":65536,\"maxStorageBufferBindingSize\":2147483644,\"minUniformBufferOffsetAlignment\":256,\"minStorageBufferOffsetAlignment\":256,\"maxVertexBuffers\":8,\"maxBufferSize\":2147483648,\"maxVertexAttributes\":30,\"maxVertexBufferArrayStride\":2048,\"maxInterStageShaderVariables\":28,\"maxColorAttachments\":8,\"maxColorAttachmentBytesPerSample\":128,\"maxComputeWorkgroupStorageSize\":32768,\"maxComputeInvocationsPerWorkgroup\":1024,\"maxComputeWorkgroupSizeX\":1024,\"maxComputeWorkgroupSizeY\":1024,\"maxComputeWorkgroupSizeZ\":64,\"maxComputeWorkgroupsPerDimension\":65535,\"maxImmediateSize\":64,\"maxStorageBuffersInFragmentStage\":16,\"maxStorageTexturesInFragmentStage\":8,\"maxStorageBuffersInVertexStage\":16,\"maxStorageTexturesInVertexStage\":8},\"deviceFeatures\":[\"core-features-and-limits\",\"depth32float-stencil8\",\"dual-source-blending\",\"float32-blendable\",\"float32-filterable\",\"rg11b10ufloat-renderable\",\"texture-compression-bc\"],\"deviceLimits\":{\"maxTextureDimension1D\":8192,\"maxTextureDimension2D\":8192,\"maxTextureDimension3D\":2048,\"maxTextureArrayLayers\":256,\"maxBindGroups\":4,\"maxBindGroupsPlusVertexBuffers\":24,\"maxBindingsPerBindGroup\":1000,\"maxDynamicUniformBuffersPerPipelineLayout\":8,\"maxDynamicStorageBuffersPerPipelineLayout\":4,\"maxSampledTexturesPerShaderStage\":16,\"maxSamplersPerShaderStage\":16,\"maxStorageBuffersPerShaderStage\":8,\"maxStorageTexturesPerShaderStage\":4,\"maxUniformBuffersPerShaderStage\":12,\"maxUniformBufferBindingSize\":65536,\"maxStorageBufferBindingSize\":134217728,\"minUniformBufferOffsetAlignment\":256,\"minStorageBufferOffsetAlignment\":256,\"maxVertexBuffers\":8,\"maxBufferSize\":268435456,\"maxVertexAttributes\":16,\"maxVertexBufferArrayStride\":2048,\"maxInterStageShaderVariables\":16,\"maxColorAttachments\":8,\"maxColorAttachmentBytesPerSample\":32,\"maxComputeWorkgroupStorageSize\":16384,\"maxComputeInvocationsPerWorkgroup\":256,\"maxComputeWorkgroupSizeX\":256,\"maxComputeWorkgroupSizeY\":256,\"maxComputeWorkgroupSizeZ\":64,\"maxComputeWorkgroupsPerDimension\":65535,\"maxImmediateSize\":64,\"maxStorageBuffersInFragmentStage\":8,\"maxStorageTexturesInFragmentStage\":4,\"maxStorageBuffersInVertexStage\":8,\"maxStorageTexturesInVertexStage\":4},\"unavailableOptionalFeatures\":[],\"fallbackAdapter\":null,\"format\":\"bgra8unorm\"}",
+    "Main log written to '/logs/mainlog.html'",
+    "Interesting log written to '/logs/interestinglog.html'",
+    "Sound: AlcInit success, using Emscripten OpenAL",
+    "Hardware details written to '/logs/system_info.txt'",
+    "Failed to query SDL WM info: That operation is not supportedUserReport written to '/logs/userreport_hwdetect.txt'",
+    "Failed to load resource: the server responded with a status of 404 (File not found)",
+    "JSON data written to '/data/config/matchsettings.json'",
+    "SCENE_ACTOR_QUALITY_HOOK_BEGIN",
+    "SCENE_QUALITY_GET_BEGIN",
+    "SCENE_QUALITY_GET_END 200 100",
+    "SCENE_QUALITY_INTERPOLATE_BEGIN",
+    "SCENE_QUALITY_INTERPOLATE_END",
+    "SCENE_ACTOR_QUALITY_HOOK_END",
+    "SCENE_ACTOR_VALIDATOR_BEGIN",
+    "Replay written to '/data/replays/0.29.0/2026-10-17_0001'",
+    "Setting biome generic/temperate.",
+    "Creating playerbases...",
+    "Creating bumps...",
+    "Creating hills...",
+    "Creating forests...",
+    "Creating dirt patches...",
+    "Creating grass patches...",
+    "Creating metal mines...",
+    "Creating stone mines...",
+    "Creating decoration...",
+    "Creating food...",
+    "Creating food...",
+    "Creating straggler trees...",
+    "Map generation finished.",
+    "Total entities: 825, Terrain entities: 525, Textures: 12.",
+    "{\"type\":\"sampler-address-emulation\",\"label\":\"art/textures/skins/props/decal_struct_paving_aegean_large.png\",\"requested\":[3,3,0],\"effective\":\"portable border filtering in the original shader sampling path\"}",
+    "GAME STARTED, ALL INIT COMPLETE",
+    "{\"type\":\"sampler-address-emulation\",\"label\":\"art/textures/misc/territory_border.png\",\"requested\":[3,2,0],\"effective\":\"portable border filtering in the original shader sampling path\"}",
+    "{\"type\":\"device-lost\",\"backend\":\"webgpu\",\"reason\":\"destroyed\",\"message\":\"Device was destroyed.\",\"expected\":false}",
+    "{\"type\":\"engine-device-lost\",\"reason\":\"destroyed\",\"message\":\"Device was destroyed.\",\"expected\":false}",
+    "Replay metadata written to '/data/replays/0.29.0/2026-10-17_0001/metadata.json'",
+    "The powerPreference option is currently ignored when calling requestAdapter() on Windows. See https://crbug.com/369219127",
+    "{\"type\":\"ready\",\"backend\":\"webgpu\",\"powerPreference\":\"high-performance\",\"owner\":\"main-thread\",\"adapter\":{\"vendor\":\"nvidia\",\"architecture\":\"ampere\",\"device\":\"\",\"description\":\"\"},\"adapterFeatures\":[\"bgra8unorm-storage\",\"clip-distances\",\"core-features-and-limits\",\"depth-clip-control\",\"depth32float-stencil8\",\"dual-source-blending\",\"float32-blendable\",\"float32-filterable\",\"indirect-first-instance\",\"primitive-index\",\"rg11b10ufloat-renderable\",\"shader-f16\",\"subgroup-size-control\",\"subgroups\",\"texture-component-swizzle\",\"texture-compression-bc\",\"texture-compression-bc-sliced-3d\",\"texture-formats-tier1\",\"texture-formats-tier2\",\"timestamp-query\"],\"adapterLimits\":{\"maxTextureDimension1D\":16384,\"maxTextureDimension2D\":16384,\"maxTextureDimension3D\":2048,\"maxTextureArrayLayers\":2048,\"maxBindGroups\":4,\"maxBindGroupsPlusVertexBuffers\":24,\"maxBindingsPerBindGroup\":1000,\"maxDynamicUniformBuffersPerPipelineLayout\":10,\"maxDynamicStorageBuffersPerPipelineLayout\":8,\"maxSampledTexturesPerShaderStage\":48,\"maxSamplersPerShaderStage\":16,\"maxStorageBuffersPerShaderStage\":16,\"maxStorageTexturesPerShaderStage\":8,\"maxUniformBuffersPerShaderStage\":12,\"maxUniformBufferBindingSize\":65536,\"maxStorageBufferBindingSize\":2147483644,\"minUniformBufferOffsetAlignment\":256,\"minStorageBufferOffsetAlignment\":256,\"maxVertexBuffers\":8,\"maxBufferSize\":2147483648,\"maxVertexAttributes\":30,\"maxVertexBufferArrayStride\":2048,\"maxInterStageShaderVariables\":28,\"maxColorAttachments\":8,\"maxColorAttachmentBytesPerSample\":128,\"maxComputeWorkgroupStorageSize\":32768,\"maxComputeInvocationsPerWorkgroup\":1024,\"maxComputeWorkgroupSizeX\":1024,\"maxComputeWorkgroupSizeY\":1024,\"maxComputeWorkgroupSizeZ\":64,\"maxComputeWorkgroupsPerDimension\":65535,\"maxImmediateSize\":64,\"maxStorageBuffersInFragmentStage\":16,\"maxStorageTexturesInFragmentStage\":8,\"maxStorageBuffersInVertexStage\":16,\"maxStorageTexturesInVertexStage\":8},\"deviceFeatures\":[\"core-features-and-limits\",\"depth32float-stencil8\",\"dual-source-blending\",\"float32-blendable\",\"float32-filterable\",\"rg11b10ufloat-renderable\",\"texture-compression-bc\"],\"deviceLimits\":{\"maxTextureDimension1D\":8192,\"maxTextureDimension2D\":8192,\"maxTextureDimension3D\":2048,\"maxTextureArrayLayers\":256,\"maxBindGroups\":4,\"maxBindGroupsPlusVertexBuffers\":24,\"maxBindingsPerBindGroup\":1000,\"maxDynamicUniformBuffersPerPipelineLayout\":8,\"maxDynamicStorageBuffersPerPipelineLayout\":4,\"maxSampledTexturesPerShaderStage\":16,\"maxSamplersPerShaderStage\":16,\"maxStorageBuffersPerShaderStage\":8,\"maxStorageTexturesPerShaderStage\":4,\"maxUniformBuffersPerShaderStage\":12,\"maxUniformBufferBindingSize\":65536,\"maxStorageBufferBindingSize\":134217728,\"minUniformBufferOffsetAlignment\":256,\"minStorageBufferOffsetAlignment\":256,\"maxVertexBuffers\":8,\"maxBufferSize\":268435456,\"maxVertexAttributes\":16,\"maxVertexBufferArrayStride\":2048,\"maxInterStageShaderVariables\":16,\"maxColorAttachments\":8,\"maxColorAttachmentBytesPerSample\":32,\"maxComputeWorkgroupStorageSize\":16384,\"maxComputeInvocationsPerWorkgroup\":256,\"maxComputeWorkgroupSizeX\":256,\"maxComputeWorkgroupSizeY\":256,\"maxComputeWorkgroupSizeZ\":64,\"maxComputeWorkgroupsPerDimension\":65535,\"maxImmediateSize\":64,\"maxStorageBuffersInFragmentStage\":8,\"maxStorageTexturesInFragmentStage\":4,\"maxStorageBuffersInVertexStage\":8,\"maxStorageTexturesInVertexStage\":4},\"unavailableOptionalFeatures\":[],\"fallbackAdapter\":null,\"format\":\"bgra8unorm\"}",
+    "Main log written to '/logs/mainlog.html'",
+    "Interesting log written to '/logs/interestinglog.html'",
+    "Sound: AlcInit success, using Emscripten OpenAL",
+    "Hardware details written to '/logs/system_info.txt'",
+    "Failed to query SDL WM info: That operation is not supportedUserReport written to '/logs/userreport_hwdetect.txt'",
+    "Failed to load resource: the server responded with a status of 404 (File not found)",
+    "{\"type\":\"device-lost\",\"backend\":\"webgpu\",\"reason\":\"destroyed\",\"message\":\"Device was destroyed.\",\"expected\":true}",
+    "{\"type\":\"engine-device-lost\",\"reason\":\"destroyed\",\"message\":\"Device was destroyed.\",\"expected\":true}"
+  ],
+  "scope": "Real OS fullscreen/minimize; browser lifecycle freeze; intentional GPUDevice.destroy. Physical OS sleep is not tested.",
+  "buildSHA256": {
+    "pyrogenesis-application.mjs": "0628ab0f775fa03d231a7dc747d20c7245163c11201ad05185ef8fddc520ab0c",
+    "pyrogenesis-application.wasm": "fb25063cb8bf60e0febcb4584b0c28d141a77e3d495b68eebf74ea5932c5ca4e",
+    "application.html": "d5025169c58b15b3d283edb7bd9963f68e6b25c426622258b56001a328303fe1",
+    "application.mjs": "b2d12d20ddd9b5680ac713307a740a4666d0c5dc59fd130f2530d9d202b9e419",
+    "application-data.json": "5b84e2a95559994231e6408e51f4bd45f2048d274e63e9d0e8b7fc6f704c810a",
+    "webgpu-shaders.json": "8d9280a27514b940ed61a9d0710ad92c39c8b425ff013b2d29c8b4fb33f08085",
+    "renderer-session.mjs": "95058d8db9311e844a5b69d3a895d7eb40c80e17b1f08691451b452a463f63c4",
+    "webgpu-engine.mjs": "fc808918332b98430a4f1be58db4b41ac1560275d6ec4296265a08816fbcdb5e",
+    "webgpu-border.mjs": "e9a7d9a88ac447b908249dc863e8adf9907b07830615019699588cbb2d695e8b",
+    "application-pointer.mjs": "0e781c584dff24c3005f875b070f715046dabe3ea1e388edfecd3f998b36bb47"
+  },
+  "browserVersion": "155.0.8059.80",
+  "attributes": {
+    "settings": {
+      "Biome": "generic/temperate",
+      "Ceasefire": 0,
+      "CheatsEnabled": false,
+      "CircularMap": true,
+      "DisableSpies": false,
+      "DisableTreasures": false,
+      "LastManStanding": false,
+      "LockTeams": false,
+      "RevealMap": false,
+      "ExploreMap": false,
+      "AllyView": false,
+      "mapName": "Mainland",
+      "mapPreview": "cropped:0.78125,0.5859375:session/icons/mappreview/mainland.png",
+      "Size": 128,
+      "Nomad": false,
+      "PlayerData": [
+        {
+          "AI": false,
+          "Civ": "athen",
+          "Color": {
+            "r": 10,
+            "g": 10,
+            "b": 190
+          },
+          "Name": "Phase4Human",
+          "Removed": false,
+          "Team": -1
+        },
+        {
+          "AI": "petra",
+          "AIDiff": 3,
+          "AIBehavior": "balanced",
+          "Civ": "mace",
+          "Color": {
+            "r": 230,
+            "g": 10,
+            "b": 10
+          },
+          "Name": "Phase4Petra",
+          "Removed": false,
+          "Team": -1
+        }
+      ],
+      "PlayerPlacement": "circle",
+      "PopulationCapType": "player",
+      "PopulationCap": 200,
+      "Seed": 12345,
+      "AISeed": 54321,
+      "StartingResources": 1000,
+      "TriggerScripts": [],
+      "VictoryConditions": [
+        "conquest"
+      ]
+    },
+    "gameSpeed": 1,
+    "map": "maps/random/mainland",
+    "mapType": "random",
+    "script": "mainland.js"
+  },
+  "savedConfig": "adaptivefps.session = \"60\"\nantialiasing = \"disabled\"\ncurrentcampaign = \"tutorial_1792191908530_14384\"\ngpuskinning = \"true\"\ngui.splashscreen.enable = \"true\"\ngui.splashscreen.version = \"54612afb83b1888b49e92b06116ba4e3\"\nmaterialmgr.quality = \"10.0\"\nmax_actor_quality = \"200\"\nparticles = \"true\"\nplayername.singleplayer = \"Local player\"\npostproc = \"true\"\nrenderactors = \"true\"\nshadowpcf = \"true\"\nshadowquality = \"2\"\nshadows = \"true\"\nshadowscascadecount = \"1\"\nshadowscascadedistanceratio = \"1.7\"\nshadowscovermap = \"false\"\nshadowscutoffdistance = \"300.0\"\nsilhouettes = \"true\"\nsound.mastergain = \"0.4\"\ntextures.maxanisotropy = \"2\"\ntextures.quality = \"2\"\nuserreport.enabledversion = \"0\"\nuserreport.id = \"ad11ff8e899a1d54\"\nvsync = \"true\"\nwatereffects = \"true\"\nwaterfancyeffects = \"false\"\nwaterrealdepth = \"true\"\nwaterreflection = \"true\"\nwaterrefraction = \"true\"\n",
+  "surfaces": [
+    {
+      "backend": "webgpu",
+      "canvas": [
+        1920,
+        1080
+      ],
+      "drawingBuffer": [
+        1920,
+        1080
+      ],
+      "proxiedDepthAttachment": [
+        1920,
+        1080
+      ],
+      "colorAttachment": [
+        1920,
+        1080
+      ],
+      "viewport": [
+        0,
+        0,
+        1920,
+        1080
+      ],
+      "fullscreen": true,
+      "innerSize": [
+        2560,
+        1080
+      ],
+      "dpr": 1,
+      "focused": true,
+      "hidden": false
+    },
+    {
+      "backend": "webgpu",
+      "canvas": [
+        1280,
+        720
+      ],
+      "drawingBuffer": [
+        1280,
+        720
+      ],
+      "proxiedDepthAttachment": [
+        1280,
+        720
+      ],
+      "colorAttachment": [
+        1280,
+        720
+      ],
+      "viewport": [
+        0,
+        0,
+        1280,
+        720
+      ],
+      "fullscreen": false,
+      "innerSize": [
+        2560,
+        945
+      ],
+      "dpr": 1,
+      "focused": true,
+      "hidden": false
+    },
+    {
+      "backend": "webgpu",
+      "canvas": [
+        1920,
+        1080
+      ],
+      "drawingBuffer": [
+        1920,
+        1080
+      ],
+      "proxiedDepthAttachment": [
+        1920,
+        1080
+      ],
+      "colorAttachment": [
+        1920,
+        1080
+      ],
+      "viewport": [
+        0,
+        0,
+        1920,
+        1080
+      ],
+      "fullscreen": true,
+      "innerSize": [
+        2560,
+        1080
+      ],
+      "dpr": 1,
+      "focused": true,
+      "hidden": false
+    },
+    {
+      "backend": "webgpu",
+      "canvas": [
+        1280,
+        720
+      ],
+      "drawingBuffer": [
+        1280,
+        720
+      ],
+      "proxiedDepthAttachment": [
+        1280,
+        720
+      ],
+      "colorAttachment": [
+        1280,
+        720
+      ],
+      "viewport": [
+        0,
+        0,
+        1280,
+        720
+      ],
+      "fullscreen": false,
+      "innerSize": [
+        2560,
+        945
+      ],
+      "dpr": 1,
+      "focused": true,
+      "hidden": false
+    },
+    {
+      "backend": "webgpu",
+      "canvas": [
+        1920,
+        1080
+      ],
+      "drawingBuffer": [
+        1920,
+        1080
+      ],
+      "proxiedDepthAttachment": [
+        1920,
+        1080
+      ],
+      "colorAttachment": [
+        1920,
+        1080
+      ],
+      "viewport": [
+        0,
+        0,
+        1920,
+        1080
+      ],
+      "fullscreen": true,
+      "innerSize": [
+        2560,
+        1080
+      ],
+      "dpr": 1,
+      "focused": true,
+      "hidden": false
+    }
+  ],
+  "dprScope": "CDP device-scale-factor emulation while the real OS window remains fullscreen; physical movement between monitors with different DPI is not asserted",
+  "dprSurfaces": [
+    {
+      "backend": "webgpu",
+      "canvas": [
+        1920,
+        1080
+      ],
+      "drawingBuffer": [
+        1920,
+        1080
+      ],
+      "proxiedDepthAttachment": [
+        1920,
+        1080
+      ],
+      "colorAttachment": [
+        1920,
+        1080
+      ],
+      "viewport": [
+        0,
+        0,
+        1920,
+        1080
+      ],
+      "fullscreen": true,
+      "innerSize": [
+        2560,
+        1080
+      ],
+      "dpr": 1.25,
+      "focused": true,
+      "hidden": false
+    },
+    {
+      "backend": "webgpu",
+      "canvas": [
+        1920,
+        1080
+      ],
+      "drawingBuffer": [
+        1920,
+        1080
+      ],
+      "proxiedDepthAttachment": [
+        1920,
+        1080
+      ],
+      "colorAttachment": [
+        1920,
+        1080
+      ],
+      "viewport": [
+        0,
+        0,
+        1920,
+        1080
+      ],
+      "fullscreen": true,
+      "innerSize": [
+        2560,
+        1080
+      ],
+      "dpr": 2,
+      "focused": true,
+      "hidden": false
+    }
+  ],
+  "minimized": {
+    "bounds": {
+      "left": 10,
+      "top": 10,
+      "width": 1265,
+      "height": 1012,
+      "windowState": "minimized"
+    }
+  },
+  "resumeSurface": {
+    "backend": "webgpu",
+    "canvas": [
+      1920,
+      1080
+    ],
+    "drawingBuffer": [
+      1920,
+      1080
+    ],
+    "proxiedDepthAttachment": [
+      1920,
+      1080
+    ],
+    "colorAttachment": [
+      1920,
+      1080
+    ],
+    "viewport": [
+      0,
+      0,
+      1920,
+      1080
+    ],
+    "fullscreen": true,
+    "innerSize": [
+      2560,
+      1080
+    ],
+    "dpr": 1,
+    "focused": true,
+    "hidden": false
+  },
+  "resumePixelDeviation": [
+    71.03575045366547,
+    71.94900545672503,
+    44.781237849664564
+  ],
+  "physicalResumeCapture": {
+    "file": "docs\\wasm\\evidence\\phase4-5\\lifecycle-chrome-binary-2\\resumed-physical-canvas.png",
+    "SHA256": "3d5ee9fb1b856a1aa72d466b190633c157449b2625919d04a338c61b034e1e8d",
+    "width": 2560,
+    "height": 1080,
+    "deviationRGB": [
+      70.78634694209495,
+      71.66593239772054,
+      44.58112427315805
+    ],
+    "foregroundWindow": {
+      "hwnd": 396802,
+      "ownerProcessId": 39812,
+      "expectedProcessId": 39812,
+      "clientSize": [
+        2560,
+        1080
+      ]
+    },
+    "scope": "Single real desktop canvas readback in functional lifecycle test only; never a performance measurement"
+  },
+  "beforeLossConfig": "adaptivefps.session = \"60\"\nantialiasing = \"disabled\"\ncurrentcampaign = \"tutorial_1792191908530_14384\"\ngpuskinning = \"true\"\ngui.splashscreen.enable = \"true\"\ngui.splashscreen.version = \"54612afb83b1888b49e92b06116ba4e3\"\nmaterialmgr.quality = \"10.0\"\nmax_actor_quality = \"200\"\nparticles = \"true\"\nplayername.singleplayer = \"Local player\"\npostproc = \"true\"\nrenderactors = \"true\"\nshadowpcf = \"true\"\nshadowquality = \"2\"\nshadows = \"true\"\nshadowscascadecount = \"1\"\nshadowscascadedistanceratio = \"1.7\"\nshadowscovermap = \"false\"\nshadowscutoffdistance = \"300.0\"\nsilhouettes = \"true\"\nsound.mastergain = \"0.4\"\ntextures.maxanisotropy = \"2\"\ntextures.quality = \"2\"\nuserreport.enabledversion = \"0\"\nuserreport.id = \"ad11ff8e899a1d54\"\nvsync = \"true\"\nwatereffects = \"true\"\nwaterfancyeffects = \"false\"\nwaterrealdepth = \"true\"\nwaterreflection = \"true\"\nwaterrefraction = \"true\"\n",
+  "lossResult": {
+    "code": 0
+  },
+  "lossStatus": "Se perdi\u00f3 el dispositivo WebGPU. Reinicia la p\u00e1gina para continuar; los ajustes guardados se conservan.",
+  "lossShutdown": {
+    "samples": [
+      {
+        "seconds": 0.003399199980776757,
+        "sdk": {
+          "running": [],
+          "pooled": [],
+          "pthreads": []
+        },
+        "workers": []
+      }
+    ],
+    "sdk": {
+      "running": [],
+      "pooled": [],
+      "pthreads": []
+    },
+    "workers": [],
+    "liveApplicationTargets": []
+  },
+  "restartShutdown": {
+    "samples": [
+      {
+        "seconds": 0.004040800005896017,
+        "sdk": {
+          "running": [],
+          "pooled": [],
+          "pthreads": []
+        },
+        "workers": []
+      }
+    ],
+    "sdk": {
+      "running": [],
+      "pooled": [],
+      "pthreads": []
+    },
+    "workers": [],
+    "liveApplicationTargets": []
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "package": "wasm\\dist\\application-phase4-5-guards",
+  "vmSHA256": "56b404574f6c70e9af84eed834ca2e30e449a06da99d32ed6c882bd75a8b077f",
+  "staticFilesMatchBest": {
+    "application.html": true,
+    "application.mjs": true,
+    "application-pointer.mjs": true,
+    "application-failure.mjs": true,
+    "renderer-session.mjs": true,
+    "webgpu-engine.mjs": true,
+    "webgpu-border.mjs": true,
+    "webgpu-upload.mjs": true,
+    "webgpu-dispatch.mjs": true,
+    "webgpu-upload-probe.mjs": true,
+    "webgpu-shaders.json": true,
+    "application-data.json": true
+  },
+  "artifacts": {
+    "pyrogenesis-application.mjs": "436933b4ec2f90894713d48d61bb9a6f6ac1078080e54ee469e8498ae2d6d951",
+    "pyrogenesis-application.mjs.symbols": "d4e2c72e16053290dd2177553177cb0496e88f9e8e1e79451c4083bb03bd1003",
+    "pyrogenesis-application.wasm": "83f0b9839e9a7d58f83c752bf98dabf553b14c2426af572604f3e2fa68a995db"
+  },
+  "phase45Accepted": false
+}

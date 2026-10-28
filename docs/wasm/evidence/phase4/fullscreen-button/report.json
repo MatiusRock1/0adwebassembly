@@ -1,0 +1,120 @@
+{
+  "samples": [
+    {
+      "window": {
+        "windowId": 61952554,
+        "bounds": {
+          "left": 10,
+          "top": 10,
+          "width": 1054,
+          "height": 800,
+          "windowState": "normal"
+        }
+      },
+      "dom": {
+        "inner": [
+          1032,
+          708
+        ],
+        "screen": [
+          1536,
+          864
+        ],
+        "dpr": 1.25,
+        "fullscreen": true,
+        "canvas": [
+          1920,
+          1080
+        ],
+        "focus": true
+      }
+    },
+    {
+      "window": {
+        "windowId": 61952554,
+        "bounds": {
+          "left": 10,
+          "top": 10,
+          "width": 1054,
+          "height": 800,
+          "windowState": "normal"
+        }
+      },
+      "dom": {
+        "inner": [
+          1032,
+          708
+        ],
+        "screen": [
+          1536,
+          864
+        ],
+        "dpr": 1.25,
+        "fullscreen": true,
+        "canvas": [
+          1920,
+          1080
+        ],
+        "focus": true
+      }
+    },
+    {
+      "window": {
+        "windowId": 61952554,
+        "bounds": {
+          "left": 10,
+          "top": 10,
+          "width": 1054,
+          "height": 800,
+          "windowState": "normal"
+        }
+      },
+      "dom": {
+        "inner": [
+          1032,
+          708
+        ],
+        "screen": [
+          1536,
+          864
+        ],
+        "dpr": 1.25,
+        "fullscreen": true,
+        "canvas": [
+          1920,
+          1080
+        ],
+        "focus": true
+      }
+    },
+    {
+      "window": {
+        "windowId": 61952554,
+        "bounds": {
+          "left": 10,
+          "top": 10,
+          "width": 1054,
+          "height": 800,
+          "windowState": "normal"
+        }
+      },
+      "dom": {
+        "inner": [
+          1032,
+          708
+        ],
+        "screen": [
+          1536,
+          864
+        ],
+        "dpr": 1.25,
+        "fullscreen": true,
+        "canvas": [
+          1920,
+          1080
+        ],
+        "focus": true
+      }
+    }
+  ]
+}

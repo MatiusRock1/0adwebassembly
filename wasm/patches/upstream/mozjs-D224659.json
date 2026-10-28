@@ -1,0 +1,9 @@
+{
+  "author": "Chris Fallin",
+  "reviewer": "jandem",
+  "bug": "https://bugzilla.mozilla.org/show_bug.cgi?id=1922981",
+  "review": "https://phabricator.services.mozilla.com/D224659",
+  "part": "8 / 39: PBL: fix PREDICT_NEXT: actually set the cacheop",
+  "SHA256": "77757974a93f4061924c1b318ba93b0278a6d7dd2a1ece0aa51f1a8d65937e95",
+  "adaptation": "Apply the same cacheop assignment to SpiderMonkey 128 macro, which accesses the reader via icregs.cacheIRReader. Preserve all original sources in the cached toolchain."
+}

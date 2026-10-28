@@ -1,0 +1,43 @@
+{
+  "trace": [
+    {
+      "event": "request",
+      "activation": true
+    },
+    {
+      "event": "resolved",
+      "full": true
+    },
+    {
+      "event": "change",
+      "full": true,
+      "inner": [
+        2560,
+        1080
+      ],
+      "time": 3666.395000010729
+    }
+  ],
+  "full": true,
+  "state": {
+    "frame": 312,
+    "tick": 0,
+    "gameStarted": false,
+    "width": 1920,
+    "height": 1080,
+    "paused": false,
+    "wasmHeapBytes": 536870912,
+    "receivedMs": 8668.75,
+    "updateMilliseconds": 0
+  },
+  "status": "0 A.D. en ejecuci\u00f3n.",
+  "inner": [
+    2560,
+    1080
+  ],
+  "screen": [
+    2560,
+    1080
+  ],
+  "focused": true
+}

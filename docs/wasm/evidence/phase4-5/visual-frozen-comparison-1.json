@@ -1,0 +1,84 @@
+{
+  "passed": false,
+  "visualParityAccepted": false,
+  "phase45Accepted": false,
+  "referenceBackend": "webgl",
+  "contract": {
+    "version": 2,
+    "scope": "Matched original persistent render framebuffer including GUI, captured at original frame completion; internal 1920x1080 unchanged. Pixel thresholds fixed before these captures.",
+    "simulationMs": 10000,
+    "resolution": [
+      1920,
+      1080
+    ],
+    "graphicsProfile": {
+      "vsync": "true",
+      "adaptivefps.session": "60",
+      "shadows": "true",
+      "shadowpcf": "true",
+      "shadowquality": "2",
+      "shadowscascadecount": "1",
+      "shadowscascadedistanceratio": "1.7",
+      "shadowscutoffdistance": "300.0",
+      "shadowscovermap": "false",
+      "postproc": "true",
+      "particles": "true",
+      "gpuskinning": "true",
+      "silhouettes": "true",
+      "watereffects": "true",
+      "waterfancyeffects": "false",
+      "waterrealdepth": "true",
+      "waterreflection": "true",
+      "waterrefraction": "true",
+      "textures.quality": "2",
+      "textures.maxanisotropy": "2",
+      "antialiasing": "disabled",
+      "renderactors": "true",
+      "max_actor_quality": "200",
+      "materialmgr.quality": "10.0"
+    },
+    "captures": [
+      "original-matched.png",
+      "original-shadow-hard.png",
+      "original-shadow-pcf.png"
+    ],
+    "maximumMeanAbsoluteRGBDifference": 2.0,
+    "perPixelMaximumChannelDifference": 8,
+    "maximumOutlierPixelFraction": 0.02,
+    "rationale": "Small animation and floating-point filtering differences may affect a limited area. Large missing effects, geometry, text, fog or color changes must fail. Numerical thresholds do not replace inspecting shadows and sampler edges.",
+    "captureMethod": "original-persistent-framebuffer-rgba-1920x1080"
+  },
+  "captures": [
+    {
+      "width": 1920,
+      "height": 1080,
+      "pixels": 2073600,
+      "meanAbsoluteRGBDifference": 2.1156843171296296,
+      "outlierPixelFraction": 0.02058449074074074,
+      "maximumChannelDifference": 227,
+      "file": "original-matched.png",
+      "passed": false
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "pixels": 2073600,
+      "meanAbsoluteRGBDifference": 2.498661908436214,
+      "outlierPixelFraction": 0.03962480709876543,
+      "maximumChannelDifference": 227,
+      "file": "original-shadow-hard.png",
+      "passed": false
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "pixels": 2073600,
+      "meanAbsoluteRGBDifference": 2.1156843171296296,
+      "outlierPixelFraction": 0.02058449074074074,
+      "maximumChannelDifference": 227,
+      "file": "original-shadow-pcf.png",
+      "passed": false
+    }
+  ],
+  "scope": "Numerical pixel gate only. Inspect original shadows, materials, fog, text and sampler edges before accepting visual parity."
+}

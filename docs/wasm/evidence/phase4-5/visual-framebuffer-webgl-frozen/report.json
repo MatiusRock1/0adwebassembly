@@ -1,0 +1,1046 @@
+{
+  "passed": true,
+  "visualParityAccepted": false,
+  "phase45Accepted": false,
+  "errors": [],
+  "console": [
+    "warning: unsupported syscall: __syscall_madvise\n",
+    "Main log written to '/logs/mainlog.html'",
+    "Interesting log written to '/logs/interestinglog.html'",
+    "Sound: AlcInit success, using Emscripten OpenAL",
+    "Hardware details written to '/logs/system_info.txt'",
+    "Failed to query SDL WM info: That operation is not supportedUserReport written to '/logs/userreport_hwdetect.txt'",
+    "Failed to load resource: the server responded with a status of 404 (File not found)",
+    "JSON data written to '/data/config/matchsettings.json'",
+    "SCENE_ACTOR_QUALITY_HOOK_BEGIN",
+    "SCENE_QUALITY_GET_BEGIN",
+    "SCENE_QUALITY_GET_END 200 100",
+    "SCENE_QUALITY_INTERPOLATE_BEGIN",
+    "SCENE_QUALITY_INTERPOLATE_END",
+    "SCENE_ACTOR_QUALITY_HOOK_END",
+    "SCENE_ACTOR_VALIDATOR_BEGIN",
+    "Replay written to '/data/replays/0.29.0/2026-10-17_0001'",
+    "Setting biome generic/temperate.",
+    "Creating playerbases...",
+    "Creating bumps...",
+    "Creating hills...",
+    "Creating forests...",
+    "Creating dirt patches...",
+    "Creating grass patches...",
+    "Creating metal mines...",
+    "Creating stone mines...",
+    "Creating decoration...",
+    "Creating food...",
+    "Creating food...",
+    "Creating straggler trees...",
+    "Map generation finished.",
+    "Total entities: 825, Terrain entities: 525, Textures: 12.",
+    "GAME STARTED, ALL INIT COMPLETE",
+    "w:8,t:0x00760030: Heap resize call from 536870912 to 640090112 took 2.9150390625 msecs. Success: true",
+    "Replay metadata written to '/data/replays/0.29.0/2026-10-17_0001/metadata.json'",
+    "user callback triggered after runtime exited or application aborted.  Ignoring."
+  ],
+  "buildSHA256": {
+    "pyrogenesis-application.mjs": "ceba55d3ae8e191051d2f4c03715fbfee937fc9ea92c7c40a97d9e14bb2e7a85",
+    "pyrogenesis-application.wasm": "8cfc476312bd668072a219fd0c97391b071321d8609eae3ca668fc3b1569c0ec",
+    "application.html": "f1e8555b4470ae3d70c1982c2df7fd46f556da2beca6dc7a0fa7c59c5490e2e4",
+    "application.mjs": "8a22632683380d986ac619079936cc7a8edf2828beb72d7151a031547685d72d",
+    "application-data.json": "6d2c6947710e02a2a395c51541baefdfd3b8ee0540ab5848a22702838823e9bc"
+  },
+  "visualContract": {
+    "version": 2,
+    "scope": "Matched original persistent render framebuffer including GUI, captured at original frame completion; internal 1920x1080 unchanged. Pixel thresholds fixed before these captures.",
+    "simulationMs": 10000,
+    "resolution": [
+      1920,
+      1080
+    ],
+    "graphicsProfile": {
+      "vsync": "true",
+      "adaptivefps.session": "60",
+      "shadows": "true",
+      "shadowpcf": "true",
+      "shadowquality": "2",
+      "shadowscascadecount": "1",
+      "shadowscascadedistanceratio": "1.7",
+      "shadowscutoffdistance": "300.0",
+      "shadowscovermap": "false",
+      "postproc": "true",
+      "particles": "true",
+      "gpuskinning": "true",
+      "silhouettes": "true",
+      "watereffects": "true",
+      "waterfancyeffects": "false",
+      "waterrealdepth": "true",
+      "waterreflection": "true",
+      "waterrefraction": "true",
+      "textures.quality": "2",
+      "textures.maxanisotropy": "2",
+      "antialiasing": "disabled",
+      "renderactors": "true",
+      "max_actor_quality": "200",
+      "materialmgr.quality": "10.0"
+    },
+    "captures": [
+      "original-matched.png",
+      "original-shadow-hard.png",
+      "original-shadow-pcf.png"
+    ],
+    "maximumMeanAbsoluteRGBDifference": 2.0,
+    "perPixelMaximumChannelDifference": 8,
+    "maximumOutlierPixelFraction": 0.02,
+    "rationale": "Small animation and floating-point filtering differences may affect a limited area. Large missing effects, geometry, text, fog or color changes must fail. Numerical thresholds do not replace inspecting shadows and sampler edges.",
+    "captureMethod": "original-persistent-framebuffer-rgba-1920x1080"
+  },
+  "browserVersion": "155.0.8059.80",
+  "attributes": {
+    "settings": {
+      "Biome": "generic/temperate",
+      "Ceasefire": 0,
+      "CheatsEnabled": false,
+      "CircularMap": true,
+      "DisableSpies": false,
+      "DisableTreasures": false,
+      "LastManStanding": false,
+      "LockTeams": false,
+      "RevealMap": false,
+      "ExploreMap": false,
+      "AllyView": false,
+      "mapName": "Mainland",
+      "mapPreview": "cropped:0.78125,0.5859375:session/icons/mappreview/mainland.png",
+      "Size": 128,
+      "Nomad": false,
+      "PlayerData": [
+        {
+          "AI": false,
+          "Civ": "athen",
+          "Color": {
+            "r": 10,
+            "g": 10,
+            "b": 190
+          },
+          "Name": "Phase4Human",
+          "Removed": false,
+          "Team": -1
+        },
+        {
+          "AI": "petra",
+          "AIDiff": 3,
+          "AIBehavior": "balanced",
+          "Civ": "mace",
+          "Color": {
+            "r": 230,
+            "g": 10,
+            "b": 10
+          },
+          "Name": "Phase4Petra",
+          "Removed": false,
+          "Team": -1
+        }
+      ],
+      "PlayerPlacement": "circle",
+      "PopulationCapType": "player",
+      "PopulationCap": 200,
+      "Seed": 12345,
+      "AISeed": 54321,
+      "StartingResources": 1000,
+      "TriggerScripts": [],
+      "VictoryConditions": [
+        "conquest"
+      ]
+    },
+    "gameSpeed": 1,
+    "map": "maps/random/mainland",
+    "mapType": "random",
+    "script": "mainland.js"
+  },
+  "fullscreen": {
+    "window": {
+      "windowId": 1693801407,
+      "bounds": {
+        "left": 0,
+        "top": 0,
+        "width": 2560,
+        "height": 1080,
+        "windowState": "fullscreen"
+      }
+    },
+    "dimensions": {
+      "inner": [
+        2560,
+        1080
+      ],
+      "screen": [
+        2560,
+        1080
+      ],
+      "dpr": 1,
+      "focused": true
+    },
+    "internalResolution": [
+      1920,
+      1080
+    ]
+  },
+  "simulation": {
+    "players": [
+      {
+        "name": "Gaia",
+        "civ": "gaia",
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "entity": 2,
+        "controlsAll": false,
+        "popCount": 0,
+        "popLimit": 0,
+        "popMax": 300,
+        "panelEntities": [],
+        "resourceCounts": {
+          "food": 300,
+          "wood": 300,
+          "stone": 300,
+          "metal": 300
+        },
+        "resourceGatherers": {
+          "food": 0,
+          "wood": 0,
+          "stone": 0,
+          "metal": 0
+        },
+        "trainingBlocked": false,
+        "state": "active",
+        "team": -1,
+        "teamLocked": false,
+        "disabledTemplates": {},
+        "disabledTechnologies": {},
+        "hasSharedLos": null,
+        "spyCostMultiplier": 1,
+        "phase": "",
+        "isAlly": [
+          true,
+          false,
+          false
+        ],
+        "isMutualAlly": [
+          true,
+          false,
+          false
+        ],
+        "isNeutral": [
+          false,
+          false,
+          false
+        ],
+        "isEnemy": [
+          false,
+          true,
+          true
+        ],
+        "entityLimits": null,
+        "entityCounts": null,
+        "matchEntityCounts": null,
+        "entityLimitChangers": null,
+        "researchQueued": null,
+        "researchedTechs": null,
+        "classCounts": null,
+        "typeCountsByClass": null,
+        "canBarter": false,
+        "barterPrices": {
+          "buy": {
+            "food": 110,
+            "wood": 110,
+            "stone": 110,
+            "metal": 110
+          },
+          "sell": {
+            "food": 90,
+            "wood": 90,
+            "stone": 90,
+            "metal": 90
+          }
+        }
+      },
+      {
+        "name": "Phase4Human",
+        "civ": "athen",
+        "color": {
+          "r": 0.0392156862745098,
+          "g": 0.0392156862745098,
+          "b": 0.7450980392156863,
+          "a": 1
+        },
+        "entity": 3,
+        "controlsAll": false,
+        "popCount": 9,
+        "popLimit": 20,
+        "popMax": 200,
+        "panelEntities": [],
+        "resourceCounts": {
+          "food": 1000,
+          "wood": 1000,
+          "stone": 1000,
+          "metal": 1000
+        },
+        "resourceGatherers": {
+          "food": 0,
+          "wood": 0,
+          "stone": 0,
+          "metal": 0
+        },
+        "trainingBlocked": false,
+        "state": "active",
+        "team": -1,
+        "teamLocked": false,
+        "disabledTemplates": {},
+        "disabledTechnologies": {},
+        "hasSharedLos": false,
+        "spyCostMultiplier": 1,
+        "phase": "village",
+        "isAlly": [
+          false,
+          true,
+          false
+        ],
+        "isMutualAlly": [
+          false,
+          true,
+          false
+        ],
+        "isNeutral": [
+          false,
+          false,
+          false
+        ],
+        "isEnemy": [
+          true,
+          false,
+          true
+        ],
+        "entityLimits": {
+          "Animal": 50,
+          "Centurion": 8,
+          "CivilCentre": 1,
+          "Gladiator": 0,
+          "Hero": 1,
+          "Juggernaut": 1,
+          "Kennel": 2,
+          "Library": 1,
+          "Lighthouse": 1,
+          "Monument": 5,
+          "Palace": 1,
+          "Pillar": 0,
+          "PyramidLarge": 2,
+          "TempleOfAmun": 1,
+          "TempleOfIsis": 1,
+          "TempleOfVesta": 1,
+          "Theater": 1,
+          "WarDog": 0,
+          "Wonder": 1,
+          "Yakhchal": 5
+        },
+        "entityCounts": {
+          "Animal": 0,
+          "Centurion": 0,
+          "CivilCentre": 1,
+          "Gladiator": 0,
+          "Hero": 0,
+          "Juggernaut": 0,
+          "Kennel": 0,
+          "Library": 0,
+          "Lighthouse": 0,
+          "Monument": 0,
+          "Palace": 0,
+          "Pillar": 0,
+          "PyramidLarge": 0,
+          "TempleOfAmun": 0,
+          "TempleOfIsis": 0,
+          "TempleOfVesta": 0,
+          "Theater": 0,
+          "WarDog": 0,
+          "Wonder": 0,
+          "Yakhchal": 0
+        },
+        "matchEntityCounts": {},
+        "entityLimitChangers": {
+          "Gladiator": {
+            "Amphitheater": 15
+          },
+          "Juggernaut": {
+            "PtolemyIV": 4
+          },
+          "Pillar": {
+            "Ashoka": 5
+          },
+          "WarDog": {
+            "Kennel": 10
+          }
+        },
+        "researchQueued": {},
+        "researchedTechs": {},
+        "classCounts": {
+          "Structure": 1,
+          "ConquestCritical": 10,
+          "CivCentre": 1,
+          "Civic": 1,
+          "Defensive": 1,
+          "CivilCentre": 1,
+          "Unit": 9,
+          "Organic": 9,
+          "Human": 9,
+          "Support": 4,
+          "Builder": 8,
+          "Civilian": 4,
+          "Worker": 8,
+          "CitizenSoldier": 5,
+          "Citizen": 5,
+          "Soldier": 5,
+          "Infantry": 4,
+          "Melee": 2,
+          "Spearman": 2,
+          "Basic": 5,
+          "Ranged": 3,
+          "Slinger": 2,
+          "FastMoving": 1,
+          "Cavalry": 1,
+          "Javelineer": 1
+        },
+        "typeCountsByClass": {
+          "Structure": {
+            "structures/athen/civil_centre": 1
+          },
+          "ConquestCritical": {
+            "structures/athen/civil_centre": 1,
+            "units/athen/support_civilian": 4,
+            "units/athen/infantry_spearman_b": 2,
+            "units/athen/infantry_slinger_b": 2,
+            "units/athen/cavalry_javelineer_b": 1
+          },
+          "CivCentre": {
+            "structures/athen/civil_centre": 1
+          },
+          "Civic": {
+            "structures/athen/civil_centre": 1
+          },
+          "Defensive": {
+            "structures/athen/civil_centre": 1
+          },
+          "CivilCentre": {
+            "structures/athen/civil_centre": 1
+          },
+          "Unit": {
+            "units/athen/support_civilian": 4,
+            "units/athen/infantry_spearman_b": 2,
+            "units/athen/infantry_slinger_b": 2,
+            "units/athen/cavalry_javelineer_b": 1
+          },
+          "Organic": {
+            "units/athen/support_civilian": 4,
+            "units/athen/infantry_spearman_b": 2,
+            "units/athen/infantry_slinger_b": 2,
+            "units/athen/cavalry_javelineer_b": 1
+          },
+          "Human": {
+            "units/athen/support_civilian": 4,
+            "units/athen/infantry_spearman_b": 2,
+            "units/athen/infantry_slinger_b": 2,
+            "units/athen/cavalry_javelineer_b": 1
+          },
+          "Support": {
+            "units/athen/support_civilian": 4
+          },
+          "Builder": {
+            "units/athen/support_civilian": 4,
+            "units/athen/infantry_spearman_b": 2,
+            "units/athen/infantry_slinger_b": 2
+          },
+          "Civilian": {
+            "units/athen/support_civilian": 4
+          },
+          "Worker": {
+            "units/athen/support_civilian": 4,
+            "units/athen/infantry_spearman_b": 2,
+            "units/athen/infantry_slinger_b": 2
+          },
+          "CitizenSoldier": {
+            "units/athen/infantry_spearman_b": 2,
+            "units/athen/infantry_slinger_b": 2,
+            "units/athen/cavalry_javelineer_b": 1
+          },
+          "Citizen": {
+            "units/athen/infantry_spearman_b": 2,
+            "units/athen/infantry_slinger_b": 2,
+            "units/athen/cavalry_javelineer_b": 1
+          },
+          "Soldier": {
+            "units/athen/infantry_spearman_b": 2,
+            "units/athen/infantry_slinger_b": 2,
+            "units/athen/cavalry_javelineer_b": 1
+          },
+          "Infantry": {
+            "units/athen/infantry_spearman_b": 2,
+            "units/athen/infantry_slinger_b": 2
+          },
+          "Melee": {
+            "units/athen/infantry_spearman_b": 2
+          },
+          "Spearman": {
+            "units/athen/infantry_spearman_b": 2
+          },
+          "Basic": {
+            "units/athen/infantry_spearman_b": 2,
+            "units/athen/infantry_slinger_b": 2,
+            "units/athen/cavalry_javelineer_b": 1
+          },
+          "Ranged": {
+            "units/athen/infantry_slinger_b": 2,
+            "units/athen/cavalry_javelineer_b": 1
+          },
+          "Slinger": {
+            "units/athen/infantry_slinger_b": 2
+          },
+          "FastMoving": {
+            "units/athen/cavalry_javelineer_b": 1
+          },
+          "Cavalry": {
+            "units/athen/cavalry_javelineer_b": 1
+          },
+          "Javelineer": {
+            "units/athen/cavalry_javelineer_b": 1
+          }
+        },
+        "canBarter": false,
+        "barterPrices": {
+          "buy": {
+            "food": 110,
+            "wood": 110,
+            "stone": 110,
+            "metal": 110
+          },
+          "sell": {
+            "food": 90,
+            "wood": 90,
+            "stone": 90,
+            "metal": 90
+          }
+        },
+        "statistics": {
+          "resourcesGathered": {
+            "vegetarianFood": 0,
+            "food": 0,
+            "wood": 0,
+            "stone": 0,
+            "metal": 0
+          },
+          "percentMapExplored": 21
+        }
+      },
+      {
+        "name": "Phase4Petra",
+        "civ": "mace",
+        "color": {
+          "r": 0.9019607843137255,
+          "g": 0.0392156862745098,
+          "b": 0.0392156862745098,
+          "a": 1
+        },
+        "entity": 4,
+        "controlsAll": false,
+        "popCount": 10,
+        "popLimit": 20,
+        "popMax": 200,
+        "panelEntities": [],
+        "resourceCounts": {
+          "food": 971,
+          "wood": 750,
+          "stone": 1000,
+          "metal": 1000
+        },
+        "resourceGatherers": {
+          "food": 3,
+          "wood": 0,
+          "stone": 0,
+          "metal": 0
+        },
+        "trainingBlocked": false,
+        "state": "active",
+        "team": -1,
+        "teamLocked": false,
+        "disabledTemplates": {},
+        "disabledTechnologies": {},
+        "hasSharedLos": false,
+        "spyCostMultiplier": 1,
+        "phase": "village",
+        "isAlly": [
+          false,
+          false,
+          true
+        ],
+        "isMutualAlly": [
+          false,
+          false,
+          true
+        ],
+        "isNeutral": [
+          false,
+          false,
+          false
+        ],
+        "isEnemy": [
+          true,
+          true,
+          false
+        ],
+        "entityLimits": {
+          "Animal": 50,
+          "Centurion": 8,
+          "CivilCentre": 1,
+          "Gladiator": 0,
+          "Hero": 1,
+          "Juggernaut": 1,
+          "Kennel": 2,
+          "Library": 1,
+          "Lighthouse": 1,
+          "Monument": 5,
+          "Palace": 1,
+          "Pillar": 0,
+          "PyramidLarge": 2,
+          "TempleOfAmun": 1,
+          "TempleOfIsis": 1,
+          "TempleOfVesta": 1,
+          "Theater": 1,
+          "WarDog": 0,
+          "Wonder": 1,
+          "Yakhchal": 5
+        },
+        "entityCounts": {
+          "Animal": 0,
+          "Centurion": 0,
+          "CivilCentre": 1,
+          "Gladiator": 0,
+          "Hero": 0,
+          "Juggernaut": 0,
+          "Kennel": 0,
+          "Library": 0,
+          "Lighthouse": 0,
+          "Monument": 0,
+          "Palace": 0,
+          "Pillar": 0,
+          "PyramidLarge": 0,
+          "TempleOfAmun": 0,
+          "TempleOfIsis": 0,
+          "TempleOfVesta": 0,
+          "Theater": 0,
+          "WarDog": 0,
+          "Wonder": 0,
+          "Yakhchal": 0
+        },
+        "matchEntityCounts": {},
+        "entityLimitChangers": {
+          "Gladiator": {
+            "Amphitheater": 15
+          },
+          "Juggernaut": {
+            "PtolemyIV": 4
+          },
+          "Pillar": {
+            "Ashoka": 5
+          },
+          "WarDog": {
+            "Kennel": 10
+          }
+        },
+        "researchQueued": {},
+        "researchedTechs": {},
+        "classCounts": {
+          "Structure": 1,
+          "ConquestCritical": 10,
+          "CivCentre": 1,
+          "Civic": 1,
+          "Defensive": 1,
+          "CivilCentre": 1,
+          "Unit": 9,
+          "Organic": 9,
+          "Human": 9,
+          "Support": 4,
+          "Builder": 8,
+          "Civilian": 4,
+          "Worker": 8,
+          "CitizenSoldier": 5,
+          "Citizen": 5,
+          "Soldier": 5,
+          "Infantry": 4,
+          "Melee": 3,
+          "Pikeman": 2,
+          "Basic": 5,
+          "Ranged": 2,
+          "Javelineer": 2,
+          "FastMoving": 1,
+          "Cavalry": 1,
+          "Spearman": 1
+        },
+        "typeCountsByClass": {
+          "Structure": {
+            "structures/mace/civil_centre": 1
+          },
+          "ConquestCritical": {
+            "structures/mace/civil_centre": 1,
+            "units/mace/support_civilian": 4,
+            "units/mace/infantry_pikeman_b": 2,
+            "units/mace/infantry_javelineer_b": 2,
+            "units/mace/cavalry_spearman_b": 1
+          },
+          "CivCentre": {
+            "structures/mace/civil_centre": 1
+          },
+          "Civic": {
+            "structures/mace/civil_centre": 1
+          },
+          "Defensive": {
+            "structures/mace/civil_centre": 1
+          },
+          "CivilCentre": {
+            "structures/mace/civil_centre": 1
+          },
+          "Unit": {
+            "units/mace/support_civilian": 4,
+            "units/mace/infantry_pikeman_b": 2,
+            "units/mace/infantry_javelineer_b": 2,
+            "units/mace/cavalry_spearman_b": 1
+          },
+          "Organic": {
+            "units/mace/support_civilian": 4,
+            "units/mace/infantry_pikeman_b": 2,
+            "units/mace/infantry_javelineer_b": 2,
+            "units/mace/cavalry_spearman_b": 1
+          },
+          "Human": {
+            "units/mace/support_civilian": 4,
+            "units/mace/infantry_pikeman_b": 2,
+            "units/mace/infantry_javelineer_b": 2,
+            "units/mace/cavalry_spearman_b": 1
+          },
+          "Support": {
+            "units/mace/support_civilian": 4
+          },
+          "Builder": {
+            "units/mace/support_civilian": 4,
+            "units/mace/infantry_pikeman_b": 2,
+            "units/mace/infantry_javelineer_b": 2
+          },
+          "Civilian": {
+            "units/mace/support_civilian": 4
+          },
+          "Worker": {
+            "units/mace/support_civilian": 4,
+            "units/mace/infantry_pikeman_b": 2,
+            "units/mace/infantry_javelineer_b": 2
+          },
+          "CitizenSoldier": {
+            "units/mace/infantry_pikeman_b": 2,
+            "units/mace/infantry_javelineer_b": 2,
+            "units/mace/cavalry_spearman_b": 1
+          },
+          "Citizen": {
+            "units/mace/infantry_pikeman_b": 2,
+            "units/mace/infantry_javelineer_b": 2,
+            "units/mace/cavalry_spearman_b": 1
+          },
+          "Soldier": {
+            "units/mace/infantry_pikeman_b": 2,
+            "units/mace/infantry_javelineer_b": 2,
+            "units/mace/cavalry_spearman_b": 1
+          },
+          "Infantry": {
+            "units/mace/infantry_pikeman_b": 2,
+            "units/mace/infantry_javelineer_b": 2
+          },
+          "Melee": {
+            "units/mace/infantry_pikeman_b": 2,
+            "units/mace/cavalry_spearman_b": 1
+          },
+          "Pikeman": {
+            "units/mace/infantry_pikeman_b": 2
+          },
+          "Basic": {
+            "units/mace/infantry_pikeman_b": 2,
+            "units/mace/infantry_javelineer_b": 2,
+            "units/mace/cavalry_spearman_b": 1
+          },
+          "Ranged": {
+            "units/mace/infantry_javelineer_b": 2
+          },
+          "Javelineer": {
+            "units/mace/infantry_javelineer_b": 2
+          },
+          "FastMoving": {
+            "units/mace/cavalry_spearman_b": 1
+          },
+          "Cavalry": {
+            "units/mace/cavalry_spearman_b": 1
+          },
+          "Spearman": {
+            "units/mace/cavalry_spearman_b": 1
+          }
+        },
+        "canBarter": false,
+        "barterPrices": {
+          "buy": {
+            "food": 110,
+            "wood": 110,
+            "stone": 110,
+            "metal": 110
+          },
+          "sell": {
+            "food": 90,
+            "wood": 90,
+            "stone": 90,
+            "metal": 90
+          }
+        },
+        "statistics": {
+          "resourcesGathered": {
+            "vegetarianFood": 0,
+            "food": 36,
+            "wood": 0,
+            "stone": 0,
+            "metal": 0
+          },
+          "percentMapExplored": 25
+        }
+      }
+    ],
+    "circularMap": true,
+    "mapSize": 512,
+    "timeElapsed": 10000,
+    "ceasefireActive": false,
+    "ceasefireTimeRemaining": 0,
+    "cinemaPathPlaying": false,
+    "victoryConditions": [
+      "conquest"
+    ],
+    "alliedVictory": true,
+    "populationCapType": "player",
+    "populationCap": 200
+  },
+  "simulationSHA256": "44a1d47196638563a09660797c78a4a8f196c76d08bcbe167a371ea34ce3e3e9",
+  "graphicsSettings": {
+    "vsync": "true",
+    "adaptivefps.session": "60",
+    "shadows": "true",
+    "shadowpcf": "true",
+    "postproc": "true",
+    "particles": "true",
+    "gpuskinning": "true",
+    "silhouettes": "true",
+    "watereffects": "true",
+    "waterfancyeffects": "false",
+    "waterrealdepth": "true",
+    "waterreflection": "true",
+    "waterrefraction": "true",
+    "textures.quality": "2",
+    "shadowquality": "2",
+    "textures.maxanisotropy": "2",
+    "antialiasing": "disabled",
+    "renderactors": "true",
+    "max_actor_quality": "200",
+    "materialmgr.quality": "10.0",
+    "shadowscascadecount": "1",
+    "shadowscascadedistanceratio": "1.7",
+    "shadowscutoffdistance": "300.0",
+    "shadowscovermap": "false"
+  },
+  "cameraRequest": {
+    "position": {
+      "z": 305.7017517089844,
+      "y": 91.88636779785156,
+      "x": 152
+    },
+    "rotation": {
+      "y": 0,
+      "x": 0.6108652353286743
+    },
+    "zoom": 120
+  },
+  "camera": {
+    "position": {
+      "z": 305.7017517089844,
+      "y": 91.8868637084961,
+      "x": 152
+    },
+    "rotation": {
+      "y": 0,
+      "x": 0.610870361328125
+    },
+    "zoom": 120
+  },
+  "surface": {
+    "canvas": [
+      1920,
+      1080
+    ],
+    "drawingBuffer": [
+      1920,
+      1080
+    ],
+    "proxiedDepthAttachment": [
+      1920,
+      1080
+    ],
+    "viewport": [
+      0,
+      0,
+      1920,
+      1080
+    ],
+    "fullscreen": true,
+    "innerSize": [
+      2560,
+      1080
+    ],
+    "dpr": 1,
+    "focused": true,
+    "hidden": false
+  },
+  "renderer": {
+    "backend": "webgl",
+    "source": "existing frozen-baseline GL context",
+    "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 3060 Laptop GPU (0x00002520) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)"
+  },
+  "framebufferCaptures": [
+    {
+      "file": "original-matched.png",
+      "width": 1920,
+      "height": 1080,
+      "backend": "webgl",
+      "frame": 1133
+    },
+    {
+      "file": "original-shadow-hard.png",
+      "width": 1920,
+      "height": 1080,
+      "backend": "webgl",
+      "frame": 1294
+    },
+    {
+      "file": "original-shadow-pcf.png",
+      "width": 1920,
+      "height": 1080,
+      "backend": "webgl",
+      "frame": 1417
+    }
+  ],
+  "captureMethod": "Original persistent render target RGBA readback at frame completion, original GUI included; no desktop capture or raster editing",
+  "shutdown": {
+    "samples": [
+      {
+        "seconds": 0.0037817999836988747,
+        "sdk": {
+          "running": [],
+          "pooled": [],
+          "pthreads": []
+        },
+        "workers": [
+          "http://localhost:8096/pyrogenesis-application.mjs"
+        ]
+      },
+      {
+        "seconds": 0.2741057999955956,
+        "sdk": {
+          "running": [],
+          "pooled": [],
+          "pthreads": []
+        },
+        "workers": [
+          "http://localhost:8096/pyrogenesis-application.mjs"
+        ]
+      },
+      {
+        "seconds": 0.5366028999851551,
+        "sdk": {
+          "running": [],
+          "pooled": [],
+          "pthreads": []
+        },
+        "workers": [
+          "http://localhost:8096/pyrogenesis-application.mjs"
+        ]
+      },
+      {
+        "seconds": 0.808466699993005,
+        "sdk": {
+          "running": [],
+          "pooled": [],
+          "pthreads": []
+        },
+        "workers": [
+          "http://localhost:8096/pyrogenesis-application.mjs"
+        ]
+      },
+      {
+        "seconds": 1.073082599992631,
+        "sdk": {
+          "running": [],
+          "pooled": [],
+          "pthreads": []
+        },
+        "workers": [
+          "http://localhost:8096/pyrogenesis-application.mjs"
+        ]
+      },
+      {
+        "seconds": 1.3395563999947626,
+        "sdk": {
+          "running": [],
+          "pooled": [],
+          "pthreads": []
+        },
+        "workers": [
+          "http://localhost:8096/pyrogenesis-application.mjs"
+        ]
+      },
+      {
+        "seconds": 1.6068045999854803,
+        "sdk": {
+          "running": [],
+          "pooled": [],
+          "pthreads": []
+        },
+        "workers": [
+          "http://localhost:8096/pyrogenesis-application.mjs"
+        ]
+      },
+      {
+        "seconds": 1.873493499995675,
+        "sdk": {
+          "running": [],
+          "pooled": [],
+          "pthreads": []
+        },
+        "workers": [
+          "http://localhost:8096/pyrogenesis-application.mjs"
+        ]
+      },
+      {
+        "seconds": 2.1401845999935176,
+        "sdk": {
+          "running": [],
+          "pooled": [],
+          "pthreads": []
+        },
+        "workers": []
+      }
+    ],
+    "sdk": {
+      "running": [],
+      "pooled": [],
+      "pthreads": []
+    },
+    "workers": [],
+    "liveApplicationTargets": []
+  }
+}

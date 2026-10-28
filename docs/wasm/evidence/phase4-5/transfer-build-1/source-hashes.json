@@ -1,0 +1,14 @@
+{
+  "source/renderer/backend/webgpu/Device.cpp": "b824d7d02b57f661e5e6dbd20b774c765095b65acab82e5b4141a557821f0274",
+  "source/renderer/backend/webgpu/CommandData.h": "446ea3457bff271e9597f68899478e9264cf38010da839f71c1cac0d47ab27f8",
+  "wasm/harness/scene-script-timing.h": "ed46aa993764bd7da5aaccc218898646b3ec20646a52b1ac9a1a510051d1adef",
+  "wasm/probes/webgpu-command-data.cpp": "44783f79d1a2a47bc92cc642dfac50cbba8b76d34d81fedb3f7649736190186b",
+  "wasm/probes/script-timing.cpp": "85914e765f7d6f19806e277fc7984cdc80a922fd3d49d37066f5afc68f00b0eb",
+  "wasm/scripts/phase4-5-transfer-build.py": "26ef6abf06f1a6a8cb876660f1533d0fed1b0d4e86d6eceb27e0399080d629d4",
+  "wasm/scripts/verify-phase4-5-script-timing.py": "07b02a3bbd740a58d7c395dbc6874ebd680669858b22285cf5a4043b03176161",
+  "wasm/scripts/verify-phase4-5-command-queue.py": "a063690d962a3188f7eecf29d685587237f761be8c3d283ada8e5385f12ba828",
+  "wasm/scripts/docker-phase4-5.ps1": "e92e46931e9114a122de166452a0a74c10fb7fd5cf4fdba4107d3233d9e1db15",
+  "wasm/scripts/phase4-link.py": "302e438492bb7601e2e82356298ee6731af8f9e8a178d28c1610b114eb399f0f",
+  "wasm/scripts/phase4-5-package.py": "58c2595b2d37123d96bde54e79b4a0c252db23a5b36a94d3a533ff0ba1a03a62",
+  "wasm/scripts/phase3-profile.py": "3d9554d59076d5366dd078d569eb85121b0b6deb6ca147bcf78e58f95f2ed268"
+}

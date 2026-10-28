@@ -1,0 +1,14 @@
+{
+  "compile-report.json": "be9c0f366466443e913e6713223a71c917c4a8ab3dd11357a2efdbcde0c88b3f",
+  "link-report.json": "93b296e602449e01ca97c45adec85f326260a38d91795d5ab5e62022f94e6c28",
+  "test-ai-worker-snapshot.mjs": "01f34ef020ff7c8cb9d44f7f34d9f6881bcfa021e8f0ac7894b015ec17560077",
+  "sources/main.cpp": "cef4536ce1c1f41871864f7e9d3f916963d9a62dae488a3f2dad403b09ef7953",
+  "sources/scriptinterface/Context.cpp": "6589d8524aeaaf0517dc674633e22bf82ff70cb6e46f7aabaebee4bdb43092f7",
+  "sources/scriptinterface/Engine.h": "3ded66b8c71b9655edc8256ece8776182d47196b073a3f890529d25c15acfbc0",
+  "sources/simulation2/components/CCmpAIManager.cpp": "323eab7134653b2e3696f18303ea1666ea42d78250a28faf8d033deb55323349",
+  "sources/simulation2/components/CCmpCommandQueue.cpp": "077a1fd60fc2dc09896f97fe649e0bb27e9c384a694ef570a9f4b61806117b53",
+  "sources/simulation2/components/ICmpCommandQueue.h": "759dee76f4bf3c7b9efcf1e4cff03c5d6b58ed1f3b3e21e3d0eab33aadb1ce03",
+  "sources/simulation2/helpers/AIWorkerMailbox.h": "71ff8ca03773160ce3b4b4c0b4b4d8cbca6c82e7a93300563ceac36073f2ef7e",
+  "sources/simulation2/helpers/AIWorkerScript.h": "f77a1f5106c190bac985008216a5da971846e908c1ccde6ff869a8a2e963e797",
+  "sources/simulation2/helpers/DeferredCommands.h": "937881f8d69445a5ff4eb02d4ed82ab650e14d5ecd9c4bdbdfaec44541b35366"
+}

@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "scope": "Native MSVC distribution and RNG consumption; no simulation RNG change",
+  "headerSHA256": "0bb18e3b9b4f6a19327f2e3af0b81c16af5fccccb609eb75d516abab3b395626",
+  "probeExecutableSHA256": "816c55f4c65d6156f4baebcff12382ab18d248225113885ff54e4ba9eba68b1d",
+  "compiler": "MSVC 14.44.35207",
+  "comparisons": 70000,
+  "exitCode": 0,
+  "stdout": "PASS 70000 original MSVC distribution comparisons, including rejection and RNG consumption\n",
+  "stderr": ""
+}

@@ -1,0 +1,431 @@
+{
+  "diagnosticOnly": true,
+  "performanceAcceptance": false,
+  "periodMs": 10,
+  "scope": "Cooperative interrupt locations, biased by VM checkpoints; not exclusive CPU time.",
+  "samples": [
+    {
+      "file": "(eval)",
+      "line": 11,
+      "hits": 102
+    },
+    {
+      "file": "(eval)",
+      "line": 6,
+      "hits": 74
+    },
+    {
+      "file": "simulation/ai/common-api/entity.js",
+      "line": 18,
+      "hits": 64
+    },
+    {
+      "file": "(eval)",
+      "line": 40,
+      "hits": 43
+    },
+    {
+      "file": "(eval)",
+      "line": 9,
+      "hits": 39
+    },
+    {
+      "file": "simulation/ai/common-api/entity.js",
+      "line": 377,
+      "hits": 36
+    },
+    {
+      "file": "globalscripts/Resources.js",
+      "line": 67,
+      "hits": 35
+    },
+    {
+      "file": "simulation/ai/common-api/shared.js",
+      "line": 312,
+      "hits": 34
+    },
+    {
+      "file": "simulation/ai/petra/mapModule.js",
+      "line": 127,
+      "hits": 29
+    },
+    {
+      "file": "simulation/ai/common-api/shared.js",
+      "line": 419,
+      "hits": 26
+    },
+    {
+      "file": "simulation/ai/common-api/entity.js",
+      "line": 625,
+      "hits": 25
+    },
+    {
+      "file": "simulation/ai/common-api/entity.js",
+      "line": 643,
+      "hits": 13
+    },
+    {
+      "file": "simulation/ai/common-api/filters.js",
+      "line": 28,
+      "hits": 10
+    },
+    {
+      "file": "simulation/ai/common-api/entitycollection.js",
+      "line": 334,
+      "hits": 9
+    },
+    {
+      "file": "simulation/ai/petra/headquarters.js",
+      "line": 1991,
+      "hits": 9
+    },
+    {
+      "file": "(eval)",
+      "line": 24,
+      "hits": 8
+    },
+    {
+      "file": "simulation/ai/common-api/entity.js",
+      "line": 65,
+      "hits": 8
+    },
+    {
+      "file": "simulation/ai/petra/headquarters.js",
+      "line": 2006,
+      "hits": 7
+    },
+    {
+      "file": "simulation/ai/common-api/shared.js",
+      "line": 147,
+      "hits": 7
+    },
+    {
+      "file": "simulation/ai/common-api/entity.js",
+      "line": 373,
+      "hits": 7
+    },
+    {
+      "file": "simulation/ai/common-api/entity.js",
+      "line": 390,
+      "hits": 7
+    },
+    {
+      "file": "simulation/ai/common-api/shared.js",
+      "line": 395,
+      "hits": 6
+    },
+    {
+      "file": "simulation/ai/petra/basesManager.js",
+      "line": 645,
+      "hits": 6
+    },
+    {
+      "file": "simulation/ai/common-api/entity.js",
+      "line": 831,
+      "hits": 5
+    },
+    {
+      "file": "globalscripts/Templates.js",
+      "line": 96,
+      "hits": 4
+    },
+    {
+      "file": "simulation/ai/common-api/shared.js",
+      "line": 341,
+      "hits": 4
+    },
+    {
+      "file": "simulation/ai/common-api/entitycollection.js",
+      "line": 88,
+      "hits": 4
+    },
+    {
+      "file": "simulation/ai/common-api/gamestate.js",
+      "line": 470,
+      "hits": 4
+    },
+    {
+      "file": "simulation/ai/petra/mapModule.js",
+      "line": 78,
+      "hits": 3
+    },
+    {
+      "file": "simulation/ai/common-api/entity.js",
+      "line": 650,
+      "hits": 3
+    },
+    {
+      "file": "simulation/ai/common-api/entity.js",
+      "line": 206,
+      "hits": 3
+    },
+    {
+      "file": "simulation/ai/common-api/filters.js",
+      "line": 84,
+      "hits": 3
+    },
+    {
+      "file": "simulation/ai/common-api/entity.js",
+      "line": 33,
+      "hits": 2
+    },
+    {
+      "file": "simulation/ai/common-api/shared.js",
+      "line": 346,
+      "hits": 2
+    },
+    {
+      "file": "simulation/ai/petra/headquarters.js",
+      "line": 2233,
+      "hits": 2
+    },
+    {
+      "file": "simulation/ai/common-api/shared.js",
+      "line": 269,
+      "hits": 2
+    },
+    {
+      "file": "globalscripts/Templates.js",
+      "line": 97,
+      "hits": 2
+    },
+    {
+      "file": "simulation/ai/petra/queueplanBuilding.js",
+      "line": 214,
+      "hits": 2
+    },
+    {
+      "file": "simulation/ai/common-api/entity.js",
+      "line": 820,
+      "hits": 2
+    },
+    {
+      "file": "simulation/ai/common-api/entity.js",
+      "line": 632,
+      "hits": 2
+    },
+    {
+      "file": "simulation/ai/petra/entityExtend.js",
+      "line": 31,
+      "hits": 2
+    },
+    {
+      "file": "simulation/ai/common-api/entitycollection.js",
+      "line": 302,
+      "hits": 2
+    },
+    {
+      "file": "simulation/ai/petra/entityExtend.js",
+      "line": 25,
+      "hits": 2
+    },
+    {
+      "file": "simulation/ai/petra/entityExtend.js",
+      "line": 167,
+      "hits": 2
+    },
+    {
+      "file": "simulation/ai/common-api/resources.js",
+      "line": 37,
+      "hits": 2
+    },
+    {
+      "file": "simulation/ai/common-api/shared.js",
+      "line": 193,
+      "hits": 1
+    },
+    {
+      "file": "simulation/ai/common-api/gamestate.js",
+      "line": 375,
+      "hits": 1
+    },
+    {
+      "file": "simulation/ai/common-api/entitycollection.js",
+      "line": 331,
+      "hits": 1
+    },
+    {
+      "file": "simulation/ai/common-api/filters.js",
+      "line": 12,
+      "hits": 1
+    },
+    {
+      "file": "simulation/ai/common-api/gamestate.js",
+      "line": 169,
+      "hits": 1
+    },
+    {
+      "file": "simulation/ai/common-api/map-module.js",
+      "line": 136,
+      "hits": 1
+    },
+    {
+      "file": "simulation/ai/petra/basesManager.js",
+      "line": 667,
+      "hits": 1
+    },
+    {
+      "file": "simulation/ai/common-api/baseAI.js",
+      "line": 47,
+      "hits": 1
+    },
+    {
+      "file": "simulation/ai/common-api/map-module.js",
+      "line": 7,
+      "hits": 1
+    },
+    {
+      "file": "simulation/ai/common-api/shared.js",
+      "line": 175,
+      "hits": 1
+    },
+    {
+      "file": "simulation/ai/petra/headquarters.js",
+      "line": 2091,
+      "hits": 1
+    },
+    {
+      "file": "simulation/ai/petra/headquarters.js",
+      "line": 2124,
+      "hits": 1
+    },
+    {
+      "file": "globalscripts/Templates.js",
+      "line": 92,
+      "hits": 1
+    },
+    {
+      "file": "simulation/ai/common-api/entity.js",
+      "line": 259,
+      "hits": 1
+    },
+    {
+      "file": "simulation/ai/petra/entityExtend.js",
+      "line": 70,
+      "hits": 1
+    },
+    {
+      "file": "simulation/ai/common-api/entity.js",
+      "line": 193,
+      "hits": 1
+    },
+    {
+      "file": "(eval)",
+      "line": 16,
+      "hits": 1
+    },
+    {
+      "file": "simulation/ai/common-api/entity.js",
+      "line": 683,
+      "hits": 1
+    },
+    {
+      "file": "simulation/ai/common-api/entity.js",
+      "line": 32,
+      "hits": 1
+    },
+    {
+      "file": "simulation/ai/petra/defenseManager.js",
+      "line": 564,
+      "hits": 1
+    },
+    {
+      "file": "simulation/ai/common-api/shared.js",
+      "line": 364,
+      "hits": 1
+    },
+    {
+      "file": "simulation/ai/petra/mapModule.js",
+      "line": 76,
+      "hits": 1
+    },
+    {
+      "file": "simulation/ai/common-api/shared.js",
+      "line": 402,
+      "hits": 1
+    },
+    {
+      "file": "simulation/ai/petra/baseManager.js",
+      "line": 814,
+      "hits": 1
+    },
+    {
+      "file": "simulation/ai/common-api/entity.js",
+      "line": 72,
+      "hits": 1
+    },
+    {
+      "file": "simulation/ai/common-api/utils.js",
+      "line": 24,
+      "hits": 1
+    },
+    {
+      "file": "simulation/ai/petra/queueManager.js",
+      "line": 390,
+      "hits": 1
+    },
+    {
+      "file": "simulation/ai/common-api/entity.js",
+      "line": 222,
+      "hits": 1
+    },
+    {
+      "file": "simulation/ai/common-api/filters.js",
+      "line": 60,
+      "hits": 1
+    },
+    {
+      "file": "simulation/ai/petra/garrisonManager.js",
+      "line": 29,
+      "hits": 1
+    },
+    {
+      "file": "simulation/ai/petra/entityExtend.js",
+      "line": 50,
+      "hits": 1
+    },
+    {
+      "file": "simulation/ai/common-api/entity.js",
+      "line": 659,
+      "hits": 1
+    },
+    {
+      "file": "simulation/ai/common-api/entity.js",
+      "line": 637,
+      "hits": 1
+    },
+    {
+      "file": "simulation/ai/common-api/shared.js",
+      "line": 292,
+      "hits": 1
+    },
+    {
+      "file": "simulation/ai/common-api/entity.js",
+      "line": 245,
+      "hits": 1
+    },
+    {
+      "file": "simulation/ai/common-api/shared.js",
+      "line": 436,
+      "hits": 1
+    },
+    {
+      "file": "simulation/ai/petra/baseManager.js",
+      "line": 879,
+      "hits": 1
+    },
+    {
+      "file": "simulation/ai/petra/queueplanBuilding.js",
+      "line": 909,
+      "hits": 1
+    },
+    {
+      "file": "simulation/ai/common-api/entitycollection.js",
+      "line": 136,
+      "hits": 1
+    }
+  ],
+  "requests": 705,
+  "noCaller": 0,
+  "overflow": 0
+}

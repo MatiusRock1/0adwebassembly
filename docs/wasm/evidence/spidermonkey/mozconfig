@@ -1,0 +1,16 @@
+ac_add_options --enable-project=js
+ac_add_options --target=wasm32-unknown-emscripten
+ac_add_options --disable-shared-js
+ac_add_options --disable-jit
+ac_add_options --disable-jemalloc
+ac_add_options --without-intl-api
+ac_add_options --disable-js-shell
+ac_add_options --disable-tests
+mk_add_options MOZ_OBJDIR=/spike/mozjs-128.13.0/build-wasm
+export CC=emcc
+export CXX=em++
+export AR=emar
+export RANLIB=emranlib
+export HOST_CC=/usr/bin/gcc
+export HOST_CXX=/usr/bin/g++
+export HOST_AR=/usr/bin/ar

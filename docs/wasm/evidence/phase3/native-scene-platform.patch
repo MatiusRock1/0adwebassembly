@@ -1,0 +1,331 @@
+--- wasm/harness/scene-main.cpp
++++ native-benchmark/main.cpp
+@@ -1,3 +1,5 @@
++#define MINIMAL_PCH 2
++#include "lib/precompiled.h"
+ // Original map scene: application services and presentation bridge only.
+ #include "lib/external_libraries/libsdl.h"
+ #include "lib/timer.h"
+@@ -6,9 +8,9 @@
+ #include "renderer/backend/gl/Device.h"
+ #include "renderer/backend/IDeviceCommandContext.h"
+ #include "renderer/backend/ISwapChain.h"
+-#include <emscripten/html5.h>
+-#include <emscripten/proxying.h>
+-#include <emscripten/threading.h>
++#include "lib/precompiled.h"
++
++
+ #include <atomic>
+ #include <cstdio>
+ #include "renderer/Renderer.h"
+@@ -44,12 +46,29 @@
+ #include "renderer/SkyManager.h"
+ #include "ps/TaskManager.h"
+ #include "ps/Loader.h"
+-#include <emscripten.h>
+-#include <emscripten/heap.h>
++#include "ps/GameSetup/GameSetup.h"
++#include "ps/Profiler2.h"
++#include "lib/sysdep/os/win/wutil.h"
++#include "lib/sysdep/filesystem.h"
++#include <chrono>
++#include <cstdlib>
++
++static double emscripten_get_now() { return timer_Time()*1000; }
++// Native process memory is collected externally; this field is WASM-only.
++static size_t emscripten_get_heap_size() { return 0; }
++
+ #include <js/GCAPI.h>
+ #include <fstream>
+-CLightEnv g_LightEnv;
++extern CLightEnv g_LightEnv;
+ extern thread_local std::shared_ptr<Script::Context> g_ScriptContext;
++Status wutil_Init(); Status wutil_Shutdown();
++Status wdir_watch_Init(); Status wdir_watch_Shutdown();
++static bool nativeQuitRequested=false;
++static int nativeExitStatus=0;
++bool IsQuitRequested() { return nativeQuitRequested; }
++void QuitEngine(int status) { nativeQuitRequested=true; nativeExitStatus=status; }
++void RestartEngine() { std::puts("NATIVE_BENCHMARK_UNEXPECTED_RESTART"); QuitEngine(36); }
++
+ namespace {
+ JS::GCSliceCallback previousGCSliceCallback = nullptr;
+ double gcSliceStart=0, nurseryStart=0, gcFrameMs=0;
+@@ -107,7 +126,7 @@
+  Threading::TaskManager tasks;
+  Input::Manager input;
+  SDL_Window* window = nullptr;
+- EMSCRIPTEN_WEBGL_CONTEXT_HANDLE webgl = 0;
++
+  std::unique_ptr<Renderer::Backend::IDevice> device;
+  std::unique_ptr<CRenderer> renderer;
+  CTerrain terrain;
+@@ -142,7 +161,7 @@
+   terrain.Initialize(0,nullptr);
+   objects.reset(); animations.reset(); meshes.reset(); collada.reset();
+   swapChain.reset(); context.reset(); renderer.reset(); device.reset();
+-  if (webgl > 0) emscripten_webgl_destroy_context(webgl);
++
+   if (window) SDL_DestroyWindow(window);
+   SDL_Quit(); g_VFS.reset();
+   if (g_ScriptContext) {
+@@ -168,7 +187,7 @@
+   commands.clear(); selected=INVALID_ENTITY; scene.reset();
+   renderer->GetSceneRenderer().ResetState();
+   Script::Request rq(sim->GetScriptInterface());
+-  std::ifstream replay("/scenario/commands.txt");
++  std::ifstream replay("scenario/commands.txt");
+   std::string attributes; std::getline(replay,attributes);
+   JS::RootedValue attrs(rq.cx), settings(rq.cx);
+   if (!Script::ParseJSON(rq,attributes.substr(6),&attrs) ||
+@@ -211,12 +230,12 @@
+   g_ScriptContext=std::make_shared<Script::Context>();
+   previousGCSliceCallback=JS::SetGCSliceCallback(g_ScriptContext->GetGeneralJSContext(),SceneGCSlice);
+   nurseryObserved=JS::AddGCNurseryCollectionCallback(g_ScriptContext->GetGeneralJSContext(),SceneNurseryGC,nullptr);
+-  gpuProfiling=MAIN_THREAD_EM_ASM_INT({return new URL(location.href).searchParams.get('gpuTimer')==='1';});
+-  benchmarkMode=MAIN_THREAD_EM_ASM_INT({return new URL(location.href).searchParams.get('benchmark')==='1';});
++  gpuProfiling=false;
++  benchmarkMode=true;
+   g_VFS=CreateVfs();
+-  if (g_VFS->Mount(L"",OsPath("/data/mod/"))<0 ||
+-      g_VFS->Mount(L"",OsPath("/data/public/"),0,1)<0 ||
+-      g_VFS->Mount(L"cache/",OsPath("/cache/"))<0) return 10;
++  if (g_VFS->Mount(L"",OsPath("data/mod/"))<0 ||
++      g_VFS->Mount(L"",OsPath("data/public/"),0,1)<0 ||
++      g_VFS->Mount(L"cache/",OsPath("cache/"))<0) return 10;
+   g_ConfigDB.SetValueString(CFG_COMMAND,"max_actor_quality","100");
+   g_RenderingOptions.SetShadows(false);
+   g_RenderingOptions.SetWaterEffects(false);
+@@ -228,24 +247,17 @@
+   g_RenderingOptions.SetSilhouettes(false);
+   g_RenderingOptions.SetSmoothLOS(false);
+   if (SDL_Init(SDL_INIT_VIDEO)<0) return 20;
+-  window=SDL_CreateWindow("0 A.D. WebGL 2",0,0,width,height,0);
+-  if (!window || SDL_GL_LoadLibrary(nullptr)<0) return 21;
+-  EmscriptenWebGLContextAttributes attributes;
+-  emscripten_webgl_init_context_attributes(&attributes);
+-  attributes.majorVersion=2; attributes.alpha=false; attributes.antialias=false;
+-  attributes.powerPreference=EM_WEBGL_POWER_PREFERENCE_HIGH_PERFORMANCE;
+-  attributes.explicitSwapControl=true; attributes.renderViaOffscreenBackBuffer=true;
+-  attributes.proxyContextToMainThread=EMSCRIPTEN_WEBGL_CONTEXT_PROXY_ALWAYS;
+-#if defined(WASM_SCENE_OFFSCREEN)
+-  // Experimental worker ownership requires the SDK's transferred canvas support.
+-  attributes.explicitSwapControl=false; attributes.renderViaOffscreenBackBuffer=false;
+-  attributes.proxyContextToMainThread=EMSCRIPTEN_WEBGL_CONTEXT_PROXY_DISALLOW;
+-  gpuProfiling=false; // The main-thread timer probe cannot access a transferred context.
+-#endif
+-  webgl=emscripten_webgl_create_context("#canvas",&attributes);
+-  if (webgl<=0 || emscripten_webgl_make_context_current(webgl)!=EMSCRIPTEN_RESULT_SUCCESS) return 25;
+-  device=Renderer::Backend::GL::CDevice::Create(nullptr);
++  SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION,3);
++  SDL_GL_SetAttribute(SDL_GL_CONTEXT_MINOR_VERSION,3);
++  SDL_GL_SetAttribute(SDL_GL_CONTEXT_PROFILE_MASK,SDL_GL_CONTEXT_PROFILE_COMPATIBILITY);
++  SDL_GL_SetAttribute(SDL_GL_DOUBLEBUFFER,1);
++  SDL_GL_SetAttribute(SDL_GL_DEPTH_SIZE,24);
++  SDL_GL_SetAttribute(SDL_GL_STENCIL_SIZE,8);
++  window=SDL_CreateWindow("0 A.D. pinned native scene benchmark",SDL_WINDOWPOS_CENTERED,SDL_WINDOWPOS_CENTERED,width,height,SDL_WINDOW_OPENGL|SDL_WINDOW_FULLSCREEN_DESKTOP);
++  if (!window) return 21;
++  device=Renderer::Backend::GL::CDevice::Create(window);
+   if (!device) return 22;
++  std::printf("NATIVE_RENDERER %s\nNATIVE_DRIVER %s\n",device->GetName().c_str(),device->GetDriverInformation().c_str());
+   renderer=std::make_unique<CRenderer>(device.get(),input,width,height);
+   sim=std::make_unique<CSimulation2>(&units,*g_ScriptContext,&terrain,CSimulation2::DEFAULT_SCRIPTS);
+   sim->ResetState();
+@@ -258,7 +270,7 @@
+   renderer->GetSceneRenderer().GetSkyManager().SetSkySet(L"default");
+   if (!LoadMap()) return 31;
+   context=device->CreateCommandContext();
+-  swapChain=device->CreateSwapChain("browser",nullptr,width,height,false,nullptr);
++  swapChain=device->CreateSwapChain("native",window,width,height,false,nullptr);
+   if (!context || !swapChain) return 23;
+   UpdateCamera();
+   return 0;
+@@ -353,15 +365,7 @@
+   }
+   // LoadMap can clear the scene before reporting an error. Never draw after stop.
+   if (stop) return;
+-  int w,h;
+-  if (emscripten_get_canvas_element_size("#canvas",&w,&h)==EMSCRIPTEN_RESULT_SUCCESS &&
+-      w>0 && h>0 && (w!=width || h!=height)) {
+-   width=w; height=h;
+-   renderer->DestroyViewSizeDependentObjects();
+-   renderer->CreateViewSizeDependentObjects(width,height);
+-   swapChain=device->CreateSwapChain("browser",nullptr,width,height,false,nullptr);
+-   std::printf("SCENE_RESIZED %d %d\n",width,height);
+-  }
++
+   UpdateCamera();
+   const double now=emscripten_get_now();
+   const double elapsed=std::clamp(now-previous,0.0,1000.0); previous=now;
+@@ -375,30 +379,7 @@
+   renderer->GetTextureManager().MakeUploadProgress(context.get());
+   uploadMs=emscripten_get_now()-stageStart; stageStart=emscripten_get_now();
+   gpuProbeProxyMs=0;
+-  if (gpuProfiling) {
+-   const double probeStart=emscripten_get_now();
+-   gpuMs=MAIN_THREAD_EM_ASM_DOUBLE({
+-    const gl=Module['canvas'].getContext('webgl2');
+-    const state=Module['sceneGpuTimer'] ??= ({gl, ext:gl.getExtension('EXT_disjoint_timer_query_webgl2'), pending:[], active:null});
+-    if (!state.ext) return -1;
+-    let value=-1;
+-    const disjoint=gl.getParameter(state.ext.GPU_DISJOINT_EXT);
+-    while (state.pending.length && (disjoint || gl.getQueryParameter(state.pending[0],gl.QUERY_RESULT_AVAILABLE))) {
+-     const q=state.pending.shift();
+-     if (!disjoint) {
+-      const ns=gl.getQueryParameter(q,gl.QUERY_RESULT);
+-      if (Number.isFinite(ns)) value=ns/1000000;
+-     }
+-     gl.deleteQuery(q);
+-    }
+-    if (state.pending.length<8) {
+-     state.active=gl.createQuery();
+-     if (state.active) gl.beginQuery(state.ext.TIME_ELAPSED_EXT,state.active);
+-    }
+-    return value;
+-   });
+-   gpuProbeProxyMs+=emscripten_get_now()-probeStart;
+-  }
++
+   stageStart=emscripten_get_now();
+   renderer->BeginFrame();
+   auto& sr=renderer->GetSceneRenderer();
+@@ -412,21 +393,9 @@
+   context->EndFramebufferPass(); context->Flush();
+   rendererMs=emscripten_get_now()-stageStart; stageStart=emscripten_get_now();
+   swapChain->Present();
+-#if !defined(WASM_SCENE_OFFSCREEN)
+-  if (emscripten_webgl_commit_frame()!=EMSCRIPTEN_RESULT_SUCCESS) {stop=true; exitCode=34; return;}
+-#endif
++
+   presentMs=emscripten_get_now()-stageStart;
+-  if (gpuProfiling) {
+-   const double probeStart=emscripten_get_now();
+-   MAIN_THREAD_EM_ASM({
+-    const state=Module['sceneGpuTimer'];
+-    if (state?.active) {
+-     state.gl.endQuery(state.ext.TIME_ELAPSED_EXT);
+-     state.pending.push(state.active); state.active=null;
+-    }
+-   });
+-   gpuProbeProxyMs+=emscripten_get_now()-probeStart;
+-  }
++
+   ++frames;
+ #if defined(WASM_SCENE_SCRIPT_TIMING)
+   scriptMs=WasmSceneProfile::scriptMs;
+@@ -442,80 +411,39 @@
+  }
+ };
+ 
+-std::unique_ptr<SceneApplication> application;
+-long frameInterval = 0;
+-double nextFrameTime=0;
+-em_proxying_queue* frameQueue=nullptr;
+-pthread_t sceneThread;
+-std::atomic<bool> frameClockRunning{false}, framePending{false};
+-bool useDisplayClock=false;
+-extern "C" EMSCRIPTEN_KEEPALIVE void StopSceneFrameClock()
++
++int main(int argc, char** argv)
+ {
+- frameClockRunning=false;
++ (void)argc; (void)argv;
++ std::setvbuf(stdout,nullptr,_IONBF,0);
++ std::puts("NATIVE_BENCHMARK_START");
++ wutil_Init(); wdir_watch_Init();
++ EarlyInit(); CConfigDB::Initialise();
++ int code=0;
++ {
++  SceneApplication application;
++  application.width=1920; application.height=1080;
++  code=application.Initialize();
++  if (!code) {
++   const char* seconds=std::getenv("SCENE_BENCHMARK_SECONDS");
++   const double duration=seconds ? std::strtod(seconds,nullptr) : 1022;
++   double start=0, deadline=emscripten_get_now();
++   while (!application.stop && !nativeQuitRequested) {
++    application.Frame();
++    const double now=emscripten_get_now();
++    if (application.ready && !start) start=now;
++    if (start && now-start>=duration*1000) application.stop=true;
++    deadline+=1000.0/60.0;
++    if (deadline<now) deadline=now;
++    const double delay=deadline-emscripten_get_now();
++    if (delay>0) SDL_Delay(static_cast<Uint32>(delay));
++   }
++   code=nativeQuitRequested ? nativeExitStatus : application.exitCode;
++  }
++ }
++ CConfigDB::Shutdown();
++ g_Profiler2.Shutdown();
++ wdir_watch_Shutdown(); wutil_Shutdown();
++ std::printf("NATIVE_SCENE_EXIT %d\n",code);
++ return code;
+ }
+-void FrameCallback(void*)
+-{
+- const double now=emscripten_get_now();
+- if (!nextFrameTime) nextFrameTime=now;
+- if (!useDisplayClock && now<nextFrameTime) {
+-  frameInterval=emscripten_set_timeout(FrameCallback,std::max(1.0,nextFrameTime-now),nullptr);
+-  return;
+- }
+- application->Frame();
+- if (application->stop) {
+-  const int code=application->exitCode;
+-  frameClockRunning=false;
+-  if (useDisplayClock) emscripten_clear_interval(frameInterval);
+-  application.reset(); CConfigDB::Shutdown();
+-  std::puts("SCENE_STOPPED"); emscripten_force_exit(code);
+-  return;
+- }
+- framePending=false;
+- if (useDisplayClock) return;
+- nextFrameTime+=1000.0/60.0;
+- const double afterFrame=emscripten_get_now();
+- if (nextFrameTime<afterFrame) nextFrameTime=afterFrame+1000.0/60.0;
+- frameInterval=emscripten_set_timeout(FrameCallback,std::max(1.0,nextFrameTime-afterFrame),nullptr);
+-}
+-bool DisplayFrame(double timestamp,void*)
+-{
+- if (!frameClockRunning) return false;
+- // Keep the original default 60 FPS cap on faster displays. The one-ms
+- // scheduling allowance absorbs RAF timestamp jitter, not acceptance error.
+- static double deadline=0;
+- if (timestamp<deadline-1.0) return true;
+- deadline=std::max(deadline+1000.0/60.0,timestamp);
+- if (!framePending.exchange(true) &&
+-     !emscripten_proxy_async(frameQueue,sceneThread,FrameCallback,nullptr))
+-  framePending=false;
+- return true;
+-}
+-void StartDisplayClock(void*)
+-{
+- emscripten_request_animation_frame_loop(DisplayFrame,nullptr);
+-}
+-void PollHiddenWindow(void*)
+-{
+- // RAF is suspended in hidden tabs. Process focus/close events at low rate so
+- // a hidden game can still pause or terminate; hidden frames never pass gates.
+- if (frameClockRunning && MAIN_THREAD_EM_ASM_INT({return document.hidden;}) &&
+-     !framePending.exchange(true)) FrameCallback(nullptr);
+-}
+-int main()
+-{
+- Threading::SetMainThread(); timer_Init(); CConfigDB::Initialise();
+- application=std::make_unique<SceneApplication>();
+- const int result=application->Initialize();
+- if (result) {application.reset(); CConfigDB::Shutdown(); return result;}
+- useDisplayClock=MAIN_THREAD_EM_ASM_INT({return new URL(location.href).searchParams.get('frameClock')!=='timer';});
+- if (useDisplayClock) {
+-  sceneThread=pthread_self(); frameQueue=em_proxying_queue_create();
+-  frameClockRunning=true;
+-  if (!frameQueue || !emscripten_proxy_sync(frameQueue,emscripten_main_runtime_thread_id(),StartDisplayClock,nullptr)) {
+-   application.reset(); CConfigDB::Shutdown(); return 35;
+-  }
+-  frameInterval=emscripten_set_interval(PollHiddenWindow,250,nullptr);
+- } else frameInterval = emscripten_set_timeout(FrameCallback,0,nullptr);
+- emscripten_exit_with_live_runtime();
+- return 0;
+-}

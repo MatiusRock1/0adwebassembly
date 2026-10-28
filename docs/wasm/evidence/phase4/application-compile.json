@@ -1,0 +1,4372 @@
+{
+  "status": "COMPILE_PASSED_NOT_LINKED",
+  "jobs": 2,
+  "audioEnabled": true,
+  "applicationLinked": false,
+  "headlessServiceAdapters": false,
+  "excludedNativePlatformUnits": {
+    "renderer/backend/vulkan/Buffer.cpp": "graphics",
+    "renderer/backend/vulkan/DescriptorManager.cpp": "graphics",
+    "renderer/backend/vulkan/Device.cpp": "graphics",
+    "renderer/backend/vulkan/DeviceCommandContext.cpp": "graphics",
+    "renderer/backend/vulkan/DeviceSelection.cpp": "graphics",
+    "renderer/backend/vulkan/Framebuffer.cpp": "graphics",
+    "renderer/backend/vulkan/Mapping.cpp": "graphics",
+    "renderer/backend/vulkan/PipelineState.cpp": "graphics",
+    "renderer/backend/vulkan/RenderPassManager.cpp": "graphics",
+    "renderer/backend/vulkan/RingCommandContext.cpp": "graphics",
+    "renderer/backend/vulkan/SamplerManager.cpp": "graphics",
+    "renderer/backend/vulkan/ShaderProgram.cpp": "graphics",
+    "renderer/backend/vulkan/SubmitScheduler.cpp": "graphics",
+    "renderer/backend/vulkan/SwapChain.cpp": "graphics",
+    "renderer/backend/vulkan/Texture.cpp": "graphics",
+    "renderer/backend/vulkan/Utilities.cpp": "graphics",
+    "renderer/backend/vulkan/VMA.cpp": "graphics",
+    "lib/sysdep/arch/amd64/amd64.cpp": "lowlevel",
+    "lib/sysdep/arch/x86_x64/apic.cpp": "lowlevel",
+    "lib/sysdep/arch/x86_x64/x86_x64.cpp": "lowlevel",
+    "lib/sysdep/os/linux/dir_watch_inotify.cpp": "lowlevel",
+    "lib/sysdep/os/linux/lcpu.cpp": "lowlevel",
+    "lib/sysdep/os/linux/ldbg.cpp": "lowlevel",
+    "lib/sysdep/os/linux/linux.cpp": "lowlevel",
+    "lib/sysdep/os/unix/udbg.cpp": "lowlevel",
+    "lib/sysdep/os/unix/ufilesystem.cpp": "lowlevel",
+    "lib/sysdep/os/unix/unix.cpp": "lowlevel",
+    "lib/sysdep/os/unix/unuma.cpp": "lowlevel",
+    "lib/sysdep/os/unix/uvm.cpp": "lowlevel",
+    "lib/sysdep/rtl/gcc/gcc.cpp": "lowlevel"
+  },
+  "failed": [],
+  "notAttempted": [],
+  "results": [
+    {
+      "source": "i18n/L10n.cpp",
+      "project": "gui",
+      "identity": "72e7b06672bb6dc18e7f68191d2a59714d59af9517e79cac0e90c67d47c88ab2",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/i18n_L10n.cpp.o",
+      "log": "/phase4-build/logs/i18n_L10n.cpp.log",
+      "seconds": 7.557402652004384
+    },
+    {
+      "source": "main.cpp",
+      "project": "application",
+      "identity": "42eff17202c63426497125a29abbd65d94a037954a7222c7229e7aece2b960b6",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/main.cpp.o",
+      "log": "/phase4-build/logs/main.cpp.log",
+      "seconds": 11.503828057000646
+    },
+    {
+      "source": "ps/CLogger.cpp",
+      "project": "engine",
+      "identity": "60089f8c0ef1912c80872b2c935864e4d6d23f9c21e93393dea9146ee50ee5e0",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/ps_CLogger.cpp.o",
+      "log": "/phase4-build/logs/ps_CLogger.cpp.log",
+      "seconds": 5.7851137180041405
+    },
+    {
+      "source": "ps/GameSetup/GameSetup.cpp",
+      "project": "engine",
+      "identity": "16ad7ac44a40de1e5f0428f7076669af659426a54caa3d619a77d4971edcc51b",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/ps_GameSetup_GameSetup.cpp.o",
+      "log": "/phase4-build/logs/ps_GameSetup_GameSetup.cpp.log",
+      "seconds": 11.1109903799952
+    },
+    {
+      "source": "ps/Profile.cpp",
+      "project": "engine",
+      "identity": "922628cd496720a5c0b2288921a7bc81ecf9342f087a86687c21f4ed62e5d221",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/ps_Profile.cpp.o",
+      "log": "/phase4-build/logs/ps_Profile.cpp.log",
+      "seconds": 3.461870867999096
+    },
+    {
+      "source": "ps/Profiler2.cpp",
+      "project": "engine",
+      "identity": "868696d65cfbe82622279ee162025289c6d184ea8eec6c926ae992c1470979fc",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/ps_Profiler2.cpp.o",
+      "log": "/phase4-build/logs/ps_Profiler2.cpp.log",
+      "seconds": 8.244089938001707
+    },
+    {
+      "source": "graphics/Camera.cpp",
+      "project": "graphics",
+      "identity": "19508029e13ca9a8e471b588b5858a8dd58880a20e1fd632b8ca29d468bae11b",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/graphics_Camera.cpp.o",
+      "log": "/phase4-build/logs/graphics_Camera.cpp.log",
+      "seconds": 4.726280517003033
+    },
+    {
+      "source": "graphics/CameraController.cpp",
+      "project": "graphics",
+      "identity": "bf98fea02c6e3c5c8da59fe1d61d2892c096e768b6d1d44a20418fa6d69cfccc",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/graphics_CameraController.cpp.o",
+      "log": "/phase4-build/logs/graphics_CameraController.cpp.log",
+      "seconds": 8.981549232994439
+    },
+    {
+      "source": "graphics/Canvas2D.cpp",
+      "project": "graphics",
+      "identity": "b9e23c0525ac924d083c970f34e1d8faac4145e12cdad1427be89cfbb60f14aa",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/graphics_Canvas2D.cpp.o",
+      "log": "/phase4-build/logs/graphics_Canvas2D.cpp.log",
+      "seconds": 6.006298243002675
+    },
+    {
+      "source": "graphics/CinemaManager.cpp",
+      "project": "graphics",
+      "identity": "02dcfab36f9982b7b6e64023a725041818bc307c0ec409e520790ccf20d417c8",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/graphics_CinemaManager.cpp.o",
+      "log": "/phase4-build/logs/graphics_CinemaManager.cpp.log",
+      "seconds": 6.677354272003868
+    },
+    {
+      "source": "graphics/ColladaManager.cpp",
+      "project": "graphics",
+      "identity": "33f4228d45745c62a2f26910fd535df0c701122eefcaa89f87c01d6e11d47761",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/graphics_ColladaManager.cpp.o",
+      "log": "/phase4-build/logs/graphics_ColladaManager.cpp.log",
+      "seconds": 10.156931701996655
+    },
+    {
+      "source": "graphics/Color.cpp",
+      "project": "graphics",
+      "identity": "c78acda2bf4aca8bf03ce5e2b464ca5d2e1d6f59db84d8b0c5e2bc7beadafeb7",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/graphics_Color.cpp.o",
+      "log": "/phase4-build/logs/graphics_Color.cpp.log",
+      "seconds": 8.247989235002024
+    },
+    {
+      "source": "graphics/Decal.cpp",
+      "project": "graphics",
+      "identity": "a1b0f14cf5a9a40eaf2ea73d692bada7d487cde2c5d7d8e6517d00d3f357e453",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/graphics_Decal.cpp.o",
+      "log": "/phase4-build/logs/graphics_Decal.cpp.log",
+      "seconds": 3.5759144730036496
+    },
+    {
+      "source": "graphics/Font.cpp",
+      "project": "graphics",
+      "identity": "91d251eceb66172d47b23358c6016c22dbc41d02c11c3262f5e63c1e345d639e",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/graphics_Font.cpp.o",
+      "log": "/phase4-build/logs/graphics_Font.cpp.log",
+      "seconds": 10.607921135000652
+    },
+    {
+      "source": "graphics/FontManager.cpp",
+      "project": "graphics",
+      "identity": "fb1433ec5be6dec1ae20720bb27af24f736840c9bc7f30bbb06e94b7aac6c096",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/graphics_FontManager.cpp.o",
+      "log": "/phase4-build/logs/graphics_FontManager.cpp.log",
+      "seconds": 14.217314205001458
+    },
+    {
+      "source": "graphics/FontMetrics.cpp",
+      "project": "graphics",
+      "identity": "461bbdac04a23b1b32a2ee32dd5b0a5fe8033938a4f1e4e5bc8f8a362814e229",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/graphics_FontMetrics.cpp.o",
+      "log": "/phase4-build/logs/graphics_FontMetrics.cpp.log",
+      "seconds": 3.190944422996836
+    },
+    {
+      "source": "graphics/GameView.cpp",
+      "project": "graphics",
+      "identity": "a7e6469fed95b37d3f593bf912d57fa302205f9a5d521c48bb346f31cbac3bb1",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/graphics_GameView.cpp.o",
+      "log": "/phase4-build/logs/graphics_GameView.cpp.log",
+      "seconds": 6.566186865005875
+    },
+    {
+      "source": "graphics/HFTracer.cpp",
+      "project": "graphics",
+      "identity": "e9a7ea4dbc78ec999a33545b902b9f5178bc66961aa3f3358423df351b351de0",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/graphics_HFTracer.cpp.o",
+      "log": "/phase4-build/logs/graphics_HFTracer.cpp.log",
+      "seconds": 2.250798756002041
+    },
+    {
+      "source": "graphics/HeightMipmap.cpp",
+      "project": "graphics",
+      "identity": "af73334e1b3bfdc68e264455fa61fe7adce2b33408ca0ea7c704e19fcc7139cb",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/graphics_HeightMipmap.cpp.o",
+      "log": "/phase4-build/logs/graphics_HeightMipmap.cpp.log",
+      "seconds": 5.076094848001958
+    },
+    {
+      "source": "graphics/ICameraController.cpp",
+      "project": "graphics",
+      "identity": "03a9c4ae29b974245944835c15d5fc3fda28cb28c167c1023594ad41618244b9",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/graphics_ICameraController.cpp.o",
+      "log": "/phase4-build/logs/graphics_ICameraController.cpp.log",
+      "seconds": 4.3148519699971075
+    },
+    {
+      "source": "graphics/LOSTexture.cpp",
+      "project": "graphics",
+      "identity": "da2d6d73471530fa3ffc8252b999515bcc67ec9081a1a1a37414b77a5ec4b697",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/graphics_LOSTexture.cpp.o",
+      "log": "/phase4-build/logs/graphics_LOSTexture.cpp.log",
+      "seconds": 10.665866966999602
+    },
+    {
+      "source": "graphics/LightEnv.cpp",
+      "project": "graphics",
+      "identity": "128458d1983822425e464f5c78c6058ac289e0f873015947f07e15d2de0e6e4d",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/graphics_LightEnv.cpp.o",
+      "log": "/phase4-build/logs/graphics_LightEnv.cpp.log",
+      "seconds": 4.972170358996664
+    },
+    {
+      "source": "graphics/MapGenerator.cpp",
+      "project": "graphics",
+      "identity": "08c606aa387e58cbb2668311481d13f61e90a3508d7e030a74942dcd978c0ae3",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/graphics_MapGenerator.cpp.o",
+      "log": "/phase4-build/logs/graphics_MapGenerator.cpp.log",
+      "seconds": 12.190097516002425
+    },
+    {
+      "source": "graphics/MapIO.cpp",
+      "project": "graphics",
+      "identity": "41f3814a6306dcc6b7aa361e7cda2c88f752332ef28b44eb9bef13b321a44351",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/graphics_MapIO.cpp.o",
+      "log": "/phase4-build/logs/graphics_MapIO.cpp.log",
+      "seconds": 3.419304857001407
+    },
+    {
+      "source": "graphics/MapReader.cpp",
+      "project": "graphics",
+      "identity": "49b80463e5d4f8feb4c1e216f4c74b37ad5e0a2d71a74ced6b5d37b354705846",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/graphics_MapReader.cpp.o",
+      "log": "/phase4-build/logs/graphics_MapReader.cpp.log",
+      "seconds": 15.766739640996093
+    },
+    {
+      "source": "graphics/MapWriter.cpp",
+      "project": "graphics",
+      "identity": "53c9bf987ed6f7abb814784ffc36aa290b6c9a8a2f1ab3143a278afc6b6ca81e",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/graphics_MapWriter.cpp.o",
+      "log": "/phase4-build/logs/graphics_MapWriter.cpp.log",
+      "seconds": 10.856086382002104
+    },
+    {
+      "source": "graphics/Material.cpp",
+      "project": "graphics",
+      "identity": "3c301ca6498591a0d69d0bf13a7128f0394e7bb74d4320c6618f51082308f161",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/graphics_Material.cpp.o",
+      "log": "/phase4-build/logs/graphics_Material.cpp.log",
+      "seconds": 3.502234503001091
+    },
+    {
+      "source": "graphics/MaterialManager.cpp",
+      "project": "graphics",
+      "identity": "e8e78cd936c33b4035361ffa64bfa181513762b4c1bbb5d0ab545ae21e600a1a",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/graphics_MaterialManager.cpp.o",
+      "log": "/phase4-build/logs/graphics_MaterialManager.cpp.log",
+      "seconds": 8.856487453005684
+    },
+    {
+      "source": "graphics/MeshManager.cpp",
+      "project": "graphics",
+      "identity": "fe26afb6e26f43d0cae0c28f768b943ca9c5918708343425ff0da04ad6419016",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/graphics_MeshManager.cpp.o",
+      "log": "/phase4-build/logs/graphics_MeshManager.cpp.log",
+      "seconds": 9.542435227995156
+    },
+    {
+      "source": "graphics/MiniMapTexture.cpp",
+      "project": "graphics",
+      "identity": "edaed3af30b7125eba8fdaa2ab2afdaad128b9d564595157a578c0760d1ee7a5",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/graphics_MiniMapTexture.cpp.o",
+      "log": "/phase4-build/logs/graphics_MiniMapTexture.cpp.log",
+      "seconds": 13.905416567999055
+    },
+    {
+      "source": "graphics/MiniPatch.cpp",
+      "project": "graphics",
+      "identity": "93aec7fe9c78965285e92d07517a4d878914032b58315f8cbc88706f1f74295c",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/graphics_MiniPatch.cpp.o",
+      "log": "/phase4-build/logs/graphics_MiniPatch.cpp.log",
+      "seconds": 1.8947824759961804
+    },
+    {
+      "source": "graphics/Model.cpp",
+      "project": "graphics",
+      "identity": "48a5baa624f4b7844808c746fdaf6eca71e5bde84acfe944a6e550d34f8070ec",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/graphics_Model.cpp.o",
+      "log": "/phase4-build/logs/graphics_Model.cpp.log",
+      "seconds": 10.921855055006745
+    },
+    {
+      "source": "graphics/ModelAbstract.cpp",
+      "project": "graphics",
+      "identity": "8717f6768461d123d34638af2fe889ce49591af4e9acb9df479a4d296435833e",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/graphics_ModelAbstract.cpp.o",
+      "log": "/phase4-build/logs/graphics_ModelAbstract.cpp.log",
+      "seconds": 7.128469789000519
+    },
+    {
+      "source": "graphics/ModelDef.cpp",
+      "project": "graphics",
+      "identity": "afeaa2caca48e0bcc0e654e02997aa80a8e42855d1658710db1ada8570f0eab2",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/graphics_ModelDef.cpp.o",
+      "log": "/phase4-build/logs/graphics_ModelDef.cpp.log",
+      "seconds": 5.451688584995281
+    },
+    {
+      "source": "graphics/ObjectBase.cpp",
+      "project": "graphics",
+      "identity": "2aac64069968b0be81c558787099a73a18fc6161d410132a1586b5ae45e82e80",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/graphics_ObjectBase.cpp.o",
+      "log": "/phase4-build/logs/graphics_ObjectBase.cpp.log",
+      "seconds": 14.546977146004792
+    },
+    {
+      "source": "graphics/ObjectEntry.cpp",
+      "project": "graphics",
+      "identity": "aff2dc4c0f1d217ce9796f814f76b228326b0c9bd4625a188e4407825e0a186c",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/graphics_ObjectEntry.cpp.o",
+      "log": "/phase4-build/logs/graphics_ObjectEntry.cpp.log",
+      "seconds": 11.251685094001004
+    },
+    {
+      "source": "graphics/ObjectManager.cpp",
+      "project": "graphics",
+      "identity": "64aadf1a57d80584fac0b5563ae59eec5e6905584eeba81e8ab0374052232cfd",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/graphics_ObjectManager.cpp.o",
+      "log": "/phase4-build/logs/graphics_ObjectManager.cpp.log",
+      "seconds": 12.054266974999337
+    },
+    {
+      "source": "graphics/Overlay.cpp",
+      "project": "graphics",
+      "identity": "b4a9fbe3c0eaf64ff2df0108b55bddf22a5c4fb0d90dbdc1a40c377f4037225c",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/graphics_Overlay.cpp.o",
+      "log": "/phase4-build/logs/graphics_Overlay.cpp.log",
+      "seconds": 4.402706756998668
+    },
+    {
+      "source": "graphics/ParticleEmitter.cpp",
+      "project": "graphics",
+      "identity": "fbb24f144228d121256e906b2e9d090057d7d06984c63658c78108087bf819d9",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/graphics_ParticleEmitter.cpp.o",
+      "log": "/phase4-build/logs/graphics_ParticleEmitter.cpp.log",
+      "seconds": 10.348511435993714
+    },
+    {
+      "source": "graphics/ParticleEmitterType.cpp",
+      "project": "graphics",
+      "identity": "817b9eaa24a3620597de84696a88dcba5f9817f2fb13363125ed171f28733b8f",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/graphics_ParticleEmitterType.cpp.o",
+      "log": "/phase4-build/logs/graphics_ParticleEmitterType.cpp.log",
+      "seconds": 8.18329408599675
+    },
+    {
+      "source": "graphics/ParticleManager.cpp",
+      "project": "graphics",
+      "identity": "b3e33bb4c0301ba94d7262f5f9f25caa20ea6e400a9d2ed2fc87f65d2a077f8e",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/graphics_ParticleManager.cpp.o",
+      "log": "/phase4-build/logs/graphics_ParticleManager.cpp.log",
+      "seconds": 4.400564641000528
+    },
+    {
+      "source": "graphics/Patch.cpp",
+      "project": "graphics",
+      "identity": "dfd1eae4d599ad365c89697b437e3676267b3d4813d8fabb3f5dd4c3072ff100",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/graphics_Patch.cpp.o",
+      "log": "/phase4-build/logs/graphics_Patch.cpp.log",
+      "seconds": 4.196242107995204
+    },
+    {
+      "source": "graphics/PreprocessorWrapper.cpp",
+      "project": "graphics",
+      "identity": "28da9b061041278e3e7d9eec9ca280cdd8be30275ae4386b9a4d1bfc72e5a1f7",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/graphics_PreprocessorWrapper.cpp.o",
+      "log": "/phase4-build/logs/graphics_PreprocessorWrapper.cpp.log",
+      "seconds": 8.84616887899756
+    },
+    {
+      "source": "graphics/ShaderDefines.cpp",
+      "project": "graphics",
+      "identity": "415d0c2085f14c0a6798879ce7ea74cff3f685fb228dee8eed5fcd5d2efe91e1",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/graphics_ShaderDefines.cpp.o",
+      "log": "/phase4-build/logs/graphics_ShaderDefines.cpp.log",
+      "seconds": 6.040655479999259
+    },
+    {
+      "source": "graphics/ShaderManager.cpp",
+      "project": "graphics",
+      "identity": "24125ee0894bbf1f0d6d7bec13a202e14b3500922d65f118b030a7d458149504",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/graphics_ShaderManager.cpp.o",
+      "log": "/phase4-build/logs/graphics_ShaderManager.cpp.log",
+      "seconds": 10.86812434699823
+    },
+    {
+      "source": "graphics/ShaderProgram.cpp",
+      "project": "graphics",
+      "identity": "9307fed7ce21858dcfd90da257870f33dded25f21559304ad635364ce87f16d4",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/graphics_ShaderProgram.cpp.o",
+      "log": "/phase4-build/logs/graphics_ShaderProgram.cpp.log",
+      "seconds": 5.20695890099887
+    },
+    {
+      "source": "graphics/ShaderTechnique.cpp",
+      "project": "graphics",
+      "identity": "48ce8697f75e94bd3fc7b94e6f1273eb88f2b580a33392aeaf325e38f2dc2ffd",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/graphics_ShaderTechnique.cpp.o",
+      "log": "/phase4-build/logs/graphics_ShaderTechnique.cpp.log",
+      "seconds": 5.356387723993976
+    },
+    {
+      "source": "graphics/SkeletonAnimDef.cpp",
+      "project": "graphics",
+      "identity": "f33cbebb512f30fe43d311679aae95fbb4b5555422447f0dd4b98c4c21c378a4",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/graphics_SkeletonAnimDef.cpp.o",
+      "log": "/phase4-build/logs/graphics_SkeletonAnimDef.cpp.log",
+      "seconds": 7.309224290002021
+    },
+    {
+      "source": "graphics/SkeletonAnimManager.cpp",
+      "project": "graphics",
+      "identity": "9fb2993fcc5602c9c76976ac6fe13b8e099f4dbae8f0b0bc51c0b5e57e0c9be7",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/graphics_SkeletonAnimManager.cpp.o",
+      "log": "/phase4-build/logs/graphics_SkeletonAnimManager.cpp.log",
+      "seconds": 7.490189812000608
+    },
+    {
+      "source": "graphics/SmoothedValue.cpp",
+      "project": "graphics",
+      "identity": "83aa3302b7cb1459da6fa17bf4ba8b918f0945ba029bba9efb8c3dcc219e3f83",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/graphics_SmoothedValue.cpp.o",
+      "log": "/phase4-build/logs/graphics_SmoothedValue.cpp.log",
+      "seconds": 3.499731141004304
+    },
+    {
+      "source": "graphics/Terrain.cpp",
+      "project": "graphics",
+      "identity": "11a007db2515895239462cea53dc09783d655ba36de840913f944d4761516e7e",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/graphics_Terrain.cpp.o",
+      "log": "/phase4-build/logs/graphics_Terrain.cpp.log",
+      "seconds": 4.499310710998543
+    },
+    {
+      "source": "graphics/TerrainProperties.cpp",
+      "project": "graphics",
+      "identity": "b012c9c3562a6280b34d8c65b4a35b90b3449264b6565b718510c803525ed786",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/graphics_TerrainProperties.cpp.o",
+      "log": "/phase4-build/logs/graphics_TerrainProperties.cpp.log",
+      "seconds": 8.702417207001417
+    },
+    {
+      "source": "graphics/TerrainTextureEntry.cpp",
+      "project": "graphics",
+      "identity": "e1f858e13f77bc8d6c09aba0532cb0c33908745f0764ebf281239fa417d610cd",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/graphics_TerrainTextureEntry.cpp.o",
+      "log": "/phase4-build/logs/graphics_TerrainTextureEntry.cpp.log",
+      "seconds": 8.471909416002745
+    },
+    {
+      "source": "graphics/TerrainTextureManager.cpp",
+      "project": "graphics",
+      "identity": "a55f6edfc12a44d2b3b6dcb8b8ef1964475d5bc5861475a0511dcdcfcb889739",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/graphics_TerrainTextureManager.cpp.o",
+      "log": "/phase4-build/logs/graphics_TerrainTextureManager.cpp.log",
+      "seconds": 8.610642769999686
+    },
+    {
+      "source": "graphics/TerritoryBoundary.cpp",
+      "project": "graphics",
+      "identity": "ad2949871c9d736fcf9b1fbb734e35180ec7aa834ae777cbbb11c4f6b86ce22d",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/graphics_TerritoryBoundary.cpp.o",
+      "log": "/phase4-build/logs/graphics_TerritoryBoundary.cpp.log",
+      "seconds": 5.4412016439964646
+    },
+    {
+      "source": "graphics/TerritoryTexture.cpp",
+      "project": "graphics",
+      "identity": "649f61893e7b78bca0cc69ba6428c322e61015e9f214013725c0849ea0469b8d",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/graphics_TerritoryTexture.cpp.o",
+      "log": "/phase4-build/logs/graphics_TerritoryTexture.cpp.log",
+      "seconds": 5.693551452000975
+    },
+    {
+      "source": "graphics/TextRenderer.cpp",
+      "project": "graphics",
+      "identity": "a1dc44ae6b19f02da4e02bc9a5b20f4e1fd108383be2281edaf2bc61a7b9c25c",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/graphics_TextRenderer.cpp.o",
+      "log": "/phase4-build/logs/graphics_TextRenderer.cpp.log",
+      "seconds": 8.938090318995819
+    },
+    {
+      "source": "graphics/TextureConverter.cpp",
+      "project": "graphics",
+      "identity": "0ed30080ce1e615735e346667fa2ff7c651713dbff6e09f11c01a05941b31189",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/graphics_TextureConverter.cpp.o",
+      "log": "/phase4-build/logs/graphics_TextureConverter.cpp.log",
+      "seconds": 7.964065293999738
+    },
+    {
+      "source": "graphics/TextureManager.cpp",
+      "project": "graphics",
+      "identity": "198f3bffa8bc241e67f0274d7e9601e5b8600aa9977e9174d0a8dc83124719e6",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/graphics_TextureManager.cpp.o",
+      "log": "/phase4-build/logs/graphics_TextureManager.cpp.log",
+      "seconds": 11.19877708000422
+    },
+    {
+      "source": "graphics/Unit.cpp",
+      "project": "graphics",
+      "identity": "5cde66bf0fa1abf4549a42a94b411a2c3df1c133dad1cb8b6ee6a4d7a0ff35ee",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/graphics_Unit.cpp.o",
+      "log": "/phase4-build/logs/graphics_Unit.cpp.log",
+      "seconds": 9.490531659001135
+    },
+    {
+      "source": "graphics/UnitAnimation.cpp",
+      "project": "graphics",
+      "identity": "13f9c5f61310268a8597cddf7d8b556091921c86966792e21bb74f02e8433b36",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/graphics_UnitAnimation.cpp.o",
+      "log": "/phase4-build/logs/graphics_UnitAnimation.cpp.log",
+      "seconds": 5.827242962994205
+    },
+    {
+      "source": "graphics/UnitManager.cpp",
+      "project": "graphics",
+      "identity": "e5daec4a29b25d627f1ab8914244773379bfdcd669d341190bba407b69f502e4",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/graphics_UnitManager.cpp.o",
+      "log": "/phase4-build/logs/graphics_UnitManager.cpp.log",
+      "seconds": 2.518663089002075
+    },
+    {
+      "source": "graphics/scripting/JSInterface_GameView.cpp",
+      "project": "graphics",
+      "identity": "2bc369ea3e7b10b06d4013127328e23bf1590bad5167be65404eb03e83e16124",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/graphics_scripting_JSInterface_GameView.cpp.o",
+      "log": "/phase4-build/logs/graphics_scripting_JSInterface_GameView.cpp.log",
+      "seconds": 9.665393279996351
+    },
+    {
+      "source": "gui/CGUI.cpp",
+      "project": "gui",
+      "identity": "30647944f3b64e2db7b551fed810f51e78fa6aff8b721de53302f39b22946163",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/gui_CGUI.cpp.o",
+      "log": "/phase4-build/logs/gui_CGUI.cpp.log",
+      "seconds": 14.770270844004699
+    },
+    {
+      "source": "gui/CGUIScrollBarHorizontal.cpp",
+      "project": "gui",
+      "identity": "393e82332d230e97b8166d05e524e4c84b2ab79018698c420cf7cb300a0027d4",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/gui_CGUIScrollBarHorizontal.cpp.o",
+      "log": "/phase4-build/logs/gui_CGUIScrollBarHorizontal.cpp.log",
+      "seconds": 8.46551358299621
+    },
+    {
+      "source": "gui/CGUIScrollBarVertical.cpp",
+      "project": "gui",
+      "identity": "3ab1d9a853bdccc264abf6704959de7bb8f14207356fd3e8bda98fc5199b88f8",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/gui_CGUIScrollBarVertical.cpp.o",
+      "log": "/phase4-build/logs/gui_CGUIScrollBarVertical.cpp.log",
+      "seconds": 9.231236261002778
+    },
+    {
+      "source": "gui/CGUISetting.cpp",
+      "project": "gui",
+      "identity": "0932d8ec98a45d49c2ef97c037301ccc604dad75a4cf25a801b56ad0257d39f7",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/gui_CGUISetting.cpp.o",
+      "log": "/phase4-build/logs/gui_CGUISetting.cpp.log",
+      "seconds": 9.176682618002815
+    },
+    {
+      "source": "gui/CGUISprite.cpp",
+      "project": "gui",
+      "identity": "c5664a347b512281a92eb2822c7b90405cf63d060cca36d31b4289e9feefbe56",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/gui_CGUISprite.cpp.o",
+      "log": "/phase4-build/logs/gui_CGUISprite.cpp.log",
+      "seconds": 4.539952079998329
+    },
+    {
+      "source": "gui/CGUIText.cpp",
+      "project": "gui",
+      "identity": "fb424704fd1c257bc80f19f5eb624a1ba3bdb4766107e709d964d2539eb2cf8b",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/gui_CGUIText.cpp.o",
+      "log": "/phase4-build/logs/gui_CGUIText.cpp.log",
+      "seconds": 6.33264710399817
+    },
+    {
+      "source": "gui/GUIManager.cpp",
+      "project": "gui",
+      "identity": "42a405ec915edc9b838fde602b8cde9f8d57ea2a991eb86fa6d9000f1daf2a89",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/gui_GUIManager.cpp.o",
+      "log": "/phase4-build/logs/gui_GUIManager.cpp.log",
+      "seconds": 11.838168281996332
+    },
+    {
+      "source": "gui/GUIObjectTypes.cpp",
+      "project": "gui",
+      "identity": "03eb487a44d021e6798f2243a21c27e1be8091afaca7addcb6b9315aee7d6e36",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/gui_GUIObjectTypes.cpp.o",
+      "log": "/phase4-build/logs/gui_GUIObjectTypes.cpp.log",
+      "seconds": 5.847803042001033
+    },
+    {
+      "source": "gui/GUIRenderer.cpp",
+      "project": "gui",
+      "identity": "6ebe572005daa214c51e4dad117ec8adfd607c3ca4318b19f17ef7e02607685a",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/gui_GUIRenderer.cpp.o",
+      "log": "/phase4-build/logs/gui_GUIRenderer.cpp.log",
+      "seconds": 10.274521339997591
+    },
+    {
+      "source": "gui/GUIStringConversions.cpp",
+      "project": "gui",
+      "identity": "7fcd4a0193aea635738f04fd0d9ba413711fa9202fdea415586c7ba8c5302fbe",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/gui_GUIStringConversions.cpp.o",
+      "log": "/phase4-build/logs/gui_GUIStringConversions.cpp.log",
+      "seconds": 8.266058659006376
+    },
+    {
+      "source": "gui/GUITooltip.cpp",
+      "project": "gui",
+      "identity": "1e0abe77dcf2ea9b0b7ed65db07f2a1c341f645396839a76e20e17686b239a1f",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/gui_GUITooltip.cpp.o",
+      "log": "/phase4-build/logs/gui_GUITooltip.cpp.log",
+      "seconds": 10.13849199800461
+    },
+    {
+      "source": "gui/IGUIScrollBar.cpp",
+      "project": "gui",
+      "identity": "a9beb5180b28a0f188dc3d20a1f96c2691fbffd827bac5b364d673c8796a8a8d",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/gui_IGUIScrollBar.cpp.o",
+      "log": "/phase4-build/logs/gui_IGUIScrollBar.cpp.log",
+      "seconds": 5.197832311998354
+    },
+    {
+      "source": "gui/ObjectBases/IGUIButtonBehavior.cpp",
+      "project": "gui",
+      "identity": "e24e4b1cabac126837eac2b9bd6d2d0f9e8498002abf7e06cfadbb87daf0970c",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/gui_ObjectBases_IGUIButtonBehavior.cpp.o",
+      "log": "/phase4-build/logs/gui_ObjectBases_IGUIButtonBehavior.cpp.log",
+      "seconds": 5.3475444319992675
+    },
+    {
+      "source": "gui/ObjectBases/IGUIObject.cpp",
+      "project": "gui",
+      "identity": "dad920d4bffbe71385f90cc14d776ccb57d67a2c586f6938009d74a877a0ffb8",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/gui_ObjectBases_IGUIObject.cpp.o",
+      "log": "/phase4-build/logs/gui_ObjectBases_IGUIObject.cpp.log",
+      "seconds": 9.245416446996387
+    },
+    {
+      "source": "gui/ObjectBases/IGUIPanel.cpp",
+      "project": "gui",
+      "identity": "f4c8825b28ac5970a1461f35514c530ed469f4d2ea03356e6580decff6efdae3",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/gui_ObjectBases_IGUIPanel.cpp.o",
+      "log": "/phase4-build/logs/gui_ObjectBases_IGUIPanel.cpp.log",
+      "seconds": 5.193308439003886
+    },
+    {
+      "source": "gui/ObjectBases/IGUIScrollBarOwner.cpp",
+      "project": "gui",
+      "identity": "e04853d9764c65c6e6d441af011c6d920a6e0856ad85115114251fe6275e9bb3",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/gui_ObjectBases_IGUIScrollBarOwner.cpp.o",
+      "log": "/phase4-build/logs/gui_ObjectBases_IGUIScrollBarOwner.cpp.log",
+      "seconds": 3.667912709999655
+    },
+    {
+      "source": "gui/ObjectBases/IGUITextOwner.cpp",
+      "project": "gui",
+      "identity": "1b1dd12e6cad33687fe3bd7d99721ff60de03d16f112bcc3b03634dc16228d8f",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/gui_ObjectBases_IGUITextOwner.cpp.o",
+      "log": "/phase4-build/logs/gui_ObjectBases_IGUITextOwner.cpp.log",
+      "seconds": 3.226373978999618
+    },
+    {
+      "source": "gui/ObjectTypes/CButton.cpp",
+      "project": "gui",
+      "identity": "9ad1a86086ffa38edde17c000e63797fdaed259e9458edd99995a2bf9a89c9bd",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/gui_ObjectTypes_CButton.cpp.o",
+      "log": "/phase4-build/logs/gui_ObjectTypes_CButton.cpp.log",
+      "seconds": 3.625622599000053
+    },
+    {
+      "source": "gui/ObjectTypes/CChart.cpp",
+      "project": "gui",
+      "identity": "e67b6741f7bc7f720d248c5dfd00aa630ad7b91dd9c94987dc57912682629058",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/gui_ObjectTypes_CChart.cpp.o",
+      "log": "/phase4-build/logs/gui_ObjectTypes_CChart.cpp.log",
+      "seconds": 6.1362149589986075
+    },
+    {
+      "source": "gui/ObjectTypes/CCheckBox.cpp",
+      "project": "gui",
+      "identity": "5207eb540837ff7bf5e8283e3440887176615ddd02880b38a59427ae8683fd02",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/gui_ObjectTypes_CCheckBox.cpp.o",
+      "log": "/phase4-build/logs/gui_ObjectTypes_CCheckBox.cpp.log",
+      "seconds": 3.464536166000471
+    },
+    {
+      "source": "gui/ObjectTypes/CDropDown.cpp",
+      "project": "gui",
+      "identity": "3c42eb51b9f1e0343d500e7d2607f4005ef53a377a6740991e1d0f354034b42a",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/gui_ObjectTypes_CDropDown.cpp.o",
+      "log": "/phase4-build/logs/gui_ObjectTypes_CDropDown.cpp.log",
+      "seconds": 4.1001963969974895
+    },
+    {
+      "source": "gui/ObjectTypes/CHotkeyPicker.cpp",
+      "project": "gui",
+      "identity": "3ae6f0f4319915ce41c372363e2757a3e338e43515227d8d07f373455a34d1a4",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/gui_ObjectTypes_CHotkeyPicker.cpp.o",
+      "log": "/phase4-build/logs/gui_ObjectTypes_CHotkeyPicker.cpp.log",
+      "seconds": 6.242437305998465
+    },
+    {
+      "source": "gui/ObjectTypes/CImage.cpp",
+      "project": "gui",
+      "identity": "a49c19c8799b09e02b2dbbe63c0109d9ce2833dcda4b2aa7dc01a7836d1cfea4",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/gui_ObjectTypes_CImage.cpp.o",
+      "log": "/phase4-build/logs/gui_ObjectTypes_CImage.cpp.log",
+      "seconds": 3.4278801410036976
+    },
+    {
+      "source": "gui/ObjectTypes/CInput.cpp",
+      "project": "gui",
+      "identity": "ff06ef44895586dbeddf4418dc9d9c321b23a3ce705a2dd5153916b74b6f673f",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/gui_ObjectTypes_CInput.cpp.o",
+      "log": "/phase4-build/logs/gui_ObjectTypes_CInput.cpp.log",
+      "seconds": 5.336300993003533
+    },
+    {
+      "source": "gui/ObjectTypes/CList.cpp",
+      "project": "gui",
+      "identity": "37de580c4b9df6ef4d067a63a1b3fb2194eac6475fa42b993a77c7b9d195afef",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/gui_ObjectTypes_CList.cpp.o",
+      "log": "/phase4-build/logs/gui_ObjectTypes_CList.cpp.log",
+      "seconds": 4.196679127002426
+    },
+    {
+      "source": "gui/ObjectTypes/CMiniMap.cpp",
+      "project": "gui",
+      "identity": "eeae012e6d1e88dfc8e3f05be8df7010d35465868ee0dfe0c4f0e157d6e85999",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/gui_ObjectTypes_CMiniMap.cpp.o",
+      "log": "/phase4-build/logs/gui_ObjectTypes_CMiniMap.cpp.log",
+      "seconds": 8.163442129000032
+    },
+    {
+      "source": "gui/ObjectTypes/COList.cpp",
+      "project": "gui",
+      "identity": "ec6973dc9e2b67b3f564007d91072aa9f0f3594b65b7b2b29398c3edcf155eff",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/gui_ObjectTypes_COList.cpp.o",
+      "log": "/phase4-build/logs/gui_ObjectTypes_COList.cpp.log",
+      "seconds": 6.7706637130031595
+    },
+    {
+      "source": "gui/ObjectTypes/CProgressBar.cpp",
+      "project": "gui",
+      "identity": "0ae6f5cc8d807f746e4fd62d71601025c1fc2d2989798fe1febbe191fdf80074",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/gui_ObjectTypes_CProgressBar.cpp.o",
+      "log": "/phase4-build/logs/gui_ObjectTypes_CProgressBar.cpp.log",
+      "seconds": 3.3987817450033617
+    },
+    {
+      "source": "gui/ObjectTypes/CRadioButton.cpp",
+      "project": "gui",
+      "identity": "14b1505dffa7c0b1fc1138ddafc0d409dc36e9ce52e741d5c4f0e24a665640c2",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/gui_ObjectTypes_CRadioButton.cpp.o",
+      "log": "/phase4-build/logs/gui_ObjectTypes_CRadioButton.cpp.log",
+      "seconds": 3.074940741993487
+    },
+    {
+      "source": "gui/ObjectTypes/CScrollPanel.cpp",
+      "project": "gui",
+      "identity": "c81d8299c3f7c9559b6ed8d14cb2f8678f126b8f068814eb9f09a9ee1f341e43",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/gui_ObjectTypes_CScrollPanel.cpp.o",
+      "log": "/phase4-build/logs/gui_ObjectTypes_CScrollPanel.cpp.log",
+      "seconds": 3.5631370859991875
+    },
+    {
+      "source": "gui/ObjectTypes/CSlider.cpp",
+      "project": "gui",
+      "identity": "1975912022877a30a544bd6367053d12787d72ac62d87f4126f3e7d60f892adc",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/gui_ObjectTypes_CSlider.cpp.o",
+      "log": "/phase4-build/logs/gui_ObjectTypes_CSlider.cpp.log",
+      "seconds": 3.452335825000773
+    },
+    {
+      "source": "gui/ObjectTypes/CText.cpp",
+      "project": "gui",
+      "identity": "048f59ef3d4c644b885d4eb62dcc6eec9d8326d7328ec94467d49cac28c00d5d",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/gui_ObjectTypes_CText.cpp.o",
+      "log": "/phase4-build/logs/gui_ObjectTypes_CText.cpp.log",
+      "seconds": 3.781146474000707
+    },
+    {
+      "source": "gui/ObjectTypes/CTooltip.cpp",
+      "project": "gui",
+      "identity": "14049d94d80543de61af5ba4df1814119b30f2bf86b25cac771c12349a46bc30",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/gui_ObjectTypes_CTooltip.cpp.o",
+      "log": "/phase4-build/logs/gui_ObjectTypes_CTooltip.cpp.log",
+      "seconds": 3.6610084529966116
+    },
+    {
+      "source": "gui/Scripting/GuiScriptConversions.cpp",
+      "project": "gui",
+      "identity": "b834382e391dc6aaa7dc62f690a3625ad090cdd6c399cdd5957bd2b7c3d4ace7",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/gui_Scripting_GuiScriptConversions.cpp.o",
+      "log": "/phase4-build/logs/gui_Scripting_GuiScriptConversions.cpp.log",
+      "seconds": 6.764487487998849
+    },
+    {
+      "source": "gui/Scripting/JSInterface_CGUISize.cpp",
+      "project": "gui",
+      "identity": "5f30822339d5c404058a8733bf38c7f890c8eb3edc4e3293a030cdd16e68724b",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/gui_Scripting_JSInterface_CGUISize.cpp.o",
+      "log": "/phase4-build/logs/gui_Scripting_JSInterface_CGUISize.cpp.log",
+      "seconds": 6.393394355996861
+    },
+    {
+      "source": "gui/Scripting/JSInterface_GUIManager.cpp",
+      "project": "gui",
+      "identity": "b94c225c3ac9aff0eb76225746624b2624fa6a4211bda8df10e0b126adcd72c5",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/gui_Scripting_JSInterface_GUIManager.cpp.o",
+      "log": "/phase4-build/logs/gui_Scripting_JSInterface_GUIManager.cpp.log",
+      "seconds": 5.457480167002359
+    },
+    {
+      "source": "gui/Scripting/JSInterface_GUIProxy.cpp",
+      "project": "gui",
+      "identity": "2937fe6e403e48da1d4ac5fbbea16c41faa3c10ab9af91730861a5efb7aa5419",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/gui_Scripting_JSInterface_GUIProxy.cpp.o",
+      "log": "/phase4-build/logs/gui_Scripting_JSInterface_GUIProxy.cpp.log",
+      "seconds": 12.064321309997467
+    },
+    {
+      "source": "gui/Scripting/JSInterface_GUISize.cpp",
+      "project": "gui",
+      "identity": "6373561812fba83be9515fbf877803189f7f1da9ada213c6e3be3dd69cd5c73e",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/gui_Scripting_JSInterface_GUISize.cpp.o",
+      "log": "/phase4-build/logs/gui_Scripting_JSInterface_GUISize.cpp.log",
+      "seconds": 6.614506791003805
+    },
+    {
+      "source": "gui/Scripting/ScriptFunctions.cpp",
+      "project": "gui",
+      "identity": "4d142737c81bdd17c7f215c256970b2dcbf1c27b70f377779d0f7a4a172cff50",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/gui_Scripting_ScriptFunctions.cpp.o",
+      "log": "/phase4-build/logs/gui_Scripting_ScriptFunctions.cpp.log",
+      "seconds": 3.0837588040012633
+    },
+    {
+      "source": "gui/SettingTypes/CGUIColor.cpp",
+      "project": "gui",
+      "identity": "043d1a47adb568dedc345d35dcb9c43266a0e2a5d01ccfe334ec5623d353f586",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/gui_SettingTypes_CGUIColor.cpp.o",
+      "log": "/phase4-build/logs/gui_SettingTypes_CGUIColor.cpp.log",
+      "seconds": 3.4512802679964807
+    },
+    {
+      "source": "gui/SettingTypes/CGUIHotkey.cpp",
+      "project": "gui",
+      "identity": "01c2943beee51e19c1c39f26868c57b5e67d386eb4062371c33cec55c239d887",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/gui_SettingTypes_CGUIHotkey.cpp.o",
+      "log": "/phase4-build/logs/gui_SettingTypes_CGUIHotkey.cpp.log",
+      "seconds": 3.4264566760029993
+    },
+    {
+      "source": "gui/SettingTypes/CGUISize.cpp",
+      "project": "gui",
+      "identity": "401b71955358f09a12b8731408fce353f6e6596f6e2cdb72115d476fdb55d403",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/gui_SettingTypes_CGUISize.cpp.o",
+      "log": "/phase4-build/logs/gui_SettingTypes_CGUISize.cpp.log",
+      "seconds": 5.349835841007007
+    },
+    {
+      "source": "gui/SettingTypes/CGUIString.cpp",
+      "project": "gui",
+      "identity": "75bbfc364ee569bf2ec28757ca778af7d693dc21b4c558b2a82482d9e99b4e24",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/gui_SettingTypes_CGUIString.cpp.o",
+      "log": "/phase4-build/logs/gui_SettingTypes_CGUIString.cpp.log",
+      "seconds": 7.445361345002311
+    },
+    {
+      "source": "gui/SettingTypes/MouseEventMask.cpp",
+      "project": "gui",
+      "identity": "81c4667b0ed994558fe697f1cb7c909dcbf46be7b03ffee827b768d692e8c6ab",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/gui_SettingTypes_MouseEventMask.cpp.o",
+      "log": "/phase4-build/logs/gui_SettingTypes_MouseEventMask.cpp.log",
+      "seconds": 6.104815085003793
+    },
+    {
+      "source": "i18n/scripting/JSInterface_L10n.cpp",
+      "project": "engine",
+      "identity": "c3e67082f9f2ccacc990b1fc32c1c4e82ada25c18dca61effdc7df8dcf976975",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/i18n_scripting_JSInterface_L10n.cpp.o",
+      "log": "/phase4-build/logs/i18n_scripting_JSInterface_L10n.cpp.log",
+      "seconds": 6.651009693996457
+    },
+    {
+      "source": "lib/allocators/dynarray.cpp",
+      "project": "lowlevel",
+      "identity": "f2051d3c3eb4ec2244724452a1ee5c5d7a9d5f5a7e760b8c03a74c9b6a83bc32",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/lib_allocators_dynarray.cpp.o",
+      "log": "/phase4-build/logs/lib_allocators_dynarray.cpp.log",
+      "seconds": 1.7071924410047359
+    },
+    {
+      "source": "lib/allocators/freelist.cpp",
+      "project": "lowlevel",
+      "identity": "4ef6e1888f09f249d319087278d1e1c8b3d3868f4f5411066b5a9b127550bd8b",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/lib_allocators_freelist.cpp.o",
+      "log": "/phase4-build/logs/lib_allocators_freelist.cpp.log",
+      "seconds": 1.6096208409944666
+    },
+    {
+      "source": "lib/allocators/pool.cpp",
+      "project": "lowlevel",
+      "identity": "58ffa87d22d87e19712bbe6e61c278c0fda44c08d0aa19f66057a79b989f82a0",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/lib_allocators_pool.cpp.o",
+      "log": "/phase4-build/logs/lib_allocators_pool.cpp.log",
+      "seconds": 2.1252994979950017
+    },
+    {
+      "source": "lib/app_hooks.cpp",
+      "project": "lowlevel",
+      "identity": "f5094d4fb54a9b78ecae53fc809f4925dba2d2c79410260cdcff0ff1a82dadbd",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/lib_app_hooks.cpp.o",
+      "log": "/phase4-build/logs/lib_app_hooks.cpp.log",
+      "seconds": 2.656683963999967
+    },
+    {
+      "source": "lib/build_version.cpp",
+      "project": "lowlevel",
+      "identity": "3fa38de68df6634c7fc58d0fc343f866e59ccba8bee8933c9f399dc8f5a7514d",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/lib_build_version.cpp.o",
+      "log": "/phase4-build/logs/lib_build_version.cpp.log",
+      "seconds": 1.618955180994817
+    },
+    {
+      "source": "lib/byte_order.cpp",
+      "project": "lowlevel",
+      "identity": "806536e85b790ffcfd9b42caf007cb548613d415ecd73504d5d4d912ee2dfd73",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/lib_byte_order.cpp.o",
+      "log": "/phase4-build/logs/lib_byte_order.cpp.log",
+      "seconds": 1.6494303729996318
+    },
+    {
+      "source": "lib/debug_stl.cpp",
+      "project": "lowlevel",
+      "identity": "3e27d40e72fdccd5d98fcd41dc48838701cf2d02e7dc6e5de25204ae4e265b2b",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/lib_debug_stl.cpp.o",
+      "log": "/phase4-build/logs/lib_debug_stl.cpp.log",
+      "seconds": 2.105742265994195
+    },
+    {
+      "source": "lib/external_libraries/dbghelp.cpp",
+      "project": "lowlevel",
+      "identity": "d07d4db7a42802514e5bbc2f2f00f9c54fe7b9df66c239d30887632677da64cb",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/lib_external_libraries_dbghelp.cpp.o",
+      "log": "/phase4-build/logs/lib_external_libraries_dbghelp.cpp.log",
+      "seconds": 1.5964465619981638
+    },
+    {
+      "source": "lib/external_libraries/libsdl.cpp",
+      "project": "lowlevel",
+      "identity": "f0454f28d0245bd5040e4a8b38e15313b7a83587c6b63791b08e37777713e8a1",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/lib_external_libraries_libsdl.cpp.o",
+      "log": "/phase4-build/logs/lib_external_libraries_libsdl.cpp.log",
+      "seconds": 1.6743179650002276
+    },
+    {
+      "source": "lib/file/archive/archive.cpp",
+      "project": "lowlevel",
+      "identity": "d18f97cd890e71cd8a25f5987ca68dfb9ac9118ac667b0345fca66ddeb7ac47c",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/lib_file_archive_archive.cpp.o",
+      "log": "/phase4-build/logs/lib_file_archive_archive.cpp.log",
+      "seconds": 2.55077927900129
+    },
+    {
+      "source": "lib/file/archive/archive_zip.cpp",
+      "project": "lowlevel",
+      "identity": "814b99efb094002a6099f16d0932e9ac6654f355d26827f563e2d9ffb86f2db3",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/lib_file_archive_archive_zip.cpp.o",
+      "log": "/phase4-build/logs/lib_file_archive_archive_zip.cpp.log",
+      "seconds": 3.1851495439987048
+    },
+    {
+      "source": "lib/file/archive/codec.cpp",
+      "project": "lowlevel",
+      "identity": "e20c4b809a809a0391e0eb1aeb294efb603aec68e15b322de3a5e8d5a978027d",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/lib_file_archive_codec.cpp.o",
+      "log": "/phase4-build/logs/lib_file_archive_codec.cpp.log",
+      "seconds": 1.6198324569995748
+    },
+    {
+      "source": "lib/file/archive/codec_zlib.cpp",
+      "project": "lowlevel",
+      "identity": "2ab348eff96233fc2213921fe51a05cf06f15cc95a0807eba1168ff3994b19b9",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/lib_file_archive_codec_zlib.cpp.o",
+      "log": "/phase4-build/logs/lib_file_archive_codec_zlib.cpp.log",
+      "seconds": 1.7401113750020158
+    },
+    {
+      "source": "lib/file/archive/stream.cpp",
+      "project": "lowlevel",
+      "identity": "8fa7ff9573d6efc39e53fd423c3c7baf16fb22459d1e64154672efaf0ba7e7e9",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/lib_file_archive_stream.cpp.o",
+      "log": "/phase4-build/logs/lib_file_archive_stream.cpp.log",
+      "seconds": 1.6431454170015058
+    },
+    {
+      "source": "lib/file/common/file_loader.cpp",
+      "project": "lowlevel",
+      "identity": "c81ddf184920648d298980bb177518f44487d6fd6c8d6d9353325b9cf72c9822",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/lib_file_common_file_loader.cpp.o",
+      "log": "/phase4-build/logs/lib_file_common_file_loader.cpp.log",
+      "seconds": 2.530644885999209
+    },
+    {
+      "source": "lib/file/common/file_stats.cpp",
+      "project": "lowlevel",
+      "identity": "700fdd2429c0f33e6ee4e31fecb75846799d18fd7068fc50fcc0d6cd6c9ea7b6",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/lib_file_common_file_stats.cpp.o",
+      "log": "/phase4-build/logs/lib_file_common_file_stats.cpp.log",
+      "seconds": 1.605628434997925
+    },
+    {
+      "source": "lib/file/common/real_directory.cpp",
+      "project": "lowlevel",
+      "identity": "7a8d52e5f6db6d09f5480256c8823e580064f1030a3030e32230bb1eb0fa2e7e",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/lib_file_common_real_directory.cpp.o",
+      "log": "/phase4-build/logs/lib_file_common_real_directory.cpp.log",
+      "seconds": 2.898978070006706
+    },
+    {
+      "source": "lib/file/common/trace.cpp",
+      "project": "lowlevel",
+      "identity": "ead7f359a51a92e890a8560d48be7e29921db01a2230b192cc9db70c3154821c",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/lib_file_common_trace.cpp.o",
+      "log": "/phase4-build/logs/lib_file_common_trace.cpp.log",
+      "seconds": 3.2486044719989877
+    },
+    {
+      "source": "lib/file/file.cpp",
+      "project": "lowlevel",
+      "identity": "490029fc1f54044863f724ce79cdcaa602b956ee613d6b9b1f0445a454341f27",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/lib_file_file.cpp.o",
+      "log": "/phase4-build/logs/lib_file_file.cpp.log",
+      "seconds": 2.9174629420012934
+    },
+    {
+      "source": "lib/file/file_system.cpp",
+      "project": "lowlevel",
+      "identity": "7820ec2b34ac892fe50000d506c0e370eb3c88b61af9c4ff999a67fec84b2b8b",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/lib_file_file_system.cpp.o",
+      "log": "/phase4-build/logs/lib_file_file_system.cpp.log",
+      "seconds": 3.5405885229993146
+    },
+    {
+      "source": "lib/file/io/io.cpp",
+      "project": "lowlevel",
+      "identity": "876c295b0d665f9221e856e068613e2319d8fe641c4238ac5725c22d12dfb56f",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/lib_file_io_io.cpp.o",
+      "log": "/phase4-build/logs/lib_file_io_io.cpp.log",
+      "seconds": 2.7558197410035064
+    },
+    {
+      "source": "lib/file/io/write_buffer.cpp",
+      "project": "lowlevel",
+      "identity": "35e1a74fc1cee15b309a5be541ccafa20bcd63f58ec0ff9c8e45c7b8747cc93c",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/lib_file_io_write_buffer.cpp.o",
+      "log": "/phase4-build/logs/lib_file_io_write_buffer.cpp.log",
+      "seconds": 2.7205248930040398
+    },
+    {
+      "source": "lib/file/vfs/vfs.cpp",
+      "project": "lowlevel",
+      "identity": "33db9bee5ffdf536ebaf796e731f6f92559131958287cfef37e72a5ca15c3974",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/lib_file_vfs_vfs.cpp.o",
+      "log": "/phase4-build/logs/lib_file_vfs_vfs.cpp.log",
+      "seconds": 3.3643953829960083
+    },
+    {
+      "source": "lib/file/vfs/vfs_lookup.cpp",
+      "project": "lowlevel",
+      "identity": "2e9992d6719e6e07642e406883b477eaae432bac0b664d059c7d68de98589dad",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/lib_file_vfs_vfs_lookup.cpp.o",
+      "log": "/phase4-build/logs/lib_file_vfs_vfs_lookup.cpp.log",
+      "seconds": 2.849970712995855
+    },
+    {
+      "source": "lib/file/vfs/vfs_populate.cpp",
+      "project": "lowlevel",
+      "identity": "86be2bb1dff63400b3a59d91d52d95af53b0766ae47f682af28220ee71e0b444",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/lib_file_vfs_vfs_populate.cpp.o",
+      "log": "/phase4-build/logs/lib_file_vfs_vfs_populate.cpp.log",
+      "seconds": 3.0497674880025443
+    },
+    {
+      "source": "lib/file/vfs/vfs_tree.cpp",
+      "project": "lowlevel",
+      "identity": "853efe456d4aafb7b15b9011ada13dd9b6429697453fff9df2575c249d370322",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/lib_file_vfs_vfs_tree.cpp.o",
+      "log": "/phase4-build/logs/lib_file_vfs_vfs_tree.cpp.log",
+      "seconds": 3.2813175999981468
+    },
+    {
+      "source": "lib/file/vfs/vfs_util.cpp",
+      "project": "lowlevel",
+      "identity": "35657e52df8ac1b419e3d2b8c29bbbabc2dd46877617bf61f32eafdea88a9ed7",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/lib_file_vfs_vfs_util.cpp.o",
+      "log": "/phase4-build/logs/lib_file_vfs_vfs_util.cpp.log",
+      "seconds": 3.097498478004127
+    },
+    {
+      "source": "lib/fnv_hash.cpp",
+      "project": "lowlevel",
+      "identity": "abafff9e8b0578b5caaba74fa51208392416475423771ba259c8e14931370a2e",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/lib_fnv_hash.cpp.o",
+      "log": "/phase4-build/logs/lib_fnv_hash.cpp.log",
+      "seconds": 1.6739876690044184
+    },
+    {
+      "source": "lib/frequency_filter.cpp",
+      "project": "lowlevel",
+      "identity": "4c7ebfbaa43502381911b95b2fdf81b6738fe78556b2dc9ec5d2bc1db409c013",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/lib_frequency_filter.cpp.o",
+      "log": "/phase4-build/logs/lib_frequency_filter.cpp.log",
+      "seconds": 1.680331411997031
+    },
+    {
+      "source": "lib/lib.cpp",
+      "project": "lowlevel",
+      "identity": "e46df54393471792b3179d5d96c6e1ae5fc7e57f11770d52c854ee7d67e5345b",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/lib_lib.cpp.o",
+      "log": "/phase4-build/logs/lib_lib.cpp.log",
+      "seconds": 1.6156904359959299
+    },
+    {
+      "source": "lib/module_init.cpp",
+      "project": "lowlevel",
+      "identity": "5bce3fbdafd297f58f18fb2816c17bae2fb94338650c0496cfed50252f19d5ef",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/lib_module_init.cpp.o",
+      "log": "/phase4-build/logs/lib_module_init.cpp.log",
+      "seconds": 1.6475697780042537
+    },
+    {
+      "source": "lib/path.cpp",
+      "project": "lowlevel",
+      "identity": "33563f36afb0fbdcb19343b7bc691344a9ee6d97f0b745add9b71aa1e74aba22",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/lib_path.cpp.o",
+      "log": "/phase4-build/logs/lib_path.cpp.log",
+      "seconds": 2.557756864996918
+    },
+    {
+      "source": "lib/posix/posix.cpp",
+      "project": "lowlevel",
+      "identity": "d27fe01751547ea4716e833af2f8c4a5914cff529b4b56308f3d3288d430edbd",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/lib_posix_posix.cpp.o",
+      "log": "/phase4-build/logs/lib_posix_posix.cpp.log",
+      "seconds": 1.6278191820019856
+    },
+    {
+      "source": "lib/rand.cpp",
+      "project": "lowlevel",
+      "identity": "ef88c64f300219f4d65d855fde362dbcab43082f2d0926d03836b13ccedea143",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/lib_rand.cpp.o",
+      "log": "/phase4-build/logs/lib_rand.cpp.log",
+      "seconds": 1.6230556290029199
+    },
+    {
+      "source": "lib/regex.cpp",
+      "project": "lowlevel",
+      "identity": "044954dbdd57d864496edd47b088e0a3661f0f8800e5acacdee7cb8cbadea2e6",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/lib_regex.cpp.o",
+      "log": "/phase4-build/logs/lib_regex.cpp.log",
+      "seconds": 1.581111075996887
+    },
+    {
+      "source": "lib/secure_crt.cpp",
+      "project": "lowlevel",
+      "identity": "65f259249d13506d56b2a9b488444647e2da7fa4d78e915544cf5e8713f69c69",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/lib_secure_crt.cpp.o",
+      "log": "/phase4-build/logs/lib_secure_crt.cpp.log",
+      "seconds": 1.6482721130014397
+    },
+    {
+      "source": "lib/status.cpp",
+      "project": "lowlevel",
+      "identity": "84d9310264608e5bfe8e880edc3affecf85a8610c3547e4602d159732fc06042",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/lib_status.cpp.o",
+      "log": "/phase4-build/logs/lib_status.cpp.log",
+      "seconds": 1.6229168559948448
+    },
+    {
+      "source": "lib/sysdep/cpu.cpp",
+      "project": "lowlevel",
+      "identity": "415ac07b0c16aa7570ea862e94d8c017eab6be4831bb347f327b49ea11ecd057",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/lib_sysdep_cpu.cpp.o",
+      "log": "/phase4-build/logs/lib_sysdep_cpu.cpp.log",
+      "seconds": 1.588219780001964
+    },
+    {
+      "source": "lib/sysdep/os/unix/ufilesystem.cpp",
+      "project": "lowlevel",
+      "identity": "59ad25bc5a8c6c1d4b19d72d31bd376a564079ffff2bef78891eb06e91dadd2a",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/lib_sysdep_os_unix_ufilesystem.cpp.o",
+      "log": "/phase4-build/logs/lib_sysdep_os_unix_ufilesystem.cpp.log",
+      "seconds": 2.5687382649994106
+    },
+    {
+      "source": "lib/sysdep/os_cpu.cpp",
+      "project": "lowlevel",
+      "identity": "3d09554dedcf6d2ddbdf8f3352e9617f83ee97265bc6cb0189c376edcfe989b4",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/lib_sysdep_os_cpu.cpp.o",
+      "log": "/phase4-build/logs/lib_sysdep_os_cpu.cpp.log",
+      "seconds": 1.5926447989986627
+    },
+    {
+      "source": "lib/sysdep/rtl/gcc/gcc.cpp",
+      "project": "lowlevel",
+      "identity": "7aa57e929c02af6ddc4bab7adc3b0fa16d465c8f06dc2e74e5630f64743441b1",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/lib_sysdep_rtl_gcc_gcc.cpp.o",
+      "log": "/phase4-build/logs/lib_sysdep_rtl_gcc_gcc.cpp.log",
+      "seconds": 1.5297579750040313
+    },
+    {
+      "source": "lib/tex/tex.cpp",
+      "project": "lowlevel",
+      "identity": "35585e559ad1b86ddda9b536fa574c9a0ae67d3cd5a81503bf435a3609596223",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/lib_tex_tex.cpp.o",
+      "log": "/phase4-build/logs/lib_tex_tex.cpp.log",
+      "seconds": 2.7165646409994224
+    },
+    {
+      "source": "lib/tex/tex_bmp.cpp",
+      "project": "lowlevel",
+      "identity": "431c49f1d7ad066a3947e3226b830c5feeaa12d3aeeb1f1a786cc0da794ecf63",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/lib_tex_tex_bmp.cpp.o",
+      "log": "/phase4-build/logs/lib_tex_tex_bmp.cpp.log",
+      "seconds": 2.5394127890031086
+    },
+    {
+      "source": "lib/tex/tex_codec.cpp",
+      "project": "lowlevel",
+      "identity": "33d9f0857d569db6139fdddaec51146ebaa9b0bfac4555eefcb60c972875a8e7",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/lib_tex_tex_codec.cpp.o",
+      "log": "/phase4-build/logs/lib_tex_tex_codec.cpp.log",
+      "seconds": 2.5686397190002026
+    },
+    {
+      "source": "lib/tex/tex_dds.cpp",
+      "project": "lowlevel",
+      "identity": "caca817332eec581099af39cc1e89341f4ae51d0de4a63226e8657e54aeb7ceb",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/lib_tex_tex_dds.cpp.o",
+      "log": "/phase4-build/logs/lib_tex_tex_dds.cpp.log",
+      "seconds": 2.6838875070025097
+    },
+    {
+      "source": "lib/tex/tex_png.cpp",
+      "project": "lowlevel",
+      "identity": "5d5f244ab2a33960755fdc41c18df599ea59bfcfc9871b310988b34cffd1105b",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/lib_tex_tex_png.cpp.o",
+      "log": "/phase4-build/logs/lib_tex_tex_png.cpp.log",
+      "seconds": 2.8645391460013343
+    },
+    {
+      "source": "lib/tex/tex_tga.cpp",
+      "project": "lowlevel",
+      "identity": "9a69837c78dcc335bad6f69a952279d72a8ceacbdf7eefa1699409f25c2097ab",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/lib_tex_tex_tga.cpp.o",
+      "log": "/phase4-build/logs/lib_tex_tex_tga.cpp.log",
+      "seconds": 2.6634081000011065
+    },
+    {
+      "source": "lib/timer.cpp",
+      "project": "lowlevel",
+      "identity": "f5a63316a4fc48377d00ab3f38c626e085fe889c69e1772f73226f5a135ff432",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/lib_timer.cpp.o",
+      "log": "/phase4-build/logs/lib_timer.cpp.log",
+      "seconds": 2.28220071800024
+    },
+    {
+      "source": "lib/utf8.cpp",
+      "project": "lowlevel",
+      "identity": "7bbb598bb5d56f02b00cf506016df553b4aef835334ad607d2cd13010dfcde3f",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/lib_utf8.cpp.o",
+      "log": "/phase4-build/logs/lib_utf8.cpp.log",
+      "seconds": 1.672986822995881
+    },
+    {
+      "source": "lib/wsecure_crt.cpp",
+      "project": "lowlevel",
+      "identity": "04437cb4259bdfce035beb30812d04ffdce601041b0f265386ddc94f14b8e681",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/lib_wsecure_crt.cpp.o",
+      "log": "/phase4-build/logs/lib_wsecure_crt.cpp.log",
+      "seconds": 1.60102673000074
+    },
+    {
+      "source": "maths/BoundingBoxAligned.cpp",
+      "project": "engine",
+      "identity": "da7272a930001609f13f16647fdcfc55f09af7d1953d24e966c87deb67fe9922",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/maths_BoundingBoxAligned.cpp.o",
+      "log": "/phase4-build/logs/maths_BoundingBoxAligned.cpp.log",
+      "seconds": 2.055810833000578
+    },
+    {
+      "source": "maths/BoundingBoxOriented.cpp",
+      "project": "engine",
+      "identity": "365ea5ea4c2e725577b55a525ebf77454e34458eee4815318eb12fe0a334e05c",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/maths_BoundingBoxOriented.cpp.o",
+      "log": "/phase4-build/logs/maths_BoundingBoxOriented.cpp.log",
+      "seconds": 2.0089204739997513
+    },
+    {
+      "source": "maths/BoundingSphere.cpp",
+      "project": "engine",
+      "identity": "cd4903bf1c4c076ddf3f09f363d15279c206465ab3cf1e2a888c009993d96779",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/maths_BoundingSphere.cpp.o",
+      "log": "/phase4-build/logs/maths_BoundingSphere.cpp.log",
+      "seconds": 1.9396772299951408
+    },
+    {
+      "source": "maths/Brush.cpp",
+      "project": "engine",
+      "identity": "5b8fd72ba050322ced0e258c2d9346b4ff0b5bcaafdf0fd89190854cf75ea12a",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/maths_Brush.cpp.o",
+      "log": "/phase4-build/logs/maths_Brush.cpp.log",
+      "seconds": 2.349772635003319
+    },
+    {
+      "source": "maths/Fixed.cpp",
+      "project": "engine",
+      "identity": "afdc056f1f6bebe59c595c2d3c7678b2d7da6c51c6eb930bef1d76c74fdd1071",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/maths_Fixed.cpp.o",
+      "log": "/phase4-build/logs/maths_Fixed.cpp.log",
+      "seconds": 4.370446690998506
+    },
+    {
+      "source": "maths/Frustum.cpp",
+      "project": "engine",
+      "identity": "6d14cee59ec413e5d42fca0ea3f62d4f6ea4d2885023093794ea30c0e27c476c",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/maths_Frustum.cpp.o",
+      "log": "/phase4-build/logs/maths_Frustum.cpp.log",
+      "seconds": 2.010628743999405
+    },
+    {
+      "source": "maths/MD5.cpp",
+      "project": "engine",
+      "identity": "21c50a1b7904e6f682ea9ed00a7cc7abbd87e133db42e8bd9b362bbfba20a99b",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/maths_MD5.cpp.o",
+      "log": "/phase4-build/logs/maths_MD5.cpp.log",
+      "seconds": 1.658372067999153
+    },
+    {
+      "source": "maths/Matrix3D.cpp",
+      "project": "engine",
+      "identity": "f703bda8ffef9de51f8781c16ac8348755985bd2090319897db86791de2f31ba",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/maths_Matrix3D.cpp.o",
+      "log": "/phase4-build/logs/maths_Matrix3D.cpp.log",
+      "seconds": 2.1867280049991678
+    },
+    {
+      "source": "maths/NUSpline.cpp",
+      "project": "engine",
+      "identity": "c9f2615cdf054239eb684d6a68e21b922a6b23b406e3333264d846be49912cc3",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/maths_NUSpline.cpp.o",
+      "log": "/phase4-build/logs/maths_NUSpline.cpp.log",
+      "seconds": 2.426952882000478
+    },
+    {
+      "source": "maths/Plane.cpp",
+      "project": "engine",
+      "identity": "48af86e27200a1c2a56d72aa445246460e378ab48151958ea49a01bc900f931e",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/maths_Plane.cpp.o",
+      "log": "/phase4-build/logs/maths_Plane.cpp.log",
+      "seconds": 2.0815918279986363
+    },
+    {
+      "source": "maths/Quaternion.cpp",
+      "project": "engine",
+      "identity": "5d23239969299ed5d40dbcdeaa3ff8a971275afc2998b5d391c36540fb0f5049",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/maths_Quaternion.cpp.o",
+      "log": "/phase4-build/logs/maths_Quaternion.cpp.log",
+      "seconds": 1.9683188970011543
+    },
+    {
+      "source": "maths/Rect.cpp",
+      "project": "engine",
+      "identity": "d7e9b41b318428d79804b052a32c32a8324e13902beb33df1935ab245bec688a",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/maths_Rect.cpp.o",
+      "log": "/phase4-build/logs/maths_Rect.cpp.log",
+      "seconds": 1.96119326200278
+    },
+    {
+      "source": "maths/Size2D.cpp",
+      "project": "engine",
+      "identity": "e93ed0370d8182543f7f417125341ea28d55c18d2226b6bb08e918ef9e9c22e6",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/maths_Size2D.cpp.o",
+      "log": "/phase4-build/logs/maths_Size2D.cpp.log",
+      "seconds": 1.596060567004315
+    },
+    {
+      "source": "maths/Sqrt.cpp",
+      "project": "engine",
+      "identity": "e96d7e98c6d243b0d299bb1ffc81151c08b9486361b9726d0382362f09efed75",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/maths_Sqrt.cpp.o",
+      "log": "/phase4-build/logs/maths_Sqrt.cpp.log",
+      "seconds": 1.6051955700022518
+    },
+    {
+      "source": "maths/Vector2D.cpp",
+      "project": "engine",
+      "identity": "d4e3fded2691da74fbe7c5fdbe086517c8e1abef712af0694ce62d21dc9f9b59",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/maths_Vector2D.cpp.o",
+      "log": "/phase4-build/logs/maths_Vector2D.cpp.log",
+      "seconds": 1.919678002006549
+    },
+    {
+      "source": "maths/Vector3D.cpp",
+      "project": "engine",
+      "identity": "3f1d8d4c18963bd58112fdc0c34e470354aa16bcec71298ebaa707ab53c778b1",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/maths_Vector3D.cpp.o",
+      "log": "/phase4-build/logs/maths_Vector3D.cpp.log",
+      "seconds": 1.9163536350024515
+    },
+    {
+      "source": "network/HttpServer.cpp",
+      "project": "network",
+      "identity": "3451a59aaba1c03c0e89967f948b646052888036c26f48eac6cdd01f6119b660",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/network_HttpServer.cpp.o",
+      "log": "/phase4-build/logs/network_HttpServer.cpp.log",
+      "seconds": 3.982548134998069
+    },
+    {
+      "source": "network/NetClient.cpp",
+      "project": "network",
+      "identity": "e47ce4275877068eda4b0b75b5dd345a9ac1bad1b4fd307e99c3259d9643bc52",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/network_NetClient.cpp.o",
+      "log": "/phase4-build/logs/network_NetClient.cpp.log",
+      "seconds": 9.009471151999605
+    },
+    {
+      "source": "network/NetClientSession.cpp",
+      "project": "network",
+      "identity": "6e474003a7455d6bb68085d546e05842edbd10713f2d74717cd513d0cdc9aa7d",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/network_NetClientSession.cpp.o",
+      "log": "/phase4-build/logs/network_NetClientSession.cpp.log",
+      "seconds": 7.10574049600109
+    },
+    {
+      "source": "network/NetClientTurnManager.cpp",
+      "project": "network",
+      "identity": "138a2d774d1eb8a4a128343cabf4ae9a1c80b4363da5c233bcf24f9fa9447be2",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/network_NetClientTurnManager.cpp.o",
+      "log": "/phase4-build/logs/network_NetClientTurnManager.cpp.log",
+      "seconds": 6.708595667994814
+    },
+    {
+      "source": "network/NetEnet.cpp",
+      "project": "network",
+      "identity": "b57c3b734b1774e640b9a0c5e20a7330ac379e45899bd5228d027233c66218eb",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/network_NetEnet.cpp.o",
+      "log": "/phase4-build/logs/network_NetEnet.cpp.log",
+      "seconds": 2.7338214490009705
+    },
+    {
+      "source": "network/NetFileTransfer.cpp",
+      "project": "network",
+      "identity": "39e0fe6b9878d621d814ddc3965d6ebfa1a78726c8534066541cfa5a6a0049dc",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/network_NetFileTransfer.cpp.o",
+      "log": "/phase4-build/logs/network_NetFileTransfer.cpp.log",
+      "seconds": 7.311183493999124
+    },
+    {
+      "source": "network/NetHost.cpp",
+      "project": "network",
+      "identity": "21ea3b7998c9df9d4530a20dc67206c765ccd6db49f291007a0d26412e92791e",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/network_NetHost.cpp.o",
+      "log": "/phase4-build/logs/network_NetHost.cpp.log",
+      "seconds": 5.5395760079991305
+    },
+    {
+      "source": "network/NetMessage.cpp",
+      "project": "network",
+      "identity": "3b8352c117c7af5b9796468e5eefb3f7c6b40907cd01a3bfaa9b8c279fbd320e",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/network_NetMessage.cpp.o",
+      "log": "/phase4-build/logs/network_NetMessage.cpp.log",
+      "seconds": 8.25799301799998
+    },
+    {
+      "source": "network/NetMessageSim.cpp",
+      "project": "network",
+      "identity": "e9682c509197d0de469cbb6ea8ce78e4ed66bf194170b8889caefa7d1a174b17",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/network_NetMessageSim.cpp.o",
+      "log": "/phase4-build/logs/network_NetMessageSim.cpp.log",
+      "seconds": 4.12995808100095
+    },
+    {
+      "source": "network/NetProtocol.cpp",
+      "project": "network",
+      "identity": "140ebdea230e2a5135f086f64bf7cdf83e29bd98a38e48bba2255eabd9b7c257",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/network_NetProtocol.cpp.o",
+      "log": "/phase4-build/logs/network_NetProtocol.cpp.log",
+      "seconds": 3.3020030069965287
+    },
+    {
+      "source": "network/NetServer.cpp",
+      "project": "network",
+      "identity": "3683de388a9c707327a737ad8c7ec523dbebff2b363c4a85d9fd6386f9cc855d",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/network_NetServer.cpp.o",
+      "log": "/phase4-build/logs/network_NetServer.cpp.log",
+      "seconds": 11.947321621999436
+    },
+    {
+      "source": "network/NetServerSession.cpp",
+      "project": "network",
+      "identity": "69e83f23c81b1550bb646d2810a5da40ecaa83351ae75ffef207abeaf4b029fc",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/network_NetServerSession.cpp.o",
+      "log": "/phase4-build/logs/network_NetServerSession.cpp.log",
+      "seconds": 6.06407691899949
+    },
+    {
+      "source": "network/NetServerTurnManager.cpp",
+      "project": "network",
+      "identity": "4c6c80b1462af5094587707d3d5425eb2a7a53c4ccca61aa3afea98316a646c0",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/network_NetServerTurnManager.cpp.o",
+      "log": "/phase4-build/logs/network_NetServerTurnManager.cpp.log",
+      "seconds": 7.079998601002444
+    },
+    {
+      "source": "network/NetStats.cpp",
+      "project": "network",
+      "identity": "6a0476c2eb83c724839c21bf8f4079d1cbba101930dda95d1732593f5139053e",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/network_NetStats.cpp.o",
+      "log": "/phase4-build/logs/network_NetStats.cpp.log",
+      "seconds": 4.885738538003352
+    },
+    {
+      "source": "network/StunClient.cpp",
+      "project": "network",
+      "identity": "e193dcf6de7a0bdccd641500abbcdde94d8b1a21441658e044d10f80131a9a0e",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/network_StunClient.cpp.o",
+      "log": "/phase4-build/logs/network_StunClient.cpp.log",
+      "seconds": 5.840214642004867
+    },
+    {
+      "source": "network/scripting/JSInterface_Network.cpp",
+      "project": "engine",
+      "identity": "5300eace17a73d8874008dcde305b5ea950af84c9cbb915d1bc7e97f03e18bde",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/network_scripting_JSInterface_Network.cpp.o",
+      "log": "/phase4-build/logs/network_scripting_JSInterface_Network.cpp.log",
+      "seconds": 7.170501091997721
+    },
+    {
+      "source": "pch/engine/precompiled.cpp",
+      "project": "engine",
+      "identity": "4f446ddf2d535473bdc374c56b182450b1176dc689dbcaf01ac6b17f2a9726c3",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/pch_engine_precompiled.cpp.o",
+      "log": "/phase4-build/logs/pch_engine_precompiled.cpp.log",
+      "seconds": 1.6588947030031704
+    },
+    {
+      "source": "pch/graphics/precompiled.cpp",
+      "project": "graphics",
+      "identity": "e294c66fe64f852cc769255479f43588752d050b0b22df76126e0408de021b73",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/pch_graphics_precompiled.cpp.o",
+      "log": "/phase4-build/logs/pch_graphics_precompiled.cpp.log",
+      "seconds": 1.9883632010023575
+    },
+    {
+      "source": "pch/gui/precompiled.cpp",
+      "project": "gui",
+      "identity": "285ed2f264b5f5d2b0c178b5fb128cd081a5bec57f35d21640d5f38800f6332f",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/pch_gui_precompiled.cpp.o",
+      "log": "/phase4-build/logs/pch_gui_precompiled.cpp.log",
+      "seconds": 1.6006706169937388
+    },
+    {
+      "source": "pch/lowlevel/precompiled.cpp",
+      "project": "lowlevel",
+      "identity": "f8f8a51cfdccbea551cc6872d8c3cd35f46e47f60dbce89e2399bfec0f8aaf61",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/pch_lowlevel_precompiled.cpp.o",
+      "log": "/phase4-build/logs/pch_lowlevel_precompiled.cpp.log",
+      "seconds": 1.5904681510000955
+    },
+    {
+      "source": "pch/network/precompiled.cpp",
+      "project": "network",
+      "identity": "32b9e63af41d1c86d98f50bd2b3c49516704f14c7e91749516362107fe3d16ae",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/pch_network_precompiled.cpp.o",
+      "log": "/phase4-build/logs/pch_network_precompiled.cpp.log",
+      "seconds": 1.6158027990022674
+    },
+    {
+      "source": "pch/scriptinterface/precompiled.cpp",
+      "project": "scriptinterface",
+      "identity": "1f39a9999860ae016343844e0fecf1c4576abe85f84a94388b07c6f266f69cb8",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/pch_scriptinterface_precompiled.cpp.o",
+      "log": "/phase4-build/logs/pch_scriptinterface_precompiled.cpp.log",
+      "seconds": 1.623339265002869
+    },
+    {
+      "source": "pch/simulation2/precompiled.cpp",
+      "project": "simulation2",
+      "identity": "046c145a536e3f8f7018bace27a70a0cf179c6cc3213cb4abfba302a8a0c2cda",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/pch_simulation2_precompiled.cpp.o",
+      "log": "/phase4-build/logs/pch_simulation2_precompiled.cpp.log",
+      "seconds": 1.5924184300019988
+    },
+    {
+      "source": "pch/tinygettext/precompiled.cpp",
+      "project": "tinygettext",
+      "identity": "e90442ead6e7dd64b8bdac2d895a1ed02dd64635d0e2852a46519ffe72e3fc95",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/pch_tinygettext_precompiled.cpp.o",
+      "log": "/phase4-build/logs/pch_tinygettext_precompiled.cpp.log",
+      "seconds": 1.6381349520015647
+    },
+    {
+      "source": "ps/ArchiveBuilder.cpp",
+      "project": "engine",
+      "identity": "307a71e1d7903763889cd8e01e5eabe94f89ef282c949137691653413663a617",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/ps_ArchiveBuilder.cpp.o",
+      "log": "/phase4-build/logs/ps_ArchiveBuilder.cpp.log",
+      "seconds": 3.1966351119990577
+    },
+    {
+      "source": "ps/CConsole.cpp",
+      "project": "engine",
+      "identity": "6b833cc38a40289af31e5489c12bbba2d41a1821b10ff653619d112bbd0c7a70",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/ps_CConsole.cpp.o",
+      "log": "/phase4-build/logs/ps_CConsole.cpp.log",
+      "seconds": 6.0253897799993865
+    },
+    {
+      "source": "ps/CStr.cpp",
+      "project": "engine",
+      "identity": "6e35cfbf6c8c230d32eb22056885a049a695c4c848cebccc4353c6c0b00b9b9d",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/ps_CStr.cpp.o",
+      "log": "/phase4-build/logs/ps_CStr.cpp.log",
+      "seconds": 3.9297682690012152
+    },
+    {
+      "source": "ps/CStrIntern.cpp",
+      "project": "engine",
+      "identity": "677750726f650e151e19ffd39b91772e79544baaa25bd41c0e1f7852cd0c4f92",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/ps_CStrIntern.cpp.o",
+      "log": "/phase4-build/logs/ps_CStrIntern.cpp.log",
+      "seconds": 2.5664718039988657
+    },
+    {
+      "source": "ps/CacheLoader.cpp",
+      "project": "engine",
+      "identity": "51d49241f5b64f425255fa01ad9bd2101a4e4a9668322758d23513f4817e2948",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/ps_CacheLoader.cpp.o",
+      "log": "/phase4-build/logs/ps_CacheLoader.cpp.log",
+      "seconds": 3.6253413900049054
+    },
+    {
+      "source": "ps/Compress.cpp",
+      "project": "engine",
+      "identity": "ac21552172d847b82d8fc2c46648a8f342ada209e80fd7a05eaa211545e8e45c",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/ps_Compress.cpp.o",
+      "log": "/phase4-build/logs/ps_Compress.cpp.log",
+      "seconds": 2.050659642998653
+    },
+    {
+      "source": "ps/ConfigDB.cpp",
+      "project": "engine",
+      "identity": "b55c15f78fbadaf8e4a3d152ee5fcdf98aef489709670d6485435997d15dd613",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/ps_ConfigDB.cpp.o",
+      "log": "/phase4-build/logs/ps_ConfigDB.cpp.log",
+      "seconds": 7.5249670169941965
+    },
+    {
+      "source": "ps/DllLoader.cpp",
+      "project": "engine",
+      "identity": "fe5c841fa8abf3cea8ec12a007d4f483b34f3725dcd946b29efd948f2c75d453",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/ps_DllLoader.cpp.o",
+      "log": "/phase4-build/logs/ps_DllLoader.cpp.log",
+      "seconds": 6.485098051998648
+    },
+    {
+      "source": "ps/Errors.cpp",
+      "project": "engine",
+      "identity": "51b9635ded1d2e2dbf51fa87754c0cf9495e374a765d65c9ddf77e4f2a88034e",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/ps_Errors.cpp.o",
+      "log": "/phase4-build/logs/ps_Errors.cpp.log",
+      "seconds": 2.12939930200082
+    },
+    {
+      "source": "ps/FileIo.cpp",
+      "project": "engine",
+      "identity": "359ccbb1bd5c4534a737bcfb25cd606870edfd3fbc7d760f18e2d017480bc872",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/ps_FileIo.cpp.o",
+      "log": "/phase4-build/logs/ps_FileIo.cpp.log",
+      "seconds": 5.633424144994933
+    },
+    {
+      "source": "ps/Filesystem.cpp",
+      "project": "engine",
+      "identity": "b102a619ce2738217cce5e29b5d9e60143f1366d9d5427f307b043a2483476eb",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/ps_Filesystem.cpp.o",
+      "log": "/phase4-build/logs/ps_Filesystem.cpp.log",
+      "seconds": 5.876425652000762
+    },
+    {
+      "source": "ps/GUID.cpp",
+      "project": "engine",
+      "identity": "c637142839fd1a1a5e32c9d4da7ad0cea0158a9626671b4696494f6bd04f42a7",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/ps_GUID.cpp.o",
+      "log": "/phase4-build/logs/ps_GUID.cpp.log",
+      "seconds": 2.9260729849993368
+    },
+    {
+      "source": "ps/Game.cpp",
+      "project": "engine",
+      "identity": "3d699f0961478a7d085730c3b76baf4315009a0fa10de01cafcbb7bd2991ff8b",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/ps_Game.cpp.o",
+      "log": "/phase4-build/logs/ps_Game.cpp.log",
+      "seconds": 8.491236765999929
+    },
+    {
+      "source": "ps/GameSetup/Atlas.cpp",
+      "project": "engine",
+      "identity": "8417629a45c8aaa240c3b7dc7acbe6384190ffb3eeda5e80b0dd275e8463fe86",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/ps_GameSetup_Atlas.cpp.o",
+      "log": "/phase4-build/logs/ps_GameSetup_Atlas.cpp.log",
+      "seconds": 5.2018439620005665
+    },
+    {
+      "source": "ps/GameSetup/CmdLineArgs.cpp",
+      "project": "engine",
+      "identity": "22036c728705a55a94630a8a5e6402e900de13931d637a98b4261ea4de11bc4d",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/ps_GameSetup_CmdLineArgs.cpp.o",
+      "log": "/phase4-build/logs/ps_GameSetup_CmdLineArgs.cpp.log",
+      "seconds": 4.468549545999849
+    },
+    {
+      "source": "ps/GameSetup/Config.cpp",
+      "project": "engine",
+      "identity": "c4dbd2ecd6835ab86e27db9f65c95a8e89e50a32171a13ad882d521a6a70e3ef",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/ps_GameSetup_Config.cpp.o",
+      "log": "/phase4-build/logs/ps_GameSetup_Config.cpp.log",
+      "seconds": 3.1043700299997
+    },
+    {
+      "source": "ps/GameSetup/HWDetect.cpp",
+      "project": "engine",
+      "identity": "46ac319888500b5bc68580ca63c186c95c29c7b4a1edef413f77f40605d53dbf",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/ps_GameSetup_HWDetect.cpp.o",
+      "log": "/phase4-build/logs/ps_GameSetup_HWDetect.cpp.log",
+      "seconds": 7.568929263004975
+    },
+    {
+      "source": "ps/GameSetup/Paths.cpp",
+      "project": "engine",
+      "identity": "1c30c5bdf475d04a3b45b0c9dcbfdb4ef1b496c1ca632acde1c518b3ac34ded9",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/ps_GameSetup_Paths.cpp.o",
+      "log": "/phase4-build/logs/ps_GameSetup_Paths.cpp.log",
+      "seconds": 4.827739975997247
+    },
+    {
+      "source": "ps/Globals.cpp",
+      "project": "engine",
+      "identity": "fc8fec9b35bd2c91af9be51a2251f2d442d3a51cf2d5936e69f99f04671eb2e6",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/ps_Globals.cpp.o",
+      "log": "/phase4-build/logs/ps_Globals.cpp.log",
+      "seconds": 4.306080258000293
+    },
+    {
+      "source": "ps/Hashing.cpp",
+      "project": "engine",
+      "identity": "befe0359ed090fea4cd7a4628929c24eb24ee9a52babd5e89e67ac046dfd35b2",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/ps_Hashing.cpp.o",
+      "log": "/phase4-build/logs/ps_Hashing.cpp.log",
+      "seconds": 2.8121530019998318
+    },
+    {
+      "source": "ps/Hotkey.cpp",
+      "project": "engine",
+      "identity": "e83752e595b8e7310ac7cf480daaadc13d99fad49adb2b48235949d2e1f81eec",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/ps_Hotkey.cpp.o",
+      "log": "/phase4-build/logs/ps_Hotkey.cpp.log",
+      "seconds": 6.8877842420042725
+    },
+    {
+      "source": "ps/Input.cpp",
+      "project": "engine",
+      "identity": "9e0d39168bd645dfde28c86383dd96346805104540930c0a3ac0a197192141fb",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/ps_Input.cpp.o",
+      "log": "/phase4-build/logs/ps_Input.cpp.log",
+      "seconds": 3.2004657719953684
+    },
+    {
+      "source": "ps/Joystick.cpp",
+      "project": "engine",
+      "identity": "cf49ba4f4feb00e7b60d169354e14423539c31309d8c8f64e1689dcf9f9cecdd",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/ps_Joystick.cpp.o",
+      "log": "/phase4-build/logs/ps_Joystick.cpp.log",
+      "seconds": 5.498068817003514
+    },
+    {
+      "source": "ps/KeyName.cpp",
+      "project": "engine",
+      "identity": "23d6a5801d1846be6c979e47fa5f0be45721387178d20a11f8678bf4b15a32c9",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/ps_KeyName.cpp.o",
+      "log": "/phase4-build/logs/ps_KeyName.cpp.log",
+      "seconds": 5.583537728001829
+    },
+    {
+      "source": "ps/Loader.cpp",
+      "project": "engine",
+      "identity": "617f7f11e13e6e9cb73f44f6b251e28cdc8348194fcd939bc8e2de65088096c2",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/ps_Loader.cpp.o",
+      "log": "/phase4-build/logs/ps_Loader.cpp.log",
+      "seconds": 2.474488592000853
+    },
+    {
+      "source": "ps/Mod.cpp",
+      "project": "engine",
+      "identity": "07700f677f6b057ddd593bea2ee3002999c466ed2bd71b21defb76d2467866b6",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/ps_Mod.cpp.o",
+      "log": "/phase4-build/logs/ps_Mod.cpp.log",
+      "seconds": 9.34905892000097
+    },
+    {
+      "source": "ps/ModInstaller.cpp",
+      "project": "engine",
+      "identity": "6666bec146517745e03804458624b20c0923cc8b5c0c49e803aacf941be2099b",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/ps_ModInstaller.cpp.o",
+      "log": "/phase4-build/logs/ps_ModInstaller.cpp.log",
+      "seconds": 6.521480614996108
+    },
+    {
+      "source": "ps/ModIo.cpp",
+      "project": "engine",
+      "identity": "d1c094960af745254f6f20e2b3fe36bdcbe977ab008de65b1b24b629a4dc23a3",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/ps_ModIo.cpp.o",
+      "log": "/phase4-build/logs/ps_ModIo.cpp.log",
+      "seconds": 10.226335958002892
+    },
+    {
+      "source": "ps/ProfileViewer.cpp",
+      "project": "engine",
+      "identity": "bfc00c30a8859cb208c49beb7d6dd9b5aeece3a3cdcb29138de2495bfcc366dd",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/ps_ProfileViewer.cpp.o",
+      "log": "/phase4-build/logs/ps_ProfileViewer.cpp.log",
+      "seconds": 7.315417329999036
+    },
+    {
+      "source": "ps/Profiler2GPU.cpp",
+      "project": "engine",
+      "identity": "123be509f4346435fecb075f8402b38090f115953288076f257fd67924737200",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/ps_Profiler2GPU.cpp.o",
+      "log": "/phase4-build/logs/ps_Profiler2GPU.cpp.log",
+      "seconds": 3.28668107699923
+    },
+    {
+      "source": "ps/Pyrogenesis.cpp",
+      "project": "engine",
+      "identity": "7564ac1103fc1db845f18d99985e8542157b4393ad827b2792308e1729d67872",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/ps_Pyrogenesis.cpp.o",
+      "log": "/phase4-build/logs/ps_Pyrogenesis.cpp.log",
+      "seconds": 2.9206114069966134
+    },
+    {
+      "source": "ps/Replay.cpp",
+      "project": "engine",
+      "identity": "b109eb4acf22bdee4783b3686325f635d03b0b9c4ec593d0c19fb8af85e31f78",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/ps_Replay.cpp.o",
+      "log": "/phase4-build/logs/ps_Replay.cpp.log",
+      "seconds": 7.53860605799855
+    },
+    {
+      "source": "ps/SavedGame.cpp",
+      "project": "engine",
+      "identity": "5618586f1f3b024305d267919d461b58951946097466ab12ddd6813baa1be960",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/ps_SavedGame.cpp.o",
+      "log": "/phase4-build/logs/ps_SavedGame.cpp.log",
+      "seconds": 7.070823314003064
+    },
+    {
+      "source": "ps/TaskManager.cpp",
+      "project": "engine",
+      "identity": "72a1ab7dfe4911ef2a7312169911c692b6e344cd907a45605a03a34e93911608",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/ps_TaskManager.cpp.o",
+      "log": "/phase4-build/logs/ps_TaskManager.cpp.log",
+      "seconds": 4.259935291003785
+    },
+    {
+      "source": "ps/TemplateLoader.cpp",
+      "project": "engine",
+      "identity": "5229c71a5f19db42791628d9b0d90a6da08a164dbe5acd2207c9cc98e208bb08",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/ps_TemplateLoader.cpp.o",
+      "log": "/phase4-build/logs/ps_TemplateLoader.cpp.log",
+      "seconds": 7.004480806994252
+    },
+    {
+      "source": "ps/Threading.cpp",
+      "project": "engine",
+      "identity": "2b19fff009549fa266dd861642655ad108680267015a19ea75b216637b432ed7",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/ps_Threading.cpp.o",
+      "log": "/phase4-build/logs/ps_Threading.cpp.log",
+      "seconds": 2.4710752300015884
+    },
+    {
+      "source": "ps/TouchInput.cpp",
+      "project": "engine",
+      "identity": "a62d2a531ec04b3baf8c9d2d921dc0ded39548692a70527f80cddfa19b28201c",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/ps_TouchInput.cpp.o",
+      "log": "/phase4-build/logs/ps_TouchInput.cpp.log",
+      "seconds": 2.79003601000295
+    },
+    {
+      "source": "ps/UserReport.cpp",
+      "project": "engine",
+      "identity": "b852c712a073ca52f50ba5b749e4d2a67c40903db521d87aea9cf8bc0a6c663b",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/ps_UserReport.cpp.o",
+      "log": "/phase4-build/logs/ps_UserReport.cpp.log",
+      "seconds": 8.18396758599556
+    },
+    {
+      "source": "ps/Util.cpp",
+      "project": "engine",
+      "identity": "f102314bbfe6fd102a6e48d7239685f27e66879d3e82fc6f72edcd7beece7089",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/ps_Util.cpp.o",
+      "log": "/phase4-build/logs/ps_Util.cpp.log",
+      "seconds": 3.805459615003201
+    },
+    {
+      "source": "ps/VideoMode.cpp",
+      "project": "engine",
+      "identity": "b4a287c553c0c5170f0e7e7f2ab5e53aa9f895b1d46e8b70ff247d0552ea4025",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/ps_VideoMode.cpp.o",
+      "log": "/phase4-build/logs/ps_VideoMode.cpp.log",
+      "seconds": 8.228444439002487
+    },
+    {
+      "source": "ps/VisualReplay.cpp",
+      "project": "engine",
+      "identity": "61728b7f1bd99a954e624fc9edabb288d2c11bfcfda207cc185bc26441348cb0",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/ps_VisualReplay.cpp.o",
+      "log": "/phase4-build/logs/ps_VisualReplay.cpp.log",
+      "seconds": 11.012996425000892
+    },
+    {
+      "source": "ps/World.cpp",
+      "project": "engine",
+      "identity": "8c73e59d67683e73c6df1c65d2e11fdc05f156abbd9f7f5d922b6b11743d2ded",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/ps_World.cpp.o",
+      "log": "/phase4-build/logs/ps_World.cpp.log",
+      "seconds": 7.635759402000986
+    },
+    {
+      "source": "ps/XMB/XMBData.cpp",
+      "project": "engine",
+      "identity": "809b205b55ed1a36798ae450bbfbfa169d5ce425761db39223518c637c1a823b",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/ps_XMB_XMBData.cpp.o",
+      "log": "/phase4-build/logs/ps_XMB_XMBData.cpp.log",
+      "seconds": 2.019592458003899
+    },
+    {
+      "source": "ps/XMB/XMBStorage.cpp",
+      "project": "engine",
+      "identity": "b952cbc1c4be7b427cf8c33329dcce391f81dcc3f35fabe6f05af4cb7fe87ad5",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/ps_XMB_XMBStorage.cpp.o",
+      "log": "/phase4-build/logs/ps_XMB_XMBStorage.cpp.log",
+      "seconds": 10.531090527998458
+    },
+    {
+      "source": "ps/XML/RelaxNG.cpp",
+      "project": "engine",
+      "identity": "c7d7b4c8dc72e12430a41b4cc81f3ce7dbfd79b9c1312677e9f4ca0d27671b3a",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/ps_XML_RelaxNG.cpp.o",
+      "log": "/phase4-build/logs/ps_XML_RelaxNG.cpp.log",
+      "seconds": 8.6917056040038
+    },
+    {
+      "source": "ps/XML/XMLWriter.cpp",
+      "project": "engine",
+      "identity": "9ecfaee8d9585a9151b21765dbf236be9d7b545d670e56851ce5eebff4bb3159",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/ps_XML_XMLWriter.cpp.o",
+      "log": "/phase4-build/logs/ps_XML_XMLWriter.cpp.log",
+      "seconds": 5.777215209003771
+    },
+    {
+      "source": "ps/XML/Xeromyces.cpp",
+      "project": "engine",
+      "identity": "9aa9e00040a56db64e6e09012e374488be00fddaa0a5bcd832403b47f6c0c983",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/ps_XML_Xeromyces.cpp.o",
+      "log": "/phase4-build/logs/ps_XML_Xeromyces.cpp.log",
+      "seconds": 5.889334435996716
+    },
+    {
+      "source": "ps/scripting/JSInterface_ConfigDB.cpp",
+      "project": "engine",
+      "identity": "528664f1c1ffd8190ab921a70bbda3ddc34c124c7c49c1f05beca57cecaa0669",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/ps_scripting_JSInterface_ConfigDB.cpp.o",
+      "log": "/phase4-build/logs/ps_scripting_JSInterface_ConfigDB.cpp.log",
+      "seconds": 7.9943867350011715
+    },
+    {
+      "source": "ps/scripting/JSInterface_Console.cpp",
+      "project": "engine",
+      "identity": "570a00d51361f989cb7f5e6eb427352d159045dca133954552ae2e37185a8f9e",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/ps_scripting_JSInterface_Console.cpp.o",
+      "log": "/phase4-build/logs/ps_scripting_JSInterface_Console.cpp.log",
+      "seconds": 7.34523576599895
+    },
+    {
+      "source": "ps/scripting/JSInterface_Debug.cpp",
+      "project": "engine",
+      "identity": "9f882c7c905348dc8ed338d2e2a931b3a1ff0a6a1a82f1ccb092aa921fe3c993",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/ps_scripting_JSInterface_Debug.cpp.o",
+      "log": "/phase4-build/logs/ps_scripting_JSInterface_Debug.cpp.log",
+      "seconds": 4.6103231820015935
+    },
+    {
+      "source": "ps/scripting/JSInterface_Game.cpp",
+      "project": "engine",
+      "identity": "fdc6a2488872f35ec744c02369203947191d00a3f51202412501f58b4bffbb48",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/ps_scripting_JSInterface_Game.cpp.o",
+      "log": "/phase4-build/logs/ps_scripting_JSInterface_Game.cpp.log",
+      "seconds": 7.484504931002448
+    },
+    {
+      "source": "ps/scripting/JSInterface_Hotkey.cpp",
+      "project": "engine",
+      "identity": "92be973d77a3c522844513b73f86f1ba80ecb62b7d8f52659a9b4d1e6ee0f892",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/ps_scripting_JSInterface_Hotkey.cpp.o",
+      "log": "/phase4-build/logs/ps_scripting_JSInterface_Hotkey.cpp.log",
+      "seconds": 7.559544515002926
+    },
+    {
+      "source": "ps/scripting/JSInterface_Main.cpp",
+      "project": "engine",
+      "identity": "6d1afc056416f2f717b9a2ce131c4726a2735e8c90912c7b691aad0620aaf585",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/ps_scripting_JSInterface_Main.cpp.o",
+      "log": "/phase4-build/logs/ps_scripting_JSInterface_Main.cpp.log",
+      "seconds": 6.727677245995437
+    },
+    {
+      "source": "ps/scripting/JSInterface_Mod.cpp",
+      "project": "engine",
+      "identity": "b15dc1f8a796c77ed1089b6ee4494029f8f2d6ec2814f59f0e99f15888b63704",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/ps_scripting_JSInterface_Mod.cpp.o",
+      "log": "/phase4-build/logs/ps_scripting_JSInterface_Mod.cpp.log",
+      "seconds": 6.321917938999832
+    },
+    {
+      "source": "ps/scripting/JSInterface_ModIo.cpp",
+      "project": "engine",
+      "identity": "ce50ddb4ed8d25828c46adad2c23cd593e186efc4bbd0fcbee9ade1447c33df3",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/ps_scripting_JSInterface_ModIo.cpp.o",
+      "log": "/phase4-build/logs/ps_scripting_JSInterface_ModIo.cpp.log",
+      "seconds": 6.467246027001238
+    },
+    {
+      "source": "ps/scripting/JSInterface_SavedGame.cpp",
+      "project": "engine",
+      "identity": "f668a0cbcf8c32746b3692a6f256e3180e0c1b313fceabddc1f2344ab1a829d9",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/ps_scripting_JSInterface_SavedGame.cpp.o",
+      "log": "/phase4-build/logs/ps_scripting_JSInterface_SavedGame.cpp.log",
+      "seconds": 7.084453994000796
+    },
+    {
+      "source": "ps/scripting/JSInterface_UserReport.cpp",
+      "project": "engine",
+      "identity": "0925e03ecf3dc12015c1902ee8eb682468af04499572a0082da85c1fa5682255",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/ps_scripting_JSInterface_UserReport.cpp.o",
+      "log": "/phase4-build/logs/ps_scripting_JSInterface_UserReport.cpp.log",
+      "seconds": 3.998962728997867
+    },
+    {
+      "source": "ps/scripting/JSInterface_VFS.cpp",
+      "project": "engine",
+      "identity": "55180fe9821cfe7eed741a176c3fc107adf0bedda266494fd63f4300b721aca5",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/ps_scripting_JSInterface_VFS.cpp.o",
+      "log": "/phase4-build/logs/ps_scripting_JSInterface_VFS.cpp.log",
+      "seconds": 9.114114428994071
+    },
+    {
+      "source": "ps/scripting/JSInterface_VisualReplay.cpp",
+      "project": "engine",
+      "identity": "261a57f224b496f345c2185aae8efd46301fdf276434c95c232752647e6c73cb",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/ps_scripting_JSInterface_VisualReplay.cpp.o",
+      "log": "/phase4-build/logs/ps_scripting_JSInterface_VisualReplay.cpp.log",
+      "seconds": 6.278676125002676
+    },
+    {
+      "source": "renderer/AlphaMapCalculator.cpp",
+      "project": "graphics",
+      "identity": "16e1c1eec172189af23150b06b82a17024e1154ab1d33638fbac366470826e27",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/renderer_AlphaMapCalculator.cpp.o",
+      "log": "/phase4-build/logs/renderer_AlphaMapCalculator.cpp.log",
+      "seconds": 1.836060935005662
+    },
+    {
+      "source": "renderer/CPUSkinnedModelRenderer.cpp",
+      "project": "graphics",
+      "identity": "5c10ecdcedc926050a1015a39fb58c9ab368b7ea086391c57498d992f8ba4dd8",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/renderer_CPUSkinnedModelRenderer.cpp.o",
+      "log": "/phase4-build/logs/renderer_CPUSkinnedModelRenderer.cpp.log",
+      "seconds": 5.418660363997333
+    },
+    {
+      "source": "renderer/DebugRenderer.cpp",
+      "project": "graphics",
+      "identity": "0e7704feeb2dd76ffa7732e99a7588d3c359061c05bd7fd984571bcb4cfd62f1",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/renderer_DebugRenderer.cpp.o",
+      "log": "/phase4-build/logs/renderer_DebugRenderer.cpp.log",
+      "seconds": 4.290652634001162
+    },
+    {
+      "source": "renderer/DecalRData.cpp",
+      "project": "graphics",
+      "identity": "232527136cdaa9767ccff97c5a78c0e9c0c80fdc2b28c4dfe7a316a9787e19ed",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/renderer_DecalRData.cpp.o",
+      "log": "/phase4-build/logs/renderer_DecalRData.cpp.log",
+      "seconds": 7.119090754000354
+    },
+    {
+      "source": "renderer/GPUSkinnedModelRenderer.cpp",
+      "project": "graphics",
+      "identity": "36bcf05caef9b0c34c608cba8205a5c480dfad6986eae8c1e0a8c70af9072d61",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/renderer_GPUSkinnedModelRenderer.cpp.o",
+      "log": "/phase4-build/logs/renderer_GPUSkinnedModelRenderer.cpp.log",
+      "seconds": 5.927945068004192
+    },
+    {
+      "source": "renderer/InstancingModelRenderer.cpp",
+      "project": "graphics",
+      "identity": "41de0224b6b40fc8eb1d05ba17128b0638edc548e0ed61cae845f1da50caa469",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/renderer_InstancingModelRenderer.cpp.o",
+      "log": "/phase4-build/logs/renderer_InstancingModelRenderer.cpp.log",
+      "seconds": 5.652175883995369
+    },
+    {
+      "source": "renderer/MikktspaceWrap.cpp",
+      "project": "graphics",
+      "identity": "a982924fe9a8ed3170c786aee149c283bf3ca7a1c20e396e62b251aa2864b067",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/renderer_MikktspaceWrap.cpp.o",
+      "log": "/phase4-build/logs/renderer_MikktspaceWrap.cpp.log",
+      "seconds": 2.9267387489962857
+    },
+    {
+      "source": "renderer/ModelRenderer.cpp",
+      "project": "graphics",
+      "identity": "559087c592d02b1fb6dca2f61b96b95a214c8319735731f1b606fb1ed4929e4b",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/renderer_ModelRenderer.cpp.o",
+      "log": "/phase4-build/logs/renderer_ModelRenderer.cpp.log",
+      "seconds": 6.946219853001821
+    },
+    {
+      "source": "renderer/OverlayRenderer.cpp",
+      "project": "graphics",
+      "identity": "da65cad98575169401842d88c56a473efa9f6fef8a5c7665820fc7ae1bc7d93c",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/renderer_OverlayRenderer.cpp.o",
+      "log": "/phase4-build/logs/renderer_OverlayRenderer.cpp.log",
+      "seconds": 4.5925468419955
+    },
+    {
+      "source": "renderer/ParticleRenderer.cpp",
+      "project": "graphics",
+      "identity": "b33eeeecc909e087e68e616060f4b19d3d26a4460c2e4b5ac0223dcfa10cbd89",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/renderer_ParticleRenderer.cpp.o",
+      "log": "/phase4-build/logs/renderer_ParticleRenderer.cpp.log",
+      "seconds": 3.9602154419990256
+    },
+    {
+      "source": "renderer/PatchRData.cpp",
+      "project": "graphics",
+      "identity": "14df6d87c67f0bedebda1e68bad63df8404f6414602a3b6bcc33c60f98446fcd",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/renderer_PatchRData.cpp.o",
+      "log": "/phase4-build/logs/renderer_PatchRData.cpp.log",
+      "seconds": 9.673631422003382
+    },
+    {
+      "source": "renderer/PostprocManager.cpp",
+      "project": "graphics",
+      "identity": "e0acb3e48db92d17767d5d4843b9d06938f077ffcccff458da8022af9b2598eb",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/renderer_PostprocManager.cpp.o",
+      "log": "/phase4-build/logs/renderer_PostprocManager.cpp.log",
+      "seconds": 9.152573393002967
+    },
+    {
+      "source": "renderer/RenderModifiers.cpp",
+      "project": "graphics",
+      "identity": "a57f32106537701a76541b0b99e9417ec4335541b43585e08e0924d6493c4551",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/renderer_RenderModifiers.cpp.o",
+      "log": "/phase4-build/logs/renderer_RenderModifiers.cpp.log",
+      "seconds": 5.0640420480049215
+    },
+    {
+      "source": "renderer/Renderer.cpp",
+      "project": "graphics",
+      "identity": "c26e16ac3defa56f87627ce00f1f71b18bb06c173ccab2262cac4a16f8391b88",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/renderer_Renderer.cpp.o",
+      "log": "/phase4-build/logs/renderer_Renderer.cpp.log",
+      "seconds": 11.472811093000928
+    },
+    {
+      "source": "renderer/RenderingOptions.cpp",
+      "project": "graphics",
+      "identity": "137cc18d9f6ebdeecc1dd8b1502dd1f93784e6ec8b179dfe95bd76d231136922",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/renderer_RenderingOptions.cpp.o",
+      "log": "/phase4-build/logs/renderer_RenderingOptions.cpp.log",
+      "seconds": 9.60115354899608
+    },
+    {
+      "source": "renderer/Scene.cpp",
+      "project": "graphics",
+      "identity": "09b625bae91f6d99e4eb53cdc8b44b462a96ec5281b5ddd26053d5c9acb99df4",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/renderer_Scene.cpp.o",
+      "log": "/phase4-build/logs/renderer_Scene.cpp.log",
+      "seconds": 5.202830515001551
+    },
+    {
+      "source": "renderer/SceneRenderer.cpp",
+      "project": "graphics",
+      "identity": "9eaebb4aa6050c6cb2411efea8be684d01c7bf2402c16d84aa3dfaa8759e3d75",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/renderer_SceneRenderer.cpp.o",
+      "log": "/phase4-build/logs/renderer_SceneRenderer.cpp.log",
+      "seconds": 6.5916550629990525
+    },
+    {
+      "source": "renderer/ShadowMap.cpp",
+      "project": "graphics",
+      "identity": "ce3c5ed5db2725d65aaad9d227e4fba8b52b0c66094964baef65d8155e729266",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/renderer_ShadowMap.cpp.o",
+      "log": "/phase4-build/logs/renderer_ShadowMap.cpp.log",
+      "seconds": 8.976936351995391
+    },
+    {
+      "source": "renderer/SilhouetteRenderer.cpp",
+      "project": "graphics",
+      "identity": "862f20539c01c49049f963cf147a35d2906fa4fad0637b4152cc7fc8e8882495",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/renderer_SilhouetteRenderer.cpp.o",
+      "log": "/phase4-build/logs/renderer_SilhouetteRenderer.cpp.log",
+      "seconds": 6.160958615997515
+    },
+    {
+      "source": "renderer/SkyManager.cpp",
+      "project": "graphics",
+      "identity": "c364f56836cde885db0fccf664e8cbacdf1c3b6ce22d87a96f98970d0e0d711a",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/renderer_SkyManager.cpp.o",
+      "log": "/phase4-build/logs/renderer_SkyManager.cpp.log",
+      "seconds": 8.490554061005241
+    },
+    {
+      "source": "renderer/TerrainOverlay.cpp",
+      "project": "graphics",
+      "identity": "3128561903759aaf43b96938b42b5c5666ae6dcde5eea8cd2f4a965ac45ef4ce",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/renderer_TerrainOverlay.cpp.o",
+      "log": "/phase4-build/logs/renderer_TerrainOverlay.cpp.log",
+      "seconds": 7.040197826994699
+    },
+    {
+      "source": "renderer/TerrainRenderer.cpp",
+      "project": "graphics",
+      "identity": "a8cff532c899ba8efcd9c69c57a4c43cf0cd5dcffb2929a3a62cd0d81d2f8a58",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/renderer_TerrainRenderer.cpp.o",
+      "log": "/phase4-build/logs/renderer_TerrainRenderer.cpp.log",
+      "seconds": 9.86873482500232
+    },
+    {
+      "source": "renderer/TexturedLineRData.cpp",
+      "project": "graphics",
+      "identity": "3fbe5a6323dfd4d48976b42c370ae54f096c65baf2f8c1bd71920d28ab4980e9",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/renderer_TexturedLineRData.cpp.o",
+      "log": "/phase4-build/logs/renderer_TexturedLineRData.cpp.log",
+      "seconds": 6.707046053998056
+    },
+    {
+      "source": "renderer/TimeManager.cpp",
+      "project": "graphics",
+      "identity": "bdc51811ac6789892b242fb82e5981def5af5665d7887457ebb2977349f0e12c",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/renderer_TimeManager.cpp.o",
+      "log": "/phase4-build/logs/renderer_TimeManager.cpp.log",
+      "seconds": 2.675444298001821
+    },
+    {
+      "source": "renderer/VertexArray.cpp",
+      "project": "graphics",
+      "identity": "8e6e6506426a0daf27df6023c8c6a5c90de6ec7e5365ae475814ddbc7f70ef40",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/renderer_VertexArray.cpp.o",
+      "log": "/phase4-build/logs/renderer_VertexArray.cpp.log",
+      "seconds": 7.043634398003633
+    },
+    {
+      "source": "renderer/VertexBuffer.cpp",
+      "project": "graphics",
+      "identity": "1b79e1ef5a23118f7b48f74e535f9f6d87e289f41da35b1b141db022b58e6e97",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/renderer_VertexBuffer.cpp.o",
+      "log": "/phase4-build/logs/renderer_VertexBuffer.cpp.log",
+      "seconds": 4.116158527998778
+    },
+    {
+      "source": "renderer/VertexBufferManager.cpp",
+      "project": "graphics",
+      "identity": "6a9c23245d2b647e517ec00305164b0e193a28b9dedeaa85fd3caa16a32f94be",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/renderer_VertexBufferManager.cpp.o",
+      "log": "/phase4-build/logs/renderer_VertexBufferManager.cpp.log",
+      "seconds": 7.317540208998253
+    },
+    {
+      "source": "renderer/WaterManager.cpp",
+      "project": "graphics",
+      "identity": "80b63d6ed20a722b5a0affb606c1261f9a33737224809e2522e79b6cfed81fe9",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/renderer_WaterManager.cpp.o",
+      "log": "/phase4-build/logs/renderer_WaterManager.cpp.log",
+      "seconds": 7.804357250999601
+    },
+    {
+      "source": "renderer/backend/CompareOp.cpp",
+      "project": "graphics",
+      "identity": "6aa5355fa68100fe9c42e89dc2814248df41e2a9862e573501cdcece93857234",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/renderer_backend_CompareOp.cpp.o",
+      "log": "/phase4-build/logs/renderer_backend_CompareOp.cpp.log",
+      "seconds": 2.209057899999607
+    },
+    {
+      "source": "renderer/backend/PipelineState.cpp",
+      "project": "graphics",
+      "identity": "edfa3ab2b1799937745ce7ff0c14e37b89396020946717377656ccb55444efe2",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/renderer_backend_PipelineState.cpp.o",
+      "log": "/phase4-build/logs/renderer_backend_PipelineState.cpp.log",
+      "seconds": 4.169598874002986
+    },
+    {
+      "source": "renderer/backend/Sampler.cpp",
+      "project": "graphics",
+      "identity": "d096f461a1606f633c6c6f57e3017f4d26a643bf43c992fd0b935fe66f1d76bd",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/renderer_backend_Sampler.cpp.o",
+      "log": "/phase4-build/logs/renderer_backend_Sampler.cpp.log",
+      "seconds": 3.0063244239936466
+    },
+    {
+      "source": "renderer/backend/dummy/Buffer.cpp",
+      "project": "graphics",
+      "identity": "a034afbe2e1cc35def528d72f3c90c67f4044a08d48db7fc16e37df096f73518",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/renderer_backend_dummy_Buffer.cpp.o",
+      "log": "/phase4-build/logs/renderer_backend_dummy_Buffer.cpp.log",
+      "seconds": 3.0723404660020606
+    },
+    {
+      "source": "renderer/backend/dummy/Device.cpp",
+      "project": "graphics",
+      "identity": "91cfd92400c910756b32a6281278c5b9a3abfc09be0fd0e940a48164824ff4cc",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/renderer_backend_dummy_Device.cpp.o",
+      "log": "/phase4-build/logs/renderer_backend_dummy_Device.cpp.log",
+      "seconds": 6.088337913999567
+    },
+    {
+      "source": "renderer/backend/dummy/DeviceCommandContext.cpp",
+      "project": "graphics",
+      "identity": "8fa3c63cd8d8ac459ab0bb14b7c4412b090e118991938eeaa2ccd0fd1961e5e2",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/renderer_backend_dummy_DeviceCommandContext.cpp.o",
+      "log": "/phase4-build/logs/renderer_backend_dummy_DeviceCommandContext.cpp.log",
+      "seconds": 3.2101983860047767
+    },
+    {
+      "source": "renderer/backend/dummy/Framebuffer.cpp",
+      "project": "graphics",
+      "identity": "923d18193a765bb737094f23f5d571476007581b258de31ecc715d6abb47a532",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/renderer_backend_dummy_Framebuffer.cpp.o",
+      "log": "/phase4-build/logs/renderer_backend_dummy_Framebuffer.cpp.log",
+      "seconds": 3.8199236169966753
+    },
+    {
+      "source": "renderer/backend/dummy/PipelineState.cpp",
+      "project": "graphics",
+      "identity": "fde705900525e88ba2a17df406a965ca7e669f8ea7b8b44a80f0eef3512a4d5d",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/renderer_backend_dummy_PipelineState.cpp.o",
+      "log": "/phase4-build/logs/renderer_backend_dummy_PipelineState.cpp.log",
+      "seconds": 3.68592609299958
+    },
+    {
+      "source": "renderer/backend/dummy/ShaderProgram.cpp",
+      "project": "graphics",
+      "identity": "7a53c377c4e328d231bff0bff4f5966cc0d9ba811a6d57418cd030ff57916f4f",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/renderer_backend_dummy_ShaderProgram.cpp.o",
+      "log": "/phase4-build/logs/renderer_backend_dummy_ShaderProgram.cpp.log",
+      "seconds": 3.054270850007015
+    },
+    {
+      "source": "renderer/backend/dummy/SwapChain.cpp",
+      "project": "graphics",
+      "identity": "47c38bbf54edafd11fd925019612208154b07a0e435985f30618bedad6cea348",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/renderer_backend_dummy_SwapChain.cpp.o",
+      "log": "/phase4-build/logs/renderer_backend_dummy_SwapChain.cpp.log",
+      "seconds": 2.3153443150004023
+    },
+    {
+      "source": "renderer/backend/dummy/Texture.cpp",
+      "project": "graphics",
+      "identity": "116da1416ad479a9364620327fe53527ae8b0ceb557fb5e3aa5772fc8d01e07b",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/renderer_backend_dummy_Texture.cpp.o",
+      "log": "/phase4-build/logs/renderer_backend_dummy_Texture.cpp.log",
+      "seconds": 3.982764489002875
+    },
+    {
+      "source": "renderer/backend/gl/Buffer.cpp",
+      "project": "graphics",
+      "identity": "036a6131ffe453b47ccaea71b786c76450890c6cfd3740107de61a9c5c812db4",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/renderer_backend_gl_Buffer.cpp.o",
+      "log": "/phase4-build/logs/renderer_backend_gl_Buffer.cpp.log",
+      "seconds": 3.9001202860017656
+    },
+    {
+      "source": "renderer/backend/gl/Device.cpp",
+      "project": "graphics",
+      "identity": "1d16c78fb6303401b0dd4f790ce4a3949c21f1584d0609d985f36af34be2889c",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/renderer_backend_gl_Device.cpp.o",
+      "log": "/phase4-build/logs/renderer_backend_gl_Device.cpp.log",
+      "seconds": 10.107597701004124
+    },
+    {
+      "source": "renderer/backend/gl/DeviceCommandContext.cpp",
+      "project": "graphics",
+      "identity": "d94d2f5a74da33d57f79f75af9e670cdd0a3cc4010ad53da344943e205860e12",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/renderer_backend_gl_DeviceCommandContext.cpp.o",
+      "log": "/phase4-build/logs/renderer_backend_gl_DeviceCommandContext.cpp.log",
+      "seconds": 7.478564409997489
+    },
+    {
+      "source": "renderer/backend/gl/Framebuffer.cpp",
+      "project": "graphics",
+      "identity": "c97d71d16a3dda5af307193d559373a422bcada1be23b208d895d6bf0d289b24",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/renderer_backend_gl_Framebuffer.cpp.o",
+      "log": "/phase4-build/logs/renderer_backend_gl_Framebuffer.cpp.log",
+      "seconds": 6.794079027997213
+    },
+    {
+      "source": "renderer/backend/gl/Mapping.cpp",
+      "project": "graphics",
+      "identity": "5fe7f344281eda61dba4f7e491b5c88b1acea40b4f343ee59e0972d43ab72904",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/renderer_backend_gl_Mapping.cpp.o",
+      "log": "/phase4-build/logs/renderer_backend_gl_Mapping.cpp.log",
+      "seconds": 2.067011081999226
+    },
+    {
+      "source": "renderer/backend/gl/PipelineState.cpp",
+      "project": "graphics",
+      "identity": "0ddddaad6f00ea56198ed172bebe819bc103c878caece815cc9e42ad28530360",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/renderer_backend_gl_PipelineState.cpp.o",
+      "log": "/phase4-build/logs/renderer_backend_gl_PipelineState.cpp.log",
+      "seconds": 3.8616650570038473
+    },
+    {
+      "source": "renderer/backend/gl/ShaderProgram.cpp",
+      "project": "graphics",
+      "identity": "4f1d68d113dd60119daf338b661049473c20900f4c8922bcd187d6313812b6d2",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/renderer_backend_gl_ShaderProgram.cpp.o",
+      "log": "/phase4-build/logs/renderer_backend_gl_ShaderProgram.cpp.log",
+      "seconds": 7.9979867020010715
+    },
+    {
+      "source": "renderer/backend/gl/SwapChain.cpp",
+      "project": "graphics",
+      "identity": "9fb3b797788a20653809af75d2e9c1959ab491464808495b86f676db7dff5b11",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/renderer_backend_gl_SwapChain.cpp.o",
+      "log": "/phase4-build/logs/renderer_backend_gl_SwapChain.cpp.log",
+      "seconds": 7.185103357995104
+    },
+    {
+      "source": "renderer/backend/gl/Texture.cpp",
+      "project": "graphics",
+      "identity": "642a16ae3a99ed1fcaf298aac300f1670bdf3f090842166be0d3b0f3f36a45f8",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/renderer_backend_gl_Texture.cpp.o",
+      "log": "/phase4-build/logs/renderer_backend_gl_Texture.cpp.log",
+      "seconds": 4.473814258002676
+    },
+    {
+      "source": "renderer/backend/vulkan/Buffer.cpp",
+      "project": "graphics",
+      "identity": "7500066cbe2e85a6e7eb141ee4cf2f596c27e49ff56b02d3895f235834345a95",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/renderer_backend_vulkan_Buffer.cpp.o",
+      "log": "/phase4-build/logs/renderer_backend_vulkan_Buffer.cpp.log",
+      "seconds": 7.2092636930028675
+    },
+    {
+      "source": "renderer/backend/vulkan/DescriptorManager.cpp",
+      "project": "graphics",
+      "identity": "7caa690cf1884391c90ada2a6e61214e0557a1985d2533951126bcdc87a357bb",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/renderer_backend_vulkan_DescriptorManager.cpp.o",
+      "log": "/phase4-build/logs/renderer_backend_vulkan_DescriptorManager.cpp.log",
+      "seconds": 10.467042750999099
+    },
+    {
+      "source": "lib/debug.cpp",
+      "project": "lowlevel",
+      "identity": "a6071fb64c6da80f1c8215f8fc78877b53b748c108c8543e4e0556e2765e3dbb",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/lib_debug.cpp.o",
+      "log": "/phase4-build/logs/lib_debug.cpp.log",
+      "seconds": 2.644976592004241
+    },
+    {
+      "source": "pch/atlas/precompiled.cpp",
+      "project": "atlas",
+      "identity": "7644b8604fa4396aaa1e83a84ddadd93e32f30eb1d14e62927402ecac363f76d",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/pch_atlas_precompiled.cpp.o",
+      "log": "/phase4-build/logs/pch_atlas_precompiled.cpp.log",
+      "seconds": 1.739687576002325
+    },
+    {
+      "source": "renderer/scripting/JSInterface_Renderer.cpp",
+      "project": "graphics",
+      "identity": "6cc16cd95c67e32fbce7bac7ed318828da0dc95f58430802d3e4e5af18a9c005",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/renderer_scripting_JSInterface_Renderer.cpp.o",
+      "log": "/phase4-build/logs/renderer_scripting_JSInterface_Renderer.cpp.log",
+      "seconds": 6.291376351000508
+    },
+    {
+      "source": "rlinterface/RLInterface.cpp",
+      "project": "rlinterface",
+      "identity": "e48b59e01aa9506d93fa4f9a5b108db9561b7e4e5f8b404a7e858f58664df4a2",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/rlinterface_RLInterface.cpp.o",
+      "log": "/phase4-build/logs/rlinterface_RLInterface.cpp.log",
+      "seconds": 15.588411630997143
+    },
+    {
+      "source": "scriptinterface/Context.cpp",
+      "project": "scriptinterface",
+      "identity": "b5955eb16805ae7ca174aca6f45335dc639ab4bda4f623c4da018de32bf05089",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/scriptinterface_Context.cpp.o",
+      "log": "/phase4-build/logs/scriptinterface_Context.cpp.log",
+      "seconds": 5.688485507002042
+    },
+    {
+      "source": "scriptinterface/Conversions.cpp",
+      "project": "scriptinterface",
+      "identity": "49522a4ad4a35c1e000272612e80cb485a5289ea84d1e1bba86bf0c28ff9fa89",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/scriptinterface_Conversions.cpp.o",
+      "log": "/phase4-build/logs/scriptinterface_Conversions.cpp.log",
+      "seconds": 7.587687272003677
+    },
+    {
+      "source": "scriptinterface/Exceptions.cpp",
+      "project": "scriptinterface",
+      "identity": "4ad4e32842ec3bd78df80567d4dde0dc5f870ce1e83546a60ce1626d5c7baa58",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/scriptinterface_Exceptions.cpp.o",
+      "log": "/phase4-build/logs/scriptinterface_Exceptions.cpp.log",
+      "seconds": 8.26435111900355
+    },
+    {
+      "source": "scriptinterface/Interface.cpp",
+      "project": "scriptinterface",
+      "identity": "cbd18ff8c1c25f11918fa1bdefcfbdaea1287d0b1ce67d7041d8e87b9f0667b5",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/scriptinterface_Interface.cpp.o",
+      "log": "/phase4-build/logs/scriptinterface_Interface.cpp.log",
+      "seconds": 11.863515609002206
+    },
+    {
+      "source": "scriptinterface/JSON.cpp",
+      "project": "scriptinterface",
+      "identity": "b8149229dbf836959241a25b880148e75dbba8d07b584bb12ed4a26857410b22",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/scriptinterface_JSON.cpp.o",
+      "log": "/phase4-build/logs/scriptinterface_JSON.cpp.log",
+      "seconds": 9.4622817749987
+    },
+    {
+      "source": "scriptinterface/ModuleLoader.cpp",
+      "project": "scriptinterface",
+      "identity": "0a393f99df537414dfed94a637af6dbdf1a2acaeb1fffe145e2bf114edacf951",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/scriptinterface_ModuleLoader.cpp.o",
+      "log": "/phase4-build/logs/scriptinterface_ModuleLoader.cpp.log",
+      "seconds": 10.912926690994937
+    },
+    {
+      "source": "scriptinterface/Promises.cpp",
+      "project": "scriptinterface",
+      "identity": "a2e02f01f440c5679d7169dcc686b765cb9f6f7804606a188e1ce953ef1e3c3a",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/scriptinterface_Promises.cpp.o",
+      "log": "/phase4-build/logs/scriptinterface_Promises.cpp.log",
+      "seconds": 7.913400412995543
+    },
+    {
+      "source": "scriptinterface/Stats.cpp",
+      "project": "scriptinterface",
+      "identity": "0320895767de99a31508827b685aa44ec8120a095a8050eaf0340d04b81573d8",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/scriptinterface_Stats.cpp.o",
+      "log": "/phase4-build/logs/scriptinterface_Stats.cpp.log",
+      "seconds": 5.235161653996329
+    },
+    {
+      "source": "scriptinterface/StructuredClone.cpp",
+      "project": "scriptinterface",
+      "identity": "70ae327e1ace3a0f8befc90a04bd97d36c3bbb7faf58eebfe429abc392cad366",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/scriptinterface_StructuredClone.cpp.o",
+      "log": "/phase4-build/logs/scriptinterface_StructuredClone.cpp.log",
+      "seconds": 5.00263018199621
+    },
+    {
+      "source": "simulation2/Simulation2.cpp",
+      "project": "simulation2",
+      "identity": "609b077da740af456c1a3cd8b873a072becfc9de75cd6d96c192c7737018be5a",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_Simulation2.cpp.o",
+      "log": "/phase4-build/logs/simulation2_Simulation2.cpp.log",
+      "seconds": 12.006600546999834
+    },
+    {
+      "source": "simulation2/components/CCmpAIManager.cpp",
+      "project": "simulation2",
+      "identity": "b0b43c93b7e6057f7980764a31b9825bac2d138c585c653c9ff8d35539295eeb",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_components_CCmpAIManager.cpp.o",
+      "log": "/phase4-build/logs/simulation2_components_CCmpAIManager.cpp.log",
+      "seconds": 13.700449342002685
+    },
+    {
+      "source": "simulation2/components/CCmpCinemaManager.cpp",
+      "project": "simulation2",
+      "identity": "464ad5ccfe4b8025c186a3d1837ffba843e44d41dcba6ed3697b3b71270ab4cd",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_components_CCmpCinemaManager.cpp.o",
+      "log": "/phase4-build/logs/simulation2_components_CCmpCinemaManager.cpp.log",
+      "seconds": 10.535593362001237
+    },
+    {
+      "source": "simulation2/components/CCmpCommandQueue.cpp",
+      "project": "simulation2",
+      "identity": "02d542ec72a2a557ab3b20b49a84a44fabb5998d3a60bae8ba7573dabb89c513",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_components_CCmpCommandQueue.cpp.o",
+      "log": "/phase4-build/logs/simulation2_components_CCmpCommandQueue.cpp.log",
+      "seconds": 9.633362326996576
+    },
+    {
+      "source": "simulation2/components/CCmpDecay.cpp",
+      "project": "simulation2",
+      "identity": "d56407d08c9bc68ee92fccb9c64b04bfae17b31c19e6e84d87aae87301bf9258",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_components_CCmpDecay.cpp.o",
+      "log": "/phase4-build/logs/simulation2_components_CCmpDecay.cpp.log",
+      "seconds": 6.168740656001319
+    },
+    {
+      "source": "simulation2/components/CCmpFootprint.cpp",
+      "project": "simulation2",
+      "identity": "d1f549b45fdfb0cdb8eb7dac1fe0e2091c72787ee789d6d1bee95fb9622928dc",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_components_CCmpFootprint.cpp.o",
+      "log": "/phase4-build/logs/simulation2_components_CCmpFootprint.cpp.log",
+      "seconds": 6.0435144690054585
+    },
+    {
+      "source": "simulation2/components/CCmpMinimap.cpp",
+      "project": "simulation2",
+      "identity": "6235f8afecbedacdf3ac02ce5c2a77cbdfac9dce96410d32232d2e2454e7f919",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_components_CCmpMinimap.cpp.o",
+      "log": "/phase4-build/logs/simulation2_components_CCmpMinimap.cpp.log",
+      "seconds": 5.5778761000037775
+    },
+    {
+      "source": "simulation2/components/CCmpMotionBall.cpp",
+      "project": "simulation2",
+      "identity": "696a5869bd778f0029aa53a0c282eba08223a22702565c6fdc874153fa0de139",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_components_CCmpMotionBall.cpp.o",
+      "log": "/phase4-build/logs/simulation2_components_CCmpMotionBall.cpp.log",
+      "seconds": 5.358517913999094
+    },
+    {
+      "source": "simulation2/components/CCmpObstruction.cpp",
+      "project": "simulation2",
+      "identity": "714d2c273bb4d9fc5d100733edff6e0f153ef622c64f848fadf5f30a62879f2b",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_components_CCmpObstruction.cpp.o",
+      "log": "/phase4-build/logs/simulation2_components_CCmpObstruction.cpp.log",
+      "seconds": 10.153993066996918
+    },
+    {
+      "source": "simulation2/components/CCmpObstructionManager.cpp",
+      "project": "simulation2",
+      "identity": "199d34e79946e252c8167068e8e3a54239bd39e954b45c5ac3864d42f538bcb8",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_components_CCmpObstructionManager.cpp.o",
+      "log": "/phase4-build/logs/simulation2_components_CCmpObstructionManager.cpp.log",
+      "seconds": 8.846880686993245
+    },
+    {
+      "source": "simulation2/components/CCmpOverlayRenderer.cpp",
+      "project": "simulation2",
+      "identity": "c8c2dc6a139c5aadca3ded976ef9a1256560f4cee4976e67f00658e27320cff7",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_components_CCmpOverlayRenderer.cpp.o",
+      "log": "/phase4-build/logs/simulation2_components_CCmpOverlayRenderer.cpp.log",
+      "seconds": 8.398070805000316
+    },
+    {
+      "source": "simulation2/components/CCmpOwnership.cpp",
+      "project": "simulation2",
+      "identity": "8db7de8adc6d934398227d03897127c2224750606f01e4b8ea35f4d625c6f84f",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_components_CCmpOwnership.cpp.o",
+      "log": "/phase4-build/logs/simulation2_components_CCmpOwnership.cpp.log",
+      "seconds": 5.452213672004291
+    },
+    {
+      "source": "simulation2/components/CCmpParticleManager.cpp",
+      "project": "simulation2",
+      "identity": "463a14fc2e186ce5544d8ef088009e83d5673b264ea8399f596b53e8d559a591",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_components_CCmpParticleManager.cpp.o",
+      "log": "/phase4-build/logs/simulation2_components_CCmpParticleManager.cpp.log",
+      "seconds": 5.839760436996585
+    },
+    {
+      "source": "simulation2/components/CCmpPathfinder.cpp",
+      "project": "simulation2",
+      "identity": "bdd230b883d8406f59e3d0917e8adb70bfa158b3dc980131522bbfae52999416",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_components_CCmpPathfinder.cpp.o",
+      "log": "/phase4-build/logs/simulation2_components_CCmpPathfinder.cpp.log",
+      "seconds": 11.938861942995572
+    },
+    {
+      "source": "simulation2/components/CCmpPosition.cpp",
+      "project": "simulation2",
+      "identity": "2d4e3eba695605f9bf5be4f523e9ba041ed5c42493c7c04a067055e08d5bfa92",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_components_CCmpPosition.cpp.o",
+      "log": "/phase4-build/logs/simulation2_components_CCmpPosition.cpp.log",
+      "seconds": 8.426109624000674
+    },
+    {
+      "source": "simulation2/components/CCmpProjectileManager.cpp",
+      "project": "simulation2",
+      "identity": "c20e6ec8cab20c93ffab170b18a175b4e40f73e215a9eab05f20ca0fb2236d97",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_components_CCmpProjectileManager.cpp.o",
+      "log": "/phase4-build/logs/simulation2_components_CCmpProjectileManager.cpp.log",
+      "seconds": 5.903436644002795
+    },
+    {
+      "source": "simulation2/components/CCmpRallyPointRenderer.cpp",
+      "project": "simulation2",
+      "identity": "dd63fb377d03ff93820dbd4f589f737fd9758d0620ed684770e34da915d03a0c",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_components_CCmpRallyPointRenderer.cpp.o",
+      "log": "/phase4-build/logs/simulation2_components_CCmpRallyPointRenderer.cpp.log",
+      "seconds": 11.522684702998959
+    },
+    {
+      "source": "simulation2/components/CCmpRangeManager.cpp",
+      "project": "simulation2",
+      "identity": "f91d6232bac461d80a809ebd9b7f21e5091d433f6b0079d9373728860af3062d",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_components_CCmpRangeManager.cpp.o",
+      "log": "/phase4-build/logs/simulation2_components_CCmpRangeManager.cpp.log",
+      "seconds": 11.43279037499451
+    },
+    {
+      "source": "simulation2/components/CCmpRangeOverlayRenderer.cpp",
+      "project": "simulation2",
+      "identity": "69c6f2b3772d223610c85dee6695d1f43569d8449325693fcb7b2eb07e2aeb58",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_components_CCmpRangeOverlayRenderer.cpp.o",
+      "log": "/phase4-build/logs/simulation2_components_CCmpRangeOverlayRenderer.cpp.log",
+      "seconds": 6.004381605001981
+    },
+    {
+      "source": "simulation2/components/CCmpSelectable.cpp",
+      "project": "simulation2",
+      "identity": "be549ef5ee0dd3a326ee995d2506e3276246f7da0d92cbef748effabd897bd07",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_components_CCmpSelectable.cpp.o",
+      "log": "/phase4-build/logs/simulation2_components_CCmpSelectable.cpp.log",
+      "seconds": 10.913802735005447
+    },
+    {
+      "source": "simulation2/components/CCmpSoundManager.cpp",
+      "project": "simulation2",
+      "identity": "f618ec42acfb79d94f59ebf79132d23dcbc50fe38d8ab7c560468308c1038488",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_components_CCmpSoundManager.cpp.o",
+      "log": "/phase4-build/logs/simulation2_components_CCmpSoundManager.cpp.log",
+      "seconds": 6.869371949993365
+    },
+    {
+      "source": "simulation2/components/CCmpTemplateManager.cpp",
+      "project": "simulation2",
+      "identity": "0aabd2e539cc40cd412c8329d2d74192e11f7424879cebac7b10a4310da2ba0c",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_components_CCmpTemplateManager.cpp.o",
+      "log": "/phase4-build/logs/simulation2_components_CCmpTemplateManager.cpp.log",
+      "seconds": 10.463917000997753
+    },
+    {
+      "source": "simulation2/components/CCmpTerrain.cpp",
+      "project": "simulation2",
+      "identity": "11b2e5084ced5200add64c9746e1675f41107ec7a4a4354fc650740699d889c1",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_components_CCmpTerrain.cpp.o",
+      "log": "/phase4-build/logs/simulation2_components_CCmpTerrain.cpp.log",
+      "seconds": 5.904398755003058
+    },
+    {
+      "source": "simulation2/components/CCmpTerritoryInfluence.cpp",
+      "project": "simulation2",
+      "identity": "cd9ac58f861b853bd2a4732e07ae1ef7bcfb74af9351e335e9f06995b2c36173",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_components_CCmpTerritoryInfluence.cpp.o",
+      "log": "/phase4-build/logs/simulation2_components_CCmpTerritoryInfluence.cpp.log",
+      "seconds": 5.762631773999601
+    },
+    {
+      "source": "simulation2/components/CCmpTerritoryManager.cpp",
+      "project": "simulation2",
+      "identity": "080310abaa82a70b0bdf25350d477e9c6f04c9a56da24632c07eb2d048865405",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_components_CCmpTerritoryManager.cpp.o",
+      "log": "/phase4-build/logs/simulation2_components_CCmpTerritoryManager.cpp.log",
+      "seconds": 8.679009418003261
+    },
+    {
+      "source": "simulation2/components/CCmpTest.cpp",
+      "project": "simulation2",
+      "identity": "605ebd27104d091aad4fcf71ae26582bc8f4f49c46f28beab7b1a424cadf8db6",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_components_CCmpTest.cpp.o",
+      "log": "/phase4-build/logs/simulation2_components_CCmpTest.cpp.log",
+      "seconds": 8.483953374998237
+    },
+    {
+      "source": "simulation2/components/CCmpUnitMotion_System.cpp",
+      "project": "simulation2",
+      "identity": "0232c0cd59467cdc9075b5f26d6141046504526e1f6d9f665abdae8ff88703e4",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_components_CCmpUnitMotion_System.cpp.o",
+      "log": "/phase4-build/logs/simulation2_components_CCmpUnitMotion_System.cpp.log",
+      "seconds": 11.341418007003085
+    },
+    {
+      "source": "simulation2/components/CCmpUnitRenderer.cpp",
+      "project": "simulation2",
+      "identity": "dad07cceb5b4b8f73d8c029ad8e91647435261f9aa1e06cdc11e2bc6719acbc5",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_components_CCmpUnitRenderer.cpp.o",
+      "log": "/phase4-build/logs/simulation2_components_CCmpUnitRenderer.cpp.log",
+      "seconds": 7.780542863998562
+    },
+    {
+      "source": "simulation2/components/CCmpVision.cpp",
+      "project": "simulation2",
+      "identity": "f0cb39c26caeda9362826cdb6d92934f430365814f03a60923f220eb78f5b151",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_components_CCmpVision.cpp.o",
+      "log": "/phase4-build/logs/simulation2_components_CCmpVision.cpp.log",
+      "seconds": 5.539127957003075
+    },
+    {
+      "source": "simulation2/components/CCmpVisualActor.cpp",
+      "project": "simulation2",
+      "identity": "f73fe1bc701347f206d9f3f9fe2c40ec999721fafc7967f198a79fbb2d1f7b3b",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_components_CCmpVisualActor.cpp.o",
+      "log": "/phase4-build/logs/simulation2_components_CCmpVisualActor.cpp.log",
+      "seconds": 10.72922335700423
+    },
+    {
+      "source": "simulation2/components/CCmpWaterManager.cpp",
+      "project": "simulation2",
+      "identity": "d73463db17c43b0decb5550a2a940442b05cc09cf071cdb4ea9d3ade6ff8c569",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_components_CCmpWaterManager.cpp.o",
+      "log": "/phase4-build/logs/simulation2_components_CCmpWaterManager.cpp.log",
+      "seconds": 5.8740309689965216
+    },
+    {
+      "source": "simulation2/components/ICmpAIInterface.cpp",
+      "project": "simulation2",
+      "identity": "57ae4162cf341be8f0b194455da794baac04d0272f8e4fdfedcb62e8540c02f5",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_components_ICmpAIInterface.cpp.o",
+      "log": "/phase4-build/logs/simulation2_components_ICmpAIInterface.cpp.log",
+      "seconds": 8.318307565001305
+    },
+    {
+      "source": "simulation2/components/ICmpAIManager.cpp",
+      "project": "simulation2",
+      "identity": "142622f0efb209a97ef154e72e818f2f4ee546ddea74ebf2f6fe6b30db7b6e28",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_components_ICmpAIManager.cpp.o",
+      "log": "/phase4-build/logs/simulation2_components_ICmpAIManager.cpp.log",
+      "seconds": 6.643483995998395
+    },
+    {
+      "source": "simulation2/components/ICmpAttack.cpp",
+      "project": "simulation2",
+      "identity": "279d1b5b68252a3685b491b1a3787d548b4c9887a540b90076ccdac18f0fe1b4",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_components_ICmpAttack.cpp.o",
+      "log": "/phase4-build/logs/simulation2_components_ICmpAttack.cpp.log",
+      "seconds": 10.490974300999369
+    },
+    {
+      "source": "simulation2/components/ICmpCinemaManager.cpp",
+      "project": "simulation2",
+      "identity": "4ed392bebe5e23bd85d4e8fe533afd9811ae02a19e250e52c54a8854ee31b260",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_components_ICmpCinemaManager.cpp.o",
+      "log": "/phase4-build/logs/simulation2_components_ICmpCinemaManager.cpp.log",
+      "seconds": 8.829905790000339
+    },
+    {
+      "source": "simulation2/components/ICmpCommandQueue.cpp",
+      "project": "simulation2",
+      "identity": "dac6086f2fe8201d8315d456bd296e40eb12a1af678103d689aae504fd0be5db",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_components_ICmpCommandQueue.cpp.o",
+      "log": "/phase4-build/logs/simulation2_components_ICmpCommandQueue.cpp.log",
+      "seconds": 6.328130786998372
+    },
+    {
+      "source": "simulation2/components/ICmpDecay.cpp",
+      "project": "simulation2",
+      "identity": "26b311ecb0af54efb5ce7b05bb8b18f30456de9292cf7dc8e27cb1a15aaa8b2d",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_components_ICmpDecay.cpp.o",
+      "log": "/phase4-build/logs/simulation2_components_ICmpDecay.cpp.log",
+      "seconds": 6.137821717005863
+    },
+    {
+      "source": "simulation2/components/ICmpFogging.cpp",
+      "project": "simulation2",
+      "identity": "27541a88739e319b2da9af4db2684cdcb547702556ea5148959bfba4fee3eb88",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_components_ICmpFogging.cpp.o",
+      "log": "/phase4-build/logs/simulation2_components_ICmpFogging.cpp.log",
+      "seconds": 11.003510681002808
+    },
+    {
+      "source": "simulation2/components/ICmpFootprint.cpp",
+      "project": "simulation2",
+      "identity": "c559f37dc077680e58e771c781a61ccb53a89f7c9a2f75981c0139bbb1bed4ef",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_components_ICmpFootprint.cpp.o",
+      "log": "/phase4-build/logs/simulation2_components_ICmpFootprint.cpp.log",
+      "seconds": 7.092946796001343
+    },
+    {
+      "source": "simulation2/components/ICmpGarrisonHolder.cpp",
+      "project": "simulation2",
+      "identity": "9b91c7f505d253e15207319a21ab3c7c49943573e14017afd60fe9386eea792b",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_components_ICmpGarrisonHolder.cpp.o",
+      "log": "/phase4-build/logs/simulation2_components_ICmpGarrisonHolder.cpp.log",
+      "seconds": 10.033312731997285
+    },
+    {
+      "source": "simulation2/components/ICmpGuiInterface.cpp",
+      "project": "simulation2",
+      "identity": "4e5d1bcb7cbcda55486be48dcf0191a33a51773ac88aa8abe609344bbb477b55",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_components_ICmpGuiInterface.cpp.o",
+      "log": "/phase4-build/logs/simulation2_components_ICmpGuiInterface.cpp.log",
+      "seconds": 8.670792714001436
+    },
+    {
+      "source": "simulation2/components/ICmpIdentity.cpp",
+      "project": "simulation2",
+      "identity": "879a7308198dc701f5c360a4f85c3accafbd46d3f7fe5bb452bf322db6dadeae",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_components_ICmpIdentity.cpp.o",
+      "log": "/phase4-build/logs/simulation2_components_ICmpIdentity.cpp.log",
+      "seconds": 11.277808535996883
+    },
+    {
+      "source": "simulation2/components/ICmpMinimap.cpp",
+      "project": "simulation2",
+      "identity": "6e3c0cb30e4932f46bf719e83ea36874e73c724d3bbccd55e590037dcf7906fc",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_components_ICmpMinimap.cpp.o",
+      "log": "/phase4-build/logs/simulation2_components_ICmpMinimap.cpp.log",
+      "seconds": 9.047960910000256
+    },
+    {
+      "source": "simulation2/components/ICmpMirage.cpp",
+      "project": "simulation2",
+      "identity": "52f2000e1e2bd2a8698779d47cdaa3ba3f268c4e220f55c0727af83ca70db0d8",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_components_ICmpMirage.cpp.o",
+      "log": "/phase4-build/logs/simulation2_components_ICmpMirage.cpp.log",
+      "seconds": 9.066217883999343
+    },
+    {
+      "source": "simulation2/components/ICmpMotion.cpp",
+      "project": "simulation2",
+      "identity": "c4f5bac395651aacfaf238be63a07ef202f0939fd198c5a0f89f28aa14935c08",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_components_ICmpMotion.cpp.o",
+      "log": "/phase4-build/logs/simulation2_components_ICmpMotion.cpp.log",
+      "seconds": 6.599930497002788
+    },
+    {
+      "source": "simulation2/components/ICmpObstruction.cpp",
+      "project": "simulation2",
+      "identity": "3ebace847e07fab0c6abddbba7052af60c9fba38e48128fb78a591d69c69bd13",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_components_ICmpObstruction.cpp.o",
+      "log": "/phase4-build/logs/simulation2_components_ICmpObstruction.cpp.log",
+      "seconds": 7.540148134001356
+    },
+    {
+      "source": "simulation2/components/ICmpObstructionManager.cpp",
+      "project": "simulation2",
+      "identity": "356f001f6896eb3ed434eec502ef3ffd7cd7f458ce37b606fb5807da236841a7",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_components_ICmpObstructionManager.cpp.o",
+      "log": "/phase4-build/logs/simulation2_components_ICmpObstructionManager.cpp.log",
+      "seconds": 9.098148138000397
+    },
+    {
+      "source": "simulation2/components/ICmpOverlayRenderer.cpp",
+      "project": "simulation2",
+      "identity": "1d1c44b777508382ee31881dd388648670a45aa204127fa95f8a3ecfe42a5f47",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_components_ICmpOverlayRenderer.cpp.o",
+      "log": "/phase4-build/logs/simulation2_components_ICmpOverlayRenderer.cpp.log",
+      "seconds": 7.9367049540014705
+    },
+    {
+      "source": "simulation2/components/ICmpOwnership.cpp",
+      "project": "simulation2",
+      "identity": "3f8dac0344f96e7da703d499aaa024a3b2cb4cf6ebb333907ccd8950558837da",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_components_ICmpOwnership.cpp.o",
+      "log": "/phase4-build/logs/simulation2_components_ICmpOwnership.cpp.log",
+      "seconds": 5.805030925002939
+    },
+    {
+      "source": "simulation2/components/ICmpParticleManager.cpp",
+      "project": "simulation2",
+      "identity": "d765be688e4097c026ce2bb8e7523bc1dd136bc99dc329c30e7eea3499a2d1cd",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_components_ICmpParticleManager.cpp.o",
+      "log": "/phase4-build/logs/simulation2_components_ICmpParticleManager.cpp.log",
+      "seconds": 5.777402840998548
+    },
+    {
+      "source": "simulation2/components/ICmpPathfinder.cpp",
+      "project": "simulation2",
+      "identity": "163d266d0f08616e3ed9780fb26f66f39bb492369285b985ba720e7c89431a7c",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_components_ICmpPathfinder.cpp.o",
+      "log": "/phase4-build/logs/simulation2_components_ICmpPathfinder.cpp.log",
+      "seconds": 6.28023212399421
+    },
+    {
+      "source": "simulation2/components/ICmpPlayer.cpp",
+      "project": "simulation2",
+      "identity": "a90137bda45cd9fec282665f995f2e6d3c23428772f516d9877a6d9616ccfa98",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_components_ICmpPlayer.cpp.o",
+      "log": "/phase4-build/logs/simulation2_components_ICmpPlayer.cpp.log",
+      "seconds": 7.816641233002883
+    },
+    {
+      "source": "simulation2/components/ICmpPlayerManager.cpp",
+      "project": "simulation2",
+      "identity": "f0dcf2f93d1170fb33dc124d137f278495a790577918b91f70c55b3a487f592e",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_components_ICmpPlayerManager.cpp.o",
+      "log": "/phase4-build/logs/simulation2_components_ICmpPlayerManager.cpp.log",
+      "seconds": 9.556144820002373
+    },
+    {
+      "source": "simulation2/components/ICmpPosition.cpp",
+      "project": "simulation2",
+      "identity": "52724ab05a277ed0153018bb27506c2653fa6262ffece88fca62c1e9561e8157",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_components_ICmpPosition.cpp.o",
+      "log": "/phase4-build/logs/simulation2_components_ICmpPosition.cpp.log",
+      "seconds": 6.868567538003845
+    },
+    {
+      "source": "simulation2/components/ICmpProjectileManager.cpp",
+      "project": "simulation2",
+      "identity": "0823b2294d46e17cefe1044e37977f7af958382d526ee05fc979d1082639c8a6",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_components_ICmpProjectileManager.cpp.o",
+      "log": "/phase4-build/logs/simulation2_components_ICmpProjectileManager.cpp.log",
+      "seconds": 6.6386573480049265
+    },
+    {
+      "source": "simulation2/components/ICmpRallyPoint.cpp",
+      "project": "simulation2",
+      "identity": "ceaa3bdd836c0521e6ff992eeb9deb112908ce29cdd351fc4f201493f8a57b69",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_components_ICmpRallyPoint.cpp.o",
+      "log": "/phase4-build/logs/simulation2_components_ICmpRallyPoint.cpp.log",
+      "seconds": 10.391334428997652
+    },
+    {
+      "source": "simulation2/components/ICmpRallyPointRenderer.cpp",
+      "project": "simulation2",
+      "identity": "af29ac4dc454aa4e41ef8113f9d5c703ea525d000e7f8893bd92935eedfb9b56",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_components_ICmpRallyPointRenderer.cpp.o",
+      "log": "/phase4-build/logs/simulation2_components_ICmpRallyPointRenderer.cpp.log",
+      "seconds": 6.904589108999062
+    },
+    {
+      "source": "simulation2/components/ICmpRangeManager.cpp",
+      "project": "simulation2",
+      "identity": "867dd1f5e15165e7299b568cf5bea1b9413118e9f2eb55bdfe474de00c4ee4db",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_components_ICmpRangeManager.cpp.o",
+      "log": "/phase4-build/logs/simulation2_components_ICmpRangeManager.cpp.log",
+      "seconds": 10.018804491999617
+    },
+    {
+      "source": "simulation2/components/ICmpRangeOverlayRenderer.cpp",
+      "project": "simulation2",
+      "identity": "a5c5a9d1042c8bee4a06b17e7cfb08ffb5b8fc4acd027f72d292ed249fbb25bc",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_components_ICmpRangeOverlayRenderer.cpp.o",
+      "log": "/phase4-build/logs/simulation2_components_ICmpRangeOverlayRenderer.cpp.log",
+      "seconds": 6.617273777002993
+    },
+    {
+      "source": "simulation2/components/ICmpSelectable.cpp",
+      "project": "simulation2",
+      "identity": "b225ff0ead369593248fa1d056e7a0a8f8a97b883d5a1a1e4fa2e31382399876",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_components_ICmpSelectable.cpp.o",
+      "log": "/phase4-build/logs/simulation2_components_ICmpSelectable.cpp.log",
+      "seconds": 7.349887078002212
+    },
+    {
+      "source": "simulation2/components/ICmpSettlement.cpp",
+      "project": "simulation2",
+      "identity": "b9e23717ba5e4b5aaecb5753dc1f3fb8f7366f3a6f1d6ec1c38c21c349f3ec18",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_components_ICmpSettlement.cpp.o",
+      "log": "/phase4-build/logs/simulation2_components_ICmpSettlement.cpp.log",
+      "seconds": 6.367960698000388
+    },
+    {
+      "source": "simulation2/components/ICmpSound.cpp",
+      "project": "simulation2",
+      "identity": "4344ae567f8c6e2f707cc772259c604826f542e6971026c6f51e87c5f94fb0a7",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_components_ICmpSound.cpp.o",
+      "log": "/phase4-build/logs/simulation2_components_ICmpSound.cpp.log",
+      "seconds": 8.575803951003763
+    },
+    {
+      "source": "simulation2/components/ICmpSoundManager.cpp",
+      "project": "simulation2",
+      "identity": "0a43705629807370d7c52ca95602ed341757b8d982ae7970aceadb894425e475",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_components_ICmpSoundManager.cpp.o",
+      "log": "/phase4-build/logs/simulation2_components_ICmpSoundManager.cpp.log",
+      "seconds": 6.081784467998659
+    },
+    {
+      "source": "simulation2/components/ICmpTemplateManager.cpp",
+      "project": "simulation2",
+      "identity": "3bac3393181c7be40f85c1bd31d9825e7a4f85e802f5ed4746db40703bd81d0c",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_components_ICmpTemplateManager.cpp.o",
+      "log": "/phase4-build/logs/simulation2_components_ICmpTemplateManager.cpp.log",
+      "seconds": 6.199043015993084
+    },
+    {
+      "source": "simulation2/components/ICmpTerrain.cpp",
+      "project": "simulation2",
+      "identity": "91529b3e1786b6d99d25c4f7d9914ccf127234e38638e19468ba470b41943277",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_components_ICmpTerrain.cpp.o",
+      "log": "/phase4-build/logs/simulation2_components_ICmpTerrain.cpp.log",
+      "seconds": 5.887654297999688
+    },
+    {
+      "source": "simulation2/components/ICmpTerritoryDecayManager.cpp",
+      "project": "simulation2",
+      "identity": "00bb9be0bd46746eac8648871ea93f2bffe48b84ec407ff9a7bdc11a2e4e6b98",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_components_ICmpTerritoryDecayManager.cpp.o",
+      "log": "/phase4-build/logs/simulation2_components_ICmpTerritoryDecayManager.cpp.log",
+      "seconds": 9.049018799996702
+    },
+    {
+      "source": "simulation2/components/ICmpTerritoryInfluence.cpp",
+      "project": "simulation2",
+      "identity": "14e4fad7d9106d64ed2076be24efd66c7b90b76e51fb0514efed6c09b4d0792b",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_components_ICmpTerritoryInfluence.cpp.o",
+      "log": "/phase4-build/logs/simulation2_components_ICmpTerritoryInfluence.cpp.log",
+      "seconds": 5.714167473000998
+    },
+    {
+      "source": "simulation2/components/ICmpTerritoryManager.cpp",
+      "project": "simulation2",
+      "identity": "ac7081b846dfa1da716199915a2528911beae50b156fd96f121d67e813f34f63",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_components_ICmpTerritoryManager.cpp.o",
+      "log": "/phase4-build/logs/simulation2_components_ICmpTerritoryManager.cpp.log",
+      "seconds": 6.233068385001388
+    },
+    {
+      "source": "simulation2/components/ICmpTest.cpp",
+      "project": "simulation2",
+      "identity": "f9c3ce3261370609656fa90fbdb600e75e99def3bccad4155b367e833b6307c6",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_components_ICmpTest.cpp.o",
+      "log": "/phase4-build/logs/simulation2_components_ICmpTest.cpp.log",
+      "seconds": 6.186853131002863
+    },
+    {
+      "source": "simulation2/components/ICmpTurretHolder.cpp",
+      "project": "simulation2",
+      "identity": "3556eee62bfc158eb868f205c79d99d376fb20d6154c6ccb3d257e46442b9ce0",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_components_ICmpTurretHolder.cpp.o",
+      "log": "/phase4-build/logs/simulation2_components_ICmpTurretHolder.cpp.log",
+      "seconds": 9.885969834998832
+    },
+    {
+      "source": "simulation2/components/ICmpUnitMotion.cpp",
+      "project": "simulation2",
+      "identity": "9131395eade69f8b64a38cee9637e83f06ac8dae7d89455ccf0e1f3fc0576794",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_components_ICmpUnitMotion.cpp.o",
+      "log": "/phase4-build/logs/simulation2_components_ICmpUnitMotion.cpp.log",
+      "seconds": 10.843273676000535
+    },
+    {
+      "source": "simulation2/components/ICmpUnitMotionManager.cpp",
+      "project": "simulation2",
+      "identity": "1d113b4c21c35dc5c5d2138fd6a86e2650c2f52c08d1010580296bdf080a1d52",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_components_ICmpUnitMotionManager.cpp.o",
+      "log": "/phase4-build/logs/simulation2_components_ICmpUnitMotionManager.cpp.log",
+      "seconds": 5.68342870700144
+    },
+    {
+      "source": "simulation2/components/ICmpUnitRenderer.cpp",
+      "project": "simulation2",
+      "identity": "4580173c1e8d15beedeef06c8e0905ae15e3f35f768baeb30cb9224605d18307",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_components_ICmpUnitRenderer.cpp.o",
+      "log": "/phase4-build/logs/simulation2_components_ICmpUnitRenderer.cpp.log",
+      "seconds": 5.556037371003185
+    },
+    {
+      "source": "simulation2/components/ICmpUnknownScript.cpp",
+      "project": "simulation2",
+      "identity": "0c7d97bb6bbcb8bc31c82e0791272737b668101381dd27075a48c72ed80985ef",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_components_ICmpUnknownScript.cpp.o",
+      "log": "/phase4-build/logs/simulation2_components_ICmpUnknownScript.cpp.log",
+      "seconds": 5.770318397997471
+    },
+    {
+      "source": "simulation2/components/ICmpValueModificationManager.cpp",
+      "project": "simulation2",
+      "identity": "b9b8f6eaf68650094860a2054dc6c345fb5dfeed5b47d9be01068ea607ebce08",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_components_ICmpValueModificationManager.cpp.o",
+      "log": "/phase4-build/logs/simulation2_components_ICmpValueModificationManager.cpp.log",
+      "seconds": 7.559951793002256
+    },
+    {
+      "source": "simulation2/components/ICmpVisibility.cpp",
+      "project": "simulation2",
+      "identity": "0c053f6395869c9285917100d7ed15ef78f23ebf3ec223182c3ec69e30f295d0",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_components_ICmpVisibility.cpp.o",
+      "log": "/phase4-build/logs/simulation2_components_ICmpVisibility.cpp.log",
+      "seconds": 7.601190476001648
+    },
+    {
+      "source": "simulation2/components/ICmpVision.cpp",
+      "project": "simulation2",
+      "identity": "dfac949189979b0619f31b79c99ba0ac53b47512259e2c60a14ac7bf46e6cdf8",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_components_ICmpVision.cpp.o",
+      "log": "/phase4-build/logs/simulation2_components_ICmpVision.cpp.log",
+      "seconds": 5.882163270005549
+    },
+    {
+      "source": "simulation2/components/ICmpVisual.cpp",
+      "project": "simulation2",
+      "identity": "8ee5d654e211f87ca0c264965fbc845943e7579c8bd9b85835cd6524db5d29a3",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_components_ICmpVisual.cpp.o",
+      "log": "/phase4-build/logs/simulation2_components_ICmpVisual.cpp.log",
+      "seconds": 7.81763194600353
+    },
+    {
+      "source": "simulation2/components/ICmpWaterManager.cpp",
+      "project": "simulation2",
+      "identity": "e56baa19fde96d1257c952a62426a50a84ef449e884f4252fc1c7eb9d1ff768d",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_components_ICmpWaterManager.cpp.o",
+      "log": "/phase4-build/logs/simulation2_components_ICmpWaterManager.cpp.log",
+      "seconds": 5.753697776002809
+    },
+    {
+      "source": "simulation2/helpers/CinemaPath.cpp",
+      "project": "simulation2",
+      "identity": "6bfd5d8106f802cc004cfdad9a6cf0113fc824b04faf5513242627776e4b1ddc",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_helpers_CinemaPath.cpp.o",
+      "log": "/phase4-build/logs/simulation2_helpers_CinemaPath.cpp.log",
+      "seconds": 6.512974198994925
+    },
+    {
+      "source": "simulation2/helpers/Geometry.cpp",
+      "project": "simulation2",
+      "identity": "119e563071a840b8a3ca870bab4f63df292be14cb7cebb4baaa274ba80776689",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_helpers_Geometry.cpp.o",
+      "log": "/phase4-build/logs/simulation2_helpers_Geometry.cpp.log",
+      "seconds": 2.4471244789965567
+    },
+    {
+      "source": "simulation2/helpers/HierarchicalPathfinder.cpp",
+      "project": "simulation2",
+      "identity": "323b3f764ad1587128a0afdafa303a8a304b817638ad55a5062664aa6e88a9ad",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_helpers_HierarchicalPathfinder.cpp.o",
+      "log": "/phase4-build/logs/simulation2_helpers_HierarchicalPathfinder.cpp.log",
+      "seconds": 10.349665873000049
+    },
+    {
+      "source": "simulation2/helpers/LongPathfinder.cpp",
+      "project": "simulation2",
+      "identity": "0b051a18cb003110e76dca47626b8aedd435edaa9abac9e78f3fa56ea4677264",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_helpers_LongPathfinder.cpp.o",
+      "log": "/phase4-build/logs/simulation2_helpers_LongPathfinder.cpp.log",
+      "seconds": 8.95582086899958
+    },
+    {
+      "source": "simulation2/helpers/PathGoal.cpp",
+      "project": "simulation2",
+      "identity": "60af8dc222c7e5469ec9f36d7aa9a45bbc103fb23ffd913d7c9e799bf297b90d",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_helpers_PathGoal.cpp.o",
+      "log": "/phase4-build/logs/simulation2_helpers_PathGoal.cpp.log",
+      "seconds": 3.555470958002843
+    },
+    {
+      "source": "simulation2/helpers/Pathfinding.cpp",
+      "project": "simulation2",
+      "identity": "6450672c215d2d25122edf5cbc566257d0d39b607f79fea746a55c28d62acb05",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_helpers_Pathfinding.cpp.o",
+      "log": "/phase4-build/logs/simulation2_helpers_Pathfinding.cpp.log",
+      "seconds": 8.510535433997575
+    },
+    {
+      "source": "simulation2/helpers/Rasterize.cpp",
+      "project": "simulation2",
+      "identity": "0b802b557e2cdbf63b79dac6f4e31c979dcb984d9e622a762d62de971c97cf67",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_helpers_Rasterize.cpp.o",
+      "log": "/phase4-build/logs/simulation2_helpers_Rasterize.cpp.log",
+      "seconds": 3.4176919470046414
+    },
+    {
+      "source": "simulation2/helpers/Render.cpp",
+      "project": "simulation2",
+      "identity": "728065019ff7cdcd2b4c2bb1496b1612b46504f5cbeb730bb3ccfdb7a81e2914",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_helpers_Render.cpp.o",
+      "log": "/phase4-build/logs/simulation2_helpers_Render.cpp.log",
+      "seconds": 5.511765878000006
+    },
+    {
+      "source": "simulation2/helpers/Selection.cpp",
+      "project": "simulation2",
+      "identity": "e41be5cf5ff673650f1bad5738990dc52b1dbbe68d2dc97a6fc93595652568e1",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_helpers_Selection.cpp.o",
+      "log": "/phase4-build/logs/simulation2_helpers_Selection.cpp.log",
+      "seconds": 5.396442678000312
+    },
+    {
+      "source": "simulation2/helpers/VertexPathfinder.cpp",
+      "project": "simulation2",
+      "identity": "828f08117578b28fb6b24cb86ba32741447204587bff2755764519645984f002",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_helpers_VertexPathfinder.cpp.o",
+      "log": "/phase4-build/logs/simulation2_helpers_VertexPathfinder.cpp.log",
+      "seconds": 7.665856915002223
+    },
+    {
+      "source": "simulation2/scripting/EngineScriptConversions.cpp",
+      "project": "simulation2",
+      "identity": "6699337879e320e4d7afdc641043066e8e4675b1b5755a2e14273348cb459a10",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_scripting_EngineScriptConversions.cpp.o",
+      "log": "/phase4-build/logs/simulation2_scripting_EngineScriptConversions.cpp.log",
+      "seconds": 7.877053718002571
+    },
+    {
+      "source": "simulation2/scripting/JSInterface_Simulation.cpp",
+      "project": "simulation2",
+      "identity": "366f0748ee654d7932e8c8220642341b07b27ed2e2fc7a53c636c3c1bf3f914b",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_scripting_JSInterface_Simulation.cpp.o",
+      "log": "/phase4-build/logs/simulation2_scripting_JSInterface_Simulation.cpp.log",
+      "seconds": 6.716024815999845
+    },
+    {
+      "source": "simulation2/scripting/MessageTypeConversions.cpp",
+      "project": "simulation2",
+      "identity": "55526fc7e157a7878f999cd3a328909b4e252ea46368da89bf0f56f09d979e33",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_scripting_MessageTypeConversions.cpp.o",
+      "log": "/phase4-build/logs/simulation2_scripting_MessageTypeConversions.cpp.log",
+      "seconds": 9.448226067004725
+    },
+    {
+      "source": "simulation2/scripting/ScriptComponent.cpp",
+      "project": "simulation2",
+      "identity": "ae80f8f217537206e859626e639ffa703d3fb1051c88010e3917cfdef2b6b59d",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_scripting_ScriptComponent.cpp.o",
+      "log": "/phase4-build/logs/simulation2_scripting_ScriptComponent.cpp.log",
+      "seconds": 7.501697331004834
+    },
+    {
+      "source": "simulation2/serialization/BinarySerializer.cpp",
+      "project": "simulation2",
+      "identity": "6da4357752076ef83f13d78e7f4019c1cdb11ed83b915b52b4b1c018d8f76f3f",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_serialization_BinarySerializer.cpp.o",
+      "log": "/phase4-build/logs/simulation2_serialization_BinarySerializer.cpp.log",
+      "seconds": 7.890817536004761
+    },
+    {
+      "source": "simulation2/serialization/DebugSerializer.cpp",
+      "project": "simulation2",
+      "identity": "0c3301e78420f86f8ea629cb1f1a6aaae3d36c9b7189ff294b644b43bafa02fb",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_serialization_DebugSerializer.cpp.o",
+      "log": "/phase4-build/logs/simulation2_serialization_DebugSerializer.cpp.log",
+      "seconds": 5.985577970997838
+    },
+    {
+      "source": "simulation2/serialization/HashSerializer.cpp",
+      "project": "simulation2",
+      "identity": "cd87422fa49a00adcb427f344dc7bfc9a83ebf699c7b90899f9c4c2c4a9082ee",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_serialization_HashSerializer.cpp.o",
+      "log": "/phase4-build/logs/simulation2_serialization_HashSerializer.cpp.log",
+      "seconds": 5.019743700999243
+    },
+    {
+      "source": "simulation2/serialization/IDeserializer.cpp",
+      "project": "simulation2",
+      "identity": "0c2317fabdb3d043805c30a8868a8122b61289f717e3010c489033cd41df11e3",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_serialization_IDeserializer.cpp.o",
+      "log": "/phase4-build/logs/simulation2_serialization_IDeserializer.cpp.log",
+      "seconds": 5.010597688000416
+    },
+    {
+      "source": "simulation2/serialization/ISerializer.cpp",
+      "project": "simulation2",
+      "identity": "cd4027cf2350296ae74b1473d644894d3d75803d376fd3a1c75e865ba9f59d54",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_serialization_ISerializer.cpp.o",
+      "log": "/phase4-build/logs/simulation2_serialization_ISerializer.cpp.log",
+      "seconds": 4.827737396997691
+    },
+    {
+      "source": "simulation2/serialization/StdDeserializer.cpp",
+      "project": "simulation2",
+      "identity": "86e30328adbb8412358c16cf4d886de15c59a7b327f0415aa8f9372801b9231b",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_serialization_StdDeserializer.cpp.o",
+      "log": "/phase4-build/logs/simulation2_serialization_StdDeserializer.cpp.log",
+      "seconds": 9.541317905997857
+    },
+    {
+      "source": "simulation2/serialization/StdSerializer.cpp",
+      "project": "simulation2",
+      "identity": "4ec03807838e7d8a8b86aad4f6a55511f67f5c57a0388e4b036a5ba9b4ebc440",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_serialization_StdSerializer.cpp.o",
+      "log": "/phase4-build/logs/simulation2_serialization_StdSerializer.cpp.log",
+      "seconds": 5.087696788999892
+    },
+    {
+      "source": "simulation2/system/CmpPtr.cpp",
+      "project": "simulation2",
+      "identity": "9bb108bd76a16a18147a9dcfb572d05658c52f2c4ab7117e3386ca70214f6046",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_system_CmpPtr.cpp.o",
+      "log": "/phase4-build/logs/simulation2_system_CmpPtr.cpp.log",
+      "seconds": 5.474662439002714
+    },
+    {
+      "source": "simulation2/system/ComponentManager.cpp",
+      "project": "simulation2",
+      "identity": "ccb759d8f56ac688a89b69b9317c1b0f733509372cf112f2a89d80863dfe3753",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_system_ComponentManager.cpp.o",
+      "log": "/phase4-build/logs/simulation2_system_ComponentManager.cpp.log",
+      "seconds": 13.705272544000763
+    },
+    {
+      "source": "simulation2/system/ComponentManagerSerialization.cpp",
+      "project": "simulation2",
+      "identity": "f3d251cee97a07a2320a60f2e20ea23939226e9a41bf53ec50b860ddda6fc53b",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_system_ComponentManagerSerialization.cpp.o",
+      "log": "/phase4-build/logs/simulation2_system_ComponentManagerSerialization.cpp.log",
+      "seconds": 8.272643896001682
+    },
+    {
+      "source": "simulation2/system/DynamicSubscription.cpp",
+      "project": "simulation2",
+      "identity": "22f0692837b3aa831b954f60b92e97cb081704208bc5aff7270ae031cb4e9ccf",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_system_DynamicSubscription.cpp.o",
+      "log": "/phase4-build/logs/simulation2_system_DynamicSubscription.cpp.log",
+      "seconds": 4.6448472820047755
+    },
+    {
+      "source": "simulation2/system/IComponent.cpp",
+      "project": "simulation2",
+      "identity": "3b22a7477cb2f2f4e9bc4f207b885c12ecbf17411da6e5f9611fb4f3faeb14ad",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_system_IComponent.cpp.o",
+      "log": "/phase4-build/logs/simulation2_system_IComponent.cpp.log",
+      "seconds": 5.014319264002552
+    },
+    {
+      "source": "simulation2/system/LocalTurnManager.cpp",
+      "project": "simulation2",
+      "identity": "8c088c570dc5ba378f35594839f6b1bdb4708e10b6278507adb321b79df3d2fb",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_system_LocalTurnManager.cpp.o",
+      "log": "/phase4-build/logs/simulation2_system_LocalTurnManager.cpp.log",
+      "seconds": 4.100583584004198
+    },
+    {
+      "source": "simulation2/system/ParamNode.cpp",
+      "project": "simulation2",
+      "identity": "acdb50e79d1438dc297c95ae814b1d93ff8b05fc640cd761597c8622ef6d9661",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_system_ParamNode.cpp.o",
+      "log": "/phase4-build/logs/simulation2_system_ParamNode.cpp.log",
+      "seconds": 10.24587274499936
+    },
+    {
+      "source": "simulation2/system/ReplayTurnManager.cpp",
+      "project": "simulation2",
+      "identity": "4a891c6794885e799510078efa97c3476d4eeb329e13ae61c404ae9c0ab82d57",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_system_ReplayTurnManager.cpp.o",
+      "log": "/phase4-build/logs/simulation2_system_ReplayTurnManager.cpp.log",
+      "seconds": 7.267891335999593
+    },
+    {
+      "source": "simulation2/system/SimContext.cpp",
+      "project": "simulation2",
+      "identity": "df44f6f2e04cc64256757c34d440ec285b42e6c4dd24501c72c994a2422d079b",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_system_SimContext.cpp.o",
+      "log": "/phase4-build/logs/simulation2_system_SimContext.cpp.log",
+      "seconds": 4.803373200003989
+    },
+    {
+      "source": "simulation2/system/TurnManager.cpp",
+      "project": "simulation2",
+      "identity": "6d050ec7d5a0024b43e8fb91ee22c1124b8bcc79549bc414b176e2f981b91648",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/simulation2_system_TurnManager.cpp.o",
+      "log": "/phase4-build/logs/simulation2_system_TurnManager.cpp.log",
+      "seconds": 9.262221886005136
+    },
+    {
+      "source": "soundmanager/SoundManager.cpp",
+      "project": "engine",
+      "identity": "fe20d6704446d08864f217f650a710a70216c3c5e289cffb68f386593432a341",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/soundmanager_SoundManager.cpp.o",
+      "log": "/phase4-build/logs/soundmanager_SoundManager.cpp.log",
+      "seconds": 5.610539293003967
+    },
+    {
+      "source": "soundmanager/data/OggData.cpp",
+      "project": "engine",
+      "identity": "2ab66e4ef8744c2da3b75ce062035c65c78ba42f0fa49ba569b4dc9d74ea4e19",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/soundmanager_data_OggData.cpp.o",
+      "log": "/phase4-build/logs/soundmanager_data_OggData.cpp.log",
+      "seconds": 6.427150402996631
+    },
+    {
+      "source": "soundmanager/data/SoundData.cpp",
+      "project": "engine",
+      "identity": "8c8dfc0474eccda6077198751c773b926a20937a525db28df092b1e92e7d5441",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/soundmanager_data_SoundData.cpp.o",
+      "log": "/phase4-build/logs/soundmanager_data_SoundData.cpp.log",
+      "seconds": 6.616783402998408
+    },
+    {
+      "source": "soundmanager/data/ogg.cpp",
+      "project": "engine",
+      "identity": "f91d8a876319257bc614e54d777d54d394327fca76fb404b5288efb7f9c5e9e2",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/soundmanager_data_ogg.cpp.o",
+      "log": "/phase4-build/logs/soundmanager_data_ogg.cpp.log",
+      "seconds": 6.807106113999907
+    },
+    {
+      "source": "soundmanager/items/CBufferItem.cpp",
+      "project": "engine",
+      "identity": "888374bba70a3caaba47495ec192d6dee4b0bf230fdd4f8761f87a48c24d2c86",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/soundmanager_items_CBufferItem.cpp.o",
+      "log": "/phase4-build/logs/soundmanager_items_CBufferItem.cpp.log",
+      "seconds": 4.231907000001229
+    },
+    {
+      "source": "soundmanager/items/CSoundBase.cpp",
+      "project": "engine",
+      "identity": "cd5b59e517f969771550548c88b21550131caa53e4f1f1e7c2395cf8d37a7557",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/soundmanager_items_CSoundBase.cpp.o",
+      "log": "/phase4-build/logs/soundmanager_items_CSoundBase.cpp.log",
+      "seconds": 2.863424779003253
+    },
+    {
+      "source": "soundmanager/items/CSoundItem.cpp",
+      "project": "engine",
+      "identity": "85f49b4e68f3ee09397b72ae410619ea706a59eb44ba8d75e7f95821132909d7",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/soundmanager_items_CSoundItem.cpp.o",
+      "log": "/phase4-build/logs/soundmanager_items_CSoundItem.cpp.log",
+      "seconds": 3.995862023002701
+    },
+    {
+      "source": "soundmanager/items/CStreamItem.cpp",
+      "project": "engine",
+      "identity": "e88559f9cc18807a5071d86ed9da9c9b053cff14ecd55f4956a76b7a0381d3ad",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/soundmanager_items_CStreamItem.cpp.o",
+      "log": "/phase4-build/logs/soundmanager_items_CStreamItem.cpp.log",
+      "seconds": 4.12773261199618
+    },
+    {
+      "source": "soundmanager/scripting/JSInterface_Sound.cpp",
+      "project": "engine",
+      "identity": "eb8f111e063e5f39af492f7abc47f981d76a40fc6395da5378a7276fecc6bf53",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/soundmanager_scripting_JSInterface_Sound.cpp.o",
+      "log": "/phase4-build/logs/soundmanager_scripting_JSInterface_Sound.cpp.log",
+      "seconds": 5.418809009999677
+    },
+    {
+      "source": "soundmanager/scripting/SoundGroup.cpp",
+      "project": "engine",
+      "identity": "09f4d76eb2b769ebb23916740812839730e1a14a4c3471b691aa1d720ed66609",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/soundmanager_scripting_SoundGroup.cpp.o",
+      "log": "/phase4-build/logs/soundmanager_scripting_SoundGroup.cpp.log",
+      "seconds": 7.88650226900063
+    },
+    {
+      "source": "third_party/glad/src/gles2.cpp",
+      "project": "gladwrapper",
+      "identity": "15bf11eb5c75324fc60dc54b47366b646c80948ad2226373e6a6d56802043130",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/third_party_glad_src_gles2.cpp.o",
+      "log": "/phase4-build/logs/third_party_glad_src_gles2.cpp.log",
+      "seconds": 0.4940450840003905
+    },
+    {
+      "source": "third_party/mikktspace/mikktspace.cpp",
+      "project": "graphics",
+      "identity": "22ae96a888d5207b1e054b4214801b87b225e95526a35504f0950bc1037a31ba",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/third_party_mikktspace_mikktspace.cpp.o",
+      "log": "/phase4-build/logs/third_party_mikktspace_mikktspace.cpp.log",
+      "seconds": 1.7493729109992273
+    },
+    {
+      "source": "third_party/mikktspace/weldmesh.cpp",
+      "project": "graphics",
+      "identity": "62f9d2a63a6b6bcbb030a15e9a2c30824b4e0d09c01a74eb8ffda25c3861c2f5",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/third_party_mikktspace_weldmesh.cpp.o",
+      "log": "/phase4-build/logs/third_party_mikktspace_weldmesh.cpp.log",
+      "seconds": 2.2615468750009313
+    },
+    {
+      "source": "third_party/ogre3d_preprocessor/OgreGLSLPreprocessor.cpp",
+      "project": "graphics",
+      "identity": "8ed92d9c5073d5d42a33592dfed12ae1614bab5fe9fccddb1408663cb0ec1f66",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/third_party_ogre3d_preprocessor_OgreGLSLPreprocessor.cpp.o",
+      "log": "/phase4-build/logs/third_party_ogre3d_preprocessor_OgreGLSLPreprocessor.cpp.log",
+      "seconds": 3.8269816250031
+    },
+    {
+      "source": "third_party/tinygettext/src/dictionary.cpp",
+      "project": "tinygettext",
+      "identity": "6924cd3e1232871ecded1a8832cf499d96305bdf2052c520e3a3ec3b21797289",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/third_party_tinygettext_src_dictionary.cpp.o",
+      "log": "/phase4-build/logs/third_party_tinygettext_src_dictionary.cpp.log",
+      "seconds": 3.462359300996468
+    },
+    {
+      "source": "third_party/tinygettext/src/dictionary_manager.cpp",
+      "project": "tinygettext",
+      "identity": "488738f4daa706bf4cb4b4fb84fbe1dc43fcdf6fd0ba46db501f88388c1a5caf",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/third_party_tinygettext_src_dictionary_manager.cpp.o",
+      "log": "/phase4-build/logs/third_party_tinygettext_src_dictionary_manager.cpp.log",
+      "seconds": 4.651168475000304
+    },
+    {
+      "source": "third_party/tinygettext/src/iconv.cpp",
+      "project": "tinygettext",
+      "identity": "f9c2b86b22f30230126b0d220cf28062d4fe863da051a564bdaa2a7f2b91fbf6",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/third_party_tinygettext_src_iconv.cpp.o",
+      "log": "/phase4-build/logs/third_party_tinygettext_src_iconv.cpp.log",
+      "seconds": 3.789971087993763
+    },
+    {
+      "source": "third_party/tinygettext/src/language.cpp",
+      "project": "tinygettext",
+      "identity": "658abc3a586e78828515aef51ae9160634399b5227b5af836b484958897faa7e",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/third_party_tinygettext_src_language.cpp.o",
+      "log": "/phase4-build/logs/third_party_tinygettext_src_language.cpp.log",
+      "seconds": 2.4887250410029083
+    },
+    {
+      "source": "third_party/tinygettext/src/log.cpp",
+      "project": "tinygettext",
+      "identity": "e58c9e740dcb1ed1152b18cd201d6a1803b2c401a7d0c5cbb8b77a6e06e55da8",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/third_party_tinygettext_src_log.cpp.o",
+      "log": "/phase4-build/logs/third_party_tinygettext_src_log.cpp.log",
+      "seconds": 2.2357017370013637
+    },
+    {
+      "source": "third_party/tinygettext/src/plural_forms.cpp",
+      "project": "tinygettext",
+      "identity": "58b161965937e339759fedea6e91917dc7ca45c428fafde2337f4a0f03060284",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/third_party_tinygettext_src_plural_forms.cpp.o",
+      "log": "/phase4-build/logs/third_party_tinygettext_src_plural_forms.cpp.log",
+      "seconds": 3.5122299939976074
+    },
+    {
+      "source": "third_party/tinygettext/src/po_parser.cpp",
+      "project": "tinygettext",
+      "identity": "dca08d0a45a6cc773b5f7c13ba84bc4b87b67e1442d3185e376401d9d7aa3d39",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/third_party_tinygettext_src_po_parser.cpp.o",
+      "log": "/phase4-build/logs/third_party_tinygettext_src_po_parser.cpp.log",
+      "seconds": 4.449164600999211
+    },
+    {
+      "source": "third_party/tinygettext/src/tinygettext.cpp",
+      "project": "tinygettext",
+      "identity": "003da3fee30cb85f9aa2e620c6c993c06d3f7867dbaaf250cb786e3b5dd7ca18",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/third_party_tinygettext_src_tinygettext.cpp.o",
+      "log": "/phase4-build/logs/third_party_tinygettext_src_tinygettext.cpp.log",
+      "seconds": 1.5515862879983615
+    },
+    {
+      "source": "third_party/tinygettext/src/unix_file_system.cpp",
+      "project": "tinygettext",
+      "identity": "4b0f017f332f7b326b908cf52883857c5d78a62b4ecf5226cecd816fcf8f0069",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/third_party_tinygettext_src_unix_file_system.cpp.o",
+      "log": "/phase4-build/logs/third_party_tinygettext_src_unix_file_system.cpp.log",
+      "seconds": 3.8794665200039162
+    },
+    {
+      "source": "tools/atlas/GameInterface/ActorViewer.cpp",
+      "project": "atlas",
+      "identity": "84c325ee70267b51b44af533139856375d45193dc1429a27a2636b3c89511b07",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/tools_atlas_GameInterface_ActorViewer.cpp.o",
+      "log": "/phase4-build/logs/tools_atlas_GameInterface_ActorViewer.cpp.log",
+      "seconds": 6.631259073998081
+    },
+    {
+      "source": "tools/atlas/GameInterface/Brushes.cpp",
+      "project": "atlas",
+      "identity": "84b8988f0700716478de58936186f17036488eefbef45bcd0a68d2f89bee1ff0",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/tools_atlas_GameInterface_Brushes.cpp.o",
+      "log": "/phase4-build/logs/tools_atlas_GameInterface_Brushes.cpp.log",
+      "seconds": 2.9695697279967135
+    },
+    {
+      "source": "tools/atlas/GameInterface/CommandProc.cpp",
+      "project": "atlas",
+      "identity": "5aec04ebc921be021a09302eb401f335c3b1a8b7727980b42997a658eaf938b1",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/tools_atlas_GameInterface_CommandProc.cpp.o",
+      "log": "/phase4-build/logs/tools_atlas_GameInterface_CommandProc.cpp.log",
+      "seconds": 3.730005755998718
+    },
+    {
+      "source": "tools/atlas/GameInterface/GameLoop.cpp",
+      "project": "atlas",
+      "identity": "95ca5b5d29f13748007b8ca2b25067fc352d6faa6bfe42b68438818a16b2af49",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/tools_atlas_GameInterface_GameLoop.cpp.o",
+      "log": "/phase4-build/logs/tools_atlas_GameInterface_GameLoop.cpp.log",
+      "seconds": 5.184874143997149
+    },
+    {
+      "source": "tools/atlas/GameInterface/Handlers/BrushHandlers.cpp",
+      "project": "atlas",
+      "identity": "91b3ae90f6f7beeb893f2e19e02522996c7bce1a6da9ced18e92b331412f99be",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/tools_atlas_GameInterface_Handlers_BrushHandlers.cpp.o",
+      "log": "/phase4-build/logs/tools_atlas_GameInterface_Handlers_BrushHandlers.cpp.log",
+      "seconds": 3.234814142000687
+    },
+    {
+      "source": "tools/atlas/GameInterface/Handlers/CameraCtrlHandlers.cpp",
+      "project": "atlas",
+      "identity": "41ac8e439f01c1b19cef63af9f23561a3ffa6620bda821727a2f5b1c93a7650a",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/tools_atlas_GameInterface_Handlers_CameraCtrlHandlers.cpp.o",
+      "log": "/phase4-build/logs/tools_atlas_GameInterface_Handlers_CameraCtrlHandlers.cpp.log",
+      "seconds": 4.884151926002232
+    },
+    {
+      "source": "tools/atlas/GameInterface/Handlers/CinemaHandler.cpp",
+      "project": "atlas",
+      "identity": "e411eb800ce73a9a443360eb389c8a1b8f004b44044feb845ae3351b38bf1113",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/tools_atlas_GameInterface_Handlers_CinemaHandler.cpp.o",
+      "log": "/phase4-build/logs/tools_atlas_GameInterface_Handlers_CinemaHandler.cpp.log",
+      "seconds": 7.2039968090030015
+    },
+    {
+      "source": "tools/atlas/GameInterface/Handlers/CommandHandlers.cpp",
+      "project": "atlas",
+      "identity": "79bb8c8ab4692e1ba9b28bbcadcb7947e78c9ce8c0d0386458bb43297abc0517",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/tools_atlas_GameInterface_Handlers_CommandHandlers.cpp.o",
+      "log": "/phase4-build/logs/tools_atlas_GameInterface_Handlers_CommandHandlers.cpp.log",
+      "seconds": 3.937992237995786
+    },
+    {
+      "source": "tools/atlas/GameInterface/Handlers/ElevationHandlers.cpp",
+      "project": "atlas",
+      "identity": "91e0c3261cd92cea77bfb50590e576ef6d708fb9ab5c82a1ecf688e3476027a1",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/tools_atlas_GameInterface_Handlers_ElevationHandlers.cpp.o",
+      "log": "/phase4-build/logs/tools_atlas_GameInterface_Handlers_ElevationHandlers.cpp.log",
+      "seconds": 5.623926831998688
+    },
+    {
+      "source": "tools/atlas/GameInterface/Handlers/EnvironmentHandlers.cpp",
+      "project": "atlas",
+      "identity": "8733ea8b1de7592cd763d29edab86aac3a22d75a78652eb09729bce2aa91acbf",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/tools_atlas_GameInterface_Handlers_EnvironmentHandlers.cpp.o",
+      "log": "/phase4-build/logs/tools_atlas_GameInterface_Handlers_EnvironmentHandlers.cpp.log",
+      "seconds": 5.820431642001495
+    },
+    {
+      "source": "tools/atlas/GameInterface/Handlers/GraphicsSetupHandlers.cpp",
+      "project": "atlas",
+      "identity": "ac9d0b62d5e5585bce1119bf828756e3382bd790ac15dc62d4ed026c99b05b52",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/tools_atlas_GameInterface_Handlers_GraphicsSetupHandlers.cpp.o",
+      "log": "/phase4-build/logs/tools_atlas_GameInterface_Handlers_GraphicsSetupHandlers.cpp.log",
+      "seconds": 8.248303793996456
+    },
+    {
+      "source": "tools/atlas/GameInterface/Handlers/MapHandlers.cpp",
+      "project": "atlas",
+      "identity": "7abf45b794c9e2526a6c463fce4e81302c87b192f3c4cbb4e38e182de97d48bb",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/tools_atlas_GameInterface_Handlers_MapHandlers.cpp.o",
+      "log": "/phase4-build/logs/tools_atlas_GameInterface_Handlers_MapHandlers.cpp.log",
+      "seconds": 10.789299126001424
+    },
+    {
+      "source": "tools/atlas/GameInterface/Handlers/MessageHandler.cpp",
+      "project": "atlas",
+      "identity": "6a619fd88c0ff690834b842b6fa7a6a89733091cb82aaf84a7ddee348e0d9d10",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/tools_atlas_GameInterface_Handlers_MessageHandler.cpp.o",
+      "log": "/phase4-build/logs/tools_atlas_GameInterface_Handlers_MessageHandler.cpp.log",
+      "seconds": 4.174046767002437
+    },
+    {
+      "source": "tools/atlas/GameInterface/Handlers/MiscHandlers.cpp",
+      "project": "atlas",
+      "identity": "ff2f598e8cc3cd130f093542fbbe1d03fbbb0b96531c4d96ab2a35d7bbe71702",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/tools_atlas_GameInterface_Handlers_MiscHandlers.cpp.o",
+      "log": "/phase4-build/logs/tools_atlas_GameInterface_Handlers_MiscHandlers.cpp.log",
+      "seconds": 6.236732484998356
+    },
+    {
+      "source": "tools/atlas/GameInterface/Handlers/ObjectHandlers.cpp",
+      "project": "atlas",
+      "identity": "40a51125bce4663b6fb05c1d32cd623825a2301710c99162bca4aa161cfaa29a",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/tools_atlas_GameInterface_Handlers_ObjectHandlers.cpp.o",
+      "log": "/phase4-build/logs/tools_atlas_GameInterface_Handlers_ObjectHandlers.cpp.log",
+      "seconds": 11.624778692996188
+    },
+    {
+      "source": "tools/atlas/GameInterface/Handlers/PlayerHandlers.cpp",
+      "project": "atlas",
+      "identity": "65b03589963791519938492b80f6cd5324e571ab474deab5d70cfed9b6a340cf",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/tools_atlas_GameInterface_Handlers_PlayerHandlers.cpp.o",
+      "log": "/phase4-build/logs/tools_atlas_GameInterface_Handlers_PlayerHandlers.cpp.log",
+      "seconds": 5.549196601998119
+    },
+    {
+      "source": "tools/atlas/GameInterface/Handlers/TerrainHandlers.cpp",
+      "project": "atlas",
+      "identity": "c3e6ff62f70d06733f3a628ff40de85911f2ab8f7f5c6a619a07896a239d5d6b",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/tools_atlas_GameInterface_Handlers_TerrainHandlers.cpp.o",
+      "log": "/phase4-build/logs/tools_atlas_GameInterface_Handlers_TerrainHandlers.cpp.log",
+      "seconds": 7.753918321999663
+    },
+    {
+      "source": "tools/atlas/GameInterface/InputProcessor.cpp",
+      "project": "atlas",
+      "identity": "c6a7445b256fd11168e57c808030198a33307dfbb7a1d406fbb8cea88cf235bc",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/tools_atlas_GameInterface_InputProcessor.cpp.o",
+      "log": "/phase4-build/logs/tools_atlas_GameInterface_InputProcessor.cpp.log",
+      "seconds": 4.027464737002447
+    },
+    {
+      "source": "tools/atlas/GameInterface/MessagePasserImpl.cpp",
+      "project": "atlas",
+      "identity": "71618ec6dc47353a79883e2accc083b50198fe9402640e82f4bdbb0726691575",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/tools_atlas_GameInterface_MessagePasserImpl.cpp.o",
+      "log": "/phase4-build/logs/tools_atlas_GameInterface_MessagePasserImpl.cpp.log",
+      "seconds": 6.737841314999969
+    },
+    {
+      "source": "tools/atlas/GameInterface/Misc.cpp",
+      "project": "atlas",
+      "identity": "db4ff212bb419724e00aa66d623609c8b6f1daa0325700dd176662ae16b199ea",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/tools_atlas_GameInterface_Misc.cpp.o",
+      "log": "/phase4-build/logs/tools_atlas_GameInterface_Misc.cpp.log",
+      "seconds": 4.149944577002316
+    },
+    {
+      "source": "tools/atlas/GameInterface/Register.cpp",
+      "project": "atlas",
+      "identity": "7950fa72c8c4223ff65bd382837ec72a7a55d7af744fcd1028ad5f0e4159c68e",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/tools_atlas_GameInterface_Register.cpp.o",
+      "log": "/phase4-build/logs/tools_atlas_GameInterface_Register.cpp.log",
+      "seconds": 4.8475509290001355
+    },
+    {
+      "source": "tools/atlas/GameInterface/SimState.cpp",
+      "project": "atlas",
+      "identity": "3e984b3cbbdf8682f8c0ef85a16fc2c87a7f31517e6cf0bd05951c05aba70230",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/tools_atlas_GameInterface_SimState.cpp.o",
+      "log": "/phase4-build/logs/tools_atlas_GameInterface_SimState.cpp.log",
+      "seconds": 4.704937198002881
+    },
+    {
+      "source": "tools/atlas/GameInterface/View.cpp",
+      "project": "atlas",
+      "identity": "20c41f0b77edc6cf5797aaa405feb2d2d2ce2feb904facd8e2b4c43a425e9df5",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/tools_atlas_GameInterface_View.cpp.o",
+      "log": "/phase4-build/logs/tools_atlas_GameInterface_View.cpp.log",
+      "seconds": 8.035644577998028
+    },
+    {
+      "source": "lib/sysdep/os/unix/unuma.cpp",
+      "project": "lowlevel",
+      "identity": "a9e66b7b5da3d874c1b4e0ac09fd33f170d8c5640d2f85a9e57759f564ecd37f",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/lib_sysdep_os_unix_unuma.cpp.o",
+      "log": "/phase4-build/logs/lib_sysdep_os_unix_unuma.cpp.log",
+      "seconds": 2.720928902999731
+    },
+    {
+      "source": "wasm-application-platform.cpp",
+      "project": "browser-platform",
+      "identity": "8d2dd1a5f7f92a3ec8b5f9df392a60341b385cafbfbb134095b6cdc3933c3bf3",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/wasm-application-platform.cpp.o",
+      "log": "/phase4-build/logs/wasm-application-platform.cpp.log",
+      "seconds": 4.557922374995542
+    },
+    {
+      "source": "lobby/Globals.cpp",
+      "project": "lobby",
+      "identity": "7a3e9b8854216590d7b9a0c49b9c007ed5f4f9d6721388a6cce3d9b3dc5fb452",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/lobby_Globals.cpp.o",
+      "log": "/phase4-build/logs/lobby_Globals.cpp.log",
+      "seconds": 4.0923638379972544
+    },
+    {
+      "source": "lobby/scripting/JSInterface_Lobby.cpp",
+      "project": "lobby",
+      "identity": "23bff8e5baa986e8713e1d887f659a3fbd35aca525b4159189d1d41487676ac2",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/lobby_scripting_JSInterface_Lobby.cpp.o",
+      "log": "/phase4-build/logs/lobby_scripting_JSInterface_Lobby.cpp.log",
+      "seconds": 5.916359151000506
+    },
+    {
+      "source": "wasm-httplib.cpp",
+      "project": "cpp-httplib",
+      "identity": "45c3710b3fd550092fc3f70089ac16dd389775fed844db9df66a4bb5adf47673",
+      "exitCode": 0,
+      "object": "/phase4-build/objects/wasm-httplib.cpp.o",
+      "log": "/phase4-build/logs/wasm-httplib.cpp.log",
+      "seconds": 20.29528540300089
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "author": "Chris Fallin",
+  "reviewer": "jandem",
+  "bug": "https://bugzilla.mozilla.org/show_bug.cgi?id=1922981",
+  "review": "https://phabricator.services.mozilla.com/D224656",
+  "part": "5 / 39: PBL: add config options for computed goto dispatch, interrupt checks and coverage accounting",
+  "SHA256": "bf07c78038ebc5e64ab61308373d2d71adfda191fe2bd32110ab394d48ffcd67",
+  "adaptation": "Backport only direct switch dispatch into the pinned SpiderMonkey 128 private source copy. Preserve icregs.cacheIRReader, every opcode handler, all interrupt/debug/coverage checks, and D224659. Omit unused address tables to permit LLVM inlining; suppress unused-label diagnostics only for this candidate. No public header, JS script or game simulation changes."
+}

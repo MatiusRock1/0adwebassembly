@@ -1,0 +1,33 @@
+{
+  "browser": "firefox",
+  "console": [
+    {
+      "type": "warning",
+      "text": "[JavaScript Warning: \"Failed to create WebGL context: WebGL creation failed: \n* AllowWebgl2:false restricts context creation on this system. ()\" {file: \"http://localhost:8080/scene.mjs\" line: 104}]"
+    }
+  ],
+  "errors": [],
+  "workerEvents": [],
+  "cycleMetrics": [],
+  "version": "142.0.1",
+  "headers": {
+    "server": "SimpleHTTP/0.6 Python/3.12.3",
+    "date": "Mon, 12 Oct 2026 15:57:35 GMT",
+    "content-type": "text/html",
+    "content-length": "1569",
+    "last-modified": "Mon, 12 Oct 2026 15:34:11 GMT",
+    "cross-origin-opener-policy": "same-origin",
+    "cross-origin-embedder-policy": "require-corp",
+    "cross-origin-resource-policy": "same-origin",
+    "cache-control": "no-store"
+  },
+  "isolated": true,
+  "lastLog": "",
+  "lastState": {
+    "ready": false,
+    "metrics": null,
+    "events": []
+  },
+  "passed": false,
+  "failure": "{'passed': False, 'reason': 'Error: Se requiere WebGL 2 con aceleracion grafica habilitada.', 'lines': []}"
+}

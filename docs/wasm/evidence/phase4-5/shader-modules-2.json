@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "adapter": {
+    "vendor": "nvidia",
+    "architecture": "ampere"
+  },
+  "fingerprint": "8ab15c1e831287e7b14c7d97b506c3b071f15073caa12812cd8e5cb8fbf7c36e",
+  "modules": 1116,
+  "errors": []
+}

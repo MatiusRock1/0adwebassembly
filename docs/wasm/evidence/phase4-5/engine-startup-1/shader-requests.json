@@ -1,0 +1,6 @@
+[
+  {
+    "name": "glsl/compute_upscale_fsr",
+    "defines": {}
+  }
+]

@@ -1,0 +1,135 @@
+{
+  "passed": false,
+  "phase4Accepted": false,
+  "errors": [],
+  "console": [
+    "{\"type\":\"ready\",\"backend\":\"webgpu\",\"powerPreference\":\"high-performance\",\"owner\":\"render-worker\",\"adapter\":{\"vendor\":\"nvidia\",\"architecture\":\"ampere\",\"device\":\"\",\"description\":\"\"},\"adapterFeatures\":[\"bgra8unorm-storage\",\"clip-distances\",\"core-features-and-limits\",\"depth-clip-control\",\"depth32float-stencil8\",\"dual-source-blending\",\"float32-blendable\",\"float32-filterable\",\"indirect-first-instance\",\"primitive-index\",\"rg11b10ufloat-renderable\",\"shader-f16\",\"subgroup-size-control\",\"subgroups\",\"texture-component-swizzle\",\"texture-compression-bc\",\"texture-compression-bc-sliced-3d\",\"texture-formats-tier1\",\"texture-formats-tier2\",\"timestamp-query\"],\"adapterLimits\":{\"maxTextureDimension1D\":16384,\"maxTextureDimension2D\":16384,\"maxTextureDimension3D\":2048,\"maxTextureArrayLayers\":2048,\"maxBindGroups\":4,\"maxBindGroupsPlusVertexBuffers\":24,\"maxBindingsPerBindGroup\":1000,\"maxDynamicUniformBuffersPerPipelineLayout\":10,\"maxDynamicStorageBuffersPerPipelineLayout\":8,\"maxSampledTexturesPerShaderStage\":48,\"maxSamplersPerShaderStage\":16,\"maxStorageBuffersPerShaderStage\":16,\"maxStorageTexturesPerShaderStage\":8,\"maxUniformBuffersPerShaderStage\":12,\"maxUniformBufferBindingSize\":65536,\"maxStorageBufferBindingSize\":2147483644,\"minUniformBufferOffsetAlignment\":256,\"minStorageBufferOffsetAlignment\":256,\"maxVertexBuffers\":8,\"maxBufferSize\":2147483648,\"maxVertexAttributes\":30,\"maxVertexBufferArrayStride\":2048,\"maxInterStageShaderVariables\":28,\"maxColorAttachments\":8,\"maxColorAttachmentBytesPerSample\":128,\"maxComputeWorkgroupStorageSize\":32768,\"maxComputeInvocationsPerWorkgroup\":1024,\"maxComputeWorkgroupSizeX\":1024,\"maxComputeWorkgroupSizeY\":1024,\"maxComputeWorkgroupSizeZ\":64,\"maxComputeWorkgroupsPerDimension\":65535,\"maxImmediateSize\":64,\"maxStorageBuffersInFragmentStage\":16,\"maxStorageTexturesInFragmentStage\":8,\"maxStorageBuffersInVertexStage\":16,\"maxStorageTexturesInVertexStage\":8},\"deviceFeatures\":[\"core-features-and-limits\",\"depth32float-stencil8\",\"dual-source-blending\",\"float32-blendable\",\"float32-filterable\",\"rg11b10ufloat-renderable\",\"texture-compression-bc\"],\"deviceLimits\":{\"maxTextureDimension1D\":8192,\"maxTextureDimension2D\":8192,\"maxTextureDimension3D\":2048,\"maxTextureArrayLayers\":256,\"maxBindGroups\":4,\"maxBindGroupsPlusVertexBuffers\":24,\"maxBindingsPerBindGroup\":1000,\"maxDynamicUniformBuffersPerPipelineLayout\":8,\"maxDynamicStorageBuffersPerPipelineLayout\":4,\"maxSampledTexturesPerShaderStage\":16,\"maxSamplersPerShaderStage\":16,\"maxStorageBuffersPerShaderStage\":8,\"maxStorageTexturesPerShaderStage\":4,\"maxUniformBuffersPerShaderStage\":12,\"maxUniformBufferBindingSize\":65536,\"maxStorageBufferBindingSize\":134217728,\"minUniformBufferOffsetAlignment\":256,\"minStorageBufferOffsetAlignment\":256,\"maxVertexBuffers\":8,\"maxBufferSize\":268435456,\"maxVertexAttributes\":16,\"maxVertexBufferArrayStride\":2048,\"maxInterStageShaderVariables\":16,\"maxColorAttachments\":8,\"maxColorAttachmentBytesPerSample\":32,\"maxComputeWorkgroupStorageSize\":16384,\"maxComputeInvocationsPerWorkgroup\":256,\"maxComputeWorkgroupSizeX\":256,\"maxComputeWorkgroupSizeY\":256,\"maxComputeWorkgroupSizeZ\":64,\"maxComputeWorkgroupsPerDimension\":65535,\"maxImmediateSize\":64,\"maxStorageBuffersInFragmentStage\":8,\"maxStorageTexturesInFragmentStage\":4,\"maxStorageBuffersInVertexStage\":8,\"maxStorageTexturesInVertexStage\":4},\"unavailableOptionalFeatures\":[],\"fallbackAdapter\":null,\"format\":\"bgra8unorm\"}",
+    "Main log written to '/logs/mainlog.html'",
+    "Interesting log written to '/logs/interestinglog.html'",
+    "(error while formatting error message)"
+  ],
+  "frames": [],
+  "samples": [],
+  "commandTrace": [],
+  "workload": "skirmish",
+  "warmupSeconds": 120,
+  "durationSeconds": 120,
+  "manifest": {
+    "version": 2,
+    "baseCommit": "40b8794eecb9618da69e10bacffa8814c561aa51",
+    "scope": "Full original CGame, GUI, Petra and components. Original cheat createunits is used only to prepare and replenish benchmark load; functional command tests run with cheats disabled.",
+    "settings": {
+      "mapType": "random",
+      "map": "maps/random/mainland",
+      "settings": {
+        "Size": 256,
+        "Biome": "generic/temperate",
+        "PlayerPlacement": "circle",
+        "Seed": 12345,
+        "AISeed": 54321,
+        "PopulationCap": 200,
+        "StartingResources": 10000,
+        "CheatsEnabled": true,
+        "VictoryConditions": [],
+        "PlayerData": [
+          {
+            "Civ": "athen",
+            "Name": "Phase4Human",
+            "AI": false,
+            "Team": -1,
+            "Color": {
+              "r": 10,
+              "g": 10,
+              "b": 190
+            }
+          },
+          {
+            "Civ": "mace",
+            "Name": "Phase4Petra",
+            "AI": "petra",
+            "AIDiff": 3,
+            "AIBehavior": "balanced",
+            "Team": -1,
+            "Color": {
+              "r": 230,
+              "g": 10,
+              "b": 10
+            }
+          }
+        ]
+      }
+    },
+    "resolution": [
+      1920,
+      1080
+    ],
+    "gameSpeed": 1,
+    "graphicsProfile": {
+      "vsync": "true",
+      "adaptivefps.session": "60",
+      "shadows": "true",
+      "shadowpcf": "true",
+      "shadowquality": "2",
+      "shadowscascadecount": "1",
+      "shadowscascadedistanceratio": "1.7",
+      "shadowscutoffdistance": "300.0",
+      "shadowscovermap": "false",
+      "postproc": "true",
+      "particles": "true",
+      "gpuskinning": "true",
+      "silhouettes": "true",
+      "watereffects": "true",
+      "waterfancyeffects": "false",
+      "waterrealdepth": "true",
+      "waterreflection": "true",
+      "waterrefraction": "true",
+      "textures.quality": "2",
+      "textures.maxanisotropy": "2",
+      "antialiasing": "disabled",
+      "renderactors": "true",
+      "max_actor_quality": "200",
+      "materialmgr.quality": "10.0"
+    },
+    "presentationSync": "Browser RAF/display synchronization; native comparison requests vsync=true. Both retain the original 60 FPS session cap.",
+    "minimumLiveUnits": 200,
+    "targetUnitsPerPlayer": 125,
+    "preparationTemplates": [
+      "units/athen/infantry_spearman_e",
+      "units/mace/infantry_pikeman_e"
+    ],
+    "workloads": {
+      "skirmish": {
+        "camera": "human civic centre",
+        "orders": "continuous original patrol near civic centre; original Petra controls opponent",
+        "reinforcementSeconds": 30
+      },
+      "combat": {
+        "camera": "midpoint between civic centres",
+        "orders": "original attack-walk commands towards midpoint for both armies; Petra remains active",
+        "reinforcementSeconds": 30,
+        "allowCapture": false
+      }
+    },
+    "warmupSeconds": 120,
+    "durationSeconds": 900,
+    "repetitions": 3,
+    "requiredDisplayedFPS": 30,
+    "maximumP95Milliseconds": 33.4
+  },
+  "manifestSHA256": "96ecb9bd601569360f23021ec1fdfe648814882d87ac20e3d2e5c49e34319bf4",
+  "harnessSHA256": {
+    "benchmark-phase4.py": "97c9d9af66de1df4105fa2f73894fe9f7fb22bc0e6002916e88e69eb160a2a39",
+    "phase4_workload.py": "8ee11de5d468f4efcd07080e9c1e0df99aad2a97a50af3d38bf30fcec97a978e",
+    "phase4_flow.py": "87bff7c7198dded558b73caf0fbd22eae1ce5efe1f425693ac272d15c449e92b",
+    "phase4_browser.py": "6f2b83493b129c3779b6e12a91e64104ff3f13b1747941b85af4c0d45a676ee4",
+    "phase45_window_focus.py": "8085fe8fec923abfbde45cae0fafe4f1e283d7afeca963a7b5cb6a3b9356cc15"
+  },
+  "failure": "TypeError: Illegal invocation\n    at ArchiveBlocks.loadBlock (http://localhost:8097/archive-blocks.mjs:35:33)\n    at async ArchiveBlocks.block (http://localhost:8097/archive-blocks.mjs:23:16)\n    at async ArchiveBlocks.read (http://localhost:8097/archive-blocks.mjs:60:19)\n    at async consume (http://localhost:8097/archive-worker.mjs:17:19)",
+  "failureType": "AssertionError",
+  "runtimeFailure": {
+    "error": "TypeError: Illegal invocation\n    at ArchiveBlocks.loadBlock (http://localhost:8097/archive-blocks.mjs:35:33)\n    at async ArchiveBlocks.block (http://localhost:8097/archive-blocks.mjs:23:16)\n    at async ArchiveBlocks.read (http://localhost:8097/archive-blocks.mjs:60:19)\n    at async consume (http://localhost:8097/archive-worker.mjs:17:19)"
+  },
+  "failureFrames": [],
+  "failureClock": null,
+  "presentmonEventsLost": 0
+}

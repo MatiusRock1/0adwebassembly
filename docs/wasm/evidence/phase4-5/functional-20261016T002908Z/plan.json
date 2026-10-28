@@ -1,0 +1,63 @@
+{
+  "jobs": [
+    [
+      "native-systems",
+      "verify-phase4-native.py",
+      [
+        "--advanced"
+      ]
+    ],
+    [
+      "native-capture",
+      "verify-phase4-native.py",
+      [
+        "--capture"
+      ]
+    ],
+    [
+      "original-input",
+      "verify-phase4-input.py",
+      []
+    ],
+    [
+      "original-combat-victory",
+      "verify-phase4-combat.py",
+      []
+    ],
+    [
+      "research-trade",
+      "verify-phase4-parity.py",
+      [
+        "--advanced",
+        "--native",
+        "C:\\Users\\jorlu\\OneDrive\\Documentos\\emprendimiento\\0 AD\\0adwebassembly\\docs\\wasm\\evidence\\phase4-5\\functional-20261016T002908Z\\native-systems"
+      ]
+    ],
+    [
+      "capture-parity",
+      "verify-phase4-parity.py",
+      [
+        "--capture",
+        "--native",
+        "C:\\Users\\jorlu\\OneDrive\\Documentos\\emprendimiento\\0 AD\\0adwebassembly\\docs\\wasm\\evidence\\phase4-5\\functional-20261016T002908Z\\native-capture"
+      ]
+    ],
+    [
+      "original-audio-persistence",
+      "verify-phase4-audio.py",
+      []
+    ],
+    [
+      "three-matches",
+      "verify-phase4-match.py",
+      [
+        "--cdp",
+        "http://localhost:9229",
+        "--cycles",
+        "3"
+      ]
+    ]
+  ],
+  "computerUse": false,
+  "performanceMeasurement": false
+}

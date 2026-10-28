@@ -1,0 +1,9 @@
+{
+  "exitCode": 0,
+  "passed": true,
+  "checks": [
+    "exact serialized bytes after restore",
+    "original state hash after restore",
+    "same hash after one further original tick"
+  ]
+}

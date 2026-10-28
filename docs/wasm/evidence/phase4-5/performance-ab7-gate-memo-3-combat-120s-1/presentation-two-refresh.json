@@ -1,0 +1,41 @@
+{
+  "swapChain": "0x1D549973420",
+  "processId": 44160,
+  "otherChains": {},
+  "presents": 5734,
+  "displayedPresents": 5630,
+  "notDisplayed": 104,
+  "displayIntervals": 5630,
+  "displayedFps": 46.91427728342939,
+  "engineRenderedFps": 47.78574183654797,
+  "engineDrawWindowComplete": true,
+  "engineP95FrameMs": 38.48499999940395,
+  "medianFrameMs": 16.6938,
+  "p95FrameMs": 33.4613,
+  "p99FrameMs": 66.71730000000001,
+  "onePercentLowFps": 8.876234596637971,
+  "pausesOver100Ms": 20,
+  "measurementComplete": true,
+  "actualSurfaceVerified": true,
+  "presentmonEventsLost": 0,
+  "validFullscreen1080pRun": true,
+  "presentationGate30": false,
+  "measuredRefreshMs": 16.6833,
+  "twoRefreshLimitMs": 33.533432999999995,
+  "presentationGateTwoRefresh": true,
+  "engineP95WithinTwoRefresh": false,
+  "twoRefreshScope": "Operator clarification: physical p95 <= two measured refreshes; engine draw p95 is reported separately and not relaxed here",
+  "workerPresentation": {
+    "valid": true,
+    "required": true,
+    "delta": {
+      "rafPresents": 8135,
+      "backgroundFallbackPresents": 0,
+      "failedPresents": 0,
+      "cancelledPresents": 0
+    },
+    "scope": "Entire renderer snapshot interval, including warmup; fallback, failures, cancellation or reset invalidate capture"
+  },
+  "attribution": "Dedicated fullscreen window swap chain; native simulation frame IDs are not exposed by PresentMon",
+  "acceptance": "Individual 30 FPS gate; closure requires three complete 900-second repetitions and functional checks"
+}

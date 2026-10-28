@@ -1,0 +1,16 @@
+{
+  "jobs": 2,
+  "memoryLimitGiB": 8,
+  "stages": [
+    {
+      "stage": "build-o3-lto-proxied",
+      "exitCode": 0,
+      "seconds": 659.4241714000091
+    },
+    {
+      "stage": "parity-o3-lto-proxied",
+      "exitCode": 0,
+      "seconds": 965.2150893000071
+    }
+  ]
+}

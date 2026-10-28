@@ -1,0 +1,159 @@
+{
+  "nodeExitCode": 0,
+  "checkpoints": [
+    {
+      "tick": 1,
+      "bytes": 106085,
+      "nativeSHA256": "06ef2d0f4a4338f19c7d7505921069f495dea687c166a7de2925b25df7d8abe8",
+      "nodeSHA256": "06ef2d0f4a4338f19c7d7505921069f495dea687c166a7de2925b25df7d8abe8",
+      "identicalBytes": true
+    },
+    {
+      "tick": 100,
+      "bytes": 105955,
+      "nativeSHA256": "0259e3af27c6acadb718f9be5cb30d0974df73ae85ff11cc6539d37b9130d8d8",
+      "nodeSHA256": "0259e3af27c6acadb718f9be5cb30d0974df73ae85ff11cc6539d37b9130d8d8",
+      "identicalBytes": true
+    },
+    {
+      "tick": 101,
+      "bytes": 106207,
+      "nativeSHA256": "57ca88458902889992bd13ce27a5278eaf79c93e63a464969e56461ecd1af406",
+      "nodeSHA256": "57ca88458902889992bd13ce27a5278eaf79c93e63a464969e56461ecd1af406",
+      "identicalBytes": true
+    },
+    {
+      "tick": 110,
+      "bytes": 106241,
+      "nativeSHA256": "10e8b52ba8b10a31666dd7d578bf752881bbfdfdfc6a06697f7c11d76ebe0eaf",
+      "nodeSHA256": "10e8b52ba8b10a31666dd7d578bf752881bbfdfdfc6a06697f7c11d76ebe0eaf",
+      "identicalBytes": true
+    },
+    {
+      "tick": 200,
+      "bytes": 107594,
+      "nativeSHA256": "63dab01a962c04d4bbd458331c00e3436bde9e33b33c0ff528a6c4dea057fcb7",
+      "nodeSHA256": "63dab01a962c04d4bbd458331c00e3436bde9e33b33c0ff528a6c4dea057fcb7",
+      "identicalBytes": true
+    },
+    {
+      "tick": 500,
+      "bytes": 109722,
+      "nativeSHA256": "08e093c920d497d9fbfeca47fce703cb397f4bff3cb02a27c782b1d4a7f374d2",
+      "nodeSHA256": "08e093c920d497d9fbfeca47fce703cb397f4bff3cb02a27c782b1d4a7f374d2",
+      "identicalBytes": true
+    },
+    {
+      "tick": 1100,
+      "bytes": 115134,
+      "nativeSHA256": "cd88571d1d5321ba1df006bab2c5c4055526b94ffc552c29d12b81976d4fb9e4",
+      "nodeSHA256": "cd88571d1d5321ba1df006bab2c5c4055526b94ffc552c29d12b81976d4fb9e4",
+      "identicalBytes": true
+    }
+  ],
+  "browsers": {
+    "chromium": {
+      "version": "141.0.7390.37",
+      "exitCode": 0,
+      "isolated": true,
+      "heartbeat": 650,
+      "checkpoints": [
+        {
+          "tick": 1,
+          "bytes": 106085,
+          "sha256": "06ef2d0f4a4338f19c7d7505921069f495dea687c166a7de2925b25df7d8abe8",
+          "matches": true
+        },
+        {
+          "tick": 100,
+          "bytes": 105955,
+          "sha256": "0259e3af27c6acadb718f9be5cb30d0974df73ae85ff11cc6539d37b9130d8d8",
+          "matches": true
+        },
+        {
+          "tick": 101,
+          "bytes": 106207,
+          "sha256": "57ca88458902889992bd13ce27a5278eaf79c93e63a464969e56461ecd1af406",
+          "matches": true
+        },
+        {
+          "tick": 110,
+          "bytes": 106241,
+          "sha256": "10e8b52ba8b10a31666dd7d578bf752881bbfdfdfc6a06697f7c11d76ebe0eaf",
+          "matches": true
+        },
+        {
+          "tick": 200,
+          "bytes": 107594,
+          "sha256": "63dab01a962c04d4bbd458331c00e3436bde9e33b33c0ff528a6c4dea057fcb7",
+          "matches": true
+        },
+        {
+          "tick": 500,
+          "bytes": 109722,
+          "sha256": "08e093c920d497d9fbfeca47fce703cb397f4bff3cb02a27c782b1d4a7f374d2",
+          "matches": true
+        },
+        {
+          "tick": 1100,
+          "bytes": 115134,
+          "sha256": "cd88571d1d5321ba1df006bab2c5c4055526b94ffc552c29d12b81976d4fb9e4",
+          "matches": true
+        }
+      ],
+      "passed": true
+    },
+    "firefox": {
+      "version": "142.0.1",
+      "exitCode": 0,
+      "isolated": true,
+      "heartbeat": 4626,
+      "checkpoints": [
+        {
+          "tick": 1,
+          "bytes": 106085,
+          "sha256": "06ef2d0f4a4338f19c7d7505921069f495dea687c166a7de2925b25df7d8abe8",
+          "matches": true
+        },
+        {
+          "tick": 100,
+          "bytes": 105955,
+          "sha256": "0259e3af27c6acadb718f9be5cb30d0974df73ae85ff11cc6539d37b9130d8d8",
+          "matches": true
+        },
+        {
+          "tick": 101,
+          "bytes": 106207,
+          "sha256": "57ca88458902889992bd13ce27a5278eaf79c93e63a464969e56461ecd1af406",
+          "matches": true
+        },
+        {
+          "tick": 110,
+          "bytes": 106241,
+          "sha256": "10e8b52ba8b10a31666dd7d578bf752881bbfdfdfc6a06697f7c11d76ebe0eaf",
+          "matches": true
+        },
+        {
+          "tick": 200,
+          "bytes": 107594,
+          "sha256": "63dab01a962c04d4bbd458331c00e3436bde9e33b33c0ff528a6c4dea057fcb7",
+          "matches": true
+        },
+        {
+          "tick": 500,
+          "bytes": 109722,
+          "sha256": "08e093c920d497d9fbfeca47fce703cb397f4bff3cb02a27c782b1d4a7f374d2",
+          "matches": true
+        },
+        {
+          "tick": 1100,
+          "bytes": 115134,
+          "sha256": "cd88571d1d5321ba1df006bab2c5c4055526b94ffc552c29d12b81976d4fb9e4",
+          "matches": true
+        }
+      ],
+      "passed": true
+    }
+  },
+  "passed": true
+}

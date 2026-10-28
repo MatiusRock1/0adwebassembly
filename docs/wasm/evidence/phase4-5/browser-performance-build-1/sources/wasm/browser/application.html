@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="es">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>0 A.D. — aplicación local</title>
+<style>
+body { margin: 0; background: #111; color: #eee; font-family: sans-serif; }
+nav { padding: 8px; display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+canvas { display: block; width: min(100vw, 1280px); aspect-ratio: 16 / 9; margin: auto; }
+canvas.render-input { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); opacity: 0; }
+canvas:fullscreen { width: 100vw; height: 100vh; }
+#game-surface:fullscreen { width: 100vw; height: 100vh; background: #111; display: flex; align-items: center; justify-content: center; }
+#game-surface:fullscreen canvas { width: min(100vw, 177.77777778vh); height: min(100vh, 56.25vw); margin: 0; flex: none; }
+.original-pointer { position: fixed; top: 0; left: 0; pointer-events: none; z-index: 1; }
+pre { white-space: pre-wrap; max-height: 160px; overflow: auto; margin: 8px; }
+</style>
+<nav><button id="start">Iniciar 0 A.D.</button><button id="fullscreen" disabled>Pantalla completa</button><button id="audio" disabled>Activar audio</button><button id="close" disabled>Cerrar juego</button><span id="status">Partida local con los menús originales.</span></nav>
+<nav aria-label="Preferencia de gráfica"><label for="renderer-backend">Renderer:</label><select id="renderer-backend"><option value="webgl">WebGL 2</option><option value="webgpu">WebGPU (experimental)</option></select><label for="gpu-preference">Gráfica:</label><select id="gpu-preference"><option value="high-performance">Alto rendimiento (preferencia)</option><option value="default">Automática</option></select><span id="gpu-info">La elección final depende del navegador y Windows.</span></nav>
+<p style="margin:8px">Resolución interna en pantalla completa: 1920 × 1080; se ajusta a la pantalla conservando la proporción.</p>
+<p style="margin:8px">En pantalla completa se captura el ratón para usar los cuatro bordes con varios monitores. Escape lo libera; haz clic en el juego para volver a capturarlo.</p>
+<div id="game-surface"><canvas id="canvas" width="1280" height="720" tabindex="0"></canvas></div>
+<pre id="log"></pre>
+<script type="module" src="application.mjs"></script>
+</html>

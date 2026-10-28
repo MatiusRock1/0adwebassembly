@@ -1,0 +1,1953 @@
+{
+  "diagnosticOnly": true,
+  "performanceAcceptance": false,
+  "slowThresholdMs": 70,
+  "slowTurns": 32,
+  "slowMs": 3260.8400000000006,
+  "slowUnattributedMs": 75.2028,
+  "otherTurns": 592,
+  "otherMs": 17119.89,
+  "otherUnattributedMs": 663.663,
+  "slow": [
+    {
+      "key": "ai:resultWait",
+      "calls": 32,
+      "ms": 805.275,
+      "maxMsSinceStart": 595.755
+    },
+    {
+      "key": "broadcast:Timer.OnUpdate",
+      "calls": 32,
+      "ms": 459.688,
+      "maxMsSinceStart": 351.43
+    },
+    {
+      "key": "global:ModifiersManager.OnGlobalOwnershipChanged",
+      "calls": 326,
+      "ms": 315.457,
+      "maxMsSinceStart": 6.04956
+    },
+    {
+      "key": "post:AIInterface.OnTemplateModification",
+      "calls": 15,
+      "ms": 268.875,
+      "maxMsSinceStart": 28.355
+    },
+    {
+      "key": "post:VisualActor.OnCreate",
+      "calls": 318,
+      "ms": 247.82299999999998,
+      "maxMsSinceStart": 95.5552
+    },
+    {
+      "key": "cmd:net:cheat.createunits",
+      "calls": 28,
+      "ms": 233.86900000000003,
+      "maxMsSinceStart": 139.768
+    },
+    {
+      "key": "global:AIInterface.OnGlobalValueModification",
+      "calls": 1653,
+      "ms": 224.283,
+      "maxMsSinceStart": 5.15015
+    },
+    {
+      "key": "cmd:local:attack",
+      "calls": 509,
+      "ms": 190.453,
+      "maxMsSinceStart": 0.845215
+    },
+    {
+      "key": "broadcast:UnitMotionManager.OnUpdate_MotionUnit",
+      "calls": 32,
+      "ms": 112.73209999999999,
+      "maxMsSinceStart": 14.8555
+    },
+    {
+      "key": "broadcast:ResourceGatherer.OnValueModification",
+      "calls": 15,
+      "ms": 96.8098,
+      "maxMsSinceStart": 15.6748
+    },
+    {
+      "key": "post:ResourceGatherer.OnOwnershipChanged",
+      "calls": 309,
+      "ms": 79.97489999999999,
+      "maxMsSinceStart": 6.13501
+    },
+    {
+      "key": "post:ResourceGatherer.OnValueModification",
+      "calls": 1616,
+      "ms": 67.6945,
+      "maxMsSinceStart": 0.554932
+    },
+    {
+      "key": "post:Resistance.OnOwnershipChanged",
+      "calls": 325,
+      "ms": 67.2733,
+      "maxMsSinceStart": 8.67993
+    },
+    {
+      "key": "post:UnitAI.OnMotionUpdate",
+      "calls": 528,
+      "ms": 65.1653,
+      "maxMsSinceStart": 21.01
+    },
+    {
+      "key": "broadcast:RangeManager.OnUpdate",
+      "calls": 32,
+      "ms": 49.29880000000001,
+      "maxMsSinceStart": 2.53003
+    },
+    {
+      "key": "post:AIProxy.OnPositionChanged",
+      "calls": 6785,
+      "ms": 46.139399999999995,
+      "maxMsSinceStart": 1.20996
+    },
+    {
+      "key": "post:Auras.OnRangeUpdate",
+      "calls": 2376,
+      "ms": 36.6931,
+      "maxMsSinceStart": 0.294922
+    },
+    {
+      "key": "cmd:local:walk-to-range",
+      "calls": 195,
+      "ms": 33.8357,
+      "maxMsSinceStart": 0.384277
+    },
+    {
+      "key": "post:Auras.OnOwnershipChanged",
+      "calls": 319,
+      "ms": 32.57209999999999,
+      "maxMsSinceStart": 0.560059
+    },
+    {
+      "key": "post:Health.OnOwnershipChanged",
+      "calls": 325,
+      "ms": 32.265699999999995,
+      "maxMsSinceStart": 0.589844
+    },
+    {
+      "key": "post:UnitAI.OnOwnershipChanged",
+      "calls": 319,
+      "ms": 31.2034,
+      "maxMsSinceStart": 0.949951
+    },
+    {
+      "key": "broadcast:Position.OnTurnStart",
+      "calls": 32,
+      "ms": 28.800800000000002,
+      "maxMsSinceStart": 1.42505
+    },
+    {
+      "key": "global:RangeManager.OnGlobalPositionChanged",
+      "calls": 6829,
+      "ms": 26.422799999999995,
+      "maxMsSinceStart": 0.120117
+    },
+    {
+      "key": "post:UnitAI.OnRangeUpdate",
+      "calls": 2377,
+      "ms": 26.349300000000003,
+      "maxMsSinceStart": 0.209961
+    },
+    {
+      "key": "broadcast:ResourceSupply.OnValueModification",
+      "calls": 15,
+      "ms": 24.325,
+      "maxMsSinceStart": 1.82007
+    },
+    {
+      "key": "post:Health.OnValueModification",
+      "calls": 1638,
+      "ms": 23.728,
+      "maxMsSinceStart": 0.375
+    },
+    {
+      "key": "cmd:local:stop",
+      "calls": 80,
+      "ms": 19.502160000000003,
+      "maxMsSinceStart": 1.43506
+    },
+    {
+      "key": "global:TechnologyManager.OnGlobalOwnershipChanged",
+      "calls": 326,
+      "ms": 18.084400000000002,
+      "maxMsSinceStart": 0.195068
+    },
+    {
+      "key": "global:Player.OnGlobalOwnershipChanged",
+      "calls": 326,
+      "ms": 16.031999999999996,
+      "maxMsSinceStart": 0.180176
+    },
+    {
+      "key": "broadcast:TechnologyManager.OnUpdate",
+      "calls": 32,
+      "ms": 15.41525,
+      "maxMsSinceStart": 0.780029
+    },
+    {
+      "key": "post:UnitAI.OnCreate",
+      "calls": 293,
+      "ms": 15.181700000000001,
+      "maxMsSinceStart": 0.300049
+    },
+    {
+      "key": "post:Attack.OnValueModification",
+      "calls": 1616,
+      "ms": 14.0254,
+      "maxMsSinceStart": 0.11499
+    },
+    {
+      "key": "post:UnitMotion.OnOwnershipChanged",
+      "calls": 338,
+      "ms": 11.672799999999999,
+      "maxMsSinceStart": 0.110107
+    },
+    {
+      "key": "global:Auras.OnGlobalResearchFinished",
+      "calls": 7,
+      "ms": 11.2251,
+      "maxMsSinceStart": 1.78003
+    },
+    {
+      "key": "post:RangeOverlayManager.OnOwnershipChanged",
+      "calls": 321,
+      "ms": 11.0911,
+      "maxMsSinceStart": 0.310059
+    },
+    {
+      "key": "broadcast:VisualActor.OnValueModification",
+      "calls": 15,
+      "ms": 10.4346,
+      "maxMsSinceStart": 0.929932
+    },
+    {
+      "key": "post:AIProxy.OnUnitAIStateChanged",
+      "calls": 1947,
+      "ms": 9.97317,
+      "maxMsSinceStart": 0.204834
+    },
+    {
+      "key": "broadcast:Attack.OnValueModification",
+      "calls": 15,
+      "ms": 9.73511,
+      "maxMsSinceStart": 2.11499
+    },
+    {
+      "key": "global:UnitAI.OnGlobalEntityRenamed",
+      "calls": 10,
+      "ms": 9.199480000000001,
+      "maxMsSinceStart": 6.06006
+    },
+    {
+      "key": "cmd:local:garrison",
+      "calls": 18,
+      "ms": 8.94632,
+      "maxMsSinceStart": 1.32471
+    },
+    {
+      "key": "post:Cost.OnValueModification",
+      "calls": 1638,
+      "ms": 8.782699999999998,
+      "maxMsSinceStart": 0.0849609
+    },
+    {
+      "key": "global:AttackDetection.OnGlobalAttacked",
+      "calls": 349,
+      "ms": 8.729500000000002,
+      "maxMsSinceStart": 46.7002
+    },
+    {
+      "key": "post:UnitMotion.OnPathResult",
+      "calls": 1456,
+      "ms": 8.67532,
+      "maxMsSinceStart": 0.390137
+    },
+    {
+      "key": "broadcast:UnitMotionManager.OnTurnStart",
+      "calls": 32,
+      "ms": 8.566880000000001,
+      "maxMsSinceStart": 0.495117
+    },
+    {
+      "key": "broadcast:Vision.OnValueModification",
+      "calls": 15,
+      "ms": 8.56543,
+      "maxMsSinceStart": 0.650146
+    },
+    {
+      "key": "post:AIProxy.OnUnitAIOrderDataChanged",
+      "calls": 2245,
+      "ms": 8.209959999999999,
+      "maxMsSinceStart": 0.0800781
+    },
+    {
+      "key": "post:Obstruction.OnPositionChanged",
+      "calls": 6825,
+      "ms": 6.18188,
+      "maxMsSinceStart": 0.0600586
+    },
+    {
+      "key": "global:EntityLimits.OnGlobalOwnershipChanged",
+      "calls": 326,
+      "ms": 6.164789999999999,
+      "maxMsSinceStart": 0.174805
+    },
+    {
+      "key": "post:VisualActor.OnOwnershipChanged",
+      "calls": 349,
+      "ms": 5.57031,
+      "maxMsSinceStart": 0.0949707
+    },
+    {
+      "key": "broadcast:RangeOverlayManager.OnValueModification",
+      "calls": 15,
+      "ms": 4.93579,
+      "maxMsSinceStart": 0.469971
+    },
+    {
+      "key": "cmd:local:construct",
+      "calls": 2,
+      "ms": 4.5351,
+      "maxMsSinceStart": 15.325
+    },
+    {
+      "key": "global:GarrisonHolder.OnGlobalOwnershipChanged",
+      "calls": 326,
+      "ms": 4.53223,
+      "maxMsSinceStart": 0.0800781
+    },
+    {
+      "key": "post:AIProxy.OnOwnershipChanged",
+      "calls": 326,
+      "ms": 4.40479,
+      "maxMsSinceStart": 0.119873
+    },
+    {
+      "key": "post:Vision.OnOwnershipChanged",
+      "calls": 325,
+      "ms": 3.93482,
+      "maxMsSinceStart": 0.100098
+    },
+    {
+      "key": "post:AIProxy.OnHealthChanged",
+      "calls": 683,
+      "ms": 3.86206,
+      "maxMsSinceStart": 0.0651855
+    },
+    {
+      "key": "global:TerritoryManager.OnGlobalPositionChanged",
+      "calls": 6829,
+      "ms": 3.8408200000000003,
+      "maxMsSinceStart": 0.119873
+    },
+    {
+      "key": "post:Selectable.OnPositionChanged",
+      "calls": 6787,
+      "ms": 3.82642,
+      "maxMsSinceStart": 0.0549316
+    },
+    {
+      "key": "global:RangeManager.OnGlobalOwnershipChanged",
+      "calls": 349,
+      "ms": 3.8073699999999997,
+      "maxMsSinceStart": 0.14502
+    },
+    {
+      "key": "post:VisualActor.OnInterpolatedPositionChanged",
+      "calls": 5260,
+      "ms": 3.7854,
+      "maxMsSinceStart": 0.0351562
+    },
+    {
+      "key": "post:RangeOverlayManager.OnValueModification",
+      "calls": 1626,
+      "ms": 3.7263200000000003,
+      "maxMsSinceStart": 0.0449219
+    },
+    {
+      "key": "post:Minimap.OnPositionChanged",
+      "calls": 6787,
+      "ms": 3.67358,
+      "maxMsSinceStart": 0.0400391
+    },
+    {
+      "key": "broadcast:Cost.OnValueModification",
+      "calls": 15,
+      "ms": 3.60474,
+      "maxMsSinceStart": 0.320068
+    },
+    {
+      "key": "broadcast:Health.OnValueModification",
+      "calls": 15,
+      "ms": 3.52466,
+      "maxMsSinceStart": 0.304932
+    },
+    {
+      "key": "broadcast:Builder.OnValueModification",
+      "calls": 15,
+      "ms": 3.07471,
+      "maxMsSinceStart": 0.25
+    },
+    {
+      "key": "post:UnitAI.OnAttacked",
+      "calls": 349,
+      "ms": 2.7827200000000003,
+      "maxMsSinceStart": 0.72998
+    },
+    {
+      "key": "post:Builder.OnValueModification",
+      "calls": 1616,
+      "ms": 2.6640699999999997,
+      "maxMsSinceStart": 0.0449219
+    },
+    {
+      "key": "post:Minimap.OnOwnershipChanged",
+      "calls": 326,
+      "ms": 2.5588299999999995,
+      "maxMsSinceStart": 0.0900879
+    },
+    {
+      "key": "broadcast:UnitMotion.OnValueModification",
+      "calls": 15,
+      "ms": 2.375,
+      "maxMsSinceStart": 0.235107
+    },
+    {
+      "key": "post:AIProxy.OnTrainingFinished",
+      "calls": 286,
+      "ms": 2.1577100000000002,
+      "maxMsSinceStart": 0.100098
+    },
+    {
+      "key": "post:UnitAI.OnDestroy",
+      "calls": 26,
+      "ms": 2.13964,
+      "maxMsSinceStart": 0.189941
+    },
+    {
+      "key": "global:BattleDetection.OnGlobalAttacked",
+      "calls": 349,
+      "ms": 1.9540989999999998,
+      "maxMsSinceStart": 0.199951
+    },
+    {
+      "key": "post:Guard.OnAttacked",
+      "calls": 349,
+      "ms": 1.943357,
+      "maxMsSinceStart": 0.0949707
+    },
+    {
+      "key": "global:Trigger.OnGlobalOwnershipChanged",
+      "calls": 326,
+      "ms": 1.91553,
+      "maxMsSinceStart": 0.0700684
+    },
+    {
+      "key": "post:TerritoryDecay.OnPositionChanged",
+      "calls": 4,
+      "ms": 1.91504,
+      "maxMsSinceStart": 0.695068
+    },
+    {
+      "key": "post:AIProxy.OnUnitIdleChanged",
+      "calls": 424,
+      "ms": 1.8940500000000005,
+      "maxMsSinceStart": 0.0751953
+    },
+    {
+      "key": "post:AIProxy.OnUnitStanceChanged",
+      "calls": 300,
+      "ms": 1.84082,
+      "maxMsSinceStart": 0.0551758
+    },
+    {
+      "key": "post:Ownership.OnDestroy",
+      "calls": 31,
+      "ms": 1.6511200000000001,
+      "maxMsSinceStart": 0.115234
+    },
+    {
+      "key": "cmd:local:train",
+      "calls": 4,
+      "ms": 1.50464,
+      "maxMsSinceStart": 0.5
+    },
+    {
+      "key": "post:AIProxy.OnAttacked",
+      "calls": 349,
+      "ms": 1.319828,
+      "maxMsSinceStart": 0.0397949
+    },
+    {
+      "key": "broadcast:Promotion.OnValueModification",
+      "calls": 15,
+      "ms": 1.31934,
+      "maxMsSinceStart": 0.129883
+    },
+    {
+      "key": "post:StatusBars.OnHealthChanged",
+      "calls": 683,
+      "ms": 1.3059029999999998,
+      "maxMsSinceStart": 0.0151367
+    },
+    {
+      "key": "global:Trigger.OnGlobalTrainingFinished",
+      "calls": 286,
+      "ms": 1.1784700000000001,
+      "maxMsSinceStart": 0.530029
+    },
+    {
+      "key": "global:RangeManager.OnGlobalCreate",
+      "calls": 318,
+      "ms": 1.1169390000000001,
+      "maxMsSinceStart": 0.0749512
+    },
+    {
+      "key": "broadcast:UnitRenderer.OnTurnStart",
+      "calls": 32,
+      "ms": 1.075195,
+      "maxMsSinceStart": 0.11499
+    },
+    {
+      "key": "post:AIProxy.OnProductionQueueChanged",
+      "calls": 23,
+      "ms": 0.979741,
+      "maxMsSinceStart": 0.0949707
+    },
+    {
+      "key": "post:UnitMotion.OnValueModification",
+      "calls": 1616,
+      "ms": 0.97509,
+      "maxMsSinceStart": 0.0549316
+    },
+    {
+      "key": "post:RangeOverlayRenderer.OnOwnershipChanged",
+      "calls": 321,
+      "ms": 0.959229,
+      "maxMsSinceStart": 0.0200195
+    },
+    {
+      "key": "post:VisualActor.OnValueModification",
+      "calls": 1638,
+      "ms": 0.9333539999999999,
+      "maxMsSinceStart": 0.109863
+    },
+    {
+      "key": "post:Promotion.OnValueModification",
+      "calls": 530,
+      "ms": 0.8759800000000001,
+      "maxMsSinceStart": 0.0698242
+    },
+    {
+      "key": "post:Guard.OnOwnershipChanged",
+      "calls": 321,
+      "ms": 0.86401,
+      "maxMsSinceStart": 0.0549316
+    },
+    {
+      "key": "global:TerritoryManager.OnGlobalValueModification",
+      "calls": 1653,
+      "ms": 0.815679,
+      "maxMsSinceStart": 0.0148926
+    },
+    {
+      "key": "global:RallyPoint.OnGlobalEntityRenamed",
+      "calls": 10,
+      "ms": 0.755371,
+      "maxMsSinceStart": 0.125
+    },
+    {
+      "key": "broadcast:BuildingAI.OnValueModification",
+      "calls": 15,
+      "ms": 0.720459,
+      "maxMsSinceStart": 0.48999
+    },
+    {
+      "key": "post:Foundation.OnHealthChanged",
+      "calls": 36,
+      "ms": 0.7192349999999998,
+      "maxMsSinceStart": 0.0952148
+    },
+    {
+      "key": "post:VisionSharing.OnOwnershipChanged",
+      "calls": 321,
+      "ms": 0.7087370000000001,
+      "maxMsSinceStart": 0.0498047
+    },
+    {
+      "key": "broadcast:Capturable.OnValueModification",
+      "calls": 15,
+      "ms": 0.675049,
+      "maxMsSinceStart": 0.51001
+    },
+    {
+      "key": "post:Vision.OnValueModification",
+      "calls": 1638,
+      "ms": 0.642822,
+      "maxMsSinceStart": 0.00512695
+    },
+    {
+      "key": "cmd:local:research",
+      "calls": 1,
+      "ms": 0.614746,
+      "maxMsSinceStart": 0.614746
+    },
+    {
+      "key": "post:UnitMotion.OnCreate",
+      "calls": 312,
+      "ms": 0.5097659999999999,
+      "maxMsSinceStart": 0.0100098
+    },
+    {
+      "key": "broadcast:GuiInterface.OnUpdate",
+      "calls": 32,
+      "ms": 0.48535100000000003,
+      "maxMsSinceStart": 0.0700684
+    },
+    {
+      "key": "post:GuiInterface.OnTemplateModification",
+      "calls": 15,
+      "ms": 0.459717,
+      "maxMsSinceStart": 0.25
+    },
+    {
+      "key": "post:Fogging.OnVisibilityChanged",
+      "calls": 54,
+      "ms": 0.455078,
+      "maxMsSinceStart": 0.164795
+    },
+    {
+      "key": "post:StatusBars.OnExperienceChanged",
+      "calls": 197,
+      "ms": 0.393799,
+      "maxMsSinceStart": 0.0300293
+    },
+    {
+      "key": "post:Capturable.OnOwnershipChanged",
+      "calls": 2,
+      "ms": 0.339844,
+      "maxMsSinceStart": 0.234863
+    },
+    {
+      "key": "post:OverlayRenderer.OnVisibilityChanged",
+      "calls": 470,
+      "ms": 0.294434,
+      "maxMsSinceStart": 0.0351562
+    },
+    {
+      "key": "global:TerritoryManager.OnGlobalOwnershipChanged",
+      "calls": 349,
+      "ms": 0.28295899999999996,
+      "maxMsSinceStart": 0.00512695
+    },
+    {
+      "key": "broadcast:Population.OnValueModification",
+      "calls": 15,
+      "ms": 0.280029,
+      "maxMsSinceStart": 0.0251465
+    },
+    {
+      "key": "broadcast:RallyPointRenderer.OnTurnStart",
+      "calls": 32,
+      "ms": 0.2563472,
+      "maxMsSinceStart": 0.0151367
+    },
+    {
+      "key": "post:Minimap.OnMinimapPing",
+      "calls": 349,
+      "ms": 0.253906,
+      "maxMsSinceStart": 0.0400391
+    },
+    {
+      "key": "post:Capturable.OnValueModification",
+      "calls": 10,
+      "ms": 0.194824,
+      "maxMsSinceStart": 0.0749512
+    },
+    {
+      "key": "post:Trainer.OnOwnershipChanged",
+      "calls": 1,
+      "ms": 0.189941,
+      "maxMsSinceStart": 0.189941
+    },
+    {
+      "key": "global:Trigger.OnGlobalResearchFinished",
+      "calls": 7,
+      "ms": 0.179932,
+      "maxMsSinceStart": 0.110107
+    },
+    {
+      "key": "post:AIProxy.OnFoundationProgressChanged",
+      "calls": 36,
+      "ms": 0.1699219,
+      "maxMsSinceStart": 0.0351562
+    },
+    {
+      "key": "broadcast:UnitMotionManager.OnUpdate_MotionFormation",
+      "calls": 32,
+      "ms": 0.1691894,
+      "maxMsSinceStart": 0.0148926
+    },
+    {
+      "key": "post:Selectable.OnOwnershipChanged",
+      "calls": 326,
+      "ms": 0.16113300000000003,
+      "maxMsSinceStart": 0.0100098
+    },
+    {
+      "key": "broadcast:GarrisonHolder.OnValueModification",
+      "calls": 15,
+      "ms": 0.160156,
+      "maxMsSinceStart": 0.0151367
+    },
+    {
+      "key": "broadcast:TerritoryDecay.OnTerritoriesChanged",
+      "calls": 1,
+      "ms": 0.149902,
+      "maxMsSinceStart": 0.149902
+    },
+    {
+      "key": "broadcast:ResourceTrickle.OnValueModification",
+      "calls": 15,
+      "ms": 0.149658,
+      "maxMsSinceStart": 0.0698242
+    },
+    {
+      "key": "broadcast:Trainer.OnValueModification",
+      "calls": 15,
+      "ms": 0.125,
+      "maxMsSinceStart": 0.0151367
+    },
+    {
+      "key": "post:Diplomacy.OnResearchFinished",
+      "calls": 7,
+      "ms": 0.120117,
+      "maxMsSinceStart": 0.0749512
+    },
+    {
+      "key": "post:Population.OnOwnershipChanged",
+      "calls": 5,
+      "ms": 0.11987299999999998,
+      "maxMsSinceStart": 0.110107
+    },
+    {
+      "key": "broadcast:Player.OnValueModification",
+      "calls": 15,
+      "ms": 0.11499,
+      "maxMsSinceStart": 0.0200195
+    },
+    {
+      "key": "global:TemplateManager.OnGlobalDestroy",
+      "calls": 31,
+      "ms": 0.06567390000000001,
+      "maxMsSinceStart": 0.0549316
+    },
+    {
+      "key": "global:AIInterface.OnGlobalEntityRenamed",
+      "calls": 10,
+      "ms": 0.0600586,
+      "maxMsSinceStart": 0.0349121
+    },
+    {
+      "key": "broadcast:CinemaManager.OnUpdate",
+      "calls": 32,
+      "ms": 0.05541990000000001,
+      "maxMsSinceStart": 0.00512695
+    },
+    {
+      "key": "broadcast:TerritoryManager.OnUpdate",
+      "calls": 32,
+      "ms": 0.05493160000000001,
+      "maxMsSinceStart": 0.0100098
+    },
+    {
+      "key": "post:Obstruction.OnDestroy",
+      "calls": 29,
+      "ms": 0.054688000000000014,
+      "maxMsSinceStart": 0.155029
+    },
+    {
+      "key": "post:Fogging.OnOwnershipChanged",
+      "calls": 6,
+      "ms": 0.05004899999999998,
+      "maxMsSinceStart": 0.130127
+    },
+    {
+      "key": "global:Trigger.OnGlobalEntityRenamed",
+      "calls": 10,
+      "ms": 0.050048800000000004,
+      "maxMsSinceStart": 0.0300293
+    },
+    {
+      "key": "global:RangeManager.OnGlobalDestroy",
+      "calls": 31,
+      "ms": 0.04516610000000001,
+      "maxMsSinceStart": 0.0200195
+    },
+    {
+      "key": "post:Foundation.OnOwnershipChanged",
+      "calls": 4,
+      "ms": 0.04492209999999999,
+      "maxMsSinceStart": 0.0849609
+    },
+    {
+      "key": "post:AIProxy.OnFoundationBuildersChanged",
+      "calls": 8,
+      "ms": 0.0446777,
+      "maxMsSinceStart": 0.0100098
+    },
+    {
+      "key": "global:GuiInterface.OnGlobalEntityRenamed",
+      "calls": 10,
+      "ms": 0.0400391,
+      "maxMsSinceStart": 0.0148926
+    },
+    {
+      "key": "post:UnitMotion.OnDestroy",
+      "calls": 26,
+      "ms": 0.035156999999999994,
+      "maxMsSinceStart": 0.129883
+    },
+    {
+      "key": "post:Mirage.OnVisibilityChanged",
+      "calls": 2,
+      "ms": 0.0351562,
+      "maxMsSinceStart": 0.0300293
+    },
+    {
+      "key": "post:StatusBars.OnResourceSupplyChanged",
+      "calls": 13,
+      "ms": 0.034668000000000004,
+      "maxMsSinceStart": 0.0100098
+    },
+    {
+      "key": "post:Garrisonable.OnEntityRenamed",
+      "calls": 7,
+      "ms": 0.030272999999999994,
+      "maxMsSinceStart": 0.0749512
+    },
+    {
+      "key": "post:VisualActor.OnDestroy",
+      "calls": 31,
+      "ms": 0.030029300000000002,
+      "maxMsSinceStart": 0.0351562
+    },
+    {
+      "key": "broadcast:StatisticsTracker.OnTerritoriesChanged",
+      "calls": 1,
+      "ms": 0.0300293,
+      "maxMsSinceStart": 0.0300293
+    },
+    {
+      "key": "post:RallyPointRenderer.OnOwnershipChanged",
+      "calls": 6,
+      "ms": 0.029785189999999996,
+      "maxMsSinceStart": 0.0100098
+    },
+    {
+      "key": "post:Population.OnValueModification",
+      "calls": 17,
+      "ms": 0.029541000000000005,
+      "maxMsSinceStart": 0.0449219
+    },
+    {
+      "key": "global:Trigger.OnGlobalConstructionFinished",
+      "calls": 2,
+      "ms": 0.0202637,
+      "maxMsSinceStart": 0.0151367
+    },
+    {
+      "key": "post:AIProxy.OnAIMetadata",
+      "calls": 2,
+      "ms": 0.020019499999999996,
+      "maxMsSinceStart": 0.0400391
+    },
+    {
+      "key": "post:Foundation.OnEntityRenamed",
+      "calls": 2,
+      "ms": 0.0151367,
+      "maxMsSinceStart": 0.0100098
+    },
+    {
+      "key": "post:TerritoryDecay.OnOwnershipChanged",
+      "calls": 2,
+      "ms": 0.0148926,
+      "maxMsSinceStart": 0.0100098
+    },
+    {
+      "key": "post:AIProxy.OnConstructionFinished",
+      "calls": 2,
+      "ms": 0.0148926,
+      "maxMsSinceStart": 0.00976562
+    },
+    {
+      "key": "post:GarrisonHolder.OnHealthChanged",
+      "calls": 2,
+      "ms": 0.0148926,
+      "maxMsSinceStart": 0.0100098
+    },
+    {
+      "key": "post:RallyPointRenderer.OnPositionChanged",
+      "calls": 10,
+      "ms": 0.0148926,
+      "maxMsSinceStart": 0.00512695
+    },
+    {
+      "key": "post:Trainer.OnValueModification",
+      "calls": 5,
+      "ms": 0.0148926,
+      "maxMsSinceStart": 0.00512695
+    },
+    {
+      "key": "post:ResourceSupply.OnOwnershipChanged",
+      "calls": 1,
+      "ms": 0.010009999999999991,
+      "maxMsSinceStart": 0.11499
+    },
+    {
+      "key": "broadcast:AIInterface.OnTerritoriesChanged",
+      "calls": 1,
+      "ms": 0.0100098,
+      "maxMsSinceStart": 0.0100098
+    },
+    {
+      "key": "post:ProductionQueue.OnOwnershipChanged",
+      "calls": 2,
+      "ms": 0.0100098,
+      "maxMsSinceStart": 0.0100098
+    },
+    {
+      "key": "broadcast:UnitMotionManager.OnUpdate_Final",
+      "calls": 32,
+      "ms": 0.009765700000000002,
+      "maxMsSinceStart": 0.00512695
+    },
+    {
+      "key": "post:RallyPoint.OnOwnershipChanged",
+      "calls": 4,
+      "ms": 0.0051269800000000015,
+      "maxMsSinceStart": 0.00512695
+    },
+    {
+      "key": "post:GarrisonHolder.OnValueModification",
+      "calls": 5,
+      "ms": 0,
+      "maxMsSinceStart": 0
+    },
+    {
+      "key": "post:RallyPointRenderer.OnDestroy",
+      "calls": 2,
+      "ms": 0,
+      "maxMsSinceStart": 0
+    }
+  ],
+  "other": [
+    {
+      "key": "broadcast:Timer.OnUpdate",
+      "calls": 592,
+      "ms": 5847.34,
+      "maxMsSinceStart": 35.4023
+    },
+    {
+      "key": "broadcast:UnitMotionManager.OnUpdate_MotionUnit",
+      "calls": 592,
+      "ms": 2161.88,
+      "maxMsSinceStart": 26.1589
+    },
+    {
+      "key": "ai:resultWait",
+      "calls": 592,
+      "ms": 1576.4750000000001,
+      "maxMsSinceStart": 498.77
+    },
+    {
+      "key": "post:Resistance.OnOwnershipChanged",
+      "calls": 446,
+      "ms": 1186.9879999999998,
+      "maxMsSinceStart": 21.6267
+    },
+    {
+      "key": "post:UnitAI.OnMotionUpdate",
+      "calls": 8499,
+      "ms": 1068.2150000000001,
+      "maxMsSinceStart": 19.98
+    },
+    {
+      "key": "broadcast:RangeManager.OnUpdate",
+      "calls": 592,
+      "ms": 895.112,
+      "maxMsSinceStart": 12.5798
+    },
+    {
+      "key": "post:AIProxy.OnPositionChanged",
+      "calls": 102647,
+      "ms": 757.5769999999999,
+      "maxMsSinceStart": 3.88501
+    },
+    {
+      "key": "post:Auras.OnRangeUpdate",
+      "calls": 31202,
+      "ms": 533.3389999999999,
+      "maxMsSinceStart": 4.48511
+    },
+    {
+      "key": "broadcast:Position.OnTurnStart",
+      "calls": 592,
+      "ms": 526.6709999999999,
+      "maxMsSinceStart": 1.78491
+    },
+    {
+      "key": "global:RangeManager.OnGlobalPositionChanged",
+      "calls": 103285,
+      "ms": 439.485,
+      "maxMsSinceStart": 0.284912
+    },
+    {
+      "key": "broadcast:TechnologyManager.OnUpdate",
+      "calls": 592,
+      "ms": 323.482,
+      "maxMsSinceStart": 5.20508
+    },
+    {
+      "key": "cmd:local:attack",
+      "calls": 682,
+      "ms": 284.523,
+      "maxMsSinceStart": 1.39478
+    },
+    {
+      "key": "post:VisualActor.OnCreate",
+      "calls": 400,
+      "ms": 208.702,
+      "maxMsSinceStart": 36.865
+    },
+    {
+      "key": "post:UnitAI.OnRangeUpdate",
+      "calls": 31230,
+      "ms": 185.1097,
+      "maxMsSinceStart": 1.55493
+    },
+    {
+      "key": "global:AttackDetection.OnGlobalAttacked",
+      "calls": 5910,
+      "ms": 160.44150000000002,
+      "maxMsSinceStart": 1.6853
+    },
+    {
+      "key": "broadcast:UnitMotionManager.OnTurnStart",
+      "calls": 592,
+      "ms": 154.6684,
+      "maxMsSinceStart": 0.834961
+    },
+    {
+      "key": "global:ModifiersManager.OnGlobalOwnershipChanged",
+      "calls": 462,
+      "ms": 96.9221,
+      "maxMsSinceStart": 1.84448
+    },
+    {
+      "key": "cmd:net:attack-walk",
+      "calls": 36,
+      "ms": 94.72604,
+      "maxMsSinceStart": 7.86328
+    },
+    {
+      "key": "post:UnitMotion.OnPathResult",
+      "calls": 17200,
+      "ms": 91.5485,
+      "maxMsSinceStart": 0.125
+    },
+    {
+      "key": "post:Obstruction.OnPositionChanged",
+      "calls": 103277,
+      "ms": 88.7752,
+      "maxMsSinceStart": 0.25
+    },
+    {
+      "key": "global:UnitAI.OnGlobalEntityRenamed",
+      "calls": 76,
+      "ms": 82.00856,
+      "maxMsSinceStart": 3.99487
+    },
+    {
+      "key": "post:AIProxy.OnUnitAIStateChanged",
+      "calls": 14604,
+      "ms": 75.4302,
+      "maxMsSinceStart": 0.100098
+    },
+    {
+      "key": "post:VisualActor.OnInterpolatedPositionChanged",
+      "calls": 86542,
+      "ms": 65.34540000000001,
+      "maxMsSinceStart": 0.14502
+    },
+    {
+      "key": "post:Minimap.OnPositionChanged",
+      "calls": 102683,
+      "ms": 58.928000000000004,
+      "maxMsSinceStart": 0.155029
+    },
+    {
+      "key": "post:Selectable.OnPositionChanged",
+      "calls": 102683,
+      "ms": 57.38960000000001,
+      "maxMsSinceStart": 0.189941
+    },
+    {
+      "key": "global:TerritoryManager.OnGlobalPositionChanged",
+      "calls": 103285,
+      "ms": 56.184000000000005,
+      "maxMsSinceStart": 0.159912
+    },
+    {
+      "key": "post:UnitAI.OnAttacked",
+      "calls": 5910,
+      "ms": 53.6951,
+      "maxMsSinceStart": 0.550049
+    },
+    {
+      "key": "post:AIProxy.OnHealthChanged",
+      "calls": 6624,
+      "ms": 47.45439999999999,
+      "maxMsSinceStart": 0.399902
+    },
+    {
+      "key": "post:AIInterface.OnTemplateModification",
+      "calls": 3,
+      "ms": 44.9351,
+      "maxMsSinceStart": 15.365
+    },
+    {
+      "key": "post:AIProxy.OnUnitAIOrderDataChanged",
+      "calls": 11380,
+      "ms": 43.841080000000005,
+      "maxMsSinceStart": 0.0849609
+    },
+    {
+      "key": "post:Auras.OnOwnershipChanged",
+      "calls": 426,
+      "ms": 42.734899999999996,
+      "maxMsSinceStart": 1.10498
+    },
+    {
+      "key": "cmd:local:stop",
+      "calls": 230,
+      "ms": 41.01663,
+      "maxMsSinceStart": 0.754883
+    },
+    {
+      "key": "broadcast:ResourceGatherer.OnValueModification",
+      "calls": 3,
+      "ms": 37.8201,
+      "maxMsSinceStart": 13.4551
+    },
+    {
+      "key": "global:BattleDetection.OnGlobalAttacked",
+      "calls": 5910,
+      "ms": 36.301700000000004,
+      "maxMsSinceStart": 0.14502
+    },
+    {
+      "key": "post:Guard.OnAttacked",
+      "calls": 5903,
+      "ms": 32.68429999999999,
+      "maxMsSinceStart": 0.845215
+    },
+    {
+      "key": "post:UnitMotion.OnOwnershipChanged",
+      "calls": 728,
+      "ms": 32.48295,
+      "maxMsSinceStart": 0.149902
+    },
+    {
+      "key": "cmd:local:walk-to-range",
+      "calls": 193,
+      "ms": 32.263400000000004,
+      "maxMsSinceStart": 0.480225
+    },
+    {
+      "key": "post:UnitAI.OnDestroy",
+      "calls": 353,
+      "ms": 30.53197,
+      "maxMsSinceStart": 0.35498
+    },
+    {
+      "key": "global:AIInterface.OnGlobalValueModification",
+      "calls": 237,
+      "ms": 30.15499,
+      "maxMsSinceStart": 2.5498
+    },
+    {
+      "key": "global:TechnologyManager.OnGlobalOwnershipChanged",
+      "calls": 462,
+      "ms": 28.259529999999998,
+      "maxMsSinceStart": 3.38989
+    },
+    {
+      "key": "cmd:net:cheat.createunits",
+      "calls": 6,
+      "ms": 26.25533,
+      "maxMsSinceStart": 11.6814
+    },
+    {
+      "key": "post:AIProxy.OnAttacked",
+      "calls": 5910,
+      "ms": 23.53806,
+      "maxMsSinceStart": 0.834961
+    },
+    {
+      "key": "post:Ownership.OnDestroy",
+      "calls": 367,
+      "ms": 22.08129,
+      "maxMsSinceStart": 0.39502
+    },
+    {
+      "key": "broadcast:UnitRenderer.OnTurnStart",
+      "calls": 592,
+      "ms": 20.00492,
+      "maxMsSinceStart": 0.205078
+    },
+    {
+      "key": "post:AIProxy.OnProductionQueueChanged",
+      "calls": 260,
+      "ms": 16.457009999999997,
+      "maxMsSinceStart": 0.255127
+    },
+    {
+      "key": "post:UnitAI.OnOwnershipChanged",
+      "calls": 431,
+      "ms": 16.40401,
+      "maxMsSinceStart": 0.294922
+    },
+    {
+      "key": "cmd:local:construct",
+      "calls": 7,
+      "ms": 15.0044,
+      "maxMsSinceStart": 3.60498
+    },
+    {
+      "key": "cmd:local:train",
+      "calls": 43,
+      "ms": 14.811230000000002,
+      "maxMsSinceStart": 1.59497
+    },
+    {
+      "key": "post:Fogging.OnVisibilityChanged",
+      "calls": 1008,
+      "ms": 14.24533,
+      "maxMsSinceStart": 2.83008
+    },
+    {
+      "key": "post:StatusBars.OnHealthChanged",
+      "calls": 6624,
+      "ms": 13.285860000000001,
+      "maxMsSinceStart": 0.125
+    },
+    {
+      "key": "post:VisualActor.OnOwnershipChanged",
+      "calls": 767,
+      "ms": 13.05078,
+      "maxMsSinceStart": 0.310059
+    },
+    {
+      "key": "post:Foundation.OnHealthChanged",
+      "calls": 627,
+      "ms": 12.754909999999999,
+      "maxMsSinceStart": 0.134766
+    },
+    {
+      "key": "post:ResourceGatherer.OnOwnershipChanged",
+      "calls": 329,
+      "ms": 11.324259999999999,
+      "maxMsSinceStart": 0.540039
+    },
+    {
+      "key": "post:Health.OnOwnershipChanged",
+      "calls": 446,
+      "ms": 11.09224,
+      "maxMsSinceStart": 0.235107
+    },
+    {
+      "key": "global:EntityLimits.OnGlobalOwnershipChanged",
+      "calls": 462,
+      "ms": 10.49977,
+      "maxMsSinceStart": 0.125
+    },
+    {
+      "key": "global:Player.OnGlobalOwnershipChanged",
+      "calls": 462,
+      "ms": 10.04594,
+      "maxMsSinceStart": 0.190186
+    },
+    {
+      "key": "broadcast:GuiInterface.OnUpdate",
+      "calls": 592,
+      "ms": 9.45851,
+      "maxMsSinceStart": 0.244873
+    },
+    {
+      "key": "cmd:local:garrison",
+      "calls": 19,
+      "ms": 8.689219999999999,
+      "maxMsSinceStart": 0.75
+    },
+    {
+      "key": "post:ResourceGatherer.OnValueModification",
+      "calls": 170,
+      "ms": 8.134518,
+      "maxMsSinceStart": 0.505127
+    },
+    {
+      "key": "global:RallyPoint.OnGlobalEntityRenamed",
+      "calls": 76,
+      "ms": 7.194339,
+      "maxMsSinceStart": 0.175049
+    },
+    {
+      "key": "cmd:local:research",
+      "calls": 10,
+      "ms": 6.97949,
+      "maxMsSinceStart": 1.31006
+    },
+    {
+      "key": "global:GarrisonHolder.OnGlobalOwnershipChanged",
+      "calls": 462,
+      "ms": 6.892331,
+      "maxMsSinceStart": 0.0700684
+    },
+    {
+      "key": "post:StatusBars.OnExperienceChanged",
+      "calls": 3416,
+      "ms": 6.641349999999999,
+      "maxMsSinceStart": 0.0600586
+    },
+    {
+      "key": "post:AIProxy.OnUnitIdleChanged",
+      "calls": 924,
+      "ms": 6.494141,
+      "maxMsSinceStart": 0.0849609
+    },
+    {
+      "key": "post:AIProxy.OnOwnershipChanged",
+      "calls": 458,
+      "ms": 5.89746,
+      "maxMsSinceStart": 0.0600586
+    },
+    {
+      "key": "broadcast:RallyPointRenderer.OnTurnStart",
+      "calls": 592,
+      "ms": 5.60351,
+      "maxMsSinceStart": 0.195068
+    },
+    {
+      "key": "broadcast:ResourceSupply.OnValueModification",
+      "calls": 3,
+      "ms": 4.8147,
+      "maxMsSinceStart": 1.69482
+    },
+    {
+      "key": "post:Minimap.OnMinimapPing",
+      "calls": 5903,
+      "ms": 4.78271,
+      "maxMsSinceStart": 0.159912
+    },
+    {
+      "key": "post:Vision.OnOwnershipChanged",
+      "calls": 446,
+      "ms": 4.63598,
+      "maxMsSinceStart": 0.0551758
+    },
+    {
+      "key": "post:RangeOverlayManager.OnOwnershipChanged",
+      "calls": 435,
+      "ms": 4.4338429999999995,
+      "maxMsSinceStart": 0.170166
+    },
+    {
+      "key": "global:Auras.OnGlobalResearchFinished",
+      "calls": 3,
+      "ms": 4.38989,
+      "maxMsSinceStart": 1.81494
+    },
+    {
+      "key": "post:UnitAI.OnCreate",
+      "calls": 78,
+      "ms": 4.36572,
+      "maxMsSinceStart": 0.240234
+    },
+    {
+      "key": "post:Trainer.OnOwnershipChanged",
+      "calls": 4,
+      "ms": 4.35498,
+      "maxMsSinceStart": 3.54004
+    },
+    {
+      "key": "post:TerritoryDecay.OnPositionChanged",
+      "calls": 8,
+      "ms": 4.34985,
+      "maxMsSinceStart": 0.875
+    },
+    {
+      "key": "cmd:local:repair",
+      "calls": 20,
+      "ms": 4.283440000000001,
+      "maxMsSinceStart": 0.454834
+    },
+    {
+      "key": "global:RangeManager.OnGlobalOwnershipChanged",
+      "calls": 767,
+      "ms": 3.9421410000000003,
+      "maxMsSinceStart": 0.0549316
+    },
+    {
+      "key": "broadcast:UnitMotionManager.OnUpdate_MotionFormation",
+      "calls": 592,
+      "ms": 3.74146,
+      "maxMsSinceStart": 0.380127
+    },
+    {
+      "key": "post:Health.OnValueModification",
+      "calls": 234,
+      "ms": 3.2932099999999997,
+      "maxMsSinceStart": 0.169922
+    },
+    {
+      "key": "global:Trigger.OnGlobalOwnershipChanged",
+      "calls": 462,
+      "ms": 2.906734,
+      "maxMsSinceStart": 0.0949707
+    },
+    {
+      "key": "post:AIProxy.OnFoundationProgressChanged",
+      "calls": 627,
+      "ms": 2.2536579999999997,
+      "maxMsSinceStart": 0.0200195
+    },
+    {
+      "key": "broadcast:VisualActor.OnValueModification",
+      "calls": 3,
+      "ms": 2.1001,
+      "maxMsSinceStart": 0.740234
+    },
+    {
+      "key": "broadcast:Attack.OnValueModification",
+      "calls": 3,
+      "ms": 2.05493,
+      "maxMsSinceStart": 0.724854
+    },
+    {
+      "key": "broadcast:Vision.OnValueModification",
+      "calls": 3,
+      "ms": 1.86035,
+      "maxMsSinceStart": 0.735107
+    },
+    {
+      "key": "post:Minimap.OnOwnershipChanged",
+      "calls": 462,
+      "ms": 1.643311,
+      "maxMsSinceStart": 0.0349121
+    },
+    {
+      "key": "cmd:local:stop-production",
+      "calls": 9,
+      "ms": 1.51001,
+      "maxMsSinceStart": 1.03003
+    },
+    {
+      "key": "post:Attack.OnValueModification",
+      "calls": 170,
+      "ms": 1.462162,
+      "maxMsSinceStart": 0.0300293
+    },
+    {
+      "key": "cmd:local:gather",
+      "calls": 4,
+      "ms": 1.4201700000000006,
+      "maxMsSinceStart": 7.20972
+    },
+    {
+      "key": "post:Guard.OnOwnershipChanged",
+      "calls": 429,
+      "ms": 1.333986,
+      "maxMsSinceStart": 0.0349121
+    },
+    {
+      "key": "post:OverlayRenderer.OnVisibilityChanged",
+      "calls": 1478,
+      "ms": 1.29761,
+      "maxMsSinceStart": 0.0349121
+    },
+    {
+      "key": "post:Cost.OnValueModification",
+      "calls": 234,
+      "ms": 1.258789,
+      "maxMsSinceStart": 0.0498047
+    },
+    {
+      "key": "post:VisionSharing.OnOwnershipChanged",
+      "calls": 435,
+      "ms": 1.1623510000000001,
+      "maxMsSinceStart": 0.0498047
+    },
+    {
+      "key": "broadcast:TerritoryDecay.OnTerritoriesChanged",
+      "calls": 7,
+      "ms": 1.100098,
+      "maxMsSinceStart": 0.375
+    },
+    {
+      "key": "broadcast:TerritoryManager.OnUpdate",
+      "calls": 592,
+      "ms": 1.0554199999999998,
+      "maxMsSinceStart": 0.0397949
+    },
+    {
+      "key": "broadcast:RangeOverlayManager.OnValueModification",
+      "calls": 3,
+      "ms": 1.0249,
+      "maxMsSinceStart": 0.359863
+    },
+    {
+      "key": "post:Obstruction.OnDestroy",
+      "calls": 363,
+      "ms": 0.8957539999999999,
+      "maxMsSinceStart": 0.0300293
+    },
+    {
+      "key": "global:RangeManager.OnGlobalDestroy",
+      "calls": 367,
+      "ms": 0.855469,
+      "maxMsSinceStart": 0.0400391
+    },
+    {
+      "key": "post:StatusBars.OnResourceSupplyChanged",
+      "calls": 266,
+      "ms": 0.8486279999999999,
+      "maxMsSinceStart": 0.0251465
+    },
+    {
+      "key": "broadcast:CinemaManager.OnUpdate",
+      "calls": 592,
+      "ms": 0.8337399999999999,
+      "maxMsSinceStart": 0.0200195
+    },
+    {
+      "key": "post:Capturable.OnOwnershipChanged",
+      "calls": 4,
+      "ms": 0.784912,
+      "maxMsSinceStart": 0.350098
+    },
+    {
+      "key": "post:Mirage.OnVisibilityChanged",
+      "calls": 34,
+      "ms": 0.78418,
+      "maxMsSinceStart": 0.120117
+    },
+    {
+      "key": "post:AIProxy.OnUnitStanceChanged",
+      "calls": 128,
+      "ms": 0.7629397,
+      "maxMsSinceStart": 0.0151367
+    },
+    {
+      "key": "cmd:local:returnresource",
+      "calls": 1,
+      "ms": 0.7253400000000001,
+      "maxMsSinceStart": 0.73999
+    },
+    {
+      "key": "global:TemplateManager.OnGlobalDestroy",
+      "calls": 367,
+      "ms": 0.7014159999999999,
+      "maxMsSinceStart": 0.0100098
+    },
+    {
+      "key": "global:RangeManager.OnGlobalCreate",
+      "calls": 400,
+      "ms": 0.6931160000000001,
+      "maxMsSinceStart": 0.0498047
+    },
+    {
+      "key": "broadcast:Health.OnValueModification",
+      "calls": 3,
+      "ms": 0.675049,
+      "maxMsSinceStart": 0.23999
+    },
+    {
+      "key": "post:RangeOverlayRenderer.OnOwnershipChanged",
+      "calls": 435,
+      "ms": 0.645264,
+      "maxMsSinceStart": 0.0100098
+    },
+    {
+      "key": "broadcast:Cost.OnValueModification",
+      "calls": 3,
+      "ms": 0.629883,
+      "maxMsSinceStart": 0.22998
+    },
+    {
+      "key": "post:UnitMotion.OnDestroy",
+      "calls": 353,
+      "ms": 0.5703125,
+      "maxMsSinceStart": 0.0100098
+    },
+    {
+      "key": "global:TerritoryManager.OnGlobalOwnershipChanged",
+      "calls": 767,
+      "ms": 0.5659181,
+      "maxMsSinceStart": 0.0151367
+    },
+    {
+      "key": "post:UnitMotion.OnCreate",
+      "calls": 375,
+      "ms": 0.5656734,
+      "maxMsSinceStart": 0.0100098
+    },
+    {
+      "key": "post:VisualActor.OnDestroy",
+      "calls": 367,
+      "ms": 0.5607914,
+      "maxMsSinceStart": 0.0100098
+    },
+    {
+      "key": "broadcast:Builder.OnValueModification",
+      "calls": 3,
+      "ms": 0.559814,
+      "maxMsSinceStart": 0.219971
+    },
+    {
+      "key": "broadcast:UnitMotion.OnValueModification",
+      "calls": 3,
+      "ms": 0.549561,
+      "maxMsSinceStart": 0.204834
+    },
+    {
+      "key": "post:Capturable.OnValueModification",
+      "calls": 23,
+      "ms": 0.5100100000000001,
+      "maxMsSinceStart": 0.174805
+    },
+    {
+      "key": "global:Trigger.OnGlobalEntityRenamed",
+      "calls": 76,
+      "ms": 0.5056155,
+      "maxMsSinceStart": 0.0449219
+    },
+    {
+      "key": "post:ResourceSupply.OnOwnershipChanged",
+      "calls": 18,
+      "ms": 0.49902389999999996,
+      "maxMsSinceStart": 0.0700684
+    },
+    {
+      "key": "broadcast:UnitMotionManager.OnUpdate_Final",
+      "calls": 592,
+      "ms": 0.464356,
+      "maxMsSinceStart": 0.0200195
+    },
+    {
+      "key": "post:RangeOverlayManager.OnValueModification",
+      "calls": 193,
+      "ms": 0.46289040000000004,
+      "maxMsSinceStart": 0.0100098
+    },
+    {
+      "key": "post:Garrisonable.OnEntityRenamed",
+      "calls": 56,
+      "ms": 0.460205,
+      "maxMsSinceStart": 0.0500488
+    },
+    {
+      "key": "global:AIInterface.OnGlobalEntityRenamed",
+      "calls": 76,
+      "ms": 0.4548345,
+      "maxMsSinceStart": 0.0249023
+    },
+    {
+      "key": "post:AIProxy.OnFoundationBuildersChanged",
+      "calls": 38,
+      "ms": 0.375488,
+      "maxMsSinceStart": 0.0551758
+    },
+    {
+      "key": "post:Selectable.OnOwnershipChanged",
+      "calls": 462,
+      "ms": 0.3300782,
+      "maxMsSinceStart": 0.0551758
+    },
+    {
+      "key": "global:GuiInterface.OnGlobalEntityRenamed",
+      "calls": 76,
+      "ms": 0.326172,
+      "maxMsSinceStart": 0.0100098
+    },
+    {
+      "key": "post:Population.OnOwnershipChanged",
+      "calls": 14,
+      "ms": 0.29516600000000004,
+      "maxMsSinceStart": 0.0400391
+    },
+    {
+      "key": "post:Builder.OnValueModification",
+      "calls": 170,
+      "ms": 0.2756349,
+      "maxMsSinceStart": 0.0100098
+    },
+    {
+      "key": "post:AIProxy.OnTrainingFinished",
+      "calls": 28,
+      "ms": 0.2734377,
+      "maxMsSinceStart": 0.0400391
+    },
+    {
+      "key": "broadcast:Promotion.OnValueModification",
+      "calls": 3,
+      "ms": 0.219971,
+      "maxMsSinceStart": 0.0800781
+    },
+    {
+      "key": "broadcast:StatisticsTracker.OnTerritoriesChanged",
+      "calls": 7,
+      "ms": 0.21997099999999997,
+      "maxMsSinceStart": 0.205078
+    },
+    {
+      "key": "post:Market.OnOwnershipChanged",
+      "calls": 2,
+      "ms": 0.180176,
+      "maxMsSinceStart": 0.160156
+    },
+    {
+      "key": "post:Promotion.OnValueModification",
+      "calls": 86,
+      "ms": 0.172119,
+      "maxMsSinceStart": 0.0651855
+    },
+    {
+      "key": "post:ResourceSupply.OnEntityRenamed",
+      "calls": 6,
+      "ms": 0.1499027,
+      "maxMsSinceStart": 0.0351562
+    },
+    {
+      "key": "post:VisualActor.OnValueModification",
+      "calls": 234,
+      "ms": 0.14404260000000002,
+      "maxMsSinceStart": 0.0297852
+    },
+    {
+      "key": "global:Trigger.OnGlobalTrainingFinished",
+      "calls": 28,
+      "ms": 0.1306154,
+      "maxMsSinceStart": 0.0100098
+    },
+    {
+      "key": "broadcast:AIInterface.OnTerritoriesChanged",
+      "calls": 7,
+      "ms": 0.130371,
+      "maxMsSinceStart": 0.10498
+    },
+    {
+      "key": "post:Population.OnValueModification",
+      "calls": 58,
+      "ms": 0.12499999999999999,
+      "maxMsSinceStart": 0.0100098
+    },
+    {
+      "key": "post:GarrisonHolder.OnHealthChanged",
+      "calls": 8,
+      "ms": 0.120361,
+      "maxMsSinceStart": 0.100098
+    },
+    {
+      "key": "global:TerritoryManager.OnGlobalValueModification",
+      "calls": 237,
+      "ms": 0.1145018,
+      "maxMsSinceStart": 0.0100098
+    },
+    {
+      "key": "post:Vision.OnValueModification",
+      "calls": 234,
+      "ms": 0.10986359999999999,
+      "maxMsSinceStart": 0.00512695
+    },
+    {
+      "key": "post:Fogging.OnOwnershipChanged",
+      "calls": 15,
+      "ms": 0.10522400000000001,
+      "maxMsSinceStart": 0.0500488
+    },
+    {
+      "key": "post:Turretable.OnOwnershipChanged",
+      "calls": 2,
+      "ms": 0.100098,
+      "maxMsSinceStart": 0.0949707
+    },
+    {
+      "key": "post:Turretable.OnEntityRenamed",
+      "calls": 1,
+      "ms": 0.0900879,
+      "maxMsSinceStart": 0.0900879
+    },
+    {
+      "key": "cmd:local:set-dropsite-sharing",
+      "calls": 1,
+      "ms": 0.08007799999999998,
+      "maxMsSinceStart": 0.540039
+    },
+    {
+      "key": "post:RallyPointRenderer.OnOwnershipChanged",
+      "calls": 15,
+      "ms": 0.07470700000000001,
+      "maxMsSinceStart": 0.0200195
+    },
+    {
+      "key": "broadcast:Population.OnValueModification",
+      "calls": 3,
+      "ms": 0.0703125,
+      "maxMsSinceStart": 0.0251465
+    },
+    {
+      "key": "post:GarrisonHolder.OnValueModification",
+      "calls": 23,
+      "ms": 0.0700683,
+      "maxMsSinceStart": 0.0100098
+    },
+    {
+      "key": "post:UnitMotion.OnValueModification",
+      "calls": 170,
+      "ms": 0.0693359,
+      "maxMsSinceStart": 0.00512695
+    },
+    {
+      "key": "post:Foundation.OnOwnershipChanged",
+      "calls": 11,
+      "ms": 0.060058,
+      "maxMsSinceStart": 0.0397949
+    },
+    {
+      "key": "post:Foundation.OnEntityRenamed",
+      "calls": 4,
+      "ms": 0.054931299999999995,
+      "maxMsSinceStart": 0.0400391
+    },
+    {
+      "key": "broadcast:GarrisonHolder.OnValueModification",
+      "calls": 3,
+      "ms": 0.0500488,
+      "maxMsSinceStart": 0.0200195
+    },
+    {
+      "key": "post:Trainer.OnValueModification",
+      "calls": 23,
+      "ms": 0.04003909,
+      "maxMsSinceStart": 0.00512695
+    },
+    {
+      "key": "broadcast:Trainer.OnValueModification",
+      "calls": 3,
+      "ms": 0.0397949,
+      "maxMsSinceStart": 0.0148926
+    },
+    {
+      "key": "global:Trigger.OnGlobalConstructionFinished",
+      "calls": 4,
+      "ms": 0.0397946,
+      "maxMsSinceStart": 0.0400391
+    },
+    {
+      "key": "post:RallyPoint.OnOwnershipChanged",
+      "calls": 13,
+      "ms": 0.03539999999999999,
+      "maxMsSinceStart": 0.0849609
+    },
+    {
+      "key": "post:TerritoryDecay.OnOwnershipChanged",
+      "calls": 4,
+      "ms": 0.03515629999999999,
+      "maxMsSinceStart": 0.0800781
+    },
+    {
+      "key": "post:RallyPointRenderer.OnPositionChanged",
+      "calls": 26,
+      "ms": 0.030517600000000002,
+      "maxMsSinceStart": 0.00512695
+    },
+    {
+      "key": "broadcast:Capturable.OnValueModification",
+      "calls": 3,
+      "ms": 0.0300293,
+      "maxMsSinceStart": 0.0100098
+    },
+    {
+      "key": "post:GuiInterface.OnTemplateModification",
+      "calls": 3,
+      "ms": 0.0300293,
+      "maxMsSinceStart": 0.0200195
+    },
+    {
+      "key": "post:Diplomacy.OnResearchFinished",
+      "calls": 3,
+      "ms": 0.0300293,
+      "maxMsSinceStart": 0.0100098
+    },
+    {
+      "key": "post:AIProxy.OnAIMetadata",
+      "calls": 7,
+      "ms": 0.030029000000000014,
+      "maxMsSinceStart": 0.0100098
+    },
+    {
+      "key": "post:ProductionQueue.OnOwnershipChanged",
+      "calls": 4,
+      "ms": 0.025146199999999994,
+      "maxMsSinceStart": 0.0698242
+    },
+    {
+      "key": "broadcast:BuildingAI.OnValueModification",
+      "calls": 3,
+      "ms": 0.0249023,
+      "maxMsSinceStart": 0.0100098
+    },
+    {
+      "key": "global:Trigger.OnGlobalResearchFinished",
+      "calls": 3,
+      "ms": 0.0249023,
+      "maxMsSinceStart": 0.0100098
+    },
+    {
+      "key": "broadcast:Player.OnValueModification",
+      "calls": 3,
+      "ms": 0.0249023,
+      "maxMsSinceStart": 0.0100098
+    },
+    {
+      "key": "post:AIProxy.OnConstructionFinished",
+      "calls": 4,
+      "ms": 0.024658200000000005,
+      "maxMsSinceStart": 0.0400391
+    },
+    {
+      "key": "broadcast:ResourceTrickle.OnValueModification",
+      "calls": 3,
+      "ms": 0.0151367,
+      "maxMsSinceStart": 0.0100098
+    },
+    {
+      "key": "post:AIProxy.OnDropsiteSharingChanged",
+      "calls": 1,
+      "ms": 0.014892499999999996,
+      "maxMsSinceStart": 0.0598145
+    },
+    {
+      "key": "post:RallyPointRenderer.OnDestroy",
+      "calls": 4,
+      "ms": 0.0051269,
+      "maxMsSinceStart": 0.0100098
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "window": {
+    "windowId": 517094859,
+    "bounds": {
+      "left": 0,
+      "top": 0,
+      "width": 1536,
+      "height": 864,
+      "windowState": "fullscreen"
+    }
+  },
+  "dom": {
+    "full": true,
+    "inner": [
+      1536,
+      864
+    ],
+    "screen": [
+      1536,
+      864
+    ]
+  }
+}

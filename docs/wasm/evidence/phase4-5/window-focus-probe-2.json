@@ -1,0 +1,5 @@
+{
+  "passed": false,
+  "scope": "Setup-only real focus in own empty Chrome; no performance data",
+  "failure": "Benchmark browser lost real Windows foreground focus: {'hwnd': 789246, 'ownerProcessId': 14472, 'expectedProcessId': 32680, 'clientSize': [1536, 824]}; input attachment errors: [{'thread': 51492, 'error': 5}, {'thread': 51492, 'error': 5}, {'thread': 51492, 'error': 5}, {'thread': 51492, 'error': 5}, {'thread': 51492, 'error': 5}]"
+}

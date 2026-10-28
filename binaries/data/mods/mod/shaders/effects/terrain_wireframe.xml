@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<effect>
+	<technique>
+		<require shaders="glsl"/>
+		<require shaders="spirv"/>
+		<pass shader="dummy">
+			<polygon mode="LINE"/>
+		</pass>
+	</technique>
+</effect>

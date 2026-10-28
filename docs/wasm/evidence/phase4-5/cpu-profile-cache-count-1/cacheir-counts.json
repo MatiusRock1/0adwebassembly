@@ -1,0 +1,156 @@
+{
+  "diagnosticOnly": true,
+  "performanceAcceptance": false,
+  "milliseconds": 32776.07500000298,
+  "counts": [
+    {
+      "op": "LoadUndefinedResult",
+      "count": 839
+    },
+    {
+      "op": "GuardMultipleShapes",
+      "count": 668
+    },
+    {
+      "op": "GuardIndexIsNotDenseElement",
+      "count": 340
+    },
+    {
+      "op": "ObjectToIteratorResult",
+      "count": 321
+    },
+    {
+      "op": "MapGetResult",
+      "count": 211
+    },
+    {
+      "op": "MegamorphicStoreSlot",
+      "count": 195
+    },
+    {
+      "op": "MapHasResult",
+      "count": 195
+    },
+    {
+      "op": "MapHasNonGCThingResult",
+      "count": 165
+    },
+    {
+      "op": "MapGetNonGCThingResult",
+      "count": 121
+    },
+    {
+      "op": "MathFloorToInt32Result",
+      "count": 100
+    },
+    {
+      "op": "MapGetStringResult",
+      "count": 91
+    },
+    {
+      "op": "LoadDenseElementHoleResult",
+      "count": 79
+    },
+    {
+      "op": "CallScriptedGetterResult",
+      "count": 78
+    },
+    {
+      "op": "PackedArrayShiftResult",
+      "count": 52
+    },
+    {
+      "op": "IndirectTruncateInt32Result",
+      "count": 51
+    },
+    {
+      "op": "SetHasResult",
+      "count": 44
+    },
+    {
+      "op": "SetHasStringResult",
+      "count": 44
+    },
+    {
+      "op": "ObjectKeysResult",
+      "count": 35
+    },
+    {
+      "op": "LoadDenseElementExistsResult",
+      "count": 35
+    },
+    {
+      "op": "MapHasStringResult",
+      "count": 31
+    },
+    {
+      "op": "MathRoundToInt32Result",
+      "count": 27
+    },
+    {
+      "op": "IsCallableResult",
+      "count": 21
+    },
+    {
+      "op": "NewArrayFromLengthResult",
+      "count": 21
+    },
+    {
+      "op": "RegExpSearcherLastLimitResult",
+      "count": 18
+    },
+    {
+      "op": "IsArrayResult",
+      "count": 17
+    },
+    {
+      "op": "IsConstructorResult",
+      "count": 17
+    },
+    {
+      "op": "IsCrossRealmArrayConstructorResult",
+      "count": 17
+    },
+    {
+      "op": "PackedArrayPopResult",
+      "count": 8
+    },
+    {
+      "op": "StringIndexOfResult",
+      "count": 8
+    },
+    {
+      "op": "MathCeilToInt32Result",
+      "count": 8
+    },
+    {
+      "op": "MegamorphicHasPropResult",
+      "count": 6
+    },
+    {
+      "op": "MathAbsInt32Result",
+      "count": 5
+    },
+    {
+      "op": "MathSqrtNumberResult",
+      "count": 5
+    },
+    {
+      "op": "NewTypedArrayFromLengthResult",
+      "count": 4
+    },
+    {
+      "op": "LoadArrayBufferViewLengthInt32Result",
+      "count": 4
+    },
+    {
+      "op": "LoadDoubleConstant",
+      "count": 3
+    },
+    {
+      "op": "StringToLowerCaseResult",
+      "count": 1
+    }
+  ],
+  "scope": "Unsupported-opcode counts during this instrumented window; no exclusive cost attribution or FPS acceptance."
+}

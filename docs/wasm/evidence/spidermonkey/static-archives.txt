@@ -1,0 +1,7 @@
+build-wasm/build/pure_virtual/libpure_virtual.a
+build-wasm/js/src/build/libjs_static.a
+build-wasm/wasm32-unknown-emscripten/release/build/mozglue-static-57b2ea1b9b6bdbb6/out/libwrappers.a
+build-wasm/wasm32-unknown-emscripten/release/build/mozglue-static-924cc48554d31e92/out/libwrappers.a
+build-wasm/wasm32-unknown-emscripten/release/deps/libjsrust-b0c1b23717b8c5b2.a
+build-wasm/wasm32-unknown-emscripten/release/deps/libjsrust-05375adb3629ddf3.a
+build-wasm/wasm32-unknown-emscripten/release/libjsrust.a

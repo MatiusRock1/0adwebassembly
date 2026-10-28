@@ -1,0 +1,2538 @@
+{
+  "browser": "chromium",
+  "console": [
+    {
+      "type": "log",
+      "text": "SCENE_ACTOR_QUALITY_HOOK_BEGIN"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_QUALITY_GET_BEGIN"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_QUALITY_GET_END 100 100"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_ACTOR_QUALITY_HOOK_END"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_ACTOR_VALIDATOR_BEGIN"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_MAP_LOAD_BEGIN"
+    },
+    {
+      "type": "warning",
+      "text": "w:8,t:0x00600030: Heap resize call from 67108864 to 80543744 took 0.099853515625 msecs. Success: true"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_LOADER_FINISHED"
+    },
+    {
+      "type": "warning",
+      "text": "w:8,t:0x00600030: Heap resize call from 80543744 to 96665600 took 0.094970703125 msecs. Success: true"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_GAME_INITIALIZED"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_MAP_LOADED 0"
+    },
+    {
+      "type": "log",
+      "text": "ERROR: Failed to convert texture \"art/textures/misc/territory_border_mask.png\" (NVTT not available)"
+    },
+    {
+      "type": "log",
+      "text": "ERROR: Failed to convert texture \"art/textures/misc/territory_border.png\" (NVTT not available)"
+    },
+    {
+      "type": "warning",
+      "text": "w:8,t:0x00600030: Heap resize call from 96665600 to 115998720 took 0.110107421875 msecs. Success: true"
+    },
+    {
+      "type": "warning",
+      "text": "w:8,t:0x00600030: Heap resize call from 115998720 to 139198464 took 0.0849609375 msecs. Success: true"
+    },
+    {
+      "type": "warning",
+      "text": "w:8,t:0x00600030: Heap resize call from 139198464 to 167051264 took 0.10009765625 msecs. Success: true"
+    },
+    {
+      "type": "warning",
+      "text": "WebGL: INVALID_ENUM: texParameter: invalid parameter"
+    },
+    {
+      "type": "warning",
+      "text": "WebGL: INVALID_ENUM: texParameter: invalid parameter"
+    },
+    {
+      "type": "warning",
+      "text": "WebGL: INVALID_ENUM: texParameter: invalid parameter name"
+    },
+    {
+      "type": "warning",
+      "text": "w:8,t:0x00600030: Heap resize call from 167051264 to 200474624 took 0.070068359375 msecs. Success: true"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_READY"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_STATS {\"frame\":30,\"tick\":85,\"restarts\":0,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":317.544,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_STATS {\"frame\":30,\"tick\":85,\"restarts\":0,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":317.544,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_SELECTED 8"
+    },
+    {
+      "type": "warning",
+      "text": "WebGL: INVALID_ENUM: texParameter: invalid parameter"
+    },
+    {
+      "type": "warning",
+      "text": "WebGL: INVALID_ENUM: texParameter: invalid parameter name"
+    },
+    {
+      "type": "warning",
+      "text": "WebGL: INVALID_ENUM: texParameter: invalid parameter"
+    },
+    {
+      "type": "warning",
+      "text": "WebGL: INVALID_ENUM: texParameter: invalid parameter name"
+    },
+    {
+      "type": "warning",
+      "text": "w:8,t:0x00600030: Heap resize call from 200474624 to 240582656 took 0.10986328125 msecs. Success: true"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_STATS {\"frame\":60,\"tick\":169,\"restarts\":0,\"paused\":false,\"selected\":8,\"x\":155.36400,\"z\":243.10500,\"screenX\":317.544,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":10,\"width\":640,\"height\":480}"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_WALK_QUEUED 8 145.36389 243.06433"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_STATS {\"frame\":90,\"tick\":249,\"restarts\":0,\"paused\":false,\"selected\":8,\"x\":145.83043,\"z\":243.06592,\"screenX\":381.853,\"screenY\":136.011,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":10,\"width\":640,\"height\":480}"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_PAUSED 1"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_STATS {\"frame\":120,\"tick\":251,\"restarts\":0,\"paused\":true,\"selected\":8,\"x\":145.83043,\"z\":243.06592,\"screenX\":381.853,\"screenY\":136.011,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":10,\"width\":640,\"height\":480}"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_STATS {\"frame\":150,\"tick\":252,\"restarts\":0,\"paused\":true,\"selected\":8,\"x\":145.83043,\"z\":243.06592,\"screenX\":381.853,\"screenY\":136.011,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":10,\"width\":640,\"height\":480}"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_STATS {\"frame\":180,\"tick\":252,\"restarts\":0,\"paused\":true,\"selected\":8,\"x\":145.83043,\"z\":243.06592,\"screenX\":449.308,\"screenY\":136.011,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":10,\"width\":640,\"height\":480}"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_RESIZED 800 600"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_STATS {\"frame\":210,\"tick\":252,\"restarts\":0,\"paused\":true,\"selected\":8,\"x\":145.83043,\"z\":243.06592,\"screenX\":561.635,\"screenY\":170.014,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":10,\"width\":800,\"height\":600}"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_SELECTED 0"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_MAP_LOAD_BEGIN"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_LOADER_FINISHED"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_GAME_INITIALIZED"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_MAP_LOADED 1"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_RESIZED 640 480"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_STATS {\"frame\":240,\"tick\":0,\"restarts\":1,\"paused\":true,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_MAP_LOAD_BEGIN"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_LOADER_FINISHED"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_GAME_INITIALIZED"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_MAP_LOADED 2"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_STATS {\"frame\":270,\"tick\":0,\"restarts\":2,\"paused\":true,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_MAP_LOAD_BEGIN"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_LOADER_FINISHED"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_GAME_INITIALIZED"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_MAP_LOADED 3"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_STATS {\"frame\":300,\"tick\":0,\"restarts\":3,\"paused\":true,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_PAUSED 0"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_STATS {\"frame\":330,\"tick\":65,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}"
+    },
+    {
+      "type": "warning",
+      "text": "w:8,t:0x00600030: Heap resize call from 240582656 to 288751616 took 0.094970703125 msecs. Success: true"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_STATS {\"frame\":360,\"tick\":137,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_STATS {\"frame\":390,\"tick\":207,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_STATS {\"frame\":420,\"tick\":277,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_STATS {\"frame\":450,\"tick\":350,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_STATS {\"frame\":480,\"tick\":424,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_STATS {\"frame\":510,\"tick\":497,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_STATS {\"frame\":540,\"tick\":572,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_STATS {\"frame\":570,\"tick\":646,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_STATS {\"frame\":600,\"tick\":719,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_STATS {\"frame\":630,\"tick\":792,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_STATS {\"frame\":660,\"tick\":866,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_STATS {\"frame\":690,\"tick\":938,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_STATS {\"frame\":720,\"tick\":1012,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_STATS {\"frame\":750,\"tick\":1083,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_STATS {\"frame\":780,\"tick\":1154,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_STATS {\"frame\":810,\"tick\":1226,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_STATS {\"frame\":840,\"tick\":1306,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_STATS {\"frame\":870,\"tick\":1396,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_STATS {\"frame\":900,\"tick\":1480,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_STATS {\"frame\":930,\"tick\":1564,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_STATS {\"frame\":960,\"tick\":1645,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_STATS {\"frame\":990,\"tick\":1723,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_STATS {\"frame\":1020,\"tick\":1802,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_STATS {\"frame\":1050,\"tick\":1892,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_STATS {\"frame\":1080,\"tick\":1987,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_STATS {\"frame\":1110,\"tick\":2082,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_STATS {\"frame\":1140,\"tick\":2179,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_STATS {\"frame\":1170,\"tick\":2272,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_STATS {\"frame\":1200,\"tick\":2367,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_STATS {\"frame\":1230,\"tick\":2461,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_STATS {\"frame\":1260,\"tick\":2551,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_STATS {\"frame\":1290,\"tick\":2629,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_STATS {\"frame\":1320,\"tick\":2704,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_STATS {\"frame\":1350,\"tick\":2780,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_STATS {\"frame\":1380,\"tick\":2857,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_STATS {\"frame\":1410,\"tick\":2935,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_STATS {\"frame\":1440,\"tick\":3011,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_STATS {\"frame\":1470,\"tick\":3085,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_STATS {\"frame\":1500,\"tick\":3159,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_STATS {\"frame\":1530,\"tick\":3234,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_STATS {\"frame\":1560,\"tick\":3307,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_STATS {\"frame\":1590,\"tick\":3382,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_STATS {\"frame\":1620,\"tick\":3455,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_STATS {\"frame\":1650,\"tick\":3530,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_STATS {\"frame\":1680,\"tick\":3604,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_STATS {\"frame\":1710,\"tick\":3679,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_STATS {\"frame\":1740,\"tick\":3751,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_STATS {\"frame\":1770,\"tick\":3818,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_STATS {\"frame\":1800,\"tick\":3886,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_STATS {\"frame\":1830,\"tick\":3957,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_STATS {\"frame\":1860,\"tick\":4024,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_STATS {\"frame\":1890,\"tick\":4093,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_STATS {\"frame\":1920,\"tick\":4161,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_STATS {\"frame\":1950,\"tick\":4227,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_STATS {\"frame\":1980,\"tick\":4295,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_STATS {\"frame\":2010,\"tick\":4360,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_STATS {\"frame\":2040,\"tick\":4426,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_STATS {\"frame\":2070,\"tick\":4492,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_STOPPED"
+    }
+  ],
+  "errors": [],
+  "workerEvents": [
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-scene.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-scene.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-scene.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-scene.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-scene.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-scene.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-scene.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-scene.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-scene.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-scene.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-scene.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-scene.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-scene.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-scene.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-scene.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-scene.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-scene.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-scene.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-scene.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-scene.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-scene.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-scene.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-scene.mjs"
+    }
+  ],
+  "cycleMetrics": [],
+  "version": "141.0.7390.37",
+  "headers": {
+    "cache-control": "no-store",
+    "content-length": "1068",
+    "content-type": "text/html",
+    "cross-origin-embedder-policy": "require-corp",
+    "cross-origin-opener-policy": "same-origin",
+    "cross-origin-resource-policy": "same-origin",
+    "date": "Mon, 12 Oct 2026 14:22:50 GMT",
+    "last-modified": "Mon, 12 Oct 2026 14:02:23 GMT",
+    "server": "SimpleHTTP/0.6 Python/3.12.3"
+  },
+  "isolated": true,
+  "imageMetrics": {
+    "size": [
+      642,
+      483
+    ],
+    "channelStdDev": [
+      37.469232247615835,
+      37.285426844109374,
+      35.492544522888984
+    ],
+    "quantizedColors": 128
+  },
+  "readyState": {
+    "ready": true,
+    "metrics": {
+      "frame": 30,
+      "tick": 85,
+      "restarts": 0,
+      "paused": false,
+      "selected": 0,
+      "x": 155.364,
+      "z": 243.105,
+      "screenX": 317.544,
+      "screenY": 136.198,
+      "terrainTriangles": 3072,
+      "modelTriangles": 6998,
+      "drawCalls": 9,
+      "width": 640,
+      "height": 480
+    },
+    "events": [
+      "SCENE_ACTOR_QUALITY_HOOK_BEGIN",
+      "SCENE_QUALITY_GET_BEGIN",
+      "SCENE_QUALITY_GET_END 100 100",
+      "SCENE_ACTOR_QUALITY_HOOK_END",
+      "SCENE_ACTOR_VALIDATOR_BEGIN",
+      "SCENE_MAP_LOAD_BEGIN",
+      "SCENE_LOADER_FINISHED",
+      "SCENE_GAME_INITIALIZED",
+      "SCENE_MAP_LOADED 0"
+    ]
+  },
+  "movementState": {
+    "ready": true,
+    "metrics": {
+      "frame": 90,
+      "tick": 249,
+      "restarts": 0,
+      "paused": false,
+      "selected": 8,
+      "x": 145.83043,
+      "z": 243.06592,
+      "screenX": 381.853,
+      "screenY": 136.011,
+      "terrainTriangles": 3072,
+      "modelTriangles": 6998,
+      "drawCalls": 10,
+      "width": 640,
+      "height": 480
+    },
+    "events": [
+      "SCENE_ACTOR_QUALITY_HOOK_BEGIN",
+      "SCENE_QUALITY_GET_BEGIN",
+      "SCENE_QUALITY_GET_END 100 100",
+      "SCENE_ACTOR_QUALITY_HOOK_END",
+      "SCENE_ACTOR_VALIDATOR_BEGIN",
+      "SCENE_MAP_LOAD_BEGIN",
+      "SCENE_LOADER_FINISHED",
+      "SCENE_GAME_INITIALIZED",
+      "SCENE_MAP_LOADED 0",
+      "SCENE_SELECTED 8",
+      "SCENE_WALK_QUEUED 8 145.36389 243.06433"
+    ]
+  },
+  "pausedState": {
+    "ready": true,
+    "metrics": {
+      "frame": 120,
+      "tick": 251,
+      "restarts": 0,
+      "paused": true,
+      "selected": 8,
+      "x": 145.83043,
+      "z": 243.06592,
+      "screenX": 381.853,
+      "screenY": 136.011,
+      "terrainTriangles": 3072,
+      "modelTriangles": 6998,
+      "drawCalls": 10,
+      "width": 640,
+      "height": 480
+    },
+    "events": [
+      "SCENE_ACTOR_QUALITY_HOOK_BEGIN",
+      "SCENE_QUALITY_GET_BEGIN",
+      "SCENE_QUALITY_GET_END 100 100",
+      "SCENE_ACTOR_QUALITY_HOOK_END",
+      "SCENE_ACTOR_VALIDATOR_BEGIN",
+      "SCENE_MAP_LOAD_BEGIN",
+      "SCENE_LOADER_FINISHED",
+      "SCENE_GAME_INITIALIZED",
+      "SCENE_MAP_LOADED 0",
+      "SCENE_SELECTED 8",
+      "SCENE_WALK_QUEUED 8 145.36389 243.06433",
+      "SCENE_PAUSED 1"
+    ]
+  },
+  "singleStepState": {
+    "ready": true,
+    "metrics": {
+      "frame": 150,
+      "tick": 252,
+      "restarts": 0,
+      "paused": true,
+      "selected": 8,
+      "x": 145.83043,
+      "z": 243.06592,
+      "screenX": 381.853,
+      "screenY": 136.011,
+      "terrainTriangles": 3072,
+      "modelTriangles": 6998,
+      "drawCalls": 10,
+      "width": 640,
+      "height": 480
+    },
+    "events": [
+      "SCENE_ACTOR_QUALITY_HOOK_BEGIN",
+      "SCENE_QUALITY_GET_BEGIN",
+      "SCENE_QUALITY_GET_END 100 100",
+      "SCENE_ACTOR_QUALITY_HOOK_END",
+      "SCENE_ACTOR_VALIDATOR_BEGIN",
+      "SCENE_MAP_LOAD_BEGIN",
+      "SCENE_LOADER_FINISHED",
+      "SCENE_GAME_INITIALIZED",
+      "SCENE_MAP_LOADED 0",
+      "SCENE_SELECTED 8",
+      "SCENE_WALK_QUEUED 8 145.36389 243.06433",
+      "SCENE_PAUSED 1"
+    ]
+  },
+  "cameraState": {
+    "ready": true,
+    "metrics": {
+      "frame": 180,
+      "tick": 252,
+      "restarts": 0,
+      "paused": true,
+      "selected": 8,
+      "x": 145.83043,
+      "z": 243.06592,
+      "screenX": 449.308,
+      "screenY": 136.011,
+      "terrainTriangles": 3072,
+      "modelTriangles": 6998,
+      "drawCalls": 10,
+      "width": 640,
+      "height": 480
+    },
+    "events": [
+      "SCENE_ACTOR_QUALITY_HOOK_BEGIN",
+      "SCENE_QUALITY_GET_BEGIN",
+      "SCENE_QUALITY_GET_END 100 100",
+      "SCENE_ACTOR_QUALITY_HOOK_END",
+      "SCENE_ACTOR_VALIDATOR_BEGIN",
+      "SCENE_MAP_LOAD_BEGIN",
+      "SCENE_LOADER_FINISHED",
+      "SCENE_GAME_INITIALIZED",
+      "SCENE_MAP_LOADED 0",
+      "SCENE_SELECTED 8",
+      "SCENE_WALK_QUEUED 8 145.36389 243.06433",
+      "SCENE_PAUSED 1"
+    ]
+  },
+  "resizeState": {
+    "ready": true,
+    "metrics": {
+      "frame": 210,
+      "tick": 252,
+      "restarts": 0,
+      "paused": true,
+      "selected": 8,
+      "x": 145.83043,
+      "z": 243.06592,
+      "screenX": 561.635,
+      "screenY": 170.014,
+      "terrainTriangles": 3072,
+      "modelTriangles": 6998,
+      "drawCalls": 10,
+      "width": 800,
+      "height": 600
+    },
+    "events": [
+      "SCENE_ACTOR_QUALITY_HOOK_BEGIN",
+      "SCENE_QUALITY_GET_BEGIN",
+      "SCENE_QUALITY_GET_END 100 100",
+      "SCENE_ACTOR_QUALITY_HOOK_END",
+      "SCENE_ACTOR_VALIDATOR_BEGIN",
+      "SCENE_MAP_LOAD_BEGIN",
+      "SCENE_LOADER_FINISHED",
+      "SCENE_GAME_INITIALIZED",
+      "SCENE_MAP_LOADED 0",
+      "SCENE_SELECTED 8",
+      "SCENE_WALK_QUEUED 8 145.36389 243.06433",
+      "SCENE_PAUSED 1",
+      "SCENE_RESIZED 800 600"
+    ]
+  },
+  "restartState": {
+    "ready": true,
+    "metrics": {
+      "frame": 300,
+      "tick": 0,
+      "restarts": 3,
+      "paused": true,
+      "selected": 0,
+      "x": 155.364,
+      "z": 243.105,
+      "screenX": 385.011,
+      "screenY": 136.198,
+      "terrainTriangles": 3072,
+      "modelTriangles": 6998,
+      "drawCalls": 9,
+      "width": 640,
+      "height": 480
+    },
+    "events": [
+      "SCENE_ACTOR_QUALITY_HOOK_BEGIN",
+      "SCENE_QUALITY_GET_BEGIN",
+      "SCENE_QUALITY_GET_END 100 100",
+      "SCENE_ACTOR_QUALITY_HOOK_END",
+      "SCENE_ACTOR_VALIDATOR_BEGIN",
+      "SCENE_MAP_LOAD_BEGIN",
+      "SCENE_LOADER_FINISHED",
+      "SCENE_GAME_INITIALIZED",
+      "SCENE_MAP_LOADED 0",
+      "SCENE_SELECTED 8",
+      "SCENE_WALK_QUEUED 8 145.36389 243.06433",
+      "SCENE_PAUSED 1",
+      "SCENE_RESIZED 800 600",
+      "SCENE_SELECTED 0",
+      "SCENE_MAP_LOAD_BEGIN",
+      "SCENE_LOADER_FINISHED",
+      "SCENE_GAME_INITIALIZED",
+      "SCENE_MAP_LOADED 1",
+      "SCENE_RESIZED 640 480",
+      "SCENE_MAP_LOAD_BEGIN",
+      "SCENE_LOADER_FINISHED",
+      "SCENE_GAME_INITIALIZED",
+      "SCENE_MAP_LOADED 2",
+      "SCENE_MAP_LOAD_BEGIN",
+      "SCENE_LOADER_FINISHED",
+      "SCENE_GAME_INITIALIZED",
+      "SCENE_MAP_LOADED 3"
+    ]
+  },
+  "sustainedSamples": [
+    {
+      "state": {
+        "frame": 330,
+        "tick": 65,
+        "restarts": 3,
+        "paused": false,
+        "selected": 0,
+        "x": 155.364,
+        "z": 243.105,
+        "screenX": 385.011,
+        "screenY": 136.198,
+        "terrainTriangles": 3072,
+        "modelTriangles": 6998,
+        "drawCalls": 9,
+        "width": 640,
+        "height": 480
+      },
+      "result": null,
+      "heartbeat": 17814,
+      "containerMemoryBytes": null,
+      "processRSSBytes": 1241321472,
+      "sampleTime": 12607.520412006
+    },
+    {
+      "state": {
+        "frame": 360,
+        "tick": 137,
+        "restarts": 3,
+        "paused": false,
+        "selected": 0,
+        "x": 155.364,
+        "z": 243.105,
+        "screenX": 385.011,
+        "screenY": 136.198,
+        "terrainTriangles": 3072,
+        "modelTriangles": 6998,
+        "drawCalls": 9,
+        "width": 640,
+        "height": 480
+      },
+      "result": null,
+      "heartbeat": 19206,
+      "containerMemoryBytes": null,
+      "processRSSBytes": 1246146560,
+      "sampleTime": 12622.60978125
+    },
+    {
+      "state": {
+        "frame": 390,
+        "tick": 207,
+        "restarts": 3,
+        "paused": false,
+        "selected": 0,
+        "x": 155.364,
+        "z": 243.105,
+        "screenX": 385.011,
+        "screenY": 136.198,
+        "terrainTriangles": 3072,
+        "modelTriangles": 6998,
+        "drawCalls": 9,
+        "width": 640,
+        "height": 480
+      },
+      "result": null,
+      "heartbeat": 20624,
+      "containerMemoryBytes": null,
+      "processRSSBytes": 1246810112,
+      "sampleTime": 12637.623374814
+    },
+    {
+      "state": {
+        "frame": 420,
+        "tick": 277,
+        "restarts": 3,
+        "paused": false,
+        "selected": 0,
+        "x": 155.364,
+        "z": 243.105,
+        "screenX": 385.011,
+        "screenY": 136.198,
+        "terrainTriangles": 3072,
+        "modelTriangles": 6998,
+        "drawCalls": 9,
+        "width": 640,
+        "height": 480
+      },
+      "result": null,
+      "heartbeat": 22052,
+      "containerMemoryBytes": null,
+      "processRSSBytes": 1237950464,
+      "sampleTime": 12652.63744873
+    },
+    {
+      "state": {
+        "frame": 450,
+        "tick": 350,
+        "restarts": 3,
+        "paused": false,
+        "selected": 0,
+        "x": 155.364,
+        "z": 243.105,
+        "screenX": 385.011,
+        "screenY": 136.198,
+        "terrainTriangles": 3072,
+        "modelTriangles": 6998,
+        "drawCalls": 9,
+        "width": 640,
+        "height": 480
+      },
+      "result": null,
+      "heartbeat": 23443,
+      "containerMemoryBytes": null,
+      "processRSSBytes": 1238380544,
+      "sampleTime": 12667.650942587
+    },
+    {
+      "state": {
+        "frame": 480,
+        "tick": 424,
+        "restarts": 3,
+        "paused": false,
+        "selected": 0,
+        "x": 155.364,
+        "z": 243.105,
+        "screenX": 385.011,
+        "screenY": 136.198,
+        "terrainTriangles": 3072,
+        "modelTriangles": 6998,
+        "drawCalls": 9,
+        "width": 640,
+        "height": 480
+      },
+      "result": null,
+      "heartbeat": 24815,
+      "containerMemoryBytes": null,
+      "processRSSBytes": 1239146496,
+      "sampleTime": 12682.665433233
+    },
+    {
+      "state": {
+        "frame": 510,
+        "tick": 497,
+        "restarts": 3,
+        "paused": false,
+        "selected": 0,
+        "x": 155.364,
+        "z": 243.105,
+        "screenX": 385.011,
+        "screenY": 136.198,
+        "terrainTriangles": 3072,
+        "modelTriangles": 6998,
+        "drawCalls": 9,
+        "width": 640,
+        "height": 480
+      },
+      "result": null,
+      "heartbeat": 26182,
+      "containerMemoryBytes": null,
+      "processRSSBytes": 1237659648,
+      "sampleTime": 12697.679155108
+    },
+    {
+      "state": {
+        "frame": 540,
+        "tick": 572,
+        "restarts": 3,
+        "paused": false,
+        "selected": 0,
+        "x": 155.364,
+        "z": 243.105,
+        "screenX": 385.011,
+        "screenY": 136.198,
+        "terrainTriangles": 3072,
+        "modelTriangles": 6998,
+        "drawCalls": 9,
+        "width": 640,
+        "height": 480
+      },
+      "result": null,
+      "heartbeat": 27561,
+      "containerMemoryBytes": null,
+      "processRSSBytes": 1236873216,
+      "sampleTime": 12712.692389716
+    },
+    {
+      "state": {
+        "frame": 570,
+        "tick": 646,
+        "restarts": 3,
+        "paused": false,
+        "selected": 0,
+        "x": 155.364,
+        "z": 243.105,
+        "screenX": 385.011,
+        "screenY": 136.198,
+        "terrainTriangles": 3072,
+        "modelTriangles": 6998,
+        "drawCalls": 9,
+        "width": 640,
+        "height": 480
+      },
+      "result": null,
+      "heartbeat": 28941,
+      "containerMemoryBytes": null,
+      "processRSSBytes": 1236017152,
+      "sampleTime": 12727.706225949
+    },
+    {
+      "state": {
+        "frame": 600,
+        "tick": 719,
+        "restarts": 3,
+        "paused": false,
+        "selected": 0,
+        "x": 155.364,
+        "z": 243.105,
+        "screenX": 385.011,
+        "screenY": 136.198,
+        "terrainTriangles": 3072,
+        "modelTriangles": 6998,
+        "drawCalls": 9,
+        "width": 640,
+        "height": 480
+      },
+      "result": null,
+      "heartbeat": 30356,
+      "containerMemoryBytes": null,
+      "processRSSBytes": 1237286912,
+      "sampleTime": 12742.807133836
+    },
+    {
+      "state": {
+        "frame": 630,
+        "tick": 792,
+        "restarts": 3,
+        "paused": false,
+        "selected": 0,
+        "x": 155.364,
+        "z": 243.105,
+        "screenX": 385.011,
+        "screenY": 136.198,
+        "terrainTriangles": 3072,
+        "modelTriangles": 6998,
+        "drawCalls": 9,
+        "width": 640,
+        "height": 480
+      },
+      "result": null,
+      "heartbeat": 31756,
+      "containerMemoryBytes": null,
+      "processRSSBytes": 1239363584,
+      "sampleTime": 12757.819763112
+    },
+    {
+      "state": {
+        "frame": 660,
+        "tick": 866,
+        "restarts": 3,
+        "paused": false,
+        "selected": 0,
+        "x": 155.364,
+        "z": 243.105,
+        "screenX": 385.011,
+        "screenY": 136.198,
+        "terrainTriangles": 3072,
+        "modelTriangles": 6998,
+        "drawCalls": 9,
+        "width": 640,
+        "height": 480
+      },
+      "result": null,
+      "heartbeat": 33153,
+      "containerMemoryBytes": null,
+      "processRSSBytes": 1241997312,
+      "sampleTime": 12772.832787708
+    },
+    {
+      "state": {
+        "frame": 690,
+        "tick": 938,
+        "restarts": 3,
+        "paused": false,
+        "selected": 0,
+        "x": 155.364,
+        "z": 243.105,
+        "screenX": 385.011,
+        "screenY": 136.198,
+        "terrainTriangles": 3072,
+        "modelTriangles": 6998,
+        "drawCalls": 9,
+        "width": 640,
+        "height": 480
+      },
+      "result": null,
+      "heartbeat": 34523,
+      "containerMemoryBytes": null,
+      "processRSSBytes": 1244372992,
+      "sampleTime": 12787.844753488
+    },
+    {
+      "state": {
+        "frame": 720,
+        "tick": 1012,
+        "restarts": 3,
+        "paused": false,
+        "selected": 0,
+        "x": 155.364,
+        "z": 243.105,
+        "screenX": 385.011,
+        "screenY": 136.198,
+        "terrainTriangles": 3072,
+        "modelTriangles": 6998,
+        "drawCalls": 9,
+        "width": 640,
+        "height": 480
+      },
+      "result": null,
+      "heartbeat": 35915,
+      "containerMemoryBytes": null,
+      "processRSSBytes": 1244823552,
+      "sampleTime": 12802.858152798
+    },
+    {
+      "state": {
+        "frame": 750,
+        "tick": 1083,
+        "restarts": 3,
+        "paused": false,
+        "selected": 0,
+        "x": 155.364,
+        "z": 243.105,
+        "screenX": 385.011,
+        "screenY": 136.198,
+        "terrainTriangles": 3072,
+        "modelTriangles": 6998,
+        "drawCalls": 9,
+        "width": 640,
+        "height": 480
+      },
+      "result": null,
+      "heartbeat": 37326,
+      "containerMemoryBytes": null,
+      "processRSSBytes": 1245376512,
+      "sampleTime": 12817.872390514
+    },
+    {
+      "state": {
+        "frame": 780,
+        "tick": 1154,
+        "restarts": 3,
+        "paused": false,
+        "selected": 0,
+        "x": 155.364,
+        "z": 243.105,
+        "screenX": 385.011,
+        "screenY": 136.198,
+        "terrainTriangles": 3072,
+        "modelTriangles": 6998,
+        "drawCalls": 9,
+        "width": 640,
+        "height": 480
+      },
+      "result": null,
+      "heartbeat": 38755,
+      "containerMemoryBytes": null,
+      "processRSSBytes": 1249910784,
+      "sampleTime": 12832.907084258
+    },
+    {
+      "state": {
+        "frame": 810,
+        "tick": 1226,
+        "restarts": 3,
+        "paused": false,
+        "selected": 0,
+        "x": 155.364,
+        "z": 243.105,
+        "screenX": 385.011,
+        "screenY": 136.198,
+        "terrainTriangles": 3072,
+        "modelTriangles": 6998,
+        "drawCalls": 9,
+        "width": 640,
+        "height": 480
+      },
+      "result": null,
+      "heartbeat": 40146,
+      "containerMemoryBytes": null,
+      "processRSSBytes": 1251852288,
+      "sampleTime": 12847.920921691
+    },
+    {
+      "state": {
+        "frame": 840,
+        "tick": 1306,
+        "restarts": 3,
+        "paused": false,
+        "selected": 0,
+        "x": 155.364,
+        "z": 243.105,
+        "screenX": 385.011,
+        "screenY": 136.198,
+        "terrainTriangles": 3072,
+        "modelTriangles": 6998,
+        "drawCalls": 9,
+        "width": 640,
+        "height": 480
+      },
+      "result": null,
+      "heartbeat": 41556,
+      "containerMemoryBytes": null,
+      "processRSSBytes": 1255112704,
+      "sampleTime": 12862.935624783
+    },
+    {
+      "state": {
+        "frame": 870,
+        "tick": 1396,
+        "restarts": 3,
+        "paused": false,
+        "selected": 0,
+        "x": 155.364,
+        "z": 243.105,
+        "screenX": 385.011,
+        "screenY": 136.198,
+        "terrainTriangles": 3072,
+        "modelTriangles": 6998,
+        "drawCalls": 9,
+        "width": 640,
+        "height": 480
+      },
+      "result": null,
+      "heartbeat": 42927,
+      "containerMemoryBytes": null,
+      "processRSSBytes": 1261694976,
+      "sampleTime": 12877.951982835
+    },
+    {
+      "state": {
+        "frame": 900,
+        "tick": 1480,
+        "restarts": 3,
+        "paused": false,
+        "selected": 0,
+        "x": 155.364,
+        "z": 243.105,
+        "screenX": 385.011,
+        "screenY": 136.198,
+        "terrainTriangles": 3072,
+        "modelTriangles": 6998,
+        "drawCalls": 9,
+        "width": 640,
+        "height": 480
+      },
+      "result": null,
+      "heartbeat": 44297,
+      "containerMemoryBytes": null,
+      "processRSSBytes": 1262915584,
+      "sampleTime": 12892.967193593
+    },
+    {
+      "state": {
+        "frame": 930,
+        "tick": 1564,
+        "restarts": 3,
+        "paused": false,
+        "selected": 0,
+        "x": 155.364,
+        "z": 243.105,
+        "screenX": 385.011,
+        "screenY": 136.198,
+        "terrainTriangles": 3072,
+        "modelTriangles": 6998,
+        "drawCalls": 9,
+        "width": 640,
+        "height": 480
+      },
+      "result": null,
+      "heartbeat": 45702,
+      "containerMemoryBytes": null,
+      "processRSSBytes": 1264902144,
+      "sampleTime": 12907.983660614
+    },
+    {
+      "state": {
+        "frame": 960,
+        "tick": 1645,
+        "restarts": 3,
+        "paused": false,
+        "selected": 0,
+        "x": 155.364,
+        "z": 243.105,
+        "screenX": 385.011,
+        "screenY": 136.198,
+        "terrainTriangles": 3072,
+        "modelTriangles": 6998,
+        "drawCalls": 9,
+        "width": 640,
+        "height": 480
+      },
+      "result": null,
+      "heartbeat": 47106,
+      "containerMemoryBytes": null,
+      "processRSSBytes": 1266479104,
+      "sampleTime": 12922.998729454
+    },
+    {
+      "state": {
+        "frame": 990,
+        "tick": 1723,
+        "restarts": 3,
+        "paused": false,
+        "selected": 0,
+        "x": 155.364,
+        "z": 243.105,
+        "screenX": 385.011,
+        "screenY": 136.198,
+        "terrainTriangles": 3072,
+        "modelTriangles": 6998,
+        "drawCalls": 9,
+        "width": 640,
+        "height": 480
+      },
+      "result": null,
+      "heartbeat": 48515,
+      "containerMemoryBytes": null,
+      "processRSSBytes": 1266966528,
+      "sampleTime": 12938.012895083
+    },
+    {
+      "state": {
+        "frame": 990,
+        "tick": 1723,
+        "restarts": 3,
+        "paused": false,
+        "selected": 0,
+        "x": 155.364,
+        "z": 243.105,
+        "screenX": 385.011,
+        "screenY": 136.198,
+        "terrainTriangles": 3072,
+        "modelTriangles": 6998,
+        "drawCalls": 9,
+        "width": 640,
+        "height": 480
+      },
+      "result": null,
+      "heartbeat": 49911,
+      "containerMemoryBytes": null,
+      "processRSSBytes": 1264918528,
+      "sampleTime": 12953.020171094
+    },
+    {
+      "state": {
+        "frame": 1020,
+        "tick": 1802,
+        "restarts": 3,
+        "paused": false,
+        "selected": 0,
+        "x": 155.364,
+        "z": 243.105,
+        "screenX": 385.011,
+        "screenY": 136.198,
+        "terrainTriangles": 3072,
+        "modelTriangles": 6998,
+        "drawCalls": 9,
+        "width": 640,
+        "height": 480
+      },
+      "result": null,
+      "heartbeat": 51339,
+      "containerMemoryBytes": null,
+      "processRSSBytes": 1264463872,
+      "sampleTime": 12968.034684441
+    },
+    {
+      "state": {
+        "frame": 1050,
+        "tick": 1892,
+        "restarts": 3,
+        "paused": false,
+        "selected": 0,
+        "x": 155.364,
+        "z": 243.105,
+        "screenX": 385.011,
+        "screenY": 136.198,
+        "terrainTriangles": 3072,
+        "modelTriangles": 6998,
+        "drawCalls": 9,
+        "width": 640,
+        "height": 480
+      },
+      "result": null,
+      "heartbeat": 52750,
+      "containerMemoryBytes": null,
+      "processRSSBytes": 1265364992,
+      "sampleTime": 12983.051985146
+    },
+    {
+      "state": {
+        "frame": 1080,
+        "tick": 1987,
+        "restarts": 3,
+        "paused": false,
+        "selected": 0,
+        "x": 155.364,
+        "z": 243.105,
+        "screenX": 385.011,
+        "screenY": 136.198,
+        "terrainTriangles": 3072,
+        "modelTriangles": 6998,
+        "drawCalls": 9,
+        "width": 640,
+        "height": 480
+      },
+      "result": null,
+      "heartbeat": 54173,
+      "containerMemoryBytes": null,
+      "processRSSBytes": 1266659328,
+      "sampleTime": 12998.068796974
+    },
+    {
+      "state": {
+        "frame": 1110,
+        "tick": 2082,
+        "restarts": 3,
+        "paused": false,
+        "selected": 0,
+        "x": 155.364,
+        "z": 243.105,
+        "screenX": 385.011,
+        "screenY": 136.198,
+        "terrainTriangles": 3072,
+        "modelTriangles": 6998,
+        "drawCalls": 9,
+        "width": 640,
+        "height": 480
+      },
+      "result": null,
+      "heartbeat": 55602,
+      "containerMemoryBytes": null,
+      "processRSSBytes": 1267638272,
+      "sampleTime": 13013.087828594
+    },
+    {
+      "state": {
+        "frame": 1110,
+        "tick": 2082,
+        "restarts": 3,
+        "paused": false,
+        "selected": 0,
+        "x": 155.364,
+        "z": 243.105,
+        "screenX": 385.011,
+        "screenY": 136.198,
+        "terrainTriangles": 3072,
+        "modelTriangles": 6998,
+        "drawCalls": 9,
+        "width": 640,
+        "height": 480
+      },
+      "result": null,
+      "heartbeat": 57010,
+      "containerMemoryBytes": null,
+      "processRSSBytes": 1267515392,
+      "sampleTime": 13028.107841752
+    },
+    {
+      "state": {
+        "frame": 1140,
+        "tick": 2179,
+        "restarts": 3,
+        "paused": false,
+        "selected": 0,
+        "x": 155.364,
+        "z": 243.105,
+        "screenX": 385.011,
+        "screenY": 136.198,
+        "terrainTriangles": 3072,
+        "modelTriangles": 6998,
+        "drawCalls": 9,
+        "width": 640,
+        "height": 480
+      },
+      "result": null,
+      "heartbeat": 58406,
+      "containerMemoryBytes": null,
+      "processRSSBytes": 1267781632,
+      "sampleTime": 13043.127434806
+    },
+    {
+      "state": {
+        "frame": 1170,
+        "tick": 2272,
+        "restarts": 3,
+        "paused": false,
+        "selected": 0,
+        "x": 155.364,
+        "z": 243.105,
+        "screenX": 385.011,
+        "screenY": 136.198,
+        "terrainTriangles": 3072,
+        "modelTriangles": 6998,
+        "drawCalls": 9,
+        "width": 640,
+        "height": 480
+      },
+      "result": null,
+      "heartbeat": 59794,
+      "containerMemoryBytes": null,
+      "processRSSBytes": 1268252672,
+      "sampleTime": 13058.144684265
+    },
+    {
+      "state": {
+        "frame": 1200,
+        "tick": 2367,
+        "restarts": 3,
+        "paused": false,
+        "selected": 0,
+        "x": 155.364,
+        "z": 243.105,
+        "screenX": 385.011,
+        "screenY": 136.198,
+        "terrainTriangles": 3072,
+        "modelTriangles": 6998,
+        "drawCalls": 9,
+        "width": 640,
+        "height": 480
+      },
+      "result": null,
+      "heartbeat": 61217,
+      "containerMemoryBytes": null,
+      "processRSSBytes": 1268514816,
+      "sampleTime": 13073.162625765
+    },
+    {
+      "state": {
+        "frame": 1230,
+        "tick": 2461,
+        "restarts": 3,
+        "paused": false,
+        "selected": 0,
+        "x": 155.364,
+        "z": 243.105,
+        "screenX": 385.011,
+        "screenY": 136.198,
+        "terrainTriangles": 3072,
+        "modelTriangles": 6998,
+        "drawCalls": 9,
+        "width": 640,
+        "height": 480
+      },
+      "result": null,
+      "heartbeat": 62613,
+      "containerMemoryBytes": null,
+      "processRSSBytes": 1277480960,
+      "sampleTime": 13088.181410613
+    },
+    {
+      "state": {
+        "frame": 1230,
+        "tick": 2461,
+        "restarts": 3,
+        "paused": false,
+        "selected": 0,
+        "x": 155.364,
+        "z": 243.105,
+        "screenX": 385.011,
+        "screenY": 136.198,
+        "terrainTriangles": 3072,
+        "modelTriangles": 6998,
+        "drawCalls": 9,
+        "width": 640,
+        "height": 480
+      },
+      "result": null,
+      "heartbeat": 64024,
+      "containerMemoryBytes": null,
+      "processRSSBytes": 1283137536,
+      "sampleTime": 13103.199168753
+    },
+    {
+      "state": {
+        "frame": 1260,
+        "tick": 2551,
+        "restarts": 3,
+        "paused": false,
+        "selected": 0,
+        "x": 155.364,
+        "z": 243.105,
+        "screenX": 385.011,
+        "screenY": 136.198,
+        "terrainTriangles": 3072,
+        "modelTriangles": 6998,
+        "drawCalls": 9,
+        "width": 640,
+        "height": 480
+      },
+      "result": null,
+      "heartbeat": 65439,
+      "containerMemoryBytes": null,
+      "processRSSBytes": 1283362816,
+      "sampleTime": 13118.212932829
+    },
+    {
+      "state": {
+        "frame": 1290,
+        "tick": 2629,
+        "restarts": 3,
+        "paused": false,
+        "selected": 0,
+        "x": 155.364,
+        "z": 243.105,
+        "screenX": 385.011,
+        "screenY": 136.198,
+        "terrainTriangles": 3072,
+        "modelTriangles": 6998,
+        "drawCalls": 9,
+        "width": 640,
+        "height": 480
+      },
+      "result": null,
+      "heartbeat": 66846,
+      "containerMemoryBytes": null,
+      "processRSSBytes": 1284304896,
+      "sampleTime": 13133.227119722
+    },
+    {
+      "state": {
+        "frame": 1320,
+        "tick": 2704,
+        "restarts": 3,
+        "paused": false,
+        "selected": 0,
+        "x": 155.364,
+        "z": 243.105,
+        "screenX": 385.011,
+        "screenY": 136.198,
+        "terrainTriangles": 3072,
+        "modelTriangles": 6998,
+        "drawCalls": 9,
+        "width": 640,
+        "height": 480
+      },
+      "result": null,
+      "heartbeat": 68268,
+      "containerMemoryBytes": null,
+      "processRSSBytes": 1284370432,
+      "sampleTime": 13148.243066574
+    },
+    {
+      "state": {
+        "frame": 1350,
+        "tick": 2780,
+        "restarts": 3,
+        "paused": false,
+        "selected": 0,
+        "x": 155.364,
+        "z": 243.105,
+        "screenX": 385.011,
+        "screenY": 136.198,
+        "terrainTriangles": 3072,
+        "modelTriangles": 6998,
+        "drawCalls": 9,
+        "width": 640,
+        "height": 480
+      },
+      "result": null,
+      "heartbeat": 69683,
+      "containerMemoryBytes": null,
+      "processRSSBytes": 1284481024,
+      "sampleTime": 13163.258180224
+    },
+    {
+      "state": {
+        "frame": 1380,
+        "tick": 2857,
+        "restarts": 3,
+        "paused": false,
+        "selected": 0,
+        "x": 155.364,
+        "z": 243.105,
+        "screenX": 385.011,
+        "screenY": 136.198,
+        "terrainTriangles": 3072,
+        "modelTriangles": 6998,
+        "drawCalls": 9,
+        "width": 640,
+        "height": 480
+      },
+      "result": null,
+      "heartbeat": 71094,
+      "containerMemoryBytes": null,
+      "processRSSBytes": 1285173248,
+      "sampleTime": 13178.273537341
+    },
+    {
+      "state": {
+        "frame": 1410,
+        "tick": 2935,
+        "restarts": 3,
+        "paused": false,
+        "selected": 0,
+        "x": 155.364,
+        "z": 243.105,
+        "screenX": 385.011,
+        "screenY": 136.198,
+        "terrainTriangles": 3072,
+        "modelTriangles": 6998,
+        "drawCalls": 9,
+        "width": 640,
+        "height": 480
+      },
+      "result": null,
+      "heartbeat": 72489,
+      "containerMemoryBytes": null,
+      "processRSSBytes": 1285300224,
+      "sampleTime": 13193.288580589
+    },
+    {
+      "state": {
+        "frame": 1440,
+        "tick": 3011,
+        "restarts": 3,
+        "paused": false,
+        "selected": 0,
+        "x": 155.364,
+        "z": 243.105,
+        "screenX": 385.011,
+        "screenY": 136.198,
+        "terrainTriangles": 3072,
+        "modelTriangles": 6998,
+        "drawCalls": 9,
+        "width": 640,
+        "height": 480
+      },
+      "result": null,
+      "heartbeat": 73887,
+      "containerMemoryBytes": null,
+      "processRSSBytes": 1286160384,
+      "sampleTime": 13208.304236402
+    },
+    {
+      "state": {
+        "frame": 1470,
+        "tick": 3085,
+        "restarts": 3,
+        "paused": false,
+        "selected": 0,
+        "x": 155.364,
+        "z": 243.105,
+        "screenX": 385.011,
+        "screenY": 136.198,
+        "terrainTriangles": 3072,
+        "modelTriangles": 6998,
+        "drawCalls": 9,
+        "width": 640,
+        "height": 480
+      },
+      "result": null,
+      "heartbeat": 75268,
+      "containerMemoryBytes": null,
+      "processRSSBytes": 1287286784,
+      "sampleTime": 13223.319839436
+    },
+    {
+      "state": {
+        "frame": 1500,
+        "tick": 3159,
+        "restarts": 3,
+        "paused": false,
+        "selected": 0,
+        "x": 155.364,
+        "z": 243.105,
+        "screenX": 385.011,
+        "screenY": 136.198,
+        "terrainTriangles": 3072,
+        "modelTriangles": 6998,
+        "drawCalls": 9,
+        "width": 640,
+        "height": 480
+      },
+      "result": null,
+      "heartbeat": 76647,
+      "containerMemoryBytes": null,
+      "processRSSBytes": 1284599808,
+      "sampleTime": 13238.402149672
+    },
+    {
+      "state": {
+        "frame": 1530,
+        "tick": 3234,
+        "restarts": 3,
+        "paused": false,
+        "selected": 0,
+        "x": 155.364,
+        "z": 243.105,
+        "screenX": 385.011,
+        "screenY": 136.198,
+        "terrainTriangles": 3072,
+        "modelTriangles": 6998,
+        "drawCalls": 9,
+        "width": 640,
+        "height": 480
+      },
+      "result": null,
+      "heartbeat": 78068,
+      "containerMemoryBytes": null,
+      "processRSSBytes": 1284505600,
+      "sampleTime": 13253.41723077
+    },
+    {
+      "state": {
+        "frame": 1560,
+        "tick": 3307,
+        "restarts": 3,
+        "paused": false,
+        "selected": 0,
+        "x": 155.364,
+        "z": 243.105,
+        "screenX": 385.011,
+        "screenY": 136.198,
+        "terrainTriangles": 3072,
+        "modelTriangles": 6998,
+        "drawCalls": 9,
+        "width": 640,
+        "height": 480
+      },
+      "result": null,
+      "heartbeat": 79427,
+      "containerMemoryBytes": null,
+      "processRSSBytes": 1284923392,
+      "sampleTime": 13268.431882208
+    },
+    {
+      "state": {
+        "frame": 1590,
+        "tick": 3382,
+        "restarts": 3,
+        "paused": false,
+        "selected": 0,
+        "x": 155.364,
+        "z": 243.105,
+        "screenX": 385.011,
+        "screenY": 136.198,
+        "terrainTriangles": 3072,
+        "modelTriangles": 6998,
+        "drawCalls": 9,
+        "width": 640,
+        "height": 480
+      },
+      "result": null,
+      "heartbeat": 80834,
+      "containerMemoryBytes": null,
+      "processRSSBytes": 1284927488,
+      "sampleTime": 13283.444981701
+    },
+    {
+      "state": {
+        "frame": 1620,
+        "tick": 3455,
+        "restarts": 3,
+        "paused": false,
+        "selected": 0,
+        "x": 155.364,
+        "z": 243.105,
+        "screenX": 385.011,
+        "screenY": 136.198,
+        "terrainTriangles": 3072,
+        "modelTriangles": 6998,
+        "drawCalls": 9,
+        "width": 640,
+        "height": 480
+      },
+      "result": null,
+      "heartbeat": 82229,
+      "containerMemoryBytes": null,
+      "processRSSBytes": 1286119424,
+      "sampleTime": 13298.45731979
+    },
+    {
+      "state": {
+        "frame": 1650,
+        "tick": 3530,
+        "restarts": 3,
+        "paused": false,
+        "selected": 0,
+        "x": 155.364,
+        "z": 243.105,
+        "screenX": 385.011,
+        "screenY": 136.198,
+        "terrainTriangles": 3072,
+        "modelTriangles": 6998,
+        "drawCalls": 9,
+        "width": 640,
+        "height": 480
+      },
+      "result": null,
+      "heartbeat": 83631,
+      "containerMemoryBytes": null,
+      "processRSSBytes": 1287208960,
+      "sampleTime": 13313.505933716
+    },
+    {
+      "state": {
+        "frame": 1680,
+        "tick": 3604,
+        "restarts": 3,
+        "paused": false,
+        "selected": 0,
+        "x": 155.364,
+        "z": 243.105,
+        "screenX": 385.011,
+        "screenY": 136.198,
+        "terrainTriangles": 3072,
+        "modelTriangles": 6998,
+        "drawCalls": 9,
+        "width": 640,
+        "height": 480
+      },
+      "result": null,
+      "heartbeat": 85001,
+      "containerMemoryBytes": null,
+      "processRSSBytes": 1287430144,
+      "sampleTime": 13328.519690658
+    },
+    {
+      "state": {
+        "frame": 1740,
+        "tick": 3751,
+        "restarts": 3,
+        "paused": false,
+        "selected": 0,
+        "x": 155.364,
+        "z": 243.105,
+        "screenX": 385.011,
+        "screenY": 136.198,
+        "terrainTriangles": 3072,
+        "modelTriangles": 6998,
+        "drawCalls": 9,
+        "width": 640,
+        "height": 480
+      },
+      "result": null,
+      "heartbeat": 86423,
+      "containerMemoryBytes": null,
+      "processRSSBytes": 1287270400,
+      "sampleTime": 13343.534795847
+    },
+    {
+      "state": {
+        "frame": 1770,
+        "tick": 3818,
+        "restarts": 3,
+        "paused": false,
+        "selected": 0,
+        "x": 155.364,
+        "z": 243.105,
+        "screenX": 385.011,
+        "screenY": 136.198,
+        "terrainTriangles": 3072,
+        "modelTriangles": 6998,
+        "drawCalls": 9,
+        "width": 640,
+        "height": 480
+      },
+      "result": null,
+      "heartbeat": 87858,
+      "containerMemoryBytes": null,
+      "processRSSBytes": 1288622080,
+      "sampleTime": 13358.542559792
+    },
+    {
+      "state": {
+        "frame": 1800,
+        "tick": 3886,
+        "restarts": 3,
+        "paused": false,
+        "selected": 0,
+        "x": 155.364,
+        "z": 243.105,
+        "screenX": 385.011,
+        "screenY": 136.198,
+        "terrainTriangles": 3072,
+        "modelTriangles": 6998,
+        "drawCalls": 9,
+        "width": 640,
+        "height": 480
+      },
+      "result": null,
+      "heartbeat": 89303,
+      "containerMemoryBytes": null,
+      "processRSSBytes": 1287487488,
+      "sampleTime": 13373.55757285
+    },
+    {
+      "state": {
+        "frame": 1830,
+        "tick": 3957,
+        "restarts": 3,
+        "paused": false,
+        "selected": 0,
+        "x": 155.364,
+        "z": 243.105,
+        "screenX": 385.011,
+        "screenY": 136.198,
+        "terrainTriangles": 3072,
+        "modelTriangles": 6998,
+        "drawCalls": 9,
+        "width": 640,
+        "height": 480
+      },
+      "result": null,
+      "heartbeat": 90705,
+      "containerMemoryBytes": null,
+      "processRSSBytes": 1288290304,
+      "sampleTime": 13388.601617166
+    },
+    {
+      "state": {
+        "frame": 1860,
+        "tick": 4024,
+        "restarts": 3,
+        "paused": false,
+        "selected": 0,
+        "x": 155.364,
+        "z": 243.105,
+        "screenX": 385.011,
+        "screenY": 136.198,
+        "terrainTriangles": 3072,
+        "modelTriangles": 6998,
+        "drawCalls": 9,
+        "width": 640,
+        "height": 480
+      },
+      "result": null,
+      "heartbeat": 92137,
+      "containerMemoryBytes": null,
+      "processRSSBytes": 1288499200,
+      "sampleTime": 13403.616962655
+    },
+    {
+      "state": {
+        "frame": 1890,
+        "tick": 4093,
+        "restarts": 3,
+        "paused": false,
+        "selected": 0,
+        "x": 155.364,
+        "z": 243.105,
+        "screenX": 385.011,
+        "screenY": 136.198,
+        "terrainTriangles": 3072,
+        "modelTriangles": 6998,
+        "drawCalls": 9,
+        "width": 640,
+        "height": 480
+      },
+      "result": null,
+      "heartbeat": 93566,
+      "containerMemoryBytes": null,
+      "processRSSBytes": 1289142272,
+      "sampleTime": 13418.630936043
+    },
+    {
+      "state": {
+        "frame": 1920,
+        "tick": 4161,
+        "restarts": 3,
+        "paused": false,
+        "selected": 0,
+        "x": 155.364,
+        "z": 243.105,
+        "screenX": 385.011,
+        "screenY": 136.198,
+        "terrainTriangles": 3072,
+        "modelTriangles": 6998,
+        "drawCalls": 9,
+        "width": 640,
+        "height": 480
+      },
+      "result": null,
+      "heartbeat": 95021,
+      "containerMemoryBytes": null,
+      "processRSSBytes": 1290375168,
+      "sampleTime": 13433.644752134
+    },
+    {
+      "state": {
+        "frame": 1950,
+        "tick": 4227,
+        "restarts": 3,
+        "paused": false,
+        "selected": 0,
+        "x": 155.364,
+        "z": 243.105,
+        "screenX": 385.011,
+        "screenY": 136.198,
+        "terrainTriangles": 3072,
+        "modelTriangles": 6998,
+        "drawCalls": 9,
+        "width": 640,
+        "height": 480
+      },
+      "result": null,
+      "heartbeat": 96432,
+      "containerMemoryBytes": null,
+      "processRSSBytes": 1290252288,
+      "sampleTime": 13448.659064711
+    },
+    {
+      "state": {
+        "frame": 1980,
+        "tick": 4295,
+        "restarts": 3,
+        "paused": false,
+        "selected": 0,
+        "x": 155.364,
+        "z": 243.105,
+        "screenX": 385.011,
+        "screenY": 136.198,
+        "terrainTriangles": 3072,
+        "modelTriangles": 6998,
+        "drawCalls": 9,
+        "width": 640,
+        "height": 480
+      },
+      "result": null,
+      "heartbeat": 97884,
+      "containerMemoryBytes": null,
+      "processRSSBytes": 1290776576,
+      "sampleTime": 13463.673641618
+    },
+    {
+      "state": {
+        "frame": 2040,
+        "tick": 4426,
+        "restarts": 3,
+        "paused": false,
+        "selected": 0,
+        "x": 155.364,
+        "z": 243.105,
+        "screenX": 385.011,
+        "screenY": 136.198,
+        "terrainTriangles": 3072,
+        "modelTriangles": 6998,
+        "drawCalls": 9,
+        "width": 640,
+        "height": 480
+      },
+      "result": null,
+      "heartbeat": 99336,
+      "containerMemoryBytes": null,
+      "processRSSBytes": 1289711616,
+      "sampleTime": 13478.687112909
+    },
+    {
+      "state": {
+        "frame": 2070,
+        "tick": 4492,
+        "restarts": 3,
+        "paused": false,
+        "selected": 0,
+        "x": 155.364,
+        "z": 243.105,
+        "screenX": 385.011,
+        "screenY": 136.198,
+        "terrainTriangles": 3072,
+        "modelTriangles": 6998,
+        "drawCalls": 9,
+        "width": 640,
+        "height": 480
+      },
+      "result": null,
+      "heartbeat": 100680,
+      "containerMemoryBytes": null,
+      "processRSSBytes": 1289744384,
+      "sampleTime": 13492.518475048
+    }
+  ],
+  "sustainedSeconds": 900,
+  "sceneResult": {
+    "passed": true,
+    "exitCode": 0,
+    "lines": [
+      "VFS_READ cache/public/simulation/templates/template_unit_ship_warship_ram.xml.2ff0e1d5588ad59b.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_ship_warship.xml.93fbbafda9b1a76d.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_ship.xml.3f2c5fb2f93e45a5.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit.xml.3d1ba481d97d2a4c.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/civ/athen.xml.e12033df7d166675.xmb",
+      "VFS_READ cache/public/simulation/templates/units/athen/champion_marine_dock.xml.88ada3c9668187d5.xmb",
+      "VFS_READ cache/public/simulation/templates/units/athen/champion_marine.xml.21c693ef1ccb9073.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_champion_infantry_swordsman.xml.dc015a307d02764b.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_champion_infantry.xml.3d866b6d36c5eb72.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_champion.xml.e1de932d3f9c82bd.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit.xml.3d1ba481d97d2a4c.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/spec_champ.xml.931698060d4ea4b4.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/civ/athen.xml.e12033df7d166675.xmb",
+      "VFS_READ cache/public/simulation/templates/units/athen/infantry_archer_b_dock.xml.bf935c939053d5e8.xmb",
+      "VFS_READ cache/public/simulation/templates/units/athen/infantry_archer_b.xml.3e6938e613c87f0e.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_infantry_ranged_archer.xml.6fcf4a384df35331.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_infantry_ranged.xml.03db8ec378aaefb8.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_infantry.xml.ef91a538ac08d76f.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit.xml.3d1ba481d97d2a4c.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/builder.xml.708fe74f771608c3.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/merc_inf.xml.5738a27d929ac949.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/mercenary.xml.cc21088b40c6673c.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/civ/athen.xml.e12033df7d166675.xmb",
+      "Hotloading new value for global \"InitAttributes\".",
+      "SCENE_LOADER_FINISHED",
+      "VFS_READ cache/public/simulation/templates/units/athen/infantry_javelineer_a.xml.e8f5f8467a648de1.xmb",
+      "VFS_READ cache/public/simulation/templates/units/athen/infantry_javelineer_b.xml.5bc9804a120654be.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_infantry_ranged_javelineer.xml.6fcf4a384df35331.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_infantry_ranged.xml.03db8ec378aaefb8.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_infantry.xml.ef91a538ac08d76f.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit.xml.3d1ba481d97d2a4c.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/builder.xml.708fe74f771608c3.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/merc_inf.xml.5738a27d929ac949.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/mercenary.xml.cc21088b40c6673c.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/civ/athen.xml.e12033df7d166675.xmb",
+      "VFS_READ cache/public/simulation/templates/units/athen/infantry_archer_a.xml.718689ff024c3816.xmb",
+      "VFS_READ cache/public/simulation/templates/units/athen/infantry_archer_b.xml.3e6938e613c87f0e.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_infantry_ranged_archer.xml.6fcf4a384df35331.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_infantry_ranged.xml.03db8ec378aaefb8.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_infantry.xml.ef91a538ac08d76f.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit.xml.3d1ba481d97d2a4c.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/builder.xml.708fe74f771608c3.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/merc_inf.xml.5738a27d929ac949.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/mercenary.xml.cc21088b40c6673c.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/civ/athen.xml.e12033df7d166675.xmb",
+      "VFS_READ cache/public/simulation/templates/units/athen/infantry_archer_a_dock.xml.1b3c9d9c51283276.xmb",
+      "VFS_READ cache/public/simulation/templates/units/athen/infantry_archer_b_dock.xml.bf935c939053d5e8.xmb",
+      "VFS_READ cache/public/simulation/templates/units/athen/infantry_archer_b.xml.3e6938e613c87f0e.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_infantry_ranged_archer.xml.6fcf4a384df35331.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_infantry_ranged.xml.03db8ec378aaefb8.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_infantry.xml.ef91a538ac08d76f.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit.xml.3d1ba481d97d2a4c.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/builder.xml.708fe74f771608c3.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/merc_inf.xml.5738a27d929ac949.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/mercenary.xml.cc21088b40c6673c.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/civ/athen.xml.e12033df7d166675.xmb",
+      "SCENE_GAME_INITIALIZED",
+      "VFS_READ simulation/data/pathfinder.rng",
+      "VFS_READ cache/mod/simulation/data/pathfinder.xml.58a331457bd42987.xmb",
+      "VFS_READ cache/mod/shaders/effects/minimap.xml.9af7690ebe2114f9.xmb",
+      "SCENE_MAP_LOADED 2",
+      "SCENE_STATS {\"frame\":270,\"tick\":0,\"restarts\":2,\"paused\":true,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}",
+      "SCENE_MAP_LOAD_BEGIN",
+      "VFS_READ maps/scenarios/pathfinding_terrain_demo.pmp",
+      "VFS_READ simulation/data/pathfinder.rng",
+      "VFS_READ cache/mod/simulation/data/pathfinder.xml.58a331457bd42987.xmb",
+      "VFS_READ simulation/data/territorymanager.rng",
+      "VFS_READ cache/mod/simulation/data/territorymanager.xml.21b9402c5e7e467a.xmb",
+      "VFS_READ cache/mod/simulation/data/pathfinder.xml.58a331457bd42987.xmb",
+      "VFS_READ globalscripts/AttackEffects.js",
+      "VFS_READ globalscripts/DamageTypes.js",
+      "VFS_READ globalscripts/FSM.js",
+      "VFS_READ globalscripts/Formation.js",
+      "VFS_READ globalscripts/Math.js",
+      "VFS_READ globalscripts/ModificationTemplates.js",
+      "VFS_READ globalscripts/MultiKeyMap.js",
+      "VFS_READ globalscripts/Resources.js",
+      "VFS_READ globalscripts/StatusEffects.js",
+      "VFS_READ globalscripts/Technologies.js",
+      "VFS_READ globalscripts/Templates.js",
+      "VFS_READ globalscripts/Trade.js",
+      "VFS_READ globalscripts/WeightedList.js",
+      "VFS_READ globalscripts/interpolation.js",
+      "VFS_READ globalscripts/l10n.js",
+      "VFS_READ globalscripts/random.js",
+      "VFS_READ globalscripts/sprintf.js",
+      "VFS_READ globalscripts/utility.js",
+      "VFS_READ globalscripts/vector.js",
+      "'art/terrains/terrains.xml' does not exist. Using previous properties.",
+      "VFS_READ art/terrains/biome-desert/terrains.xml.cached.xmb",
+      "VFS_READ art/terrains/biome-desert/desert_city_tile.xml.cached.xmb",
+      "VFS_READ art/terrains/biome-desert/desert_city_tile_plaza.xml.cached.xmb",
+      "VFS_READ art/terrains/biome-desert/desert_cliff_1.xml.cached.xmb",
+      "VFS_READ art/terrains/biome-mediterranean/terrains.xml.cached.xmb",
+      "VFS_READ art/terrains/biome-mediterranean/medit_grass_wild.xml.cached.xmb",
+      "VFS_READ art/terrains/grass/terrains.xml.cached.xmb",
+      "VFS_READ art/terrains/grass/grass1_spring.xml.cached.xmb",
+      "VFS_READ simulation/data/settings/player_defaults.json",
+      "VFS_READ cache/public/simulation/templates/special/players/gaia.xml.78cc9a8c2c368112.xmb",
+      "VFS_READ cache/public/simulation/templates/special/players/athen.xml.d231e671214e688f.xmb",
+      "VFS_READ cache/public/simulation/templates/template_player.xml.a428d56446c57df3.xmb",
+      "VFS_READ cache/public/maps/scenarios/pathfinding_terrain_demo.xml.4604093349f76ce6.xmb",
+      "VFS_READ cache/public/simulation/templates/units/athen/ship_scout.xml.b574484179f47f12.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_ship_warship_scout.xml.1230771a86160f6c.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_ship_warship.xml.93fbbafda9b1a76d.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_ship.xml.3f2c5fb2f93e45a5.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit.xml.3d1ba481d97d2a4c.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/civ/athen.xml.e12033df7d166675.xmb",
+      "VFS_READ cache/public/simulation/templates/units/athen/ship_merchant.xml.9181f8a3d96435e2.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_ship_merchant.xml.c2c872e67e313458.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_ship.xml.3f2c5fb2f93e45a5.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit.xml.3d1ba481d97d2a4c.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/civ/athen.xml.e12033df7d166675.xmb",
+      "VFS_READ cache/public/simulation/templates/units/athen/infantry_spearman_b.xml.8d6ffa20590c06f3.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_infantry_melee_spearman.xml.9a6fa7881b5681b4.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_infantry_melee.xml.ab2e0f48cfdbbefb.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_infantry.xml.ef91a538ac08d76f.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit.xml.3d1ba481d97d2a4c.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/builder.xml.708fe74f771608c3.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/hoplite.xml.2a42ef401eb8c10a.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/civ/athen.xml.e12033df7d166675.xmb",
+      "VFS_READ cache/public/simulation/templates/units/athen/siege_lithobolos_packed.xml.0f66cbb5f5b2607d.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_siege_stonethrower.xml.605ab7470340ef29.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_siege.xml.edadcf23db5a1cd1.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit.xml.3d1ba481d97d2a4c.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/civ/athen.xml.e12033df7d166675.xmb",
+      "VFS_READ cache/public/simulation/templates/units/athen/cavalry_swordsman_b.xml.4d89cd080f078b06.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_cavalry_melee_swordsman.xml.8fb1e414a71ad038.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_cavalry_melee.xml.39cf068fb2cfcbb8.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_cavalry.xml.d76c4d5558f2364a.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit.xml.3d1ba481d97d2a4c.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/civ/athen.xml.e12033df7d166675.xmb",
+      "VFS_READ cache/public/simulation/templates/structures/athen/barracks.xml.4fe5d638f07c1992.xmb",
+      "VFS_READ cache/public/simulation/templates/template_structure_military_barracks.xml.5b5f201efbecafcf.xmb",
+      "VFS_READ cache/public/simulation/templates/template_structure_military.xml.f5584c080ae39c17.xmb",
+      "VFS_READ cache/public/simulation/templates/template_structure.xml.9bb57bbc078005f1.xmb",
+      "VFS_READ cache/public/simulation/templates/units/athen/infantry_javelineer_b.xml.5bc9804a120654be.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_infantry_ranged_javelineer.xml.6fcf4a384df35331.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_infantry_ranged.xml.03db8ec378aaefb8.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_infantry.xml.ef91a538ac08d76f.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit.xml.3d1ba481d97d2a4c.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/builder.xml.708fe74f771608c3.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/merc_inf.xml.5738a27d929ac949.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/mercenary.xml.cc21088b40c6673c.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/civ/athen.xml.e12033df7d166675.xmb",
+      "VFS_READ cache/public/simulation/templates/units/athen/infantry_slinger_b.xml.03db8ec378aaefb8.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_infantry_ranged_slinger.xml.2e9ff3c66c399010.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_infantry_ranged.xml.03db8ec378aaefb8.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_infantry.xml.ef91a538ac08d76f.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit.xml.3d1ba481d97d2a4c.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/builder.xml.708fe74f771608c3.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/civ/athen.xml.e12033df7d166675.xmb",
+      "VFS_READ cache/public/simulation/templates/units/athen/infantry_archer_b.xml.3e6938e613c87f0e.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_infantry_ranged_archer.xml.6fcf4a384df35331.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_infantry_ranged.xml.03db8ec378aaefb8.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_infantry.xml.ef91a538ac08d76f.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit.xml.3d1ba481d97d2a4c.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/builder.xml.708fe74f771608c3.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/merc_inf.xml.5738a27d929ac949.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/mercenary.xml.cc21088b40c6673c.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/civ/athen.xml.e12033df7d166675.xmb",
+      "VFS_READ cache/public/simulation/templates/structures/athen/dock.xml.f5e046e428457c38.xmb",
+      "VFS_READ cache/public/simulation/templates/template_structure_military_dock.xml.afe73d7a822ce144.xmb",
+      "VFS_READ cache/public/simulation/templates/template_structure_military.xml.f5584c080ae39c17.xmb",
+      "VFS_READ cache/public/simulation/templates/template_structure.xml.9bb57bbc078005f1.xmb",
+      "VFS_READ cache/public/simulation/templates/units/athen/ship_fishing.xml.9181f8a3d96435e2.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_ship_fishing.xml.1fbdb1eec767ea3a.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_ship.xml.3f2c5fb2f93e45a5.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit.xml.3d1ba481d97d2a4c.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/civ/athen.xml.e12033df7d166675.xmb",
+      "VFS_READ cache/public/simulation/templates/units/athen/ship_arrow.xml.02a40c24ab6baafe.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_ship_warship_arrow.xml.529d89a509a0b7e9.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_ship_warship.xml.93fbbafda9b1a76d.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_ship.xml.3f2c5fb2f93e45a5.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit.xml.3d1ba481d97d2a4c.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/civ/athen.xml.e12033df7d166675.xmb",
+      "VFS_READ cache/public/simulation/templates/units/athen/ship_ram.xml.02a40c24ab6baafe.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_ship_warship_ram.xml.2ff0e1d5588ad59b.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_ship_warship.xml.93fbbafda9b1a76d.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_ship.xml.3f2c5fb2f93e45a5.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit.xml.3d1ba481d97d2a4c.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/civ/athen.xml.e12033df7d166675.xmb",
+      "VFS_READ cache/public/simulation/templates/units/athen/champion_marine_dock.xml.88ada3c9668187d5.xmb",
+      "VFS_READ cache/public/simulation/templates/units/athen/champion_marine.xml.21c693ef1ccb9073.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_champion_infantry_swordsman.xml.dc015a307d02764b.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_champion_infantry.xml.3d866b6d36c5eb72.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_champion.xml.e1de932d3f9c82bd.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit.xml.3d1ba481d97d2a4c.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/spec_champ.xml.931698060d4ea4b4.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/civ/athen.xml.e12033df7d166675.xmb",
+      "VFS_READ cache/public/simulation/templates/units/athen/infantry_archer_b_dock.xml.bf935c939053d5e8.xmb",
+      "VFS_READ cache/public/simulation/templates/units/athen/infantry_archer_b.xml.3e6938e613c87f0e.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_infantry_ranged_archer.xml.6fcf4a384df35331.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_infantry_ranged.xml.03db8ec378aaefb8.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_infantry.xml.ef91a538ac08d76f.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit.xml.3d1ba481d97d2a4c.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/builder.xml.708fe74f771608c3.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/merc_inf.xml.5738a27d929ac949.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/mercenary.xml.cc21088b40c6673c.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/civ/athen.xml.e12033df7d166675.xmb",
+      "Hotloading new value for global \"InitAttributes\".",
+      "SCENE_LOADER_FINISHED",
+      "VFS_READ cache/public/simulation/templates/units/athen/infantry_javelineer_a.xml.e8f5f8467a648de1.xmb",
+      "VFS_READ cache/public/simulation/templates/units/athen/infantry_javelineer_b.xml.5bc9804a120654be.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_infantry_ranged_javelineer.xml.6fcf4a384df35331.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_infantry_ranged.xml.03db8ec378aaefb8.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_infantry.xml.ef91a538ac08d76f.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit.xml.3d1ba481d97d2a4c.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/builder.xml.708fe74f771608c3.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/merc_inf.xml.5738a27d929ac949.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/mercenary.xml.cc21088b40c6673c.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/civ/athen.xml.e12033df7d166675.xmb",
+      "VFS_READ cache/public/simulation/templates/units/athen/infantry_archer_a.xml.718689ff024c3816.xmb",
+      "VFS_READ cache/public/simulation/templates/units/athen/infantry_archer_b.xml.3e6938e613c87f0e.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_infantry_ranged_archer.xml.6fcf4a384df35331.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_infantry_ranged.xml.03db8ec378aaefb8.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_infantry.xml.ef91a538ac08d76f.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit.xml.3d1ba481d97d2a4c.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/builder.xml.708fe74f771608c3.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/merc_inf.xml.5738a27d929ac949.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/mercenary.xml.cc21088b40c6673c.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/civ/athen.xml.e12033df7d166675.xmb",
+      "VFS_READ cache/public/simulation/templates/units/athen/infantry_archer_a_dock.xml.1b3c9d9c51283276.xmb",
+      "VFS_READ cache/public/simulation/templates/units/athen/infantry_archer_b_dock.xml.bf935c939053d5e8.xmb",
+      "VFS_READ cache/public/simulation/templates/units/athen/infantry_archer_b.xml.3e6938e613c87f0e.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_infantry_ranged_archer.xml.6fcf4a384df35331.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_infantry_ranged.xml.03db8ec378aaefb8.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_infantry.xml.ef91a538ac08d76f.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit.xml.3d1ba481d97d2a4c.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/builder.xml.708fe74f771608c3.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/merc_inf.xml.5738a27d929ac949.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/mercenary.xml.cc21088b40c6673c.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/civ/athen.xml.e12033df7d166675.xmb",
+      "SCENE_GAME_INITIALIZED",
+      "VFS_READ simulation/data/pathfinder.rng",
+      "VFS_READ cache/mod/simulation/data/pathfinder.xml.58a331457bd42987.xmb",
+      "VFS_READ cache/mod/shaders/effects/minimap.xml.9af7690ebe2114f9.xmb",
+      "SCENE_MAP_LOADED 3",
+      "SCENE_STATS {\"frame\":300,\"tick\":0,\"restarts\":3,\"paused\":true,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}",
+      "SCENE_PAUSED 0",
+      "SCENE_STATS {\"frame\":330,\"tick\":65,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}",
+      "SCENE_STATS {\"frame\":360,\"tick\":137,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}",
+      "SCENE_STATS {\"frame\":390,\"tick\":207,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}",
+      "SCENE_STATS {\"frame\":420,\"tick\":277,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}",
+      "SCENE_STATS {\"frame\":450,\"tick\":350,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}",
+      "SCENE_STATS {\"frame\":480,\"tick\":424,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}",
+      "SCENE_STATS {\"frame\":510,\"tick\":497,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}",
+      "SCENE_STATS {\"frame\":540,\"tick\":572,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}",
+      "SCENE_STATS {\"frame\":570,\"tick\":646,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}",
+      "SCENE_STATS {\"frame\":600,\"tick\":719,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}",
+      "SCENE_STATS {\"frame\":630,\"tick\":792,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}",
+      "SCENE_STATS {\"frame\":660,\"tick\":866,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}",
+      "SCENE_STATS {\"frame\":690,\"tick\":938,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}",
+      "SCENE_STATS {\"frame\":720,\"tick\":1012,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}",
+      "SCENE_STATS {\"frame\":750,\"tick\":1083,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}",
+      "SCENE_STATS {\"frame\":780,\"tick\":1154,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}",
+      "SCENE_STATS {\"frame\":810,\"tick\":1226,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}",
+      "SCENE_STATS {\"frame\":840,\"tick\":1306,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}",
+      "SCENE_STATS {\"frame\":870,\"tick\":1396,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}",
+      "SCENE_STATS {\"frame\":900,\"tick\":1480,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}",
+      "SCENE_STATS {\"frame\":930,\"tick\":1564,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}",
+      "SCENE_STATS {\"frame\":960,\"tick\":1645,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}",
+      "SCENE_STATS {\"frame\":990,\"tick\":1723,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}",
+      "SCENE_STATS {\"frame\":1020,\"tick\":1802,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}",
+      "SCENE_STATS {\"frame\":1050,\"tick\":1892,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}",
+      "SCENE_STATS {\"frame\":1080,\"tick\":1987,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}",
+      "SCENE_STATS {\"frame\":1110,\"tick\":2082,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}",
+      "SCENE_STATS {\"frame\":1140,\"tick\":2179,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}",
+      "SCENE_STATS {\"frame\":1170,\"tick\":2272,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}",
+      "SCENE_STATS {\"frame\":1200,\"tick\":2367,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}",
+      "SCENE_STATS {\"frame\":1230,\"tick\":2461,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}",
+      "SCENE_STATS {\"frame\":1260,\"tick\":2551,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}",
+      "SCENE_STATS {\"frame\":1290,\"tick\":2629,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}",
+      "SCENE_STATS {\"frame\":1320,\"tick\":2704,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}",
+      "SCENE_STATS {\"frame\":1350,\"tick\":2780,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}",
+      "SCENE_STATS {\"frame\":1380,\"tick\":2857,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}",
+      "SCENE_STATS {\"frame\":1410,\"tick\":2935,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}",
+      "SCENE_STATS {\"frame\":1440,\"tick\":3011,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}",
+      "SCENE_STATS {\"frame\":1470,\"tick\":3085,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}",
+      "SCENE_STATS {\"frame\":1500,\"tick\":3159,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}",
+      "SCENE_STATS {\"frame\":1530,\"tick\":3234,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}",
+      "SCENE_STATS {\"frame\":1560,\"tick\":3307,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}",
+      "SCENE_STATS {\"frame\":1590,\"tick\":3382,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}",
+      "SCENE_STATS {\"frame\":1620,\"tick\":3455,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}",
+      "SCENE_STATS {\"frame\":1650,\"tick\":3530,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}",
+      "SCENE_STATS {\"frame\":1680,\"tick\":3604,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}",
+      "SCENE_STATS {\"frame\":1710,\"tick\":3679,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}",
+      "SCENE_STATS {\"frame\":1740,\"tick\":3751,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}",
+      "SCENE_STATS {\"frame\":1770,\"tick\":3818,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}",
+      "SCENE_STATS {\"frame\":1800,\"tick\":3886,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}",
+      "SCENE_STATS {\"frame\":1830,\"tick\":3957,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}",
+      "SCENE_STATS {\"frame\":1860,\"tick\":4024,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}",
+      "SCENE_STATS {\"frame\":1890,\"tick\":4093,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}",
+      "SCENE_STATS {\"frame\":1920,\"tick\":4161,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}",
+      "SCENE_STATS {\"frame\":1950,\"tick\":4227,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}",
+      "SCENE_STATS {\"frame\":1980,\"tick\":4295,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}",
+      "SCENE_STATS {\"frame\":2010,\"tick\":4360,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}",
+      "SCENE_STATS {\"frame\":2040,\"tick\":4426,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}",
+      "SCENE_STATS {\"frame\":2070,\"tick\":4492,\"restarts\":3,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}",
+      "SCENE_STOPPED"
+    ]
+  },
+  "heartbeat": 100755,
+  "remainingWorkerTargets": [
+    {
+      "targetId": "3738E74386913A6EFCD535EF8933B70C",
+      "type": "worker",
+      "title": "em-pthread-8",
+      "url": "http://localhost:8080/pyrogenesis-scene.mjs",
+      "attached": true,
+      "canAccessOpener": false,
+      "browserContextId": "88269F433061661C90B840D1BFD6C1D1"
+    }
+  ]
+}

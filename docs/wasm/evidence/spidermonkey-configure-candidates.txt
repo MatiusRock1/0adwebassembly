@@ -1,0 +1,25 @@
+/build/research/mozjs-128.13.0/build/moz.configure/init.configure:606:    elif cpu == "wasm32" and allow_wasi:
+/build/research/mozjs-128.13.0/build/moz.configure/init.configure:607:        canonical_cpu = "wasm32"
+/build/research/mozjs-128.13.0/build/moz.configure/toolchain.configure:982:    return split_triplet("wasm32-wasi", allow_wasi=True)
+/build/research/mozjs-128.13.0/build/moz.configure/toolchain.configure:2025:        # rpath-link is irrelevant to wasm, see for more info https://github.com/emscripten-core/emscripten/issues/11076.
+/build/research/mozjs-128.13.0/js/moz.configure:273:option("--enable-jit", default=jit_default, help="{Enable|Disable} use of the JITs")
+/build/research/mozjs-128.13.0/js/moz.configure:279:        die("--enable-ion is deprecated, use --enable-jit instead")
+/build/research/mozjs-128.13.0/js/moz.configure:281:        die("--disable-ion is deprecated, use --disable-jit instead")
+/build/research/mozjs-128.13.0/js/moz.configure:294:@depends("--enable-jit", "--enable-simulator", target)
+/build/research/mozjs-128.13.0/js/moz.configure:328:@depends("--enable-jit", simulator, target)
+/build/research/mozjs-128.13.0/js/moz.configure:357:set_config("JS_CODEGEN_WASM32", jit_codegen.wasm32)
+/build/research/mozjs-128.13.0/js/moz.configure:368:set_define("JS_CODEGEN_WASM32", jit_codegen.wasm32)
+/build/research/mozjs-128.13.0/js/moz.configure:509:    "--enable-jitspew",
+/build/research/mozjs-128.13.0/js/moz.configure:514:set_define("JS_JITSPEW", depends_if("--enable-jitspew")(lambda _: True))
+/build/research/mozjs-128.13.0/js/moz.configure:515:set_config("JS_JITSPEW", depends_if("--enable-jitspew")(lambda _: True))
+/build/research/mozjs-128.13.0/js/moz.configure:518:set_define("JS_STRUCTURED_SPEW", depends_if("--enable-jitspew")(lambda _: True))
+/build/research/mozjs-128.13.0/js/moz.configure:519:set_config("JS_STRUCTURED_SPEW", depends_if("--enable-jitspew")(lambda _: True))
+/build/research/mozjs-128.13.0/js/moz.configure:522:@depends("--enable-jit", "--enable-jitspew", simulator, target, moz_debug)
+/build/research/mozjs-128.13.0/js/moz.configure:539:@depends("--enable-jit", "--enable-jitspew", simulator, target, moz_debug)
+/build/research/mozjs-128.13.0/js/moz.configure:556:@depends("--enable-jit", "--enable-jitspew", simulator, target, moz_debug)
+/build/research/mozjs-128.13.0/js/moz.configure:789:    "--enable-jit",
+/build/research/mozjs-128.13.0/js/moz.configure:825:    "--enable-jit",
+/build/research/mozjs-128.13.0/js/moz.configure:837:        die("--enable-wasm-jspi requires --enable-jit")
+/build/research/mozjs-128.13.0/js/moz.configure:902:@depends("--enable-jit", "--enable-simulator", target)
+/build/research/mozjs-128.13.0/js/moz.configure:923:    "--enable-jit",
+/build/research/mozjs-128.13.0/js/moz.configure:933:        die("--enable-wasm-simd requires --enable-jit")

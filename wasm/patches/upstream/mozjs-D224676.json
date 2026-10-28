@@ -1,0 +1,9 @@
+{
+  "author": "Chris Fallin",
+  "reviewer": "jandem",
+  "bug": "https://bugzilla.mozilla.org/show_bug.cgi?id=1922981",
+  "review": "https://phabricator.services.mozilla.com/D224676",
+  "part": "24 / 39: PBL: support constructor and arg-underflow calls in ICs",
+  "SHA256": "1c0e2e85109d1f69d8db6d6eedd014a511ce2c7446f1b98232946d8d781f47c2",
+  "adaptation": "Only non-constructing argument-underflow handling: pad scripted formals with undefined, retain actual argc, and allow native callees to receive their actual short argc. Constructor/cross-realm/spread fallbacks, existing rooting, all other opcode bodies and public headers remain unchanged in the isolated SM128 source copy."
+}

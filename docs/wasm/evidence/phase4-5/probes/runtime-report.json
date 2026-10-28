@@ -1,0 +1,267 @@
+{
+  "scope": "API_ABI_ONLY",
+  "phase45Accepted": false,
+  "engineBackendIntegrated": false,
+  "physicalPresentationVerified": false,
+  "headless": false,
+  "results": [
+    {
+      "target": "legacy-main",
+      "passed": true,
+      "console": [],
+      "errors": [],
+      "artifacts": {
+        ".mjs": "588dd69f296e7f341801850b136348f362c69edb0e92238cc1231766be5522a1",
+        ".wasm": "63c5ae0d3923a249a3947308dd4cc98c05bb3cd8da4c73d4ab6459174f288f2e"
+      },
+      "crossOriginIsolated": true,
+      "runtime": {
+        "output": [
+          "WEBGPU_INSTANCE_CREATED_NOT_ENGINE_INTEGRATED"
+        ],
+        "errors": [],
+        "exit": null
+      }
+    },
+    {
+      "target": "legacy-pthread",
+      "passed": true,
+      "console": [],
+      "errors": [],
+      "artifacts": {
+        ".mjs": "4731cf171068c260d3129efe046bd0e5615c195e6656c177e4896ac8dde86da1",
+        ".wasm": "f9c125b1effa0e2994974ef4eaee74dae7610224caebdf45932927e8c0e26218"
+      },
+      "crossOriginIsolated": true,
+      "runtime": {
+        "output": [
+          "WEBGPU_INSTANCE_CREATED_NOT_ENGINE_INTEGRATED"
+        ],
+        "errors": [],
+        "exit": 0
+      }
+    },
+    {
+      "target": "emdawn-main",
+      "passed": true,
+      "console": [],
+      "errors": [],
+      "artifacts": {
+        ".mjs": "bae4486a738cdf92e35d0d9d3d8cff42e0352bef4b6f1bef41775fb89533f733",
+        ".wasm": "bf63cdc4e2a66f42e632e99e54c0ac32aebc3b7081fac52b79c41a79906ec55a"
+      },
+      "crossOriginIsolated": true,
+      "runtime": {
+        "output": [
+          "WEBGPU_INSTANCE_CREATED_NOT_ENGINE_INTEGRATED"
+        ],
+        "errors": [],
+        "exit": null
+      }
+    },
+    {
+      "target": "emdawn-pthread",
+      "passed": true,
+      "console": [],
+      "errors": [],
+      "artifacts": {
+        ".mjs": "3e0d9a07eeac7c56bbe2fdfa31cf8804791286d5c349ab43a5084bd24ea1ff56",
+        ".wasm": "df2f214d539a5cc6d80e5d26b651e46054c08c085ccd398a63e0eccec8c35ce5"
+      },
+      "crossOriginIsolated": true,
+      "runtime": {
+        "output": [
+          "WEBGPU_INSTANCE_CREATED_NOT_ENGINE_INTEGRATED"
+        ],
+        "errors": [],
+        "exit": 0
+      }
+    },
+    {
+      "target": "emdawn-device-main",
+      "passed": true,
+      "console": [
+        "WEBGPU_OWNER:Window",
+        "The powerPreference option is currently ignored when calling requestAdapter() on Windows. See https://crbug.com/369219127"
+      ],
+      "errors": [],
+      "artifacts": {
+        ".mjs": "90b5d0d287e0ed19c375efdbb8af025dc24deab4f0dee003c98aa09f059a0159",
+        ".wasm": "2d8ac6d56b52b7cf52114dac15643ae9a61b8ddda42abb08d2843f2313f3e76f"
+      },
+      "crossOriginIsolated": true,
+      "runtime": {
+        "output": [
+          "WEBGPU_DEVICE_UPLOAD_DRAINED_NOT_ENGINE_INTEGRATED"
+        ],
+        "errors": [],
+        "exit": 0
+      }
+    },
+    {
+      "target": "emdawn-device-pthread",
+      "passed": true,
+      "console": [
+        "WEBGPU_OWNER:DedicatedWorkerGlobalScope"
+      ],
+      "errors": [],
+      "artifacts": {
+        ".mjs": "9d0a671a435cc21a996369dc474fe7e3ab3b310e7c929d3bc1e662bc994d96bf",
+        ".wasm": "16b99bcd749e214ba59a88e812aa017e3b70ed1f189ece21cb8f1120080d33b5"
+      },
+      "crossOriginIsolated": true,
+      "runtime": {
+        "output": [
+          "WEBGPU_DEVICE_UPLOAD_DRAINED_NOT_ENGINE_INTEGRATED"
+        ],
+        "errors": [],
+        "exit": 0
+      }
+    }
+  ],
+  "browserVersion": "155.0.4283.45",
+  "launcherGuard": {
+    "result": {
+      "error": "Este build a\u00fan no integra el backend WebGPU del motor. Selecciona WebGL; la sonda WebGPU solo comprueba acceso a la API."
+    },
+    "contextRequests": [],
+    "factoryStarted": false,
+    "selectionUnlocked": true
+  },
+  "javascriptProbe": {
+    "scope": "API_ACCESS_ONLY",
+    "engineBackendIntegrated": false,
+    "phase45Accepted": false,
+    "events": [
+      {
+        "type": "ready",
+        "backend": "webgpu",
+        "powerPreference": "high-performance",
+        "owner": "main-thread",
+        "adapter": {
+          "vendor": "amd",
+          "architecture": "gcn-5",
+          "device": "",
+          "description": ""
+        },
+        "adapterFeatures": [
+          "bgra8unorm-storage",
+          "clip-distances",
+          "core-features-and-limits",
+          "depth-clip-control",
+          "depth32float-stencil8",
+          "dual-source-blending",
+          "float32-blendable",
+          "float32-filterable",
+          "indirect-first-instance",
+          "primitive-index",
+          "rg11b10ufloat-renderable",
+          "shader-f16",
+          "subgroup-size-control",
+          "subgroups",
+          "texture-component-swizzle",
+          "texture-compression-bc",
+          "texture-compression-bc-sliced-3d",
+          "texture-formats-tier1",
+          "texture-formats-tier2",
+          "timestamp-query"
+        ],
+        "adapterLimits": {
+          "maxTextureDimension1D": 16384,
+          "maxTextureDimension2D": 16384,
+          "maxTextureDimension3D": 2048,
+          "maxTextureArrayLayers": 2048,
+          "maxBindGroups": 4,
+          "maxBindGroupsPlusVertexBuffers": 24,
+          "maxBindingsPerBindGroup": 1000,
+          "maxDynamicUniformBuffersPerPipelineLayout": 10,
+          "maxDynamicStorageBuffersPerPipelineLayout": 8,
+          "maxSampledTexturesPerShaderStage": 48,
+          "maxSamplersPerShaderStage": 16,
+          "maxStorageBuffersPerShaderStage": 16,
+          "maxStorageTexturesPerShaderStage": 8,
+          "maxUniformBuffersPerShaderStage": 12,
+          "maxUniformBufferBindingSize": 65536,
+          "maxStorageBufferBindingSize": 2147483644,
+          "minUniformBufferOffsetAlignment": 256,
+          "minStorageBufferOffsetAlignment": 256,
+          "maxVertexBuffers": 8,
+          "maxBufferSize": 2147483648,
+          "maxVertexAttributes": 30,
+          "maxVertexBufferArrayStride": 2048,
+          "maxInterStageShaderVariables": 28,
+          "maxColorAttachments": 8,
+          "maxColorAttachmentBytesPerSample": 128,
+          "maxComputeWorkgroupStorageSize": 32768,
+          "maxComputeInvocationsPerWorkgroup": 1024,
+          "maxComputeWorkgroupSizeX": 1024,
+          "maxComputeWorkgroupSizeY": 1024,
+          "maxComputeWorkgroupSizeZ": 64,
+          "maxComputeWorkgroupsPerDimension": 65535,
+          "maxImmediateSize": 64,
+          "maxStorageBuffersInFragmentStage": 16,
+          "maxStorageTexturesInFragmentStage": 8,
+          "maxStorageBuffersInVertexStage": 16,
+          "maxStorageTexturesInVertexStage": 8
+        },
+        "deviceFeatures": [
+          "core-features-and-limits"
+        ],
+        "deviceLimits": {
+          "maxTextureDimension1D": 8192,
+          "maxTextureDimension2D": 8192,
+          "maxTextureDimension3D": 2048,
+          "maxTextureArrayLayers": 256,
+          "maxBindGroups": 4,
+          "maxBindGroupsPlusVertexBuffers": 24,
+          "maxBindingsPerBindGroup": 1000,
+          "maxDynamicUniformBuffersPerPipelineLayout": 8,
+          "maxDynamicStorageBuffersPerPipelineLayout": 4,
+          "maxSampledTexturesPerShaderStage": 16,
+          "maxSamplersPerShaderStage": 16,
+          "maxStorageBuffersPerShaderStage": 8,
+          "maxStorageTexturesPerShaderStage": 4,
+          "maxUniformBuffersPerShaderStage": 12,
+          "maxUniformBufferBindingSize": 65536,
+          "maxStorageBufferBindingSize": 134217728,
+          "minUniformBufferOffsetAlignment": 256,
+          "minStorageBufferOffsetAlignment": 256,
+          "maxVertexBuffers": 8,
+          "maxBufferSize": 268435456,
+          "maxVertexAttributes": 16,
+          "maxVertexBufferArrayStride": 2048,
+          "maxInterStageShaderVariables": 16,
+          "maxColorAttachments": 8,
+          "maxColorAttachmentBytesPerSample": 32,
+          "maxComputeWorkgroupStorageSize": 16384,
+          "maxComputeInvocationsPerWorkgroup": 256,
+          "maxComputeWorkgroupSizeX": 256,
+          "maxComputeWorkgroupSizeY": 256,
+          "maxComputeWorkgroupSizeZ": 64,
+          "maxComputeWorkgroupsPerDimension": 65535,
+          "maxImmediateSize": 64,
+          "maxStorageBuffersInFragmentStage": 8,
+          "maxStorageTexturesInFragmentStage": 4,
+          "maxStorageBuffersInVertexStage": 8,
+          "maxStorageTexturesInVertexStage": 4
+        },
+        "fallbackAdapter": null,
+        "format": "bgra8unorm"
+      },
+      {
+        "type": "empty-submission-completed"
+      },
+      {
+        "type": "disposed"
+      },
+      {
+        "type": "device-lost",
+        "backend": "webgpu",
+        "reason": "destroyed",
+        "message": "Device was destroyed.",
+        "expected": true
+      }
+    ]
+  },
+  "passed": true
+}

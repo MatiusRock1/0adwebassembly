@@ -1,0 +1,146 @@
+{
+  "scope": "BINDINGS_COMPILE_LINK_ONLY",
+  "engineBackendIntegrated": false,
+  "phase45Accepted": false,
+  "emscripten": "emcc (Emscripten gcc/clang-like replacement + linker emulating GNU ld) 4.0.10 (b7dc6e5747465580df5984e723b9d1f10d8e804b)\nCopyright (C) 2025 the Emscripten authors (see AUTHORS.txt)\nThis is free and open source software under the MIT license.\nThere is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n",
+  "sourceSHA256": "00e0aa40a840fbd1147cd1b1a1202fac176b322cf2b650069a5b5f4dd0ad840d",
+  "emdawnPortSHA256": "18f832a609a1c06d92f348365c8a80dff5e85d896f68c234d1d3725724096dfa",
+  "results": [
+    {
+      "target": "legacy-main",
+      "command": [
+        "em++",
+        "/phase45-probes/webgpu-bindings.cpp",
+        "-sUSE_WEBGPU=1",
+        "-O2",
+        "-sMODULARIZE=1",
+        "-sEXPORT_ES6=1",
+        "-sENVIRONMENT=web,worker",
+        "-o",
+        "/phase45-build/legacy-main.mjs"
+      ],
+      "exitCode": 0,
+      "runtimeVerified": false
+    },
+    {
+      "target": "legacy-pthread",
+      "command": [
+        "em++",
+        "/phase45-probes/webgpu-bindings.cpp",
+        "-sUSE_WEBGPU=1",
+        "-O2",
+        "-sMODULARIZE=1",
+        "-sEXPORT_ES6=1",
+        "-sENVIRONMENT=web,worker",
+        "-o",
+        "/phase45-build/legacy-pthread.mjs",
+        "-pthread",
+        "-sPROXY_TO_PTHREAD=1",
+        "-sPTHREAD_POOL_SIZE=1",
+        "-sEXIT_RUNTIME=1"
+      ],
+      "exitCode": 0,
+      "runtimeVerified": false
+    },
+    {
+      "target": "emdawn-main",
+      "command": [
+        "em++",
+        "/phase45-probes/webgpu-bindings.cpp",
+        "--use-port=emdawnwebgpu",
+        "-O2",
+        "-sMODULARIZE=1",
+        "-sEXPORT_ES6=1",
+        "-sENVIRONMENT=web,worker",
+        "-o",
+        "/phase45-build/emdawn-main.mjs"
+      ],
+      "exitCode": 0,
+      "runtimeVerified": false
+    },
+    {
+      "target": "emdawn-pthread",
+      "command": [
+        "em++",
+        "/phase45-probes/webgpu-bindings.cpp",
+        "--use-port=emdawnwebgpu",
+        "-O2",
+        "-sMODULARIZE=1",
+        "-sEXPORT_ES6=1",
+        "-sENVIRONMENT=web,worker",
+        "-o",
+        "/phase45-build/emdawn-pthread.mjs",
+        "-pthread",
+        "-sPROXY_TO_PTHREAD=1",
+        "-sPTHREAD_POOL_SIZE=1",
+        "-sEXIT_RUNTIME=1"
+      ],
+      "exitCode": 0,
+      "runtimeVerified": false
+    },
+    {
+      "target": "emdawn-device-main",
+      "command": [
+        "em++",
+        "/phase45-probes/webgpu-device.cpp",
+        "--use-port=emdawnwebgpu",
+        "-O2",
+        "-sMODULARIZE=1",
+        "-sEXPORT_ES6=1",
+        "-sENVIRONMENT=web,worker",
+        "-sEXIT_RUNTIME=1",
+        "-sASSERTIONS=1",
+        "-o",
+        "/phase45-build/emdawn-device-main.mjs"
+      ],
+      "exitCode": 0,
+      "runtimeVerified": false
+    },
+    {
+      "target": "emdawn-device-pthread",
+      "command": [
+        "em++",
+        "/phase45-probes/webgpu-device.cpp",
+        "--use-port=emdawnwebgpu",
+        "-O2",
+        "-sMODULARIZE=1",
+        "-sEXPORT_ES6=1",
+        "-sENVIRONMENT=web,worker",
+        "-sEXIT_RUNTIME=1",
+        "-sASSERTIONS=1",
+        "-o",
+        "/phase45-build/emdawn-device-pthread.mjs",
+        "-pthread",
+        "-sPROXY_TO_PTHREAD=1",
+        "-sPTHREAD_POOL_SIZE=1"
+      ],
+      "exitCode": 0,
+      "runtimeVerified": false
+    }
+  ],
+  "licenses": {
+    "webgpu/src/LICENSE": "2f79bf3699b0870251255b381670237f73f21a04a38c094f791eba39c5fd1df7",
+    "webgpu_cpp/LICENSE": "7e1efc85a78732a13d7ddfc8b52912da7c8f8d3c6d334624b20e3f3a96297de0"
+  },
+  "deviceSourceSHA256": "49fa9607e5c85ba5b6360588a8e4fa2a19dd45ecf0cd386b47ae3b6147ef90ef",
+  "artifacts": {
+    "emdawn-device-main.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "emdawn-device-main.mjs": "90b5d0d287e0ed19c375efdbb8af025dc24deab4f0dee003c98aa09f059a0159",
+    "emdawn-device-main.wasm": "2d8ac6d56b52b7cf52114dac15643ae9a61b8ddda42abb08d2843f2313f3e76f",
+    "emdawn-device-pthread.log": "9ffbe09dc3f66d8c76f011b8605dac8c778ad255d7c5a8681f903c4f3b8ee82c",
+    "emdawn-device-pthread.mjs": "9d0a671a435cc21a996369dc474fe7e3ab3b310e7c929d3bc1e662bc994d96bf",
+    "emdawn-device-pthread.wasm": "16b99bcd749e214ba59a88e812aa017e3b70ed1f189ece21cb8f1120080d33b5",
+    "emdawn-main.log": "850b8cce418b1e2df962521f8636cb3f401c4dea8626751dff0f336ecdf96cb5",
+    "emdawn-main.mjs": "bae4486a738cdf92e35d0d9d3d8cff42e0352bef4b6f1bef41775fb89533f733",
+    "emdawn-main.wasm": "bf63cdc4e2a66f42e632e99e54c0ac32aebc3b7081fac52b79c41a79906ec55a",
+    "emdawn-pthread.log": "95033f0839fda656eab75dd64869cc76cce23a262ff71037e0e8e4747f7dffad",
+    "emdawn-pthread.mjs": "3e0d9a07eeac7c56bbe2fdfa31cf8804791286d5c349ab43a5084bd24ea1ff56",
+    "emdawn-pthread.wasm": "df2f214d539a5cc6d80e5d26b651e46054c08c085ccd398a63e0eccec8c35ce5",
+    "legacy-main.log": "ad8fb5153ab399a77159fe920b62eb946295d6da649027e686b25cbaa926e6cc",
+    "legacy-main.mjs": "588dd69f296e7f341801850b136348f362c69edb0e92238cc1231766be5522a1",
+    "legacy-main.wasm": "63c5ae0d3923a249a3947308dd4cc98c05bb3cd8da4c73d4ab6459174f288f2e",
+    "legacy-pthread.log": "ad8fb5153ab399a77159fe920b62eb946295d6da649027e686b25cbaa926e6cc",
+    "legacy-pthread.mjs": "4731cf171068c260d3129efe046bd0e5615c195e6656c177e4896ac8dde86da1",
+    "legacy-pthread.wasm": "f9c125b1effa0e2994974ef4eaee74dae7610224caebdf45932927e8c0e26218"
+  }
+}

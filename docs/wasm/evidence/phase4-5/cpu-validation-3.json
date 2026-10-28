@@ -1,0 +1,54 @@
+{
+  "passed": true,
+  "phase45Accepted": false,
+  "scope": "CPU unit validation only; no GPU or physical presentation acceptance",
+  "runs": [
+    {
+      "command": [
+        "node",
+        "--test",
+        "wasm/scripts/test-renderer-session.mjs",
+        "wasm/scripts/test-webgpu-textures.mjs",
+        "wasm/scripts/test-webgpu-lifetime.mjs",
+        "wasm/scripts/test-webgpu-formats.mjs"
+      ],
+      "exitCode": 0,
+      "stdout": "\u00e2\u0153\u201d WebGPU owns its canvas, records prototype limits and drains before destruction (4.8534ms)\n\u00e2\u0153\u201d missing API, isolation or required feature never fall back to GL (1.0996ms)\n\u00e2\u0153\u201d canvas configuration failure destroys the requested device (0.6947ms)\n\u00e2\u0153\u201d validation scopes unwind on thrown work and surface validation errors (0.4753ms)\n\u00e2\u0153\u201d device loss is reported and prevents further work (0.3621ms)\n\u00e2\u0153\u201d rejected queue completion still releases the device and canvas (0.2896ms)\n\u00e2\u0153\u201d WebGL selection creates only GL and reports the effective renderer (0.2915ms)\n\u00e2\u0153\u201d optional capabilities are requested only when available and absence is recorded (0.4021ms)\n\u00e2\u0153\u201d optional sampled/renderable formats follow enabled device features (1.1677ms)\n\u00e2\u0153\u201d queue failure during engine disposal still frees resources and closes the session (3.8012ms)\n\u00e2\u0153\u201d retirement waits for submitted work and drops shader bindings and pipeline cache entries (1.6185ms)\n\u00e2\u0153\u201d retired textures drop only bind groups that retain their views after queue completion (0.4526ms)\n\u00e2\u0153\u201d 1x1 BC1 original texture retains its logical texel and dimensions (4.3319ms)\n\u00e2\u0153\u201d BC1 interpolation and cropped block rows preserve palette order (0.2848ms)\n\u00e2\u0153\u201d BC1 RGB and RGBA differ only in the transparent palette entry (0.2398ms)\n\u00e2\u0153\u201d BC2 explicit alpha and BC3 endpoint/interpolated alpha are retained (0.2652ms)\n\u00e2\u0153\u201d truncated compressed resource data fails explicitly (0.5046ms)\n\u00e2\u201e\u00b9 tests 17\n\u00e2\u201e\u00b9 suites 0\n\u00e2\u201e\u00b9 pass 17\n\u00e2\u201e\u00b9 fail 0\n\u00e2\u201e\u00b9 cancelled 0\n\u00e2\u201e\u00b9 skipped 0\n\u00e2\u201e\u00b9 todo 0\n\u00e2\u201e\u00b9 duration_ms 148.5831\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\jorlu\\OneDrive\\Documentos\\emprendimiento\\0 AD\\0adwebassembly\\wasm\\.venv-phase3\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "wasm/scripts",
+        "-p",
+        "test_phase45_*.py",
+        "-v"
+      ],
+      "exitCode": 0,
+      "stdout": "PLAN_ONLY_NO_GPU C:\\Users\\jorlu\\OneDrive\\Documentos\\emprendimiento\\0 AD\\0adwebassembly\\wasm\\build\\phase4-5\\test-tmp\\tmpo6o_jzmy\\plan\nPLAN_ONLY_NO_GPU C:\\Users\\jorlu\\OneDrive\\Documentos\\emprendimiento\\0 AD\\0adwebassembly\\wasm\\build\\phase4-5\\test-tmp\\tmpdcbwlwd7\\plan\n",
+      "stderr": "test_duplicate_repetition_does_not_count_three_times (test_phase45_benchmark_contract.AcceptanceContract.test_duplicate_repetition_does_not_count_three_times) ... ok\ntest_missing_or_partial_run_cannot_pass (test_phase45_benchmark_contract.AcceptanceContract.test_missing_or_partial_run_cannot_pass) ... ok\ntest_original_turn_backlog_must_be_observed_and_not_grow (test_phase45_benchmark_contract.AcceptanceContract.test_original_turn_backlog_must_be_observed_and_not_grow) ... ok\ntest_plan_is_serial_and_validates_arguments (test_phase45_benchmark_contract.AcceptanceContract.test_plan_is_serial_and_validates_arguments) ... ok\ntest_short_measured_duration_cannot_use_long_plan (test_phase45_benchmark_contract.AcceptanceContract.test_short_measured_duration_cannot_use_long_plan) ... ok\ntest_six_complete_runs_pass_performance_but_never_accept_phase (test_phase45_benchmark_contract.AcceptanceContract.test_six_complete_runs_pass_performance_but_never_accept_phase) ... ok\ntest_wrong_backend_adapter_errors_lost_events_or_slow_simulation_fail (test_phase45_benchmark_contract.AcceptanceContract.test_wrong_backend_adapter_errors_lost_events_or_slow_simulation_fail) ... ok\ntest_original_simulation_bytes_and_complete_archive_are_preserved (test_phase45_simulation_snapshot.SimulationSnapshotContract.test_original_simulation_bytes_and_complete_archive_are_preserved) ... ok\ntest_render_local_decay_is_separate_from_every_nonlocal_component (test_phase45_simulation_snapshot.SimulationSnapshotContract.test_render_local_decay_is_separate_from_every_nonlocal_component) ... ok\ntest_dry_modes_never_spawn_processes_or_connect_to_browser (test_phase45_standalone_safety.StandaloneSafety.test_dry_modes_never_spawn_processes_or_connect_to_browser) ... ok\ntest_occupied_port_is_rejected_before_a_browser_can_be_launched (test_phase45_standalone_safety.StandaloneSafety.test_occupied_port_is_rejected_before_a_browser_can_be_launched) ... ok\n\n----------------------------------------------------------------------\nRan 11 tests in 0.085s\n\nOK\n"
+    },
+    {
+      "command": [
+        "C:\\Users\\jorlu\\OneDrive\\Documentos\\emprendimiento\\0 AD\\0adwebassembly\\wasm\\.venv-phase3\\Scripts\\python.exe",
+        "wasm/scripts/test-presentation.py"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "..........\n----------------------------------------------------------------------\nRan 10 tests in 0.012s\n\nOK\n"
+    }
+  ],
+  "sourceSHA256": {
+    "wasm/browser/application-pointer.mjs": "0e781c584dff24c3005f875b070f715046dabe3ea1e388edfecd3f998b36bb47",
+    "wasm/browser/application.mjs": "5593cd6fe416f81e3939ef14558580fdf4d987ea736eaffc300438c4fc33d80b",
+    "wasm/browser/webgpu-engine.mjs": "69a01f723b9dfc001eca6d2e03ac5a06a22be48d704e4a349b9ce75a871efc1f",
+    "wasm/browser/webgpu-border.mjs": "e9a7d9a88ac447b908249dc863e8adf9907b07830615019699588cbb2d695e8b",
+    "wasm/harness/application-clock.h": "d5cf62e7c947de67f4525ed7afd3a72be71f6f999f469a8552f570ec8f31ee85",
+    "wasm/scripts/phase45_simulation_snapshot.py": "35a09f5a0d43540785299f8a0e066fb7a3de003f11aaabb12e186ae1491fb969",
+    "wasm/scripts/phase45_benchmark_contract.py": "7f72a9e12dcd0ba85f5d8c0cf6377823fd936dd75b1e7ce49521ff9c20089c67"
+  }
+}

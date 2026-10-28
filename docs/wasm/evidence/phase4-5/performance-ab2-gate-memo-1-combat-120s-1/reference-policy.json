@@ -1,0 +1,15 @@
+{
+  "webglReference": "paired",
+  "directories": {
+    "webgpu": "C:\\Users\\jorlu\\OneDrive\\Documentos\\emprendimiento\\0 AD\\0adwebassembly\\wasm\\dist\\application-phase4-5-gate-memo-1",
+    "webgl": "C:\\Users\\jorlu\\OneDrive\\Documentos\\emprendimiento\\0 AD\\0adwebassembly\\wasm\\dist\\application-phase4-5-gate-memo-1"
+  },
+  "frozenWebGLBuildSHA256": {
+    "pyrogenesis-application.mjs": "ceba55d3ae8e191051d2f4c03715fbfee937fc9ea92c7c40a97d9e14bb2e7a85",
+    "pyrogenesis-application.wasm": "8cfc476312bd668072a219fd0c97391b071321d8609eae3ca668fc3b1569c0ec",
+    "application.html": "f1e8555b4470ae3d70c1982c2df7fd46f556da2beca6dc7a0fa7c59c5490e2e4",
+    "application.mjs": "8a22632683380d986ac619079936cc7a8edf2828beb72d7151a031547685d72d",
+    "application-data.json": "6d2c6947710e02a2a395c51541baefdfd3b8ee0540ab5848a22702838823e9bc"
+  },
+  "reason": "The paired current GL and WebGPU paths share original actors, full variant diversity and the MSVC-compatible visual sampling. The immutable historical baseline uses libc++ visual distribution and has a known F2 readback defect."
+}

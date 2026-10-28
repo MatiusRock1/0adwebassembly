@@ -1,0 +1,122 @@
+[
+  {
+    "index": 0,
+    "state": {
+      "state": {
+        "frame": 648,
+        "tick": 12,
+        "gameStarted": true,
+        "width": 1280,
+        "height": 720,
+        "paused": false,
+        "wasmHeapBytes": 640090112,
+        "receivedMs": 34561.289999991655,
+        "updateMilliseconds": 464.0148480000015
+      },
+      "result": {
+        "code": 0
+      },
+      "status": "Juego cerrado (0).",
+      "clock": {
+        "running": false,
+        "address": 1811304,
+        "deadline": 34561.73666666666,
+        "raf": 4972,
+        "hiddenTimer": 14
+      },
+      "hidden": false,
+      "focused": true,
+      "log": [
+        "Creating grass patches...",
+        "Creating metal mines...",
+        "Creating stone mines...",
+        "Creating decoration...",
+        "Creating food...",
+        "Creating food...",
+        "Creating straggler trees...",
+        "Map generation finished.",
+        "Total entities: 825, Terrain entities: 525, Textures: 12.",
+        "GAME STARTED, ALL INIT COMPLETE",
+        "Replay metadata written to '/data/replays/0.29.0/2026-10-13_0001/metadata.json'",
+        "user callback triggered after runtime exited or application aborted.  Ignoring."
+      ]
+    }
+  },
+  {
+    "index": 1,
+    "state": {
+      "state": {
+        "frame": 5698,
+        "tick": 450,
+        "gameStarted": true,
+        "receivedMs": 136441.31499999762
+      },
+      "result": {
+        "code": 0
+      },
+      "status": "Juego cerrado (0).",
+      "clock": {
+        "running": false,
+        "address": 1811048,
+        "deadline": 136451.10833333284,
+        "raf": 19518,
+        "hiddenTimer": 14
+      },
+      "hidden": false,
+      "focused": true,
+      "log": [
+        "Creating dirt patches...",
+        "Creating grass patches...",
+        "Creating metal mines...",
+        "Creating stone mines...",
+        "Creating decoration...",
+        "Creating food...",
+        "Creating food...",
+        "Creating straggler trees...",
+        "Map generation finished.",
+        "Total entities: 825, Terrain entities: 525, Textures: 12.",
+        "GAME STARTED, ALL INIT COMPLETE",
+        "Replay metadata written to '/data/replays/0.29.0/2026-10-13_0001/metadata.json'"
+      ]
+    }
+  },
+  {
+    "index": 2,
+    "state": {
+      "state": {
+        "frame": 10,
+        "tick": 0,
+        "gameStarted": false,
+        "width": 1280,
+        "height": 720,
+        "paused": false,
+        "wasmHeapBytes": 536870912,
+        "receivedMs": 5698.685000002384,
+        "updateMilliseconds": 0
+      },
+      "result": {
+        "code": 0
+      },
+      "status": "Juego cerrado (0).",
+      "clock": {
+        "running": false,
+        "address": 1811304,
+        "deadline": 5727.451666666669,
+        "raf": 792,
+        "hiddenTimer": 14
+      },
+      "hidden": false,
+      "focused": true,
+      "log": [
+        "warning: unsupported syscall: __syscall_madvise",
+        "",
+        "Main log written to '/logs/mainlog.html'",
+        "Interesting log written to '/logs/interestinglog.html'",
+        "Sound: AlcInit success, using Emscripten OpenAL",
+        "Hardware details written to '/logs/system_info.txt'",
+        "Failed to query SDL WM info: That operation is not supportedUserReport written to '/logs/userreport_hwdetect.txt'",
+        "user callback triggered after runtime exited or application aborted.  Ignoring."
+      ]
+    }
+  }
+]

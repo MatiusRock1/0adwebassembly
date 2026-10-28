@@ -1,0 +1,92 @@
+{
+  "passed": true,
+  "diagnosticOnly": true,
+  "performanceAcceptance": false,
+  "phase45Accepted": false,
+  "sourceSHA256": {
+    "/workspace/wasm/probes/exception-runtime.cpp": "b7c1e62cdca396163930bf1d5fcc161f0ae9c05adb9333ef9bc9519baaf68609",
+    "/workspace/wasm/probes/exception-runtime-foreign.cpp": "422182c76100eb00efb7a0c780a82620446c313a810ffbf71e3d3fcaf8bb8acd"
+  },
+  "modes": {
+    "legacy": {
+      "command": [
+        "em++",
+        "-O2",
+        "-std=c++20",
+        "-pthread",
+        "-fexceptions",
+        "--use-port=libpng",
+        "--use-port=zlib",
+        "/workspace/wasm/probes/exception-runtime.cpp",
+        "/phase45-build/exception-runtime-probe/foreign.o",
+        "-sINITIAL_MEMORY=134217728",
+        "-sALLOW_MEMORY_GROWTH=1",
+        "-sSTACK_SIZE=5242880",
+        "-sPROXY_TO_PTHREAD=1",
+        "-sPTHREAD_POOL_SIZE=4",
+        "-sENVIRONMENT=node",
+        "-sEXIT_RUNTIME=1",
+        "-sASSERTIONS=2",
+        "-o",
+        "/phase45-build/exception-runtime-probe/legacy.js"
+      ],
+      "linkExitCode": 0,
+      "exitCode": 0,
+      "stdout": "{\"passed\":true,\"checks\":6,\"checksum\":519333687,\"callsPerTrial\":2000000,\"milliseconds\":[176.890137,171.518066,171.021484]}\n",
+      "stderr": "",
+      "result": {
+        "passed": true,
+        "checks": 6,
+        "checksum": 519333687,
+        "callsPerTrial": 2000000,
+        "milliseconds": [
+          176.890137,
+          171.518066,
+          171.021484
+        ]
+      },
+      "medianMilliseconds": 171.518066
+    },
+    "wasm": {
+      "command": [
+        "em++",
+        "-O2",
+        "-std=c++20",
+        "-pthread",
+        "-fwasm-exceptions",
+        "--use-port=libpng",
+        "--use-port=zlib",
+        "/workspace/wasm/probes/exception-runtime.cpp",
+        "/phase45-build/exception-runtime-probe/foreign.o",
+        "-sINITIAL_MEMORY=134217728",
+        "-sALLOW_MEMORY_GROWTH=1",
+        "-sSTACK_SIZE=5242880",
+        "-sPROXY_TO_PTHREAD=1",
+        "-sPTHREAD_POOL_SIZE=4",
+        "-sENVIRONMENT=node",
+        "-sEXIT_RUNTIME=1",
+        "-sASSERTIONS=2",
+        "-o",
+        "/phase45-build/exception-runtime-probe/wasm.js"
+      ],
+      "linkExitCode": 0,
+      "exitCode": 0,
+      "stdout": "{\"passed\":true,\"checks\":6,\"checksum\":519333687,\"callsPerTrial\":2000000,\"milliseconds\":[19.004150,8.473145,9.218262]}\n",
+      "stderr": "",
+      "result": {
+        "passed": true,
+        "checks": 6,
+        "checksum": 519333687,
+        "callsPerTrial": 2000000,
+        "milliseconds": [
+          19.00415,
+          8.473145,
+          9.218262
+        ]
+      },
+      "medianMilliseconds": 9.218262
+    }
+  },
+  "scope": "CPU exception/RAII/foreign-call/pthread/PNG-longjmp correctness and synthetic indirect-call overhead. No prediction or acceptance of physical game FPS.",
+  "syntheticMedianRatioWasmToLegacy": 0.05374513726151739
+}

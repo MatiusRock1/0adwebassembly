@@ -1,0 +1,15 @@
+# Only the prepared public deployment belongs in the image.
+**
+!Dockerfile
+!nginx.conf
+!15-archive-urls.sh
+!site/
+!site/**
+!play/
+!play/**
+!licenses/
+!licenses/**
+# Archives are served by their own hosts, never copied into an image layer.
+play/public.zip
+play/mod.zip
+**/*.symbols

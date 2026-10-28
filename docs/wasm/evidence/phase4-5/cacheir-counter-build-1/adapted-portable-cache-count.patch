@@ -1,0 +1,152 @@
+--- a/js/src/vm/PortableBaselineInterpret.cpp
++++ b/js/src/vm/PortableBaselineInterpret.cpp
+@@ -16,6 +16,8 @@
+ 
+ #include "mozilla/Maybe.h"
+ #include <algorithm>
++#include <atomic>
++#include <emscripten.h>
+ 
+ #include "jsapi.h"
+ 
+@@ -62,6 +64,24 @@
+ 
+ using namespace js::jit;
+ 
++// Diagnostic only: atomics permit inspection from the browser thread while
++// the original VM mutator runs. No handler, fallback, stack or GC rule changes.
++static std::atomic<uint32_t> phase45MissingCacheIR[unsigned(CacheOp::NumOpcodes)]{};
++static_assert(sizeof(std::atomic<uint32_t>) == 4);
++extern "C" EMSCRIPTEN_KEEPALIVE uintptr_t Phase45MissingCacheIRCounts() {
++  return reinterpret_cast<uintptr_t>(phase45MissingCacheIR);
++}
++extern "C" EMSCRIPTEN_KEEPALIVE unsigned Phase45MissingCacheIRSize() {
++  return unsigned(CacheOp::NumOpcodes);
++}
++extern "C" EMSCRIPTEN_KEEPALIVE const char* Phase45MissingCacheIRName(unsigned op) {
++#define PHASE45_CACHEIR_NAME(name, ...) #name,
++  static constexpr const char* names[] = { CACHE_IR_OPS(PHASE45_CACHEIR_NAME) };
++#undef PHASE45_CACHEIR_NAME
++  static_assert(sizeof(names)/sizeof(names[0]) == unsigned(CacheOp::NumOpcodes));
++  return op < unsigned(CacheOp::NumOpcodes) ? names[op] : "";
++}
++
+ /*
+  * Debugging: enable `TRACE_INTERP` for an extremely detailed dump of
+  * what PBL is doing at every opcode step.
+@@ -420,21 +440,18 @@
+                ICRegs& icregs, Stack& stack, StackVal* sp, ICCacheIRStub* cstub,
+                jsbytecode* pc) {
+ #define CACHEOP_CASE(name)                                                   \
++  case CacheOp::name: \
+   cacheop_##name                                                             \
+       : TRACE_PRINTF("cacheop (frame %p pc %p stub %p): " #name "\n", frame, \
+                      pc, cstub);
+-#define CACHEOP_CASE_FALLTHROUGH(name) CACHEOP_CASE(name)
+-#define CACHEOP_CASE_UNIMPL(name) cacheop_##name:
+-
+-  static const void* const addresses[long(CacheOp::NumOpcodes)] = {
+-#define OP(name, ...) &&cacheop_##name,
+-      CACHE_IR_OPS(OP)
+-#undef OP
+-  };
++#define CACHEOP_CASE_FALLTHROUGH(name) [[fallthrough]]; CACHEOP_CASE(name)
++#define CACHEOP_CASE_UNIMPL(name) case CacheOp::name: cacheop_##name:
++
++  // Switch dispatch does not take opcode label addresses.
+ 
+ #define DISPATCH_CACHEOP()                 \
+   cacheop = icregs.cacheIRReader.readOp(); \
+-  goto* addresses[long(cacheop)];
++  goto phase45_cacheop_dispatch;
+ 
+ // We set a fixed bound on the number of icVals which is smaller than what IC
+ // generators may use. As a result we can't evaluate an IC if it defines too
+@@ -448,6 +465,7 @@
+ #define PREDICT_NEXT(name)                              \
+   if (icregs.cacheIRReader.peekOp() == CacheOp::name) { \
+     icregs.cacheIRReader.readOp();                      \
++    cacheop = CacheOp::name;                        \
+     goto cacheop_##name;                                \
+   }
+ 
+@@ -461,6 +479,8 @@
+ 
+   DISPATCH_CACHEOP();
+ 
++phase45_cacheop_dispatch:
++  switch (cacheop) {
+   CACHEOP_CASE(ReturnFromIC) {
+     TRACE_PRINTF("stub successful!\n");
+     return ICInterpretOpResult::Return;
+@@ -2768,10 +2788,14 @@
+   CACHEOP_CASE_UNIMPL(WrapResult)
+   CACHEOP_CASE_UNIMPL(Bailout)
+   CACHEOP_CASE_UNIMPL(AssertRecoveredOnBailoutResult) {
++    phase45MissingCacheIR[unsigned(cacheop)].fetch_add(1, std::memory_order_relaxed);
+     TRACE_PRINTF("unknown CacheOp: %s\n", CacheIROpNames[int(cacheop)]);
+     return ICInterpretOpResult::NextIC;
+   }
+ 
++  default:
++    MOZ_CRASH("Bad CacheIR opcode");
++  }
+ #undef PREDICT_NEXT
+ }
+ 
+@@ -3160,16 +3184,10 @@
+ #endif
+ 
+ #define LABEL(op) (&&label_##op)
+-#define CASE(op) label_##op:
+-#if !defined(TRACE_INTERP)
+-#  define DISPATCH() \
+-    DEBUG_CHECK();   \
+-    goto* addresses[*pc]
+-#else
+-#  define DISPATCH() \
+-    DEBUG_CHECK();   \
++#define CASE(op) case JSOp::op: label_##op:
++#define DISPATCH() \
++    DEBUG_CHECK(); \
+     goto dispatch
+-#endif
+ 
+ #define ADVANCE(delta) pc += (delta);
+ #define ADVANCE_AND_DISPATCH(delta) \
+@@ -3228,15 +3246,7 @@
+ PBIResult PortableBaselineInterpret(JSContext* cx_, State& state, Stack& stack,
+                                     StackVal* sp, JSObject* envChain,
+                                     Value* ret) {
+-#define OPCODE_LABEL(op, ...) LABEL(op),
+-#define TRAILING_LABEL(v) LABEL(default),
+-
+-  static const void* const addresses[EnableInterruptsPseudoOpcode + 1] = {
+-      FOR_EACH_OPCODE(OPCODE_LABEL)
+-          FOR_EACH_TRAILING_UNUSED_OPCODE(TRAILING_LABEL)};
+-
+-#undef OPCODE_LABEL
+-#undef TRAILING_LABEL
++  // Switch dispatch does not take opcode label addresses.
+ 
+   PUSHNATIVE(StackValNative(nullptr));  // Fake return address.
+   BaselineFrame* frame = stack.pushFrame(sp, cx_, envChain);
+@@ -3351,7 +3361,7 @@
+   }
+ #endif
+ 
+-    goto* addresses[*pc];
++    switch (JSOp(*pc)) {
+ 
+     CASE(Nop) { END_OP(Nop); }
+     CASE(NopIsAssignOp) { END_OP(NopIsAssignOp); }
+@@ -6077,7 +6087,9 @@
+     }
+ 
+   label_default:
++  default:
+     MOZ_CRASH("Bad opcode");
++    }
+   }
+ 
+ error:

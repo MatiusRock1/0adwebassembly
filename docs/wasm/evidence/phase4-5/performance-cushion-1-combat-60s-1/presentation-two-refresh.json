@@ -1,0 +1,42 @@
+{
+  "swapChain": "0x168B86E0DB0",
+  "processId": 5612,
+  "otherChains": {},
+  "presents": 1795,
+  "displayedPresents": 1795,
+  "notDisplayed": 0,
+  "displayIntervals": 1795,
+  "displayedFps": 29.91590625418953,
+  "engineRenderedFps": 29.915842931819494,
+  "engineDrawWindowComplete": true,
+  "engineP95FrameMs": 33.540000000968575,
+  "medianFrameMs": 33.3327,
+  "p95FrameMs": 33.4043,
+  "p99FrameMs": 49.9954,
+  "onePercentLowFps": 16.497415404919895,
+  "pausesOver100Ms": 1,
+  "measurementComplete": true,
+  "actualSurfaceVerified": true,
+  "presentmonEventsLost": 0,
+  "validFullscreen1080pRun": true,
+  "presentationGate30": false,
+  "measuredRefreshMs": 16.6702,
+  "refreshSource": "ab11 reference captures, same 60 Hz display",
+  "twoRefreshLimitMs": 33.507101999999996,
+  "presentationGateTwoRefresh": false,
+  "engineP95WithinTwoRefresh": false,
+  "twoRefreshScope": "Operator clarification: physical p95 <= two measured refreshes; engine draw p95 is reported separately and not relaxed here",
+  "workerPresentation": {
+    "valid": true,
+    "required": true,
+    "delta": {
+      "rafPresents": 3644,
+      "backgroundFallbackPresents": 0,
+      "failedPresents": 0,
+      "cancelledPresents": 0
+    },
+    "scope": "Entire renderer snapshot interval, including warmup; fallback, failures, cancellation or reset invalidate capture"
+  },
+  "attribution": "Dedicated fullscreen window swap chain; native simulation frame IDs are not exposed by PresentMon",
+  "acceptance": "Individual 30 FPS gate; closure requires three complete 900-second repetitions and functional checks"
+}

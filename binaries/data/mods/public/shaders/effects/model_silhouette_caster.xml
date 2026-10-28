@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<effect>
+	<technique>
+		<require shaders="glsl"/>
+		<require shaders="spirv"/>
+		<pass shader="model_solid_player">
+			<depth func="gequal"/>
+			<stencil test="TRUE" compare="notequal" reference="1" mask_read="4294967295" pass="REPLACE"/>
+			<blend src="constant_alpha" dst="one_minus_constant_alpha" constant="0 0 0 191"/>
+		</pass>
+	</technique>
+</effect>

@@ -1,0 +1,52 @@
+{
+  "passed": false,
+  "phase45Accepted": false,
+  "performanceAcceptance": false,
+  "scope": "Same WASM package, sync versus threaded AI; exact original simulation serialization at limited checkpoints, no native executable.",
+  "runs": [
+    {
+      "mode": "sync",
+      "command": [
+        "C:\\Users\\jorlu\\OneDrive\\Documentos\\emprendimiento\\0 AD\\0adwebassembly\\wasm\\.venv-phase3\\Scripts\\python.exe",
+        "C:\\Users\\jorlu\\OneDrive\\Documentos\\emprendimiento\\0 AD\\0adwebassembly\\wasm\\scripts\\profile-phase4-5.py",
+        "--webgpu-directory",
+        "C:\\Users\\jorlu\\OneDrive\\Documentos\\emprendimiento\\0 AD\\0adwebassembly\\wasm\\dist\\application-phase4-5-ai-map-kernels-3",
+        "--ai-worker-mode",
+        "sync",
+        "--seconds",
+        "1",
+        "--settle-seconds",
+        "0",
+        "--simulation-checkpoints",
+        "10000",
+        "30000",
+        "--output",
+        "docs\\wasm\\evidence\\phase4-5\\ai-map-kernels-3-parity-1\\sync"
+      ],
+      "exitCode": 0
+    },
+    {
+      "mode": "threaded",
+      "command": [
+        "C:\\Users\\jorlu\\OneDrive\\Documentos\\emprendimiento\\0 AD\\0adwebassembly\\wasm\\.venv-phase3\\Scripts\\python.exe",
+        "C:\\Users\\jorlu\\OneDrive\\Documentos\\emprendimiento\\0 AD\\0adwebassembly\\wasm\\scripts\\profile-phase4-5.py",
+        "--webgpu-directory",
+        "C:\\Users\\jorlu\\OneDrive\\Documentos\\emprendimiento\\0 AD\\0adwebassembly\\wasm\\dist\\application-phase4-5-ai-map-kernels-3",
+        "--ai-worker-mode",
+        "threaded",
+        "--seconds",
+        "1",
+        "--settle-seconds",
+        "0",
+        "--simulation-checkpoints",
+        "10000",
+        "30000",
+        "--output",
+        "docs\\wasm\\evidence\\phase4-5\\ai-map-kernels-3-parity-1\\threaded"
+      ],
+      "exitCode": 1
+    }
+  ],
+  "checks": [],
+  "failure": "Invalid runtime in threaded: Page.evaluate: Execution context was destroyed, most likely because of a navigation."
+}

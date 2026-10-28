@@ -1,0 +1,2112 @@
+const SDL_BUTTON_LEFT = 1;
+const SDL_BUTTON_MIDDLE = 2;
+const SDL_BUTTON_RIGHT = 3;
+const SDLK_LEFTBRACKET = 91;
+const SDLK_RIGHTBRACKET = 93;
+const SDLK_RSHIFT = 303;
+const SDLK_LSHIFT = 304;
+const SDLK_RCTRL = 305;
+const SDLK_LCTRL = 306;
+const SDLK_RALT = 307;
+const SDLK_LALT = 308;
+// TODO: these constants should be defined somewhere else instead, in
+// case any other code wants to use them too.
+
+const ACTION_NONE = 0;
+const ACTION_GARRISON = 1;
+const ACTION_REPAIR = 2;
+const ACTION_GUARD = 3;
+const ACTION_PATROL = 4;
+const ACTION_OCCUPY_TURRET = 5;
+const ACTION_CALLTOARMS = 6;
+var preSelectedAction = ACTION_NONE;
+
+const INPUT_NORMAL = 0;
+const INPUT_SELECTING = 1;
+const INPUT_BANDBOXING = 2;
+const INPUT_BUILDING_PLACEMENT = 3;
+const INPUT_BUILDING_CLICK = 4;
+const INPUT_BUILDING_DRAG = 5;
+const INPUT_BATCHTRAINING = 6;
+const INPUT_PRESELECTEDACTION = 7;
+const INPUT_BUILDING_WALL_CLICK = 8;
+const INPUT_BUILDING_WALL_PATHING = 9;
+const INPUT_UNIT_POSITION_START = 10;
+const INPUT_UNIT_POSITION = 11;
+const INPUT_FLARE = 12;
+
+var inputState = INPUT_NORMAL;
+
+const INVALID_ENTITY = 0;
+
+var mouseX = 0;
+var mouseY = 0;
+var mouseIsOverObject = false;
+
+/**
+ * Containing the ingame position which span the line.
+ */
+var g_FreehandSelection_InputLine = [];
+
+/**
+ * Minimum squared distance when a mouse move is called a drag.
+ */
+const g_FreehandSelection_ResolutionInputLineSquared = 1;
+
+/**
+ * Minimum length a dragged line should have to use the freehand selection.
+ */
+const g_FreehandSelection_MinLengthOfLine = 8;
+
+/**
+ * To start the freehandSelection function you need a minimum number of units.
+ * Minimum must be 2, for better performance you could set it higher.
+ */
+const g_FreehandSelection_MinNumberOfUnits = 2;
+
+/**
+ * Used for remembering mouse coordinates at start of drag operations.
+ */
+var g_DragStart;
+
+/**
+ * Store the clicked entity on mousedown or mouseup for single/double/triple clicks to select entities.
+ * If any mousedown or mouseup of a sequence of clicks lands on a unit,
+ * that unit will be selected, which makes it easier to click on moving units.
+ */
+var clickedEntity = INVALID_ENTITY;
+
+/**
+ * Store the last time the flare functionality was used to prevent overusage.
+ */
+var g_LastFlareTime;
+
+/**
+ * The duration in ms for which we disable flaring after each flare to prevent overusage.
+ */
+const g_FlareCooldown = 3000;
+
+// Same double-click behaviour for hotkey presses.
+const doublePressTime = 500;
+var doublePressTimer = 0;
+var prevHotkey = 0;
+
+/**
+ * Tracks the selection index per building template to allow cycling
+ * through multiple structures of the same type.
+ */
+const g_BuildingSelectIndex = {};
+/**
+ * Hotkey mappings for building placement, cycling through buildings,
+ * and selecting units by class.
+ */
+const g_PlaceBuildingHotkeys = {};
+const g_SelectBuildingHotkeys = {};
+const g_SelectUnitHotkeys = {};
+function initUnitsAndBuildingsHotkeys()
+{
+	const selectionHotkeys = Engine.ReadJSONFile("gui/hotkeys/spec/selection.json").mapped_hotkeys;
+	const structuresHotkeys = Engine.ReadJSONFile("gui/hotkeys/spec/structures.json").mapped_hotkeys;
+	for (const category in structuresHotkeys)
+		for (const hotkey in structuresHotkeys[category])
+			if (hotkey.startsWith("structures.place."))
+				g_PlaceBuildingHotkeys[hotkey] = hotkey.replace("structures.place.", "");
+			else if (hotkey.startsWith("selection.structures."))
+				g_SelectBuildingHotkeys[hotkey] = hotkey.replace("selection.structures.", "");
+	for (const category in selectionHotkeys)
+		for (const hotkey in selectionHotkeys[category])
+			if (hotkey.startsWith("selection.unit."))
+				g_SelectUnitHotkeys[hotkey] = toPascalCase(hotkey.replace("selection.unit.", ""));
+}
+
+function getMaxDragDelta()
+{
+	return Engine.ConfigDB_GetValue("user", "gui.session.dragdelta");
+}
+
+function updateCursorAndTooltip()
+{
+	let cursorSet = false;
+	let tooltipSet = false;
+	const informationTooltip = Engine.GetGUIObjectByName("informationTooltip");
+	if (!g_IsReplay && (inputState == INPUT_FLARE || (inputState == INPUT_NORMAL && Engine.HotkeyIsPressed("session.flare"))))
+	{
+		Engine.SetCursor(
+			g_IsObserver ?
+				"action-observer-flare" :
+				"action-player-flare"
+		);
+		cursorSet = true;
+	}
+	else if (!mouseIsOverObject && (inputState == INPUT_NORMAL || inputState == INPUT_PRESELECTEDACTION) || g_MiniMapPanel.isMouseOverMiniMap())
+	{
+		const action = determineAction(mouseX, mouseY, g_MiniMapPanel.isMouseOverMiniMap());
+		if (action)
+		{
+			if (action.cursor)
+			{
+				Engine.SetCursor(action.cursor);
+				cursorSet = true;
+			}
+			if (action.tooltip)
+			{
+				tooltipSet = true;
+				informationTooltip.caption = action.tooltip;
+				informationTooltip.hidden = false;
+			}
+		}
+	}
+
+	if (!cursorSet)
+		Engine.ResetCursor();
+
+	if (!tooltipSet)
+		informationTooltip.hidden = true;
+
+	const placementTooltip = Engine.GetGUIObjectByName("placementTooltip");
+	if (placementSupport.tooltipMessage)
+		placementTooltip.sprite = placementSupport.tooltipError ? "BackgroundErrorTooltip" : "BackgroundInformationTooltip";
+
+	placementTooltip.caption = placementSupport.tooltipMessage || "";
+	placementTooltip.hidden = !placementSupport.tooltipMessage;
+}
+
+function updateBuildingPlacementPreview()
+{
+	// The preview should be recomputed every turn, so that it responds to obstructions/fog/etc moving underneath it, or
+	// in the case of the wall previews, in response to new tower foundations getting constructed for it to snap to.
+	// See onSimulationUpdate in session.js.
+
+	if (placementSupport.mode === "building")
+	{
+		if (placementSupport.template && placementSupport.position)
+		{
+			const result = Engine.GuiInterfaceCall("SetBuildingPlacementPreview", {
+				"template": placementSupport.template,
+				"x": placementSupport.position.x,
+				"z": placementSupport.position.z,
+				"angle": placementSupport.angle,
+				"actorSeed": placementSupport.actorSeed
+			});
+
+			placementSupport.tooltipError = !result.success;
+			placementSupport.tooltipMessage = "";
+
+			if (!result.success)
+			{
+				if (result.message && result.parameters)
+				{
+					let message = result.message;
+					if (result.translateMessage)
+						if (result.pluralMessage)
+							message = translatePlural(result.message, result.pluralMessage, result.pluralCount);
+						else
+							message = translate(message);
+					const parameters = result.parameters;
+					if (result.translateParameters)
+						translateObjectKeys(parameters, result.translateParameters);
+					placementSupport.tooltipMessage = sprintf(message, parameters);
+				}
+				return false;
+			}
+
+			if (placementSupport.attack && placementSupport.attack.Ranged)
+			{
+				const cmd = {
+					"x": placementSupport.position.x,
+					"z": placementSupport.position.z,
+					"range": placementSupport.attack.Ranged.maxRange,
+					"yOrigin": placementSupport.attack.Ranged.yOrigin
+				};
+				const averageRange = Math.round(Engine.GuiInterfaceCall("GetAverageRangeForBuildings", cmd) - cmd.range);
+				const range = Math.round(cmd.range);
+				placementSupport.tooltipMessage = sprintf(translatePlural("Basic range: %(range)s meter", "Basic range: %(range)s meters", range), { "range": range }) + "\n" +
+					sprintf(translatePlural("Average bonus range: %(range)s meter", "Average bonus range: %(range)s meters", averageRange), { "range": averageRange });
+			}
+			return true;
+		}
+	}
+	else if (placementSupport.mode === "wall" &&
+		placementSupport.wallSet && placementSupport.position)
+	{
+		placementSupport.wallSnapEntities = Engine.PickSimilarPlayerEntities(
+			placementSupport.wallSet.templates.tower,
+			placementSupport.wallSnapEntitiesIncludeOffscreen,
+			true, // require exact template match
+			true  // include foundations
+		);
+
+		return Engine.GuiInterfaceCall("SetWallPlacementPreview", {
+			"wallSet": placementSupport.wallSet,
+			"start": placementSupport.position,
+			"end": placementSupport.wallEndPosition,
+			"snapEntities": placementSupport.wallSnapEntities // snapping entities (towers) for starting a wall segment
+		});
+	}
+
+	return false;
+}
+
+/**
+ * Determine the context-sensitive action that should be performed when the mouse is at (x,y)
+ */
+function determineAction(x, y, fromMiniMap)
+{
+	const selection = g_Selection.toList();
+	if (!selection.length)
+	{
+		preSelectedAction = ACTION_NONE;
+		return undefined;
+	}
+
+	const entState = GetEntityState(selection[0]);
+	if (!entState)
+		return undefined;
+
+	if (!selection.every(ent => ownsEntity(ent) || isMutualAllyBuilding(ent)) &&
+	    !(g_SimState.players[g_ViewedPlayer] &&
+	      g_SimState.players[g_ViewedPlayer].controlsAll))
+		return undefined;
+
+	let target;
+	if (!fromMiniMap)
+	{
+		const ent = Engine.PickEntityAtPoint(x, y);
+		if (ent != INVALID_ENTITY)
+			target = ent;
+	}
+
+	// Decide between the following ordered actions,
+	// if two actions are possible, the first one is taken
+	// thus the most specific should appear first.
+
+	if (preSelectedAction != ACTION_NONE)
+	{
+		for (const action of g_UnitActionsSortedKeys)
+			if (g_UnitActions[action].preSelectedActionCheck)
+			{
+				const r = g_UnitActions[action].preSelectedActionCheck(target, selection);
+				if (r)
+					return r;
+			}
+
+		return { "type": "none", "cursor": "", "target": target };
+	}
+
+	for (const action of g_UnitActionsSortedKeys)
+		if (g_UnitActions[action].hotkeyActionCheck)
+		{
+			const r = g_UnitActions[action].hotkeyActionCheck(target, selection);
+			if (r)
+				return r;
+		}
+
+	for (const action of g_UnitActionsSortedKeys)
+		if (g_UnitActions[action].actionCheck)
+		{
+			const r = g_UnitActions[action].actionCheck(target, selection);
+			if (r)
+				return r;
+		}
+
+	return { "type": "none", "cursor": "", "target": target };
+}
+
+function ownsEntity(ent)
+{
+	const entState = GetEntityState(ent);
+	return entState && entState.player == g_ViewedPlayer;
+}
+
+function isMutualAllyBuilding(ent)
+{
+	const entState = GetEntityState(ent);
+	return entState && entState.rallyPoint &&
+		g_Players[entState.player]?.isMutualAlly[g_ViewedPlayer];
+}
+
+function isAttackMovePressed()
+{
+	return Engine.HotkeyIsPressed("session.attackmove") ||
+		Engine.HotkeyIsPressed("session.attackmoveUnit");
+}
+
+function isSnapToEdgesEnabled()
+{
+	const config = Engine.ConfigDB_GetValue("user", "gui.session.snaptoedges");
+	const hotkeyPressed = Engine.HotkeyIsPressed("session.snaptoedges");
+	return hotkeyPressed == (config == "disabled");
+}
+
+function tryPlaceBuilding(queued, pushFront)
+{
+	if (placementSupport.mode !== "building")
+	{
+		error("tryPlaceBuilding expected 'building', got '" + placementSupport.mode + "'");
+		return false;
+	}
+
+	if (!updateBuildingPlacementPreview())
+	{
+		Engine.GuiInterfaceCall("PlaySound", {
+			"name": "invalid_building_placement",
+			"entity": g_Selection.getFirstSelected()
+		});
+		return false;
+	}
+
+	const selection = Engine.HotkeyIsPressed("session.orderone") &&
+		popOneFromSelection({ "type": "construct", "target": placementSupport }) || g_Selection.toList();
+
+	Engine.PostNetworkCommand({
+		"type": "construct",
+		"template": placementSupport.template,
+		"x": placementSupport.position.x,
+		"z": placementSupport.position.z,
+		"angle": placementSupport.angle,
+		"actorSeed": placementSupport.actorSeed,
+		"entities": selection,
+		"autorepair": true,
+		"autocontinue": true,
+		"queued": queued,
+		"pushFront": pushFront,
+		"formation": g_AutoFormation.getNull()
+	});
+	Engine.GuiInterfaceCall("PlaySound", { "name": "order_build", "entity": selection[0] });
+
+	if (!queued || !g_Selection.size())
+		placementSupport.Reset();
+	else
+		placementSupport.RandomizeActorSeed();
+
+	return true;
+}
+
+function tryPlaceWall(queued)
+{
+	if (placementSupport.mode !== "wall")
+	{
+		error("tryPlaceWall expected 'wall', got '" + placementSupport.mode + "'");
+		return false;
+	}
+
+	const wallPlacementInfo = updateBuildingPlacementPreview(); // entities making up the wall (wall segments, towers, ...)
+	if (!(wallPlacementInfo === false || typeof wallPlacementInfo === "object"))
+	{
+		error("Invalid updateBuildingPlacementPreview return value: " + uneval(wallPlacementInfo));
+		return false;
+	}
+
+	if (!wallPlacementInfo)
+		return false;
+
+	const selection = Engine.HotkeyIsPressed("session.orderone") &&
+		popOneFromSelection({ "type": "construct", "target": placementSupport }) || g_Selection.toList();
+
+	const cmd = {
+		"type": "construct-wall",
+		"autorepair": true,
+		"autocontinue": true,
+		"queued": queued,
+		"entities": selection,
+		"wallSet": placementSupport.wallSet,
+		"pieces": wallPlacementInfo.pieces,
+		"startSnappedEntity": wallPlacementInfo.startSnappedEnt,
+		"endSnappedEntity": wallPlacementInfo.endSnappedEnt,
+		"formation": g_AutoFormation.getNull()
+	};
+
+	// Make sure that there's at least one non-tower entity getting built, to prevent silly edge cases where the start and end
+	// point are too close together for the algorithm to place a wall segment inbetween, and only the towers are being previewed
+	// (this is somewhat non-ideal and hardcode-ish).
+	let hasWallSegment = false;
+	for (const piece of cmd.pieces)
+	{
+		if (piece.template != cmd.wallSet.templates.tower) // TODO: hardcode-ish :(
+		{
+			hasWallSegment = true;
+			break;
+		}
+	}
+
+	if (hasWallSegment)
+	{
+		Engine.PostNetworkCommand(cmd);
+		Engine.GuiInterfaceCall("PlaySound", { "name": "order_build", "entity": selection[0] });
+	}
+
+	return true;
+}
+
+/**
+ * Updates the bandbox object with new positions and visibility.
+ * @returns {array} The coordinates of the vertices of the bandbox.
+ */
+function updateBandbox(bandbox, ev, hidden)
+{
+	const scale = +Engine.ConfigDB_GetValue("user", "gui.scale");
+	const vMin = Vector2D.min(g_DragStart, ev);
+	const vMax = Vector2D.max(g_DragStart, ev);
+
+	bandbox.size = {
+		"left": vMin.x / scale,
+		"top": vMin.y / scale,
+		"right": vMax.x / scale,
+		"bottom": vMax.y / scale
+	};
+	bandbox.hidden = hidden;
+
+	return [vMin.x, vMin.y, vMax.x, vMax.y];
+}
+
+// Define some useful unit filters for getPreferredEntities.
+var unitFilters = {
+	"isUnit": entity =>
+	{
+		const entState = GetEntityState(entity);
+		return entState && hasClass(entState, "Unit");
+	},
+	"isDefensive": entity =>
+	{
+		const entState = GetEntityState(entity);
+		return entState && hasClass(entState, "Defensive");
+	},
+	"isMilitary": entity =>
+	{
+		const entState = GetEntityState(entity);
+		return entState &&
+			g_MilitaryTypes.some(c => hasClass(entState, c));
+	},
+	"isNonMilitary": entity =>
+	{
+		const entState = GetEntityState(entity);
+		return entState &&
+			hasClass(entState, "Unit") &&
+			!g_MilitaryTypes.some(c => hasClass(entState, c));
+	},
+	"isIdle": entity =>
+	{
+		const entState = GetEntityState(entity);
+		return entState &&
+			hasClass(entState, "Unit") &&
+			entState.unitAI &&
+			entState.unitAI.isIdle &&
+			!hasClass(entState, "Domestic");
+	},
+	"isWounded": entity =>
+	{
+		const entState = GetEntityState(entity);
+		return entState &&
+			hasClass(entState, "Unit") &&
+			entState.maxHitpoints &&
+			100 * entState.hitpoints <= entState.maxHitpoints * Engine.ConfigDB_GetValue("user", "gui.session.woundedunithotkeythreshold");
+	},
+	"isAnything": entity =>
+	{
+		return true;
+	}
+};
+
+// Choose, inside a list of entities, which ones are targetable foes for boxtargeting.
+// We also filter out entities that aren't visible, or low priority like livestocks
+function getTargetableEntities(ents)
+{
+	const player = g_ViewedPlayer;
+	const simState = GetSimState();
+	const isEnemy = simState.players[player].isEnemy;
+
+	// Filter valid target candidates
+	const candidates = ents.filter(entity =>
+	{
+		const entState = GetEntityState(entity);
+		return entState &&
+			unitFilters.isUnit(entity) &&
+			entState.visibility != "hidden";
+	});
+
+	// Enemy players
+	const enemyPlayers = candidates.filter(entity =>
+	{
+		const entState = GetEntityState(entity);
+		return isEnemy[entState.player] && entState.player !== 0 && !hasClass(entState, "Domestic");
+	});
+	if (enemyPlayers.length > 0)
+		return enemyPlayers;
+
+	// Gaia
+	const gaiaUnits = candidates.filter(entity =>
+	{
+		const entState = GetEntityState(entity);
+		return entState.player === 0;
+	});
+	if (gaiaUnits.length > 0)
+		return gaiaUnits;
+
+	// Domestic animals
+	return candidates.filter(entity =>
+	{
+		const entState = GetEntityState(entity);
+		return hasClass(entState, "Domestic");
+	});
+}
+
+// Choose, inside a list of entities, which ones will be selected.
+// We may use several entity filters, until one returns at least one element.
+function getPreferredEntities(ents)
+{
+	let filters = [unitFilters.isUnit, unitFilters.isDefensive, unitFilters.isAnything];
+
+	if (Engine.HotkeyIsPressed("selection.militaryonly"))
+		filters = [unitFilters.isMilitary];
+	if (Engine.HotkeyIsPressed("selection.nonmilitaryonly"))
+		filters = [unitFilters.isNonMilitary];
+	if (Engine.HotkeyIsPressed("selection.idleonly"))
+		filters = [unitFilters.isIdle];
+	if (Engine.HotkeyIsPressed("selection.woundedonly"))
+		filters = [unitFilters.isWounded];
+
+	let preferredEnts = [];
+	for (let i = 0; i < filters.length; ++i)
+	{
+		preferredEnts = ents.filter(filters[i]);
+		if (preferredEnts.length)
+			break;
+	}
+	return preferredEnts;
+}
+
+function handleInputBeforeGui(ev, hoveredObject)
+{
+	if (g_CinemaOverlay.isInCutsceneMode())
+		return false;
+
+	// Capture cursor position so we can use it for displaying cursors,
+	// and key states.
+	switch (ev.type)
+	{
+	case "mousebuttonup":
+	case "mousebuttondown":
+	case "mousemotion":
+		mouseX = ev.x;
+		mouseY = ev.y;
+		break;
+	default:
+		break;
+	}
+
+	mouseIsOverObject = (hoveredObject != null);
+
+	// Close the menu when interacting with the game world.
+	if (!mouseIsOverObject && (ev.type =="mousebuttonup" || ev.type == "mousebuttondown") &&
+		(ev.button == SDL_BUTTON_LEFT || ev.button == SDL_BUTTON_RIGHT))
+		g_Menu.close();
+
+	// State-machine processing:
+	//
+	// (This is for states which should override the normal GUI processing - events will
+	// be processed here before being passed on, and propagation will stop if this function
+	// returns true)
+	//
+	// TODO: it'd probably be nice to have a better state-machine system, with guaranteed
+	// entry/exit functions, since this is a bit broken now
+
+	switch (inputState)
+	{
+	case INPUT_BANDBOXING:
+	{
+		const bandbox = Engine.GetGUIObjectByName("bandbox");
+		const isAttackMode = Engine.HotkeyIsPressed("session.attack") && !g_IsObserver;
+		switch (ev.type)
+		{
+		case "mousemotion":
+		{
+			const rect = updateBandbox(bandbox, ev, false);
+
+			const player = isAttackMode ? -1 : g_ViewedPlayer;
+
+			const ents = Engine.PickPlayerEntitiesInRect(rect[0], rect[1], rect[2], rect[3], player);
+			const highlightEntities = isAttackMode ? getTargetableEntities(ents) : getPreferredEntities(ents);
+
+			g_Selection.setHighlightList(highlightEntities);
+			return false;
+		}
+
+		case "mousebuttonup":
+			if (ev.button == SDL_BUTTON_LEFT)
+			{
+				const rect = updateBandbox(bandbox, ev, true);
+				if (isAttackMode)
+				{
+					// Box attack behavior
+					const ents = Engine.PickPlayerEntitiesInRect(rect[0], rect[1], rect[2], rect[3], -1);
+
+					// Filter to only enemy units
+					const enemyUnits = getTargetableEntities(ents);
+
+					// Get currently selected friendly units
+					const selectedUnits = g_Selection.toList();
+
+					if (selectedUnits.length && enemyUnits.length)
+					{
+						// Sort entities by position
+						const sortedCombattants = sortEntitiesForEngagement(selectedUnits, enemyUnits);
+						// Distribute attack orders
+						distributeAttackOrders(sortedCombattants.attackers, sortedCombattants.targets);
+					}
+					g_Selection.setHighlightList([]);
+					inputState = INPUT_NORMAL;
+
+					return true;
+				}
+
+				const ents = getPreferredEntities(Engine.PickPlayerEntitiesInRect(rect[0], rect[1], rect[2], rect[3], g_ViewedPlayer));
+				g_Selection.setHighlightList([]);
+
+				if (Engine.HotkeyIsPressed("selection.add"))
+					g_Selection.addList(ents);
+				else if (Engine.HotkeyIsPressed("selection.remove"))
+					g_Selection.removeList(ents);
+				else
+				{
+					g_Selection.reset();
+					g_Selection.addList(ents);
+				}
+
+				inputState = INPUT_NORMAL;
+				return true;
+			}
+			if (ev.button == SDL_BUTTON_RIGHT)
+			{
+				// Cancel selection.
+				bandbox.hidden = true;
+				g_Selection.setHighlightList([]);
+
+				inputState = INPUT_NORMAL;
+				return true;
+			}
+			return false;
+		default:
+			return false;
+		}
+	}
+
+	case INPUT_UNIT_POSITION:
+		switch (ev.type)
+		{
+		case "mousemotion":
+			return positionUnitsFreehandSelectionMouseMove(ev);
+		case "mousebuttonup":
+			return positionUnitsFreehandSelectionMouseUp(ev);
+		default:
+			return false;
+		}
+
+	case INPUT_BUILDING_CLICK:
+		switch (ev.type)
+		{
+		case "mousemotion":
+			// If the mouse moved far enough from the original click location,
+			// then switch to drag-orientation mode.
+			if (g_DragStart.distanceTo(ev) >= Math.square(getMaxDragDelta()))
+			{
+				inputState = INPUT_BUILDING_DRAG;
+				return false;
+			}
+			return false;
+
+		case "mousebuttonup":
+			if (ev.button == SDL_BUTTON_LEFT)
+			{
+				// If queued, let the player continue placing another of the same building.
+				const queued = Engine.HotkeyIsPressed("session.queue");
+				if (tryPlaceBuilding(queued, Engine.HotkeyIsPressed("session.pushorderfront")))
+				{
+					if (queued && g_Selection.size())
+						inputState = INPUT_BUILDING_PLACEMENT;
+					else
+						inputState = INPUT_NORMAL;
+				}
+				else
+					inputState = INPUT_BUILDING_PLACEMENT;
+				return true;
+			}
+			return false;
+
+		case "mousebuttondown":
+			if (ev.button == SDL_BUTTON_RIGHT)
+			{
+				// Cancel building.
+				placementSupport.Reset();
+				inputState = INPUT_NORMAL;
+				return true;
+			}
+			return false;
+		default:
+			return false;
+		}
+
+	case INPUT_BUILDING_WALL_CLICK:
+		// User is mid-click in choosing a starting point for building a wall. The build process can still be cancelled at this point
+		// by right-clicking; releasing the left mouse button will 'register' the starting point and commence endpoint choosing mode.
+		switch (ev.type)
+		{
+		case "mousebuttonup":
+			if (ev.button === SDL_BUTTON_LEFT)
+			{
+				inputState = INPUT_BUILDING_WALL_PATHING;
+				return true;
+			}
+			return false;
+
+		case "mousebuttondown":
+			if (ev.button == SDL_BUTTON_RIGHT)
+			{
+				// Cancel building.
+				placementSupport.Reset();
+				updateBuildingPlacementPreview();
+
+				inputState = INPUT_NORMAL;
+				return true;
+			}
+			return false;
+		default:
+			return false;
+		}
+
+	case INPUT_BUILDING_WALL_PATHING:
+		// User has chosen a starting point for constructing the wall, and is now looking to set the endpoint.
+		// Right-clicking cancels wall building mode, left-clicking sets the endpoint and builds the wall and returns to
+		// normal input mode. Optionally, shift + left-clicking does not return to normal input, and instead allows the
+		// user to continue building walls.
+		switch (ev.type)
+		{
+		case "mousemotion":
+		{
+			placementSupport.wallEndPosition = Engine.GetTerrainAtScreenPoint(ev.x, ev.y);
+
+			// Update the structure placement preview, and by extension, the list of snapping candidate entities for both (!)
+			// the ending point and the starting point to snap to.
+			//
+			// TODO: Note that here, we need to fetch all similar entities, including any offscreen ones, to support the case
+			// where the snap entity for the starting point has moved offscreen, or has been deleted/destroyed, or was a
+			// foundation and has been replaced with a completed entity since the user first chose it. Fetching all towers on
+			// the entire map instead of only the current screen might get expensive fast since walls all have a ton of towers
+			// in them. Might be useful to query only for entities within a certain range around the starting point and ending
+			// points.
+
+			placementSupport.wallSnapEntitiesIncludeOffscreen = true;
+			const result = updateBuildingPlacementPreview(); // includes an update of the snap entity candidates
+			if (result && result.cost)
+			{
+				const neededResources = Engine.GuiInterfaceCall("GetNeededResources", { "cost": result.cost });
+				placementSupport.tooltipMessage = [
+					getEntityCostTooltip(result),
+					getNeededResourcesTooltip(neededResources)
+				].filter(tip => tip).join("\n");
+			}
+
+			return false;
+		}
+		case "mousebuttondown":
+			if (ev.button == SDL_BUTTON_LEFT)
+			{
+				const queued = Engine.HotkeyIsPressed("session.queue");
+				if (tryPlaceWall(queued))
+				{
+					if (queued)
+					{
+						// Continue building, just set a new starting position where we left off.
+						placementSupport.position = placementSupport.wallEndPosition;
+						placementSupport.wallEndPosition = undefined;
+
+						inputState = INPUT_BUILDING_WALL_CLICK;
+					}
+					else
+					{
+						placementSupport.Reset();
+						inputState = INPUT_NORMAL;
+					}
+				}
+				else
+					placementSupport.tooltipMessage = translate("Cannot build wall here!");
+
+				updateBuildingPlacementPreview();
+				return true;
+			}
+			if (ev.button == SDL_BUTTON_RIGHT)
+			{
+				placementSupport.Reset();
+				updateBuildingPlacementPreview();
+
+				inputState = INPUT_NORMAL;
+				return true;
+			}
+			return false;
+		default:
+			return false;
+		}
+
+	case INPUT_BUILDING_DRAG:
+		switch (ev.type)
+		{
+		case "mousemotion":
+		{
+			if (g_DragStart.distanceTo(ev) >= Math.square(getMaxDragDelta()))
+				// Rotate in the direction of the cursor.
+				placementSupport.angle = placementSupport.position.horizAngleTo(Engine.GetTerrainAtScreenPoint(ev.x, ev.y));
+			else
+				// If the cursor is near the center, snap back to the default orientation.
+				placementSupport.SetDefaultAngle();
+
+			const snapData = Engine.GuiInterfaceCall("GetFoundationSnapData", {
+				"template": placementSupport.template,
+				"x": placementSupport.position.x,
+				"z": placementSupport.position.z,
+				"angle": placementSupport.angle,
+				"snapToEdges": isSnapToEdgesEnabled() && Engine.GetEdgesOfStaticObstructionsOnScreenNearTo(
+					placementSupport.position.x, placementSupport.position.z)
+			});
+			if (snapData)
+			{
+				placementSupport.angle = snapData.angle;
+				placementSupport.position.x = snapData.x;
+				placementSupport.position.z = snapData.z;
+			}
+
+			updateBuildingPlacementPreview();
+			return false;
+		}
+		case "mousebuttonup":
+			if (ev.button == SDL_BUTTON_LEFT)
+			{
+				// If queued, let the player continue placing another of the same structure.
+				const queued = Engine.HotkeyIsPressed("session.queue");
+				if (tryPlaceBuilding(queued, Engine.HotkeyIsPressed("session.pushorderfront")))
+				{
+					if (queued && g_Selection.size())
+						inputState = INPUT_BUILDING_PLACEMENT;
+					else
+						inputState = INPUT_NORMAL;
+				}
+				else
+					inputState = INPUT_BUILDING_PLACEMENT;
+				return true;
+			}
+			return false;
+
+		case "mousebuttondown":
+			if (ev.button == SDL_BUTTON_RIGHT)
+			{
+				// Cancel building.
+				placementSupport.Reset();
+				inputState = INPUT_NORMAL;
+				return true;
+			}
+			return false;
+		default:
+			return false;
+		}
+
+	case INPUT_BATCHTRAINING:
+		if (ev.type == "hotkeyup" && ev.hotkey == "session.batchtrain")
+		{
+			flushTrainingBatch();
+			inputState = INPUT_NORMAL;
+		}
+		return false;
+	default:
+		return false;
+	}
+}
+function handleInputAfterGui(ev)
+{
+	if (g_CinemaOverlay.isInCutsceneMode())
+		return false;
+	if (ev.hotkey === undefined)
+		ev.hotkey = null;
+	if (ev.hotkey == "session.highlightguarding")
+	{
+		g_ShowGuarding = (ev.type == "hotkeypress");
+		updateAdditionalHighlight();
+	}
+	else if (ev.hotkey == "session.highlightguarded")
+	{
+		g_ShowGuarded = (ev.type == "hotkeypress");
+		updateAdditionalHighlight();
+	}
+	// Unit class selection hotkeys
+	if (ev.type == "hotkeydown" && ev.hotkey in g_SelectUnitHotkeys)
+	{
+		const targetClass = g_SelectUnitHotkeys[ev.hotkey];
+		const playerEntities = Engine.GuiInterfaceCall("GetPlayerEntities", {
+			"player": g_ViewedPlayer
+		});
+		if (!playerEntities || !playerEntities.length)
+			return false;
+		const ents = playerEntities.filter(ent =>
+			GetEntityState(ent)?.identity?.classes.includes(targetClass)
+		);
+		if (!ents.length)
+			return false;
+		if (Engine.HotkeyIsPressed("selection.add"))
+			g_Selection.addList(ents);
+		else if (Engine.HotkeyIsPressed("selection.remove"))
+			g_Selection.removeList(ents);
+		else
+		{
+			g_Selection.reset();
+			g_Selection.addList(ents);
+		}
+		return true;
+	}
+	// Building placement hotkeys
+	if (ev.type == "hotkeydown" && ev.hotkey in g_PlaceBuildingHotkeys)
+	{
+		const buildingId = g_PlaceBuildingHotkeys[ev.hotkey];
+		return tryStartBuildingPlacementByBuildingId(buildingId);
+	}
+	// Building template selection hotkeys
+	if (ev.type == "hotkeydown" && ev.hotkey in g_SelectBuildingHotkeys)
+	{
+		const buildingId = g_SelectBuildingHotkeys[ev.hotkey];
+		const playerEntities = Engine.GuiInterfaceCall("GetPlayerEntities", {
+			"player": g_ViewedPlayer
+		});
+		if (!playerEntities || !playerEntities.length)
+			return false;
+		const ents = playerEntities.filter(ent =>
+			GetEntityState(ent)?.template?.endsWith(buildingId)
+		);
+		if (!ents.length)
+			return false;
+		if (!(buildingId in g_BuildingSelectIndex))
+			g_BuildingSelectIndex[buildingId] = 0;
+		const index = g_BuildingSelectIndex[buildingId];
+		const entity = ents[index % ents.length];
+		if (Engine.HotkeyIsPressed("selection.add"))
+			g_Selection.addList([entity]);
+		else
+		{
+			g_Selection.reset();
+			g_Selection.addList([entity]);
+		}
+		g_BuildingSelectIndex[buildingId] = (index + 1) % ents.length;
+		return true;
+	}
+
+	if (inputState != INPUT_NORMAL && inputState != INPUT_SELECTING)
+		clickedEntity = INVALID_ENTITY;
+
+	// State-machine processing:
+
+	switch (inputState)
+	{
+	case INPUT_NORMAL:
+		switch (ev.type)
+		{
+		case "mousemotion":
+		{
+			const ent = Engine.PickEntityAtPoint(ev.x, ev.y);
+			if (ent != INVALID_ENTITY)
+				g_Selection.setHighlightList([ent]);
+			else
+				g_Selection.setHighlightList([]);
+
+			return false;
+		}
+		case "mousebuttondown":
+			if (Engine.HotkeyIsPressed("session.flare") && !g_IsReplay)
+			{
+				triggerFlareAction(Engine.GetTerrainAtScreenPoint(ev.x, ev.y));
+				return true;
+			}
+			if (ev.button == SDL_BUTTON_LEFT)
+			{
+				g_DragStart = new Vector2D(ev.x, ev.y);
+				inputState = INPUT_SELECTING;
+				// If a single click occured, reset the clickedEntity.
+				// Also set it if we're double/triple clicking and missed the unit earlier.
+				if (ev.clicks == 1 || clickedEntity == INVALID_ENTITY)
+					clickedEntity = Engine.PickEntityAtPoint(ev.x, ev.y);
+				return true;
+			}
+			else if (ev.button == SDL_BUTTON_RIGHT)
+			{
+				if (!controlsPlayer(g_ViewedPlayer))
+					return false;
+				g_DragStart = new Vector2D(ev.x, ev.y);
+				inputState = INPUT_UNIT_POSITION_START;
+			}
+			return false;
+
+		case "hotkeypress":
+			if (ev.hotkey.indexOf("selection.group.") == 0)
+			{
+				const now = Date.now();
+				if (now - doublePressTimer < doublePressTime && ev.hotkey == prevHotkey)
+				{
+					if (ev.hotkey.indexOf("selection.group.select.") == 0)
+					{
+						const sptr = ev.hotkey.split(".");
+						performGroup("snap", sptr[3] - 1);
+					}
+				}
+				else
+				{
+					const sptr = ev.hotkey.split(".");
+					performGroup(sptr[2], sptr[3] - 1);
+
+					doublePressTimer = now;
+					prevHotkey = ev.hotkey;
+				}
+			}
+			return false;
+		default:
+			return false;
+		}
+
+	case INPUT_PRESELECTEDACTION:
+		switch (ev.type)
+		{
+		case "mousemotion":
+		{
+			const ent = Engine.PickEntityAtPoint(ev.x, ev.y);
+			if (ent != INVALID_ENTITY)
+				g_Selection.setHighlightList([ent]);
+			else
+				g_Selection.setHighlightList([]);
+
+			return false;
+		}
+		case "mousebuttondown":
+			if (ev.button == SDL_BUTTON_LEFT && preSelectedAction != ACTION_NONE)
+			{
+				const action = determineAction(ev.x, ev.y);
+				if (!action)
+					return false;
+				if (!Engine.HotkeyIsPressed("session.queue") && !Engine.HotkeyIsPressed("session.orderone"))
+				{
+					preSelectedAction = ACTION_NONE;
+					inputState = INPUT_NORMAL;
+				}
+				return doAction(action, ev);
+			}
+			if (ev.button == SDL_BUTTON_RIGHT && preSelectedAction != ACTION_NONE)
+			{
+				preSelectedAction = ACTION_NONE;
+				inputState = INPUT_NORMAL;
+			}
+			return false;
+		default:
+			// Slight hack: If selection is empty, reset the input state.
+			if (!g_Selection.size())
+			{
+				preSelectedAction = ACTION_NONE;
+				inputState = INPUT_NORMAL;
+			}
+			return false;
+		}
+
+	case INPUT_SELECTING:
+		switch (ev.type)
+		{
+		case "mousemotion":
+		{
+			if (g_DragStart.distanceTo(ev) >= getMaxDragDelta())
+			{
+				inputState = INPUT_BANDBOXING;
+				return false;
+			}
+
+			const ent = Engine.PickEntityAtPoint(ev.x, ev.y);
+			if (ent != INVALID_ENTITY)
+				g_Selection.setHighlightList([ent]);
+			else
+				g_Selection.setHighlightList([]);
+			return false;
+		}
+		case "mousebuttonup":
+			if (ev.button == SDL_BUTTON_LEFT)
+			{
+				if (clickedEntity == INVALID_ENTITY)
+					clickedEntity = Engine.PickEntityAtPoint(ev.x, ev.y);
+				// Abort if we didn't click on an entity or if the entity was removed before the mousebuttonup event.
+				if (clickedEntity == INVALID_ENTITY || !GetEntityState(clickedEntity))
+				{
+					clickedEntity = INVALID_ENTITY;
+					if (!Engine.HotkeyIsPressed("selection.add") && !Engine.HotkeyIsPressed("selection.remove"))
+					{
+						g_Selection.reset();
+						resetIdleUnit();
+					}
+					inputState = INPUT_NORMAL;
+					return true;
+				}
+
+				if (Engine.GetFollowedEntity() != clickedEntity)
+					Engine.CameraFollow(0);
+
+				let ents;
+				if (ev.clicks == 1)
+					ents = [clickedEntity];
+				else
+				{
+					const showOffscreen = Engine.HotkeyIsPressed("selection.offscreen");
+					let matchRank = true;
+					let templateToMatch;
+
+					if (ev.clicks == 2)
+					{
+						templateToMatch = GetEntityState(clickedEntity).identity.selectionGroupName;
+						if (templateToMatch)
+							matchRank = false;
+						else
+							// No selection group name defined, so fall back to exact match.
+							templateToMatch = GetEntityState(clickedEntity).template;
+
+					}
+					else
+						// Triple click
+						// Select units matching exact template name (same rank).
+						templateToMatch = GetEntityState(clickedEntity).template;
+
+					// TODO: Should we handle "control all units" here as well?
+					ents = Engine.PickSimilarPlayerEntities(templateToMatch, showOffscreen, matchRank, false);
+				}
+
+				if (Engine.HotkeyIsPressed("selection.add"))
+					g_Selection.addList(ents);
+				else if (Engine.HotkeyIsPressed("selection.remove"))
+					g_Selection.removeList(ents);
+				else
+				{
+					g_Selection.reset();
+					g_Selection.addList(ents);
+				}
+
+				inputState = INPUT_NORMAL;
+				return true;
+			}
+			return false;
+		default:
+			return false;
+		}
+
+	case INPUT_UNIT_POSITION_START:
+		switch (ev.type)
+		{
+		case "mousemotion":
+			if (g_DragStart.distanceToSquared(ev) >= Math.square(getMaxDragDelta()))
+				inputState = INPUT_UNIT_POSITION;
+			return false;
+		case "mousebuttonup":
+			inputState = INPUT_NORMAL;
+			if (ev.button == SDL_BUTTON_RIGHT)
+			{
+				const action = determineAction(ev.x, ev.y);
+				if (action)
+					return doAction(action, ev);
+			}
+			return false;
+		default:
+			return false;
+		}
+
+	case INPUT_BUILDING_PLACEMENT:
+		switch (ev.type)
+		{
+		case "mousemotion":
+			placementSupport.position = Engine.GetTerrainAtScreenPoint(ev.x, ev.y);
+			if (placementSupport.mode === "wall")
+			{
+				// Including only the on-screen towers in the next snap candidate list is sufficient here, since the user is
+				// still selecting a starting point (which must necessarily be on-screen). (The update of the snap entities
+				// itself happens in the call to updateBuildingPlacementPreview below.)
+				placementSupport.wallSnapEntitiesIncludeOffscreen = false;
+			}
+			else
+			{
+				if (placementSupport.template && Engine.GuiInterfaceCall("GetNeededResources", { "cost": GetTemplateData(placementSupport.template).cost }))
+				{
+					placementSupport.Reset();
+					inputState = INPUT_NORMAL;
+					return true;
+				}
+
+				if (isSnapToEdgesEnabled())
+				{
+					// We need to reset the angle before the snapping to edges,
+					// because we want to get the angle near to the default one.
+					placementSupport.SetDefaultAngle();
+				}
+				const snapData = Engine.GuiInterfaceCall("GetFoundationSnapData", {
+					"template": placementSupport.template,
+					"x": placementSupport.position.x,
+					"z": placementSupport.position.z,
+					"angle": placementSupport.angle,
+					"snapToEdges": isSnapToEdgesEnabled() && Engine.GetEdgesOfStaticObstructionsOnScreenNearTo(
+						placementSupport.position.x, placementSupport.position.z)
+				});
+				if (snapData)
+				{
+					placementSupport.angle = snapData.angle;
+					placementSupport.position.x = snapData.x;
+					placementSupport.position.z = snapData.z;
+				}
+			}
+
+			updateBuildingPlacementPreview(); // includes an update of the snap entity candidates
+			return false; // continue processing mouse motion
+
+		case "mousebuttondown":
+			if (ev.button == SDL_BUTTON_LEFT)
+			{
+				if (placementSupport.mode === "wall")
+				{
+					const validPlacement = updateBuildingPlacementPreview();
+					if (validPlacement !== false)
+						inputState = INPUT_BUILDING_WALL_CLICK;
+				}
+				else
+				{
+					placementSupport.position = Engine.GetTerrainAtScreenPoint(ev.x, ev.y);
+
+					if (isSnapToEdgesEnabled())
+					{
+						const snapData = Engine.GuiInterfaceCall("GetFoundationSnapData", {
+							"template": placementSupport.template,
+							"x": placementSupport.position.x,
+							"z": placementSupport.position.z,
+							"angle": placementSupport.angle,
+							"snapToEdges": Engine.GetEdgesOfStaticObstructionsOnScreenNearTo(
+								placementSupport.position.x, placementSupport.position.z)
+						});
+						if (snapData)
+						{
+							placementSupport.angle = snapData.angle;
+							placementSupport.position.x = snapData.x;
+							placementSupport.position.z = snapData.z;
+						}
+					}
+
+					g_DragStart = new Vector2D(ev.x, ev.y);
+					inputState = INPUT_BUILDING_CLICK;
+				}
+				return true;
+			}
+			else if (ev.button == SDL_BUTTON_RIGHT)
+			{
+				// Cancel building.
+				placementSupport.Reset();
+				inputState = INPUT_NORMAL;
+				return true;
+			}
+			return false;
+
+		case "hotkeydown":
+		{
+			const rotation_step = Math.PI / 12; // 24 clicks make a full rotation
+
+			switch (ev.hotkey)
+			{
+			case "session.rotate.cw":
+				placementSupport.angle += rotation_step;
+				updateBuildingPlacementPreview();
+				return false;
+			case "session.rotate.ccw":
+				placementSupport.angle -= rotation_step;
+				updateBuildingPlacementPreview();
+				return false;
+			default:
+				return false;
+			}
+		}
+		default:
+			return false;
+		}
+
+	case INPUT_FLARE:
+		if (ev.type == "mousebuttondown")
+		{
+			if (ev.button == SDL_BUTTON_LEFT)
+			{
+				triggerFlareAction(Engine.GetTerrainAtScreenPoint(ev.x, ev.y));
+				inputState = INPUT_NORMAL;
+				return true;
+			}
+			else if (ev.button == SDL_BUTTON_RIGHT)
+			{
+				inputState = INPUT_NORMAL;
+				return true;
+			}
+		}
+		return false;
+	default:
+		return false;
+	}
+}
+/**
+ * Checks whether the given structure is buildable by g_ViewedPlayer,
+ * including civ restrictions, technology requirements and available resources.
+ * If all requirements are met, it initiates the building placement.
+ */
+function tryStartBuildingPlacementByBuildingId(buildingId)
+{
+	if (g_IsObserver)
+		return false;
+	const playerState = GetSimState().players[g_ViewedPlayer];
+	if (!playerState)
+		return false;
+	const buildableEntities = getAllBuildableEntitiesFromSelection();
+	if (!buildableEntities || !buildableEntities.length)
+		return false;
+	const templateName = buildableEntities.find(template =>
+		template.endsWith(buildingId)
+	);
+	if (!templateName)
+		return false;
+	const templateData = GetTemplateData(templateName);
+	if (!templateData)
+		return false;
+	let requirementsMet = true;
+	if (templateData.requirements)
+	{
+		requirementsMet = Engine.GuiInterfaceCall("AreRequirementsMet", {
+			"requirements": templateData.requirements,
+			"player": g_ViewedPlayer
+		});
+	}
+	if (requirementsMet && templateData.cost)
+	{
+		requirementsMet = !Engine.GuiInterfaceCall("GetNeededResources", {
+			"cost": templateData.cost,
+			"player": g_ViewedPlayer
+		});
+	}
+	if (!requirementsMet)
+		return false;
+	startBuildingPlacement(templateName, playerState);
+	if (placementSupport)
+	{
+		placementSupport.position = Engine.GetTerrainAtScreenPoint(mouseX, mouseY);
+		updateBuildingPlacementPreview();
+	}
+	return true;
+}
+function doAction(action, ev)
+{
+	if (!controlsPlayer(g_ViewedPlayer))
+		return false;
+
+	return handleUnitAction(Engine.GetTerrainAtScreenPoint(ev.x, ev.y), action);
+}
+
+function popOneFromSelection(action)
+{
+	// Pick the first unit that can do this order.
+	const unit = action.firstAbleEntity || g_Selection.find(entity =>
+		["preSelectedActionCheck", "hotkeyActionCheck", "actionCheck"].some(method =>
+			g_UnitActions[action.type][method] &&
+			g_UnitActions[action.type][method](action.target || undefined, [entity])
+		));
+	if (unit)
+	{
+		g_Selection.removeList([unit], false);
+		return [unit];
+	}
+	return null;
+}
+
+function positionUnitsFreehandSelectionMouseMove(ev)
+{
+	// Converting the input line into a List of points.
+	// For better performance the points must have a minimum distance to each other.
+	const target = Vector2D.from3D(Engine.GetTerrainAtScreenPoint(ev.x, ev.y));
+	if (!g_FreehandSelection_InputLine.length ||
+	    target.distanceToSquared(g_FreehandSelection_InputLine[g_FreehandSelection_InputLine.length - 1]) >=
+	    g_FreehandSelection_ResolutionInputLineSquared)
+		g_FreehandSelection_InputLine.push(target);
+	return false;
+}
+
+function positionUnitsFreehandSelectionMouseUp(ev)
+{
+	inputState = INPUT_NORMAL;
+	const inputLine = g_FreehandSelection_InputLine;
+	g_FreehandSelection_InputLine = [];
+	if (ev.button != SDL_BUTTON_RIGHT)
+		return true;
+
+	let lengthOfLine = 0;
+	for (let i = 1; i < inputLine.length; ++i)
+		lengthOfLine += inputLine[i].distanceTo(inputLine[i - 1]);
+
+	// Filter units that can move
+	const selection = g_Selection.filter(ent => !!GetEntityState(ent).unitAI).sort((a, b) => a - b);
+
+	// Checking the line for a minimum length to save performance.
+	if (lengthOfLine < g_FreehandSelection_MinLengthOfLine || selection.length < g_FreehandSelection_MinNumberOfUnits)
+	{
+		const action = determineAction(ev.x, ev.y);
+		return !!action && doAction(action, ev);
+	}
+
+	// Sort units by their projection onto the line direction (parallel sorting)
+	const sortedSelection = sortEntitiesAlongLine(selection, inputLine[0], inputLine[inputLine.length - 1], true);
+
+	const selectionCount = sortedSelection.length;
+	const targetPositions = [];
+
+	// Distribute units evenly along the polyline
+	for (let i = 0; i < selectionCount; ++i)
+	{
+		const t = i / (selectionCount - 1);
+		const targetDistance = t * lengthOfLine;
+
+		let accumulated = 0;
+		let targetPoint = inputLine[0];
+		for (let j = 1; j < inputLine.length; ++j)
+		{
+			const segStart = inputLine[j - 1];
+			const segEnd = inputLine[j];
+			const segLength = segEnd.distanceTo(segStart);
+
+			if (accumulated + segLength >= targetDistance)
+			{
+				// Interpolate within this segment
+				const remaining = targetDistance - accumulated;
+				const frac = remaining / segLength;
+				targetPoint = segStart.lerp(segEnd, frac);
+				break;
+			}
+			accumulated += segLength;
+		}
+		targetPositions.push(targetPoint);
+	}
+
+	Engine.PostNetworkCommand({
+		"type": isAttackMovePressed() ? "attack-walk-custom" : "walk-custom",
+		"entities": sortedSelection,
+		"targetPositions": targetPositions.map(pos => pos.toFixed(2)),
+		"targetClasses": Engine.HotkeyIsPressed("session.attackmoveUnit") ? { "attack": ["Unit"] } : { "attack": ["Unit", "Structure"] },
+		"queued": Engine.HotkeyIsPressed("session.queue"),
+		"pushFront": Engine.HotkeyIsPressed("session.pushorderfront"),
+		"formation": NULL_FORMATION,
+	});
+
+	// Add target markers with a minimum distance of 5 to each other.
+	const stepDistance = lengthOfLine / (selectionCount - 1);
+	const entitiesBetweenMarker = Math.max(1, Math.ceil(5 / stepDistance));
+	for (let i = 0; i < targetPositions.length; i += entitiesBetweenMarker)
+		DrawTargetMarker({ "x": targetPositions[i].x, "z": targetPositions[i].y });
+
+	Engine.GuiInterfaceCall("PlaySound", {
+		"name": "order_walk",
+		"entity": selection[0]
+	});
+
+	return true;
+}
+
+function triggerFlareAction(position)
+{
+	const now = Date.now();
+	if (g_LastFlareTime && now < g_LastFlareTime + g_FlareCooldown)
+		return;
+
+	g_LastFlareTime = now;
+
+	renderAndPlayFlare(position, Engine.GetPlayerGUID());
+	if (Engine.HasNetClient())
+		Engine.SendNetworkFlare(position);
+}
+
+function handleUnitAction(position, action)
+{
+	if (!g_UnitActions[action.type] || !g_UnitActions[action.type].execute)
+	{
+		error("Invalid action.type " + action.type);
+		return false;
+	}
+
+	const selection = Engine.HotkeyIsPressed("session.orderone") &&
+		popOneFromSelection(action) || g_Selection.toList();
+	// If the session.queue hotkey is down, add the order to the unit's order queue instead
+	// of running it immediately. If the pushorderfront hotkey is down, execute the order
+	// immidiately and continue the rest of the queue afterwards.
+	return g_UnitActions[action.type].execute(
+		position,
+		action,
+		selection,
+		Engine.HotkeyIsPressed("session.queue"),
+		Engine.HotkeyIsPressed("session.pushorderfront"));
+}
+
+function getEntityLimitAndCount(playerState, entType)
+{
+	const ret = {
+		"entLimit": undefined,
+		"entCount": undefined,
+		"entLimitChangers": undefined,
+		"canBeAddedCount": undefined,
+		"matchLimit": undefined,
+		"matchCount": undefined,
+		"type": undefined
+	};
+	if (!playerState.entityLimits)
+		return ret;
+	const template = GetTemplateData(entType);
+	let entCategory;
+	let matchLimit;
+	if (template.trainingRestrictions)
+	{
+		entCategory = template.trainingRestrictions.category;
+		matchLimit = template.trainingRestrictions.matchLimit;
+		ret.type = "training";
+	}
+	else if (template.buildRestrictions)
+	{
+		entCategory = template.buildRestrictions.category;
+		matchLimit = template.buildRestrictions.matchLimit;
+		ret.type = "build";
+	}
+
+	if (entCategory && playerState.entityLimits[entCategory] !== undefined)
+	{
+		ret.entLimit = playerState.entityLimits[entCategory] || 0;
+		ret.entCount = playerState.entityCounts[entCategory] || 0;
+		ret.entLimitChangers = playerState.entityLimitChangers[entCategory];
+		ret.canBeAddedCount = Math.max(ret.entLimit - ret.entCount, 0);
+	}
+
+	if (matchLimit)
+	{
+		ret.matchLimit = matchLimit;
+		ret.matchCount = playerState.matchEntityCounts[entType] || 0;
+		ret.canBeAddedCount = Math.min(Math.max(ret.entLimit - ret.entCount, 0), Math.max(ret.matchLimit - ret.matchCount, 0));
+	}
+	return ret;
+}
+
+/**
+ * Called by GUI when user clicks construction button.
+ * @param {string} buildTemplate - Template name of the entity the user wants to build.
+ */
+function startBuildingPlacement(buildTemplate, playerState)
+{
+	if (getEntityLimitAndCount(playerState, buildTemplate).canBeAddedCount == 0)
+		return;
+
+	// TODO: we should clear any highlight selection rings here. If the cursor was over an entity before going onto the GUI
+	// to start building a structure, then the highlight selection rings are kept during the construction of the structure.
+	// Gives the impression that somehow the hovered-over entity has something to do with the structure you're building.
+
+	placementSupport.Reset();
+
+	const templateData = GetTemplateData(buildTemplate);
+	if (templateData.wallSet)
+	{
+		placementSupport.mode = "wall";
+		placementSupport.wallSet = templateData.wallSet;
+		inputState = INPUT_BUILDING_PLACEMENT;
+	}
+	else
+	{
+		placementSupport.mode = "building";
+		placementSupport.template = buildTemplate;
+		inputState = INPUT_BUILDING_PLACEMENT;
+	}
+
+	if (templateData.attack &&
+		templateData.attack.Ranged &&
+		templateData.attack.Ranged.maxRange)
+		placementSupport.attack = templateData.attack;
+}
+
+// Batch training:
+// When the user shift-clicks, we set these variables and switch to INPUT_BATCHTRAINING
+// When the user releases shift, or clicks on a different training button, we create the batched units
+var g_BatchTrainingEntities;
+var g_BatchTrainingType;
+var g_NumberOfBatches;
+var g_BatchTrainingEntityAllowedCount;
+var g_BatchSize = getDefaultBatchTrainingSize();
+
+function OnTrainMouseWheel(dir)
+{
+	if (!Engine.HotkeyIsPressed("session.batchtrain"))
+		return;
+
+	g_BatchSize += dir / Engine.ConfigDB_GetValue("user", "gui.session.scrollbatchratio");
+	if (g_BatchSize < 1 || !Number.isFinite(g_BatchSize))
+		g_BatchSize = 1;
+
+	updateSelectionDetails();
+}
+
+function getBuildingsWhichCanTrainEntity(entitiesToCheck, trainEntType)
+{
+	return entitiesToCheck.filter(entity =>
+	{
+		const state = GetEntityState(entity);
+		return state?.trainer?.entities?.includes(trainEntType) &&
+			(!state.upgrade || !state.upgrade.isUpgrading);
+	});
+}
+
+function initBatchTrain()
+{
+	registerConfigChangeHandler(changes =>
+	{
+		if (changes.has("gui.session.batchtrainingsize"))
+			updateDefaultBatchSize();
+	});
+}
+
+function getDefaultBatchTrainingSize()
+{
+	const num = +Engine.ConfigDB_GetValue("user", "gui.session.batchtrainingsize");
+	return Number.isInteger(num) && num > 0 ? num : 5;
+}
+
+function getBatchTrainingSize()
+{
+	return Math.max(Math.round(g_BatchSize), 1);
+}
+
+function updateDefaultBatchSize()
+{
+	g_BatchSize = getDefaultBatchTrainingSize();
+}
+
+/**
+ * Calculates the total remaining production queue time of a building.
+ */
+function getTotalQueueTime(queue)
+{
+	return queue.reduce((sum, item) => sum + (item.timeRemaining ?? item.timeTotal ?? 0), 0);
+}
+
+/**
+ * Returns the given production building selection sorted by their current
+ * queued training time, from lowest to highest.
+ * Invalid entities or entities without a valid production queue are filtered out.
+ */
+function getBuildingsSortedByQueueTime(entities)
+{
+	return entities.map(entity =>
+	{
+		const state = GetEntityState(entity);
+		const queue = state?.production?.queue;
+		if (!Array.isArray(queue))
+			return null;
+		return {
+			"entity": entity,
+			"totalQueueTime": getTotalQueueTime(queue)
+		};
+	}).filter(data => data !== null).sort((a, b) => a.totalQueueTime - b.totalQueueTime).map(building => building.entity);
+}
+
+/**
+ * Add the unit shown at position to the training queue for all entities in the selection.
+ * @param {number} position - The position of the template to train.
+ */
+function addTrainingByPosition(position)
+{
+	const playerState = GetSimState().players[Engine.GetPlayerID()];
+	const selection = g_Selection.toList();
+
+	if (!playerState || !selection.length)
+		return;
+
+	const trainableEnts = getAllTrainableEntitiesFromSelection();
+	const entToTrain = trainableEnts[position];
+	if (!entToTrain)
+		return;
+
+	addTrainingToQueue(selection, entToTrain, playerState);
+}
+
+// Called by GUI when user clicks training button
+function addTrainingToQueue(selection, trainEntType, playerState)
+{
+	const appropriateBuildings = getBuildingsWhichCanTrainEntity(selection, trainEntType);
+
+	const canBeAddedCount = getEntityLimitAndCount(playerState, trainEntType).canBeAddedCount;
+
+	const decrement = Engine.HotkeyIsPressed("selection.remove");
+	let template;
+	if (!decrement)
+		template = GetTemplateData(trainEntType);
+
+
+	// Batch training only possible if we can train at least 2 units.
+	if (Engine.HotkeyIsPressed("session.batchtrain") && (canBeAddedCount == undefined || canBeAddedCount > 1))
+	{
+		if (inputState == INPUT_BATCHTRAINING)
+		{
+			// Check if we are training in the same structure(s) as the last batch.
+			// NOTE: We just check if the arrays are the same and if the order is the same.
+			// If the order changed, we have a new selection and we should create a new batch.
+			// If we're already creating a batch of this unit (in the same structure(s)), then just extend it
+			// (if training limits allow).
+			if (g_BatchTrainingEntities.length == selection.length &&
+			    g_BatchTrainingEntities.every((ent, i) => ent == selection[i]) &&
+			    g_BatchTrainingType == trainEntType)
+			{
+				if (decrement)
+				{
+					--g_NumberOfBatches;
+					if (g_NumberOfBatches <= 0)
+						inputState = INPUT_NORMAL;
+				}
+				else if (canBeAddedCount == undefined ||
+				         canBeAddedCount > g_NumberOfBatches * getBatchTrainingSize() * appropriateBuildings.length)
+				{
+					if (Engine.GuiInterfaceCall("GetNeededResources", {
+						"cost": multiplyEntityCosts(template, (g_NumberOfBatches + 1) * getBatchTrainingSize())
+					}))
+						return;
+
+					++g_NumberOfBatches;
+				}
+				g_BatchTrainingEntityAllowedCount = canBeAddedCount;
+				return;
+			}
+			else if (!decrement)
+				flushTrainingBatch();
+		}
+
+		if (decrement || Engine.GuiInterfaceCall("GetNeededResources", {
+			"cost": multiplyEntityCosts(template, getBatchTrainingSize())
+		}))
+			return;
+
+		inputState = INPUT_BATCHTRAINING;
+		g_BatchTrainingEntities = selection;
+		g_BatchTrainingType = trainEntType;
+		g_BatchTrainingEntityAllowedCount = canBeAddedCount;
+		g_NumberOfBatches = 1;
+	}
+	else
+	{
+		let sortedBuildingsForTraining = getBuildingsSortedByQueueTime(appropriateBuildings);
+		if (canBeAddedCount !== undefined)
+			sortedBuildingsForTraining = sortedBuildingsForTraining.slice(0, canBeAddedCount);
+		Engine.PostNetworkCommand({
+			"type": "train",
+			"template": trainEntType,
+			"count": 1,
+			"entities": sortedBuildingsForTraining,
+			"pushFront": Engine.HotkeyIsPressed("session.pushorderfront")
+		});
+	}
+}
+
+/**
+ * Returns the number of units that will be present in a batch if the user clicks
+ * the training button depending on the batch training modifier hotkey.
+ */
+function getTrainingStatus(selection, trainEntType, playerState)
+{
+	const appropriateBuildings = getBuildingsWhichCanTrainEntity(selection, trainEntType);
+	let nextBatchTrainingCount = 0;
+
+	let canBeAddedCount;
+	if (inputState == INPUT_BATCHTRAINING && g_BatchTrainingType == trainEntType)
+	{
+		nextBatchTrainingCount = g_NumberOfBatches * getBatchTrainingSize();
+		canBeAddedCount = g_BatchTrainingEntityAllowedCount;
+	}
+	else
+		canBeAddedCount = getEntityLimitAndCount(playerState, trainEntType).canBeAddedCount;
+
+	// We need to calculate count after the next increment if possible.
+	if ((canBeAddedCount == undefined || canBeAddedCount > nextBatchTrainingCount * appropriateBuildings.length) &&
+	    Engine.HotkeyIsPressed("session.batchtrain"))
+		nextBatchTrainingCount += getBatchTrainingSize();
+
+	nextBatchTrainingCount = Math.max(nextBatchTrainingCount, 1);
+
+	// If training limits don't allow us to train batchedSize in each appropriate structure,
+	// train as many full batches as we can and the remainder in one more structure.
+	let buildingsCountToTrainFullBatch = appropriateBuildings.length;
+	let remainderToTrain = 0;
+	if (canBeAddedCount !== undefined &&
+	    canBeAddedCount < nextBatchTrainingCount * appropriateBuildings.length)
+	{
+		buildingsCountToTrainFullBatch = Math.floor(canBeAddedCount / nextBatchTrainingCount);
+		remainderToTrain = canBeAddedCount % nextBatchTrainingCount;
+	}
+
+	return [buildingsCountToTrainFullBatch, nextBatchTrainingCount, remainderToTrain];
+}
+
+function flushTrainingBatch()
+{
+	const batchedSize = g_NumberOfBatches * getBatchTrainingSize();
+	const appropriateBuildings = getBuildingsWhichCanTrainEntity(g_BatchTrainingEntities, g_BatchTrainingType);
+
+	// Sort buildings by queued training time so that, if some training
+	// commands fail due to resource or entity limits, units are assigned
+	// to the least busy buildings first.
+	const sortedBuildings = getBuildingsSortedByQueueTime(appropriateBuildings);
+
+	// If training limits don't allow us to train batchedSize in each appropriate structure.
+	if (g_BatchTrainingEntityAllowedCount !== undefined &&
+		g_BatchTrainingEntityAllowedCount < batchedSize * appropriateBuildings.length)
+	{
+		// Train as many full batches as we can.
+		const buildingsCountToTrainFullBatch = Math.floor(g_BatchTrainingEntityAllowedCount / batchedSize);
+		Engine.PostNetworkCommand({
+			"type": "train",
+			"entities": sortedBuildings.slice(0, buildingsCountToTrainFullBatch),
+			"template": g_BatchTrainingType,
+			"count": batchedSize,
+			"pushFront": Engine.HotkeyIsPressed("session.pushorderfront")
+		});
+
+		// Train remainer in one more structure.
+		const remainer = g_BatchTrainingEntityAllowedCount % batchedSize;
+		if (remainer)
+			Engine.PostNetworkCommand({
+				"type": "train",
+				"entities": [sortedBuildings[buildingsCountToTrainFullBatch]],
+				"template": g_BatchTrainingType,
+				"count": remainer,
+				"pushFront": Engine.HotkeyIsPressed("session.pushorderfront")
+			});
+	}
+	else
+		Engine.PostNetworkCommand({
+			"type": "train",
+			"entities": sortedBuildings,
+			"template": g_BatchTrainingType,
+			"count": batchedSize,
+			"pushFront": Engine.HotkeyIsPressed("session.pushorderfront")
+		});
+}
+
+function performGroup(action, groupId)
+{
+	if (g_Groups.groups[groupId] === undefined)
+	{
+		warn("Invalid groupId " + groupId);
+		return;
+	}
+	switch (action)
+	{
+	case "snap":
+	case "select":
+	case "add":
+	{
+		const toSelect = [];
+		g_Groups.update();
+		for (const ent in g_Groups.groups[groupId].ents)
+			toSelect.push(+ent);
+
+		if (action != "add")
+			g_Selection.reset();
+
+		g_Selection.addList(toSelect);
+
+		if (action == "snap" && toSelect.length)
+		{
+			const entState = GetEntityState(getEntityOrHolder(toSelect[0]));
+			const position = entState.position;
+			if (position && entState.visibility != "hidden")
+				Engine.CameraMoveTo(position.x, position.z);
+		}
+		break;
+	}
+	case "save":
+	case "breakUp":
+		g_Groups.groups[groupId].reset();
+
+		if (action == "save")
+			g_Groups.addEntities(groupId, g_Selection.toList());
+
+		updateGroups();
+		break;
+	default:
+		warn("Unknow action in performGroup: " + action);
+	}
+}
+
+var lastIdleUnit = 0;
+var currIdleClassIndex = 0;
+var lastIdleClasses = [];
+
+function resetIdleUnit()
+{
+	lastIdleUnit = 0;
+	currIdleClassIndex = 0;
+	lastIdleClasses = [];
+}
+
+function findIdleUnit(classes)
+{
+	const append = Engine.HotkeyIsPressed("selection.add");
+	const selectall = Engine.HotkeyIsPressed("selection.offscreen");
+
+	// Reset the last idle unit, etc., if the selection type has changed.
+	if (selectall || classes.length != lastIdleClasses.length || !classes.every((v, i) => v === lastIdleClasses[i]))
+		resetIdleUnit();
+	lastIdleClasses = classes;
+
+	const data = {
+		"viewedPlayer": g_ViewedPlayer,
+		"excludeUnits": append ? g_Selection.toList() : [],
+		// If the current idle class index is not 0, put the class at that index first.
+		"idleClasses": classes.slice(currIdleClassIndex, classes.length).concat(classes.slice(0, currIdleClassIndex))
+	};
+	if (!selectall)
+	{
+		data.limit = 1;
+		data.prevUnit = lastIdleUnit;
+	}
+
+	const idleUnits = Engine.GuiInterfaceCall("FindIdleUnits", data);
+	if (!idleUnits.length)
+	{
+		// TODO: display a message to indicate no more idle units, or something
+		Engine.GuiInterfaceCall("PlaySoundForPlayer", {
+			"name": "no_idle_unit"
+		});
+		resetIdleUnit();
+		return;
+	}
+
+	if (!append)
+		g_Selection.reset();
+	g_Selection.addList(idleUnits);
+
+	if (selectall)
+		return;
+
+	lastIdleUnit = idleUnits[0];
+	const entityState = GetEntityState(lastIdleUnit);
+	if (entityState.position)
+		Engine.CameraMoveTo(entityState.position.x, entityState.position.z);
+
+	// Move the idle class index to the first class an idle unit was found for.
+	const indexChange = data.idleClasses.findIndex(elem => MatchesClassList(entityState.identity.classes, elem));
+	currIdleClassIndex = (currIdleClassIndex + indexChange) % classes.length;
+}
+
+function clearSelection()
+{
+	if (inputState==INPUT_BUILDING_PLACEMENT || inputState==INPUT_BUILDING_WALL_PATHING)
+	{
+		inputState = INPUT_NORMAL;
+		placementSupport.Reset();
+	}
+	else
+		g_Selection.reset();
+	preSelectedAction = ACTION_NONE;
+}
+
+function distributeAttackOrders(attackers, targets)
+{
+	if (targets.length < 1)
+		return;
+
+	// Play attack sounds from a sample of units in selection
+	const soundCount = Math.min(3, attackers.length);
+	for (let i = 0; i < soundCount; i++)
+	{
+		const t = soundCount === 1 ? 0 : i / (soundCount - 1);
+		const attackerIndex = Math.floor(t * (attackers.length - 1));
+
+		setTimeout(() =>
+		{
+			Engine.GuiInterfaceCall("PlaySound", {
+				"name": "order_attack",
+				"entity": attackers[attackerIndex]
+			});
+		}, i * 180);
+	}
+
+	Engine.PostNetworkCommand({
+		"type": "attack-group",
+		"entities": attackers,
+		"targets": targets,
+		"queued": Engine.HotkeyIsPressed("session.queue"),
+		"allowCapture": false
+	});
+}
+
+/**
+ * Sorts attackers and targets for left-to-right engagement across the battle line.
+ *
+ * Entities are sorted by their perpendicular distance to the line connecting the
+ * two army centers, creating natural pairings across the battle front.
+ *
+ * @param {number[]} attackers - Array of attacking entity IDs.
+ * @param {number[]} targets - Array of target entity IDs.
+ * @returns {Object} { attackers: number[], targets: number[] } - Both arrays sorted
+ *                   along the same shared axis so corresponding indices pair up
+ *                   for realistic line engagement.
+ */
+function sortEntitiesForEngagement(attackers, targets)
+{
+	const getPosition = (id) => GetEntityState(id).position;
+
+	const computeAveragePosition = (entities) =>
+	{
+		if (entities.length === 0) return new Vector2D(0, 0);
+		const vectors = entities.map(id => Vector2D.from3D(getPosition(id)));
+		return Vector2D.average(vectors);
+	};
+
+	// Calculate the axis of engagement - the line between the groups' average positions
+	const avgAttackers = computeAveragePosition(attackers);
+	const avgTargets = computeAveragePosition(targets);
+
+	// Sort each group by perpendicular distance to the engagement line
+	const sortedAttackers = sortEntitiesAlongLine(attackers, avgAttackers, avgTargets);
+	const sortedTargets = sortEntitiesAlongLine(targets, avgAttackers, avgTargets);
+
+	return {
+		"attackers": sortedAttackers,
+		"targets": sortedTargets
+	};
+}
+
+/**
+ * Sorts entity IDs by their projection onto a line's direction or perpendicular axis.
+ *
+ * @param {number[]} entities - Array of entity IDs.
+ * @param {Vector2D} lineStart - Start point of the reference line.
+ * @param {Vector2D} lineEnd - End point of the reference line.
+ * @param {boolean} sortByDirection - If true, sort by parallel projection (along line);
+ *                                    If false, sort by perpendicular distance (default).
+ * @returns {number[]} Sorted entity IDs.
+ */
+function sortEntitiesAlongLine(entities, lineStart, lineEnd, sortByDirection = false)
+{
+	const dir = Vector2D.sub(lineEnd, lineStart);
+	const length = dir.length();
+	if (length === 0)
+		return entities.slice();
+
+	// Choose basis vector: either parallel or perpendicular to the line
+	let basis;
+	if (sortByDirection)
+		basis = dir.mult(1 / length); // Unit direction vector
+	else
+		basis = new Vector2D(-dir.y, dir.x).normalize(); // Perpendicular
+
+	const withCoord = entities.map(id =>
+	{
+		const pos = GetEntityState(id).position;
+		const point2D = Vector2D.from3D(pos);
+		const rel = point2D.sub(lineStart);
+		const coord = rel.dot(basis); // Project onto basis vector
+		return { id, coord };
+	});
+
+	// Sort by that coordinate
+	withCoord.sort((a, b) => a.coord - b.coord);
+	return withCoord.map(item => item.id);
+}

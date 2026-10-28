@@ -1,0 +1,13 @@
+{
+  "script": "wasm/scripts/verify-phase4-parity.py",
+  "arguments": [
+    "--capture",
+    "--native",
+    "docs/wasm/evidence/phase4-5/native-capture-serialized-1",
+    "--evidence",
+    "docs\\wasm\\evidence\\phase4-5\\webgpu-capture-serialized-1"
+  ],
+  "renderer": "webgpu",
+  "browserEndpoint": "http://localhost:9227",
+  "applicationURL": "http://localhost:8095/application.html?automation=1"
+}

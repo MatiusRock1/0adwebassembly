@@ -1,0 +1,6 @@
+{
+  "executed": false,
+  "accepted": false,
+  "terminated": true,
+  "reason": "Emscripten 4.0.10 warned ASYNCIFY=1 is incompatible with -fwasm-exceptions. Stopped only this task container; select JSPI for native Wasm EH."
+}

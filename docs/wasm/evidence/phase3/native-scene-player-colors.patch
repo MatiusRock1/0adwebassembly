@@ -1,0 +1,53 @@
+--- a/source/renderer/RenderModifiers.h
++++ b/source/renderer/RenderModifiers.h
+@@ -31,6 +31,10 @@
+ #include "graphics/Color.h"
+ 
+ #include <cstdint>
++#include <vector>
++
++// Empty restores the original desktop CGame color provider.
++void SetScenePlayerColors(const std::vector<CColor>& colors);
+ 
+ class CLightEnv;
+ class CModel;
+--- a/source/renderer/RenderModifiers.cpp
++++ b/source/renderer/RenderModifiers.cpp
+@@ -37,6 +37,19 @@
+ 
+ ///////////////////////////////////////////////////////////////////////////////////////////////
+ // LitRenderModifier implementation
++
++
++namespace {
++std::vector<CColor> scenePlayerColors;
++const CColor& ScenePlayerColor(int player)
++{
++ if (scenePlayerColors.empty()) { ENSURE(g_Game); return g_Game->GetPlayerColor(player); }
++ static const CColor brokenColor(1,0,1,1);
++ if (player<0 || static_cast<size_t>(player)>=scenePlayerColors.size()) return brokenColor;
++ return scenePlayerColors[player];
++}
++}
++void SetScenePlayerColors(const std::vector<CColor>& colors) { scenePlayerColors=colors; }
+ 
+ LitRenderModifier::LitRenderModifier()
+ 	: m_Shadow(0), m_LightEnv(0)
+@@ -109,7 +122,7 @@
+ 
+ 	if (m_BindingPlayerColor >= 0)
+ 	{
+-		m_PlayerColor = g_Game->GetPlayerColor(0);
++		m_PlayerColor = ScenePlayerColor(0);
+ 		deviceCommandContext->SetUniform(
+ 			m_BindingPlayerColor, m_PlayerColor.AsFloatArray());
+ 	}
+@@ -134,7 +147,7 @@
+ 
+ 	if (m_BindingPlayerColor >= 0)
+ 	{
+-		const CColor& playerColor = g_Game->GetPlayerColor(model->GetPlayerID());
++		const CColor& playerColor = ScenePlayerColor(model->GetPlayerID());
+ 		if (m_PlayerColor != playerColor)
+ 		{
+ 			m_PlayerColor = playerColor;

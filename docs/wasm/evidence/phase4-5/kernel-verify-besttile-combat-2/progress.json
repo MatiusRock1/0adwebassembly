@@ -1,0 +1,50 @@
+[
+  {
+    "elapsedSeconds": 5.108306000001903,
+    "liveUnitsAfterReplenishment": 306
+  },
+  {
+    "elapsedSeconds": 10.191024100000504,
+    "liveUnitsAfterReplenishment": 306
+  },
+  {
+    "elapsedSeconds": 15.324367000001075,
+    "liveUnitsAfterReplenishment": 306
+  },
+  {
+    "elapsedSeconds": 20.411873500001093,
+    "liveUnitsAfterReplenishment": 306
+  },
+  {
+    "elapsedSeconds": 25.51882150000165,
+    "liveUnitsAfterReplenishment": 306
+  },
+  {
+    "elapsedSeconds": 30.59750350000104,
+    "liveUnitsAfterReplenishment": 306
+  },
+  {
+    "elapsedSeconds": 35.74353820000397,
+    "liveUnitsAfterReplenishment": 306
+  },
+  {
+    "elapsedSeconds": 40.84816410000349,
+    "liveUnitsAfterReplenishment": 303
+  },
+  {
+    "elapsedSeconds": 47.07759179999994,
+    "liveUnitsAfterReplenishment": 292
+  },
+  {
+    "elapsedSeconds": 53.35238560000289,
+    "liveUnitsAfterReplenishment": 282
+  },
+  {
+    "elapsedSeconds": 59.60322520000045,
+    "liveUnitsAfterReplenishment": 284
+  },
+  {
+    "elapsedSeconds": 60,
+    "liveUnitsAfterReplenishment": 297
+  }
+]

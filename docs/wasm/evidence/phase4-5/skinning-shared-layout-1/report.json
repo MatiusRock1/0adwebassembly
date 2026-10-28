@@ -1,0 +1,11 @@
+{
+  "passed": false,
+  "performanceAcceptance": false,
+  "scope": "Byte validation required by the shared-output skinning optimization",
+  "helperSHA256": "6694ea0afb1a41e4728726761e1e956552d326581c1ec3e6e39a988ef332b44b",
+  "referenceSHA256": [
+    "b788b1f3fa0a4451792f95f14d8e185bfbe61a8d85a57c5e8bedad1e81a464cb",
+    "d1f85978cc9fd9ff135faab17d967f7d90764b883f470d3c1d2772fcd5016f08"
+  ],
+  "failure": "Skinning probe server exited"
+}

@@ -1,0 +1,16 @@
+{
+  "webgpu": {
+    "pyrogenesis-application.mjs": "e873db582a8f8b1dc8db7a44a1c0440cacff7b5a314f4fcbca69e34d2b7c8156",
+    "pyrogenesis-application.wasm": "13c190cc5a443dc742d0c7cbef17b7e3b27164f90037d4feb9c0ec0f6000a355",
+    "application.html": "a95439568efb0c65fe6c728ec2241470a4bc384679080ee5c4936be1a68433ce",
+    "application.mjs": "89c9a54b383a5c9b41c9091909668af752867338758693d6dcf29050803c5a7d",
+    "application-data.json": "5b84e2a95559994231e6408e51f4bd45f2048d274e63e9d0e8b7fc6f704c810a",
+    "webgpu-shaders.json": "8d9280a27514b940ed61a9d0710ad92c39c8b425ff013b2d29c8b4fb33f08085",
+    "renderer-session.mjs": "95058d8db9311e844a5b69d3a895d7eb40c80e17b1f08691451b452a463f63c4",
+    "webgpu-engine.mjs": "1b807cea61761a980105afe29344f87ba25099c84a4bb2e499ca189e62606251",
+    "webgpu-border.mjs": "e9a7d9a88ac447b908249dc863e8adf9907b07830615019699588cbb2d695e8b",
+    "webgpu-upload.mjs": "0ecfdb50d3f48d9e6edbf3dc53caf7a51da545db34ba732426ea6433ee387970",
+    "application-pointer.mjs": "0e781c584dff24c3005f875b070f715046dabe3ea1e388edfecd3f998b36bb47",
+    "application-failure.mjs": "6f5b5d70105db9366e978fd0ba7a51578db9b22298c1272f24795f23b591ccc1"
+  }
+}

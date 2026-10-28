@@ -1,0 +1,54 @@
+{
+  "passed": false,
+  "visualParityAccepted": false,
+  "phase45Accepted": false,
+  "visualContract": {
+    "version": 2,
+    "scope": "Matched paused original Mainland scene; pixel thresholds fixed before collecting this comparison",
+    "simulationMs": 10000,
+    "resolution": [
+      1920,
+      1080
+    ],
+    "graphicsProfile": {
+      "vsync": "true",
+      "adaptivefps.session": "60",
+      "shadows": "true",
+      "shadowpcf": "true",
+      "shadowquality": "2",
+      "shadowscascadecount": "1",
+      "shadowscascadedistanceratio": "1.7",
+      "shadowscutoffdistance": "300.0",
+      "shadowscovermap": "false",
+      "postproc": "true",
+      "particles": "true",
+      "gpuskinning": "true",
+      "silhouettes": "true",
+      "watereffects": "true",
+      "waterfancyeffects": "false",
+      "waterrealdepth": "true",
+      "waterreflection": "true",
+      "waterrefraction": "true",
+      "textures.quality": "2",
+      "textures.maxanisotropy": "2",
+      "antialiasing": "disabled",
+      "renderactors": "true",
+      "max_actor_quality": "200",
+      "materialmgr.quality": "10.0"
+    },
+    "captures": [
+      "original-matched.png",
+      "original-shadow-hard.png",
+      "original-shadow-pcf.png"
+    ],
+    "maximumMeanAbsoluteRGBDifference": 2.0,
+    "perPixelMaximumChannelDifference": 8,
+    "maximumOutlierPixelFraction": 0.02,
+    "rationale": "Small animation and floating-point filtering differences may affect a limited area. Large missing effects, geometry, text, fog or color changes must fail. Numerical thresholds do not replace inspecting shadows and sampler edges."
+  },
+  "captureMethod": "Original native F2 renderer PNG/readback; no desktop capture",
+  "executableSHA256": "21dce2c8f275ec5975cb403a67083494a1ee4b538d2570bce1d9b106df87d330",
+  "failure": "Native process exited: 0",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\jorlu\\OneDrive\\Documentos\\emprendimiento\\0 AD\\0adwebassembly\\wasm\\scripts\\verify-phase4-5-native-visual.py\", line 61, in <module>\n    report['attributes']=open_original_match(application.gui,parity_settings())\n                         ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\jorlu\\OneDrive\\Documentos\\emprendimiento\\0 AD\\0adwebassembly\\wasm\\scripts\\phase4_flow.py\", line 44, in open_original_match\n    wait_gui(gui, 'typeof g_Selection !== \"undefined\" && !!g_Selection', timeout=300)\n    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\jorlu\\OneDrive\\Documentos\\emprendimiento\\0 AD\\0adwebassembly\\wasm\\scripts\\phase4_flow.py\", line 9, in wait_gui\n    if gui('String(' + expression + ')') == 'true':\n       ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\jorlu\\OneDrive\\Documentos\\emprendimiento\\0 AD\\0adwebassembly\\wasm\\scripts\\phase4_native.py\", line 77, in gui\n    if self.process.poll() is not None:raise RuntimeError('Native process exited: '+str(self.process.returncode))\n                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: Native process exited: 0\n",
+  "exitCode": 0
+}

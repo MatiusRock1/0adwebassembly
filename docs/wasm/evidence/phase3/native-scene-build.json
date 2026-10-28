@@ -1,0 +1,11 @@
+{
+  "baseCommit": "40b8794eecb9618da69e10bacffa8814c561aa51",
+  "windowsLibrariesSvnRevision": 28278,
+  "harnessSourceSHA256": "231f1297f0ad4fadf64c41472a5045451b1e92494d29c058913c9a3c8756c469",
+  "nativeEntrySHA256": "4e4f322f67289c8c88d1f2a298adda46ae6ef2d3ab0ddf0e6a878f1c45450b15",
+  "scope": "Original scene engine, same 37 entities/camera/seed/settings/tick; native SDL/OpenGL presentation. Not full-game acceptance.",
+  "nativeEngineCompatibility": "Missing <numbers> include only; no simulation/rendering logic changes. ENet include path supplied for lobby-disabled build.",
+  "compatibilityPatch": "native-build-compatibility.patch",
+  "terrainBridge": "native-scene-terrain-bridge.patch; same bridge as browser, original CGame fallback retained",
+  "surfaceBridge": "native-scene-surface-bridge.patch; same constructor injection as browser, desktop default retained"
+}

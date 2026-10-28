@@ -1,0 +1,1798 @@
+{
+  "passed": false,
+  "diagnosticOnly": true,
+  "performanceAcceptance": false,
+  "errors": [],
+  "console": [
+    "{\"type\":\"ready\",\"backend\":\"webgpu\",\"powerPreference\":\"high-performance\",\"owner\":\"render-worker\",\"adapter\":{\"vendor\":\"nvidia\",\"architecture\":\"ampere\",\"device\":\"\",\"description\":\"\"},\"adapterFeatures\":[\"bgra8unorm-storage\",\"clip-distances\",\"core-features-and-limits\",\"depth-clip-control\",\"depth32float-stencil8\",\"dual-source-blending\",\"float32-blendable\",\"float32-filterable\",\"indirect-first-instance\",\"primitive-index\",\"rg11b10ufloat-renderable\",\"shader-f16\",\"subgroup-size-control\",\"subgroups\",\"texture-component-swizzle\",\"texture-compression-bc\",\"texture-compression-bc-sliced-3d\",\"texture-formats-tier1\",\"texture-formats-tier2\",\"timestamp-query\"],\"adapterLimits\":{\"maxTextureDimension1D\":16384,\"maxTextureDimension2D\":16384,\"maxTextureDimension3D\":2048,\"maxTextureArrayLayers\":2048,\"maxBindGroups\":4,\"maxBindGroupsPlusVertexBuffers\":24,\"maxBindingsPerBindGroup\":1000,\"maxDynamicUniformBuffersPerPipelineLayout\":10,\"maxDynamicStorageBuffersPerPipelineLayout\":8,\"maxSampledTexturesPerShaderStage\":48,\"maxSamplersPerShaderStage\":16,\"maxStorageBuffersPerShaderStage\":16,\"maxStorageTexturesPerShaderStage\":8,\"maxUniformBuffersPerShaderStage\":12,\"maxUniformBufferBindingSize\":65536,\"maxStorageBufferBindingSize\":2147483644,\"minUniformBufferOffsetAlignment\":256,\"minStorageBufferOffsetAlignment\":256,\"maxVertexBuffers\":8,\"maxBufferSize\":2147483648,\"maxVertexAttributes\":30,\"maxVertexBufferArrayStride\":2048,\"maxInterStageShaderVariables\":28,\"maxColorAttachments\":8,\"maxColorAttachmentBytesPerSample\":128,\"maxComputeWorkgroupStorageSize\":32768,\"maxComputeInvocationsPerWorkgroup\":1024,\"maxComputeWorkgroupSizeX\":1024,\"maxComputeWorkgroupSizeY\":1024,\"maxComputeWorkgroupSizeZ\":64,\"maxComputeWorkgroupsPerDimension\":65535,\"maxImmediateSize\":64,\"maxStorageBuffersInFragmentStage\":16,\"maxStorageTexturesInFragmentStage\":8,\"maxStorageBuffersInVertexStage\":16,\"maxStorageTexturesInVertexStage\":8},\"deviceFeatures\":[\"core-features-and-limits\",\"depth32float-stencil8\",\"dual-source-blending\",\"float32-blendable\",\"float32-filterable\",\"rg11b10ufloat-renderable\",\"texture-compression-bc\"],\"deviceLimits\":{\"maxTextureDimension1D\":8192,\"maxTextureDimension2D\":8192,\"maxTextureDimension3D\":2048,\"maxTextureArrayLayers\":256,\"maxBindGroups\":4,\"maxBindGroupsPlusVertexBuffers\":24,\"maxBindingsPerBindGroup\":1000,\"maxDynamicUniformBuffersPerPipelineLayout\":8,\"maxDynamicStorageBuffersPerPipelineLayout\":4,\"maxSampledTexturesPerShaderStage\":16,\"maxSamplersPerShaderStage\":16,\"maxStorageBuffersPerShaderStage\":8,\"maxStorageTexturesPerShaderStage\":4,\"maxUniformBuffersPerShaderStage\":12,\"maxUniformBufferBindingSize\":65536,\"maxStorageBufferBindingSize\":134217728,\"minUniformBufferOffsetAlignment\":256,\"minStorageBufferOffsetAlignment\":256,\"maxVertexBuffers\":8,\"maxBufferSize\":268435456,\"maxVertexAttributes\":16,\"maxVertexBufferArrayStride\":2048,\"maxInterStageShaderVariables\":16,\"maxColorAttachments\":8,\"maxColorAttachmentBytesPerSample\":32,\"maxComputeWorkgroupStorageSize\":16384,\"maxComputeInvocationsPerWorkgroup\":256,\"maxComputeWorkgroupSizeX\":256,\"maxComputeWorkgroupSizeY\":256,\"maxComputeWorkgroupSizeZ\":64,\"maxComputeWorkgroupsPerDimension\":65535,\"maxImmediateSize\":64,\"maxStorageBuffersInFragmentStage\":8,\"maxStorageTexturesInFragmentStage\":4,\"maxStorageBuffersInVertexStage\":8,\"maxStorageTexturesInVertexStage\":4},\"unavailableOptionalFeatures\":[],\"fallbackAdapter\":null,\"format\":\"bgra8unorm\"}",
+    "Main log written to '/logs/mainlog.html'",
+    "Interesting log written to '/logs/interestinglog.html'",
+    "Sound: AlcInit success, using Emscripten OpenAL",
+    "Hardware details written to '/logs/system_info.txt'",
+    "Failed to query SDL WM info: That operation is not supportedUserReport written to '/logs/userreport_hwdetect.txt'",
+    "Failed to load resource: the server responded with a status of 404 (File not found)",
+    "JSON data written to '/data/config/matchsettings.json'",
+    "SCENE_ACTOR_QUALITY_HOOK_BEGIN",
+    "SCENE_QUALITY_GET_BEGIN",
+    "SCENE_QUALITY_GET_END 200 100",
+    "SCENE_QUALITY_INTERPOLATE_BEGIN",
+    "SCENE_QUALITY_INTERPOLATE_END",
+    "SCENE_ACTOR_QUALITY_HOOK_END",
+    "SCENE_ACTOR_VALIDATOR_BEGIN",
+    "Replay written to '/data/replays/0.29.0/2026-10-22_0001'",
+    "Setting biome generic/temperate.",
+    "Creating playerbases...",
+    "Creating bumps...",
+    "Creating hills...",
+    "Creating forests...",
+    "Creating dirt patches...",
+    "Creating grass patches...",
+    "Creating metal mines...",
+    "Creating stone mines...",
+    "Creating decoration...",
+    "Creating food...",
+    "Creating food...",
+    "Creating straggler trees...",
+    "Map generation finished.",
+    "Total entities: 825, Terrain entities: 525, Textures: 12.",
+    "{\"type\":\"sampler-address-emulation\",\"label\":\"art/textures/skins/props/decal_struct_paving_aegean_large.png\",\"requested\":[3,3,0],\"effective\":\"portable border filtering in the original shader sampling path\"}",
+    "GAME STARTED, ALL INIT COMPLETE",
+    "{\"type\":\"sampler-address-emulation\",\"label\":\"art/textures/misc/territory_border.png\",\"requested\":[3,2,0],\"effective\":\"portable border filtering in the original shader sampling path\"}",
+    "Saved game to '/data/saves/ai-checkpoint-10000.0adsave'",
+    "Saved game to '/data/saves/ai-checkpoint-30000.0adsave'"
+  ],
+  "workload": "skirmish",
+  "packageDirectory": "C:\\Users\\jorlu\\OneDrive\\Documentos\\emprendimiento\\0 AD\\0adwebassembly\\wasm\\dist\\application-phase4-5-ai-map-kernels-1",
+  "aiWorkerMode": "threaded",
+  "buildSHA256": {
+    "pyrogenesis-application.mjs": "c7998fe388757a680a7f2515b4427466cc323513431e368bbf43e53d80d0e510",
+    "pyrogenesis-application.wasm": "dddfe3149bda4382e9251916ce4743896e88cbe8e25eee743ba63c7d0e784d95",
+    "application.html": "9d76e77fae999d877dfb3cd0f977f8e262a8fceab5ce7bc7d28dbb31d8bb6653",
+    "application.mjs": "0cdc65e98d2b4668db00b8ec7cbbb45e7c901d24fd4b69d19e57f2acff7f0e2d",
+    "application-data.json": "e3ae8b9b21b640eda7679472e92600947685cfbdff04a72e58c942fb7a2f90ce",
+    "webgpu-shaders.json": "8d9280a27514b940ed61a9d0710ad92c39c8b425ff013b2d29c8b4fb33f08085",
+    "renderer-session.mjs": "970bb6a44961f620da6a62bedb93bc18c62169373eb86cbbf9b9a7b56ecf0076",
+    "webgpu-engine.mjs": "b3e30cfc2e3cafa95b591e34c58a66c056c2cc97ea03cdb73ebc0595fc969a71",
+    "webgpu-border.mjs": "e9a7d9a88ac447b908249dc863e8adf9907b07830615019699588cbb2d695e8b",
+    "webgpu-upload.mjs": "0ecfdb50d3f48d9e6edbf3dc53caf7a51da545db34ba732426ea6433ee387970",
+    "webgpu-dispatch.mjs": "49cbe7a352ccfae51bc7762d531e3c5930fa62737d82ba79673e03a7d2bb6287",
+    "webgpu-upload-probe.mjs": "a205ddc484108ee989dbd062203512d8e5ea08f2a65821ff01c6db6c36d44d5b",
+    "application-pointer.mjs": "0e781c584dff24c3005f875b070f715046dabe3ea1e388edfecd3f998b36bb47",
+    "application-failure.mjs": "6f5b5d70105db9366e978fd0ba7a51578db9b22298c1272f24795f23b591ccc1",
+    "shared-request.mjs": "bca23eebff9eb199449b1cd3959804162cda310cc64ae689a7d601599eadfb8d",
+    "webgpu-worker-bridge.mjs": "5a50dff2872e302afe38cb8041a57bb59398a102b4841a197ad95f1d0d41092c",
+    "webgpu-render-worker.mjs": "81bbf10743ebd7a7b0605f7d2abcf94a40ec7147861c25d1d6381a5b3266a73b",
+    "webgpu-worker-present.mjs": "d2b064679997d0c3bb24db9373f973a254b4a8fd2124d71a4c263fc1f27b7d75",
+    "webgpu-pipeline-pending.mjs": "7b02f374a8f2527739d4af53495f7337e2a40deb53740795c74f5016a54c284d",
+    "application-archives.mjs": "c0f8ef033999894af7be1904d347c35f38cbba21ce2158521eb5c634956ce7da",
+    "archive-worker.mjs": "eeb540c8b915421bc2a09bce894ce789f5c0649928329c12434d7c0cfea81965",
+    "archive-blocks.mjs": "8aadd5a67450b402a94c47ea0a7405b71ab5e376d816f71ded958a2a4fae5c41",
+    "archive-blocks.json": "71bf0f1a917f53a7234698f7bf74eb4ec83df2a0a1401c98c93f6db20e699f93"
+  },
+  "symbolsSHA256": "ffe53dd7b84d740863ded3198ddf4ae6c373da19e17c175f885bab322963f638",
+  "applicationURL": "http://localhost:8097/application.html?automation=1&aiworker=threaded",
+  "attributes": {
+    "settings": {
+      "Biome": "generic/temperate",
+      "Ceasefire": 0,
+      "CheatsEnabled": false,
+      "CircularMap": true,
+      "DisableSpies": false,
+      "DisableTreasures": false,
+      "LastManStanding": false,
+      "LockTeams": false,
+      "RevealMap": false,
+      "ExploreMap": false,
+      "AllyView": false,
+      "mapName": "Mainland",
+      "mapPreview": "cropped:0.78125,0.5859375:session/icons/mappreview/mainland.png",
+      "Size": 128,
+      "Nomad": false,
+      "PlayerData": [
+        {
+          "AI": false,
+          "Civ": "athen",
+          "Color": {
+            "r": 10,
+            "g": 10,
+            "b": 190
+          },
+          "Name": "Phase4Human",
+          "Removed": false,
+          "Team": -1
+        },
+        {
+          "AI": "petra",
+          "AIDiff": 3,
+          "AIBehavior": "balanced",
+          "Civ": "mace",
+          "Color": {
+            "r": 230,
+            "g": 10,
+            "b": 10
+          },
+          "Name": "Phase4Petra",
+          "Removed": false,
+          "Team": -1
+        }
+      ],
+      "PlayerPlacement": "circle",
+      "PopulationCapType": "player",
+      "PopulationCap": 200,
+      "Seed": 12345,
+      "AISeed": 54321,
+      "StartingResources": 1000,
+      "TriggerScripts": [],
+      "VictoryConditions": [
+        "conquest"
+      ]
+    },
+    "gameSpeed": 1,
+    "map": "maps/random/mainland",
+    "mapType": "random",
+    "script": "mainland.js"
+  },
+  "backgroundFunctional": false,
+  "fullscreen": {
+    "window": {
+      "windowId": 1731399772,
+      "bounds": {
+        "left": 0,
+        "top": 0,
+        "width": 2560,
+        "height": 1080,
+        "windowState": "fullscreen"
+      }
+    },
+    "dimensions": {
+      "inner": [
+        2560,
+        1080
+      ],
+      "screen": [
+        2560,
+        1080
+      ],
+      "dpr": 1,
+      "focused": true,
+      "canvasCSS": [
+        1920,
+        1080
+      ],
+      "foregroundWindow": {
+        "hwnd": 9766702,
+        "ownerProcessId": 39880,
+        "expectedProcessId": 39880,
+        "clientSize": [
+          2560,
+          1080
+        ]
+      }
+    },
+    "internalResolution": [
+      1920,
+      1080
+    ]
+  },
+  "foregroundWindow": {
+    "hwnd": 9766702,
+    "ownerProcessId": 39880,
+    "expectedProcessId": 39880,
+    "clientSize": [
+      2560,
+      1080
+    ]
+  },
+  "environment": {
+    "focused": true,
+    "hidden": false,
+    "fullscreen": true
+  },
+  "checkpoints": [
+    {
+      "simulationMs": 10000,
+      "state": {
+        "players": [
+          {
+            "name": "Gaia",
+            "civ": "gaia",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            },
+            "entity": 2,
+            "controlsAll": false,
+            "popCount": 0,
+            "popLimit": 0,
+            "popMax": 300,
+            "panelEntities": [],
+            "resourceCounts": {
+              "food": 300,
+              "wood": 300,
+              "stone": 300,
+              "metal": 300
+            },
+            "resourceGatherers": {
+              "food": 0,
+              "wood": 0,
+              "stone": 0,
+              "metal": 0
+            },
+            "trainingBlocked": false,
+            "state": "active",
+            "team": -1,
+            "teamLocked": false,
+            "disabledTemplates": {},
+            "disabledTechnologies": {},
+            "hasSharedLos": null,
+            "spyCostMultiplier": 1,
+            "phase": "",
+            "isAlly": [
+              true,
+              false,
+              false
+            ],
+            "isMutualAlly": [
+              true,
+              false,
+              false
+            ],
+            "isNeutral": [
+              false,
+              false,
+              false
+            ],
+            "isEnemy": [
+              false,
+              true,
+              true
+            ],
+            "entityLimits": null,
+            "entityCounts": null,
+            "matchEntityCounts": null,
+            "entityLimitChangers": null,
+            "researchQueued": null,
+            "researchedTechs": null,
+            "classCounts": null,
+            "typeCountsByClass": null,
+            "canBarter": false,
+            "barterPrices": {
+              "buy": {
+                "food": 110,
+                "wood": 110,
+                "stone": 110,
+                "metal": 110
+              },
+              "sell": {
+                "food": 90,
+                "wood": 90,
+                "stone": 90,
+                "metal": 90
+              }
+            }
+          },
+          {
+            "name": "Phase4Human",
+            "civ": "athen",
+            "color": {
+              "r": 0.0392156862745098,
+              "g": 0.0392156862745098,
+              "b": 0.7450980392156863,
+              "a": 1
+            },
+            "entity": 3,
+            "controlsAll": false,
+            "popCount": 9,
+            "popLimit": 20,
+            "popMax": 200,
+            "panelEntities": [],
+            "resourceCounts": {
+              "food": 1000,
+              "wood": 1000,
+              "stone": 1000,
+              "metal": 1000
+            },
+            "resourceGatherers": {
+              "food": 0,
+              "wood": 0,
+              "stone": 0,
+              "metal": 0
+            },
+            "trainingBlocked": false,
+            "state": "active",
+            "team": -1,
+            "teamLocked": false,
+            "disabledTemplates": {},
+            "disabledTechnologies": {},
+            "hasSharedLos": false,
+            "spyCostMultiplier": 1,
+            "phase": "village",
+            "isAlly": [
+              false,
+              true,
+              false
+            ],
+            "isMutualAlly": [
+              false,
+              true,
+              false
+            ],
+            "isNeutral": [
+              false,
+              false,
+              false
+            ],
+            "isEnemy": [
+              true,
+              false,
+              true
+            ],
+            "entityLimits": {
+              "Animal": 50,
+              "Centurion": 8,
+              "CivilCentre": 1,
+              "Gladiator": 0,
+              "Hero": 1,
+              "Juggernaut": 1,
+              "Kennel": 2,
+              "Library": 1,
+              "Lighthouse": 1,
+              "Monument": 5,
+              "Palace": 1,
+              "Pillar": 0,
+              "PyramidLarge": 2,
+              "TempleOfAmun": 1,
+              "TempleOfIsis": 1,
+              "TempleOfVesta": 1,
+              "Theater": 1,
+              "WarDog": 0,
+              "Wonder": 1,
+              "Yakhchal": 5
+            },
+            "entityCounts": {
+              "Animal": 0,
+              "Centurion": 0,
+              "CivilCentre": 1,
+              "Gladiator": 0,
+              "Hero": 0,
+              "Juggernaut": 0,
+              "Kennel": 0,
+              "Library": 0,
+              "Lighthouse": 0,
+              "Monument": 0,
+              "Palace": 0,
+              "Pillar": 0,
+              "PyramidLarge": 0,
+              "TempleOfAmun": 0,
+              "TempleOfIsis": 0,
+              "TempleOfVesta": 0,
+              "Theater": 0,
+              "WarDog": 0,
+              "Wonder": 0,
+              "Yakhchal": 0
+            },
+            "matchEntityCounts": {},
+            "entityLimitChangers": {
+              "Gladiator": {
+                "Amphitheater": 15
+              },
+              "Juggernaut": {
+                "PtolemyIV": 4
+              },
+              "Pillar": {
+                "Ashoka": 5
+              },
+              "WarDog": {
+                "Kennel": 10
+              }
+            },
+            "researchQueued": {},
+            "researchedTechs": {},
+            "classCounts": {
+              "Structure": 1,
+              "ConquestCritical": 10,
+              "CivCentre": 1,
+              "Civic": 1,
+              "Defensive": 1,
+              "CivilCentre": 1,
+              "Unit": 9,
+              "Organic": 9,
+              "Human": 9,
+              "Support": 4,
+              "Builder": 8,
+              "Civilian": 4,
+              "Worker": 8,
+              "CitizenSoldier": 5,
+              "Citizen": 5,
+              "Soldier": 5,
+              "Infantry": 4,
+              "Melee": 2,
+              "Spearman": 2,
+              "Basic": 5,
+              "Ranged": 3,
+              "Slinger": 2,
+              "FastMoving": 1,
+              "Cavalry": 1,
+              "Javelineer": 1
+            },
+            "typeCountsByClass": {
+              "Structure": {
+                "structures/athen/civil_centre": 1
+              },
+              "ConquestCritical": {
+                "structures/athen/civil_centre": 1,
+                "units/athen/support_civilian": 4,
+                "units/athen/infantry_spearman_b": 2,
+                "units/athen/infantry_slinger_b": 2,
+                "units/athen/cavalry_javelineer_b": 1
+              },
+              "CivCentre": {
+                "structures/athen/civil_centre": 1
+              },
+              "Civic": {
+                "structures/athen/civil_centre": 1
+              },
+              "Defensive": {
+                "structures/athen/civil_centre": 1
+              },
+              "CivilCentre": {
+                "structures/athen/civil_centre": 1
+              },
+              "Unit": {
+                "units/athen/support_civilian": 4,
+                "units/athen/infantry_spearman_b": 2,
+                "units/athen/infantry_slinger_b": 2,
+                "units/athen/cavalry_javelineer_b": 1
+              },
+              "Organic": {
+                "units/athen/support_civilian": 4,
+                "units/athen/infantry_spearman_b": 2,
+                "units/athen/infantry_slinger_b": 2,
+                "units/athen/cavalry_javelineer_b": 1
+              },
+              "Human": {
+                "units/athen/support_civilian": 4,
+                "units/athen/infantry_spearman_b": 2,
+                "units/athen/infantry_slinger_b": 2,
+                "units/athen/cavalry_javelineer_b": 1
+              },
+              "Support": {
+                "units/athen/support_civilian": 4
+              },
+              "Builder": {
+                "units/athen/support_civilian": 4,
+                "units/athen/infantry_spearman_b": 2,
+                "units/athen/infantry_slinger_b": 2
+              },
+              "Civilian": {
+                "units/athen/support_civilian": 4
+              },
+              "Worker": {
+                "units/athen/support_civilian": 4,
+                "units/athen/infantry_spearman_b": 2,
+                "units/athen/infantry_slinger_b": 2
+              },
+              "CitizenSoldier": {
+                "units/athen/infantry_spearman_b": 2,
+                "units/athen/infantry_slinger_b": 2,
+                "units/athen/cavalry_javelineer_b": 1
+              },
+              "Citizen": {
+                "units/athen/infantry_spearman_b": 2,
+                "units/athen/infantry_slinger_b": 2,
+                "units/athen/cavalry_javelineer_b": 1
+              },
+              "Soldier": {
+                "units/athen/infantry_spearman_b": 2,
+                "units/athen/infantry_slinger_b": 2,
+                "units/athen/cavalry_javelineer_b": 1
+              },
+              "Infantry": {
+                "units/athen/infantry_spearman_b": 2,
+                "units/athen/infantry_slinger_b": 2
+              },
+              "Melee": {
+                "units/athen/infantry_spearman_b": 2
+              },
+              "Spearman": {
+                "units/athen/infantry_spearman_b": 2
+              },
+              "Basic": {
+                "units/athen/infantry_spearman_b": 2,
+                "units/athen/infantry_slinger_b": 2,
+                "units/athen/cavalry_javelineer_b": 1
+              },
+              "Ranged": {
+                "units/athen/infantry_slinger_b": 2,
+                "units/athen/cavalry_javelineer_b": 1
+              },
+              "Slinger": {
+                "units/athen/infantry_slinger_b": 2
+              },
+              "FastMoving": {
+                "units/athen/cavalry_javelineer_b": 1
+              },
+              "Cavalry": {
+                "units/athen/cavalry_javelineer_b": 1
+              },
+              "Javelineer": {
+                "units/athen/cavalry_javelineer_b": 1
+              }
+            },
+            "canBarter": false,
+            "barterPrices": {
+              "buy": {
+                "food": 110,
+                "wood": 110,
+                "stone": 110,
+                "metal": 110
+              },
+              "sell": {
+                "food": 90,
+                "wood": 90,
+                "stone": 90,
+                "metal": 90
+              }
+            },
+            "statistics": {
+              "resourcesGathered": {
+                "vegetarianFood": 0,
+                "food": 0,
+                "wood": 0,
+                "stone": 0,
+                "metal": 0
+              },
+              "percentMapExplored": 21
+            }
+          },
+          {
+            "name": "Phase4Petra",
+            "civ": "mace",
+            "color": {
+              "r": 0.9019607843137255,
+              "g": 0.0392156862745098,
+              "b": 0.0392156862745098,
+              "a": 1
+            },
+            "entity": 4,
+            "controlsAll": false,
+            "popCount": 10,
+            "popLimit": 20,
+            "popMax": 200,
+            "panelEntities": [],
+            "resourceCounts": {
+              "food": 971,
+              "wood": 750,
+              "stone": 1000,
+              "metal": 1000
+            },
+            "resourceGatherers": {
+              "food": 3,
+              "wood": 0,
+              "stone": 0,
+              "metal": 0
+            },
+            "trainingBlocked": false,
+            "state": "active",
+            "team": -1,
+            "teamLocked": false,
+            "disabledTemplates": {},
+            "disabledTechnologies": {},
+            "hasSharedLos": false,
+            "spyCostMultiplier": 1,
+            "phase": "village",
+            "isAlly": [
+              false,
+              false,
+              true
+            ],
+            "isMutualAlly": [
+              false,
+              false,
+              true
+            ],
+            "isNeutral": [
+              false,
+              false,
+              false
+            ],
+            "isEnemy": [
+              true,
+              true,
+              false
+            ],
+            "entityLimits": {
+              "Animal": 50,
+              "Centurion": 8,
+              "CivilCentre": 1,
+              "Gladiator": 0,
+              "Hero": 1,
+              "Juggernaut": 1,
+              "Kennel": 2,
+              "Library": 1,
+              "Lighthouse": 1,
+              "Monument": 5,
+              "Palace": 1,
+              "Pillar": 0,
+              "PyramidLarge": 2,
+              "TempleOfAmun": 1,
+              "TempleOfIsis": 1,
+              "TempleOfVesta": 1,
+              "Theater": 1,
+              "WarDog": 0,
+              "Wonder": 1,
+              "Yakhchal": 5
+            },
+            "entityCounts": {
+              "Animal": 0,
+              "Centurion": 0,
+              "CivilCentre": 1,
+              "Gladiator": 0,
+              "Hero": 0,
+              "Juggernaut": 0,
+              "Kennel": 0,
+              "Library": 0,
+              "Lighthouse": 0,
+              "Monument": 0,
+              "Palace": 0,
+              "Pillar": 0,
+              "PyramidLarge": 0,
+              "TempleOfAmun": 0,
+              "TempleOfIsis": 0,
+              "TempleOfVesta": 0,
+              "Theater": 0,
+              "WarDog": 0,
+              "Wonder": 0,
+              "Yakhchal": 0
+            },
+            "matchEntityCounts": {},
+            "entityLimitChangers": {
+              "Gladiator": {
+                "Amphitheater": 15
+              },
+              "Juggernaut": {
+                "PtolemyIV": 4
+              },
+              "Pillar": {
+                "Ashoka": 5
+              },
+              "WarDog": {
+                "Kennel": 10
+              }
+            },
+            "researchQueued": {},
+            "researchedTechs": {},
+            "classCounts": {
+              "Structure": 1,
+              "ConquestCritical": 10,
+              "CivCentre": 1,
+              "Civic": 1,
+              "Defensive": 1,
+              "CivilCentre": 1,
+              "Unit": 9,
+              "Organic": 9,
+              "Human": 9,
+              "Support": 4,
+              "Builder": 8,
+              "Civilian": 4,
+              "Worker": 8,
+              "CitizenSoldier": 5,
+              "Citizen": 5,
+              "Soldier": 5,
+              "Infantry": 4,
+              "Melee": 3,
+              "Pikeman": 2,
+              "Basic": 5,
+              "Ranged": 2,
+              "Javelineer": 2,
+              "FastMoving": 1,
+              "Cavalry": 1,
+              "Spearman": 1
+            },
+            "typeCountsByClass": {
+              "Structure": {
+                "structures/mace/civil_centre": 1
+              },
+              "ConquestCritical": {
+                "structures/mace/civil_centre": 1,
+                "units/mace/support_civilian": 4,
+                "units/mace/infantry_pikeman_b": 2,
+                "units/mace/infantry_javelineer_b": 2,
+                "units/mace/cavalry_spearman_b": 1
+              },
+              "CivCentre": {
+                "structures/mace/civil_centre": 1
+              },
+              "Civic": {
+                "structures/mace/civil_centre": 1
+              },
+              "Defensive": {
+                "structures/mace/civil_centre": 1
+              },
+              "CivilCentre": {
+                "structures/mace/civil_centre": 1
+              },
+              "Unit": {
+                "units/mace/support_civilian": 4,
+                "units/mace/infantry_pikeman_b": 2,
+                "units/mace/infantry_javelineer_b": 2,
+                "units/mace/cavalry_spearman_b": 1
+              },
+              "Organic": {
+                "units/mace/support_civilian": 4,
+                "units/mace/infantry_pikeman_b": 2,
+                "units/mace/infantry_javelineer_b": 2,
+                "units/mace/cavalry_spearman_b": 1
+              },
+              "Human": {
+                "units/mace/support_civilian": 4,
+                "units/mace/infantry_pikeman_b": 2,
+                "units/mace/infantry_javelineer_b": 2,
+                "units/mace/cavalry_spearman_b": 1
+              },
+              "Support": {
+                "units/mace/support_civilian": 4
+              },
+              "Builder": {
+                "units/mace/support_civilian": 4,
+                "units/mace/infantry_pikeman_b": 2,
+                "units/mace/infantry_javelineer_b": 2
+              },
+              "Civilian": {
+                "units/mace/support_civilian": 4
+              },
+              "Worker": {
+                "units/mace/support_civilian": 4,
+                "units/mace/infantry_pikeman_b": 2,
+                "units/mace/infantry_javelineer_b": 2
+              },
+              "CitizenSoldier": {
+                "units/mace/infantry_pikeman_b": 2,
+                "units/mace/infantry_javelineer_b": 2,
+                "units/mace/cavalry_spearman_b": 1
+              },
+              "Citizen": {
+                "units/mace/infantry_pikeman_b": 2,
+                "units/mace/infantry_javelineer_b": 2,
+                "units/mace/cavalry_spearman_b": 1
+              },
+              "Soldier": {
+                "units/mace/infantry_pikeman_b": 2,
+                "units/mace/infantry_javelineer_b": 2,
+                "units/mace/cavalry_spearman_b": 1
+              },
+              "Infantry": {
+                "units/mace/infantry_pikeman_b": 2,
+                "units/mace/infantry_javelineer_b": 2
+              },
+              "Melee": {
+                "units/mace/infantry_pikeman_b": 2,
+                "units/mace/cavalry_spearman_b": 1
+              },
+              "Pikeman": {
+                "units/mace/infantry_pikeman_b": 2
+              },
+              "Basic": {
+                "units/mace/infantry_pikeman_b": 2,
+                "units/mace/infantry_javelineer_b": 2,
+                "units/mace/cavalry_spearman_b": 1
+              },
+              "Ranged": {
+                "units/mace/infantry_javelineer_b": 2
+              },
+              "Javelineer": {
+                "units/mace/infantry_javelineer_b": 2
+              },
+              "FastMoving": {
+                "units/mace/cavalry_spearman_b": 1
+              },
+              "Cavalry": {
+                "units/mace/cavalry_spearman_b": 1
+              },
+              "Spearman": {
+                "units/mace/cavalry_spearman_b": 1
+              }
+            },
+            "canBarter": false,
+            "barterPrices": {
+              "buy": {
+                "food": 110,
+                "wood": 110,
+                "stone": 110,
+                "metal": 110
+              },
+              "sell": {
+                "food": 90,
+                "wood": 90,
+                "stone": 90,
+                "metal": 90
+              }
+            },
+            "statistics": {
+              "resourcesGathered": {
+                "vegetarianFood": 0,
+                "food": 36,
+                "wood": 0,
+                "stone": 0,
+                "metal": 0
+              },
+              "percentMapExplored": 25
+            }
+          }
+        ],
+        "circularMap": true,
+        "mapSize": 512,
+        "timeElapsed": 10000,
+        "ceasefireActive": false,
+        "ceasefireTimeRemaining": 0,
+        "cinemaPathPlaying": false,
+        "victoryConditions": [
+          "conquest"
+        ],
+        "alliedVictory": true,
+        "populationCapType": "player",
+        "populationCap": 200
+      },
+      "serializedSHA256": "e35b3f94c701f74e20833f81cad68c754b659dd7240028cb1b9d77afd112020a",
+      "serializedBytes": 1681531,
+      "serialization": "Original SavedGames::Save / simulation.dat",
+      "nonLocalDebugSHA256": "44a1d47196638563a09660797c78a4a8f196c76d08bcbe167a371ea34ce3e3e9",
+      "localDebugSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "localEntityCount": 0
+    },
+    {
+      "simulationMs": 30000,
+      "state": {
+        "players": [
+          {
+            "name": "Gaia",
+            "civ": "gaia",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            },
+            "entity": 2,
+            "controlsAll": false,
+            "popCount": 0,
+            "popLimit": 0,
+            "popMax": 300,
+            "panelEntities": [],
+            "resourceCounts": {
+              "food": 300,
+              "wood": 300,
+              "stone": 300,
+              "metal": 300
+            },
+            "resourceGatherers": {
+              "food": 0,
+              "wood": 0,
+              "stone": 0,
+              "metal": 0
+            },
+            "trainingBlocked": false,
+            "state": "active",
+            "team": -1,
+            "teamLocked": false,
+            "disabledTemplates": {},
+            "disabledTechnologies": {},
+            "hasSharedLos": null,
+            "spyCostMultiplier": 1,
+            "phase": "",
+            "isAlly": [
+              true,
+              false,
+              false
+            ],
+            "isMutualAlly": [
+              true,
+              false,
+              false
+            ],
+            "isNeutral": [
+              false,
+              false,
+              false
+            ],
+            "isEnemy": [
+              false,
+              true,
+              true
+            ],
+            "entityLimits": null,
+            "entityCounts": null,
+            "matchEntityCounts": null,
+            "entityLimitChangers": null,
+            "researchQueued": null,
+            "researchedTechs": null,
+            "classCounts": null,
+            "typeCountsByClass": null,
+            "canBarter": false,
+            "barterPrices": {
+              "buy": {
+                "food": 110,
+                "wood": 110,
+                "stone": 110,
+                "metal": 110
+              },
+              "sell": {
+                "food": 90,
+                "wood": 90,
+                "stone": 90,
+                "metal": 90
+              }
+            }
+          },
+          {
+            "name": "Phase4Human",
+            "civ": "athen",
+            "color": {
+              "r": 0.0392156862745098,
+              "g": 0.0392156862745098,
+              "b": 0.7450980392156863,
+              "a": 1
+            },
+            "entity": 3,
+            "controlsAll": false,
+            "popCount": 9,
+            "popLimit": 20,
+            "popMax": 200,
+            "panelEntities": [],
+            "resourceCounts": {
+              "food": 1000,
+              "wood": 1000,
+              "stone": 1000,
+              "metal": 1000
+            },
+            "resourceGatherers": {
+              "food": 0,
+              "wood": 0,
+              "stone": 0,
+              "metal": 0
+            },
+            "trainingBlocked": false,
+            "state": "active",
+            "team": -1,
+            "teamLocked": false,
+            "disabledTemplates": {},
+            "disabledTechnologies": {},
+            "hasSharedLos": false,
+            "spyCostMultiplier": 1,
+            "phase": "village",
+            "isAlly": [
+              false,
+              true,
+              false
+            ],
+            "isMutualAlly": [
+              false,
+              true,
+              false
+            ],
+            "isNeutral": [
+              false,
+              false,
+              false
+            ],
+            "isEnemy": [
+              true,
+              false,
+              true
+            ],
+            "entityLimits": {
+              "Animal": 50,
+              "Centurion": 8,
+              "CivilCentre": 1,
+              "Gladiator": 0,
+              "Hero": 1,
+              "Juggernaut": 1,
+              "Kennel": 2,
+              "Library": 1,
+              "Lighthouse": 1,
+              "Monument": 5,
+              "Palace": 1,
+              "Pillar": 0,
+              "PyramidLarge": 2,
+              "TempleOfAmun": 1,
+              "TempleOfIsis": 1,
+              "TempleOfVesta": 1,
+              "Theater": 1,
+              "WarDog": 0,
+              "Wonder": 1,
+              "Yakhchal": 5
+            },
+            "entityCounts": {
+              "Animal": 0,
+              "Centurion": 0,
+              "CivilCentre": 1,
+              "Gladiator": 0,
+              "Hero": 0,
+              "Juggernaut": 0,
+              "Kennel": 0,
+              "Library": 0,
+              "Lighthouse": 0,
+              "Monument": 0,
+              "Palace": 0,
+              "Pillar": 0,
+              "PyramidLarge": 0,
+              "TempleOfAmun": 0,
+              "TempleOfIsis": 0,
+              "TempleOfVesta": 0,
+              "Theater": 0,
+              "WarDog": 0,
+              "Wonder": 0,
+              "Yakhchal": 0
+            },
+            "matchEntityCounts": {},
+            "entityLimitChangers": {
+              "Gladiator": {
+                "Amphitheater": 15
+              },
+              "Juggernaut": {
+                "PtolemyIV": 4
+              },
+              "Pillar": {
+                "Ashoka": 5
+              },
+              "WarDog": {
+                "Kennel": 10
+              }
+            },
+            "researchQueued": {},
+            "researchedTechs": {},
+            "classCounts": {
+              "Structure": 1,
+              "ConquestCritical": 10,
+              "CivCentre": 1,
+              "Civic": 1,
+              "Defensive": 1,
+              "CivilCentre": 1,
+              "Unit": 9,
+              "Organic": 9,
+              "Human": 9,
+              "Support": 4,
+              "Builder": 8,
+              "Civilian": 4,
+              "Worker": 8,
+              "CitizenSoldier": 5,
+              "Citizen": 5,
+              "Soldier": 5,
+              "Infantry": 4,
+              "Melee": 2,
+              "Spearman": 2,
+              "Basic": 5,
+              "Ranged": 3,
+              "Slinger": 2,
+              "FastMoving": 1,
+              "Cavalry": 1,
+              "Javelineer": 1
+            },
+            "typeCountsByClass": {
+              "Structure": {
+                "structures/athen/civil_centre": 1
+              },
+              "ConquestCritical": {
+                "structures/athen/civil_centre": 1,
+                "units/athen/support_civilian": 4,
+                "units/athen/infantry_spearman_b": 2,
+                "units/athen/infantry_slinger_b": 2,
+                "units/athen/cavalry_javelineer_b": 1
+              },
+              "CivCentre": {
+                "structures/athen/civil_centre": 1
+              },
+              "Civic": {
+                "structures/athen/civil_centre": 1
+              },
+              "Defensive": {
+                "structures/athen/civil_centre": 1
+              },
+              "CivilCentre": {
+                "structures/athen/civil_centre": 1
+              },
+              "Unit": {
+                "units/athen/support_civilian": 4,
+                "units/athen/infantry_spearman_b": 2,
+                "units/athen/infantry_slinger_b": 2,
+                "units/athen/cavalry_javelineer_b": 1
+              },
+              "Organic": {
+                "units/athen/support_civilian": 4,
+                "units/athen/infantry_spearman_b": 2,
+                "units/athen/infantry_slinger_b": 2,
+                "units/athen/cavalry_javelineer_b": 1
+              },
+              "Human": {
+                "units/athen/support_civilian": 4,
+                "units/athen/infantry_spearman_b": 2,
+                "units/athen/infantry_slinger_b": 2,
+                "units/athen/cavalry_javelineer_b": 1
+              },
+              "Support": {
+                "units/athen/support_civilian": 4
+              },
+              "Builder": {
+                "units/athen/support_civilian": 4,
+                "units/athen/infantry_spearman_b": 2,
+                "units/athen/infantry_slinger_b": 2
+              },
+              "Civilian": {
+                "units/athen/support_civilian": 4
+              },
+              "Worker": {
+                "units/athen/support_civilian": 4,
+                "units/athen/infantry_spearman_b": 2,
+                "units/athen/infantry_slinger_b": 2
+              },
+              "CitizenSoldier": {
+                "units/athen/infantry_spearman_b": 2,
+                "units/athen/infantry_slinger_b": 2,
+                "units/athen/cavalry_javelineer_b": 1
+              },
+              "Citizen": {
+                "units/athen/infantry_spearman_b": 2,
+                "units/athen/infantry_slinger_b": 2,
+                "units/athen/cavalry_javelineer_b": 1
+              },
+              "Soldier": {
+                "units/athen/infantry_spearman_b": 2,
+                "units/athen/infantry_slinger_b": 2,
+                "units/athen/cavalry_javelineer_b": 1
+              },
+              "Infantry": {
+                "units/athen/infantry_spearman_b": 2,
+                "units/athen/infantry_slinger_b": 2
+              },
+              "Melee": {
+                "units/athen/infantry_spearman_b": 2
+              },
+              "Spearman": {
+                "units/athen/infantry_spearman_b": 2
+              },
+              "Basic": {
+                "units/athen/infantry_spearman_b": 2,
+                "units/athen/infantry_slinger_b": 2,
+                "units/athen/cavalry_javelineer_b": 1
+              },
+              "Ranged": {
+                "units/athen/infantry_slinger_b": 2,
+                "units/athen/cavalry_javelineer_b": 1
+              },
+              "Slinger": {
+                "units/athen/infantry_slinger_b": 2
+              },
+              "FastMoving": {
+                "units/athen/cavalry_javelineer_b": 1
+              },
+              "Cavalry": {
+                "units/athen/cavalry_javelineer_b": 1
+              },
+              "Javelineer": {
+                "units/athen/cavalry_javelineer_b": 1
+              }
+            },
+            "canBarter": false,
+            "barterPrices": {
+              "buy": {
+                "food": 110,
+                "wood": 110,
+                "stone": 110,
+                "metal": 110
+              },
+              "sell": {
+                "food": 90,
+                "wood": 90,
+                "stone": 90,
+                "metal": 90
+              }
+            },
+            "statistics": {
+              "resourcesGathered": {
+                "vegetarianFood": 0,
+                "food": 0,
+                "wood": 0,
+                "stone": 0,
+                "metal": 0
+              },
+              "percentMapExplored": 21
+            }
+          },
+          {
+            "name": "Phase4Petra",
+            "civ": "mace",
+            "color": {
+              "r": 0.9019607843137255,
+              "g": 0.0392156862745098,
+              "b": 0.0392156862745098,
+              "a": 1
+            },
+            "entity": 4,
+            "controlsAll": false,
+            "popCount": 14,
+            "popLimit": 20,
+            "popMax": 200,
+            "panelEntities": [],
+            "resourceCounts": {
+              "food": 780,
+              "wood": 550,
+              "stone": 1000,
+              "metal": 1000
+            },
+            "resourceGatherers": {
+              "food": 3,
+              "wood": 0,
+              "stone": 0,
+              "metal": 0
+            },
+            "trainingBlocked": false,
+            "state": "active",
+            "team": -1,
+            "teamLocked": false,
+            "disabledTemplates": {},
+            "disabledTechnologies": {},
+            "hasSharedLos": false,
+            "spyCostMultiplier": 1,
+            "phase": "village",
+            "isAlly": [
+              false,
+              false,
+              true
+            ],
+            "isMutualAlly": [
+              false,
+              false,
+              true
+            ],
+            "isNeutral": [
+              false,
+              false,
+              false
+            ],
+            "isEnemy": [
+              true,
+              true,
+              false
+            ],
+            "entityLimits": {
+              "Animal": 50,
+              "Centurion": 8,
+              "CivilCentre": 1,
+              "Gladiator": 0,
+              "Hero": 1,
+              "Juggernaut": 1,
+              "Kennel": 2,
+              "Library": 1,
+              "Lighthouse": 1,
+              "Monument": 5,
+              "Palace": 1,
+              "Pillar": 0,
+              "PyramidLarge": 2,
+              "TempleOfAmun": 1,
+              "TempleOfIsis": 1,
+              "TempleOfVesta": 1,
+              "Theater": 1,
+              "WarDog": 0,
+              "Wonder": 1,
+              "Yakhchal": 5
+            },
+            "entityCounts": {
+              "Animal": 0,
+              "Centurion": 0,
+              "CivilCentre": 1,
+              "Gladiator": 0,
+              "Hero": 0,
+              "Juggernaut": 0,
+              "Kennel": 0,
+              "Library": 0,
+              "Lighthouse": 0,
+              "Monument": 0,
+              "Palace": 0,
+              "Pillar": 0,
+              "PyramidLarge": 0,
+              "TempleOfAmun": 0,
+              "TempleOfIsis": 0,
+              "TempleOfVesta": 0,
+              "Theater": 0,
+              "WarDog": 0,
+              "Wonder": 0,
+              "Yakhchal": 0
+            },
+            "matchEntityCounts": {},
+            "entityLimitChangers": {
+              "Gladiator": {
+                "Amphitheater": 15
+              },
+              "Juggernaut": {
+                "PtolemyIV": 4
+              },
+              "Pillar": {
+                "Ashoka": 5
+              },
+              "WarDog": {
+                "Kennel": 10
+              }
+            },
+            "researchQueued": {},
+            "researchedTechs": {},
+            "classCounts": {
+              "Structure": 1,
+              "ConquestCritical": 13,
+              "CivCentre": 1,
+              "Civic": 1,
+              "Defensive": 1,
+              "CivilCentre": 1,
+              "Unit": 12,
+              "Organic": 12,
+              "Human": 12,
+              "Support": 7,
+              "Builder": 11,
+              "Civilian": 7,
+              "Worker": 11,
+              "CitizenSoldier": 5,
+              "Citizen": 5,
+              "Soldier": 5,
+              "Infantry": 4,
+              "Melee": 3,
+              "Pikeman": 2,
+              "Basic": 5,
+              "Ranged": 2,
+              "Javelineer": 2,
+              "FastMoving": 1,
+              "Cavalry": 1,
+              "Spearman": 1
+            },
+            "typeCountsByClass": {
+              "Structure": {
+                "structures/mace/civil_centre": 1
+              },
+              "ConquestCritical": {
+                "structures/mace/civil_centre": 1,
+                "units/mace/support_civilian": 7,
+                "units/mace/infantry_pikeman_b": 2,
+                "units/mace/infantry_javelineer_b": 2,
+                "units/mace/cavalry_spearman_b": 1
+              },
+              "CivCentre": {
+                "structures/mace/civil_centre": 1
+              },
+              "Civic": {
+                "structures/mace/civil_centre": 1
+              },
+              "Defensive": {
+                "structures/mace/civil_centre": 1
+              },
+              "CivilCentre": {
+                "structures/mace/civil_centre": 1
+              },
+              "Unit": {
+                "units/mace/support_civilian": 7,
+                "units/mace/infantry_pikeman_b": 2,
+                "units/mace/infantry_javelineer_b": 2,
+                "units/mace/cavalry_spearman_b": 1
+              },
+              "Organic": {
+                "units/mace/support_civilian": 7,
+                "units/mace/infantry_pikeman_b": 2,
+                "units/mace/infantry_javelineer_b": 2,
+                "units/mace/cavalry_spearman_b": 1
+              },
+              "Human": {
+                "units/mace/support_civilian": 7,
+                "units/mace/infantry_pikeman_b": 2,
+                "units/mace/infantry_javelineer_b": 2,
+                "units/mace/cavalry_spearman_b": 1
+              },
+              "Support": {
+                "units/mace/support_civilian": 7
+              },
+              "Builder": {
+                "units/mace/support_civilian": 7,
+                "units/mace/infantry_pikeman_b": 2,
+                "units/mace/infantry_javelineer_b": 2
+              },
+              "Civilian": {
+                "units/mace/support_civilian": 7
+              },
+              "Worker": {
+                "units/mace/support_civilian": 7,
+                "units/mace/infantry_pikeman_b": 2,
+                "units/mace/infantry_javelineer_b": 2
+              },
+              "CitizenSoldier": {
+                "units/mace/infantry_pikeman_b": 2,
+                "units/mace/infantry_javelineer_b": 2,
+                "units/mace/cavalry_spearman_b": 1
+              },
+              "Citizen": {
+                "units/mace/infantry_pikeman_b": 2,
+                "units/mace/infantry_javelineer_b": 2,
+                "units/mace/cavalry_spearman_b": 1
+              },
+              "Soldier": {
+                "units/mace/infantry_pikeman_b": 2,
+                "units/mace/infantry_javelineer_b": 2,
+                "units/mace/cavalry_spearman_b": 1
+              },
+              "Infantry": {
+                "units/mace/infantry_pikeman_b": 2,
+                "units/mace/infantry_javelineer_b": 2
+              },
+              "Melee": {
+                "units/mace/infantry_pikeman_b": 2,
+                "units/mace/cavalry_spearman_b": 1
+              },
+              "Pikeman": {
+                "units/mace/infantry_pikeman_b": 2
+              },
+              "Basic": {
+                "units/mace/infantry_pikeman_b": 2,
+                "units/mace/infantry_javelineer_b": 2,
+                "units/mace/cavalry_spearman_b": 1
+              },
+              "Ranged": {
+                "units/mace/infantry_javelineer_b": 2
+              },
+              "Javelineer": {
+                "units/mace/infantry_javelineer_b": 2
+              },
+              "FastMoving": {
+                "units/mace/cavalry_spearman_b": 1
+              },
+              "Cavalry": {
+                "units/mace/cavalry_spearman_b": 1
+              },
+              "Spearman": {
+                "units/mace/cavalry_spearman_b": 1
+              }
+            },
+            "canBarter": false,
+            "barterPrices": {
+              "buy": {
+                "food": 110,
+                "wood": 110,
+                "stone": 110,
+                "metal": 110
+              },
+              "sell": {
+                "food": 90,
+                "wood": 90,
+                "stone": 90,
+                "metal": 90
+              }
+            },
+            "statistics": {
+              "resourcesGathered": {
+                "vegetarianFood": 0,
+                "food": 142,
+                "wood": 0,
+                "stone": 0,
+                "metal": 0
+              },
+              "percentMapExplored": 25
+            }
+          }
+        ],
+        "circularMap": true,
+        "mapSize": 512,
+        "timeElapsed": 30000,
+        "ceasefireActive": false,
+        "ceasefireTimeRemaining": 0,
+        "cinemaPathPlaying": false,
+        "victoryConditions": [
+          "conquest"
+        ],
+        "alliedVictory": true,
+        "populationCapType": "player",
+        "populationCap": 200
+      },
+      "serializedSHA256": "b218d9a3887a14fb8e1f33f5c99204afdd24379cb4b5be1da4bb24701e20c737",
+      "serializedBytes": 1691743,
+      "serialization": "Original SavedGames::Save / simulation.dat",
+      "nonLocalDebugSHA256": "893d155e04f947f9ca8a797afd1c07e219e38f74a316e904a8ada773039cf43e",
+      "localDebugSHA256": "0559a03f58be0d7210ff3a431996e65a620dd923485f08a224614706daee451d",
+      "localEntityCount": 2
+    }
+  ],
+  "checkpointScope": "Original deterministic match, exact simulation time, unmodified SaveGame serialization; not FPS or complete gameplay acceptance",
+  "attachedWorkerTargets": [
+    {
+      "sessionId": "A9C782D0CCCC4AAF2A6E31EC57D75E15",
+      "targetInfo": {
+        "targetId": "3F87EB1D5A3F20584EED68BED99AAF1A",
+        "type": "worker",
+        "title": "em-pthread",
+        "url": "http://localhost:8097/pyrogenesis-application.mjs",
+        "attached": true,
+        "parentId": "37A4DE08F70B001BD2F5B333A6597A4E",
+        "canAccessOpener": false,
+        "parentFrameId": "37A4DE08F70B001BD2F5B333A6597A4E",
+        "browserContextId": "53489175A925B1B6EBA8BB9ACBCA3BB5"
+      },
+      "waitingForDebugger": false
+    },
+    {
+      "sessionId": "C80FE90D449948268B247335E14D9292",
+      "targetInfo": {
+        "targetId": "C9F9CAA26C7D27CB273B3B6BE04CDFE9",
+        "type": "worker",
+        "title": "em-pthread",
+        "url": "http://localhost:8097/pyrogenesis-application.mjs",
+        "attached": true,
+        "parentId": "37A4DE08F70B001BD2F5B333A6597A4E",
+        "canAccessOpener": false,
+        "parentFrameId": "37A4DE08F70B001BD2F5B333A6597A4E",
+        "browserContextId": "53489175A925B1B6EBA8BB9ACBCA3BB5"
+      },
+      "waitingForDebugger": false
+    },
+    {
+      "sessionId": "DAFDAE0BDECB339F099AA3781753B835",
+      "targetInfo": {
+        "targetId": "10034092CC94B19394F256564D6FA951",
+        "type": "worker",
+        "title": "em-pthread",
+        "url": "http://localhost:8097/pyrogenesis-application.mjs",
+        "attached": true,
+        "parentId": "37A4DE08F70B001BD2F5B333A6597A4E",
+        "canAccessOpener": false,
+        "parentFrameId": "37A4DE08F70B001BD2F5B333A6597A4E",
+        "browserContextId": "53489175A925B1B6EBA8BB9ACBCA3BB5"
+      },
+      "waitingForDebugger": false
+    },
+    {
+      "sessionId": "F149F1C4E80971BE067220F9242E9011",
+      "targetInfo": {
+        "targetId": "4687EA81A6B08629097E859A0546854B",
+        "type": "worker",
+        "title": "em-pthread",
+        "url": "http://localhost:8097/pyrogenesis-application.mjs",
+        "attached": true,
+        "parentId": "37A4DE08F70B001BD2F5B333A6597A4E",
+        "canAccessOpener": false,
+        "parentFrameId": "37A4DE08F70B001BD2F5B333A6597A4E",
+        "browserContextId": "53489175A925B1B6EBA8BB9ACBCA3BB5"
+      },
+      "waitingForDebugger": false
+    },
+    {
+      "sessionId": "5AAA70B64FEEC71790B7DD57649428A5",
+      "targetInfo": {
+        "targetId": "CE6830E820DD30D6FEE85D738C637F0D",
+        "type": "worker",
+        "title": "em-pthread",
+        "url": "http://localhost:8097/pyrogenesis-application.mjs",
+        "attached": true,
+        "parentId": "37A4DE08F70B001BD2F5B333A6597A4E",
+        "canAccessOpener": false,
+        "parentFrameId": "37A4DE08F70B001BD2F5B333A6597A4E",
+        "browserContextId": "53489175A925B1B6EBA8BB9ACBCA3BB5"
+      },
+      "waitingForDebugger": false
+    },
+    {
+      "sessionId": "EDBFFFB8FA3CF3EA3B9616E4B60775C2",
+      "targetInfo": {
+        "targetId": "B0B2996D2C722E115E1CCB22C6E82578",
+        "type": "worker",
+        "title": "0ad-archive-cache",
+        "url": "http://localhost:8097/archive-worker.mjs",
+        "attached": true,
+        "parentId": "37A4DE08F70B001BD2F5B333A6597A4E",
+        "canAccessOpener": false,
+        "parentFrameId": "37A4DE08F70B001BD2F5B333A6597A4E",
+        "browserContextId": "53489175A925B1B6EBA8BB9ACBCA3BB5"
+      },
+      "waitingForDebugger": false
+    },
+    {
+      "sessionId": "327D0F2CCA258282E528F0D6044DD485",
+      "targetInfo": {
+        "targetId": "D51B3298231A8F636F830142DAB249AA",
+        "type": "worker",
+        "title": "em-pthread",
+        "url": "http://localhost:8097/pyrogenesis-application.mjs",
+        "attached": true,
+        "parentId": "37A4DE08F70B001BD2F5B333A6597A4E",
+        "canAccessOpener": false,
+        "parentFrameId": "37A4DE08F70B001BD2F5B333A6597A4E",
+        "browserContextId": "53489175A925B1B6EBA8BB9ACBCA3BB5"
+      },
+      "waitingForDebugger": false
+    },
+    {
+      "sessionId": "40782658304E4D986E8BBF0DD293DCF1",
+      "targetInfo": {
+        "targetId": "7AAFA19829715872D6D7F05DFE9516C2",
+        "type": "worker",
+        "title": "em-pthread",
+        "url": "http://localhost:8097/pyrogenesis-application.mjs",
+        "attached": true,
+        "parentId": "37A4DE08F70B001BD2F5B333A6597A4E",
+        "canAccessOpener": false,
+        "parentFrameId": "37A4DE08F70B001BD2F5B333A6597A4E",
+        "browserContextId": "53489175A925B1B6EBA8BB9ACBCA3BB5"
+      },
+      "waitingForDebugger": false
+    },
+    {
+      "sessionId": "23CC4DD6F93C72037D089679E80B5318",
+      "targetInfo": {
+        "targetId": "733D59BF75E8FBDBEA90550609BF95B8",
+        "type": "worker",
+        "title": "em-pthread",
+        "url": "http://localhost:8097/pyrogenesis-application.mjs",
+        "attached": true,
+        "parentId": "37A4DE08F70B001BD2F5B333A6597A4E",
+        "canAccessOpener": false,
+        "parentFrameId": "37A4DE08F70B001BD2F5B333A6597A4E",
+        "browserContextId": "53489175A925B1B6EBA8BB9ACBCA3BB5"
+      },
+      "waitingForDebugger": false
+    },
+    {
+      "sessionId": "94AE818515A2C1EF12AE6905DA3B3759",
+      "targetInfo": {
+        "targetId": "F56F03158F7802B120D0042D28971CA6",
+        "type": "worker",
+        "title": "em-pthread",
+        "url": "http://localhost:8097/pyrogenesis-application.mjs",
+        "attached": true,
+        "parentId": "37A4DE08F70B001BD2F5B333A6597A4E",
+        "canAccessOpener": false,
+        "parentFrameId": "37A4DE08F70B001BD2F5B333A6597A4E",
+        "browserContextId": "53489175A925B1B6EBA8BB9ACBCA3BB5"
+      },
+      "waitingForDebugger": false
+    },
+    {
+      "sessionId": "98FE680D3DC23D2572A3071F58FD4890",
+      "targetInfo": {
+        "targetId": "513D9629FED526BFC49383333D4F8282",
+        "type": "worker",
+        "title": "em-pthread",
+        "url": "http://localhost:8097/pyrogenesis-application.mjs",
+        "attached": true,
+        "parentId": "37A4DE08F70B001BD2F5B333A6597A4E",
+        "canAccessOpener": false,
+        "parentFrameId": "37A4DE08F70B001BD2F5B333A6597A4E",
+        "browserContextId": "53489175A925B1B6EBA8BB9ACBCA3BB5"
+      },
+      "waitingForDebugger": false
+    },
+    {
+      "sessionId": "5C14098D8EDF8C2F63BA9D6A866E05DB",
+      "targetInfo": {
+        "targetId": "5CFA1587198C944BA653CEC60BD1CAA8",
+        "type": "worker",
+        "title": "em-pthread",
+        "url": "http://localhost:8097/pyrogenesis-application.mjs",
+        "attached": true,
+        "parentId": "37A4DE08F70B001BD2F5B333A6597A4E",
+        "canAccessOpener": false,
+        "parentFrameId": "37A4DE08F70B001BD2F5B333A6597A4E",
+        "browserContextId": "53489175A925B1B6EBA8BB9ACBCA3BB5"
+      },
+      "waitingForDebugger": false
+    },
+    {
+      "sessionId": "F3B2A0B4B730E3E49DB944B2FBBB05C0",
+      "targetInfo": {
+        "targetId": "B3F8BD23949DCD47A44BB830B41C5806",
+        "type": "worker",
+        "title": "0ad-webgpu-render",
+        "url": "http://localhost:8097/webgpu-render-worker.mjs",
+        "attached": true,
+        "parentId": "37A4DE08F70B001BD2F5B333A6597A4E",
+        "canAccessOpener": false,
+        "parentFrameId": "37A4DE08F70B001BD2F5B333A6597A4E",
+        "browserContextId": "53489175A925B1B6EBA8BB9ACBCA3BB5"
+      },
+      "waitingForDebugger": false
+    },
+    {
+      "sessionId": "2A6B43FBBF50AA82FA4BFEB556624F24",
+      "targetInfo": {
+        "targetId": "9E503BE900B1E64447C749B4414EA7CB",
+        "type": "worker",
+        "title": "em-pthread",
+        "url": "http://localhost:8097/pyrogenesis-application.mjs",
+        "attached": true,
+        "parentId": "37A4DE08F70B001BD2F5B333A6597A4E",
+        "canAccessOpener": false,
+        "parentFrameId": "37A4DE08F70B001BD2F5B333A6597A4E",
+        "browserContextId": "53489175A925B1B6EBA8BB9ACBCA3BB5"
+      },
+      "waitingForDebugger": false
+    },
+    {
+      "sessionId": "71C5C9320BFD133F38B8CC018EB80E91",
+      "targetInfo": {
+        "targetId": "F5827483476A9BAC239BD4E63487F907",
+        "type": "worker",
+        "title": "em-pthread",
+        "url": "http://localhost:8097/pyrogenesis-application.mjs",
+        "attached": true,
+        "parentId": "37A4DE08F70B001BD2F5B333A6597A4E",
+        "canAccessOpener": false,
+        "parentFrameId": "37A4DE08F70B001BD2F5B333A6597A4E",
+        "browserContextId": "53489175A925B1B6EBA8BB9ACBCA3BB5"
+      },
+      "waitingForDebugger": false
+    },
+    {
+      "sessionId": "9538391B550AA9BB046A7FBF1A5A6E40",
+      "targetInfo": {
+        "targetId": "6EFA7B2B5F7EC0F5F2321D6A079818AA",
+        "type": "worker",
+        "title": "em-pthread",
+        "url": "http://localhost:8097/pyrogenesis-application.mjs",
+        "attached": true,
+        "parentId": "37A4DE08F70B001BD2F5B333A6597A4E",
+        "canAccessOpener": false,
+        "parentFrameId": "37A4DE08F70B001BD2F5B333A6597A4E",
+        "browserContextId": "53489175A925B1B6EBA8BB9ACBCA3BB5"
+      },
+      "waitingForDebugger": false
+    },
+    {
+      "sessionId": "253995C65500B920D58D17D66D6F8F10",
+      "targetInfo": {
+        "targetId": "C502AEC916185063CF997D6D4F678C79",
+        "type": "worker",
+        "title": "em-pthread",
+        "url": "http://localhost:8097/pyrogenesis-application.mjs",
+        "attached": true,
+        "parentId": "37A4DE08F70B001BD2F5B333A6597A4E",
+        "canAccessOpener": false,
+        "parentFrameId": "37A4DE08F70B001BD2F5B333A6597A4E",
+        "browserContextId": "53489175A925B1B6EBA8BB9ACBCA3BB5"
+      },
+      "waitingForDebugger": false
+    }
+  ],
+  "initialRendererWork": {
+    "stats": {
+      "frames": 2147,
+      "draws": 1133508,
+      "submissions": 2147,
+      "pipelineCompiles": 65,
+      "commandBatches": 5901,
+      "uploadBytes": 9849032576
+    },
+    "uploadBelt": {
+      "mappedBytes": 10115902956,
+      "fallbackBytes": 0,
+      "createdBuffers": 3,
+      "reusedBuffers": 2144,
+      "mapFailures": 0
+    },
+    "asyncSequence": 8120,
+    "presentation": {
+      "rafPresents": 2147,
+      "backgroundFallbackPresents": 0,
+      "failedPresents": 0,
+      "cancelledPresents": 0,
+      "totalWaitMilliseconds": 22576.67500257492,
+      "maxWaitMilliseconds": 17.694999992847443,
+      "lastFrameId": 2147
+    },
+    "commandQueue": {
+      "pending": 4,
+      "maxPending": 8,
+      "consumed": 11620,
+      "totalWaitMilliseconds": 89977.03499734402,
+      "maxWaitMilliseconds": 102.33999997377396
+    }
+  },
+  "failure": "Page.wait_for_timeout: Target page, context or browser has been closed",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\jorlu\\OneDrive\\Documentos\\emprendimiento\\0 AD\\0adwebassembly\\wasm\\scripts\\profile-phase4-5.py\", line 189, in main\n    command(session,'Profiler.enable')\n    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\jorlu\\OneDrive\\Documentos\\emprendimiento\\0 AD\\0adwebassembly\\wasm\\scripts\\profile-phase4-5.py\", line 148, in command\n    while key not in replies and time.monotonic()<deadline:page.wait_for_timeout(20)\n                                                           ~~~~~~~~~~~~~~~~~~~~~^^^^\n  File \"C:\\Users\\jorlu\\OneDrive\\Documentos\\emprendimiento\\0 AD\\0adwebassembly\\wasm\\.venv-phase3\\Lib\\site-packages\\playwright\\sync_api\\_generated.py\", line 11496, in wait_for_timeout\n    self._sync(self._impl_obj.wait_for_timeout(timeout=timeout))\n    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\jorlu\\OneDrive\\Documentos\\emprendimiento\\0 AD\\0adwebassembly\\wasm\\.venv-phase3\\Lib\\site-packages\\playwright\\_impl\\_sync_base.py\", line 115, in _sync\n    return task.result()\n           ~~~~~~~~~~~^^\n  File \"C:\\Users\\jorlu\\OneDrive\\Documentos\\emprendimiento\\0 AD\\0adwebassembly\\wasm\\.venv-phase3\\Lib\\site-packages\\playwright\\_impl\\_page.py\", line 1103, in wait_for_timeout\n    await self._main_frame.wait_for_timeout(timeout)\n  File \"C:\\Users\\jorlu\\OneDrive\\Documentos\\emprendimiento\\0 AD\\0adwebassembly\\wasm\\.venv-phase3\\Lib\\site-packages\\playwright\\_impl\\_frame.py\", line 844, in wait_for_timeout\n    await self._channel.send(\"waitForTimeout\", None, {\"waitTimeout\": timeout})\n  File \"C:\\Users\\jorlu\\OneDrive\\Documentos\\emprendimiento\\0 AD\\0adwebassembly\\wasm\\.venv-phase3\\Lib\\site-packages\\playwright\\_impl\\_connection.py\", line 69, in send\n    return await self._connection.wrap_api_call(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    ...<3 lines>...\n    )\n    ^\n  File \"C:\\Users\\jorlu\\OneDrive\\Documentos\\emprendimiento\\0 AD\\0adwebassembly\\wasm\\.venv-phase3\\Lib\\site-packages\\playwright\\_impl\\_connection.py\", line 559, in wrap_api_call\n    raise rewrite_error(error, f\"{parsed_st['apiName']}: {error}\") from None\nplaywright._impl._errors.TargetClosedError: Page.wait_for_timeout: Target page, context or browser has been closed\n",
+  "teardownFailure": "Page.evaluate: Target page, context or browser has been closed",
+  "browserExitBeforeCleanup": null,
+  "browserCloseFailure": "BrowserType.connect_over_cdp: connect ECONNREFUSED 127.0.0.1:9229\nCall log:\n  - <ws preparing> retrieving websocket url from http://localhost:9229\n",
+  "browserExitAfterCleanup": 0,
+  "engineErrors": []
+}

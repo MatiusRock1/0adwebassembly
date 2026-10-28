@@ -1,0 +1,37 @@
+--- a/python/mozbuild/mozbuild/configure/constants.py
++++ b/python/mozbuild/mozbuild/configure/constants.py
+@@ -43,6 +43,7 @@
+         "SunOS",
+         "WINNT",
+         "WASI",
++        "Emscripten",
+     )
+ 
+ 
+@@ -58,6 +59,7 @@
+         "SunOS",
+         "WINNT",
+         "WASI",
++        "Emscripten",
+     )
+ 
+ 
+@@ -149,6 +151,7 @@
+     "SunOS": "__sun__",
+     "WINNT": "_WIN32 || __CYGWIN__",
+     "WASI": "__wasi__",
++    "Emscripten": "__EMSCRIPTEN__",
+ }
+ 
+ assert sorted(kernel_preprocessor_checks.keys()) == sorted(Kernel.POSSIBLE_VALUES)
+--- a/build/moz.configure/init.configure
++++ b/build/moz.configure/init.configure
+@@ -545,6 +545,8 @@
+         canonical_os = canonical_kernel = "OpenBSD"
+     elif os.startswith("solaris"):
+         canonical_os = canonical_kernel = "SunOS"
++    elif os.startswith("emscripten") and allow_wasi:
++        canonical_os = canonical_kernel = "Emscripten"
+     elif os.startswith("wasi") and allow_wasi:
+         canonical_os = canonical_kernel = "WASI"
+     else:

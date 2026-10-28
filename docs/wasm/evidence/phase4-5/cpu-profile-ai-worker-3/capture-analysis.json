@@ -1,0 +1,149 @@
+{
+  "diagnosticOnly": true,
+  "scope": "Inclusive sampled wall-stack residence under Capture, no exclusive CPU attribution",
+  "totalSeconds": 2.854747,
+  "frontendInclusive": [
+    {
+      "function": "JS::Evaluate(JSContext*, JS::ReadOnlyCompileOptions const&, JS::SourceText<mozilla::Utf8Unit>&, JS::MutableHandle<JS::Value>)",
+      "seconds": 2.519232
+    },
+    {
+      "function": "Script::WriteStructuredClone(Script::Request const&, JS::Handle<JS::Value>)",
+      "seconds": 0.334019
+    },
+    {
+      "function": "WriteStructuredClone(JSContext*, JS::Handle<JS::Value>, JSStructuredCloneData*, JS::StructuredCloneScope, JS::CloneDataPolicy const&, JSStructuredCloneCallbacks const*, void*, JS::Value const&)",
+      "seconds": 0.329484
+    },
+    {
+      "function": "JSStructuredCloneWriter::startWrite(JS::Handle<JS::Value>)",
+      "seconds": 0.16096
+    },
+    {
+      "function": "JSStructuredCloneWriter::writeString(unsigned int, JSString*)",
+      "seconds": 0.061499
+    },
+    {
+      "function": "js::frontend::GeneralParser<js::frontend::FullParseHandler, mozilla::Utf8Unit>::statementList(js::frontend::YieldHandling)",
+      "seconds": 0.042849
+    },
+    {
+      "function": "js::frontend::GeneralParser<js::frontend::FullParseHandler, mozilla::Utf8Unit>::statementListItem(js::frontend::YieldHandling, bool)",
+      "seconds": 0.041222
+    },
+    {
+      "function": "js::frontend::GeneralParser<js::frontend::FullParseHandler, mozilla::Utf8Unit>::assignExpr(js::frontend::InHandling, js::frontend::YieldHandling, js::frontend::TripledotHandling, js::frontend::GeneralParser<js::frontend::FullParseHandler, mozilla::Utf8Unit>::PossibleError*, js::frontend::ParserBase::InvokedPrediction)",
+      "seconds": 0.035001
+    },
+    {
+      "function": "bool CompileLazyFunctionToStencilMaybeInstantiate<mozilla::Utf8Unit>(JSContext*, js::FrontendContext*, js::LifoAlloc&, js::frontend::CompilationInput&, js::frontend::ScopeBindingCache*, mozilla::Utf8Unit const*, unsigned long, mozilla::Variant<mozilla::UniquePtr<js::frontend::ExtensibleCompilationStencil, JS::DeletePolicy<js::frontend::ExtensibleCompilationStencil>>, RefPtr<js::frontend::CompilationStencil>, js::frontend::CompilationGCOutput*>&)",
+      "seconds": 0.033958
+    },
+    {
+      "function": "bool CompileGlobalScriptToStencilAndMaybeInstantiate<mozilla::Utf8Unit>(JSContext*, js::FrontendContext*, js::LifoAlloc&, js::frontend::CompilationInput&, js::frontend::ScopeBindingCache*, JS::SourceText<mozilla::Utf8Unit>&, js::ScopeKind, mozilla::Vector<js::frontend::ExtraBindingInfo, 0ul, js::SystemAllocPolicy>*, mozilla::Variant<mozilla::UniquePtr<js::frontend::ExtensibleCompilationStencil, JS::DeletePolicy<js::frontend::ExtensibleCompilationStencil>>, RefPtr<js::frontend::CompilationStencil>, js::frontend::CompilationGCOutput*>&)",
+      "seconds": 0.032164
+    },
+    {
+      "function": "js::frontend::GeneralParser<js::frontend::FullParseHandler, mozilla::Utf8Unit>::expr(js::frontend::InHandling, js::frontend::YieldHandling, js::frontend::TripledotHandling, js::frontend::GeneralParser<js::frontend::FullParseHandler, mozilla::Utf8Unit>::PossibleError*, js::frontend::ParserBase::InvokedPrediction)",
+      "seconds": 0.03202
+    },
+    {
+      "function": "js::frontend::GeneralParser<js::frontend::FullParseHandler, mozilla::Utf8Unit>::optionalExpr(js::frontend::YieldHandling, js::frontend::TripledotHandling, js::frontend::TokenKind, js::frontend::GeneralParser<js::frontend::FullParseHandler, mozilla::Utf8Unit>::PossibleError*, js::frontend::ParserBase::InvokedPrediction)",
+      "seconds": 0.031991
+    },
+    {
+      "function": "js::frontend::GeneralParser<js::frontend::FullParseHandler, mozilla::Utf8Unit>::unaryExpr(js::frontend::YieldHandling, js::frontend::TripledotHandling, js::frontend::GeneralParser<js::frontend::FullParseHandler, mozilla::Utf8Unit>::PossibleError*, js::frontend::ParserBase::InvokedPrediction, js::frontend::PrivateNameHandling)",
+      "seconds": 0.031991
+    },
+    {
+      "function": "js::frontend::GeneralParser<js::frontend::FullParseHandler, mozilla::Utf8Unit>::memberExpr(js::frontend::YieldHandling, js::frontend::TripledotHandling, js::frontend::TokenKind, bool, js::frontend::GeneralParser<js::frontend::FullParseHandler, mozilla::Utf8Unit>::PossibleError*, js::frontend::ParserBase::InvokedPrediction)",
+      "seconds": 0.030499
+    },
+    {
+      "function": "js::frontend::GeneralParser<js::frontend::FullParseHandler, mozilla::Utf8Unit>::expressionStatement(js::frontend::YieldHandling, js::frontend::ParserBase::InvokedPrediction)",
+      "seconds": 0.030496
+    },
+    {
+      "function": "js::frontend::GeneralParser<js::frontend::SyntaxParseHandler, mozilla::Utf8Unit>::innerFunctionForFunctionBox(js::frontend::SyntaxParseHandlerNode, js::frontend::ParseContext*, js::frontend::FunctionBox*, js::frontend::InHandling, js::frontend::YieldHandling, js::frontend::FunctionSyntaxKind, js::frontend::Directives*)",
+      "seconds": 0.024403
+    },
+    {
+      "function": "js::frontend::GeneralParser<js::frontend::SyntaxParseHandler, mozilla::Utf8Unit>::statementListItem(js::frontend::YieldHandling, bool)",
+      "seconds": 0.024403
+    },
+    {
+      "function": "js::frontend::GeneralParser<js::frontend::SyntaxParseHandler, mozilla::Utf8Unit>::statementList(js::frontend::YieldHandling)",
+      "seconds": 0.024403
+    },
+    {
+      "function": "js::frontend::GeneralParser<js::frontend::FullParseHandler, mozilla::Utf8Unit>::functionDefinition(js::frontend::FunctionNode*, unsigned int, js::frontend::InHandling, js::frontend::YieldHandling, js::frontend::TaggedParserAtomIndex, js::frontend::FunctionSyntaxKind, js::GeneratorKind, js::FunctionAsyncKind, bool)",
+      "seconds": 0.024403
+    },
+    {
+      "function": "js::frontend::GeneralParser<js::frontend::SyntaxParseHandler, mozilla::Utf8Unit>::assignExpr(js::frontend::InHandling, js::frontend::YieldHandling, js::frontend::TripledotHandling, js::frontend::GeneralParser<js::frontend::SyntaxParseHandler, mozilla::Utf8Unit>::PossibleError*, js::frontend::ParserBase::InvokedPrediction)",
+      "seconds": 0.018167
+    }
+  ],
+  "self": [
+    {
+      "function": "js::pbl::PortableBaselineInterpret(JSContext*, js::pbl::State&, js::pbl::Stack&, js::pbl::StackVal*, JSObject*, JS::Value*)",
+      "seconds": 0.849217
+    },
+    {
+      "function": "js::RunScript(JSContext*, js::RunState&)",
+      "seconds": 0.272463
+    },
+    {
+      "function": "bool Script::Function::ToJSNative<&CComponentManager::Script_GetEntitiesWithInterface(int), &CComponentManager* Script::Interface::ObjectFromCBData<CComponentManager>(Script::Request const&, JS::CallArgs&)>(JSContext*, unsigned int, JS::Value*)",
+      "seconds": 0.144677
+    },
+    {
+      "function": "bool js::NativeSetProperty<(js::QualifiedBool)1>(JSContext*, JS::Handle<js::NativeObject*>, JS::Handle<JS::PropertyKey>, JS::Handle<JS::Value>, JS::Handle<JS::Value>, JS::ObjectOpResult&)",
+      "seconds": 0.13366
+    },
+    {
+      "function": "js::jit::MaybeEnterJit(JSContext*, js::RunState&)",
+      "seconds": 0.112394
+    },
+    {
+      "function": "mozilla::BufferList<js::SystemAllocPolicy>::WriteBytes(char const*, unsigned long)",
+      "seconds": 0.100163
+    },
+    {
+      "function": "js::InternalCallOrConstruct(JSContext*, JS::CallArgs const&, js::MaybeConstruct, js::CallReason)",
+      "seconds": 0.085954
+    },
+    {
+      "function": "bool Script::Function::ToJSNative<&CComponentManager::QueryInterface(unsigned int, int) const, &CComponentManager* Script::Interface::ObjectFromCBData<CComponentManager>(Script::Request const&, JS::CallArgs&)>(JSContext*, unsigned int, JS::Value*)",
+      "seconds": 0.072077
+    },
+    {
+      "function": "js::NativeGetProperty(JSContext*, JS::Handle<js::NativeObject*>, JS::Handle<JS::Value>, JS::Handle<JS::PropertyKey>, JS::MutableHandle<JS::Value>)",
+      "seconds": 0.06562
+    },
+    {
+      "function": "JSStructuredCloneWriter::startWrite(JS::Handle<JS::Value>)",
+      "seconds": 0.063001
+    },
+    {
+      "function": "js::LookupNameNoGC(JSContext*, js::PropertyName*, JSObject*, JSObject**, js::NativeObject**, js::PropertyResult*)",
+      "seconds": 0.06284
+    },
+    {
+      "function": "WriteStructuredClone(JSContext*, JS::Handle<JS::Value>, JSStructuredCloneData*, JS::StructuredCloneScope, JS::CloneDataPolicy const&, JSStructuredCloneCallbacks const*, void*, JS::Value const&)",
+      "seconds": 0.06115
+    },
+    {
+      "function": "js::jit::DoCallFallback(JSContext*, js::jit::BaselineFrame*, js::jit::ICFallbackStub*, unsigned int, JS::Value*, JS::MutableHandle<JS::Value>)",
+      "seconds": 0.059
+    },
+    {
+      "function": "js::ToBooleanSlow(JS::Handle<JS::Value>)",
+      "seconds": 0.056292
+    },
+    {
+      "function": "js::NativeObject::create(JSContext*, js::gc::AllocKind, js::gc::Heap, JS::Handle<js::SharedShape*>, js::gc::AllocSite*)",
+      "seconds": 0.044919
+    }
+  ]
+}

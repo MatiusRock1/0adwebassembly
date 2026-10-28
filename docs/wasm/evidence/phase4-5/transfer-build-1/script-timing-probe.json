@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "enabled": 0,
+      "clockReads": 0,
+      "passed": true
+    },
+    {
+      "enabled": 1,
+      "clockReads": 2,
+      "passed": true
+    }
+  ],
+  "performanceAcceptance": false,
+  "headerSHA256": "ed46aa993764bd7da5aaccc218898646b3ec20646a52b1ac9a1a510051d1adef"
+}

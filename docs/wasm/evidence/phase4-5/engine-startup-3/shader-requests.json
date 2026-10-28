@@ -1,0 +1,9 @@
+[
+  {
+    "name": "glsl/overlayline",
+    "defines": {
+      "IGNORE_LOS": "1",
+      "USE_OBJECTCOLOR": "1"
+    }
+  }
+]

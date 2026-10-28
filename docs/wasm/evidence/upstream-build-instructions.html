@@ -1,0 +1,1961 @@
+<!DOCTYPE html>
+<html lang="en-US" data-theme="gitea-auto">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>BuildInstructions - 0ad - Wildfire Games</title>
+	<link rel="manifest" href="data:application/json;base64,eyJuYW1lIjoiV2lsZGZpcmUgR2FtZXMiLCJzaG9ydF9uYW1lIjoiV2lsZGZpcmUgR2FtZXMiLCJzdGFydF91cmwiOiJodHRwczovL2dpdGVhLndpbGRmaXJlZ2FtZXMuY29tLyIsImljb25zIjpbeyJzcmMiOiJodHRwczovL2dpdGVhLndpbGRmaXJlZ2FtZXMuY29tL2Fzc2V0cy9pbWcvbG9nby5wbmciLCJ0eXBlIjoiaW1hZ2UvcG5nIiwic2l6ZXMiOiI1MTJ4NTEyIn0seyJzcmMiOiJodHRwczovL2dpdGVhLndpbGRmaXJlZ2FtZXMuY29tL2Fzc2V0cy9pbWcvbG9nby5zdmciLCJ0eXBlIjoiaW1hZ2Uvc3ZnK3htbCIsInNpemVzIjoiNTEyeDUxMiJ9XX0=">
+	<meta name="author" content="0ad">
+	<meta name="description" content="0ad - The main repository for pyrogenesis and 0 A.D.: Empires Ascendant">
+	<meta name="keywords" content="go,git,self-hosted,gitea">
+	<meta name="referrer" content="same-origin">
+
+
+	<link rel="alternate" type="application/atom+xml" title="" href="/0ad/0ad.atom">
+	<link rel="alternate" type="application/rss+xml" title="" href="/0ad/0ad.rss">
+
+	<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+	<link rel="alternate icon" href="/assets/img/favicon.png" type="image/png">
+	
+	
+		<meta property="og:title" content="0ad">
+		<meta property="og:url" content="https://gitea.wildfiregames.com/0ad/0ad">
+		
+			<meta property="og:description" content="The main repository for pyrogenesis and 0 A.D.: Empires Ascendant">
+		
+	
+	<meta property="og:type" content="object">
+	
+		<meta property="og:image" content="https://gitea.wildfiregames.com/repo-avatars/e96cfd5a2ab42a5c657aa20c5163225b3f67e12f4a46b439a6f14bf0f3804daa">
+	
+
+<meta property="og:site_name" content="Wildfire Games">
+
+	<link rel="stylesheet" href="/assets/css/index.DyzB1JtW.css">
+<link rel="stylesheet" href="/assets/css/theme-gitea-auto.CDILR1zZ.css">
+
+	
+<script>
+	
+	window.addEventListener('error', function(e) {window._globalHandlerErrors=window._globalHandlerErrors||[]; window._globalHandlerErrors.push(e);});
+	window.addEventListener('unhandledrejection', function(e) {window._globalHandlerErrors=window._globalHandlerErrors||[]; window._globalHandlerErrors.push(e);});
+	window.config = {
+		appUrl: 'https:\/\/gitea.wildfiregames.com\/',
+		appSubUrl: '',
+		assetUrlPrefix: '\/assets',
+		runModeIsProd:  true ,
+		customEmojis: {"codeberg":":codeberg:","git":":git:","gitea":":gitea:","github":":github:","gitlab":":gitlab:","gogs":":gogs:"},
+		pageData: {},
+		notificationSettings: {"EventSourceUpdateTime":10000,"MaxTimeout":60000,"MinTimeout":10000,"TimeoutStep":10000}, 
+		enableTimeTracking:  false ,
+		mermaidMaxSourceCharacters:  50000 ,
+		sharedWorkerUri: '\/assets\/js\/eventsource.sharedworker.Dug1twio.js',
+		
+		i18n: {
+			copy_success: "Copied!",
+			copy_error: "Copy failed",
+			error_occurred: "An error occurred",
+			remove_label_str: "Remove item \"%s\"",
+			modal_confirm: "Confirm",
+			modal_cancel: "Cancel",
+			more_items: "More items",
+		},
+	};
+	
+	window.config.pageData = window.config.pageData || {};
+</script>
+<script src="/assets/js/iife.DYEzIdse.js" onerror="alert(&#39;Failed to load asset file from &#39; + this.src + &#39;. Please make sure the asset files can be accessed.&#39;)"></script>
+
+	
+</head>
+<body hx-swap="outerHTML" hx-ext="morph" hx-push-url="false">
+	
+
+	<div class="full height">
+		<noscript>This website requires JavaScript.</noscript>
+
+		
+
+		
+			<nav id="navbar" aria-label="Navigation Bar">
+	<div class="navbar-left">
+		
+		<a class="item" id="navbar-logo" href="/" aria-label="Home">
+			<img width="30" height="30" src="/assets/img/logo.svg" alt="Logo" aria-hidden="true">
+		</a>
+
+		
+		<div class="ui secondary menu navbar-mobile-right only-mobile">
+			
+
+			<button class="item ui icon mini button tw-m-0" id="navbar-expand-toggle" aria-label="Navigation Menu"><svg viewBox="0 0 16 16" class="svg octicon-three-bars" aria-hidden="true" width="16" height="16"><path d="M1 2.75A.75.75 0 0 1 1.75 2h12.5a.75.75 0 0 1 0 1.5H1.75A.75.75 0 0 1 1 2.75m0 5A.75.75 0 0 1 1.75 7h12.5a.75.75 0 0 1 0 1.5H1.75A.75.75 0 0 1 1 7.75M1.75 12h12.5a.75.75 0 0 1 0 1.5H1.75a.75.75 0 0 1 0-1.5"/></svg></button>
+		</div>
+
+		
+		
+			<a class="item" href="/explore/repos">Explore</a>
+		
+
+		<a class="item" id="navbar-logo" href="/0ad/0ad" aria-label="Main repository">
+	<img width="30" height="30" aria-hidden="true" src="/assets/img/0ad-wheel.png" alt="0 A.D. logo">
+</a>
+<a class="item" target="_blank" href="https://docs.wildfiregames.com">Technical Docs</a>
+<a class="item" target="_blank" href="https://play0ad.com">0&nbsp;A.D. Website</a>
+<a class="item" target="_blank" href="https://wildfiregames.com/forum">Forums</a>
+<span class="item"></span>
+
+
+		
+			<a class="item" target="_blank" href="https://docs.gitea.com">Help</a>
+		
+	</div>
+
+	
+	<div class="navbar-right">
+		
+			
+				<a class="item" href="/user/sign_up">
+					<svg viewBox="0 0 16 16" class="svg octicon-person" aria-hidden="true" width="16" height="16"><path d="M10.561 8.073a6 6 0 0 1 3.432 5.142.75.75 0 1 1-1.498.07 4.5 4.5 0 0 0-8.99 0 .75.75 0 0 1-1.498-.07 6 6 0 0 1 3.431-5.142 3.999 3.999 0 1 1 5.123 0M10.5 5a2.5 2.5 0 1 0-5 0 2.5 2.5 0 0 0 5 0"/></svg>
+					<span class="tw-ml-1">Register</span>
+				</a>
+			
+			<a class="item" rel="nofollow" href="/user/login">
+				<svg viewBox="0 0 16 16" class="svg octicon-sign-in" aria-hidden="true" width="16" height="16"><path d="M2 2.75C2 1.784 2.784 1 3.75 1h2.5a.75.75 0 0 1 0 1.5h-2.5a.25.25 0 0 0-.25.25v10.5c0 .138.112.25.25.25h2.5a.75.75 0 0 1 0 1.5h-2.5A1.75 1.75 0 0 1 2 13.25Zm6.56 4.5h5.69a.75.75 0 0 1 0 1.5H8.56l1.97 1.97a.749.749 0 0 1-.326 1.275.75.75 0 0 1-.734-.215L6.22 8.53a.75.75 0 0 1 0-1.06l3.25-3.25a.749.749 0 0 1 1.275.326.75.75 0 0 1-.215.734Z"/></svg>
+				<span class="tw-ml-1">Sign In</span>
+			</a>
+		
+	</div>
+
+	
+	
+</nav>
+
+
+
+
+		
+
+
+
+<div role="main" aria-label="BuildInstructions" class="page-content repository wiki view">
+	<div class="secondary-nav">
+
+	<div class="ui container">
+		<div class="repo-header">
+			<div class="flex-item tw-items-center">
+				<div class="flex-item-leading">
+					
+
+	<img class="ui avatar tw-align-middle" src="/repo-avatars/e96cfd5a2ab42a5c657aa20c5163225b3f67e12f4a46b439a6f14bf0f3804daa" width="24" height="24" alt aria-hidden="true">
+
+
+				</div>
+				<div class="flex-item-main">
+					<div class="flex-item-title tw-text-18">
+						<a class="muted tw-font-normal" href="/0ad">0ad</a>/<a class="muted" href="/0ad/0ad">0ad</a>
+					</div>
+				</div>
+				<div class="flex-item-trailing">
+					
+					
+						
+					
+					
+					
+					
+				</div>
+			</div>
+			
+				<div class="flex-text-block tw-flex-wrap">
+					
+					
+					
+					<a class="ui compact small basic button" href="/0ad/0ad.rss" data-tooltip-content="RSS Feed">
+						<svg viewBox="0 0 16 16" class="svg octicon-rss" aria-hidden="true" width="16" height="16"><path d="M2.002 2.725a.75.75 0 0 1 .797-.699C8.79 2.42 13.58 7.21 13.974 13.201a.75.75 0 0 1-1.497.098 10.5 10.5 0 0 0-9.776-9.776.747.747 0 0 1-.7-.798ZM2.84 7.05h-.002a7 7 0 0 1 6.113 6.111.75.75 0 0 1-1.49.178 5.5 5.5 0 0 0-4.8-4.8.75.75 0 0 1 .179-1.489M2 13a1 1 0 1 1 2 0 1 1 0 0 1-2 0"/></svg>
+					</a>
+					
+					<form class="flex-text-inline" hx-boost="true" hx-target="this" method="post" action="/0ad/0ad/action/watch">
+	<div class="ui labeled button" data-tooltip-content="Sign in to watch this repository.">
+		
+		
+		<button type="submit" class="ui compact small basic button" disabled aria-label="Watch">
+			<svg viewBox="0 0 16 16" class="svg octicon-eye" aria-hidden="true" width="16" height="16"><path d="M8 2c1.981 0 3.671.992 4.933 2.078 1.27 1.091 2.187 2.345 2.637 3.023a1.62 1.62 0 0 1 0 1.798c-.45.678-1.367 1.932-2.637 3.023C11.67 13.008 9.981 14 8 14s-3.671-.992-4.933-2.078C1.797 10.83.88 9.576.43 8.898a1.62 1.62 0 0 1 0-1.798c.45-.677 1.367-1.931 2.637-3.022C4.33 2.992 6.019 2 8 2M1.679 7.932a.12.12 0 0 0 0 .136c.411.622 1.241 1.75 2.366 2.717C5.176 11.758 6.527 12.5 8 12.5s2.825-.742 3.955-1.715c1.124-.967 1.954-2.096 2.366-2.717a.12.12 0 0 0 0-.136c-.412-.621-1.242-1.75-2.366-2.717C10.824 4.242 9.473 3.5 8 3.5s-2.825.742-3.955 1.715c-1.124.967-1.954 2.096-2.366 2.717M8 10a2 2 0 1 1-.001-3.999A2 2 0 0 1 8 10"/></svg>
+			<span class="not-mobile" aria-hidden="true">Watch</span>
+		</button>
+		<a hx-boost="false" class="ui basic label" href="/0ad/0ad/watchers">
+			36
+		</a>
+	</div>
+</form>
+
+					
+					<form class="flex-text-inline" hx-boost="true" hx-target="this" method="post" action="/0ad/0ad/action/star">
+	<div class="ui labeled button" data-tooltip-content="Sign in to star this repository.">
+		
+		
+		<button type="submit" class="ui compact small basic button" disabled aria-label="Star">
+			<svg viewBox="0 0 16 16" class="svg octicon-star" aria-hidden="true" width="16" height="16"><path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25m0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41z"/></svg>
+			<span class="not-mobile" aria-hidden="true">Star</span>
+		</button>
+		<a hx-boost="false" class="ui basic label" href="/0ad/0ad/stars">
+			67
+		</a>
+	</div>
+</form>
+
+					
+					
+						<div class="ui labeled button
+							
+								disabled
+							"
+							
+								data-tooltip-content="Sign in to fork this repository."
+							
+						>
+							<a class="ui compact small basic button"
+								
+									
+								
+							>
+								<svg viewBox="0 0 16 16" class="svg octicon-repo-forked" aria-hidden="true" width="16" height="16"><path d="M5 5.372v.878c0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75v-.878a2.25 2.25 0 1 1 1.5 0v.878a2.25 2.25 0 0 1-2.25 2.25h-1.5v2.128a2.251 2.251 0 1 1-1.5 0V8.5h-1.5A2.25 2.25 0 0 1 3.5 6.25v-.878a2.25 2.25 0 1 1 1.5 0M5 3.25a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0m6.75.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5m-3 8.75a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0"/></svg><span class="text not-mobile">Fork</span>
+							</a>
+							<a class="ui basic label" href="/0ad/0ad/forks">
+								121
+							</a>
+						</div>
+						<div class="ui small modal" id="fork-repo-modal">
+							<div class="header">
+								You've already forked 0ad
+							</div>
+							<div class="content tw-text-left">
+								<div class="ui list">
+									
+								</div>
+								
+							</div>
+						</div>
+					
+				</div>
+			
+		</div>
+		
+		
+		
+	</div>
+
+	<div class="ui container">
+		<overflow-menu class="ui secondary pointing menu">
+			
+				<div class="overflow-menu-items">
+					
+					<a class="item" href="/0ad/0ad">
+						<svg viewBox="0 0 16 16" class="svg octicon-code" aria-hidden="true" width="16" height="16"><path d="m11.28 3.22 4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.749.749 0 0 1-1.275-.326.75.75 0 0 1 .215-.734L13.94 8l-3.72-3.72a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215m-6.56 0a.75.75 0 0 1 1.042.018.75.75 0 0 1 .018 1.042L2.06 8l3.72 3.72a.749.749 0 0 1-.326 1.275.75.75 0 0 1-.734-.215L.47 8.53a.75.75 0 0 1 0-1.06Z"/></svg> Code
+					</a>
+					
+
+					
+						<a class="item" href="/0ad/0ad/issues">
+							<svg viewBox="0 0 16 16" class="svg octicon-issue-opened" aria-hidden="true" width="16" height="16"><path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3"/><path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M1.5 8a6.5 6.5 0 1 0 13 0 6.5 6.5 0 0 0-13 0"/></svg> Issues
+							
+								<span class="ui small label">1.6k</span>
+							
+						</a>
+					
+
+					
+
+					
+						<a class="item" href="/0ad/0ad/pulls">
+							<svg viewBox="0 0 16 16" class="svg octicon-git-pull-request" aria-hidden="true" width="16" height="16"><path d="M1.5 3.25a2.25 2.25 0 1 1 3 2.122v5.256a2.251 2.251 0 1 1-1.5 0V5.372A2.25 2.25 0 0 1 1.5 3.25m5.677-.177L9.573.677A.25.25 0 0 1 10 .854V2.5h1A2.5 2.5 0 0 1 13.5 5v5.628a2.251 2.251 0 1 1-1.5 0V5a1 1 0 0 0-1-1h-1v1.646a.25.25 0 0 1-.427.177L7.177 3.427a.25.25 0 0 1 0-.354M3.75 2.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5m0 9.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5m8.25.75a.75.75 0 1 0 1.5 0 .75.75 0 0 0-1.5 0"/></svg> Pull Requests
+							
+								<span class="ui small label">167</span>
+							
+						</a>
+					
+
+					
+						<a class="item" href="/0ad/0ad/actions">
+							<svg viewBox="0 0 16 16" class="svg octicon-play" aria-hidden="true" width="16" height="16"><path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M1.5 8a6.5 6.5 0 1 0 13 0 6.5 6.5 0 0 0-13 0m4.879-2.773 4.264 2.559a.25.25 0 0 1 0 .428l-4.264 2.559A.25.25 0 0 1 6 10.559V5.442a.25.25 0 0 1 .379-.215"/></svg> Actions
+							
+						</a>
+					
+
+					
+
+					
+					
+						<a href="/0ad/0ad/projects" class="item">
+							<svg viewBox="0 0 16 16" class="svg octicon-project" aria-hidden="true" width="16" height="16"><path d="M1.75 0h12.5C15.216 0 16 .784 16 1.75v12.5A1.75 1.75 0 0 1 14.25 16H1.75A1.75 1.75 0 0 1 0 14.25V1.75C0 .784.784 0 1.75 0M1.5 1.75v12.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25V1.75a.25.25 0 0 0-.25-.25H1.75a.25.25 0 0 0-.25.25M11.75 3a.75.75 0 0 1 .75.75v7.5a.75.75 0 0 1-1.5 0v-7.5a.75.75 0 0 1 .75-.75m-8.25.75a.75.75 0 0 1 1.5 0v5.5a.75.75 0 0 1-1.5 0ZM8 3a.75.75 0 0 1 .75.75v3.5a.75.75 0 0 1-1.5 0v-3.5A.75.75 0 0 1 8 3"/></svg> Projects
+							
+								<span class="ui small label">5</span>
+							
+						</a>
+					
+
+					
+					<a class="item" href="/0ad/0ad/releases">
+						<svg viewBox="0 0 16 16" class="svg octicon-tag" aria-hidden="true" width="16" height="16"><path d="M1 7.775V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 0 1 0 2.474l-5.026 5.026a1.75 1.75 0 0 1-2.474 0l-6.25-6.25A1.75 1.75 0 0 1 1 7.775m1.5 0c0 .066.026.13.073.177l6.25 6.25a.25.25 0 0 0 .354 0l5.025-5.025a.25.25 0 0 0 0-.354l-6.25-6.25a.25.25 0 0 0-.177-.073H2.75a.25.25 0 0 0-.25.25ZM6 5a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/></svg> Releases
+						
+							<span class="ui small label">6</span>
+						
+					</a>
+					
+
+					
+						<a class="active item" href="/0ad/0ad/wiki">
+							<svg viewBox="0 0 16 16" class="svg octicon-book" aria-hidden="true" width="16" height="16"><path d="M0 1.75A.75.75 0 0 1 .75 1h4.253c1.227 0 2.317.59 3 1.501A3.74 3.74 0 0 1 11.006 1h4.245a.75.75 0 0 1 .75.75v10.5a.75.75 0 0 1-.75.75h-4.507a2.25 2.25 0 0 0-1.591.659l-.622.621a.75.75 0 0 1-1.06 0l-.622-.621A2.25 2.25 0 0 0 5.258 13H.75a.75.75 0 0 1-.75-.75Zm7.251 10.324.004-5.073-.002-2.253A2.25 2.25 0 0 0 5.003 2.5H1.5v9h3.757a3.75 3.75 0 0 1 1.994.574M8.755 4.75l-.004 7.322a3.75 3.75 0 0 1 1.992-.572H14.5v-9h-3.495a2.25 2.25 0 0 0-2.25 2.25"/></svg> Wiki
+						</a>
+					
+
+					
+
+					
+						<a class="item" href="/0ad/0ad/activity">
+							<svg viewBox="0 0 16 16" class="svg octicon-pulse" aria-hidden="true" width="16" height="16"><path d="M6 2c.306 0 .582.187.696.471L10 10.731l1.304-3.26A.75.75 0 0 1 12 7h3.25a.75.75 0 0 1 0 1.5h-2.742l-1.812 4.528a.751.751 0 0 1-1.392 0L6 4.77 4.696 8.03A.75.75 0 0 1 4 8.5H.75a.75.75 0 0 1 0-1.5h2.742l1.812-4.529A.75.75 0 0 1 6 2"/></svg> Activity
+						</a>
+					
+
+					
+
+					
+				</div>
+			
+		</overflow-menu>
+	</div>
+	<div class="ui tabs divider"></div>
+</div>
+
+	
+	<div class="ui container">
+		<div class="repo-button-row">
+			<div class="flex-text-block tw-flex-1">
+				<div class="ui floating filter dropdown" data-no-results="No results found.">
+					<div class="ui basic small button">
+						<span class="text">
+							Page:
+							<strong>BuildInstructions</strong>
+						</span>
+						<svg viewBox="0 0 16 16" class="dropdown icon svg octicon-triangle-down" aria-hidden="true" width="14" height="14"><path d="m4.427 7.427 3.396 3.396a.25.25 0 0 0 .354 0l3.396-3.396A.25.25 0 0 0 11.396 7H4.604a.25.25 0 0 0-.177.427"/></svg>
+					</div>
+					<div class="menu">
+						<div class="ui icon search input">
+							<i class="icon"><svg viewBox="0 0 16 16" class="svg octicon-filter" aria-hidden="true" width="16" height="16"><path d="M.75 3h14.5a.75.75 0 0 1 0 1.5H.75a.75.75 0 0 1 0-1.5M3 7.75A.75.75 0 0 1 3.75 7h8.5a.75.75 0 0 1 0 1.5h-8.5A.75.75 0 0 1 3 7.75m3 4a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 0 1.5h-2.5a.75.75 0 0 1-.75-.75"/></svg></i>
+							<input name="search" placeholder="Filter page...">
+						</div>
+						<div class="scrolling menu">
+							<a class="item muted" href="/0ad/0ad/wiki/?action=_pages">Pages</a>
+							<div class="divider"></div>
+							
+								<a class="item " href="/0ad/0ad/wiki/0AD_The_Vision">0AD_The_Vision</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/0adManual">0adManual</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/0adStory">0adStory</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/AIEngineAPI">AIEngineAPI</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Actor_Editor">Actor_Editor</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Actors">Actors</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Adding_A_New_Civilization">Adding_A_New_Civilization</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Adding_font_support">Adding_font_support</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/AegisBot">AegisBot</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Alpha20_Timosthenes">Alpha20_Timosthenes</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Alpha21">Alpha21</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Alpha22">Alpha22</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Alpha23">Alpha23</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Alpha24">Alpha24</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Alpha25">Alpha25</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Alpha26">Alpha26</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Alpha27">Alpha27</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Alpha_Release_Roadmap">Alpha_Release_Roadmap</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/AndroidPort">AndroidPort</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/AnimationExportTutorial">AnimationExportTutorial</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/AnimationSync">AnimationSync</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/ArtDesignDocument">ArtDesignDocument</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/ArtFileNamingConventions">ArtFileNamingConventions</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/ArtPolyCountGuidelines">ArtPolyCountGuidelines</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/ArtScaleAndProportions">ArtScaleAndProportions</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Atlas-Real-time_Editing">Atlas Real time_Editing</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Atlas_Internals">Atlas_Internals</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Atlas_Manual">Atlas_Manual</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Atlas_Manual_Cinematics_Tab">Atlas_Manual_Cinematics_Tab</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Atlas_Manual_Environment_Tab">Atlas_Manual_Environment_Tab</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Atlas_Manual_Heightmap_Import">Atlas_Manual_Heightmap_Import</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Atlas_Manual_Map_Preview">Atlas_Manual_Map_Preview</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Atlas_Manual_Map_Tab">Atlas_Manual_Map_Tab</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Atlas_Manual_Object_Tab">Atlas_Manual_Object_Tab</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Atlas_Manual_Player_Tab">Atlas_Manual_Player_Tab</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Atlas_Manual_Starting">Atlas_Manual_Starting</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Atlas_Manual_Terrain_Tab">Atlas_Manual_Terrain_Tab</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Atlas_Scenario_Editor_DD">Atlas_Scenario_Editor_DD</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Atlas_Tricks">Atlas_Tricks</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Atlas_User%27s_Guide">Atlas_User&#39;s_Guide</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Audio_Design_Document">Audio_Design_Document</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Audio_Voice_List">Audio_Voice_List</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Audio_XML">Audio_XML</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Audio_class.xml">Audio_class.xml</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Audio_group.xml">Audio_group.xml</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Aura_Templates">Aura_Templates</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Background_Seasons">Background_Seasons</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Background_Territories">Background_Territories</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Background_Weather">Background_Weather</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Basic3DImplementation">Basic3DImplementation</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/BasicAnimationImplementation">BasicAnimationImplementation</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Biome_Reference">Biome_Reference</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/BuildAndDeploymentEnvironment">BuildAndDeploymentEnvironment</a>
+							
+								<a class="item selected" href="/0ad/0ad/wiki/BuildInstructions">BuildInstructions</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/BuildInstructionsGettingTheCode">BuildInstructionsGettingTheCode</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/BuildServerSetup">BuildServerSetup</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/BuildingWindowsDependencies">BuildingWindowsDependencies</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/BundleDesignMac">BundleDesignMac</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Changelogs">Changelogs</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Cheat_Templates">Cheat_Templates</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Cinematic_Editor_HOWTO">Cinematic_Editor_HOWTO</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Civ_Athenians">Civ_Athenians</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Civ_Britons">Civ_Britons</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Civ_Carthaginians">Civ_Carthaginians</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Civ_Celts">Civ_Celts</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Civ_Gauls">Civ_Gauls</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Civ_Germans">Civ_Germans</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Civ_Han">Civ_Han</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Civ_Hellenes">Civ_Hellenes</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Civ_Iberians">Civ_Iberians</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Civ_Macedonians">Civ_Macedonians</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Civ_Mauryas">Civ_Mauryas</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Civ_Persians">Civ_Persians</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Civ_Ptolemies">Civ_Ptolemies</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Civ_Romans_Imperial">Civ_Romans_Imperial</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Civ_Romans_PreImp">Civ_Romans_PreImp</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Civ_Romans_Republican">Civ_Romans_Republican</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Civ_Seleucids">Civ_Seleucids</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Civ_Spartans">Civ_Spartans</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/CodeQuality">CodeQuality</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Coding_Conventions">Coding_Conventions</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/ColladaExporting">ColladaExporting</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/CommitGuidelines">CommitGuidelines</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Compiling_Atlas">Compiling_Atlas</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/CompressedTextures">CompressedTextures</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/CppSupport">CppSupport</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/CreatingNewUnits">CreatingNewUnits</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/DD_Gameplay_features">DD_Gameplay_features</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/DD_Introduction">DD_Introduction</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/DD_Overview">DD_Overview</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/DDv3WIP">DDv3WIP</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Debugging">Debugging</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/DebuggingOnWindows">DebuggingOnWindows</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Debugging_Tools">Debugging_Tools</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Deployment">Deployment</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Design_Document">Design_Document</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/DiplomacyStates">DiplomacyStates</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/DocumentManagement">DocumentManagement</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/EngineDocumentation">EngineDocumentation</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/EngineFunctions">EngineFunctions</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/EngineProfiling">EngineProfiling</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/EnglishStyleGuide">EnglishStyleGuide</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Entity">Entity</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/EntityEditorDesign">EntityEditorDesign</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/ExportingErrors">ExportingErrors</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Exposed_Audio_Functions">Exposed_Audio_Functions</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Exposed_Camera_Functions">Exposed_Camera_Functions</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Exposed_ConfigDB_Functions">Exposed_ConfigDB_Functions</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Exposed_Console_Functions">Exposed_Console_Functions</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Exposed_Entity_Collection_Functions">Exposed_Entity_Collection_Functions</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Exposed_Entity_Functions">Exposed_Entity_Functions</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Exposed_Entity_Other_Functions">Exposed_Entity_Other_Functions</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Exposed_Entity_Template_Functions">Exposed_Entity_Template_Functions</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Exposed_GUI_Functions">Exposed_GUI_Functions</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Exposed_LightEnv_Functions">Exposed_LightEnv_Functions</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Exposed_Load_Progress_Functions">Exposed_Load_Progress_Functions</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Exposed_Misc_Functions">Exposed_Misc_Functions</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Exposed_Network_Functions">Exposed_Network_Functions</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Exposed_Player_Functions">Exposed_Player_Functions</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Exposed_Renderer_Functions">Exposed_Renderer_Functions</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Exposed_Script_Object">Exposed_Script_Object</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Exposed_VFS_Functions">Exposed_VFS_Functions</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Exposed_Vector3D_Functions">Exposed_Vector3D_Functions</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/FAQ">FAQ</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Finding_Your_Way_Around">Finding_Your_Way_Around</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Font_Builder">Font_Builder</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Font_Builder2">Font_Builder2</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Formations">Formations</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/FormationsWip">FormationsWip</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/GLESPort">GLESPort</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/GSOC_Ideas">GSOC_Ideas</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/GUI-Achievements">GUI Achievements</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/GUI-Actions">GUI Actions</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/GUI-Addendum">GUI Addendum</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/GUI-Asset_List">GUI Asset_List</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/GUI-Button">GUI Button</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/GUI-Campaign">GUI Campaign</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/GUI-Check-box">GUI Check box</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/GUI-Classes">GUI Classes</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/GUI-Coding_Conventions">GUI Coding_Conventions</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/GUI-Color-picker">GUI Color picker</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/GUI-Credits">GUI Credits</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/GUI-Custom_Objects">GUI Custom_Objects</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/GUI-Data_Types">GUI Data_Types</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/GUI-Design">GUI Design</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/GUI-Document_Archive">GUI Document_Archive</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/GUI-Drop-down">GUI Drop down</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/GUI-Empty">GUI Empty</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/GUI-Engine">GUI Engine</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/GUI-Game_Session">GUI Game_Session</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/GUI-Graphical_User_Interface">GUI Graphical_User_Interface</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/GUI-History">GUI History</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/GUI-Image">GUI Image</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/GUI-Input">GUI Input</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/GUI-List">GUI List</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/GUI-Load_Game">GUI Load_Game</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/GUI-Loading">GUI Loading</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/GUI-Main_Menu">GUI Main_Menu</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/GUI-Manual">GUI Manual</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/GUI-Menu">GUI Menu</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/GUI-Minimap">GUI Minimap</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/GUI-Multiplayer">GUI Multiplayer</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/GUI-OList">GUI OList</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/GUI-Options">GUI Options</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/GUI-Profile_Manager">GUI Profile_Manager</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/GUI-Progress-bar">GUI Progress bar</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/GUI-Properties">GUI Properties</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/GUI-Radio-button">GUI Radio button</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/GUI-Repeat">GUI Repeat</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/GUI-Save_Game">GUI Save_Game</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/GUI-Scenario_Editor">GUI Scenario_Editor</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/GUI-Scripting">GUI Scripting</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/GUI-Scripting_Reference">GUI Scripting_Reference</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/GUI-Session_Creation">GUI Session_Creation</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/GUI-Session_Sub-Windows">GUI Session_Sub Windows</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/GUI-Single_Player">GUI Single_Player</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/GUI-Slider">GUI Slider</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/GUI-Splash">GUI Splash</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/GUI-Sprites">GUI Sprites</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/GUI-Starter_Documents">GUI Starter_Documents</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/GUI-Styles">GUI Styles</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/GUI-Text">GUI Text</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/GUI-Text_Renderer">GUI Text_Renderer</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/GUI-Welcome_Window">GUI Welcome_Window</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/GUI-XML_Files">GUI XML_Files</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/GUI_Object_Interface">GUI_Object_Interface</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/GameDataPaths">GameDataPaths</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/GamePerformance">GamePerformance</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/GameplayDesignConstruction">GameplayDesignConstruction</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/GameplayDesignPrinciples">GameplayDesignPrinciples</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/GameplayDesignProjectiles">GameplayDesignProjectiles</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/GameplayFeatureStatus">GameplayFeatureStatus</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/General_XML_Concept">General_XML_Concept</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/GettingStarted">GettingStarted</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/GettingStartedProgrammers">GettingStartedProgrammers</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/GettingStartedReinforcementLearning">GettingStartedReinforcementLearning</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/GettingTheUnixRelease">GettingTheUnixRelease</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Gitea_Act_Runner_Setup">Gitea_Act_Runner_Setup</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Gitea_Support">Gitea_Support</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/GraphicsCompatibility">GraphicsCompatibility</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/GraphicsProfiling">GraphicsProfiling</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Graphics_Implementation">Graphics_Implementation</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Handle_manager">Handle_manager</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/HannibalBot">HannibalBot</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Heightmap_Library">Heightmap_Library</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Home">Home</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/HotKeys">HotKeys</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/HowToUseTrac">HowToUseTrac</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Implementation_of_Internationalization_and_Localization">Implementation_of_Internationalization_and_Localization</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Installing_East_Asian_Locales">Installing_East_Asian_Locales</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Intensity_%26_Priority">Intensity_&amp;_Priority</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Internationalization">Internationalization</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Internationalization_and_Localization">Internationalization_and_Localization</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/JSConversions">JSConversions</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/JSON">JSON</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/JSRootingGuide">JSRootingGuide</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/JSSerialization">JSSerialization</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/JS_Object_Interface">JS_Object_Interface</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Jans_stomping_ground">Jans_stomping_ground</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/JavaScript">JavaScript</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/JavascriptDebugging">JavascriptDebugging</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/JavascriptDebuggingServer">JavascriptDebuggingServer</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/JenkinsSetup">JenkinsSetup</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/JuBot">JuBot</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Language_Editor">Language_Editor</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/LatestRelease">LatestRelease</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/LatestReleaseLinux">LatestReleaseLinux</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/LatestReleaseMac">LatestReleaseMac</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/LatestReleaseOther">LatestReleaseOther</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/LatestReleaseWindows">LatestReleaseWindows</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/List_Entities_Nature_Fauna">List_Entities_Nature_Fauna</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/List_Entities_Nature_Fauna_Cosmetic">List_Entities_Nature_Fauna_Cosmetic</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/List_Entities_Nature_Fauna_Herd">List_Entities_Nature_Fauna_Herd</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/List_Entities_Nature_Fauna_Hunt">List_Entities_Nature_Fauna_Hunt</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/List_Entities_Nature_Flora">List_Entities_Nature_Flora</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/List_Entities_Nature_Flora_Plants">List_Entities_Nature_Flora_Plants</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/List_Entities_Nature_Flora_Trees">List_Entities_Nature_Flora_Trees</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/List_Entities_Nature_Geological">List_Entities_Nature_Geological</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/List_Entities_Nature_Geological_Minerals">List_Entities_Nature_Geological_Minerals</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/List_Entities_Nature_Geological_Other">List_Entities_Nature_Geological_Other</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/List_Entities_Nature_Special">List_Entities_Nature_Special</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/List_Entities_Player_Cavalry">List_Entities_Player_Cavalry</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/List_Entities_Player_Infantry">List_Entities_Player_Infantry</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/List_Entities_Player_Ships">List_Entities_Player_Ships</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/List_Entities_Player_Siege">List_Entities_Player_Siege</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/List_Entities_Player_Structures">List_Entities_Player_Structures</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/List_Entities_Player_Support">List_Entities_Player_Support</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/List_Maps_Intro">List_Maps_Intro</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/List_Maps_Polar">List_Maps_Polar</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/List_Maps_Tropic">List_Maps_Tropic</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/List_Maps_Types_Alpine">List_Maps_Types_Alpine</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/List_Maps_Types_Desert">List_Maps_Types_Desert</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/List_Maps_Types_Mediterranean">List_Maps_Types_Mediterranean</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/List_Maps_Types_Savanna">List_Maps_Types_Savanna</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/List_Maps_Types_Semi-Arid">List_Maps_Types_Semi Arid</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/List_Maps_Types_Special">List_Maps_Types_Special</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/List_Maps_Types_Steppe">List_Maps_Types_Steppe</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/List_Maps_Types_Temperate">List_Maps_Types_Temperate</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Loading">Loading</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Localization">Localization</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Localization_de_DE">Localization_de_DE</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Localization_el_GR">Localization_el_GR</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Localization_en_GB">Localization_en_GB</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Localization_es_ES">Localization_es_ES</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Localization_fr_FR">Localization_fr_FR</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Localization_id_ID">Localization_id_ID</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Localization_nl_NL">Localization_nl_NL</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Lock-Free_Data_Structures">Lock Free_Data_Structures</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Logging">Logging</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/MacBuildInstructions">MacBuildInstructions</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Manual_BasicGameplay">Manual_BasicGameplay</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Manual_Buildings">Manual_Buildings</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Manual_Cheats">Manual_Cheats</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Manual_Civilizations">Manual_Civilizations</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Manual_GUI_Overview">Manual_GUI_Overview</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Manual_MainMenu">Manual_MainMenu</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Manual_OtherFeatures">Manual_OtherFeatures</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Manual_Quickstart_PlayedRTS">Manual_Quickstart_PlayedRTS</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Manual_SettingUpAGame">Manual_SettingUpAGame</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Manual_Settings">Manual_Settings</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Manual_SpecialBuildings">Manual_SpecialBuildings</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Manual_Terminology">Manual_Terminology</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Manual_Units">Manual_Units</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/MaterialFormat">MaterialFormat</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/MaterialSystem">MaterialSystem</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Message_Extraction">Message_Extraction</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Mod_Layout">Mod_Layout</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Mod_List">Mod_List</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Mod_Publishing_Process">Mod_Publishing_Process</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Mod_Verification_Process">Mod_Verification_Process</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/ModdingGuiAndSimulation">ModdingGuiAndSimulation</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/ModdingResources">ModdingResources</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Modding_Guide">Modding_Guide</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/NightlyBuild">NightlyBuild</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/NormalMaps">NormalMaps</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Nova-%28theme%29">Nova (theme)</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/OpenAL_Parameters">OpenAL_Parameters</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/OpenGL_Texturing">OpenGL_Texturing</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/OpenSourceRelease">OpenSourceRelease</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/PMD_File_Format">PMD_File_Format</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/PMP_File_Format">PMP_File_Format</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/POSIX_Definitions">POSIX_Definitions</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/PSA_File_Format">PSA_File_Format</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/ParallaxNormalMaps">ParallaxNormalMaps</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/ParticleFormat">ParticleFormat</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/PetraBot">PetraBot</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Phabricator">Phabricator</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Platform_Specifics">Platform_Specifics</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Player_Colours">Player_Colours</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Playing0AD">Playing0AD</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/PortA24ToA25">PortA24ToA25</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/PortA25ToA26">PortA25ToA26</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/PortA26ToA27">PortA26ToA27</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/PortA27ToR28">PortA27ToR28</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/PortR28ToR29">PortR28ToR29</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Pregame_GUI">Pregame_GUI</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Profiler2">Profiler2</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/QATestingGuidelines">QATestingGuidelines</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/RMS_Areas">RMS_Areas</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/RMS_Biomes">RMS_Biomes</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/RMS_Connections">RMS_Connections</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/RMS_Constraints">RMS_Constraints</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/RMS_Regions">RMS_Regions</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/RMS_Sessions">RMS_Sessions</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/RMS_Surfaces">RMS_Surfaces</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/RMS_Territories">RMS_Territories</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/RMS_Triggers">RMS_Triggers</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/RMS_Water">RMS_Water</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Random_Biome_Library">Random_Biome_Library</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Random_Map_Generator">Random_Map_Generator</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Random_Map_Generator_Internals">Random_Map_Generator_Internals</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Random_Map_Scripting_Functions">Random_Map_Scripting_Functions</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Random_Map_Scripting_Interface">Random_Map_Scripting_Interface</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Release28">Release28</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Release29">Release29</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/ReleaseProcess">ReleaseProcess</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/ReportingErrors">ReportingErrors</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Resource_Management">Resource_Management</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/ReviewingPatches">ReviewingPatches</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Rmgen2_Library">Rmgen2_Library</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Rmgen_Library">Rmgen_Library</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/ScriptCustomTypes">ScriptCustomTypes</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/ScriptGlue">ScriptGlue</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/ScriptableComplex">ScriptableComplex</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/ScriptableObject">ScriptableObject</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/SecurityModel">SecurityModel</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Self_Test_Helpers">Self_Test_Helpers</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Session_Creation">Session_Creation</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Session_GUI">Session_GUI</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/ShaderGraphicsFeatureStatus">ShaderGraphicsFeatureStatus</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/SimulationArchitecture">SimulationArchitecture</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/SimulationRequirements">SimulationRequirements</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/SimulationSyntax">SimulationSyntax</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/SoundGroup">SoundGroup</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/SoundNamingConventions">SoundNamingConventions</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Sound_engine">Sound_engine</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/SourceMap">SourceMap</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/SpecialCommands">SpecialCommands</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/SpecificNames">SpecificNames</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/SpiderMonkey">SpiderMonkey</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/StarterTasks">StarterTasks</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/StaticRootingAnalysis">StaticRootingAnalysis</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Strategy_Guide">Strategy_Guide</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/SubmittingPatches">SubmittingPatches</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/SwitchingToYourPCsDedicatedGPU">SwitchingToYourPCsDedicatedGPU</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/SynchedJSObject">SynchedJSObject</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/TDD_AI">TDD_AI</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/TDD_Audio">TDD_Audio</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/TDD_FileFormats">TDD_FileFormats</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/TDD_GUI">TDD_GUI</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/TDD_GameObjectXml">TDD_GameObjectXml</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/TDD_Graphics">TDD_Graphics</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/TDD_Infrastructure">TDD_Infrastructure</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/TDD_InterCallingAnalysis">TDD_InterCallingAnalysis</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/TDD_LowLevel">TDD_LowLevel</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/TDD_MiscEngine">TDD_MiscEngine</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/TDD_Multiplayer">TDD_Multiplayer</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/TDD_MultiplayerLobby">TDD_MultiplayerLobby</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/TDD_Scripting">TDD_Scripting</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/TDD_Simulation">TDD_Simulation</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/TDD_Tools">TDD_Tools</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Task_List">Task_List</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/TechModifications">TechModifications</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/TechnicalArtRequirements">TechnicalArtRequirements</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Technology_Templates">Technology_Templates</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/TerrainFileFormat">TerrainFileFormat</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/TextureFormat">TextureFormat</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/TortoiseSVN_Guide">TortoiseSVN_Guide</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/TranslatingMods">TranslatingMods</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Translation_DE_0adManual">Translation_DE_0adManual</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Translation_DE_HotKeys">Translation_DE_HotKeys</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Translation_DE_Localization">Translation_DE_Localization</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Translation_DE_Manual_BasicGameplay">Translation_DE_Manual_BasicGameplay</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Translation_DE_Manual_Buildings">Translation_DE_Manual_Buildings</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Translation_DE_Manual_Cheats">Translation_DE_Manual_Cheats</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Translation_DE_Manual_MainMenu">Translation_DE_Manual_MainMenu</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Translation_DE_Manual_OtherFeatures">Translation_DE_Manual_OtherFeatures</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Translation_DE_Manual_Quickstart_PlayedRTS">Translation_DE_Manual_Quickstart_PlayedRTS</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Translation_DE_Manual_SettingUpAGame">Translation_DE_Manual_SettingUpAGame</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Translation_DE_Manual_Settings">Translation_DE_Manual_Settings</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Translation_DE_Manual_SpecialBuildings">Translation_DE_Manual_SpecialBuildings</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Translation_DE_Manual_Terminology">Translation_DE_Manual_Terminology</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Translation_DE_Manual_Units">Translation_DE_Manual_Units</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Translation_DE_wiki">Translation_DE_wiki</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Translation_ES_WfgAcademiaInto">Translation_ES_WfgAcademiaInto</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Translation_IT_Strategy_Guide">Translation_IT_Strategy_Guide</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Translation_IT_wiki">Translation_IT_wiki</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Triggers">Triggers</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/TutorialScenarios">TutorialScenarios</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/UIConventions">UIConventions</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Unit_Summary_Table">Unit_Summary_Table</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Unit_Summary_Table_Generator">Unit_Summary_Table_Generator</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Useful_Links">Useful_Links</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/UserDataProtection">UserDataProtection</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/VFS_Binding">VFS_Binding</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/VerifyingYourDownloads">VerifyingYourDownloads</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Virtual_File_System">Virtual_File_System</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Vulkan">Vulkan</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/Walls">Walls</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/War_Story">War_Story</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/WfgAcademiaInto">WfgAcademiaInto</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/WritingTests">WritingTests</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/XML.Actor">XML.Actor</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/XML.Entity.Actions.Attack">XML.Entity.Actions.Attack</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/XML.Entity.Actions.Barter">XML.Entity.Actions.Barter</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/XML.Entity.Actions.Create">XML.Entity.Actions.Create</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/XML.Entity.Actions.Escort">XML.Entity.Actions.Escort</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/XML.Entity.Actions.Formation">XML.Entity.Actions.Formation</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/XML.Entity.Actions.Gather">XML.Entity.Actions.Gather</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/XML.Entity.Actions.Graze">XML.Entity.Actions.Graze</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/XML.Entity.Actions.Heal">XML.Entity.Actions.Heal</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/XML.Entity.Actions.Lock">XML.Entity.Actions.Lock</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/XML.Entity.Actions.Loot">XML.Entity.Actions.Loot</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/XML.Entity.Actions.Move">XML.Entity.Actions.Move</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/XML.Entity.Actions.Patrol">XML.Entity.Actions.Patrol</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/XML.Entity.Actions.Repair">XML.Entity.Actions.Repair</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/XML.Entity.Actions.Scout">XML.Entity.Actions.Scout</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/XML.Entity.Actions.Trade">XML.Entity.Actions.Trade</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/XML.Entity.Traits.AI">XML.Entity.Traits.AI</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/XML.Entity.Traits.Anchor">XML.Entity.Traits.Anchor</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/XML.Entity.Traits.Armour">XML.Entity.Traits.Armour</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/XML.Entity.Traits.Audio">XML.Entity.Traits.Audio</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/XML.Entity.Traits.Auras">XML.Entity.Traits.Auras</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/XML.Entity.Traits.Creation">XML.Entity.Traits.Creation</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/XML.Entity.Traits.Footprint">XML.Entity.Traits.Footprint</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/XML.Entity.Traits.Formation">XML.Entity.Traits.Formation</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/XML.Entity.Traits.Garrison">XML.Entity.Traits.Garrison</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/XML.Entity.Traits.Health">XML.Entity.Traits.Health</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/XML.Entity.Traits.ID">XML.Entity.Traits.ID</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/XML.Entity.Traits.Loot">XML.Entity.Traits.Loot</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/XML.Entity.Traits.MiniMap">XML.Entity.Traits.MiniMap</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/XML.Entity.Traits.Population">XML.Entity.Traits.Population</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/XML.Entity.Traits.Promotion">XML.Entity.Traits.Promotion</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/XML.Entity.Traits.Rank">XML.Entity.Traits.Rank</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/XML.Entity.Traits.Supply">XML.Entity.Traits.Supply</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/XML.Entity.Traits.Transform">XML.Entity.Traits.Transform</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/XML.Entity.Traits.UP">XML.Entity.Traits.UP</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/XML.Entity.Traits.Vision">XML.Entity.Traits.Vision</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/XML.Entity">XML.Entity</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/XML.Tech.Design">XML.Tech.Design</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/XML.Tech">XML.Tech</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/XML_Cliff">XML_Cliff</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/XML_Formation">XML_Formation</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/XML_Terrain">XML_Terrain</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/XML_Water">XML_Water</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/XeromycesExample">XeromycesExample</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/premake">premake</a>
+							
+								<a class="item " href="/0ad/0ad/wiki/qBot">qBot</a>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			<button class="ui compact primary button js-btn-clone-panel">
+	<svg viewBox="0 0 16 16" class="svg octicon-code" aria-hidden="true" width="16" height="16"><path d="m11.28 3.22 4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.749.749 0 0 1-1.275-.326.75.75 0 0 1 .215-.734L13.94 8l-3.72-3.72a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215m-6.56 0a.75.75 0 0 1 1.042.018.75.75 0 0 1 .018 1.042L2.06 8l3.72 3.72a.749.749 0 0 1-.326 1.275.75.75 0 0 1-.734-.215L.47 8.53a.75.75 0 0 1 0-1.06Z"/></svg>
+	<span>Code</span>
+	<svg viewBox="0 0 16 16" class="dropdown icon svg octicon-triangle-down" aria-hidden="true" width="14" height="14"><path d="m4.427 7.427 3.396 3.396a.25.25 0 0 0 .354 0l3.396-3.396A.25.25 0 0 0 11.396 7H4.604a.25.25 0 0 0-.177.427"/></svg>
+</button>
+<div class="clone-panel-popup tippy-target">
+	<div class="flex-text-block clone-panel-field"><svg viewBox="0 0 16 16" class="svg octicon-terminal" aria-hidden="true" width="16" height="16"><path d="M0 2.75C0 1.784.784 1 1.75 1h12.5c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0 1 14.25 15H1.75A1.75 1.75 0 0 1 0 13.25Zm1.75-.25a.25.25 0 0 0-.25.25v10.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25V2.75a.25.25 0 0 0-.25-.25ZM7.25 8a.75.75 0 0 1-.22.53l-2.25 2.25a.749.749 0 0 1-1.275-.326.75.75 0 0 1 .215-.734L5.44 8 3.72 6.28a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l2.25 2.25c.141.14.22.331.22.53m1.5 1.5h3a.75.75 0 0 1 0 1.5h-3a.75.75 0 0 1 0-1.5"/></svg> Clone</div>
+
+	<div class="clone-panel-tab">
+		
+		
+			<button class="item repo-clone-https" data-link="https://gitea.wildfiregames.com/0ad/0ad.wiki.git">HTTPS</button>
+		
+		
+		<button class="item repo-clone-tea" data-link="tea clone 0ad/0ad.wiki">Tea CLI</button>
+	</div>
+	<div class="divider"></div>
+
+	<div class="clone-panel-field">
+		<div class="ui input tiny action">
+			<input size="30" class="repo-clone-url js-clone-url" value="https://gitea.wildfiregames.com/0ad/0ad.wiki.git" readonly>
+			<div class="ui small compact icon button" data-clipboard-target=".js-clone-url" data-tooltip-content="Copy URL">
+				<svg viewBox="0 0 16 16" class="svg octicon-copy" aria-hidden="true" width="14" height="14"><path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"/><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"/></svg>
+			</div>
+		</div>
+	</div>
+
+	
+</div>
+
+		</div>
+		<div class="ui dividing header">
+			<div class="flex-text-block tw-flex-wrap tw-justify-end">
+				<div class="flex-text-block tw-flex-1 tw-min-w-[300px]">
+					<a class="ui basic button tw-px-3 tw-gap-3" title="Page Revision" href="/0ad/0ad/wiki/BuildInstructions?action=_revision" ><span>478</span> <svg viewBox="0 0 16 16" class="svg octicon-history" aria-hidden="true" width="16" height="16"><path d="m.427 1.927 1.215 1.215a8.002 8.002 0 1 1-1.6 5.685.75.75 0 1 1 1.493-.154 6.5 6.5 0 1 0 1.18-4.458l1.358 1.358A.25.25 0 0 1 3.896 6H.25A.25.25 0 0 1 0 5.75V2.104a.25.25 0 0 1 .427-.177M7.75 4a.75.75 0 0 1 .75.75v2.992l2.028.812a.75.75 0 0 1-.557 1.392l-2.5-1A.75.75 0 0 1 7 8.25v-3.5A.75.75 0 0 1 7.75 4"/></svg></a>
+					<div class="tw-flex-1 gt-ellipsis">
+						BuildInstructions
+						<div class="ui sub header gt-ellipsis">
+							
+							raffienficiaud edited this page <relative-time prefix="" tense="past" datetime="2026-08-09T14:26:54+02:00" data-tooltip-content data-tooltip-interactive="true">2026-08-09 14:26:54 +02:00</relative-time>
+						</div>
+					</div>
+				</div>
+				<div class="repo-button-row">
+					
+					
+				</div>
+			</div>
+		</div>
+		
+
+		<div class="wiki-content-parts">
+			
+			<div class="render-content markup wiki-content-sidebar wiki-content-toc">
+				<details open=""><summary>Table of Contents</summary>
+<ul>
+  <li><a href="#user-content-build-instructions">Build Instructions</a></li>
+  <ul>
+    <li><a href="#user-content-system-requirements">System requirements</a></li>
+    <li><a href="#user-content-introduction">Introduction</a></li>
+    <li><a href="#user-content-windows">Windows</a></li>
+    <ul>
+      <li><a href="#user-content-getting-the-code">Getting the code</a></li>
+      <li><a href="#user-content-getting-the-libraries">Getting the libraries</a></li>
+      <li><a href="#user-content-setting-up-the-build-environment">Setting up the build environment</a></li>
+      <li><a href="#user-content-build-configuration">Build configuration</a></li>
+      <li><a href="#user-content-building-atlas">Building Atlas</a></li>
+      <li><a href="#user-content-running">Running</a></li>
+      <li><a href="#user-content-keeping-up-to-date">Keeping up to date</a></li>
+    </ul>
+    <li><a href="#user-content-linux">Linux</a></li>
+    <ul>
+      <li><a href="#user-content-distributed-cc-compiling-distcc">Distributed C/C++ compiling (distcc)</a></li>
+      <li><a href="#user-content-dependencies">Dependencies</a></li>
+      <ul>
+        <li><a href="#user-content-archlinux-manjaro-parabola">ArchLinux, Manjaro, Parabola</a></li>
+        <ul>
+          <li><a href="#user-content-parabola-i686">Parabola i686</a></li>
+        </ul>
+        <li><a href="#user-content-debian-ubuntu">Debian, Ubuntu</a></li>
+        <li><a href="#user-content-fedora">Fedora</a></li>
+        <li><a href="#user-content-mageia-rosa-linux">Mageia, ROSA Linux</a></li>
+        <li><a href="#user-content-opensuse">openSUSE</a></li>
+        <li><a href="#user-content-solus">Solus</a></li>
+        <li><a href="#user-content-slackware">Slackware</a></li>
+        <ul>
+          <li><a href="#user-content-slackware-150">Slackware 15.0</a></li>
+          <li><a href="#user-content-slackware-current">Slackware-current</a></li>
+          <li><a href="#user-content-slackware-currentno-rootdevalternative">Slackware-Current(no-root,dev,alternative)</a></li>
+        </ul>
+        <li><a href="#user-content-centos">CentOS</a></li>
+        <li><a href="#user-content-voidlinux">VoidLinux</a></li>
+      </ul>
+      <li><a href="#user-content-getting-the-code">Getting the code</a></li>
+      <li><a href="#user-content-getting-the-libraries">Getting the libraries</a></li>
+      <li><a href="#user-content-building">Building</a></li>
+      <li><a href="#user-content-testing">Testing</a></li>
+      <li><a href="#user-content-running">Running</a></li>
+      <li><a href="#user-content-keeping-up-to-date">Keeping up to date</a></li>
+    </ul>
+    <li><a href="#user-content-creating-linux-packages">Creating Linux packages</a></li>
+    <li><a href="#user-content-macos">macOS</a></li>
+    <ul>
+      <li><a href="#user-content-dependencies">Dependencies</a></li>
+      <li><a href="#user-content-getting-the-code">Getting the code</a></li>
+      <li><a href="#user-content-build-the-game">Build the game</a></li>
+    </ul>
+    <li><a href="#user-content-bsd">BSD</a></li>
+    <ul>
+      <li><a href="#user-content-freebsd">FreeBSD</a></li>
+      <li><a href="#user-content-openbsd">OpenBSD</a></li>
+    </ul>
+    <li><a href="#user-content-known-problems-and-solutions">Known problems and solutions</a></li>
+  </ul>
+</ul>
+</details>
+
+			</div>
+			
+
+			<div class="render-content markup wiki-content-main with-sidebar">
+				
+	
+
+
+				<h1 id="user-content-build-instructions">Build Instructions</h1>
+<p dir="auto">This page describes how to generate the latest development version of the code. This may be <strong>unstable</strong> and is intended for those that want to actively follow or contribute to the software development. <strong>To install the latest release,  <a href="https://play0ad.com/download" rel="nofollow">download it from play0ad.com</a> instead.</strong></p>
+<p dir="auto">You may also be interested in the <a href="/0ad/0ad/wiki/NightlyBuild" rel="nofollow">nightly build</a> of the game. This version, updated daily, allows you to play and test the development version without having to build the game yourself on Windows. However, it is not suited for contributing.</p>
+<p dir="auto">The development version of the game is aimed at software developers (not regular players). As such, these instructions assume a higher level of technical proficiency. If you encounter difficulties, please consult the <a href="https://www.wildfiregames.com/forum/index.php?showforum=312" rel="nofollow">forum</a>.</p>
+<h2 id="user-content-system-requirements">System requirements</h2>
+<p dir="auto">You&#39;ll need:</p>
+<ul dir="auto">
+<li>An adequately high-spec computer:
+<ul>
+<li>At least 30 GB of free disk space</li>
+<li>At least 1 GB of RAM for compiling, more if compiling multiple jobs in parallel (using -j)</li>
+<li>32 or 64-bit x86-compatible CPU, or an ARMv5+ processor</li>
+<li>Modern graphics hardware is also recommended, though the game can run (slowly) on fairly old devices (GeForce 4, Intel 945GM, etc)</li>
+</ul>
+</li>
+<li>One of the following operating systems:
+<ul>
+<li><a href="#user-content-windows" rel="nofollow">Windows</a> (10 or 11)</li>
+<li><a href="#user-content-linux" rel="nofollow">Linux</a></li>
+<li><a href="#user-content-macos" rel="nofollow">macOS</a> (13.3/Ventura or newer)</li>
+<li><a href="#user-content-bsd" rel="nofollow">FreeBSD/OpenBSD</a> (OpenBSD is only experimentally supported at this time)</li>
+</ul>
+</li>
+<li>Up-to-date system software (Windows service packs, graphics driver updates, etc)</li>
+<li>Some technical proficiency. We try to make the build process as smooth and painless as possible, but it&#39;s designed to be followed by programmers - if you just want to play the game, wait for a pre-packaged installer instead.</li>
+</ul>
+<h2 id="user-content-introduction">Introduction</h2>
+<p dir="auto">The development environment for 0 A.D. is comprised of three layers. Each goes on top of the previous:</p>
+<ol dir="auto">
+<li>Source code.</li>
+<li>Libraries.</li>
+<li>Build workspaces.</li>
+</ol>
+<p dir="auto">Libraries are external dependencies (such as <a href="/0ad/0ad/wiki/SpiderMonkey" rel="nofollow">SpiderMonkey</a>). Linux users will install most of them through their package manager. Then, in order to download and build the other libraries, scripts located under <code>libraries</code> should be used. For Windows, <code>get-windows-libs.sh</code> downloads all prebuilt libraries. On Linux, <code>build-source-libs.sh</code> should be run to build bundled versions of some specific libraries.  For macOS, the <code>build-macos-libs.sh</code> downloads and builds all necessary libraries.</p>
+<p dir="auto">Workspaces contain the integrations for code editors (such as Visual Studio, Xcode, etc.) as well as the Makefile for the main source code. The workspaces are auto-generated by the <code>update-workspaces</code> script from the <code>build/workspaces/</code> directory.  Once ready, the integrations are ready for use, such as <code>build/workspaces/gcc/Makefile</code> (for Linux and macOS) and <code>build\workspaces\vs2022</code> (for Windows).</p>
+<p dir="auto">After that, you can build the source code inside the workspace.</p>
+<h2 id="user-content-windows">Windows</h2>
+<p dir="auto">The main supported versions are:</p>
+<ul dir="auto">
+<li>Windows 11</li>
+<li>Windows 10</li>
+</ul>
+<p dir="auto">If you want to develop, the only supported IDE is:</p>
+<ul dir="auto">
+<li>Visual Studio 2022</li>
+</ul>
+<p dir="auto"><strong>Important notes:</strong></p>
+<ul dir="auto">
+<li>We have dropped support for older versions of Visual Studio between <a href="/0ad/0ad/wiki/Alpha27" rel="nofollow">Alpha 27</a> and <a href="/0ad/0ad/wiki/Release28" rel="nofollow">Release 28</a>, see <a href="/0ad/0ad/issues/8176" data-markdown-generated-content="" class="ref-issue" rel="nofollow">#8176</a>.</li>
+<li>Windows 7 and 8 are no longer supported - <a href="/0ad/0ad/wiki/SpiderMonkey" rel="nofollow">SpiderMonkey</a> 128 has dropped support for both.</li>
+</ul>
+<h3 id="user-content-getting-the-code">Getting the code</h3>
+<p dir="auto">See <a href="/0ad/0ad/wiki/BuildInstructionsGettingTheCode" rel="nofollow">Getting the Code</a>.</p>
+<h3 id="user-content-getting-the-libraries">Getting the libraries</h3>
+<p dir="auto">Download all the pre-built libraries by running the script <code>libraries\get-windows-libs.bat</code>.</p>
+<p dir="auto">If you ever need to rebuild libraries yourself, please see <a href="/0ad/0ad/wiki/BuildingWindowsDependencies" rel="nofollow">BuildingWindowsDependencies</a>.</p>
+<h3 id="user-content-setting-up-the-build-environment">Setting up the build environment</h3>
+<p dir="auto">The game must be compiled with Microsoft Visual C++. You can get the free Community edition here: <a href="https://visualstudio.microsoft.com/" rel="nofollow">Visual Studio</a>.</p>
+<p dir="auto">The Visual Studio project/solution files are automatically generated from the source files:</p>
+<ul dir="auto">
+<li>Run <code>build\workspaces\update-workspaces.bat</code>.</li>
+<li>Open <code>build\workspaces\vs2022\pyrogenesis.sln</code>.</li>
+</ul>
+<h3 id="user-content-build-configuration">Build configuration</h3>
+<p dir="auto">Make sure to select the &#34;Release&#34; configuration to build an optimized, more playable version of the game (the target will be <code>pyrogenesis.exe</code>). The &#34;Debug&#34; configuration can be more useful for debugging but has significantly reduced performance (the target will be <code>pyrogenesis_dbg.exe</code>). Both &#34;Release&#34; and &#34;Debug&#34; builds include debug symbols, see <a href="/0ad/0ad/wiki/Debugging" rel="nofollow">Debugging</a> and <a href="/0ad/0ad/wiki/DebuggingOnWindows" rel="nofollow">Debugging on Windows</a> for more details on debugging.</p>
+<p dir="auto">Now you should be able to build the code from within Visual Studio, using &#34;Build Solution&#34; (F7). </p>
+<h3 id="user-content-building-atlas">Building Atlas</h3>
+<p dir="auto">If you also wish to test the <a href="/0ad/0ad/wiki/Atlas_Manual" rel="nofollow">Atlas Scenario Editor</a> or <a href="/0ad/0ad/wiki/Actor_Editor" rel="nofollow">Actor Editor</a> tools, you will need to download and build the <a href="http://www.wxwidgets.org/" rel="nofollow">wxWidgets</a> library separately (version 3.0 and above; see <code>libraries\win32\wxwidgets\README.txt</code> for details), then run <code>update-workspaces.bat</code>. Atlas projects will now be included when you open <code>pyrogenesis.sln</code> in Visual C++.</p>
+<h3 id="user-content-running">Running</h3>
+<p dir="auto">Rightclick on &#34;pyrogenesis&#34; in the solution explorer panel on the right hand side and select &#34;Set as StartUp Project&#34;. Run the game with F5 inside Visual Studio. You can close the game with SHIFT + F5 from inside vs studio if it becomes unresponsive. If you want to run it outside the debugger, run <code>binaries\system\pyrogenesis.exe</code>.</p>
+<p dir="auto">To run the automated tests, run the &#34;test&#34; project. (Right click on &#34;test&#34; and &#34;set as StartUp Project&#34; and F5; or right click, &#34;Debug&#34;, &#34;Start new instance&#34;). In VS&#39;s debug output window, ignore any &#34;first-chance exception&#34; messages; it should say &#34;.......OK!&#34; if it succeeded.</p>
+<h3 id="user-content-keeping-up-to-date">Keeping up to date</h3>
+<p dir="auto">Whenever you pull an update from a remote git repository, take a glance at the files that were modified:</p>
+<ul dir="auto">
+<li>If <code>libraries\get-windows-libs.bat</code> was touched, run it again in order to pull updates to libraries.</li>
+<li>If source files were added or removed, run <code>update-workspaces.bat</code> again.</li>
+<li>In both cases and whenever source files are touched, build the game again.</li>
+</ul>
+<p dir="auto">Updates in which only binaries are touched do not warrant a rebuild of the game.</p>
+<h2 id="user-content-linux">Linux</h2>
+<p dir="auto">0 A.D. should work on any reasonably modern Linux distro, on x86 and x86_64 (amd64). The details depend on exactly which distro you use.</p>
+<h3 id="user-content-distributed-cc-compiling-distcc">Distributed C/C++ compiling (distcc)</h3>
+<p dir="auto">If you have access to more than 1 computer on a LAN, you may want to consider using <a href="https://www.distcc.org/" rel="nofollow">distcc</a> to reduce the build time. If you use distcc, you <strong>must</strong> provide the <code>--without-pch</code> argument when running <code>update-workspaces.sh</code>. To get the maximum benefit, remember to increase the value of the number following the <code>-j</code> argument. For example, if distributing the build to 3 computers where each has 4 cores, try <code>-j12</code> or <code>-j15</code>.</p>
+<h3 id="user-content-dependencies">Dependencies</h3>
+<p dir="auto">First you need to install various standard tools and development libraries, listed here. <strong>Please note that after installing those, you still need to run the <code>build-source-libs.sh</code> script as instructed in the next section.</strong></p>
+<ul dir="auto">
+<li>a C++20 conforming compiler</li>
+<li>LLVM-objdump, which is part of the LLVM binaries. You don&#39;t need clang itself.</li>
+<li>Rust (rustc and cargo) version 1.76 or above</li>
+<li>rust cbindgen (it is recommended to install it from cargo instead of the package manager -- version 0.29.0 is known to work)</li>
+<li>Boost (at least 1.57)</li>
+<li>CMake (only needed if you use bundled NVTT)</li>
+<li>Python 3 (required for cxxtest and non-system <a href="/0ad/0ad/wiki/SpiderMonkey" rel="nofollow">SpiderMonkey</a>)</li>
+<li>libcurl (at least 7.32)</li>
+<li>libenet (1.3, the older 1.2 is not compatible)</li>
+<li>libfmt (at least 4.0)</li>
+<li>libgloox (needed for the lobby; at least 1.0.10, previous versions are know to have connection problems; pass <code>--without-lobby</code> to <code>update-workspaces.sh</code> to exclude the lobby)</li>
+<li>libicu</li>
+<li>libogg</li>
+<li>libpng</li>
+<li>libsodium (&gt;= 1.0.14, follow the instructions at <a href="https://doc.libsodium.org/installation/" rel="nofollow">https://doc.libsodium.org/installation/</a> if your distro is behind)</li>
+<li>libvorbis</li>
+<li>libxml2</li>
+<li>miniupnpc (at least 1.6)</li>
+<li>OpenAL</li>
+<li>OpenGL</li>
+<li>SDL2 (at least 2.0.2)</li>
+<li>Subversion (in order to download the bundled copies of some libraries)</li>
+<li>zlib</li>
+</ul>
+<p dir="auto">To compile editing tools (enabled by default; pass the flag <code>--disable-atlas</code> to <code>update-workspaces.sh</code> to disable):</p>
+<ul dir="auto">
+<li>wxWidgets (at least 3.0; packages are probably called wxgtk)</li>
+</ul>
+<p dir="auto">To use shared system libraries instead of bundled copies (default) of libraries (pass the flag <code>--with-system-$COMPONENT</code> to <code>update-workspaces.sh</code> to use the non-bundled copy):</p>
+<ul dir="auto">
+<li><a href="/0ad/0ad/wiki/SpiderMonkey" rel="nofollow">SpiderMonkey</a> 128 (<code>--with-system-mozjs</code>)</li>
+<li><a href="https://github.com/castano/nvidia-texture-tools" rel="nofollow">NVTT</a> (<code>--with-system-nvtt</code>) (at least 2.1.0).</li>
+</ul>
+<p dir="auto">For a list of all options to <code>update-workspaces.sh</code> see <a href="/0ad/0ad/wiki/premake" rel="nofollow">premake</a>.</p>
+<h4 id="user-content-archlinux-manjaro-parabola">ArchLinux, Manjaro, Parabola</h4>
+<p dir="auto">Install the dependencies with:</p>
+<div class="code-block-container code-overflow-scroll"><pre class="code-block"><code class="chroma language-sh display">sudo pacman -S --needed awk openal m4 boost cmake curl enet fmt gcc gloox grep icu libgl libogg <span class="se">\
+</span>    libpng libsodium libvorbis libxml2 llvm make miniupnpc patch pkg-config python <span class="se">\
+</span>    rust sdl2 subversion wxwidgets-gtk3 zip zlib
+cargo install --locked cbindgen@0.29.0
+</code></pre></div><h5 id="user-content-parabola-i686">Parabola i686</h5>
+<p dir="auto">If building [Atlas]Atlas_Manual (happens by default), you will need to:</p>
+<ul dir="auto">
+<li>Change <code>wxwidgets-gtk3</code> to <code>wxgtk3</code> in the list above;</li>
+<li>Set the <code>WX_CONFIG</code> variable, else the build process might fail outright or attempt to use the <code>gtk2</code> frontend instead. For example, run this command before running <code>update-workspaces.sh</code>:</li>
+</ul>
+<div class="code-block-container code-overflow-scroll"><pre class="code-block"><code class="chroma language-sh display"><span class="nb">export</span> <span class="nv">WX_CONFIG</span><span class="o">=</span>wx-config-gtk3
+</code></pre></div><p dir="auto">If not correct, you will get errors about missing &#34;wx/*.h&#34; includes.
+You can skip building Atlas altogether (and negate the wxWidgets dependency) by passing the <code>--disable-atlas</code> option to <code>update-workspaces.sh</code>.</p>
+<h4 id="user-content-debian-ubuntu">Debian, Ubuntu</h4>
+<ul dir="auto">
+<li>On <strong>Debian 12 (bookworm) or Ubuntu 23.04 (lunar) or later</strong> install the required dependencies with:
+<div class="code-block-container code-overflow-scroll"><pre class="code-block"><code class="chroma language-sh display">sudo apt install build-essential cargo cmake curl libboost-dev libboost-system-dev   <span class="se">\
+</span>  libboost-filesystem-dev libcurl4-gnutls-dev libenet-dev libfmt-dev   <span class="se">\
+</span>  libfreetype-dev m4 libgloox-dev libicu-dev libminiupnpc-dev libnvtt-dev   <span class="se">\
+</span>  libogg-dev libopenal-dev libpng-dev libsdl2-dev libsodium-dev libvorbis-dev   <span class="se">\
+</span>  libwxgtk3.2-dev libxml2-dev llvm python3 rustc subversion zlib1g-dev
+cargo install --locked cbindgen@0.29.0
+</code></pre></div></li>
+<li>If you want to use a packaged <strong>SpiderMonkey</strong>, you should add <code>libmozjs-128-dev</code> and run <code>update-workspace.sh</code> with <code>--with-system-mozjs</code>.</li>
+<li>When not using system nvidia-texture-tools, <code>libnvtt-dev</code> can be omitted, but <code>cmake</code> is needed to build the bundled NVTT.</li>
+<li>You can also use <code>libcurl4-openssl-dev</code> instead of <code>libcurl4-gnutls-dev</code> (it&#39;s not possible to install both at once). Note that versions of openssl prior to 3.0.0 are not GPL compatible and those resulting binaries could not be redistributed.</li>
+<li>On older Debian / Ubuntu versions you may have to replace <code>libwxgtk3.2-dev</code> with <code>libwxgtk3.0-gtk3-dev</code>.</li>
+</ul>
+<h4 id="user-content-fedora">Fedora</h4>
+<p dir="auto">Install the dependencies with:</p>
+<div class="code-block-container code-overflow-scroll"><pre class="code-block"><code class="chroma language-sh display">sudo dnf install cargo cmake boost-devel enet-devel fmt-devel gcc-c++ <span class="se">\
+</span>    gloox-devel libcurl-devel libicu-devel libpng-devel libsodium-devel <span class="se">\
+</span>    libvorbis-devel libxml2-devel miniupnpc-devel mozjs115-devel openal-soft-devel <span class="se">\
+</span>    patch pkgconfig python SDL2-devel subversion wxGTK-devel zip <span class="se">\
+</span>    libuuid-devel premake nvidia-texture-tools-devel
+cargo install --locked cbindgen@0.29.0
+</code></pre></div><h4 id="user-content-mageia-rosa-linux">Mageia, ROSA Linux</h4>
+<p dir="auto"><strong>TODO: outdated, please update</strong></p>
+<p dir="auto">Install the dependencies with:</p>
+<div class="code-block-container code-overflow-scroll"><pre class="code-block"><code class="chroma language-sh display">urpmi gcc-c++ python subversion zip cmake boost-devel libcurl-devel         <span class="se">\
+</span>    libenet-devel libgloox-devel libpng-devel libsodium-devel libvorbis-devel <span class="se">\
+</span>    libxml2-devel libwxgtku2.8-devel openal-soft-devel libicu-devel
+</code></pre></div><h4 id="user-content-opensuse">openSUSE</h4>
+<p dir="auto">Install the dependencies with:</p>
+<div class="code-block-container code-overflow-scroll"><pre class="code-block"><code class="chroma language-sh display">sudo zypper install gcc-c++ python subversion zip cmake boost-devel         <span class="se">\
+</span>    libcurl-devel enet-devel libpng-devel libsodium-devel libvorbis-devel  <span class="se">\
+</span>    libxml2-devel openal-soft-devel pkg-config wxWidgets-devel libSDL2-devel     <span class="se">\
+</span>    gloox-devel libicu-devel libminiupnpc-devel fmt-devel
+cargo install --locked cbindgen@0.29.0
+</code></pre></div><h4 id="user-content-solus">Solus</h4>
+<div class="code-block-container code-overflow-scroll"><pre class="code-block"><code class="chroma language-sh display">sudo eopkg install libboost-devel curl-devel enet-devel gloox-devel libicu-devel libogg-devel libpng-devel libsodium-devel libvorbis-devel libxml2-devel miniupnpc-devel openal-soft-devel mesalib-devel sdl2-devel zlib-devel wxwidgets-devel libgnutls-devel fmt-devel
+</code></pre></div><h4 id="user-content-slackware">Slackware</h4>
+<blockquote class="attention-header attention-note"><p dir="auto"><svg viewbox="0 0 16 16" class="attention-icon attention-note svg octicon-info" aria-hidden="true" width="16" height="16"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13M6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75M8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2"></path></svg><strong class="attention-note">Note</strong></p>
+<p dir="auto">These instructions have been tested on the <strong>64-bit</strong> version of Slackware.</p>
+</blockquote>
+<h5 id="user-content-slackware-150">Slackware 15.0</h5>
+<p dir="auto">If you&#39;ve done the full install of Slackware, most of the [#Dependencies dependencies] are already installed. The other required dependencies you can build and install from the <a href="https://slackbuilds.org/" rel="nofollow">Slackbuilds repo</a> using <a href="https://sbopkg.org/" rel="nofollow">sbopkg</a>:
+the first level dependencies are</p>
+<ul dir="auto">
+<li>enet</li>
+<li>fmt</li>
+<li>gloox</li>
+<li>miniupnpc</li>
+<li>rust-opt</li>
+<li>wxGTK3 (with optional dependency webkit2gtk or webkit2gtk4.1 )</li>
+<li>0ad-data</li>
+</ul>
+<p dir="auto">if you don&#39;t have sbopkg installed, download it, install it and sync the repo first.</p>
+<div class="code-block-container code-overflow-scroll"><pre class="code-block"><code class="chroma language-sh display">wget https://github.com/sbopkg/sbopkg/releases/download/0.38.3/sbopkg-0.38.3-noarch-1_wsr.tgz
+installpkg sbopkg-0.38.3-noarch-1_wsr.tgz
+sbopkg -r
+</code></pre></div><p dir="auto">To install all dependencies and 0ad</p>
+<p dir="auto">for webkit2gtk use</p>
+<div class="code-block-container code-overflow-scroll"><pre class="code-block"><code class="chroma language-sh display">sqg -p <span class="s2">&#34;webkit2gtk 0ad&#34;</span> -o 0adq
+sbopkg -i 0adq
+</code></pre></div><p dir="auto">or for webkit2gtk4.1 use</p>
+<div class="code-block-container code-overflow-scroll"><pre class="code-block"><code class="chroma language-sh display">sqg -p <span class="s2">&#34;webkit2gtk4.1 0ad&#34;</span> -o 0adq
+sbopkg -i 0adq
+</code></pre></div><p dir="auto">(You should excusively use either webkit2gtk or webkit2gtk4.1 in your system)</p>
+<p dir="auto">Note you&#39;ll need lots of free disk space to build everything. (9.5G in /tmp and at least 1.5G for the source tar.xz in /var/cache/sbopkg/
+The 0ad and 0ad-data packages are approximately 22MB and 1.7GB respectively. 4.5G</p>
+<h5 id="user-content-slackware-current">Slackware-current</h5>
+<p dir="auto">Get the updated build scripts from: <a href="http://ponce.cc/slackware/testing/0ad/" rel="nofollow">http://ponce.cc/slackware/testing/0ad/</a> <a href="http://ponce.cc/slackware/testing/0ad-data/" rel="nofollow">http://ponce.cc/slackware/testing/0ad-data/</a></p>
+<p dir="auto">Make the following modifications to both 0ad.SlackBuild and 0ad-data.SlackBuild build scripts:</p>
+<p dir="auto">Modify 0ad.SlackBuild to skip the build-tests: Old: build/workspaces/update-workspaces.sh \</p>
+<p dir="auto">--without-pch \ --bindir=/usr/games \ --datadir=/usr/share/games/0ad \ --libdir=/usr/lib${LIBDIRSUFFIX}/0ad \ --${ATLAS:-disable}-atlas</p>
+<p dir="auto">New: build/workspaces/update-workspaces.sh \</p>
+<p dir="auto">--without-pch \ --bindir=/usr/games \ --datadir=/usr/share/games/0ad \ --libdir=/usr/lib${LIBDIRSUFFIX}/0ad \ --without-tests \ --${ATLAS:-disable}-atlas</p>
+<h5 id="user-content-slackware-currentno-rootdevalternative">Slackware-Current(no-root,dev,alternative)</h5>
+<p dir="auto">Optional way is without using <a href="/0ad/0ad/wiki/SlaCkBuilds" rel="nofollow">SlaCkBuilds</a>, not making a package. For keeping a local, constantly modified, rebuilt and custom patched version under /home/$(whoami) <a href="https://bitbucket.org/subslackstock/scripts/src/master/bash/LatestBuild.sh" rel="nofollow">https://bitbucket.org/subslackstock/scripts/src/master/bash/LatestBuild.sh</a></p>
+<h4 id="user-content-centos">CentOS</h4>
+<p dir="auto">Discussion of installing on <em>CentOS 7</em> can be found on the forums <a href="https://wildfiregames.com/forum/index.php?/topic/24985-installation-on-centos-7" rel="nofollow">here</a>.</p>
+<p dir="auto"><strong>Note:</strong> The advice below is derived from installing in a Virtual Machine with <em>CentOS 7</em> 64-bit minimally installed. If you have <em>CentOS 6</em> (or earlier), the following steps may not be possible. Installation on a physical machine, a machine with more stuff already installed upon it, or a machine that is 32-bit, may differ slightly.</p>
+<ol dir="auto">
+<li>
+<p dir="auto">Firstly, you will need to enable the &#34;Extra Packages for Enterprise Linux&#34; (or &#34;EPEL&#34;) repository (if you haven&#39;t already). You can do this by running (as root/via sudo) <code>#!sh yum install epel-release</code></p>
+</li>
+<li>
+<p dir="auto">Install some auxiliary packages. These are not dependencies of 0 A.D. itself, but are necessary to run update_workspaces.sh successfully. They might already be installed on your system: <code>#!sh yum install bzip2 patch</code></p>
+</li>
+<li>
+<p dir="auto">Install the 0 A.D. dependencies that are available directly from repos: <code>#!sh yum install cmake gcc-c++ enet-devel libglvnd-devel gloox-devel libicu-devel \ libogg-devel libpng-devel libsodium-devel libvorbis-devel libxml2-devel \ miniupnpc-devel openal-soft-devel subversion wxGTK3-devel zlib-devel SDL2-devel</code></p>
+</li>
+<li>
+<p dir="auto">Acquire a sufficiently recent version of <em>libcurl</em>:</p>
+</li>
+</ol>
+<ul dir="auto">
+<li>From this site: <a href="https://mirror.city-fan.org/ftp/contrib/libraries/" rel="nofollow">https://mirror.city-fan.org/ftp/contrib/libraries/</a>, download the two files that satisfy one of the following patterns:
+<ul>
+<li><code>libssh2-{version}.cf.rhel7.{arch}.rpm</code></li>
+<li><code>libssh2-devel-{version}.cf.rhel7.{arch}.rpm</code></li>
+</ul>
+</li>
+<li>From this site: <a href="https://mirror.city-fan.org/ftp/contrib/sysutils/Mirroring/" rel="nofollow">https://mirror.city-fan.org/ftp/contrib/sysutils/Mirroring/</a>, download the three files that satisfy one of the following patterns:
+<ul>
+<li><code>curl-{version}.cf.rhel7.{arch}.rpm</code></li>
+<li><code>libcurl-{version}.cf.rhel7.{arch}.rpm</code></li>
+<li><code>libcurl-devel-{version}.cf.rhel7.{arch}.rpm</code></li>
+</ul>
+</li>
+<li>Install some dependencies from repos: <code>#!sh yum install nss-devel libnghttp2 libpsl libmetalink</code></li>
+<li>Install dependencies from downloaded packages. <br/><br/> <strong>Note:</strong> This will replace the version of <em>libssh2</em> that is provided by the <em>CentOS</em> official repos. This is necessary as the version of <em>libcurl</em> we&#39;re installing needs a more up-to-date version than what the official repos can provide. As the packages we&#39;ve acquired are compiled as to be interoperable with <em>CentOS</em> systems, this shouldn&#39;t cause any problems with other programs installed on your system. <br/><br/> Install the <code>libssh2-*</code> and <code>libssh2-devel-*</code> packages using <code>rpm -Uvh</code>. For example: <code>#!sh rpm -Uvh libssh2-1.8.0-8.0.cf.rhel7.x86_64.rpm libssh2-devel-1.8.0-8.0.cf.rhel7.x86_64.rpm</code></li>
+<li>Install the updated <em>curl</em> packages (<code>curl-*</code>, <code>libcurl-*</code> and <code>libcurl-devel-*</code>) using <code>rpm -Uvh</code>. For example: <code>#!sh rpm -Uvh curl-7.61.1-3.0.cf.rhel7.x86_64.rpm libcurl-7.61.1-3.0.cf.rhel7.x86_64.rpm libcurl-devel-7.61.1-3.0.cf.rhel7.x86_64.rpm</code></li>
+</ul>
+<ol start="5" dir="auto">
+<li>Acquire a sufficiently recent version of <em>boost</em>:</li>
+</ol>
+<ul dir="auto">
+<li>From <a href="https://www.boost.org/users/history/version_1_70_0.html" rel="nofollow">https://www.boost.org/users/history/version_1_70_0.html</a>, download <code>boost_1_70_0.tar.gz</code>.</li>
+<li>Uncompress archive:
+<ul>
+<li>$ <code>tar -xf boost_1_70_0.tar.gz</code></li>
+</ul>
+</li>
+<li>Enter folder:
+<ul>
+<li>$ <code>cd ./boost_1_70_0</code></li>
+</ul>
+</li>
+<li>Compile the parts that are needed to be compiled, and install the libraries:
+<ul>
+<li>$ <code>./bootstrap.sh --with-libraries=filesystem,system</code></li>
+<li>$ <code>./b2 install</code></li>
+<li>(Compiled files end up in <code>/usr/local/lib/</code>, header files in <code>/usr/local/include/boost/</code>)</li>
+</ul>
+</li>
+<li>Make sure the runtime linker can find the updated <em>boost</em> libraries:
+<ul>
+<li>Navigate to <code>/etc/ld.so.conf.d</code> and create a blank file called <code>pyro.conf</code>.</li>
+<li>Within this file, enter the text <code>/usr/local/lib</code> and save.</li>
+</ul>
+</li>
+</ul>
+<ol start="6" dir="auto">
+<li>Acquire a sufficiently recent version of <em>fmt</em>:</li>
+</ol>
+<ul dir="auto">
+<li>From <a href="https://github.com/fmtlib/fmt/releases" rel="nofollow">https://github.com/fmtlib/fmt/releases</a>, download the latest release.</li>
+<li>Follow the instructions to build and install.</li>
+</ul>
+<ol start="7" dir="auto">
+<li>Continue by getting the code, as described below. When you get to libraries building and workspace generation, when you run <code>build-source-libs.sh</code> and <code>update-workspaces.sh</code>, you <strong>must</strong> use the arguments <code>--with-system-mozjs</code> and <code>--with-system-nvtt</code>.</li>
+</ol>
+<h4 id="user-content-voidlinux">VoidLinux</h4>
+<div class="code-block-container code-overflow-scroll"><pre class="code-block"><code class="chroma language-sh display">sudo xbps-install -Syv base-devel boost-devel cmake curl fmt-devel gcc icu-devel libcurl-devel libenet-devel libogg-devel libopenal-devel libpng-devel libsodium-devel libvorbis-devel libxml2 MesaLib-devel miniupnpc-devel patch pkg-config SDL2-devel wxWidgets-devel zip zlib gloox-devel subversion
+</code></pre></div><p dir="auto">The package <code>subversion</code> is required to run the script <code>libraries/build-source-libs.sh</code>.</p>
+<p dir="auto">On Void Linux, <code>wx-config</code> is <code>wx-config-gtk3</code>; therefore, set the environment variable <code>WX_CONFIG=wx-config-gtk3</code> before running <code>update-workspaces.sh</code> (See <a href="#user-content-building" rel="nofollow">Building</a>).</p>
+<ul dir="auto">
+<li>should be equivalent to <code>WX_CONFIG=wx-config-gtk3 sh update-workspaces.sh</code></li>
+</ul>
+<p dir="auto">Optional dependencies <code>mozjs115-devel</code> and <code>premake5</code> allow running the script <code>update-workspaces.sh</code> with the arguments <code>--with-system-mozjs</code> and <code>--with-system-premake5</code> respectively.</p>
+<p dir="auto">If there are issues, install more header files depending on the compiler&#39;s error message. pyrogenesis requires <code>MesaLib-devel</code> to provide header files for libGL.  If there are unresolved shlibs or an update breaks a package, then e.g.</p>
+<div class="code-block-container code-overflow-scroll"><pre class="code-block"><code class="chroma language-sh display">sudo xbps-install -Syv SDL2-devel dbus dbus-x11  <span class="c1"># credit Vaelatern</span>
+sudo xpbs-install -Su  <span class="c1"># update, add -d for debugging, credit duncaen</span>
+</code></pre></div><h3 id="user-content-getting-the-code">Getting the code</h3>
+<p dir="auto">See <a href="/0ad/0ad/wiki/BuildInstructionsGettingTheCode" rel="nofollow">Getting the Code</a>.</p>
+<h3 id="user-content-getting-the-libraries">Getting the libraries</h3>
+<p dir="auto">Download and build the bundled dependencies by running the script <code>libraries/build-source-libs.sh</code>. If you prefer using system-installed versions of the libs, you may pass <code>--with-system-mozjs</code> and/or <code>--with-system-nvtt</code> to avoid spending time on this step.</p>
+<h3 id="user-content-building">Building</h3>
+<p dir="auto">Prepare the build workspace and compile the code with:</p>
+<div class="code-block-container code-overflow-scroll"><pre class="code-block"><code class="chroma language-sh display"><span class="nb">cd</span> 0ad/build/workspaces
+./update-workspaces.sh -j3 <span class="c1"># if using system-installed versions of the libs, pass --with-system-mozjs and/or --with-system-nvtt</span>
+<span class="nb">cd</span> gcc
+make -j3
+</code></pre></div><ul dir="auto">
+<li><strong>-j3</strong> gives the number of parallel builds to run, and should typically be one plus the number of CPU cores available.</li>
+<li>The <strong>Release</strong> mode builds (which are the default) are more optimised, but are harder to debug. Use <code>make config=debug</code> (and run <code>pyrogenesis_dbg</code>) if you need better debugging support. See <a href="/0ad/0ad/wiki/Debugging" rel="nofollow">Debugging</a> for more details.</li>
+</ul>
+<p dir="auto">If you encounter any build errors, review the <a href="https://gitea.wildfiregames.com/0ad/0ad/issues" rel="nofollow">existing bug reports</a>, check the [#Knownproblemsandsolutions known problems section] or please file a <a href="https://gitea.wildfiregames.com/0ad/0ad/issue/new" rel="nofollow">new bug in the tracker</a>.</p>
+<h3 id="user-content-testing">Testing</h3>
+<p dir="auto">Run the automated tests to verify that everything works as expected like this:</p>
+<div class="code-block-container code-overflow-scroll"><pre class="code-block"><code class="chroma language-sh display"><span class="nb">cd</span> ../../../
+binaries/system/test
+</code></pre></div><h3 id="user-content-running">Running</h3>
+<p dir="auto">If everything went well, compiling the code worked and all tests passed, it&#39;s finally time to run the game:</p>
+<div class="code-block-container code-overflow-scroll"><pre class="code-block"><code class="chroma language-sh display">binaries/system/pyrogenesis
+</code></pre></div><h3 id="user-content-keeping-up-to-date">Keeping up to date</h3>
+<p dir="auto">If you want to rebuild quickly after pulling from a git remote, you can usually get away with:</p>
+<div class="code-block-container code-overflow-scroll"><pre class="code-block"><code class="chroma language-sh display"><span class="nb">cd</span> build/workspaces
+./update-workspaces.sh -j3
+<span class="nb">cd</span> gcc
+make -j3
+</code></pre></div><p dir="auto">If the <code>make</code> line gives errors, you may need to run <code>make clean</code> before it. If the <code>update-workspaces.sh</code> gives errors, you may need to run <code>clean-workspaces.sh</code> before it.</p>
+<h2 id="user-content-creating-linux-packages">Creating Linux packages</h2>
+<p dir="auto">If you want to create packages for a Linux distribution see the current <a href="https://salsa.debian.org/games-team/0ad/tree/master/debian" rel="nofollow">0ad</a> and <a href="https://salsa.debian.org/games-team/0ad-data/tree/master/debian" rel="nofollow">0ad-data</a> packages on <a href="https://salsa.debian.org/public" rel="nofollow">Salsa</a> for examples (especially the <code>control</code> and <code>rules</code> files).</p>
+<h2 id="user-content-macos">macOS</h2>
+<p dir="auto">The process on macOS is similar to Linux:</p>
+<h3 id="user-content-dependencies">Dependencies</h3>
+<ol dir="auto">
+<li>It is necessary to install Xcode. To compile the game, macOS 13.3 or later is required.</li>
+<li>Install the command line tools for Xcode (these are usually included with Xcode, so this step may no longer be necessary):
+<ul>
+<li>Open a Terminal window and enter <code>xcode-select --install</code>.</li>
+</ul>
+</li>
+<li>Install the rust toolchain.
+<ul>
+<li>(recommended) If you have <a href="https://brew.sh/" rel="nofollow">Homebrew</a> installed, use <a href="https://formulae.brew.sh/formula/rust" rel="nofollow"><code>brew install rust</code></a>.</li>
+<li>Alternatively, open a Terminal window and enter <code>curl --proto &#39;=https&#39; --tlsv1.2 -sSf &lt;https://sh.rustup.rs&gt; | sh</code>.</li>
+<li>See <a href="https://www.rust-lang.org/tools/install" rel="nofollow">https://www.rust-lang.org/tools/install</a> for more information.</li>
+</ul>
+</li>
+<li>Install cbindgen
+<ul>
+<li>Currently required due to SpiderMonkey +128. Installation via <code>cargo</code> or <code>brew</code> should work.</li>
+</ul>
+</li>
+<li>CMake:
+<ul>
+<li>(recommended) If you have <a href="https://brew.sh/" rel="nofollow">Homebrew</a> installed, use <a href="https://formulae.brew.sh/formula/cmake" rel="nofollow"><code>brew install cmake</code></a>.</li>
+<li>Alternatively, download a prebuilt macOS package at <a href="https://cmake.org/download/" rel="nofollow">https://cmake.org/download/</a>. If prompted, choose to install the &#34;CMake command line tools&#34; to the <strong>default location</strong>.</li>
+<li><strong>Note:</strong> Recent versions have no installer, so after copying the app bundle to <strong>Applications</strong>, you need to run CMake with elevated permissions to install the command line tools. From the terminal: <code>sudo &#34;/Applications/CMake.app/Contents/bin/cmake-gui&#34; --install</code>.</li>
+<li>If the install command fails, you can manually add the following line to the end of <code>/etc/paths</code>: <code>/Applications/CMake.app/Contents/bin</code>.</li>
+</ul>
+</li>
+</ol>
+<h3 id="user-content-getting-the-code">Getting the code</h3>
+<p dir="auto">See <a href="/0ad/0ad/wiki/BuildInstructionsGettingTheCode" rel="nofollow">Getting the Code</a>.</p>
+<p dir="auto">Now you have two options:</p>
+<h3 id="user-content-build-the-game">Build the game</h3>
+<ul dir="auto">
+<li>Run <code>build-macos-libs.sh</code>, the macOS libraries build script, this will download and build the game&#39;s dependencies (except CMake, see above). This script will take some time to finish when first run, after that it will reuse the old build.</li>
+<li>NOTE: Command Line Tools for Xcode version 15.3 is missing m4 which is required to build some libraries.  One possible workaround is to run <code>sudo ln -s /Library/Developer/CommandLineTools/usr/bin/gm4 /Library/Developer/CommandLineTools/usr/bin/m4</code></li>
+</ul>
+<div class="code-block-container code-overflow-scroll"><pre class="code-block"><code class="chroma language-sh display"><span class="nb">cd</span> libraries
+./build-macos-libs.sh -j3
+</code></pre></div><ul dir="auto">
+<li><strong>-j3</strong> gives the number of parallel builds to run, and should typically be one plus the number of CPU cores available.</li>
+<li>To force a rebuild for some reason, e.g. the SVN folder is moved or Xcode / macOS is upgraded, pass in the <code>--force-rebuild</code> flag.</li>
+<li>Next, to build the game on the command line, use the following commands:</li>
+</ul>
+<div class="code-block-container code-overflow-scroll"><pre class="code-block"><code class="chroma language-sh display"><span class="nb">cd</span> build/workspaces
+./update-workspaces.sh -j3 --sysroot<span class="o">=</span><span class="s2">&#34;</span><span class="k">$(</span>xcrun --sdk macosx --show-sdk-path<span class="k">)</span><span class="s2">&#34;</span>
+<span class="nb">cd</span> gcc
+make -j3
+</code></pre></div><ul dir="auto">
+<li>The <strong>Release</strong> mode builds (which are the default) are more optimised, but are harder to debug. Use <code>make config=debug</code> (and run <code>pyrogenesis_dbg</code>) if you need better debugging support. See <a href="/0ad/0ad/wiki/Debugging" rel="nofollow">Debugging</a> for more details.</li>
+<li>the additional option <code>--sysroot=&#34;$(xcrun --sdk macosx --show-sdk-path)&#34;</code> is currently needed to avoid mixing any previously installed libraries on your system with the ones built by the previous step (see <a href="https://gitea.wildfiregames.com/0ad/0ad/issues/9075" rel="nofollow">this issue</a>).</li>
+<li>If you encounter any build errors, review the <a href="https://trac.wildfiregames.com/report" rel="nofollow">existing bug reports</a>, check the [#Knownproblemsandsolutions known problems section] or please file a <a href="https://trac.wildfiregames.com/newticket" rel="nofollow">new bug in the tracker</a>.</li>
+<li>Or if you have Xcode 4 installed, you can open <code>build/workspaces/xcode4/pyrogenesis.xcworkspace</code> (see discussion on this <a href="https://www.wildfiregames.com/forum/index.php?showtopic=15511&amp;st=160#entry261743" rel="nofollow">here</a>).</li>
+<li>Run the automated tests to verify that everything works as expected like this:</li>
+</ul>
+<div class="code-block-container code-overflow-scroll"><pre class="code-block"><code class="chroma language-sh display">binaries/system/test
+</code></pre></div><ul dir="auto">
+<li>If everything went well, compiling the code worked and all tests passed, it&#39;s finally time to run the game:</li>
+</ul>
+<div class="code-block-container code-overflow-scroll"><pre class="code-block"><code class="chroma language-sh display">binaries/system/pyrogenesis
+</code></pre></div><h2 id="user-content-bsd">BSD</h2>
+<blockquote class="attention-header attention-note"><p dir="auto"><svg viewbox="0 0 16 16" class="attention-icon attention-note svg octicon-info" aria-hidden="true" width="16" height="16"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13M6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75M8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2"></path></svg><strong class="attention-note">Note</strong></p>
+<p dir="auto">The *BSD support is generally a work in progress. FreeBSD build is officially supported and part of our CI.</p>
+</blockquote>
+<p dir="auto"><strong>TODO: outdated, please update (see <a href="/0ad/0ad/issues/5255" data-markdown-generated-content="" class="ref-issue" rel="nofollow">#5255</a>)</strong></p>
+<ul dir="auto">
+<li>Install the following ports or packages (names probably differ depending on the BSD variant):<br/> Install commands for the variants are provided below.
+<ul>
+<li>boost-libs</li>
+<li>cmake</li>
+<li>curl (at least 7.32)</li>
+<li>enet</li>
+<li>execinfo</li>
+<li>gloox</li>
+<li>gmake</li>
+<li>iconv</li>
+<li>icu</li>
+<li>libfmt</li>
+<li>libGL</li>
+<li>libogg</li>
+<li>libvorbis</li>
+<li>libxml2</li>
+<li>miniupnpc</li>
+<li>openal</li>
+<li>png</li>
+<li>python</li>
+<li>rust</li>
+<li>sdl2</li>
+<li>subversion</li>
+<li>wxWidgets-gtk2 (3.0 and above) - required to build the Atlas editor</li>
+<li>zip</li>
+<li><strong>Note:</strong> zlib should already be installed by default</li>
+<li>GCC 4.8.1+ or Clang</li>
+</ul>
+</li>
+<li>Obtain the game&#39;s source code as [#Gettingthecode described above] for Linux.</li>
+<li>Check for any variant specific issues below.</li>
+<li><strong>Note:</strong> Our build scripts should detect that you are running *BSD and use <code>gmake</code> as the make command. If for some reason this isn&#39;t correct, you can set the <code>MAKE</code> environment variable to the correct GNU make path.</li>
+<li>Follow the [#Building build] instructions above for Linux.</li>
+</ul>
+<h3 id="user-content-freebsd">FreeBSD</h3>
+<ul dir="auto">
+<li>
+<p dir="auto">Install the dependencies with:</p>
+<div class="code-block-container code-overflow-scroll"><pre class="code-block"><code class="chroma language-sh display">pkg install boost-libs cmake curl enet libfmt git gloox gmake iconv libogg libsodium    <span class="se">\
+</span>   libvorbis libxml2 mesa-libs miniupnpc openal-soft pkgconf png python rust sdl2     <span class="se">\
+</span>   subversion wx30-gtk2 zip
+</code></pre></div></li>
+<li>
+<p dir="auto">If running FreeBSD 10.0+ you need to set <code>CC</code> to <code>clang</code> and <code>CXX</code> to <code>clang++</code>.</p>
+<div class="code-block-container code-overflow-scroll"><pre class="code-block"><code class="chroma language-sh display"><span class="nb">export</span> <span class="nv">CC</span><span class="o">=</span>clang <span class="nv">CXX</span><span class="o">=</span>clang++
+</code></pre></div></li>
+<li>
+<p dir="auto">If building Atlas, you need to set the <code>WX_CONFIG</code> variable, because <code>wx-config</code> has a different name on FreeBSD. For example, you&#39;d run this command if you built the wxGTK 2.8 package with unicode support:</p>
+<div class="code-block-container code-overflow-scroll"><pre class="code-block"><code class="chroma language-sh display"><span class="nb">export</span> <span class="nv">WX_CONFIG</span><span class="o">=</span>wxgtk2u-2.8-config
+</code></pre></div><p dir="auto">if not correct, you will get errors about missing &#34;wx/*.h&#34; includes. You can skip building Atlas altogether (and the wxWidgets dependency) by later passing the <code>--disable-atlas</code> option to <code>update-workspaces.sh</code>.</p>
+<ul>
+<li>You&#39;ll have to set this variable every time you run <code>update-workspaces.sh</code>, so it may be most convenient to put these commands into another shell script.</li>
+</ul>
+</li>
+</ul>
+<h3 id="user-content-openbsd">OpenBSD</h3>
+<p dir="auto"><strong>OBSOLETE, NEEDS UPDATING</strong> <code> why FreeBSD has clang suggested, but OpenBSD egcc...</code></p>
+<ul dir="auto">
+<li>You need to set <code>CC</code> and <code>CXX</code> before building
+<div class="code-block-container code-overflow-scroll"><pre class="code-block"><code class="chroma language-sh display"><span class="nb">export</span> <span class="nv">CC</span><span class="o">=</span>egcc <span class="nv">CXX</span><span class="o">=</span>eg++
+</code></pre></div></li>
+<li>Install the dependencies with:
+<div class="code-block-container code-overflow-scroll"><pre class="code-block"><code class="chroma language-sh display">pkg_add -i boost cmake curl enet fmt g++ gcc gloox gmake icu4c libexecinfo libogg <span class="se">\
+</span> libsodium libxml miniupnpc openal png sdl2 subversion zip
+</code></pre></div></li>
+<li>As OpenBSD&#39;s packaged libxml isn&#39;t build with threading support, building Atlas is not possible so you should run <code>update-workspaces.sh</code> with the <code>--disable-atlas</code> option.</li>
+<li>You probably need to run pyrogenesis with <code>LD_PRELOAD=/usr/local/lib/libogg.so.6.2:/usr/local/lib/libvorbis.so.8.0</code> (see <a href="/0ad/0ad/issues/1463" data-markdown-generated-content="" class="ref-issue" rel="nofollow">#1463</a>).</li>
+</ul>
+<h2 id="user-content-known-problems-and-solutions">Known problems and solutions</h2>
+<ul dir="auto">
+<li>None currently.</li>
+</ul>
+
+			</div>
+
+			
+
+			<div class="tw-clear-both"></div>
+
+			
+		</div>
+	</div>
+</div>
+
+<div class="ui small modal" id="repo-wiki-delete-page-modal">
+	<div class="header"><svg viewBox="0 0 16 16" class="svg octicon-trash" aria-hidden="true" width="16" height="16"><path d="M11 1.75V3h2.25a.75.75 0 0 1 0 1.5H2.75a.75.75 0 0 1 0-1.5H5V1.75C5 .784 5.784 0 6.75 0h2.5C10.216 0 11 .784 11 1.75M4.496 6.675l.66 6.6a.25.25 0 0 0 .249.225h5.19a.25.25 0 0 0 .249-.225l.66-6.6a.75.75 0 0 1 1.492.149l-.66 6.6A1.75 1.75 0 0 1 10.595 15h-5.19a1.75 1.75 0 0 1-1.741-1.575l-.66-6.6a.75.75 0 1 1 1.492-.15M6.5 1.75V3h3V1.75a.25.25 0 0 0-.25-.25h-2.5a.25.25 0 0 0-.25.25"/></svg> Delete Page</div>
+	<div class="content"><p>Deleting the wiki page "BuildInstructions" cannot be undone. Continue?</p></div>
+	
+<div class="actions">
+	
+		
+		
+		
+		
+		
+		<button class="ui cancel button"><svg viewBox="0 0 16 16" class="svg octicon-x" aria-hidden="true" width="16" height="16"><path d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.749.749 0 0 1 1.275.326.75.75 0 0 1-.215.734L9.06 8l3.22 3.22a.749.749 0 0 1-.326 1.275.75.75 0 0 1-.734-.215L8 9.06l-3.22 3.22a.75.75 0 0 1-1.042-.018.75.75 0 0 1-.018-1.042L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06"/></svg> No</button>
+		<button class="ui primary ok button"><svg viewBox="0 0 16 16" class="svg octicon-check" aria-hidden="true" width="16" height="16"><path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.75.75 0 0 1 .018-1.042.75.75 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0"/></svg> Yes</button>
+	
+</div>
+
+</div>
+
+
+
+		
+	</div>
+	
+	<footer class="page-footer" role="group" aria-label="Footer">
+	<div class="left-links" role="contentinfo" aria-label="About Software">
+		
+			<a target="_blank" href="https://about.gitea.com">Powered by Gitea</a>
+		
+		
+			<span>
+			Version:
+			
+				1.26.4&#43;1-g1ac57c9699
+			
+			</span>
+		
+		
+			<span>
+				Page: <strong>186ms</strong>
+				Template: <strong>3ms</strong>
+			</span>
+		
+		
+	</div>
+	<div class="right-links" role="group" aria-label="Links">
+		<div class="ui dropdown custom" id="footer-theme-selector">
+			<span class="default-text"><div class="theme-menu-item" data-tooltip-content=""><svg viewBox="490 490 820 820" class="svg gitea-eclipse" aria-hidden="true" width="16" height="16"><path d="M866.7 582.1A321.3 321.3 0 0 0 738.6 623a317.3 317.3 0 0 0-109.1 108.5A418 418 0 0 0 609 772a335.3 335.3 0 0 0-19.6 71.5 205.2 205.2 0 0 0-2.8 45c0 25.8.2 29.3 2.8 45 4.1 25.4 9.9 46.4 19.6 71.5a314.2 314.2 0 0 0 111.6 137.3A306.8 306.8 0 0 0 893 1196a308.6 308.6 0 0 0 303.6-262.5c2.6-15.7 2.8-19.2 2.8-45s-.2-29.3-2.8-45A335.3 335.3 0 0 0 1177 772a314.2 314.2 0 0 0-111.6-137.3A308.3 308.3 0 0 0 918 582c-13-1.1-38.2-1.1-51.3.1M747 663.5l-2.4 16.7c-4 26.4-4.9 41.1-4.3 65.3a323.7 323.7 0 0 0 37.2 145c18.2 36 41.3 66.6 72 95.5a346.4 346.4 0 0 0 208.5 93.1l18 1.6 4.5.5-8.5 8a259.3 259.3 0 0 1-141.5 65.8 281 281 0 0 1-123.9-11.4 267.2 267.2 0 0 1-181.7-269.9c2-27.6 5.7-47.6 13.3-70.7a281.2 281.2 0 0 1 46.4-85c8-10.1 28-30.2 37.9-38.1 13.8-11.1 24.5-18.3 24.5-16.4"/></svg> Auto </div></span>
+			<div class="menu theme-menu"></div>
+		</div>
+		<div class="ui dropdown upward">
+			<span class="flex-text-inline"><svg viewBox="0 0 16 16" class="svg octicon-globe" aria-hidden="true" width="14" height="14"><path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M5.78 8.75a9.64 9.64 0 0 0 1.363 4.177q.383.64.857 1.215c.245-.296.551-.705.857-1.215A9.64 9.64 0 0 0 10.22 8.75Zm4.44-1.5a9.64 9.64 0 0 0-1.363-4.177c-.307-.51-.612-.919-.857-1.215a10 10 0 0 0-.857 1.215A9.64 9.64 0 0 0 5.78 7.25Zm-5.944 1.5H1.543a6.51 6.51 0 0 0 4.666 5.5q-.184-.271-.352-.552c-.715-1.192-1.437-2.874-1.581-4.948m-2.733-1.5h2.733c.144-2.074.866-3.756 1.58-4.948q.18-.295.353-.552a6.51 6.51 0 0 0-4.666 5.5m10.181 1.5c-.144 2.074-.866 3.756-1.58 4.948q-.18.296-.353.552a6.51 6.51 0 0 0 4.666-5.5Zm2.733-1.5a6.51 6.51 0 0 0-4.666-5.5q.184.272.353.552c.714 1.192 1.436 2.874 1.58 4.948Z"/></svg> English</span>
+			<div class="menu language-menu">
+				<a lang="en-US" data-url="/?lang=en-US" class="item selected">English</a>
+				</div>
+		</div>
+		<a href="/assets/licenses.txt">Licenses</a>
+		<a href="/api/swagger">API</a>
+		<a class="item" href="/assets/privacy.html">Privacy Policy</a>
+<a class="item" href="/assets/terms-of-use.html">Terms of Use</a>
+
+	</div>
+</footer>
+
+	<script type="module" src="/assets/js/index.CzQRfW04.js" onerror="alert(&#39;Failed to load asset file from &#39; + this.src + &#39;. Please make sure the asset files can be accessed.&#39;)"></script>
+	
+</body>
+</html>
+

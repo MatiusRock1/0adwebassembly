@@ -1,0 +1,50 @@
+{
+  "type": "application-worker-error",
+  "message": "Uncaught RuntimeError: memory access out of bounds",
+  "stack": "RuntimeError: memory access out of bounds\n    at http://localhost:8097/pyrogenesis-application.wasm:wasm-function[8162]:0x5184b4\n    at http://localhost:8097/pyrogenesis-application.wasm:wasm-function[7144]:0x4960ce\n    at http://localhost:8097/pyrogenesis-application.wasm:wasm-function[14751]:0x8941b5\n    at http://localhost:8097/pyrogenesis-application.wasm:wasm-function[1098]:0xdb224\n    at http://localhost:8097/pyrogenesis-application.wasm:wasm-function[8120]:0x5104ce\n    at http://localhost:8097/pyrogenesis-application.wasm:wasm-function[8730]:0x595d7b\n    at http://localhost:8097/pyrogenesis-application.wasm:wasm-function[3677]:0x25d227\n    at http://localhost:8097/pyrogenesis-application.wasm:wasm-function[5667]:0x39dc99\n    at http://localhost:8097/pyrogenesis-application.wasm:wasm-function[1098]:0xafe40\n    at http://localhost:8097/pyrogenesis-application.wasm:wasm-function[8120]:0x5104ce",
+  "filename": "http://localhost:8097/pyrogenesis-application.mjs",
+  "line": 7,
+  "column": 2691,
+  "resolvedFunctions": [
+    {
+      "index": 8162,
+      "symbol": "js::jit::GetPropIRGenerator::tryAttachStub()"
+    },
+    {
+      "index": 7144,
+      "symbol": "void js::jit::TryAttachStub<js::jit::GetPropIRGenerator, js::jit::CacheKind, JS::MutableHandle<JS::Value>&, JS::Rooted<JS::Value>&>(char const*, JSContext*, js::jit::BaselineFrame*, js::jit::ICFallbackStub*, js::jit::CacheKind&&, JS::MutableHandle<JS::Value>&, JS::Rooted<JS::Value>&)"
+    },
+    {
+      "index": 14751,
+      "symbol": "js::jit::DoGetPropFallback(JSContext*, js::jit::BaselineFrame*, js::jit::ICFallbackStub*, JS::MutableHandle<JS::Value>, JS::MutableHandle<JS::Value>)"
+    },
+    {
+      "index": 1098,
+      "symbol": "js::pbl::PortableBaselineInterpret(JSContext*, js::pbl::State&, js::pbl::Stack&, js::pbl::StackVal*, JSObject*, JS::Value*)"
+    },
+    {
+      "index": 8120,
+      "symbol": "js::jit::MaybeEnterJit(JSContext*, js::RunState&)"
+    },
+    {
+      "index": 8730,
+      "symbol": "js::RunScript(JSContext*, js::RunState&)"
+    },
+    {
+      "index": 3677,
+      "symbol": "js::InternalCallOrConstruct(JSContext*, JS::CallArgs const&, js::MaybeConstruct, js::CallReason)"
+    },
+    {
+      "index": 5667,
+      "symbol": "js::jit::DoCallFallback(JSContext*, js::jit::BaselineFrame*, js::jit::ICFallbackStub*, unsigned int, JS::Value*, JS::MutableHandle<JS::Value>)"
+    },
+    {
+      "index": 1098,
+      "symbol": "js::pbl::PortableBaselineInterpret(JSContext*, js::pbl::State&, js::pbl::Stack&, js::pbl::StackVal*, JSObject*, JS::Value*)"
+    },
+    {
+      "index": 8120,
+      "symbol": "js::jit::MaybeEnterJit(JSContext*, js::RunState&)"
+    }
+  ]
+}

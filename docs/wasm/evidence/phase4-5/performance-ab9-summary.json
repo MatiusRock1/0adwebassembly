@@ -1,0 +1,167 @@
+{
+  "diagnosticOnly": true,
+  "phase45Accepted": false,
+  "refreshMs": 16.68275,
+  "refreshSource": "median single-refresh interval of the reference captures",
+  "reference": [
+    {
+      "capture": "performance-ab9-sim-kernels-3-30-combat-60s-1",
+      "valid": true,
+      "displayedFps": 28.727881020914573,
+      "p95FrameMs": 66.77940000000001,
+      "p99FrameMs": 100.1148,
+      "onePercentLowFps": 7.620559473534494,
+      "pausesOver100Ms": 20,
+      "p95WithinTwoRefreshes": false,
+      "intervalShareByRefreshes": {
+        "1": 0.28596287703016243,
+        "2": 0.5081206496519721,
+        "3": 0.10672853828306264,
+        "4+": 0.09918793503480279
+      },
+      "turnFrames": 300,
+      "turnMedianMs": 26.095231999988755,
+      "turnP90Ms": 45.48147200001722,
+      "turnsOver60Ms": 14,
+      "turnsOver100Ms": 4,
+      "rate": 0.9993391361267561,
+      "rateWithinTolerance": true,
+      "units": [
+        220,
+        277
+      ],
+      "workerPacing": null
+    },
+    {
+      "capture": "performance-ab9-sim-kernels-3-30-combat-60s-2",
+      "valid": true,
+      "displayedFps": 28.9692045138281,
+      "p95FrameMs": 66.762,
+      "p99FrameMs": 100.07600000000001,
+      "onePercentLowFps": 8.699903358573525,
+      "pausesOver100Ms": 18,
+      "p95WithinTwoRefreshes": false,
+      "intervalShareByRefreshes": {
+        "1": 0.26927502876869963,
+        "2": 0.5270425776754891,
+        "3": 0.11737629459148446,
+        "4+": 0.08630609896432681
+      },
+      "turnFrames": 300,
+      "turnMedianMs": 24.642304000010995,
+      "turnP90Ms": 41.2036607999994,
+      "turnsOver60Ms": 8,
+      "turnsOver100Ms": 1,
+      "rate": 1.0007573300820358,
+      "rateWithinTolerance": true,
+      "units": [
+        226,
+        275
+      ],
+      "workerPacing": null
+    }
+  ],
+  "candidate": [
+    {
+      "capture": "performance-ab9-present-pacing-1-combat-60s-1",
+      "valid": true,
+      "displayedFps": 29.39441564891502,
+      "p95FrameMs": 50.0699,
+      "p99FrameMs": 66.6889,
+      "onePercentLowFps": 10.787048206958868,
+      "pausesOver100Ms": 7,
+      "p95WithinTwoRefreshes": false,
+      "intervalShareByRefreshes": {
+        "1": 0.09523809523809523,
+        "2": 0.7981859410430839,
+        "3": 0.09410430839002268,
+        "4+": 0.012471655328798186
+      },
+      "turnFrames": 300,
+      "turnMedianMs": 26.06988799999499,
+      "turnP90Ms": 49.395481599995605,
+      "turnsOver60Ms": 18,
+      "turnsOver100Ms": 4,
+      "rate": 0.9990342472089581,
+      "rateWithinTolerance": true,
+      "units": [
+        220,
+        275
+      ],
+      "workerPacing": {
+        "presents": 3564,
+        "holds": 2769,
+        "intervals": [
+          0,
+          3485,
+          42,
+          17,
+          20
+        ]
+      }
+    },
+    {
+      "capture": "performance-ab9-present-pacing-1-combat-60s-2",
+      "valid": true,
+      "displayedFps": 29.602613269361733,
+      "p95FrameMs": 50.066,
+      "p99FrameMs": 50.17910000000001,
+      "onePercentLowFps": 12.24071196877095,
+      "pausesOver100Ms": 4,
+      "p95WithinTwoRefreshes": false,
+      "intervalShareByRefreshes": {
+        "1": 0.09572072072072071,
+        "2": 0.8023648648648649,
+        "3": 0.09572072072072071,
+        "4+": 0.006193693693693694
+      },
+      "turnFrames": 300,
+      "turnMedianMs": 24.144896000009908,
+      "turnP90Ms": 39.8665471999948,
+      "turnsOver60Ms": 15,
+      "turnsOver100Ms": 3,
+      "rate": 0.9988026598903652,
+      "rateWithinTolerance": true,
+      "units": [
+        218,
+        271
+      ],
+      "workerPacing": {
+        "presents": 3537,
+        "holds": 2952,
+        "intervals": [
+          0,
+          3446,
+          49,
+          18,
+          24
+        ]
+      }
+    }
+  ],
+  "scope": "Short decision captures in alternating order; differences under the run-to-run spread are not attributed.",
+  "referenceMean": {
+    "displayedFps": 28.848542767371335,
+    "p95FrameMs": 66.7707,
+    "p99FrameMs": 100.09540000000001,
+    "onePercentLowFps": 8.16023141605401,
+    "pausesOver100Ms": 19,
+    "turnMedianMs": 25.368767999999875,
+    "turnP90Ms": 43.34256640000831,
+    "turnsOver60Ms": 11,
+    "turnsOver100Ms": 2.5,
+    "rate": 1.0000482331043958
+  },
+  "candidateMean": {
+    "displayedFps": 29.498514459138377,
+    "p95FrameMs": 50.067949999999996,
+    "p99FrameMs": 58.43400000000001,
+    "onePercentLowFps": 11.513880087864909,
+    "pausesOver100Ms": 5.5,
+    "turnMedianMs": 25.10739200000245,
+    "turnP90Ms": 44.6310143999952,
+    "turnsOver60Ms": 16.5,
+    "turnsOver100Ms": 3.5,
+    "rate": 0.9989184535496616
+  }
+}

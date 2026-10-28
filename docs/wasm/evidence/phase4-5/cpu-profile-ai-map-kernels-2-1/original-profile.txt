@@ -1,0 +1,222 @@
+================================================================
+
+PS profiler snapshot - Fri Oct 23 21:40:56 2026
+
+
+Renderer statistics
+
+Name                    | Value   
+------------------------|---------
+|-# draw calls          | 7276    
+|-# terrain tris        | 45576   
+|-# water tris          | 0       
+|-# model tris          | 1449288 
+|-# overlay tris        | 1894    
+|-# blend splats        | 14      
+|-# particles           | 9       
+|-VB reserved           | 73728 kB
+|-VB allocated          | 8472 kB 
+|-textures uploaded     | 90573 kB
+|-shader effects loaded | 56      
+'-linear allocator      | 1048576 
+
+Renderer backend statistics
+
+Name | Value
+-----|------
+
+Profiling Information for: root (Time in node: 22.595 msec/frame)
+
+Name                                     | calls/frame | msec/frame | calls/turn | msec/turn
+-----------------------------------------|-------------|------------|------------|----------
+|-hotload                                | 1.0         | 0.004      | 8.6        | 0.036    
+|-progressive load                       | 1.0         | 0.004      | 8.6        | 0.033    
+|-renderer incremental load              | 1.0         | 0.288      | 8.6        | 2.398    
+|-dispatch events                        | 1.0         | 0.013      | 8.6        | 0.116    
+| |-GUI event handler                    | 0.0         | 0.000      | 0.0        | 0.000    
+| | |-handleInputBeforeGui               | 0.0         | 0.000      | 0.0        | 0.000    
+| | |-handle event in native GUI         | 0.0         | 0.000      | 0.0        | 0.000    
+| | |-handleInputAfterGui                | 0.0         | 0.000      | 0.0        | 0.000    
+| | | |-CloneValueFromOtherCompartment   | 0.0         | 0.000      | 0.0        | 0.000    
+| | | '-unlogged                         |             | 0.000      | ?          |          
+| | '-unlogged                           |             | 0.000      | ?          |          
+| '-unlogged                             |             | 0.013      | ?          |          
+|-gui tick                               | 1.0         | 0.517      | 8.6        | 4.456    
+| |-CloneValueFromOtherCompartment       | 2.0         | 0.016      | 17.2       | 0.139    
+| |-GCSlice                              | 0.0         | 0.000      | 0.0        | 0.000    
+| '-unlogged                             |             | 0.501      | ?          |          
+|-sim update                             | 0.1         | 4.482      | 1.0        | 43.860   
+| |-UnitRenderer::TurnStart              | 0.1         | 0.004      | 1.0        | 0.032    
+| |-MoveTo                               | 1.0         | 0.014      | 7.4        | 0.064    
+| |-load mesh                            | 0.0         | 0.000      | 0.0        | 0.000    
+| |-TestStaticShape                      | 0.0         | 0.000      | 0.0        | 0.000    
+| |-ExecuteActiveQueries                 | 0.1         | 0.118      | 1.0        | 0.950    
+| |-UpdateVisibilityData                 | 0.1         | 0.073      | 1.0        | 0.762    
+| |-Move                                 | 19.2        | 0.105      | 143.6      | 0.856    
+| |-LosUpdateHelperIncremental           | 18.0        | 0.053      | 135.4      | 0.375    
+| |-AI setup                             | 0.1         | 2.043      | 1.0        | 15.128   
+| | |-CalculateTerritories               | 0.0         | 0.000      | 0.0        | 0.000    
+| | |-proxy representations              | 0.1         | 0.062      | 1.0        | 0.444    
+| | '-unlogged                           |             | 1.982      | ?          |          
+| |-UpdateGrid                           | 0.1         | 0.011      | 1.0        | 0.089    
+| | |-Rasterize Obstructions             | 0.0         | 0.000      | 0.0        | 0.000    
+| | |-Hierarchical Update                | 0.0         | 0.000      | 0.0        | 0.000    
+| | '-unlogged                           |             | 0.011      | ?          |          
+| |-PickSpawnPoint                       | 0.0         | 0.000      | 0.0        | 0.000    
+| | |-TestUnitShape                      | 0.0         | 0.000      | 0.0        | 0.000    
+| | '-unlogged                           |             | 0.000      | ?          |          
+| |-LosUpdateHelper                      | 0.0         | 0.000      | 0.0        | 0.000    
+| |-ResetActiveQuery                     | 4.5         | 0.056      | 34.0       | 0.379    
+| |-ExecuteQuery                         | 0.0         | 0.000      | 0.0        | 0.000    
+| |-GetObstructionsInRange               | 0.2         | 0.004      | 1.2        | 0.020    
+| |-GetUnitsOnObstruction                | 0.0         | 0.000      | 0.0        | 0.000    
+| |-GetStaticObstructionsOnObstruction   | 0.0         | 0.000      | 0.0        | 0.000    
+| |-GCSlice                              | 0.0         | 0.000      | 0.0        | 0.000    
+| |-CalculateTerritories                 | 0.0         | 0.000      | 0.0        | 0.000    
+| |-Transform                            | 0.0         | 0.000      | 0.0        | 0.000    
+| | |-CalculateTerritories               | 0.0         | 0.000      | 0.0        | 0.000    
+| | |-LosUpdateHelper                    | 0.0         | 0.000      | 0.0        | 0.000    
+| | |-LosUpdateHelperIncremental         | 0.0         | 0.000      | 0.0        | 0.000    
+| | |-MoveTo                             | 0.0         | 0.000      | 0.0        | 0.000    
+| | '-unlogged                           |             | 0.000      | ?          |          
+| '-unlogged                             |             | 1.999      | ?          |          
+|-gui sim update                         | 0.1         | 0.438      | 1.0        | 3.369    
+| |-CloneValueFromOtherCompartment       | 2.7         | 0.056      | 20.0       | 0.431    
+| '-unlogged                             |             | 0.382      | ?          |          
+|-sim interpolate                        | 1.0         | 1.089      | 8.6        | 9.266    
+| |-UnitRenderer::Interpolate            | 1.0         | 0.970      | 8.6        | 8.308    
+| |-Position::Interpolate                | 26.1        | 0.029      | 199.0      | 0.232    
+| |-OverlayRenderer::Interpolate         | 1.0         | 0.005      | 8.6        | 0.037    
+| |-Selectable::Interpolate              | 1.0         | 0.002      | 8.6        | 0.014    
+| |-update boundary lines                | 0.0         | 0.000      | 0.0        | 0.000    
+| | |-ComputeBoundaries                  | 0.0         | 0.000      | 0.0        | 0.000    
+| | |-SmoothPointsAverage                | 0.0         | 0.000      | 0.0        | 0.000    
+| | |-InterpolatePointsRNS               | 0.0         | 0.000      | 0.0        | 0.000    
+| | '-unlogged                           |             | 0.000      | ?          |          
+| '-unlogged                             |             | 0.083      | ?          |          
+|-render                                 | 1.0         | 11.680     | 8.6        | 101.803  
+| |-begin frame                          | 1.0         | 0.001      | 8.6        | 0.007    
+| |-submit terrain                       | 2.0         | 0.046      | 17.2       | 0.380    
+| |-sim submit                           | 2.0         | 3.861      | 17.2       | 31.036   
+| | |-UnitRenderer::RenderSubmit         | 2.0         | 3.813      | 17.2       | 30.633   
+| | | |-decal build                      | 0.0         | 0.000      | 0.0        | 0.000    
+| | | '-unlogged                         |             | 3.813      | ?          |          
+| | |-OverlayRenderer::RenderSubmit      | 2.0         | 0.003      | 17.2       | 0.023    
+| | |-Selectable::RenderSubmit           | 2.0         | 0.002      | 17.2       | 0.024    
+| | '-unlogged                           |             | 0.043      | ?          |          
+| |-submit unattached particles          | 1.0         | 0.001      | 8.6        | 0.003    
+| |-compute silhouettes                  | 1.0         | 0.535      | 8.6        | 4.533    
+| | |-compute bounds                     | 1.0         | 0.182      | 8.6        | 1.526    
+| | |-sorting                            | 1.0         | 0.120      | 8.6        | 1.047    
+| | |-sweeping                           | 1.0         | 0.214      | 8.6        | 1.796    
+| | '-unlogged                           |             | 0.020      | ?          |          
+| |-prepare submissions                  | 1.0         | 4.318      | 8.6        | 41.062   
+| | |-recompute LOS texture              | 0.1         | 0.043      | 1.0        | 0.320    
+| | |-Render minimap texture             | 0.1         | 0.003      | 0.2        | 0.012    
+| | |-prepare models                     | 1.0         | 0.603      | 8.6        | 4.972    
+| | |-prepare overlays                   | 1.0         | 0.072      | 8.6        | 0.611    
+| | |-prepare particles                  | 1.0         | 0.034      | 8.6        | 0.286    
+| | | |-update emitters                  | 9.0         | 0.012      | 77.4       | 0.101    
+| | | |-sort emitters                    | 9.0         | 0.007      | 77.4       | 0.056    
+| | | '-unlogged                         |             | 0.015      | ?          |          
+| | |-upload models                      | 1.0         | 0.003      | 8.6        | 0.024    
+| | |-shadow map                         | 1.0         | 1.368      | 8.6        | 11.941   
+| | | |-render patches                   | 1.0         | 0.032      | 8.6        | 0.280    
+| | | | |-render terrain streams         | 1.0         | 0.022      | 8.6        | 0.192    
+| | | | | |-compute batches              | 1.0         | 0.014      | 8.6        | 0.124    
+| | | | | '-unlogged                     |             | 0.007      | ?          |          
+| | | | '-unlogged                       |             | 0.010      | ?          |          
+| | | |-render models                    | 1.0         | 0.839      | 8.6        | 7.219    
+| | | | |-bucketing by material          | 2.0         | 0.137      | 17.2       | 1.151    
+| | | | |-processing material buckets    | 2.0         | 0.084      | 17.2       | 0.744    
+| | | | |-sorting tech buckets           | 2.0         | 0.009      | 17.2       | 0.068    
+| | | | |-rendering bucketed submissions | 2.0         | 0.597      | 17.2       | 5.156    
+| | | | '-unlogged                       |             | 0.012      | ?          |          
+| | | |-render transparent models        | 1.0         | 0.478      | 8.6        | 4.277    
+| | | | |-bucketing by material          | 2.0         | 0.071      | 17.2       | 0.646    
+| | | | |-processing material buckets    | 2.0         | 0.056      | 17.2       | 0.473    
+| | | | |-sorting tech buckets           | 2.0         | 0.004      | 17.2       | 0.039    
+| | | | |-rendering bucketed submissions | 2.0         | 0.339      | 17.2       | 3.042    
+| | | | '-unlogged                       |             | 0.008      | ?          |          
+| | | '-unlogged                         |             | 0.019      | ?          |          
+| | |-recompute territory texture        | 0.0         | 0.000      | 0.0        | 0.000    
+| | '-unlogged                           |             | 2.193      | ?          |          
+| |-render submissions                   | 1.0         | 1.504      | 8.6        | 12.789   
+| | |-patches                            | 1.0         | 0.143      | 8.6        | 1.261    
+| | | |-render terrain sides             | 1.0         | 0.006      | 8.6        | 0.055    
+| | | |-render terrain bases             | 1.0         | 0.045      | 8.6        | 0.395    
+| | | | |-compute batches                | 1.0         | 0.019      | 8.6        | 0.162    
+| | | | '-unlogged                       |             | 0.027      | ?          |          
+| | | |-render terrain blends            | 1.0         | 0.035      | 8.6        | 0.307    
+| | | | |-compute batches                | 1.0         | 0.019      | 8.6        | 0.170    
+| | | | '-unlogged                       |             | 0.015      | ?          |          
+| | | |-render terrain decals            | 1.0         | 0.048      | 8.6        | 0.423    
+| | | '-unlogged                         |             | 0.008      | ?          |          
+| | |-overlays (before)                  | 1.0         | 0.004      | 8.6        | 0.036    
+| | |-models                             | 1.0         | 0.704      | 8.6        | 5.936    
+| | | |-bucketing by material            | 2.0         | 0.094      | 17.2       | 0.786    
+| | | |-processing material buckets      | 2.0         | 0.076      | 17.2       | 0.649    
+| | | |-sorting tech buckets             | 2.0         | 0.004      | 17.2       | 0.040    
+| | | |-rendering bucketed submissions   | 2.0         | 0.518      | 17.2       | 4.351    
+| | | '-unlogged                         |             | 0.012      | ?          |          
+| | |-transparent models                 | 1.0         | 0.600      | 8.6        | 5.114    
+| | | |-bucketing by material            | 4.0         | 0.079      | 34.4       | 0.647    
+| | | |-processing material buckets      | 4.0         | 0.074      | 34.4       | 0.645    
+| | | |-sorting tech buckets             | 4.0         | 0.010      | 34.4       | 0.080    
+| | | |-rendering bucketed submissions   | 4.0         | 0.420      | 34.4       | 3.589    
+| | | '-unlogged                         |             | 0.017      | ?          |          
+| | |-overlays (after)                   | 1.0         | 0.019      | 8.6        | 0.166    
+| | | |-overlays (spheres)               | 1.0         | 0.002      | 8.6        | 0.020    
+| | | '-unlogged                         |             | 0.016      | ?          |          
+| | |-particles                          | 1.0         | 0.013      | 8.6        | 0.108    
+| | '-unlogged                           |             | 0.020      | ?          |          
+| |-Render postproc                      | 1.0         | 0.031      | 8.6        | 0.295    
+| |-silhouettes                          | 1.0         | 0.793      | 8.6        | 6.745    
+| | |-render patches                     | 1.0         | 0.001      | 8.6        | 0.009    
+| | |-render model occluders             | 1.0         | 0.033      | 8.6        | 0.268    
+| | | |-bucketing by material            | 1.0         | 0.006      | 8.6        | 0.034    
+| | | |-processing material buckets      | 1.0         | 0.004      | 8.6        | 0.031    
+| | | |-sorting tech buckets             | 1.0         | 0.002      | 8.6        | 0.025    
+| | | |-rendering bucketed submissions   | 1.0         | 0.016      | 8.6        | 0.135    
+| | | '-unlogged                         |             | 0.005      | ?          |          
+| | |-render transparent occluders       | 1.0         | 0.020      | 8.6        | 0.178    
+| | | |-bucketing by material            | 1.0         | 0.003      | 8.6        | 0.022    
+| | | |-processing material buckets      | 1.0         | 0.003      | 8.6        | 0.026    
+| | | |-sorting tech buckets             | 1.0         | 0.002      | 8.6        | 0.018    
+| | | |-rendering bucketed submissions   | 1.0         | 0.009      | 8.6        | 0.076    
+| | | '-unlogged                         |             | 0.004      | ?          |          
+| | |-render model casters               | 1.0         | 0.548      | 8.6        | 4.627    
+| | | |-bucketing by material            | 2.0         | 0.056      | 17.2       | 0.462    
+| | | |-processing material buckets      | 2.0         | 0.067      | 17.2       | 0.576    
+| | | |-sorting tech buckets             | 2.0         | 0.005      | 17.2       | 0.046    
+| | | |-rendering bucketed submissions   | 2.0         | 0.413      | 17.2       | 3.477    
+| | | '-unlogged                         |             | 0.007      | ?          |          
+| | |-render transparent casters         | 1.0         | 0.183      | 8.6        | 1.583    
+| | | |-bucketing by material            | 2.0         | 0.016      | 17.2       | 0.142    
+| | | |-processing material buckets      | 2.0         | 0.032      | 17.2       | 0.272    
+| | | |-sorting tech buckets             | 2.0         | 0.004      | 17.2       | 0.031    
+| | | |-rendering bucketed submissions   | 2.0         | 0.123      | 17.2       | 1.063    
+| | | '-unlogged                         |             | 0.008      | ?          |          
+| | '-unlogged                           |             | 0.009      | ?          |          
+| |-overlays (fg)                        | 1.0         | 0.008      | 8.6        | 0.072    
+| |-text overlays                        | 1.0         | 0.001      | 8.6        | 0.014    
+| |-gui                                  | 1.0         | 0.245      | 8.6        | 2.093    
+| | |-render minimap                     | 1.0         | 0.017      | 8.6        | 0.154    
+| | | |-minimap flares                   | 1.0         | 0.010      | 8.6        | 0.088    
+| | | '-unlogged                         |             | 0.008      | ?          |          
+| | '-unlogged                           |             | 0.228      | ?          |          
+| |-logger                               | 1.0         | 0.005      | 8.6        | 0.044    
+| |-end frame                            | 1.0         | 0.002      | 8.6        | 0.018    
+| '-unlogged                             |             | 0.328      | ?          |          
+|-CloneValueFromOtherCompartment         | 0.0         | 0.000      | 0.0        | 0.000    
+'-unlogged                               |             | 4.079      | ?          |          
+
+Script statistics
+
+Name                     | gui       | Simulation | GUIPage  
+-------------------------|-----------|------------|----------
+|-max nominal heap bytes | 402653184 | 402653184  | 402653184
+|-allocated bytes        | 22089728  | 22089728   | 22089728 
+'-number of GCs          | 73        | 73         | 73       
+
+================================================================

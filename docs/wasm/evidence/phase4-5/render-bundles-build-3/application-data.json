@@ -1,0 +1,54 @@
+{
+  "files": [
+    {
+      "path": "/data/config/default.cfg",
+      "url": "data/config/default.cfg"
+    },
+    {
+      "path": "/data/config/dev.cfg",
+      "url": "data/config/dev.cfg"
+    },
+    {
+      "path": "/data/config/keys.txt",
+      "url": "data/config/keys.txt"
+    },
+    {
+      "path": "/data/l10n/.tx/config",
+      "url": "data/l10n/.tx/config"
+    },
+    {
+      "path": "/data/l10n/messages.json",
+      "url": "data/l10n/messages.json"
+    },
+    {
+      "path": "/data/icu/icudt68l.dat",
+      "url": "data/icu/icudt68l.dat"
+    }
+  ],
+  "pin": "40b8794eecb9618da69e10bacffa8814c561aa51",
+  "archives": {
+    "mod": {
+      "bytes": 62959007,
+      "files": 640,
+      "payloadIdentityVerified": true
+    },
+    "public": {
+      "bytes": 1914886590,
+      "files": 38108,
+      "payloadIdentityVerified": true
+    }
+  },
+  "phase4Accepted": false,
+  "rendererBackends": [
+    "gl",
+    "webgpu"
+  ],
+  "phase45Accepted": false,
+  "platformExperiment": "bounded-render-bundle-cache",
+  "experimentalJSSHA256": {
+    "webgpu-engine.mjs": "26210cbb4d0d300d5c47c58b2459e87db67d03c43a7e7b8394553d8b653c1e26",
+    "webgpu-upload-probe.mjs": "aee68de5e75ecfc8777e5f2349bf833158d2bf3bcab1ed5ed4cd6fd55f1c8bae",
+    "webgpu-bundles.mjs": "a1ad313f741f476bc19dbf5be85e6d6e6c447c18225be4cbe1aae9d361bb7a97",
+    "webgpu-bundles-probe.mjs": "3c11f437e721b9da3917d5871a5dcc82d6e527cae88de1ce1a1ed135fa26a0d3"
+  }
+}

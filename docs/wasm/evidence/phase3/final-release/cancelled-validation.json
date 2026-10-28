@@ -1,0 +1,1 @@
+{"passed": false, "reason": "Cancelled after operator screenshots demonstrated default proxied framebuffer remained at 640x480 despite DOM/engine 1920x1080. Previous metrics are not valid 1080p acceptance. Native browser fullscreen must also be verified without Playwright viewport emulation."}

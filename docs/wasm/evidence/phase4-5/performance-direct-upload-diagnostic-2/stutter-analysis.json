@@ -1,0 +1,35 @@
+{
+  "diagnosticOnly": true,
+  "performanceAcceptance": false,
+  "engineIntervals": {
+    "n": 4987,
+    "median": 16.440000005066395,
+    "p95": 59.895000003278255,
+    "p99": 128.27000000327826,
+    "maximum": 592.2300000041723,
+    "total": 119985.1649999991,
+    "over33_4": 638,
+    "over100": 96
+  },
+  "gameUpdates": {
+    "n": 4988,
+    "median": 1.6151040000522698,
+    "p95": 31.129855999978417,
+    "p99": 97.33017600001403,
+    "maximum": 565.9502080000038,
+    "total": 33600.951551998776,
+    "over33_4": 163,
+    "over100": 43
+  },
+  "turnFrameUpdates": {
+    "n": 600,
+    "median": 30.459648000032757,
+    "p95": 104.54502400000365,
+    "p99": 124.40985599999976,
+    "maximum": 565.9502080000038,
+    "total": 26416.11520000035,
+    "over33_4": 163,
+    "over100": 43
+  },
+  "scope": "Original CGame::Update and browser telemetry; no claim that engine observations equal displayed frames"
+}

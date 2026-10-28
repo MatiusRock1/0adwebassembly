@@ -1,0 +1,242 @@
+[
+  {
+    "function": "(idle)",
+    "url": "",
+    "line": -1,
+    "seconds": 8.532577
+  },
+  {
+    "function": "setBindGroup",
+    "url": "",
+    "line": -1,
+    "seconds": 4.845287
+  },
+  {
+    "function": "replay",
+    "url": "http://localhost:8097/webgpu-bundles.mjs",
+    "line": 7,
+    "seconds": 2.735497
+  },
+  {
+    "function": "bindShader",
+    "url": "http://localhost:8097/webgpu-engine.mjs",
+    "line": 422,
+    "seconds": 2.530289
+  },
+  {
+    "function": "draw",
+    "url": "http://localhost:8097/webgpu-engine.mjs",
+    "line": 458,
+    "seconds": 1.811468
+  },
+  {
+    "function": "(garbage collector)",
+    "url": "",
+    "line": -1,
+    "seconds": 1.759982
+  },
+  {
+    "function": "setUniform",
+    "url": "http://localhost:8097/webgpu-engine.mjs",
+    "line": 249,
+    "seconds": 1.256004
+  },
+  {
+    "function": "(program)",
+    "url": "",
+    "line": -1,
+    "seconds": 1.128617
+  },
+  {
+    "function": "binaryCommands",
+    "url": "http://localhost:8097/webgpu-engine.mjs",
+    "line": 271,
+    "seconds": 0.97315
+  },
+  {
+    "function": "uploadTransient",
+    "url": "http://localhost:8097/webgpu-engine.mjs",
+    "line": 529,
+    "seconds": 0.840745
+  },
+  {
+    "function": "stage",
+    "url": "http://localhost:8097/webgpu-upload.mjs",
+    "line": 9,
+    "seconds": 0.59141
+  },
+  {
+    "function": "command",
+    "url": "http://localhost:8097/webgpu-engine.mjs",
+    "line": 307,
+    "seconds": 0.421149
+  },
+  {
+    "function": "submit",
+    "url": "http://localhost:8097/webgpu-bundles.mjs",
+    "line": 48,
+    "seconds": 0.39374
+  },
+  {
+    "function": "passState",
+    "url": "http://localhost:8097/webgpu-engine.mjs",
+    "line": 411,
+    "seconds": 0.235325
+  },
+  {
+    "function": "setBindGroup",
+    "url": "http://localhost:8097/webgpu-bundles.mjs",
+    "line": 127,
+    "seconds": 0.225486
+  },
+  {
+    "function": "bindGroup",
+    "url": "http://localhost:8097/webgpu-engine.mjs",
+    "line": 417,
+    "seconds": 0.215772
+  },
+  {
+    "function": "drawIndexed",
+    "url": "",
+    "line": -1,
+    "seconds": 0.201528
+  },
+  {
+    "function": "",
+    "url": "http://localhost:8097/pyrogenesis-application.mjs",
+    "line": 6,
+    "seconds": 0.17846
+  },
+  {
+    "function": "growMemViews",
+    "url": "http://localhost:8097/pyrogenesis-application.mjs",
+    "line": 6,
+    "seconds": 0.167215
+  },
+  {
+    "function": "",
+    "url": "http://localhost:8097/webgpu-engine.mjs",
+    "line": 498,
+    "seconds": 0.166547
+  },
+  {
+    "function": "setVertexBuffer",
+    "url": "",
+    "line": -1,
+    "seconds": 0.158177
+  },
+  {
+    "function": "beginComputePass",
+    "url": "",
+    "line": -1,
+    "seconds": 0.152112
+  },
+  {
+    "function": "pushDebugGroup",
+    "url": "",
+    "line": -1,
+    "seconds": 0.149583
+  },
+  {
+    "function": "UTF8ArrayToString",
+    "url": "http://localhost:8097/pyrogenesis-application.mjs",
+    "line": 6,
+    "seconds": 0.107789
+  },
+  {
+    "function": "recordGroup",
+    "url": "http://localhost:8097/webgpu-bundles.mjs",
+    "line": 112,
+    "seconds": 0.107358
+  },
+  {
+    "function": "borderConstants",
+    "url": "http://localhost:8097/webgpu-border.mjs",
+    "line": 112,
+    "seconds": 0.093225
+  },
+  {
+    "function": "beginRenderPass",
+    "url": "",
+    "line": -1,
+    "seconds": 0.092559
+  },
+  {
+    "function": "reserve",
+    "url": "http://localhost:8097/webgpu-bundles.mjs",
+    "line": 97,
+    "seconds": 0.083706
+  },
+  {
+    "function": "reference",
+    "url": "http://localhost:8097/webgpu-bundles.mjs",
+    "line": 96,
+    "seconds": 0.083439
+  },
+  {
+    "function": "call",
+    "url": "http://localhost:8097/webgpu-engine.mjs",
+    "line": 80,
+    "seconds": 0.081803
+  },
+  {
+    "function": "",
+    "url": "http://localhost:8097/webgpu-engine.mjs",
+    "line": 463,
+    "seconds": 0.076877
+  },
+  {
+    "function": "setVertexBuffer",
+    "url": "http://localhost:8097/webgpu-bundles.mjs",
+    "line": 130,
+    "seconds": 0.07503
+  },
+  {
+    "function": "get buffer",
+    "url": "",
+    "line": -1,
+    "seconds": 0.066105
+  },
+  {
+    "function": "get",
+    "url": "http://localhost:8097/webgpu-engine.mjs",
+    "line": 71,
+    "seconds": 0.065006
+  },
+  {
+    "function": "record",
+    "url": "http://localhost:8097/webgpu-bundles.mjs",
+    "line": 105,
+    "seconds": 0.055424
+  },
+  {
+    "function": "align",
+    "url": "http://localhost:8097/webgpu-engine.mjs",
+    "line": 17,
+    "seconds": 0.054245
+  },
+  {
+    "function": "createView",
+    "url": "",
+    "line": -1,
+    "seconds": 0.049417
+  },
+  {
+    "function": "validateCommandDataRange",
+    "url": "http://localhost:8097/webgpu-engine.mjs",
+    "line": 510,
+    "seconds": 0.049321
+  },
+  {
+    "function": "beginFramebuffer",
+    "url": "http://localhost:8097/webgpu-engine.mjs",
+    "line": 393,
+    "seconds": 0.048455
+  },
+  {
+    "function": "setPipeline",
+    "url": "",
+    "line": -1,
+    "seconds": 0.047513
+  }
+]

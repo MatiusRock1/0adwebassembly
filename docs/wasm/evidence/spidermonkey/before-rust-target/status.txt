@@ -1,0 +1,1 @@
+BLOCKED_CONFIGURE: not a successful SpiderMonkey WASM build

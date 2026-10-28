@@ -1,0 +1,698 @@
+{
+  "generated_utc": "2026-10-11T16:56:13.190733+00:00",
+  "head": {
+    "exit_code": 0,
+    "stdout": "40b8794eecb9618da69e10bacffa8814c561aa51",
+    "stderr": ""
+  },
+  "remotes": {
+    "exit_code": 0,
+    "stdout": "origin\thttps://gitea.wildfiregames.com/MatiusRock/0adwebassembly.git (fetch)\norigin\thttps://gitea.wildfiregames.com/MatiusRock/0adwebassembly.git (push)",
+    "stderr": ""
+  },
+  "index_exists": false,
+  "index_lock_exists": true,
+  "spidermonkey_version": "128.13.0",
+  "spidermonkey_library_version": "128.13.0+wfg5",
+  "js_api_lexical_occurrences": {
+    "JS::AddPromiseReactions": 1,
+    "JS::AutoCheckCannotGC": 2,
+    "JS::Call": 1,
+    "JS::CallArgs": 16,
+    "JS::CallArgsFromVp": 7,
+    "JS::CloneDataPolicy": 2,
+    "JS::Compartment": 3,
+    "JS::CompileFunction": 1,
+    "JS::CompileModule": 1,
+    "JS::CompileOptions": 5,
+    "JS::Construct": 1,
+    "JS::CurrentGlobalOrNull": 1,
+    "JS::EnterRealm": 1,
+    "JS::Evaluate": 3,
+    "JS::FinishDynamicModuleImport": 3,
+    "JS::FinishIncrementalGC": 1,
+    "JS::GCContext": 1,
+    "JS::GCDescription": 1,
+    "JS::GCOptions": 2,
+    "JS::GCProgress": 3,
+    "JS::GCReason": 4,
+    "JS::GC_SLICE_BEGIN": 1,
+    "JS::GC_SLICE_END": 1,
+    "JS::GetArrayLength": 1,
+    "JS::GetCompartmentForRealm": 1,
+    "JS::GetCurrentRealmOrNull": 3,
+    "JS::GetMaybePtrFromReservedSlot": 5,
+    "JS::GetModuleNamespace": 1,
+    "JS::GetModuleRequestSpecifier": 1,
+    "JS::GetObjectRealmOrNull": 4,
+    "JS::GetPromiseResult": 2,
+    "JS::GetPromiseState": 2,
+    "JS::GetRealmPrivate": 2,
+    "JS::HandleObject": 25,
+    "JS::HandleValue": 71,
+    "JS::HandleValueArray": 4,
+    "JS::Heap": 2,
+    "JS::IncrementalGCSlice": 1,
+    "JS::InformalValueTypeName": 1,
+    "JS::InitRealmStandardClasses": 1,
+    "JS::InitSelfHostedCode": 1,
+    "JS::Int32Value": 2,
+    "JS::IsArrayObject": 1,
+    "JS::IsIncrementalGCEnabled": 1,
+    "JS::IsIncrementalGCInProgress": 5,
+    "JS::IsPromiseObject": 1,
+    "JS::JobQueue": 4,
+    "JS::Latin1Char": 1,
+    "JS::LeaveRealm": 1,
+    "JS::ModuleEvaluate": 1,
+    "JS::ModuleLink": 1,
+    "JS::MutableHandleObject": 1,
+    "JS::MutableHandleValue": 49,
+    "JS::MutableHandleValueVector": 2,
+    "JS::NewArrayObject": 1,
+    "JS::NonIncrementalGC": 1,
+    "JS::NullHandleValue": 3,
+    "JS::NumberValue": 7,
+    "JS::Object": 1,
+    "JS::ObjectOrNullValue": 2,
+    "JS::ObjectValue": 20,
+    "JS::OnNewGlobalHookOption": 1,
+    "JS::PersistentRootedObject": 10,
+    "JS::PersistentRootedValue": 3,
+    "JS::PrepareForFullGC": 1,
+    "JS::PrepareZoneForGC": 2,
+    "JS::PrivateValue": 5,
+    "JS::PromiseRejectionHandlingState": 3,
+    "JS::PromiseState": 2,
+    "JS::PropertyDescriptor": 1,
+    "JS::PropertyKey": 4,
+    "JS::Realm": 8,
+    "JS::RealmBehaviors": 1,
+    "JS::RealmCreationOptions": 1,
+    "JS::RealmOptions": 1,
+    "JS::Rooted": 1,
+    "JS::RootedFunction": 2,
+    "JS::RootedId": 2,
+    "JS::RootedIdVector": 2,
+    "JS::RootedObject": 49,
+    "JS::RootedObjectVector": 1,
+    "JS::RootedString": 3,
+    "JS::RootedValue": 95,
+    "JS::RootedValueVector": 1,
+    "JS::SetGCSliceCallback": 1,
+    "JS::SetJobQueue": 1,
+    "JS::SetModuleDynamicImportHook": 2,
+    "JS::SetModuleMetadataHook": 2,
+    "JS::SetModulePrivate": 1,
+    "JS::SetModuleResolveHook": 2,
+    "JS::SetPromiseRejectionTrackerCallback": 1,
+    "JS::SetRealmPrivate": 2,
+    "JS::SetReservedSlot": 5,
+    "JS::SourceOwnership": 5,
+    "JS::SourceText": 5,
+    "JS::StartIncrementalGC": 1,
+    "JS::StringHasLatin1Chars": 1,
+    "JS::StringValue": 1,
+    "JS::StructuredCloneScope": 2,
+    "JS::ToBoolean": 1,
+    "JS::ToInt32": 1,
+    "JS::ToNumber": 2,
+    "JS::ToString": 1,
+    "JS::ToUint16": 2,
+    "JS::ToUint32": 1,
+    "JS::UndefinedHandleValue": 2,
+    "JS::UndefinedValue": 10,
+    "JS::Value": 29,
+    "JS::Values": 2,
+    "JS_CallFunction": 1,
+    "JS_CallFunctionValue": 2,
+    "JS_ClearPendingException": 2,
+    "JS_DEFAULT_ZEAL_FREQ": 1,
+    "JS_DefineFunction": 7,
+    "JS_DefineObject": 1,
+    "JS_DefineProperty": 4,
+    "JS_DefinePropertyById": 1,
+    "JS_DefineUCProperty": 1,
+    "JS_DeleteProperty": 1,
+    "JS_DestroyContext": 1,
+    "JS_ErrorFromException": 1,
+    "JS_FN": 1,
+    "JS_FreezeObject": 1,
+    "JS_GetConstructor": 1,
+    "JS_GetElement": 1,
+    "JS_GetGCParameter": 5,
+    "JS_GetLatin1StringCharsAndLength": 2,
+    "JS_GetOwnPropertyDescriptor": 1,
+    "JS_GetPendingException": 1,
+    "JS_GetProperty": 12,
+    "JS_GetPropertyById": 1,
+    "JS_GetRuntime": 2,
+    "JS_GetTwoByteStringCharsAndLength": 1,
+    "JS_GetTwoByteStringsCharsAndLength": 1,
+    "JS_GetUCProperty": 1,
+    "JS_GlobalLexicalEnvironment": 1,
+    "JS_GlobalObjectTraceHook": 1,
+    "JS_HasProperty": 3,
+    "JS_IdToValue": 2,
+    "JS_Init": 3,
+    "JS_InitClass": 1,
+    "JS_IsExceptionPending": 2,
+    "JS_IsTypedArrayObject": 1,
+    "JS_NewContext": 1,
+    "JS_NewFunction": 1,
+    "JS_NewGlobalObject": 1,
+    "JS_NewObject": 3,
+    "JS_NewObjectWithGivenProto": 1,
+    "JS_NewPlainObject": 1,
+    "JS_NewStringCopyZ": 1,
+    "JS_NewUCStringCopyN": 1,
+    "JS_ParseJSON": 1,
+    "JS_ReadStructuredClone": 1,
+    "JS_ReportErrorUTF8": 1,
+    "JS_STRUCTURED_CLONE_VERSION": 1,
+    "JS_SetContextPrivate": 1,
+    "JS_SetElement": 1,
+    "JS_SetGCParameter": 9,
+    "JS_SetGCZeal": 2,
+    "JS_SetGlobalJitCompilerOption": 7,
+    "JS_SetNativeStackQuota": 1,
+    "JS_SetOffthreadIonCompilationEnabled": 1,
+    "JS_SetPrototype": 1,
+    "JS_ShutDown": 2,
+    "JS_Shutdown": 1,
+    "JS_Stringify": 3,
+    "JS_ValueToObject": 1,
+    "JS_WriteStructuredClone": 2
+  },
+  "os_api_candidates": [
+    {
+      "path": "source/lib/config2.h",
+      "line": 46,
+      "text": "// (quite slow, entailing mprotect() before/after each access)."
+    },
+    {
+      "path": "source/lib/posix/posix_dlfcn.h",
+      "line": 26,
+      "text": "# include <dlfcn.h>"
+    },
+    {
+      "path": "source/lib/posix/posix_pthread.h",
+      "line": 26,
+      "text": "# include <pthread.h>"
+    },
+    {
+      "path": "source/lib/sysdep/arch/x86_x64/x86_x64.cpp",
+      "line": 411,
+      "text": "pthread_getschedparam(pthread_self(), &m_oldPolicy, &m_oldParam);"
+    },
+    {
+      "path": "source/lib/sysdep/arch/x86_x64/x86_x64.cpp",
+      "line": 416,
+      "text": "pthread_setschedparam(pthread_self(), SCHED_FIFO, &newParam);"
+    },
+    {
+      "path": "source/lib/sysdep/arch/x86_x64/x86_x64.cpp",
+      "line": 422,
+      "text": "pthread_setschedparam(pthread_self(), m_oldPolicy, &m_oldParam);"
+    },
+    {
+      "path": "source/lib/sysdep/os/linux/dir_watch_inotify.cpp",
+      "line": 104,
+      "text": "pthread_cancel(g_event_loop_thread);"
+    },
+    {
+      "path": "source/lib/sysdep/os/linux/dir_watch_inotify.cpp",
+      "line": 112,
+      "text": "pthread_join(g_event_loop_thread, NULL);"
+    },
+    {
+      "path": "source/lib/sysdep/os/linux/dir_watch_inotify.cpp",
+      "line": 145,
+      "text": "pthread_mutex_lock(&g_mutex);"
+    },
+    {
+      "path": "source/lib/sysdep/os/linux/dir_watch_inotify.cpp",
+      "line": 147,
+      "text": "pthread_mutex_unlock(&g_mutex);"
+    },
+    {
+      "path": "source/lib/sysdep/os/linux/dir_watch_inotify.cpp",
+      "line": 212,
+      "text": "int ret = pthread_create(&g_event_loop_thread, NULL, &inotify_event_loop, NULL);"
+    },
+    {
+      "path": "source/lib/sysdep/os/linux/dir_watch_inotify.cpp",
+      "line": 249,
+      "text": "pthread_mutex_lock(&g_mutex);"
+    },
+    {
+      "path": "source/lib/sysdep/os/linux/dir_watch_inotify.cpp",
+      "line": 251,
+      "text": "pthread_mutex_unlock(&g_mutex);"
+    },
+    {
+      "path": "source/lib/sysdep/os/linux/ldbg.cpp",
+      "line": 165,
+      "text": "/* This is basically a reimplementation of the pthread_setname_np() glibc"
+    },
+    {
+      "path": "source/lib/sysdep/os/osx/odbg.cpp",
+      "line": 31,
+      "text": "#include <pthread.h>"
+    },
+    {
+      "path": "source/lib/sysdep/os/osx/odbg.cpp",
+      "line": 52,
+      "text": "pthread_setname_np(name);"
+    },
+    {
+      "path": "source/lib/sysdep/os/unix/udbg.cpp",
+      "line": 70,
+      "text": "pid_t ret=fork();"
+    },
+    {
+      "path": "source/lib/sysdep/os/unix/unix.cpp",
+      "line": 129,
+      "text": "pid_t cpid = fork();"
+    },
+    {
+      "path": "source/lib/sysdep/os/unix/unix.cpp",
+      "line": 355,
+      "text": "pid_t pid = fork();"
+    },
+    {
+      "path": "source/lib/sysdep/os/unix/uvm.cpp",
+      "line": 50,
+      "text": "void* p = mmap(0, size, PROT_NONE, mmap_flags|MAP_NORESERVE, -1, 0);"
+    },
+    {
+      "path": "source/lib/sysdep/os/unix/uvm.cpp",
+      "line": 75,
+      "text": "if(mmap((void*)address, size, prot, mmap_flags|MAP_FIXED, -1, 0) == MAP_FAILED)"
+    },
+    {
+      "path": "source/lib/sysdep/os/unix/uvm.cpp",
+      "line": 87,
+      "text": "if(mmap((void*)address, size, PROT_NONE, mmap_flags|MAP_NORESERVE|MAP_FIXED, -1, 0) == MAP_FAILED)"
+    },
+    {
+      "path": "source/lib/sysdep/os/unix/uvm.cpp",
+      "line": 96,
+      "text": "if(mprotect((void*)address, size, prot) != 0)"
+    },
+    {
+      "path": "source/lib/sysdep/os/win/win.h",
+      "line": 87,
+      "text": "#include <windows.h>"
+    },
+    {
+      "path": "source/lib/sysdep/os/win/wposix/wdlfcn.cpp",
+      "line": 64,
+      "text": "void* dlopen(const char* so_name, int flags)"
+    },
+    {
+      "path": "source/lib/sysdep/os/win/wposix/wdlfcn.h",
+      "line": 39,
+      "text": "void* dlopen(const char* so_name, int flags);"
+    },
+    {
+      "path": "source/lib/sysdep/os/win/wposix/wmman.cpp",
+      "line": 67,
+      "text": "int mprotect(void* addr, size_t len, int prot)"
+    },
+    {
+      "path": "source/lib/sysdep/os/win/wposix/wmman.cpp",
+      "line": 195,
+      "text": "(void)mprotect(p, len, prot);"
+    },
+    {
+      "path": "source/lib/sysdep/os/win/wposix/wmman.cpp",
+      "line": 202,
+      "text": "void* mmap(void* start, size_t len, int prot, int flags, int fd, off_t ofs)"
+    },
+    {
+      "path": "source/lib/sysdep/os/win/wposix/wmman.h",
+      "line": 54,
+      "text": "extern void* mmap(void* start, size_t len, int prot, int flags, int fd, off_t offset);"
+    },
+    {
+      "path": "source/lib/sysdep/os/win/wposix/wmman.h",
+      "line": 57,
+      "text": "extern int mprotect(void* addr, size_t len, int prot);"
+    },
+    {
+      "path": "source/lib/sysdep/os/win/wposix/wpthread.cpp",
+      "line": 47,
+      "text": "pthread_t pthread_from_HANDLE(HANDLE h)"
+    },
+    {
+      "path": "source/lib/sysdep/os/win/wposix/wpthread.cpp",
+      "line": 78,
+      "text": "int pthread_equal(pthread_t t1, pthread_t t2)"
+    },
+    {
+      "path": "source/lib/sysdep/os/win/wposix/wpthread.cpp",
+      "line": 83,
+      "text": "pthread_t pthread_self()"
+    },
+    {
+      "path": "source/lib/sysdep/os/win/wposix/wpthread.cpp",
+      "line": 85,
+      "text": "return pthread_from_HANDLE(GetCurrentThreadUniqueHandle());"
+    },
+    {
+      "path": "source/lib/sysdep/os/win/wposix/wpthread.cpp",
+      "line": 89,
+      "text": "int pthread_getschedparam(pthread_t thread, int* policy, struct sched_param* param)"
+    },
+    {
+      "path": "source/lib/sysdep/os/win/wposix/wpthread.cpp",
+      "line": 105,
+      "text": "int pthread_setschedparam(pthread_t thread, int policy, const struct sched_param* param)"
+    },
+    {
+      "path": "source/lib/sysdep/os/win/wposix/wpthread.cpp",
+      "line": 148,
+      "text": "int pthread_key_create(pthread_key_t* key, void (*dtor)(void*))"
+    },
+    {
+      "path": "source/lib/sysdep/os/win/wposix/wpthread.cpp",
+      "line": 176,
+      "text": "int pthread_key_delete(pthread_key_t key)"
+    },
+    {
+      "path": "source/lib/sysdep/os/win/wposix/wpthread.cpp",
+      "line": 187,
+      "text": "void* pthread_getspecific(pthread_key_t key)"
+    },
+    {
+      "path": "source/lib/sysdep/os/win/wposix/wpthread.cpp",
+      "line": 213,
+      "text": "int pthread_setspecific(pthread_key_t key, const void* value)"
+    },
+    {
+      "path": "source/lib/sysdep/os/win/wposix/wpthread.cpp",
+      "line": 239,
+      "text": "void* tls = pthread_getspecific(key);"
+    },
+    {
+      "path": "source/lib/sysdep/os/win/wposix/wpthread.cpp",
+      "line": 242,
+      "text": "WARN_IF_ERR(pthread_setspecific(key, 0));"
+    },
+    {
+      "path": "source/lib/sysdep/os/win/wposix/wpthread.cpp",
+      "line": 276,
+      "text": "int pthread_mutexattr_init(pthread_mutexattr_t*)"
+    },
+    {
+      "path": "source/lib/sysdep/os/win/wposix/wpthread.cpp",
+      "line": 281,
+      "text": "int pthread_mutexattr_destroy(pthread_mutexattr_t*)"
+    },
+    {
+      "path": "source/lib/sysdep/os/win/wposix/wpthread.cpp",
+      "line": 286,
+      "text": "int pthread_mutexattr_gettype(const pthread_mutexattr_t*, int* type)"
+    },
+    {
+      "path": "source/lib/sysdep/os/win/wposix/wpthread.cpp",
+      "line": 292,
+      "text": "int pthread_mutexattr_settype(pthread_mutexattr_t*, int type)"
+    },
+    {
+      "path": "source/lib/sysdep/os/win/wposix/wpthread.cpp",
+      "line": 308,
+      "text": "pthread_mutex_t pthread_mutex_initializer()"
+    },
+    {
+      "path": "source/lib/sysdep/os/win/wposix/wpthread.cpp",
+      "line": 315,
+      "text": "int pthread_mutex_destroy(pthread_mutex_t* m)"
+    },
+    {
+      "path": "source/lib/sysdep/os/win/wposix/wpthread.cpp",
+      "line": 326,
+      "text": "int pthread_mutex_init(pthread_mutex_t* m, const pthread_mutexattr_t*)"
+    },
+    {
+      "path": "source/lib/sysdep/os/win/wposix/wpthread.cpp",
+      "line": 328,
+      "text": "*m = pthread_mutex_initializer();"
+    },
+    {
+      "path": "source/lib/sysdep/os/win/wposix/wpthread.cpp",
+      "line": 332,
+      "text": "int pthread_mutex_lock(pthread_mutex_t* m)"
+    },
+    {
+      "path": "source/lib/sysdep/os/win/wposix/wpthread.cpp",
+      "line": 341,
+      "text": "int pthread_mutex_trylock(pthread_mutex_t* m)"
+    },
+    {
+      "path": "source/lib/sysdep/os/win/wposix/wpthread.cpp",
+      "line": 350,
+      "text": "int pthread_mutex_unlock(pthread_mutex_t* m)"
+    },
+    {
+      "path": "source/lib/sysdep/os/win/wposix/wpthread.cpp",
+      "line": 361,
+      "text": "int pthread_mutex_timedlock(pthread_mutex_t*, const struct timespec* /*abs_timeout*/)"
+    },
+    {
+      "path": "source/lib/sysdep/os/win/wposix/wpthread.cpp",
+      "line": 571,
+      "text": "int pthread_create(pthread_t* thread_id, const void* /*attr*/, void* (*func)(void*), void* arg)"
+    },
+    {
+      "path": "source/lib/sysdep/os/win/wposix/wpthread.cpp",
+      "line": 599,
+      "text": "*thread_id = pthread_from_HANDLE(hThread);"
+    },
+    {
+      "path": "source/lib/sysdep/os/win/wposix/wpthread.cpp",
+      "line": 605,
+      "text": "int pthread_cancel(pthread_t thread)"
+    },
+    {
+      "path": "source/lib/sysdep/os/win/wposix/wpthread.cpp",
+      "line": 614,
+      "text": "int pthread_join(pthread_t thread, void** value_ptr)"
+    },
+    {
+      "path": "source/lib/sysdep/os/win/wposix/wpthread.h",
+      "line": 58,
+      "text": "int pthread_equal(pthread_t t1, pthread_t t2);"
+    },
+    {
+      "path": "source/lib/sysdep/os/win/wposix/wpthread.h",
+      "line": 59,
+      "text": "pthread_t pthread_self();"
+    },
+    {
+      "path": "source/lib/sysdep/os/win/wposix/wpthread.h",
+      "line": 60,
+      "text": "int pthread_getschedparam(pthread_t thread, int* policy, struct sched_param* param);"
+    },
+    {
+      "path": "source/lib/sysdep/os/win/wposix/wpthread.h",
+      "line": 61,
+      "text": "int pthread_setschedparam(pthread_t thread, int policy, const struct sched_param* param);"
+    },
+    {
+      "path": "source/lib/sysdep/os/win/wposix/wpthread.h",
+      "line": 62,
+      "text": "int pthread_create(pthread_t* thread, const void* attr, void* (*func)(void*), void* arg);"
+    },
+    {
+      "path": "source/lib/sysdep/os/win/wposix/wpthread.h",
+      "line": 63,
+      "text": "int pthread_cancel(pthread_t thread);"
+    },
+    {
+      "path": "source/lib/sysdep/os/win/wposix/wpthread.h",
+      "line": 64,
+      "text": "int pthread_join(pthread_t thread, void** value_ptr);"
+    },
+    {
+      "path": "source/lib/sysdep/os/win/wposix/wpthread.h",
+      "line": 69,
+      "text": "int pthread_mutexattr_init(pthread_mutexattr_t* attr);"
+    },
+    {
+      "path": "source/lib/sysdep/os/win/wposix/wpthread.h",
+      "line": 70,
+      "text": "int pthread_mutexattr_destroy(pthread_mutexattr_t* attr);"
+    },
+    {
+      "path": "source/lib/sysdep/os/win/wposix/wpthread.h",
+      "line": 72,
+      "text": "int pthread_mutexattr_gettype(const pthread_mutexattr_t* attr, int* type);"
+    },
+    {
+      "path": "source/lib/sysdep/os/win/wposix/wpthread.h",
+      "line": 73,
+      "text": "int pthread_mutexattr_settype(pthread_mutexattr_t* attr, int type);"
+    },
+    {
+      "path": "source/lib/sysdep/os/win/wposix/wpthread.h",
+      "line": 76,
+      "text": "pthread_mutex_t pthread_mutex_initializer();"
+    },
+    {
+      "path": "source/lib/sysdep/os/win/wposix/wpthread.h",
+      "line": 77,
+      "text": "#define PTHREAD_MUTEX_INITIALIZER pthread_mutex_initializer()"
+    },
+    {
+      "path": "source/lib/sysdep/os/win/wposix/wpthread.h",
+      "line": 78,
+      "text": "int pthread_mutex_init(pthread_mutex_t*, const pthread_mutexattr_t*);"
+    },
+    {
+      "path": "source/lib/sysdep/os/win/wposix/wpthread.h",
+      "line": 79,
+      "text": "int pthread_mutex_destroy(pthread_mutex_t*);"
+    },
+    {
+      "path": "source/lib/sysdep/os/win/wposix/wpthread.h",
+      "line": 80,
+      "text": "int pthread_mutex_lock(pthread_mutex_t*);"
+    },
+    {
+      "path": "source/lib/sysdep/os/win/wposix/wpthread.h",
+      "line": 81,
+      "text": "int pthread_mutex_trylock(pthread_mutex_t*);"
+    },
+    {
+      "path": "source/lib/sysdep/os/win/wposix/wpthread.h",
+      "line": 82,
+      "text": "int pthread_mutex_unlock(pthread_mutex_t*);"
+    },
+    {
+      "path": "source/lib/sysdep/os/win/wposix/wpthread.h",
+      "line": 83,
+      "text": "int pthread_mutex_timedlock(pthread_mutex_t*, const struct timespec*);"
+    },
+    {
+      "path": "source/lib/sysdep/os/win/wposix/wpthread.h",
+      "line": 88,
+      "text": "int pthread_key_create(pthread_key_t*, void (*dtor)(void*));"
+    },
+    {
+      "path": "source/lib/sysdep/os/win/wposix/wpthread.h",
+      "line": 89,
+      "text": "int pthread_key_delete(pthread_key_t);"
+    },
+    {
+      "path": "source/lib/sysdep/os/win/wposix/wpthread.h",
+      "line": 90,
+      "text": "void* pthread_getspecific(pthread_key_t);"
+    },
+    {
+      "path": "source/lib/sysdep/os/win/wposix/wpthread.h",
+      "line": 91,
+      "text": "int   pthread_setspecific(pthread_key_t, const void* value);"
+    },
+    {
+      "path": "source/lib/sysdep/os/win/wposix/wutsname.cpp",
+      "line": 34,
+      "text": "#include <windows.h>"
+    },
+    {
+      "path": "source/ps/DllLoader.cpp",
+      "line": 66,
+      "text": "// NB: our Windows dlopen() function changes the extension to .dll"
+    },
+    {
+      "path": "source/ps/DllLoader.cpp",
+      "line": 103,
+      "text": "// (see Apple's dyld(1) and dlopen(3) man pages for more info)"
+    },
+    {
+      "path": "source/ps/DllLoader.cpp",
+      "line": 129,
+      "text": "void* handle = dlopen(filename.c_str(), flags);"
+    },
+    {
+      "path": "source/ps/DllLoader.cpp",
+      "line": 133,
+      "text": "errors << \"dlopen(\" << filename << \") failed: \" << dlerror() << \"; \";"
+    },
+    {
+      "path": "source/ps/GameSetup/HWDetect.cpp",
+      "line": 459,
+      "text": "Script::SetProperty(rq, settings, \"hardware_concurrency\", std::thread::hardware_concurrency());"
+    },
+    {
+      "path": "source/ps/Profiler2.cpp",
+      "line": 133,
+      "text": "m_HttpServerThread = std::thread([this](){"
+    },
+    {
+      "path": "source/ps/Profiler2.h",
+      "line": 395,
+      "text": "std::thread m_HttpServerThread;"
+    },
+    {
+      "path": "source/ps/TaskManager.cpp",
+      "line": 53,
+      "text": "const size_t hardware_concurrency = std::thread::hardware_concurrency();"
+    },
+    {
+      "path": "source/ps/TaskManager.cpp",
+      "line": 62,
+      "text": "* Light wrapper around std::thread. Ensures Join has been called."
+    },
+    {
+      "path": "source/ps/TaskManager.cpp",
+      "line": 74,
+      "text": "m_Thread = std::thread(HandleExceptions<DoStart<T, callable>>::Wrapper, object);"
+    },
+    {
+      "path": "source/ps/TaskManager.cpp",
+      "line": 85,
+      "text": "std::thread m_Thread;"
+    },
+    {
+      "path": "source/ps/Threading.cpp",
+      "line": 27,
+      "text": "static std::thread::id g_MainThread;"
+    },
+    {
+      "path": "source/network/NetClient.cpp",
+      "line": 217,
+      "text": "m_PollingThread = std::thread(Threading::HandleExceptions<CNetClientSession::RunNetLoop>::Wrapper, m_Session);"
+    },
+    {
+      "path": "source/network/NetClient.h",
+      "line": 337,
+      "text": "std::thread m_PollingThread;"
+    },
+    {
+      "path": "source/network/NetServer.cpp",
+      "line": 147,
+      "text": "m_WorkerThread = std::thread(Threading::HandleExceptions<RunThread>::Wrapper, this,"
+    },
+    {
+      "path": "source/network/NetServer.cpp",
+      "line": 152,
+      "text": "m_UPnPThread = std::thread(Threading::HandleExceptions<SetupUPnP>::Wrapper, port);"
+    },
+    {
+      "path": "source/network/NetServer.h",
+      "line": 329,
+      "text": "std::thread m_UPnPThread;"
+    },
+    {
+      "path": "source/network/NetServer.h",
+      "line": 336,
+      "text": "std::thread m_WorkerThread;"
+    }
+  ],
+  "limitations": [
+    "Lexical matches include comments/tests and are not a call graph.",
+    "No compilation or runtime compatibility established by this report."
+  ]
+}

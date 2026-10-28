@@ -1,0 +1,13 @@
+{
+  "browser": "firefox",
+  "console": [
+    {
+      "type": "warning",
+      "text": "[JavaScript Warning: \"Failed to create WebGL context: WebGL creation failed: \n* AllowWebgl2:false restricts context creation on this system. ()\" {file: \"http://localhost:8080/scene.mjs\" line: 104}]"
+    }
+  ],
+  "errors": [],
+  "workerEvents": [],
+  "cycleMetrics": [],
+  "version": "142.0.1"
+}

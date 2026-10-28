@@ -1,0 +1,23 @@
+{
+  "topLeft": [
+    0,
+    0,
+    255,
+    255
+  ],
+  "bottomLeft": [
+    0,
+    0,
+    0,
+    255
+  ],
+  "topRight": [
+    0,
+    0,
+    0,
+    255
+  ],
+  "errors": [],
+  "format": "bgra8unorm",
+  "passed": true
+}

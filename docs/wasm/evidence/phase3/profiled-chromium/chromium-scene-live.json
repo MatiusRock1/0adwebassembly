@@ -1,0 +1,525 @@
+{
+  "browser": "chromium",
+  "console": [
+    {
+      "type": "log",
+      "text": "SCENE_ACTOR_QUALITY_HOOK_BEGIN"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_QUALITY_GET_BEGIN"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_QUALITY_GET_END 100 100"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_ACTOR_QUALITY_HOOK_END"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_ACTOR_VALIDATOR_BEGIN"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_MAP_LOAD_BEGIN"
+    },
+    {
+      "type": "warning",
+      "text": "w:8,t:0x00600030: Heap resize call from 67108864 to 80543744 took 0.10009765625 msecs. Success: true"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_LOADER_FINISHED"
+    },
+    {
+      "type": "warning",
+      "text": "w:8,t:0x00600030: Heap resize call from 80543744 to 96665600 took 0.1201171875 msecs. Success: true"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_GAME_INITIALIZED"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_MAP_LOADED 0"
+    },
+    {
+      "type": "log",
+      "text": "ERROR: Failed to convert texture \"art/textures/misc/territory_border_mask.png\" (NVTT not available)"
+    },
+    {
+      "type": "log",
+      "text": "ERROR: Failed to convert texture \"art/textures/misc/territory_border.png\" (NVTT not available)"
+    },
+    {
+      "type": "warning",
+      "text": "w:8,t:0x00600030: Heap resize call from 96665600 to 115998720 took 0.09521484375 msecs. Success: true"
+    },
+    {
+      "type": "warning",
+      "text": "w:8,t:0x00600030: Heap resize call from 115998720 to 139198464 took 0.06494140625 msecs. Success: true"
+    },
+    {
+      "type": "warning",
+      "text": "w:8,t:0x00600030: Heap resize call from 139198464 to 167051264 took 0.074951171875 msecs. Success: true"
+    },
+    {
+      "type": "warning",
+      "text": "w:8,t:0x00600030: Heap resize call from 167051264 to 200474624 took 0.080078125 msecs. Success: true"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_READY"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_STATS {\"frame\":30,\"tick\":8,\"restarts\":0,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":317.544,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_STATS {\"frame\":30,\"tick\":8,\"restarts\":0,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":317.544,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}"
+    },
+    {
+      "type": "warning",
+      "text": "w:8,t:0x00600030: Heap resize call from 200474624 to 240582656 took 0.065185546875 msecs. Success: true"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_STATS {\"frame\":60,\"tick\":24,\"restarts\":0,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":317.544,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_SELECTED 8"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_STATS {\"frame\":90,\"tick\":38,\"restarts\":0,\"paused\":false,\"selected\":8,\"x\":155.36400,\"z\":243.10500,\"screenX\":317.544,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":10,\"width\":640,\"height\":480}"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_WALK_QUEUED 8 145.36389 243.06433"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_STATS {\"frame\":120,\"tick\":49,\"restarts\":0,\"paused\":false,\"selected\":8,\"x\":145.83043,\"z\":243.06592,\"screenX\":381.853,\"screenY\":136.011,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":10,\"width\":640,\"height\":480}"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_PAUSED 1"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_STATS {\"frame\":150,\"tick\":51,\"restarts\":0,\"paused\":true,\"selected\":8,\"x\":145.83043,\"z\":243.06592,\"screenX\":381.853,\"screenY\":136.011,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":10,\"width\":640,\"height\":480}"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_STATS {\"frame\":180,\"tick\":52,\"restarts\":0,\"paused\":true,\"selected\":8,\"x\":145.83043,\"z\":243.06592,\"screenX\":381.853,\"screenY\":136.011,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":10,\"width\":640,\"height\":480}"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_STATS {\"frame\":210,\"tick\":52,\"restarts\":0,\"paused\":true,\"selected\":8,\"x\":145.83043,\"z\":243.06592,\"screenX\":449.308,\"screenY\":136.011,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":10,\"width\":640,\"height\":480}"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_RESIZED 800 600"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_STATS {\"frame\":240,\"tick\":52,\"restarts\":0,\"paused\":true,\"selected\":8,\"x\":145.83043,\"z\":243.06592,\"screenX\":561.635,\"screenY\":170.014,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":10,\"width\":800,\"height\":600}"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_RESIZED 640 480"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_SELECTED 0"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_MAP_LOAD_BEGIN"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_LOADER_FINISHED"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_GAME_INITIALIZED"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_MAP_LOADED 1"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_STATS {\"frame\":270,\"tick\":0,\"restarts\":1,\"paused\":true,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_MAP_LOAD_BEGIN"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_LOADER_FINISHED"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_GAME_INITIALIZED"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_MAP_LOADED 2"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_STATS {\"frame\":300,\"tick\":0,\"restarts\":2,\"paused\":true,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_MAP_LOAD_BEGIN"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_LOADER_FINISHED"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_GAME_INITIALIZED"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_MAP_LOADED 3"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_STATS {\"frame\":330,\"tick\":0,\"restarts\":3,\"paused\":true,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_STOPPED"
+    }
+  ],
+  "errors": [],
+  "workerEvents": [
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-scene.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-scene.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-scene.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-scene.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-scene.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-scene.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-scene.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-scene.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-scene.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-scene.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-scene.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-scene.mjs"
+    }
+  ],
+  "cycleMetrics": [],
+  "version": "141.0.7390.37",
+  "headers": {
+    "cache-control": "no-store",
+    "content-length": "1569",
+    "content-type": "text/html",
+    "cross-origin-embedder-policy": "require-corp",
+    "cross-origin-opener-policy": "same-origin",
+    "cross-origin-resource-policy": "same-origin",
+    "date": "Mon, 12 Oct 2026 16:08:42 GMT",
+    "last-modified": "Mon, 12 Oct 2026 15:34:11 GMT",
+    "server": "SimpleHTTP/0.6 Python/3.12.3"
+  },
+  "isolated": true,
+  "imageMetrics": {
+    "size": [
+      642,
+      483
+    ],
+    "channelStdDev": [
+      37.46472534169769,
+      37.276725940301866,
+      35.49261808089841
+    ],
+    "quantizedColors": 128
+  },
+  "readyState": {
+    "ready": true,
+    "metrics": {
+      "frame": 60,
+      "tick": 24,
+      "restarts": 0,
+      "paused": false,
+      "selected": 0,
+      "x": 155.364,
+      "z": 243.105,
+      "screenX": 317.544,
+      "screenY": 136.198,
+      "terrainTriangles": 3072,
+      "modelTriangles": 6998,
+      "drawCalls": 9,
+      "width": 640,
+      "height": 480
+    },
+    "events": [
+      "SCENE_ACTOR_QUALITY_HOOK_BEGIN",
+      "SCENE_QUALITY_GET_BEGIN",
+      "SCENE_QUALITY_GET_END 100 100",
+      "SCENE_ACTOR_QUALITY_HOOK_END",
+      "SCENE_ACTOR_VALIDATOR_BEGIN",
+      "SCENE_MAP_LOAD_BEGIN",
+      "SCENE_LOADER_FINISHED",
+      "SCENE_GAME_INITIALIZED",
+      "SCENE_MAP_LOADED 0"
+    ]
+  },
+  "movementState": {
+    "ready": true,
+    "metrics": {
+      "frame": 120,
+      "tick": 49,
+      "restarts": 0,
+      "paused": false,
+      "selected": 8,
+      "x": 145.83043,
+      "z": 243.06592,
+      "screenX": 381.853,
+      "screenY": 136.011,
+      "terrainTriangles": 3072,
+      "modelTriangles": 6998,
+      "drawCalls": 10,
+      "width": 640,
+      "height": 480
+    },
+    "events": [
+      "SCENE_ACTOR_QUALITY_HOOK_BEGIN",
+      "SCENE_QUALITY_GET_BEGIN",
+      "SCENE_QUALITY_GET_END 100 100",
+      "SCENE_ACTOR_QUALITY_HOOK_END",
+      "SCENE_ACTOR_VALIDATOR_BEGIN",
+      "SCENE_MAP_LOAD_BEGIN",
+      "SCENE_LOADER_FINISHED",
+      "SCENE_GAME_INITIALIZED",
+      "SCENE_MAP_LOADED 0",
+      "SCENE_SELECTED 8",
+      "SCENE_WALK_QUEUED 8 145.36389 243.06433"
+    ]
+  },
+  "pausedState": {
+    "ready": true,
+    "metrics": {
+      "frame": 150,
+      "tick": 51,
+      "restarts": 0,
+      "paused": true,
+      "selected": 8,
+      "x": 145.83043,
+      "z": 243.06592,
+      "screenX": 381.853,
+      "screenY": 136.011,
+      "terrainTriangles": 3072,
+      "modelTriangles": 6998,
+      "drawCalls": 10,
+      "width": 640,
+      "height": 480
+    },
+    "events": [
+      "SCENE_ACTOR_QUALITY_HOOK_BEGIN",
+      "SCENE_QUALITY_GET_BEGIN",
+      "SCENE_QUALITY_GET_END 100 100",
+      "SCENE_ACTOR_QUALITY_HOOK_END",
+      "SCENE_ACTOR_VALIDATOR_BEGIN",
+      "SCENE_MAP_LOAD_BEGIN",
+      "SCENE_LOADER_FINISHED",
+      "SCENE_GAME_INITIALIZED",
+      "SCENE_MAP_LOADED 0",
+      "SCENE_SELECTED 8",
+      "SCENE_WALK_QUEUED 8 145.36389 243.06433",
+      "SCENE_PAUSED 1"
+    ]
+  },
+  "singleStepState": {
+    "ready": true,
+    "metrics": {
+      "frame": 180,
+      "tick": 52,
+      "restarts": 0,
+      "paused": true,
+      "selected": 8,
+      "x": 145.83043,
+      "z": 243.06592,
+      "screenX": 381.853,
+      "screenY": 136.011,
+      "terrainTriangles": 3072,
+      "modelTriangles": 6998,
+      "drawCalls": 10,
+      "width": 640,
+      "height": 480
+    },
+    "events": [
+      "SCENE_ACTOR_QUALITY_HOOK_BEGIN",
+      "SCENE_QUALITY_GET_BEGIN",
+      "SCENE_QUALITY_GET_END 100 100",
+      "SCENE_ACTOR_QUALITY_HOOK_END",
+      "SCENE_ACTOR_VALIDATOR_BEGIN",
+      "SCENE_MAP_LOAD_BEGIN",
+      "SCENE_LOADER_FINISHED",
+      "SCENE_GAME_INITIALIZED",
+      "SCENE_MAP_LOADED 0",
+      "SCENE_SELECTED 8",
+      "SCENE_WALK_QUEUED 8 145.36389 243.06433",
+      "SCENE_PAUSED 1"
+    ]
+  },
+  "cameraState": {
+    "ready": true,
+    "metrics": {
+      "frame": 210,
+      "tick": 52,
+      "restarts": 0,
+      "paused": true,
+      "selected": 8,
+      "x": 145.83043,
+      "z": 243.06592,
+      "screenX": 449.308,
+      "screenY": 136.011,
+      "terrainTriangles": 3072,
+      "modelTriangles": 6998,
+      "drawCalls": 10,
+      "width": 640,
+      "height": 480
+    },
+    "events": [
+      "SCENE_ACTOR_QUALITY_HOOK_BEGIN",
+      "SCENE_QUALITY_GET_BEGIN",
+      "SCENE_QUALITY_GET_END 100 100",
+      "SCENE_ACTOR_QUALITY_HOOK_END",
+      "SCENE_ACTOR_VALIDATOR_BEGIN",
+      "SCENE_MAP_LOAD_BEGIN",
+      "SCENE_LOADER_FINISHED",
+      "SCENE_GAME_INITIALIZED",
+      "SCENE_MAP_LOADED 0",
+      "SCENE_SELECTED 8",
+      "SCENE_WALK_QUEUED 8 145.36389 243.06433",
+      "SCENE_PAUSED 1"
+    ]
+  },
+  "resizeState": {
+    "ready": true,
+    "metrics": {
+      "frame": 240,
+      "tick": 52,
+      "restarts": 0,
+      "paused": true,
+      "selected": 8,
+      "x": 145.83043,
+      "z": 243.06592,
+      "screenX": 561.635,
+      "screenY": 170.014,
+      "terrainTriangles": 3072,
+      "modelTriangles": 6998,
+      "drawCalls": 10,
+      "width": 800,
+      "height": 600
+    },
+    "events": [
+      "SCENE_ACTOR_QUALITY_HOOK_BEGIN",
+      "SCENE_QUALITY_GET_BEGIN",
+      "SCENE_QUALITY_GET_END 100 100",
+      "SCENE_ACTOR_QUALITY_HOOK_END",
+      "SCENE_ACTOR_VALIDATOR_BEGIN",
+      "SCENE_MAP_LOAD_BEGIN",
+      "SCENE_LOADER_FINISHED",
+      "SCENE_GAME_INITIALIZED",
+      "SCENE_MAP_LOADED 0",
+      "SCENE_SELECTED 8",
+      "SCENE_WALK_QUEUED 8 145.36389 243.06433",
+      "SCENE_PAUSED 1",
+      "SCENE_RESIZED 800 600"
+    ]
+  },
+  "restartState": {
+    "ready": true,
+    "metrics": {
+      "frame": 330,
+      "tick": 0,
+      "restarts": 3,
+      "paused": true,
+      "selected": 0,
+      "x": 155.364,
+      "z": 243.105,
+      "screenX": 385.011,
+      "screenY": 136.198,
+      "terrainTriangles": 3072,
+      "modelTriangles": 6998,
+      "drawCalls": 9,
+      "width": 640,
+      "height": 480
+    },
+    "events": [
+      "SCENE_ACTOR_QUALITY_HOOK_BEGIN",
+      "SCENE_QUALITY_GET_BEGIN",
+      "SCENE_QUALITY_GET_END 100 100",
+      "SCENE_ACTOR_QUALITY_HOOK_END",
+      "SCENE_ACTOR_VALIDATOR_BEGIN",
+      "SCENE_MAP_LOAD_BEGIN",
+      "SCENE_LOADER_FINISHED",
+      "SCENE_GAME_INITIALIZED",
+      "SCENE_MAP_LOADED 0",
+      "SCENE_SELECTED 8",
+      "SCENE_WALK_QUEUED 8 145.36389 243.06433",
+      "SCENE_PAUSED 1",
+      "SCENE_RESIZED 800 600",
+      "SCENE_RESIZED 640 480",
+      "SCENE_SELECTED 0",
+      "SCENE_MAP_LOAD_BEGIN",
+      "SCENE_LOADER_FINISHED",
+      "SCENE_GAME_INITIALIZED",
+      "SCENE_MAP_LOADED 1",
+      "SCENE_MAP_LOAD_BEGIN",
+      "SCENE_LOADER_FINISHED",
+      "SCENE_GAME_INITIALIZED",
+      "SCENE_MAP_LOADED 2",
+      "SCENE_MAP_LOAD_BEGIN",
+      "SCENE_LOADER_FINISHED",
+      "SCENE_GAME_INITIALIZED",
+      "SCENE_MAP_LOADED 3"
+    ]
+  }
+}

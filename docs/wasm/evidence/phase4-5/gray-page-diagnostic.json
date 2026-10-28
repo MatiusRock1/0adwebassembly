@@ -1,0 +1,78 @@
+{
+  "before": {
+    "ready": "complete",
+    "visibility": "visible",
+    "focused": true,
+    "fullscreen": false,
+    "body": "Iniciar 0 A.D.\nPantalla completa\nActivar audio\nCerrar juego\n0 A.D. en ejecuci\u00f3n.\nRenderer:\nWebGL 2\nWebGPU (experimental)\nGr\u00e1fica:\nAlto rendimiento (preferencia)\nAutom\u00e1tica\nWebGPU \u00b7 nvidia ampere\n\nResoluci\u00f3n interna en pantalla completa: 1920 \u00d7 1080; se escala al tama\u00f1o de la pantalla.\n\n{\"type\":\"ready\",\"backend\":\"webgpu\",\"powerPreference\":\"high-performance\",\"owner\":\"main-thread\",\"adapter\":{\"vendor\"",
+    "result": null,
+    "state": {
+      "frame": 1119,
+      "tick": 67,
+      "gameStarted": true,
+      "width": 1280,
+      "height": 720,
+      "paused": false,
+      "wasmHeapBytes": 536870912,
+      "receivedMs": 130289.96999999881,
+      "updateMilliseconds": 0
+    },
+    "clock": {
+      "running": true,
+      "address": 1908296,
+      "deadline": 130292.40166666667,
+      "raf": 1894,
+      "hiddenTimer": 11
+    },
+    "gpu": {
+      "live": true,
+      "stats": {
+        "frames": 1119,
+        "draws": 451288,
+        "submissions": 1119,
+        "pipelineCompiles": 64,
+        "commandBatches": 1119,
+        "uploadBytes": 4085182768
+      }
+    },
+    "log": "hat operation is not supportedUserReport written to '/logs/userreport_hwdetect.txt'\nJSON data written to '/data/config/matchsettings.json'\nSCENE_ACTOR_QUALITY_HOOK_BEGIN\nSCENE_QUALITY_GET_BEGIN\nSCENE_QUALITY_GET_END 200 100\nSCENE_QUALITY_INTERPOLATE_BEGIN\nSCENE_QUALITY_INTERPOLATE_END\nSCENE_ACTOR_QUALITY_HOOK_END\nSCENE_ACTOR_VALIDATOR_BEGIN\nReplay written to '/data/replays/0.29.0/2026-10-16_0001'\nSetting biome generic/temperate.\nCreating playerbases...\nCreating bumps...\nCreating hills...\nCreating forests...\nCreating dirt patches...\nCreating grass patches...\nCreating metal mines...\nCreating stone mines...\nCreating decoration...\nCreating food...\nCreating food...\nCreating straggler trees...\nMap generation finished.\nTotal entities: 825, Terrain entities: 525, Textures: 12.\n{\"type\":\"sampler-address-emulation\",\"label\":\"art/textures/skins/props/decal_struct_paving_aegean_large.png\",\"requested\":[3,3,0],\"effective\":\"portable border filtering in the original shader sampling path\"}\nGAME STARTED, ALL INIT COMPLETE\n{\"type\":\"sampler-address-emulation\",\"label\":\"art/textures/misc/territory_border.png\",\"requested\":[3,2,0],\"effective\":\"portable border filtering in the original shader sampling path\"}"
+  },
+  "after": {
+    "ready": "complete",
+    "visibility": "visible",
+    "focused": true,
+    "fullscreen": false,
+    "body": "Iniciar 0 A.D.\nPantalla completa\nActivar audio\nCerrar juego\n0 A.D. en ejecuci\u00f3n.\nRenderer:\nWebGL 2\nWebGPU (experimental)\nGr\u00e1fica:\nAlto rendimiento (preferencia)\nAutom\u00e1tica\nWebGPU \u00b7 nvidia ampere\n\nResoluci\u00f3n interna en pantalla completa: 1920 \u00d7 1080; se escala al tama\u00f1o de la pantalla.\n\n{\"type\":\"ready\",\"backend\":\"webgpu\",\"powerPreference\":\"high-performance\",\"owner\":\"main-thread\",\"adapter\":{\"vendor\"",
+    "result": null,
+    "state": {
+      "frame": 1194,
+      "tick": 78,
+      "gameStarted": true,
+      "width": 1280,
+      "height": 720,
+      "paused": false,
+      "wasmHeapBytes": 536870912,
+      "receivedMs": 132265.88499999046,
+      "updateMilliseconds": 0.2800640000089061
+    },
+    "clock": {
+      "running": true,
+      "address": 1908296,
+      "deadline": 132294.41666666666,
+      "raf": 2014,
+      "hiddenTimer": 11
+    },
+    "gpu": {
+      "live": true,
+      "stats": {
+        "frames": 1194,
+        "draws": 497892,
+        "submissions": 1194,
+        "pipelineCompiles": 64,
+        "commandBatches": 1195,
+        "uploadBytes": 4489402256
+      }
+    },
+    "log": "hat operation is not supportedUserReport written to '/logs/userreport_hwdetect.txt'\nJSON data written to '/data/config/matchsettings.json'\nSCENE_ACTOR_QUALITY_HOOK_BEGIN\nSCENE_QUALITY_GET_BEGIN\nSCENE_QUALITY_GET_END 200 100\nSCENE_QUALITY_INTERPOLATE_BEGIN\nSCENE_QUALITY_INTERPOLATE_END\nSCENE_ACTOR_QUALITY_HOOK_END\nSCENE_ACTOR_VALIDATOR_BEGIN\nReplay written to '/data/replays/0.29.0/2026-10-16_0001'\nSetting biome generic/temperate.\nCreating playerbases...\nCreating bumps...\nCreating hills...\nCreating forests...\nCreating dirt patches...\nCreating grass patches...\nCreating metal mines...\nCreating stone mines...\nCreating decoration...\nCreating food...\nCreating food...\nCreating straggler trees...\nMap generation finished.\nTotal entities: 825, Terrain entities: 525, Textures: 12.\n{\"type\":\"sampler-address-emulation\",\"label\":\"art/textures/skins/props/decal_struct_paving_aegean_large.png\",\"requested\":[3,3,0],\"effective\":\"portable border filtering in the original shader sampling path\"}\nGAME STARTED, ALL INIT COMPLETE\n{\"type\":\"sampler-address-emulation\",\"label\":\"art/textures/misc/territory_border.png\",\"requested\":[3,2,0],\"effective\":\"portable border filtering in the original shader sampling path\"}"
+  }
+}

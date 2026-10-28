@@ -1,0 +1,153 @@
+{
+  "scope": "Offline analysis of the unprofiled physical diagnostic; updates are the original CGame::Update duration, not a new FPS measurement.",
+  "updatesMs": {
+    "count": 4198,
+    "median": 1.7152000000066892,
+    "p95": 44.42982400001938,
+    "p99": 101.37011200004054,
+    "maximum": 485.0001919999727,
+    "total": 38876.686079999585
+  },
+  "clockDeltaMs": {
+    "count": 4198,
+    "median": 19.072511672973633,
+    "p95": 71.59986877441406,
+    "p99": 132.79026794433594,
+    "maximum": 512.8798217773438,
+    "total": 119994.3797531128
+  },
+  "updatesOver33.4Ms": 589,
+  "updatesOver50Ms": 109,
+  "updatesOver100Ms": 45,
+  "updatesOver200Ms": 6,
+  "gcSlicesMs": {
+    "count": 33,
+    "median": 6.075136,
+    "p95": 6.235136,
+    "p99": 6.960384,
+    "maximum": 7.970048,
+    "total": 155.565824
+  },
+  "largestUpdates": [
+    {
+      "frame": 6605,
+      "tick": 906,
+      "receivedMs": 213260.5399999991,
+      "updateMilliseconds": 485.0001919999727
+    },
+    {
+      "frame": 7624,
+      "tick": 1056,
+      "receivedMs": 243253.2100000009,
+      "updateMilliseconds": 477.01990400000227
+    },
+    {
+      "frame": 8018,
+      "tick": 1113,
+      "receivedMs": 254647.6400000006,
+      "updateMilliseconds": 472.78515200000015
+    },
+    {
+      "frame": 9746,
+      "tick": 1359,
+      "receivedMs": 303851.5349999964,
+      "updateMilliseconds": 471.42502400004105
+    },
+    {
+      "frame": 7196,
+      "tick": 991,
+      "receivedMs": 230237.7250000015,
+      "updateMilliseconds": 450.5950719999987
+    },
+    {
+      "frame": 6656,
+      "tick": 916,
+      "receivedMs": 214994.4450000003,
+      "updateMilliseconds": 220.62515199999666
+    },
+    {
+      "frame": 7548,
+      "tick": 1044,
+      "receivedMs": 240520.71499999613,
+      "updateMilliseconds": 133.79020799999353
+    },
+    {
+      "frame": 8075,
+      "tick": 1124,
+      "receivedMs": 256512.96499999613,
+      "updateMilliseconds": 122.71487999998953
+    },
+    {
+      "frame": 6887,
+      "tick": 948,
+      "receivedMs": 221296.6550000012,
+      "updateMilliseconds": 118.89971200000105
+    },
+    {
+      "frame": 7453,
+      "tick": 1028,
+      "receivedMs": 237288.75,
+      "updateMilliseconds": 116.9551360000014
+    },
+    {
+      "frame": 7633,
+      "tick": 1060,
+      "receivedMs": 243689.5850000009,
+      "updateMilliseconds": 115.63519999998562
+    },
+    {
+      "frame": 7754,
+      "tick": 1076,
+      "receivedMs": 246896.7749999985,
+      "updateMilliseconds": 114.84492800002499
+    },
+    {
+      "frame": 7214,
+      "tick": 996,
+      "receivedMs": 230881.24499999732,
+      "updateMilliseconds": 114.20467199999962
+    },
+    {
+      "frame": 8651,
+      "tick": 1204,
+      "receivedMs": 272494.2749999985,
+      "updateMilliseconds": 113.84524799996143
+    },
+    {
+      "frame": 10241,
+      "tick": 1428,
+      "receivedMs": 317281.7299999967,
+      "updateMilliseconds": 113.2700160000013
+    },
+    {
+      "frame": 7120,
+      "tick": 980,
+      "receivedMs": 227695.39499999583,
+      "updateMilliseconds": 113.03475200000435
+    },
+    {
+      "frame": 6766,
+      "tick": 932,
+      "receivedMs": 218094.29999999702,
+      "updateMilliseconds": 112.88499200000501
+    },
+    {
+      "frame": 7982,
+      "tick": 1108,
+      "receivedMs": 253294.6099999994,
+      "updateMilliseconds": 112.24473600000806
+    },
+    {
+      "frame": 7331,
+      "tick": 1012,
+      "receivedMs": 234094.1649999991,
+      "updateMilliseconds": 111.55507199998738
+    },
+    {
+      "frame": 7002,
+      "tick": 964,
+      "receivedMs": 224490.10499999672,
+      "updateMilliseconds": 110.15500799999245
+    }
+  ]
+}

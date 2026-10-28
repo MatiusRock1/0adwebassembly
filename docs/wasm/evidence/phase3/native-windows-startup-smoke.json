@@ -1,0 +1,26 @@
+{
+  "frames": [],
+  "errors": [],
+  "acceptance": "PENDING",
+  "fullscreen": true,
+  "warmupSeconds": 0,
+  "durationSeconds": 30,
+  "executableSHA256": "0e7630a1c43ce8204a6c72c04ec529b0c83969f0e5a6d0fe892ea205dc71744a",
+  "build": {
+    "baseCommit": "40b8794eecb9618da69e10bacffa8814c561aa51",
+    "windowsLibrariesSvnRevision": 28278,
+    "harnessSourceSHA256": "9e5ba696df0b568851059522c91135400b128a0144bc02eeca32dd86b96a75ba",
+    "nativeEntrySHA256": "e299a7f66560312b1c7d3c7405c0ca6dac42bcc4194cfc526dd10de9dba03d96",
+    "scope": "Original scene engine, same 37 entities/camera/seed/settings/tick; native SDL/OpenGL presentation. Not full-game acceptance.",
+    "nativeEngineCompatibility": "Missing <numbers> include only; no simulation/rendering logic changes. ENet include path supplied for lobby-disabled build.",
+    "compatibilityPatch": "native-build-compatibility.patch",
+    "terrainBridge": "native-scene-terrain-bridge.patch; same bridge as browser, original CGame fallback retained",
+    "surfaceBridge": "native-scene-surface-bridge.patch; same constructor injection as browser, desktop default retained"
+  },
+  "hardware": {
+    "renderer": "NVIDIA NVIDIA GeForce RTX 3060 Laptop GPU/PCIe/SSE2",
+    "driver": "4.6.0 NVIDIA 617.42"
+  },
+  "exitCode": 3221225477,
+  "failure": "Native startup or exit failed"
+}

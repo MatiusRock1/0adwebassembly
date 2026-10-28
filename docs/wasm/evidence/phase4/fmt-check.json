@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "validCompileExitCode": 0,
+  "runtimeExitCode": 0,
+  "runtimeOutput": "12.5 0000002a\n",
+  "invalidFormatRejected": true,
+  "headerBefore": "9499dc187c78f4f88c55f878afd375662912439b0cff69c8299a6054350432f7",
+  "headerAfter": "3b6bf17e81786b0a2c4dd764246ebbf638f285e6e195df211f2ffc26fe98c146",
+  "upstream": "https://github.com/fmtlib/fmt/commit/6797f0c39a4ef13061cbc3bb850c35af7428fdc4"
+}

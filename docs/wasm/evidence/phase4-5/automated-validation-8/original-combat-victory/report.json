@@ -1,0 +1,5299 @@
+{
+  "passed": true,
+  "phase4Accepted": false,
+  "errors": [],
+  "console": [
+    "The powerPreference option is currently ignored when calling requestAdapter() on Windows. See https://crbug.com/369219127",
+    "{\"type\":\"ready\",\"backend\":\"webgpu\",\"powerPreference\":\"high-performance\",\"owner\":\"main-thread\",\"adapter\":{\"vendor\":\"nvidia\",\"architecture\":\"ampere\",\"device\":\"\",\"description\":\"\"},\"adapterFeatures\":[\"bgra8unorm-storage\",\"clip-distances\",\"core-features-and-limits\",\"depth-clip-control\",\"depth32float-stencil8\",\"dual-source-blending\",\"float32-blendable\",\"float32-filterable\",\"indirect-first-instance\",\"primitive-index\",\"rg11b10ufloat-renderable\",\"shader-f16\",\"subgroup-size-control\",\"subgroups\",\"texture-component-swizzle\",\"texture-compression-bc\",\"texture-compression-bc-sliced-3d\",\"texture-formats-tier1\",\"texture-formats-tier2\",\"timestamp-query\"],\"adapterLimits\":{\"maxTextureDimension1D\":16384,\"maxTextureDimension2D\":16384,\"maxTextureDimension3D\":2048,\"maxTextureArrayLayers\":2048,\"maxBindGroups\":4,\"maxBindGroupsPlusVertexBuffers\":24,\"maxBindingsPerBindGroup\":1000,\"maxDynamicUniformBuffersPerPipelineLayout\":10,\"maxDynamicStorageBuffersPerPipelineLayout\":8,\"maxSampledTexturesPerShaderStage\":48,\"maxSamplersPerShaderStage\":16,\"maxStorageBuffersPerShaderStage\":16,\"maxStorageTexturesPerShaderStage\":8,\"maxUniformBuffersPerShaderStage\":12,\"maxUniformBufferBindingSize\":65536,\"maxStorageBufferBindingSize\":2147483644,\"minUniformBufferOffsetAlignment\":256,\"minStorageBufferOffsetAlignment\":256,\"maxVertexBuffers\":8,\"maxBufferSize\":2147483648,\"maxVertexAttributes\":30,\"maxVertexBufferArrayStride\":2048,\"maxInterStageShaderVariables\":28,\"maxColorAttachments\":8,\"maxColorAttachmentBytesPerSample\":128,\"maxComputeWorkgroupStorageSize\":32768,\"maxComputeInvocationsPerWorkgroup\":1024,\"maxComputeWorkgroupSizeX\":1024,\"maxComputeWorkgroupSizeY\":1024,\"maxComputeWorkgroupSizeZ\":64,\"maxComputeWorkgroupsPerDimension\":65535,\"maxImmediateSize\":64,\"maxStorageBuffersInFragmentStage\":16,\"maxStorageTexturesInFragmentStage\":8,\"maxStorageBuffersInVertexStage\":16,\"maxStorageTexturesInVertexStage\":8},\"deviceFeatures\":[\"core-features-and-limits\",\"depth32float-stencil8\",\"dual-source-blending\",\"float32-blendable\",\"float32-filterable\",\"rg11b10ufloat-renderable\",\"texture-compression-bc\"],\"deviceLimits\":{\"maxTextureDimension1D\":8192,\"maxTextureDimension2D\":8192,\"maxTextureDimension3D\":2048,\"maxTextureArrayLayers\":256,\"maxBindGroups\":4,\"maxBindGroupsPlusVertexBuffers\":24,\"maxBindingsPerBindGroup\":1000,\"maxDynamicUniformBuffersPerPipelineLayout\":8,\"maxDynamicStorageBuffersPerPipelineLayout\":4,\"maxSampledTexturesPerShaderStage\":16,\"maxSamplersPerShaderStage\":16,\"maxStorageBuffersPerShaderStage\":8,\"maxStorageTexturesPerShaderStage\":4,\"maxUniformBuffersPerShaderStage\":12,\"maxUniformBufferBindingSize\":65536,\"maxStorageBufferBindingSize\":134217728,\"minUniformBufferOffsetAlignment\":256,\"minStorageBufferOffsetAlignment\":256,\"maxVertexBuffers\":8,\"maxBufferSize\":268435456,\"maxVertexAttributes\":16,\"maxVertexBufferArrayStride\":2048,\"maxInterStageShaderVariables\":16,\"maxColorAttachments\":8,\"maxColorAttachmentBytesPerSample\":32,\"maxComputeWorkgroupStorageSize\":16384,\"maxComputeInvocationsPerWorkgroup\":256,\"maxComputeWorkgroupSizeX\":256,\"maxComputeWorkgroupSizeY\":256,\"maxComputeWorkgroupSizeZ\":64,\"maxComputeWorkgroupsPerDimension\":65535,\"maxImmediateSize\":64,\"maxStorageBuffersInFragmentStage\":8,\"maxStorageTexturesInFragmentStage\":4,\"maxStorageBuffersInVertexStage\":8,\"maxStorageTexturesInVertexStage\":4},\"unavailableOptionalFeatures\":[],\"fallbackAdapter\":null,\"format\":\"bgra8unorm\"}",
+    "Main log written to '/logs/mainlog.html'",
+    "Interesting log written to '/logs/interestinglog.html'",
+    "Sound: AlcInit success, using Emscripten OpenAL",
+    "Hardware details written to '/logs/system_info.txt'",
+    "Failed to query SDL WM info: That operation is not supportedUserReport written to '/logs/userreport_hwdetect.txt'",
+    "Failed to load resource: the server responded with a status of 404 (File not found)",
+    "JSON data written to '/data/config/matchsettings.json'",
+    "SCENE_ACTOR_QUALITY_HOOK_BEGIN",
+    "SCENE_QUALITY_GET_BEGIN",
+    "SCENE_QUALITY_GET_END 200 100",
+    "SCENE_QUALITY_INTERPOLATE_BEGIN",
+    "SCENE_QUALITY_INTERPOLATE_END",
+    "SCENE_ACTOR_QUALITY_HOOK_END",
+    "SCENE_ACTOR_VALIDATOR_BEGIN",
+    "Replay written to '/data/replays/0.29.0/2026-10-16_0001'",
+    "GAME STARTED, ALL INIT COMPLETE",
+    "{\"type\":\"sampler-address-emulation\",\"label\":\"art/textures/skins/props/blood_02.dds\",\"requested\":[3,3,0],\"effective\":\"portable border filtering in the original shader sampling path\"}",
+    "Replay metadata written to '/data/replays/0.29.0/2026-10-16_0001/metadata.json'",
+    "{\"type\":\"device-lost\",\"backend\":\"webgpu\",\"reason\":\"destroyed\",\"message\":\"Device was destroyed.\",\"expected\":true}",
+    "{\"type\":\"engine-device-lost\",\"reason\":\"destroyed\",\"message\":\"Device was destroyed.\",\"expected\":true}"
+  ],
+  "attributes": {
+    "settings": {
+      "Ceasefire": 0,
+      "CheatsEnabled": false,
+      "CircularMap": false,
+      "DisableSpies": false,
+      "DisableTreasures": false,
+      "LastManStanding": false,
+      "LockTeams": false,
+      "RevealMap": false,
+      "ExploreMap": false,
+      "AllyView": false,
+      "mapName": "Combat Demo",
+      "mapPreview": "cropped:0.78125,0.5859375:session/icons/mappreview/nopreview.png",
+      "PlayerData": [
+        {
+          "AI": false,
+          "Civ": "athen",
+          "Color": {
+            "r": 10,
+            "g": 10,
+            "b": 190
+          },
+          "Name": "Phase4Human",
+          "Removed": false,
+          "Team": -1
+        },
+        {
+          "AI": "petra",
+          "AIDiff": 3,
+          "AIBehavior": "balanced",
+          "Civ": "athen",
+          "Color": {
+            "r": 230,
+            "g": 10,
+            "b": 10
+          },
+          "Name": "Phase4Petra",
+          "Removed": false,
+          "Team": -1
+        }
+      ],
+      "PopulationCapType": "player",
+      "PopulationCap": 300,
+      "Seed": 12345,
+      "AISeed": 54321,
+      "StartingResources": 10000,
+      "TriggerScripts": [],
+      "VictoryConditions": [
+        "conquest"
+      ]
+    },
+    "gameSpeed": 1,
+    "map": "maps/scenarios/combat_demo",
+    "mapType": "scenario"
+  },
+  "initial": {
+    "players": [
+      {
+        "name": "Gaia",
+        "civ": "gaia",
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "entity": 2,
+        "controlsAll": false,
+        "popCount": 0,
+        "popLimit": 0,
+        "popMax": 300,
+        "panelEntities": [],
+        "resourceCounts": {
+          "food": 300,
+          "wood": 300,
+          "stone": 300,
+          "metal": 300
+        },
+        "resourceGatherers": {
+          "food": 0,
+          "wood": 0,
+          "stone": 0,
+          "metal": 0
+        },
+        "trainingBlocked": false,
+        "state": "active",
+        "team": -1,
+        "teamLocked": false,
+        "disabledTemplates": {},
+        "disabledTechnologies": {},
+        "hasSharedLos": null,
+        "spyCostMultiplier": 1,
+        "phase": "",
+        "isAlly": [
+          true,
+          false,
+          false
+        ],
+        "isMutualAlly": [
+          true,
+          false,
+          false
+        ],
+        "isNeutral": [
+          false,
+          false,
+          false
+        ],
+        "isEnemy": [
+          false,
+          true,
+          true
+        ],
+        "entityLimits": null,
+        "entityCounts": null,
+        "matchEntityCounts": null,
+        "entityLimitChangers": null,
+        "researchQueued": null,
+        "researchedTechs": null,
+        "classCounts": null,
+        "typeCountsByClass": null,
+        "canBarter": false,
+        "barterPrices": {
+          "buy": {
+            "food": 110,
+            "wood": 110,
+            "stone": 110,
+            "metal": 110
+          },
+          "sell": {
+            "food": 90,
+            "wood": 90,
+            "stone": 90,
+            "metal": 90
+          }
+        }
+      },
+      {
+        "name": "Phase4Human",
+        "civ": "athen",
+        "color": {
+          "r": 0.0392156862745098,
+          "g": 0.0392156862745098,
+          "b": 0.7450980392156863,
+          "a": 1
+        },
+        "entity": 3,
+        "controlsAll": false,
+        "popCount": 30,
+        "popLimit": 0,
+        "popMax": 300,
+        "panelEntities": [],
+        "resourceCounts": {
+          "food": 10000,
+          "wood": 10000,
+          "stone": 10000,
+          "metal": 10000
+        },
+        "resourceGatherers": {
+          "food": 0,
+          "wood": 0,
+          "stone": 0,
+          "metal": 0
+        },
+        "trainingBlocked": false,
+        "state": "active",
+        "team": -1,
+        "teamLocked": false,
+        "disabledTemplates": {},
+        "disabledTechnologies": {},
+        "hasSharedLos": false,
+        "spyCostMultiplier": 1,
+        "phase": "village",
+        "isAlly": [
+          false,
+          true,
+          false
+        ],
+        "isMutualAlly": [
+          false,
+          true,
+          false
+        ],
+        "isNeutral": [
+          false,
+          false,
+          false
+        ],
+        "isEnemy": [
+          true,
+          false,
+          true
+        ],
+        "entityLimits": {
+          "Animal": 50,
+          "Centurion": 8,
+          "CivilCentre": 1,
+          "Gladiator": 0,
+          "Hero": 1,
+          "Juggernaut": 1,
+          "Kennel": 2,
+          "Library": 1,
+          "Lighthouse": 1,
+          "Monument": 5,
+          "Palace": 1,
+          "Pillar": 0,
+          "PyramidLarge": 2,
+          "TempleOfAmun": 1,
+          "TempleOfIsis": 1,
+          "TempleOfVesta": 1,
+          "Theater": 1,
+          "WarDog": 0,
+          "Wonder": 1,
+          "Yakhchal": 5
+        },
+        "entityCounts": {
+          "Animal": 0,
+          "Centurion": 0,
+          "CivilCentre": 0,
+          "Gladiator": 0,
+          "Hero": 0,
+          "Juggernaut": 0,
+          "Kennel": 0,
+          "Library": 0,
+          "Lighthouse": 0,
+          "Monument": 0,
+          "Palace": 0,
+          "Pillar": 0,
+          "PyramidLarge": 0,
+          "TempleOfAmun": 0,
+          "TempleOfIsis": 0,
+          "TempleOfVesta": 0,
+          "Theater": 0,
+          "WarDog": 0,
+          "Wonder": 0,
+          "Yakhchal": 0
+        },
+        "matchEntityCounts": {},
+        "entityLimitChangers": {
+          "Gladiator": {
+            "Amphitheater": 15
+          },
+          "Juggernaut": {
+            "PtolemyIV": 4
+          },
+          "Pillar": {
+            "Ashoka": 5
+          },
+          "WarDog": {
+            "Kennel": 10
+          }
+        },
+        "researchQueued": {},
+        "researchedTechs": {},
+        "classCounts": {
+          "Unit": 30,
+          "Organic": 30,
+          "ConquestCritical": 30,
+          "Human": 30,
+          "CitizenSoldier": 22,
+          "Builder": 22,
+          "Citizen": 22,
+          "Worker": 22,
+          "Soldier": 30,
+          "Infantry": 30,
+          "Ranged": 16,
+          "Archer": 16,
+          "Mercenary": 12,
+          "Elite": 22,
+          "Melee": 14,
+          "Spearman": 14,
+          "Champion": 8
+        },
+        "typeCountsByClass": {
+          "Unit": {
+            "units/athen/infantry_marine_archer_e": 12,
+            "units/athen/infantry_spearman_e": 10,
+            "units/athen/champion_ranged": 4,
+            "units/athen/champion_infantry": 4
+          },
+          "Organic": {
+            "units/athen/infantry_marine_archer_e": 12,
+            "units/athen/infantry_spearman_e": 10,
+            "units/athen/champion_ranged": 4,
+            "units/athen/champion_infantry": 4
+          },
+          "ConquestCritical": {
+            "units/athen/infantry_marine_archer_e": 12,
+            "units/athen/infantry_spearman_e": 10,
+            "units/athen/champion_ranged": 4,
+            "units/athen/champion_infantry": 4
+          },
+          "Human": {
+            "units/athen/infantry_marine_archer_e": 12,
+            "units/athen/infantry_spearman_e": 10,
+            "units/athen/champion_ranged": 4,
+            "units/athen/champion_infantry": 4
+          },
+          "CitizenSoldier": {
+            "units/athen/infantry_marine_archer_e": 12,
+            "units/athen/infantry_spearman_e": 10
+          },
+          "Builder": {
+            "units/athen/infantry_marine_archer_e": 12,
+            "units/athen/infantry_spearman_e": 10
+          },
+          "Citizen": {
+            "units/athen/infantry_marine_archer_e": 12,
+            "units/athen/infantry_spearman_e": 10
+          },
+          "Worker": {
+            "units/athen/infantry_marine_archer_e": 12,
+            "units/athen/infantry_spearman_e": 10
+          },
+          "Soldier": {
+            "units/athen/infantry_marine_archer_e": 12,
+            "units/athen/infantry_spearman_e": 10,
+            "units/athen/champion_ranged": 4,
+            "units/athen/champion_infantry": 4
+          },
+          "Infantry": {
+            "units/athen/infantry_marine_archer_e": 12,
+            "units/athen/infantry_spearman_e": 10,
+            "units/athen/champion_ranged": 4,
+            "units/athen/champion_infantry": 4
+          },
+          "Ranged": {
+            "units/athen/infantry_marine_archer_e": 12,
+            "units/athen/champion_ranged": 4
+          },
+          "Archer": {
+            "units/athen/infantry_marine_archer_e": 12,
+            "units/athen/champion_ranged": 4
+          },
+          "Mercenary": {
+            "units/athen/infantry_marine_archer_e": 12
+          },
+          "Elite": {
+            "units/athen/infantry_marine_archer_e": 12,
+            "units/athen/infantry_spearman_e": 10
+          },
+          "Melee": {
+            "units/athen/infantry_spearman_e": 10,
+            "units/athen/champion_infantry": 4
+          },
+          "Spearman": {
+            "units/athen/infantry_spearman_e": 10,
+            "units/athen/champion_infantry": 4
+          },
+          "Champion": {
+            "units/athen/champion_ranged": 4,
+            "units/athen/champion_infantry": 4
+          }
+        },
+        "canBarter": false,
+        "barterPrices": {
+          "buy": {
+            "food": 110,
+            "wood": 110,
+            "stone": 110,
+            "metal": 110
+          },
+          "sell": {
+            "food": 90,
+            "wood": 90,
+            "stone": 90,
+            "metal": 90
+          }
+        },
+        "statistics": {
+          "resourcesGathered": {
+            "vegetarianFood": 0,
+            "food": 0,
+            "wood": 0,
+            "stone": 0,
+            "metal": 0
+          },
+          "percentMapExplored": 55
+        }
+      },
+      {
+        "name": "Phase4Petra",
+        "civ": "athen",
+        "color": {
+          "r": 0.9019607843137255,
+          "g": 0.0392156862745098,
+          "b": 0.0392156862745098,
+          "a": 1
+        },
+        "entity": 4,
+        "controlsAll": false,
+        "popCount": 39,
+        "popLimit": 0,
+        "popMax": 300,
+        "panelEntities": [],
+        "resourceCounts": {
+          "food": 10000,
+          "wood": 10000,
+          "stone": 10000,
+          "metal": 10000
+        },
+        "resourceGatherers": {
+          "food": 0,
+          "wood": 0,
+          "stone": 0,
+          "metal": 0
+        },
+        "trainingBlocked": false,
+        "state": "active",
+        "team": -1,
+        "teamLocked": false,
+        "disabledTemplates": {},
+        "disabledTechnologies": {},
+        "hasSharedLos": false,
+        "spyCostMultiplier": 1,
+        "phase": "village",
+        "isAlly": [
+          false,
+          false,
+          true
+        ],
+        "isMutualAlly": [
+          false,
+          false,
+          true
+        ],
+        "isNeutral": [
+          false,
+          false,
+          false
+        ],
+        "isEnemy": [
+          true,
+          true,
+          false
+        ],
+        "entityLimits": {
+          "Animal": 50,
+          "Centurion": 8,
+          "CivilCentre": 1,
+          "Gladiator": 0,
+          "Hero": 1,
+          "Juggernaut": 1,
+          "Kennel": 2,
+          "Library": 1,
+          "Lighthouse": 1,
+          "Monument": 5,
+          "Palace": 1,
+          "Pillar": 0,
+          "PyramidLarge": 2,
+          "TempleOfAmun": 1,
+          "TempleOfIsis": 1,
+          "TempleOfVesta": 1,
+          "Theater": 1,
+          "WarDog": 0,
+          "Wonder": 1,
+          "Yakhchal": 5
+        },
+        "entityCounts": {
+          "Animal": 0,
+          "Centurion": 0,
+          "CivilCentre": 0,
+          "Gladiator": 0,
+          "Hero": 0,
+          "Juggernaut": 0,
+          "Kennel": 0,
+          "Library": 0,
+          "Lighthouse": 0,
+          "Monument": 0,
+          "Palace": 0,
+          "Pillar": 0,
+          "PyramidLarge": 0,
+          "TempleOfAmun": 0,
+          "TempleOfIsis": 0,
+          "TempleOfVesta": 0,
+          "Theater": 0,
+          "WarDog": 0,
+          "Wonder": 0,
+          "Yakhchal": 0
+        },
+        "matchEntityCounts": {},
+        "entityLimitChangers": {
+          "Gladiator": {
+            "Amphitheater": 15
+          },
+          "Juggernaut": {
+            "PtolemyIV": 4
+          },
+          "Pillar": {
+            "Ashoka": 5
+          },
+          "WarDog": {
+            "Kennel": 10
+          }
+        },
+        "researchQueued": {},
+        "researchedTechs": {},
+        "classCounts": {
+          "Unit": 39,
+          "Organic": 39,
+          "ConquestCritical": 39,
+          "Human": 39,
+          "CitizenSoldier": 29,
+          "Builder": 29,
+          "Citizen": 29,
+          "Worker": 29,
+          "Soldier": 39,
+          "Infantry": 39,
+          "Ranged": 14,
+          "Archer": 5,
+          "Mercenary": 14,
+          "Basic": 10,
+          "Javelineer": 9,
+          "Advanced": 10,
+          "Elite": 9,
+          "Melee": 25,
+          "Spearman": 25,
+          "Champion": 10
+        },
+        "typeCountsByClass": {
+          "Unit": {
+            "units/athen/infantry_javelineer_a": 5,
+            "units/athen/infantry_javelineer_e": 4,
+            "units/athen/infantry_spearman_b": 10,
+            "units/mace/champion_infantry_spearman_02": 5,
+            "units/athen/infantry_spearman_e": 5,
+            "units/theb_sacred_band": 5,
+            "units/athen/infantry_marine_archer_a": 5
+          },
+          "Organic": {
+            "units/athen/infantry_javelineer_a": 5,
+            "units/athen/infantry_javelineer_e": 4,
+            "units/athen/infantry_spearman_b": 10,
+            "units/mace/champion_infantry_spearman_02": 5,
+            "units/athen/infantry_spearman_e": 5,
+            "units/theb_sacred_band": 5,
+            "units/athen/infantry_marine_archer_a": 5
+          },
+          "ConquestCritical": {
+            "units/athen/infantry_javelineer_a": 5,
+            "units/athen/infantry_javelineer_e": 4,
+            "units/athen/infantry_spearman_b": 10,
+            "units/mace/champion_infantry_spearman_02": 5,
+            "units/athen/infantry_spearman_e": 5,
+            "units/theb_sacred_band": 5,
+            "units/athen/infantry_marine_archer_a": 5
+          },
+          "Human": {
+            "units/athen/infantry_javelineer_a": 5,
+            "units/athen/infantry_javelineer_e": 4,
+            "units/athen/infantry_spearman_b": 10,
+            "units/mace/champion_infantry_spearman_02": 5,
+            "units/athen/infantry_spearman_e": 5,
+            "units/theb_sacred_band": 5,
+            "units/athen/infantry_marine_archer_a": 5
+          },
+          "CitizenSoldier": {
+            "units/athen/infantry_javelineer_a": 5,
+            "units/athen/infantry_javelineer_e": 4,
+            "units/athen/infantry_spearman_b": 10,
+            "units/athen/infantry_spearman_e": 5,
+            "units/athen/infantry_marine_archer_a": 5
+          },
+          "Builder": {
+            "units/athen/infantry_javelineer_a": 5,
+            "units/athen/infantry_javelineer_e": 4,
+            "units/athen/infantry_spearman_b": 10,
+            "units/athen/infantry_spearman_e": 5,
+            "units/athen/infantry_marine_archer_a": 5
+          },
+          "Citizen": {
+            "units/athen/infantry_javelineer_a": 5,
+            "units/athen/infantry_javelineer_e": 4,
+            "units/athen/infantry_spearman_b": 10,
+            "units/athen/infantry_spearman_e": 5,
+            "units/athen/infantry_marine_archer_a": 5
+          },
+          "Worker": {
+            "units/athen/infantry_javelineer_a": 5,
+            "units/athen/infantry_javelineer_e": 4,
+            "units/athen/infantry_spearman_b": 10,
+            "units/athen/infantry_spearman_e": 5,
+            "units/athen/infantry_marine_archer_a": 5
+          },
+          "Soldier": {
+            "units/athen/infantry_javelineer_a": 5,
+            "units/athen/infantry_javelineer_e": 4,
+            "units/athen/infantry_spearman_b": 10,
+            "units/mace/champion_infantry_spearman_02": 5,
+            "units/athen/infantry_spearman_e": 5,
+            "units/theb_sacred_band": 5,
+            "units/athen/infantry_marine_archer_a": 5
+          },
+          "Infantry": {
+            "units/athen/infantry_javelineer_a": 5,
+            "units/athen/infantry_javelineer_e": 4,
+            "units/athen/infantry_spearman_b": 10,
+            "units/mace/champion_infantry_spearman_02": 5,
+            "units/athen/infantry_spearman_e": 5,
+            "units/theb_sacred_band": 5,
+            "units/athen/infantry_marine_archer_a": 5
+          },
+          "Ranged": {
+            "units/athen/infantry_javelineer_a": 5,
+            "units/athen/infantry_javelineer_e": 4,
+            "units/athen/infantry_marine_archer_a": 5
+          },
+          "Archer": {
+            "units/athen/infantry_marine_archer_a": 5
+          },
+          "Mercenary": {
+            "units/athen/infantry_javelineer_a": 5,
+            "units/athen/infantry_javelineer_e": 4,
+            "units/athen/infantry_marine_archer_a": 5
+          },
+          "Basic": {
+            "units/athen/infantry_spearman_b": 10
+          },
+          "Javelineer": {
+            "units/athen/infantry_javelineer_a": 5,
+            "units/athen/infantry_javelineer_e": 4
+          },
+          "Advanced": {
+            "units/athen/infantry_javelineer_a": 5,
+            "units/athen/infantry_marine_archer_a": 5
+          },
+          "Elite": {
+            "units/athen/infantry_javelineer_e": 4,
+            "units/athen/infantry_spearman_e": 5
+          },
+          "Melee": {
+            "units/athen/infantry_spearman_b": 10,
+            "units/mace/champion_infantry_spearman_02": 5,
+            "units/athen/infantry_spearman_e": 5,
+            "units/theb_sacred_band": 5
+          },
+          "Spearman": {
+            "units/athen/infantry_spearman_b": 10,
+            "units/mace/champion_infantry_spearman_02": 5,
+            "units/athen/infantry_spearman_e": 5,
+            "units/theb_sacred_band": 5
+          },
+          "Champion": {
+            "units/mace/champion_infantry_spearman_02": 5,
+            "units/theb_sacred_band": 5
+          }
+        },
+        "canBarter": false,
+        "barterPrices": {
+          "buy": {
+            "food": 110,
+            "wood": 110,
+            "stone": 110,
+            "metal": 110
+          },
+          "sell": {
+            "food": 90,
+            "wood": 90,
+            "stone": 90,
+            "metal": 90
+          }
+        },
+        "statistics": {
+          "resourcesGathered": {
+            "vegetarianFood": 0,
+            "food": 0,
+            "wood": 0,
+            "stone": 0,
+            "metal": 0
+          },
+          "percentMapExplored": 53
+        }
+      }
+    ],
+    "circularMap": false,
+    "mapSize": 256,
+    "timeElapsed": 200,
+    "ceasefireActive": false,
+    "ceasefireTimeRemaining": 0,
+    "cinemaPathPlaying": false,
+    "victoryConditions": [
+      "conquest"
+    ],
+    "alliedVictory": true,
+    "populationCapType": "player",
+    "populationCap": 300
+  },
+  "order": {
+    "type": "attack-walk",
+    "entities": [
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      133,
+      134,
+      135,
+      136,
+      137,
+      138
+    ],
+    "x": 159.9273223876953,
+    "z": 127.59426879882812,
+    "queued": false,
+    "allowCapture": false
+  },
+  "fullscreen": {
+    "window": {
+      "windowId": 241106916,
+      "bounds": {
+        "left": 0,
+        "top": 0,
+        "width": 2560,
+        "height": 1080,
+        "windowState": "fullscreen"
+      }
+    },
+    "dimensions": {
+      "inner": [
+        2560,
+        1080
+      ],
+      "screen": [
+        2560,
+        1080
+      ],
+      "dpr": 1,
+      "focused": true
+    },
+    "internalResolution": [
+      1920,
+      1080
+    ]
+  },
+  "lastState": {
+    "players": [
+      {
+        "name": "Gaia",
+        "civ": "gaia",
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "entity": 2,
+        "controlsAll": false,
+        "popCount": 0,
+        "popLimit": 0,
+        "popMax": 300,
+        "panelEntities": [],
+        "resourceCounts": {
+          "food": 300,
+          "wood": 300,
+          "stone": 300,
+          "metal": 300
+        },
+        "resourceGatherers": {
+          "food": 0,
+          "wood": 0,
+          "stone": 0,
+          "metal": 0
+        },
+        "trainingBlocked": false,
+        "state": "active",
+        "team": -1,
+        "teamLocked": false,
+        "disabledTemplates": {},
+        "disabledTechnologies": {},
+        "hasSharedLos": null,
+        "spyCostMultiplier": 1,
+        "phase": "",
+        "isAlly": [
+          true,
+          false,
+          false
+        ],
+        "isMutualAlly": [
+          true,
+          false,
+          false
+        ],
+        "isNeutral": [
+          false,
+          false,
+          false
+        ],
+        "isEnemy": [
+          false,
+          true,
+          true
+        ],
+        "entityLimits": null,
+        "entityCounts": null,
+        "matchEntityCounts": null,
+        "entityLimitChangers": null,
+        "researchQueued": null,
+        "researchedTechs": null,
+        "classCounts": null,
+        "typeCountsByClass": null,
+        "canBarter": false,
+        "barterPrices": {
+          "buy": {
+            "food": 110,
+            "wood": 110,
+            "stone": 110,
+            "metal": 110
+          },
+          "sell": {
+            "food": 90,
+            "wood": 90,
+            "stone": 90,
+            "metal": 90
+          }
+        }
+      },
+      {
+        "name": "Phase4Human",
+        "civ": "athen",
+        "color": {
+          "r": 0.0392156862745098,
+          "g": 0.0392156862745098,
+          "b": 0.7450980392156863,
+          "a": 1
+        },
+        "entity": 3,
+        "controlsAll": false,
+        "popCount": 0,
+        "popLimit": 0,
+        "popMax": 300,
+        "panelEntities": [],
+        "resourceCounts": {
+          "food": 10092,
+          "wood": 10080,
+          "stone": 10000,
+          "metal": 10115
+        },
+        "resourceGatherers": {
+          "food": 0,
+          "wood": 0,
+          "stone": 0,
+          "metal": 0
+        },
+        "trainingBlocked": false,
+        "state": "defeated",
+        "team": -1,
+        "teamLocked": false,
+        "disabledTemplates": {},
+        "disabledTechnologies": {},
+        "hasSharedLos": false,
+        "spyCostMultiplier": 1,
+        "phase": "village",
+        "isAlly": [
+          false,
+          true,
+          false
+        ],
+        "isMutualAlly": [
+          false,
+          true,
+          false
+        ],
+        "isNeutral": [
+          false,
+          false,
+          false
+        ],
+        "isEnemy": [
+          true,
+          false,
+          true
+        ],
+        "entityLimits": {
+          "Animal": 50,
+          "Centurion": 8,
+          "CivilCentre": 1,
+          "Gladiator": 0,
+          "Hero": 1,
+          "Juggernaut": 1,
+          "Kennel": 2,
+          "Library": 1,
+          "Lighthouse": 1,
+          "Monument": 5,
+          "Palace": 1,
+          "Pillar": 0,
+          "PyramidLarge": 2,
+          "TempleOfAmun": 1,
+          "TempleOfIsis": 1,
+          "TempleOfVesta": 1,
+          "Theater": 1,
+          "WarDog": 0,
+          "Wonder": 1,
+          "Yakhchal": 5
+        },
+        "entityCounts": {
+          "Animal": 0,
+          "Centurion": 0,
+          "CivilCentre": 0,
+          "Gladiator": 0,
+          "Hero": 0,
+          "Juggernaut": 0,
+          "Kennel": 0,
+          "Library": 0,
+          "Lighthouse": 0,
+          "Monument": 0,
+          "Palace": 0,
+          "Pillar": 0,
+          "PyramidLarge": 0,
+          "TempleOfAmun": 0,
+          "TempleOfIsis": 0,
+          "TempleOfVesta": 0,
+          "Theater": 0,
+          "WarDog": 0,
+          "Wonder": 0,
+          "Yakhchal": 0
+        },
+        "matchEntityCounts": {},
+        "entityLimitChangers": {
+          "Gladiator": {
+            "Amphitheater": 15
+          },
+          "Juggernaut": {
+            "PtolemyIV": 4
+          },
+          "Pillar": {
+            "Ashoka": 5
+          },
+          "WarDog": {
+            "Kennel": 10
+          }
+        },
+        "researchQueued": {},
+        "researchedTechs": {},
+        "classCounts": {},
+        "typeCountsByClass": {
+          "Unit": {},
+          "Organic": {},
+          "ConquestCritical": {},
+          "Human": {},
+          "CitizenSoldier": {},
+          "Builder": {},
+          "Citizen": {},
+          "Worker": {},
+          "Soldier": {},
+          "Infantry": {},
+          "Ranged": {},
+          "Archer": {},
+          "Mercenary": {},
+          "Elite": {},
+          "Melee": {},
+          "Spearman": {},
+          "Champion": {}
+        },
+        "canBarter": false,
+        "barterPrices": {
+          "buy": {
+            "food": 110,
+            "wood": 110,
+            "stone": 110,
+            "metal": 110
+          },
+          "sell": {
+            "food": 90,
+            "wood": 90,
+            "stone": 90,
+            "metal": 90
+          }
+        },
+        "statistics": {
+          "resourcesGathered": {
+            "vegetarianFood": 0,
+            "food": 0,
+            "wood": 0,
+            "stone": 0,
+            "metal": 0
+          },
+          "percentMapExplored": 65
+        }
+      },
+      {
+        "name": "Phase4Petra",
+        "civ": "athen",
+        "color": {
+          "r": 0.9019607843137255,
+          "g": 0.0392156862745098,
+          "b": 0.0392156862745098,
+          "a": 1
+        },
+        "entity": 4,
+        "controlsAll": false,
+        "popCount": 17,
+        "popLimit": 0,
+        "popMax": 300,
+        "panelEntities": [],
+        "resourceCounts": {
+          "food": 10134,
+          "wood": 10118,
+          "stone": 10000,
+          "metal": 10160
+        },
+        "resourceGatherers": {
+          "food": 0,
+          "wood": 0,
+          "stone": 0,
+          "metal": 0
+        },
+        "trainingBlocked": false,
+        "state": "won",
+        "team": -1,
+        "teamLocked": false,
+        "disabledTemplates": {},
+        "disabledTechnologies": {},
+        "hasSharedLos": false,
+        "spyCostMultiplier": 1,
+        "phase": "village",
+        "isAlly": [
+          false,
+          false,
+          true
+        ],
+        "isMutualAlly": [
+          false,
+          false,
+          true
+        ],
+        "isNeutral": [
+          false,
+          false,
+          false
+        ],
+        "isEnemy": [
+          true,
+          true,
+          false
+        ],
+        "entityLimits": {
+          "Animal": 50,
+          "Centurion": 8,
+          "CivilCentre": 1,
+          "Gladiator": 0,
+          "Hero": 1,
+          "Juggernaut": 1,
+          "Kennel": 2,
+          "Library": 1,
+          "Lighthouse": 1,
+          "Monument": 5,
+          "Palace": 1,
+          "Pillar": 0,
+          "PyramidLarge": 2,
+          "TempleOfAmun": 1,
+          "TempleOfIsis": 1,
+          "TempleOfVesta": 1,
+          "Theater": 1,
+          "WarDog": 0,
+          "Wonder": 1,
+          "Yakhchal": 5
+        },
+        "entityCounts": {
+          "Animal": 0,
+          "Centurion": 0,
+          "CivilCentre": 0,
+          "Gladiator": 0,
+          "Hero": 0,
+          "Juggernaut": 0,
+          "Kennel": 0,
+          "Library": 0,
+          "Lighthouse": 0,
+          "Monument": 0,
+          "Palace": 0,
+          "Pillar": 0,
+          "PyramidLarge": 0,
+          "TempleOfAmun": 0,
+          "TempleOfIsis": 0,
+          "TempleOfVesta": 0,
+          "Theater": 0,
+          "WarDog": 0,
+          "Wonder": 0,
+          "Yakhchal": 0
+        },
+        "matchEntityCounts": {},
+        "entityLimitChangers": {
+          "Gladiator": {
+            "Amphitheater": 15
+          },
+          "Juggernaut": {
+            "PtolemyIV": 4
+          },
+          "Pillar": {
+            "Ashoka": 5
+          },
+          "WarDog": {
+            "Kennel": 10
+          }
+        },
+        "researchQueued": {},
+        "researchedTechs": {},
+        "classCounts": {
+          "Unit": 17,
+          "Organic": 17,
+          "ConquestCritical": 17,
+          "Human": 17,
+          "CitizenSoldier": 13,
+          "Builder": 13,
+          "Citizen": 13,
+          "Worker": 13,
+          "Soldier": 17,
+          "Infantry": 17,
+          "Ranged": 5,
+          "Archer": 5,
+          "Mercenary": 5,
+          "Advanced": 11,
+          "Elite": 2,
+          "Melee": 12,
+          "Spearman": 12,
+          "Champion": 4
+        },
+        "typeCountsByClass": {
+          "Unit": {
+            "units/mace/champion_infantry_spearman_02": 2,
+            "units/athen/infantry_spearman_e": 1,
+            "units/theb_sacred_band": 2,
+            "units/athen/infantry_marine_archer_a": 4,
+            "units/athen/infantry_spearman_a": 7,
+            "units/athen/infantry_marine_archer_e": 1
+          },
+          "Organic": {
+            "units/mace/champion_infantry_spearman_02": 2,
+            "units/athen/infantry_spearman_e": 1,
+            "units/theb_sacred_band": 2,
+            "units/athen/infantry_marine_archer_a": 4,
+            "units/athen/infantry_spearman_a": 7,
+            "units/athen/infantry_marine_archer_e": 1
+          },
+          "ConquestCritical": {
+            "units/mace/champion_infantry_spearman_02": 2,
+            "units/athen/infantry_spearman_e": 1,
+            "units/theb_sacred_band": 2,
+            "units/athen/infantry_marine_archer_a": 4,
+            "units/athen/infantry_spearman_a": 7,
+            "units/athen/infantry_marine_archer_e": 1
+          },
+          "Human": {
+            "units/mace/champion_infantry_spearman_02": 2,
+            "units/athen/infantry_spearman_e": 1,
+            "units/theb_sacred_band": 2,
+            "units/athen/infantry_marine_archer_a": 4,
+            "units/athen/infantry_spearman_a": 7,
+            "units/athen/infantry_marine_archer_e": 1
+          },
+          "CitizenSoldier": {
+            "units/athen/infantry_spearman_e": 1,
+            "units/athen/infantry_marine_archer_a": 4,
+            "units/athen/infantry_spearman_a": 7,
+            "units/athen/infantry_marine_archer_e": 1
+          },
+          "Builder": {
+            "units/athen/infantry_spearman_e": 1,
+            "units/athen/infantry_marine_archer_a": 4,
+            "units/athen/infantry_spearman_a": 7,
+            "units/athen/infantry_marine_archer_e": 1
+          },
+          "Citizen": {
+            "units/athen/infantry_spearman_e": 1,
+            "units/athen/infantry_marine_archer_a": 4,
+            "units/athen/infantry_spearman_a": 7,
+            "units/athen/infantry_marine_archer_e": 1
+          },
+          "Worker": {
+            "units/athen/infantry_spearman_e": 1,
+            "units/athen/infantry_marine_archer_a": 4,
+            "units/athen/infantry_spearman_a": 7,
+            "units/athen/infantry_marine_archer_e": 1
+          },
+          "Soldier": {
+            "units/mace/champion_infantry_spearman_02": 2,
+            "units/athen/infantry_spearman_e": 1,
+            "units/theb_sacred_band": 2,
+            "units/athen/infantry_marine_archer_a": 4,
+            "units/athen/infantry_spearman_a": 7,
+            "units/athen/infantry_marine_archer_e": 1
+          },
+          "Infantry": {
+            "units/mace/champion_infantry_spearman_02": 2,
+            "units/athen/infantry_spearman_e": 1,
+            "units/theb_sacred_band": 2,
+            "units/athen/infantry_marine_archer_a": 4,
+            "units/athen/infantry_spearman_a": 7,
+            "units/athen/infantry_marine_archer_e": 1
+          },
+          "Ranged": {
+            "units/athen/infantry_marine_archer_a": 4,
+            "units/athen/infantry_marine_archer_e": 1
+          },
+          "Archer": {
+            "units/athen/infantry_marine_archer_a": 4,
+            "units/athen/infantry_marine_archer_e": 1
+          },
+          "Mercenary": {
+            "units/athen/infantry_marine_archer_a": 4,
+            "units/athen/infantry_marine_archer_e": 1
+          },
+          "Basic": {},
+          "Javelineer": {},
+          "Advanced": {
+            "units/athen/infantry_marine_archer_a": 4,
+            "units/athen/infantry_spearman_a": 7
+          },
+          "Elite": {
+            "units/athen/infantry_spearman_e": 1,
+            "units/athen/infantry_marine_archer_e": 1
+          },
+          "Melee": {
+            "units/mace/champion_infantry_spearman_02": 2,
+            "units/athen/infantry_spearman_e": 1,
+            "units/theb_sacred_band": 2,
+            "units/athen/infantry_spearman_a": 7
+          },
+          "Spearman": {
+            "units/mace/champion_infantry_spearman_02": 2,
+            "units/athen/infantry_spearman_e": 1,
+            "units/theb_sacred_band": 2,
+            "units/athen/infantry_spearman_a": 7
+          },
+          "Champion": {
+            "units/mace/champion_infantry_spearman_02": 2,
+            "units/theb_sacred_band": 2
+          }
+        },
+        "canBarter": false,
+        "barterPrices": {
+          "buy": {
+            "food": 110,
+            "wood": 110,
+            "stone": 110,
+            "metal": 110
+          },
+          "sell": {
+            "food": 90,
+            "wood": 90,
+            "stone": 90,
+            "metal": 90
+          }
+        },
+        "statistics": {
+          "resourcesGathered": {
+            "vegetarianFood": 0,
+            "food": 0,
+            "wood": 0,
+            "stone": 0,
+            "metal": 0
+          },
+          "percentMapExplored": 77
+        }
+      }
+    ],
+    "circularMap": false,
+    "mapSize": 256,
+    "timeElapsed": 37000,
+    "ceasefireActive": false,
+    "ceasefireTimeRemaining": 0,
+    "cinemaPathPlaying": false,
+    "victoryConditions": [
+      "conquest"
+    ],
+    "alliedVictory": true,
+    "populationCapType": "player",
+    "populationCap": 300
+  },
+  "statistics": {
+    "players": [
+      {
+        "name": "Gaia",
+        "civ": "gaia",
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "entity": 2,
+        "controlsAll": false,
+        "popCount": 0,
+        "popLimit": 0,
+        "popMax": 300,
+        "panelEntities": [],
+        "resourceCounts": {
+          "food": 300,
+          "wood": 300,
+          "stone": 300,
+          "metal": 300
+        },
+        "resourceGatherers": {
+          "food": 0,
+          "wood": 0,
+          "stone": 0,
+          "metal": 0
+        },
+        "trainingBlocked": false,
+        "state": "active",
+        "team": -1,
+        "teamLocked": false,
+        "disabledTemplates": {},
+        "disabledTechnologies": {},
+        "hasSharedLos": null,
+        "spyCostMultiplier": 1,
+        "phase": "",
+        "isAlly": [
+          true,
+          false,
+          false
+        ],
+        "isMutualAlly": [
+          true,
+          false,
+          false
+        ],
+        "isNeutral": [
+          false,
+          false,
+          false
+        ],
+        "isEnemy": [
+          false,
+          true,
+          true
+        ],
+        "entityLimits": null,
+        "entityCounts": null,
+        "matchEntityCounts": null,
+        "entityLimitChangers": null,
+        "researchQueued": null,
+        "researchedTechs": null,
+        "classCounts": null,
+        "typeCountsByClass": null,
+        "canBarter": false,
+        "barterPrices": {
+          "buy": {
+            "food": 110,
+            "wood": 110,
+            "stone": 110,
+            "metal": 110
+          },
+          "sell": {
+            "food": 90,
+            "wood": 90,
+            "stone": 90,
+            "metal": 90
+          }
+        }
+      },
+      {
+        "name": "Phase4Human",
+        "civ": "athen",
+        "color": {
+          "r": 0.0392156862745098,
+          "g": 0.0392156862745098,
+          "b": 0.7450980392156863,
+          "a": 1
+        },
+        "entity": 3,
+        "controlsAll": false,
+        "popCount": 0,
+        "popLimit": 0,
+        "popMax": 300,
+        "panelEntities": [],
+        "resourceCounts": {
+          "food": 10092,
+          "wood": 10080,
+          "stone": 10000,
+          "metal": 10115
+        },
+        "resourceGatherers": {
+          "food": 0,
+          "wood": 0,
+          "stone": 0,
+          "metal": 0
+        },
+        "trainingBlocked": false,
+        "state": "defeated",
+        "team": -1,
+        "teamLocked": false,
+        "disabledTemplates": {},
+        "disabledTechnologies": {},
+        "hasSharedLos": false,
+        "spyCostMultiplier": 1,
+        "phase": "village",
+        "isAlly": [
+          false,
+          true,
+          false
+        ],
+        "isMutualAlly": [
+          false,
+          true,
+          false
+        ],
+        "isNeutral": [
+          false,
+          false,
+          false
+        ],
+        "isEnemy": [
+          true,
+          false,
+          true
+        ],
+        "entityLimits": {
+          "Animal": 50,
+          "Centurion": 8,
+          "CivilCentre": 1,
+          "Gladiator": 0,
+          "Hero": 1,
+          "Juggernaut": 1,
+          "Kennel": 2,
+          "Library": 1,
+          "Lighthouse": 1,
+          "Monument": 5,
+          "Palace": 1,
+          "Pillar": 0,
+          "PyramidLarge": 2,
+          "TempleOfAmun": 1,
+          "TempleOfIsis": 1,
+          "TempleOfVesta": 1,
+          "Theater": 1,
+          "WarDog": 0,
+          "Wonder": 1,
+          "Yakhchal": 5
+        },
+        "entityCounts": {
+          "Animal": 0,
+          "Centurion": 0,
+          "CivilCentre": 0,
+          "Gladiator": 0,
+          "Hero": 0,
+          "Juggernaut": 0,
+          "Kennel": 0,
+          "Library": 0,
+          "Lighthouse": 0,
+          "Monument": 0,
+          "Palace": 0,
+          "Pillar": 0,
+          "PyramidLarge": 0,
+          "TempleOfAmun": 0,
+          "TempleOfIsis": 0,
+          "TempleOfVesta": 0,
+          "Theater": 0,
+          "WarDog": 0,
+          "Wonder": 0,
+          "Yakhchal": 0
+        },
+        "matchEntityCounts": {},
+        "entityLimitChangers": {
+          "Gladiator": {
+            "Amphitheater": 15
+          },
+          "Juggernaut": {
+            "PtolemyIV": 4
+          },
+          "Pillar": {
+            "Ashoka": 5
+          },
+          "WarDog": {
+            "Kennel": 10
+          }
+        },
+        "researchQueued": {},
+        "researchedTechs": {},
+        "classCounts": {},
+        "typeCountsByClass": {
+          "Unit": {},
+          "Organic": {},
+          "ConquestCritical": {},
+          "Human": {},
+          "CitizenSoldier": {},
+          "Builder": {},
+          "Citizen": {},
+          "Worker": {},
+          "Soldier": {},
+          "Infantry": {},
+          "Ranged": {},
+          "Archer": {},
+          "Mercenary": {},
+          "Elite": {},
+          "Melee": {},
+          "Spearman": {},
+          "Champion": {}
+        },
+        "canBarter": false,
+        "barterPrices": {
+          "buy": {
+            "food": 110,
+            "wood": 110,
+            "stone": 110,
+            "metal": 110
+          },
+          "sell": {
+            "food": 90,
+            "wood": 90,
+            "stone": 90,
+            "metal": 90
+          }
+        },
+        "statistics": {
+          "resourcesGathered": {
+            "vegetarianFood": 0,
+            "food": 0,
+            "wood": 0,
+            "stone": 0,
+            "metal": 0
+          },
+          "percentMapExplored": 65
+        },
+        "sequences": {
+          "unitsTrained": {
+            "total": [
+              0,
+              0,
+              0
+            ],
+            "Cavalry": [
+              0,
+              0,
+              0
+            ],
+            "Champion": [
+              0,
+              0,
+              0
+            ],
+            "Civilian": [
+              0,
+              0,
+              0
+            ],
+            "Domestic": [
+              0,
+              0,
+              0
+            ],
+            "Hero": [
+              0,
+              0,
+              0
+            ],
+            "Infantry": [
+              0,
+              0,
+              0
+            ],
+            "Ship": [
+              0,
+              0,
+              0
+            ],
+            "Siege": [
+              0,
+              0,
+              0
+            ],
+            "Trader": [
+              0,
+              0,
+              0
+            ],
+            "Unit": [
+              0,
+              0,
+              0
+            ],
+            "Worker": [
+              0,
+              0,
+              0
+            ]
+          },
+          "unitsLost": {
+            "total": [
+              0,
+              0,
+              0
+            ],
+            "Cavalry": [
+              0,
+              0,
+              0
+            ],
+            "Champion": [
+              0,
+              4,
+              8
+            ],
+            "Civilian": [
+              0,
+              0,
+              0
+            ],
+            "Hero": [
+              0,
+              0,
+              0
+            ],
+            "Infantry": [
+              0,
+              19,
+              30
+            ],
+            "Ship": [
+              0,
+              0,
+              0
+            ],
+            "Siege": [
+              0,
+              0,
+              0
+            ],
+            "Trader": [
+              0,
+              0,
+              0
+            ],
+            "Unit": [
+              0,
+              19,
+              30
+            ],
+            "Worker": [
+              0,
+              15,
+              22
+            ]
+          },
+          "unitsLostValue": [
+            0,
+            2180,
+            3480
+          ],
+          "enemyUnitsKilled": {
+            "total": [
+              0,
+              0,
+              0
+            ],
+            "Cavalry": [
+              0,
+              0,
+              0
+            ],
+            "Champion": [
+              0,
+              5,
+              6
+            ],
+            "Civilian": [
+              0,
+              0,
+              0
+            ],
+            "Hero": [
+              0,
+              0,
+              0
+            ],
+            "Infantry": [
+              0,
+              19,
+              22
+            ],
+            "Ship": [
+              0,
+              0,
+              0
+            ],
+            "Siege": [
+              0,
+              0,
+              0
+            ],
+            "Trader": [
+              0,
+              0,
+              0
+            ],
+            "Unit": [
+              0,
+              19,
+              22
+            ],
+            "Worker": [
+              0,
+              14,
+              16
+            ]
+          },
+          "enemyUnitsKilledValue": [
+            0,
+            2140,
+            2560
+          ],
+          "unitsCaptured": {
+            "total": [
+              0,
+              0,
+              0
+            ],
+            "Cavalry": [
+              0,
+              0,
+              0
+            ],
+            "Champion": [
+              0,
+              0,
+              0
+            ],
+            "Civilian": [
+              0,
+              0,
+              0
+            ],
+            "Hero": [
+              0,
+              0,
+              0
+            ],
+            "Infantry": [
+              0,
+              0,
+              0
+            ],
+            "Ship": [
+              0,
+              0,
+              0
+            ],
+            "Siege": [
+              0,
+              0,
+              0
+            ],
+            "Trader": [
+              0,
+              0,
+              0
+            ],
+            "Unit": [
+              0,
+              0,
+              0
+            ],
+            "Worker": [
+              0,
+              0,
+              0
+            ]
+          },
+          "unitsCapturedValue": [
+            0,
+            0,
+            0
+          ],
+          "buildingsConstructed": {
+            "total": [
+              0,
+              0,
+              0
+            ],
+            "Economic": [
+              0,
+              0,
+              0
+            ],
+            "CivCentre": [
+              0,
+              0,
+              0
+            ],
+            "Fortress": [
+              0,
+              0,
+              0
+            ],
+            "House": [
+              0,
+              0,
+              0
+            ],
+            "Military": [
+              0,
+              0,
+              0
+            ],
+            "Outpost": [
+              0,
+              0,
+              0
+            ],
+            "Structure": [
+              0,
+              0,
+              0
+            ],
+            "Wonder": [
+              0,
+              0,
+              0
+            ]
+          },
+          "buildingsLost": {
+            "total": [
+              0,
+              0,
+              0
+            ],
+            "Economic": [
+              0,
+              0,
+              0
+            ],
+            "CivCentre": [
+              0,
+              0,
+              0
+            ],
+            "Fortress": [
+              0,
+              0,
+              0
+            ],
+            "House": [
+              0,
+              0,
+              0
+            ],
+            "Military": [
+              0,
+              0,
+              0
+            ],
+            "Outpost": [
+              0,
+              0,
+              0
+            ],
+            "Structure": [
+              0,
+              0,
+              0
+            ],
+            "Wonder": [
+              0,
+              0,
+              0
+            ]
+          },
+          "buildingsLostValue": [
+            0,
+            0,
+            0
+          ],
+          "enemyBuildingsDestroyed": {
+            "total": [
+              0,
+              0,
+              0
+            ],
+            "Economic": [
+              0,
+              0,
+              0
+            ],
+            "CivCentre": [
+              0,
+              0,
+              0
+            ],
+            "Fortress": [
+              0,
+              0,
+              0
+            ],
+            "House": [
+              0,
+              0,
+              0
+            ],
+            "Military": [
+              0,
+              0,
+              0
+            ],
+            "Outpost": [
+              0,
+              0,
+              0
+            ],
+            "Structure": [
+              0,
+              0,
+              0
+            ],
+            "Wonder": [
+              0,
+              0,
+              0
+            ]
+          },
+          "enemyBuildingsDestroyedValue": [
+            0,
+            0,
+            0
+          ],
+          "buildingsCaptured": {
+            "total": [
+              0,
+              0,
+              0
+            ],
+            "Economic": [
+              0,
+              0,
+              0
+            ],
+            "CivCentre": [
+              0,
+              0,
+              0
+            ],
+            "Fortress": [
+              0,
+              0,
+              0
+            ],
+            "House": [
+              0,
+              0,
+              0
+            ],
+            "Military": [
+              0,
+              0,
+              0
+            ],
+            "Outpost": [
+              0,
+              0,
+              0
+            ],
+            "Structure": [
+              0,
+              0,
+              0
+            ],
+            "Wonder": [
+              0,
+              0,
+              0
+            ]
+          },
+          "buildingsCapturedValue": [
+            0,
+            0,
+            0
+          ],
+          "resourcesCount": {
+            "food": [
+              10000,
+              10073,
+              10092
+            ],
+            "wood": [
+              10000,
+              10063,
+              10080
+            ],
+            "stone": [
+              10000,
+              10000,
+              10000
+            ],
+            "metal": [
+              10000,
+              10107,
+              10115
+            ]
+          },
+          "resourcesGathered": {
+            "vegetarianFood": [
+              0,
+              0,
+              0
+            ],
+            "food": [
+              0,
+              0,
+              0
+            ],
+            "wood": [
+              0,
+              0,
+              0
+            ],
+            "stone": [
+              0,
+              0,
+              0
+            ],
+            "metal": [
+              0,
+              0,
+              0
+            ]
+          },
+          "resourcesUsed": {
+            "food": [
+              0,
+              0,
+              0
+            ],
+            "wood": [
+              0,
+              0,
+              0
+            ],
+            "stone": [
+              0,
+              0,
+              0
+            ],
+            "metal": [
+              0,
+              0,
+              0
+            ]
+          },
+          "resourcesSold": {
+            "food": [
+              0,
+              0,
+              0
+            ],
+            "wood": [
+              0,
+              0,
+              0
+            ],
+            "stone": [
+              0,
+              0,
+              0
+            ],
+            "metal": [
+              0,
+              0,
+              0
+            ]
+          },
+          "resourcesBought": {
+            "food": [
+              0,
+              0,
+              0
+            ],
+            "wood": [
+              0,
+              0,
+              0
+            ],
+            "stone": [
+              0,
+              0,
+              0
+            ],
+            "metal": [
+              0,
+              0,
+              0
+            ]
+          },
+          "tributesSent": [
+            0,
+            0,
+            0
+          ],
+          "tributesReceived": [
+            0,
+            0,
+            0
+          ],
+          "tradeIncome": [
+            0,
+            0,
+            0
+          ],
+          "treasuresCollected": [
+            0,
+            0,
+            0
+          ],
+          "lootCollected": [
+            0,
+            243,
+            287
+          ],
+          "populationCount": [
+            30,
+            11,
+            0
+          ],
+          "percentMapExplored": [
+            55,
+            65,
+            65
+          ],
+          "teamPercentMapExplored": [
+            55,
+            65,
+            65
+          ],
+          "percentMapControlled": [
+            0,
+            0,
+            0
+          ],
+          "teamPercentMapControlled": [
+            0,
+            0,
+            0
+          ],
+          "peakPercentMapControlled": [
+            0,
+            0,
+            0
+          ],
+          "teamPeakPercentMapControlled": [
+            0,
+            0,
+            0
+          ],
+          "successfulBribes": [
+            0,
+            0,
+            0
+          ],
+          "failedBribes": [
+            0,
+            0,
+            0
+          ],
+          "time": [
+            0.2,
+            30,
+            37.2
+          ]
+        }
+      },
+      {
+        "name": "Phase4Petra",
+        "civ": "athen",
+        "color": {
+          "r": 0.9019607843137255,
+          "g": 0.0392156862745098,
+          "b": 0.0392156862745098,
+          "a": 1
+        },
+        "entity": 4,
+        "controlsAll": false,
+        "popCount": 17,
+        "popLimit": 0,
+        "popMax": 300,
+        "panelEntities": [],
+        "resourceCounts": {
+          "food": 10134,
+          "wood": 10118,
+          "stone": 10000,
+          "metal": 10160
+        },
+        "resourceGatherers": {
+          "food": 0,
+          "wood": 0,
+          "stone": 0,
+          "metal": 0
+        },
+        "trainingBlocked": false,
+        "state": "won",
+        "team": -1,
+        "teamLocked": false,
+        "disabledTemplates": {},
+        "disabledTechnologies": {},
+        "hasSharedLos": false,
+        "spyCostMultiplier": 1,
+        "phase": "village",
+        "isAlly": [
+          false,
+          false,
+          true
+        ],
+        "isMutualAlly": [
+          false,
+          false,
+          true
+        ],
+        "isNeutral": [
+          false,
+          false,
+          false
+        ],
+        "isEnemy": [
+          true,
+          true,
+          false
+        ],
+        "entityLimits": {
+          "Animal": 50,
+          "Centurion": 8,
+          "CivilCentre": 1,
+          "Gladiator": 0,
+          "Hero": 1,
+          "Juggernaut": 1,
+          "Kennel": 2,
+          "Library": 1,
+          "Lighthouse": 1,
+          "Monument": 5,
+          "Palace": 1,
+          "Pillar": 0,
+          "PyramidLarge": 2,
+          "TempleOfAmun": 1,
+          "TempleOfIsis": 1,
+          "TempleOfVesta": 1,
+          "Theater": 1,
+          "WarDog": 0,
+          "Wonder": 1,
+          "Yakhchal": 5
+        },
+        "entityCounts": {
+          "Animal": 0,
+          "Centurion": 0,
+          "CivilCentre": 0,
+          "Gladiator": 0,
+          "Hero": 0,
+          "Juggernaut": 0,
+          "Kennel": 0,
+          "Library": 0,
+          "Lighthouse": 0,
+          "Monument": 0,
+          "Palace": 0,
+          "Pillar": 0,
+          "PyramidLarge": 0,
+          "TempleOfAmun": 0,
+          "TempleOfIsis": 0,
+          "TempleOfVesta": 0,
+          "Theater": 0,
+          "WarDog": 0,
+          "Wonder": 0,
+          "Yakhchal": 0
+        },
+        "matchEntityCounts": {},
+        "entityLimitChangers": {
+          "Gladiator": {
+            "Amphitheater": 15
+          },
+          "Juggernaut": {
+            "PtolemyIV": 4
+          },
+          "Pillar": {
+            "Ashoka": 5
+          },
+          "WarDog": {
+            "Kennel": 10
+          }
+        },
+        "researchQueued": {},
+        "researchedTechs": {},
+        "classCounts": {
+          "Unit": 17,
+          "Organic": 17,
+          "ConquestCritical": 17,
+          "Human": 17,
+          "CitizenSoldier": 13,
+          "Builder": 13,
+          "Citizen": 13,
+          "Worker": 13,
+          "Soldier": 17,
+          "Infantry": 17,
+          "Ranged": 5,
+          "Archer": 5,
+          "Mercenary": 5,
+          "Advanced": 11,
+          "Elite": 2,
+          "Melee": 12,
+          "Spearman": 12,
+          "Champion": 4
+        },
+        "typeCountsByClass": {
+          "Unit": {
+            "units/mace/champion_infantry_spearman_02": 2,
+            "units/athen/infantry_spearman_e": 1,
+            "units/theb_sacred_band": 2,
+            "units/athen/infantry_marine_archer_a": 4,
+            "units/athen/infantry_spearman_a": 7,
+            "units/athen/infantry_marine_archer_e": 1
+          },
+          "Organic": {
+            "units/mace/champion_infantry_spearman_02": 2,
+            "units/athen/infantry_spearman_e": 1,
+            "units/theb_sacred_band": 2,
+            "units/athen/infantry_marine_archer_a": 4,
+            "units/athen/infantry_spearman_a": 7,
+            "units/athen/infantry_marine_archer_e": 1
+          },
+          "ConquestCritical": {
+            "units/mace/champion_infantry_spearman_02": 2,
+            "units/athen/infantry_spearman_e": 1,
+            "units/theb_sacred_band": 2,
+            "units/athen/infantry_marine_archer_a": 4,
+            "units/athen/infantry_spearman_a": 7,
+            "units/athen/infantry_marine_archer_e": 1
+          },
+          "Human": {
+            "units/mace/champion_infantry_spearman_02": 2,
+            "units/athen/infantry_spearman_e": 1,
+            "units/theb_sacred_band": 2,
+            "units/athen/infantry_marine_archer_a": 4,
+            "units/athen/infantry_spearman_a": 7,
+            "units/athen/infantry_marine_archer_e": 1
+          },
+          "CitizenSoldier": {
+            "units/athen/infantry_spearman_e": 1,
+            "units/athen/infantry_marine_archer_a": 4,
+            "units/athen/infantry_spearman_a": 7,
+            "units/athen/infantry_marine_archer_e": 1
+          },
+          "Builder": {
+            "units/athen/infantry_spearman_e": 1,
+            "units/athen/infantry_marine_archer_a": 4,
+            "units/athen/infantry_spearman_a": 7,
+            "units/athen/infantry_marine_archer_e": 1
+          },
+          "Citizen": {
+            "units/athen/infantry_spearman_e": 1,
+            "units/athen/infantry_marine_archer_a": 4,
+            "units/athen/infantry_spearman_a": 7,
+            "units/athen/infantry_marine_archer_e": 1
+          },
+          "Worker": {
+            "units/athen/infantry_spearman_e": 1,
+            "units/athen/infantry_marine_archer_a": 4,
+            "units/athen/infantry_spearman_a": 7,
+            "units/athen/infantry_marine_archer_e": 1
+          },
+          "Soldier": {
+            "units/mace/champion_infantry_spearman_02": 2,
+            "units/athen/infantry_spearman_e": 1,
+            "units/theb_sacred_band": 2,
+            "units/athen/infantry_marine_archer_a": 4,
+            "units/athen/infantry_spearman_a": 7,
+            "units/athen/infantry_marine_archer_e": 1
+          },
+          "Infantry": {
+            "units/mace/champion_infantry_spearman_02": 2,
+            "units/athen/infantry_spearman_e": 1,
+            "units/theb_sacred_band": 2,
+            "units/athen/infantry_marine_archer_a": 4,
+            "units/athen/infantry_spearman_a": 7,
+            "units/athen/infantry_marine_archer_e": 1
+          },
+          "Ranged": {
+            "units/athen/infantry_marine_archer_a": 4,
+            "units/athen/infantry_marine_archer_e": 1
+          },
+          "Archer": {
+            "units/athen/infantry_marine_archer_a": 4,
+            "units/athen/infantry_marine_archer_e": 1
+          },
+          "Mercenary": {
+            "units/athen/infantry_marine_archer_a": 4,
+            "units/athen/infantry_marine_archer_e": 1
+          },
+          "Basic": {},
+          "Javelineer": {},
+          "Advanced": {
+            "units/athen/infantry_marine_archer_a": 4,
+            "units/athen/infantry_spearman_a": 7
+          },
+          "Elite": {
+            "units/athen/infantry_spearman_e": 1,
+            "units/athen/infantry_marine_archer_e": 1
+          },
+          "Melee": {
+            "units/mace/champion_infantry_spearman_02": 2,
+            "units/athen/infantry_spearman_e": 1,
+            "units/theb_sacred_band": 2,
+            "units/athen/infantry_spearman_a": 7
+          },
+          "Spearman": {
+            "units/mace/champion_infantry_spearman_02": 2,
+            "units/athen/infantry_spearman_e": 1,
+            "units/theb_sacred_band": 2,
+            "units/athen/infantry_spearman_a": 7
+          },
+          "Champion": {
+            "units/mace/champion_infantry_spearman_02": 2,
+            "units/theb_sacred_band": 2
+          }
+        },
+        "canBarter": false,
+        "barterPrices": {
+          "buy": {
+            "food": 110,
+            "wood": 110,
+            "stone": 110,
+            "metal": 110
+          },
+          "sell": {
+            "food": 90,
+            "wood": 90,
+            "stone": 90,
+            "metal": 90
+          }
+        },
+        "statistics": {
+          "resourcesGathered": {
+            "vegetarianFood": 0,
+            "food": 0,
+            "wood": 0,
+            "stone": 0,
+            "metal": 0
+          },
+          "percentMapExplored": 77
+        },
+        "sequences": {
+          "unitsTrained": {
+            "total": [
+              0,
+              0,
+              0
+            ],
+            "Cavalry": [
+              0,
+              0,
+              0
+            ],
+            "Champion": [
+              0,
+              0,
+              0
+            ],
+            "Civilian": [
+              0,
+              0,
+              0
+            ],
+            "Domestic": [
+              0,
+              0,
+              0
+            ],
+            "Hero": [
+              0,
+              0,
+              0
+            ],
+            "Infantry": [
+              0,
+              0,
+              0
+            ],
+            "Ship": [
+              0,
+              0,
+              0
+            ],
+            "Siege": [
+              0,
+              0,
+              0
+            ],
+            "Trader": [
+              0,
+              0,
+              0
+            ],
+            "Unit": [
+              0,
+              0,
+              0
+            ],
+            "Worker": [
+              0,
+              0,
+              0
+            ]
+          },
+          "unitsLost": {
+            "total": [
+              0,
+              0,
+              0
+            ],
+            "Cavalry": [
+              0,
+              0,
+              0
+            ],
+            "Champion": [
+              0,
+              5,
+              6
+            ],
+            "Civilian": [
+              0,
+              0,
+              0
+            ],
+            "Hero": [
+              0,
+              0,
+              0
+            ],
+            "Infantry": [
+              0,
+              19,
+              22
+            ],
+            "Ship": [
+              0,
+              0,
+              0
+            ],
+            "Siege": [
+              0,
+              0,
+              0
+            ],
+            "Trader": [
+              0,
+              0,
+              0
+            ],
+            "Unit": [
+              0,
+              19,
+              22
+            ],
+            "Worker": [
+              0,
+              14,
+              16
+            ]
+          },
+          "unitsLostValue": [
+            0,
+            2140,
+            2560
+          ],
+          "enemyUnitsKilled": {
+            "total": [
+              0,
+              0,
+              0
+            ],
+            "Cavalry": [
+              0,
+              0,
+              0
+            ],
+            "Champion": [
+              0,
+              4,
+              8
+            ],
+            "Civilian": [
+              0,
+              0,
+              0
+            ],
+            "Hero": [
+              0,
+              0,
+              0
+            ],
+            "Infantry": [
+              0,
+              19,
+              30
+            ],
+            "Ship": [
+              0,
+              0,
+              0
+            ],
+            "Siege": [
+              0,
+              0,
+              0
+            ],
+            "Trader": [
+              0,
+              0,
+              0
+            ],
+            "Unit": [
+              0,
+              19,
+              30
+            ],
+            "Worker": [
+              0,
+              15,
+              22
+            ]
+          },
+          "enemyUnitsKilledValue": [
+            0,
+            2180,
+            3480
+          ],
+          "unitsCaptured": {
+            "total": [
+              0,
+              0,
+              0
+            ],
+            "Cavalry": [
+              0,
+              0,
+              0
+            ],
+            "Champion": [
+              0,
+              0,
+              0
+            ],
+            "Civilian": [
+              0,
+              0,
+              0
+            ],
+            "Hero": [
+              0,
+              0,
+              0
+            ],
+            "Infantry": [
+              0,
+              0,
+              0
+            ],
+            "Ship": [
+              0,
+              0,
+              0
+            ],
+            "Siege": [
+              0,
+              0,
+              0
+            ],
+            "Trader": [
+              0,
+              0,
+              0
+            ],
+            "Unit": [
+              0,
+              0,
+              0
+            ],
+            "Worker": [
+              0,
+              0,
+              0
+            ]
+          },
+          "unitsCapturedValue": [
+            0,
+            0,
+            0
+          ],
+          "buildingsConstructed": {
+            "total": [
+              0,
+              0,
+              0
+            ],
+            "Economic": [
+              0,
+              0,
+              0
+            ],
+            "CivCentre": [
+              0,
+              0,
+              0
+            ],
+            "Fortress": [
+              0,
+              0,
+              0
+            ],
+            "House": [
+              0,
+              0,
+              0
+            ],
+            "Military": [
+              0,
+              0,
+              0
+            ],
+            "Outpost": [
+              0,
+              0,
+              0
+            ],
+            "Structure": [
+              0,
+              0,
+              0
+            ],
+            "Wonder": [
+              0,
+              0,
+              0
+            ]
+          },
+          "buildingsLost": {
+            "total": [
+              0,
+              0,
+              0
+            ],
+            "Economic": [
+              0,
+              0,
+              0
+            ],
+            "CivCentre": [
+              0,
+              0,
+              0
+            ],
+            "Fortress": [
+              0,
+              0,
+              0
+            ],
+            "House": [
+              0,
+              0,
+              0
+            ],
+            "Military": [
+              0,
+              0,
+              0
+            ],
+            "Outpost": [
+              0,
+              0,
+              0
+            ],
+            "Structure": [
+              0,
+              0,
+              0
+            ],
+            "Wonder": [
+              0,
+              0,
+              0
+            ]
+          },
+          "buildingsLostValue": [
+            0,
+            0,
+            0
+          ],
+          "enemyBuildingsDestroyed": {
+            "total": [
+              0,
+              0,
+              0
+            ],
+            "Economic": [
+              0,
+              0,
+              0
+            ],
+            "CivCentre": [
+              0,
+              0,
+              0
+            ],
+            "Fortress": [
+              0,
+              0,
+              0
+            ],
+            "House": [
+              0,
+              0,
+              0
+            ],
+            "Military": [
+              0,
+              0,
+              0
+            ],
+            "Outpost": [
+              0,
+              0,
+              0
+            ],
+            "Structure": [
+              0,
+              0,
+              0
+            ],
+            "Wonder": [
+              0,
+              0,
+              0
+            ]
+          },
+          "enemyBuildingsDestroyedValue": [
+            0,
+            0,
+            0
+          ],
+          "buildingsCaptured": {
+            "total": [
+              0,
+              0,
+              0
+            ],
+            "Economic": [
+              0,
+              0,
+              0
+            ],
+            "CivCentre": [
+              0,
+              0,
+              0
+            ],
+            "Fortress": [
+              0,
+              0,
+              0
+            ],
+            "House": [
+              0,
+              0,
+              0
+            ],
+            "Military": [
+              0,
+              0,
+              0
+            ],
+            "Outpost": [
+              0,
+              0,
+              0
+            ],
+            "Structure": [
+              0,
+              0,
+              0
+            ],
+            "Wonder": [
+              0,
+              0,
+              0
+            ]
+          },
+          "buildingsCapturedValue": [
+            0,
+            0,
+            0
+          ],
+          "resourcesCount": {
+            "food": [
+              10000,
+              10102,
+              10134
+            ],
+            "wood": [
+              10000,
+              10094,
+              10118
+            ],
+            "stone": [
+              10000,
+              10000,
+              10000
+            ],
+            "metal": [
+              10000,
+              10072,
+              10160
+            ]
+          },
+          "resourcesGathered": {
+            "vegetarianFood": [
+              0,
+              0,
+              0
+            ],
+            "food": [
+              0,
+              0,
+              0
+            ],
+            "wood": [
+              0,
+              0,
+              0
+            ],
+            "stone": [
+              0,
+              0,
+              0
+            ],
+            "metal": [
+              0,
+              0,
+              0
+            ]
+          },
+          "resourcesUsed": {
+            "food": [
+              0,
+              0,
+              0
+            ],
+            "wood": [
+              0,
+              0,
+              0
+            ],
+            "stone": [
+              0,
+              0,
+              0
+            ],
+            "metal": [
+              0,
+              0,
+              0
+            ]
+          },
+          "resourcesSold": {
+            "food": [
+              0,
+              0,
+              0
+            ],
+            "wood": [
+              0,
+              0,
+              0
+            ],
+            "stone": [
+              0,
+              0,
+              0
+            ],
+            "metal": [
+              0,
+              0,
+              0
+            ]
+          },
+          "resourcesBought": {
+            "food": [
+              0,
+              0,
+              0
+            ],
+            "wood": [
+              0,
+              0,
+              0
+            ],
+            "stone": [
+              0,
+              0,
+              0
+            ],
+            "metal": [
+              0,
+              0,
+              0
+            ]
+          },
+          "tributesSent": [
+            0,
+            0,
+            0
+          ],
+          "tributesReceived": [
+            0,
+            0,
+            0
+          ],
+          "tradeIncome": [
+            0,
+            0,
+            0
+          ],
+          "treasuresCollected": [
+            0,
+            0,
+            0
+          ],
+          "lootCollected": [
+            0,
+            268,
+            412
+          ],
+          "populationCount": [
+            39,
+            20,
+            17
+          ],
+          "percentMapExplored": [
+            53,
+            76,
+            77
+          ],
+          "teamPercentMapExplored": [
+            53,
+            76,
+            77
+          ],
+          "percentMapControlled": [
+            0,
+            0,
+            0
+          ],
+          "teamPercentMapControlled": [
+            0,
+            0,
+            0
+          ],
+          "peakPercentMapControlled": [
+            0,
+            0,
+            0
+          ],
+          "teamPeakPercentMapControlled": [
+            0,
+            0,
+            0
+          ],
+          "successfulBribes": [
+            0,
+            0,
+            0
+          ],
+          "failedBribes": [
+            0,
+            0,
+            0
+          ],
+          "time": [
+            0.2,
+            30,
+            37.2
+          ]
+        }
+      }
+    ],
+    "circularMap": false,
+    "mapSize": 256,
+    "timeElapsed": 37200,
+    "ceasefireActive": false,
+    "ceasefireTimeRemaining": 0,
+    "cinemaPathPlaying": false,
+    "victoryConditions": [
+      "conquest"
+    ],
+    "alliedVictory": true,
+    "populationCapType": "player",
+    "populationCap": 300
+  },
+  "casualties": 52,
+  "audio": {
+    "contexts": [
+      {
+        "id": 2,
+        "state": "running",
+        "sampleRate": 48000,
+        "sources": 64,
+        "gain": 0.4000000059604645,
+        "playingSources": 11
+      }
+    ],
+    "decodedBuffers": [
+      {
+        "frames": 49152,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 591
+      },
+      {
+        "frames": 49152,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 717
+      },
+      {
+        "frames": 8749,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 76
+      },
+      {
+        "frames": 6894,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 99
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 383
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 19543,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 299
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 382
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 15961,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 117
+      },
+      {
+        "frames": 49152,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 725
+      },
+      {
+        "frames": 49152,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 594
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 382
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 380
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 374
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 372
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 366
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 378
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 371
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 373
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 380
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 380
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 375
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 373
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 372
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 377
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 381
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 375
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 378
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 378
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 373
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 377
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 380
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 374
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 379
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 381
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 373
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 374
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 370
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 374
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 377
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 375
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 378
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 378
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 382
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 375
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 374
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 380
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 377
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 376
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 377
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 378
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 383
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 369
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 360
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 370
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 380
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 378
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 378
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 376
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 380
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 371
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 383
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 383
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 852,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 0
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 0
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 184
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 375
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 383
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 356
+      },
+      {
+        "frames": 15664,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 118
+      },
+      {
+        "frames": 49152,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 688
+      },
+      {
+        "frames": 49152,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 646
+      },
+      {
+        "frames": 24180,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 191
+      },
+      {
+        "frames": 49152,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 725
+      },
+      {
+        "frames": 49152,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 663
+      },
+      {
+        "frames": 13320,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 98
+      },
+      {
+        "frames": 49152,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 723
+      },
+      {
+        "frames": 49152,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 642
+      },
+      {
+        "frames": 16786,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 127
+      },
+      {
+        "frames": 49152,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 728
+      },
+      {
+        "frames": 49152,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 608
+      },
+      {
+        "frames": 4424,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 33
+      },
+      {
+        "frames": 49152,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 627
+      },
+      {
+        "frames": 49152,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 518
+      },
+      {
+        "frames": 13359,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 104
+      },
+      {
+        "frames": 49152,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 685
+      },
+      {
+        "frames": 49152,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 526
+      },
+      {
+        "frames": 14591,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 107
+      },
+      {
+        "frames": 49152,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 679
+      },
+      {
+        "frames": 49152,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 526
+      },
+      {
+        "frames": 17594,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 129
+      },
+      {
+        "frames": 49152,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 654
+      },
+      {
+        "frames": 49152,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 540
+      },
+      {
+        "frames": 7991,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 81
+      },
+      {
+        "frames": 49152,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 741
+      },
+      {
+        "frames": 49152,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 566
+      },
+      {
+        "frames": 4492,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 46
+      },
+      {
+        "frames": 49152,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 747
+      },
+      {
+        "frames": 49152,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 522
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 19348,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 279
+      },
+      {
+        "frames": 49152,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 763
+      },
+      {
+        "frames": 39048,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 592
+      },
+      {
+        "frames": 17122,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 255
+      },
+      {
+        "frames": 12692,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 177
+      },
+      {
+        "frames": 16284,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 228
+      },
+      {
+        "frames": 17041,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 235
+      },
+      {
+        "frames": 13298,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 202
+      },
+      {
+        "frames": 12820,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 189
+      },
+      {
+        "frames": 15144,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 217
+      },
+      {
+        "frames": 13907,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 211
+      },
+      {
+        "frames": 13907,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 210
+      },
+      {
+        "frames": 19348,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 285
+      },
+      {
+        "frames": 17122,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 251
+      },
+      {
+        "frames": 12692,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 182
+      },
+      {
+        "frames": 16284,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 232
+      },
+      {
+        "frames": 17041,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 241
+      },
+      {
+        "frames": 13298,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 198
+      },
+      {
+        "frames": 12820,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 193
+      },
+      {
+        "frames": 15144,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 215
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 381
+      },
+      {
+        "frames": 32900,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 487
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 1842,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 29
+      },
+      {
+        "frames": 6894,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 108
+      },
+      {
+        "frames": 11946,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 185
+      },
+      {
+        "frames": 16998,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 263
+      },
+      {
+        "frames": 30910,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 477
+      },
+      {
+        "frames": 35271,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 545
+      },
+      {
+        "frames": 35326,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 545
+      },
+      {
+        "frames": 37547,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 579
+      },
+      {
+        "frames": 35290,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 541
+      },
+      {
+        "frames": 35740,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 543
+      },
+      {
+        "frames": 37546,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 582
+      },
+      {
+        "frames": 41959,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 642
+      },
+      {
+        "frames": 44141,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 649
+      },
+      {
+        "frames": 39611,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 612
+      },
+      {
+        "frames": 41958,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 639
+      },
+      {
+        "frames": 37491,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 579
+      },
+      {
+        "frames": 41959,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 592
+      },
+      {
+        "frames": 37511,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 549
+      },
+      {
+        "frames": 29940,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 441
+      },
+      {
+        "frames": 29706,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 413
+      },
+      {
+        "frames": 29045,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 418
+      },
+      {
+        "frames": 24864,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 371
+      },
+      {
+        "frames": 25509,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 399
+      },
+      {
+        "frames": 27435,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 429
+      },
+      {
+        "frames": 38398,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 600
+      },
+      {
+        "frames": 45248,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 706
+      },
+      {
+        "frames": 21694,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 339
+      },
+      {
+        "frames": 31664,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 495
+      },
+      {
+        "frames": 25792,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 403
+      },
+      {
+        "frames": 44100,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 685
+      },
+      {
+        "frames": 44100,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 687
+      },
+      {
+        "frames": 49152,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 750
+      },
+      {
+        "frames": 49152,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 754
+      },
+      {
+        "frames": 16998,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 222
+      },
+      {
+        "frames": 44100,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 676
+      },
+      {
+        "frames": 16998,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 259
+      },
+      {
+        "frames": 44100,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 673
+      },
+      {
+        "frames": 44100,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 673
+      },
+      {
+        "frames": 49152,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 745
+      },
+      {
+        "frames": 44100,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 682
+      },
+      {
+        "frames": 49152,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 761
+      },
+      {
+        "frames": 49152,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 763
+      },
+      {
+        "frames": 49152,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 751
+      },
+      {
+        "frames": 11946,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 185
+      },
+      {
+        "frames": 16998,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 255
+      },
+      {
+        "frames": 49152,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 764
+      },
+      {
+        "frames": 16998,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 264
+      },
+      {
+        "frames": 44100,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 664
+      },
+      {
+        "frames": 16998,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 264
+      },
+      {
+        "frames": 49152,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 738
+      },
+      {
+        "frames": 44100,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 671
+      },
+      {
+        "frames": 16998,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 259
+      },
+      {
+        "frames": 44100,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 679
+      },
+      {
+        "frames": 44100,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 671
+      },
+      {
+        "frames": 44100,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 685
+      },
+      {
+        "frames": 49152,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 764
+      },
+      {
+        "frames": 49152,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 760
+      },
+      {
+        "frames": 39048,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 607
+      },
+      {
+        "frames": 44100,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 689
+      },
+      {
+        "frames": 39048,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 611
+      },
+      {
+        "frames": 49152,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 747
+      },
+      {
+        "frames": 49152,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 766
+      },
+      {
+        "frames": 49152,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 763
+      },
+      {
+        "frames": 49152,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 767
+      },
+      {
+        "frames": 16998,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 263
+      },
+      {
+        "frames": 49152,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 759
+      },
+      {
+        "frames": 11946,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 172
+      },
+      {
+        "frames": 16998,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 263
+      },
+      {
+        "frames": 49152,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 767
+      },
+      {
+        "frames": 16998,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 261
+      },
+      {
+        "frames": 49152,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 758
+      },
+      {
+        "frames": 49152,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 759
+      },
+      {
+        "frames": 44100,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 651
+      },
+      {
+        "frames": 16998,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 265
+      },
+      {
+        "frames": 44100,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 670
+      },
+      {
+        "frames": 22050,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 344
+      },
+      {
+        "frames": 22050,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 327
+      },
+      {
+        "frames": 22050,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 336
+      },
+      {
+        "frames": 49152,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 741
+      },
+      {
+        "frames": 49152,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 761
+      },
+      {
+        "frames": 16998,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 265
+      },
+      {
+        "frames": 49152,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 748
+      },
+      {
+        "frames": 49152,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 768
+      },
+      {
+        "frames": 16998,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 261
+      },
+      {
+        "frames": 49152,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 726
+      },
+      {
+        "frames": 39048,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 543
+      },
+      {
+        "frames": 44100,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 683
+      },
+      {
+        "frames": 49152,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 767
+      },
+      {
+        "frames": 49152,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 768
+      },
+      {
+        "frames": 49152,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 759
+      },
+      {
+        "frames": 49152,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 757
+      },
+      {
+        "frames": 11946,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 184
+      },
+      {
+        "frames": 16998,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 266
+      },
+      {
+        "frames": 44100,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 690
+      },
+      {
+        "frames": 49152,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 768
+      },
+      {
+        "frames": 49152,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 751
+      },
+      {
+        "frames": 49152,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 751
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 16998,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 248
+      },
+      {
+        "frames": 44100,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 660
+      },
+      {
+        "frames": 49152,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 768
+      },
+      {
+        "frames": 44100,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 677
+      },
+      {
+        "frames": 49152,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 730
+      },
+      {
+        "frames": 49152,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 758
+      },
+      {
+        "frames": 39048,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 611
+      },
+      {
+        "frames": 44100,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 678
+      },
+      {
+        "frames": 49152,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 760
+      },
+      {
+        "frames": 49152,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 762
+      },
+      {
+        "frames": 44100,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 685
+      },
+      {
+        "frames": 49152,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 749
+      },
+      {
+        "frames": 49152,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 757
+      },
+      {
+        "frames": 39048,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 611
+      },
+      {
+        "frames": 49152,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 765
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 11946,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 185
+      },
+      {
+        "frames": 49152,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 767
+      },
+      {
+        "frames": 49152,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 767
+      },
+      {
+        "frames": 39048,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 608
+      },
+      {
+        "frames": 44100,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 686
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 16998,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 265
+      },
+      {
+        "frames": 44100,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 687
+      },
+      {
+        "frames": 49152,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 765
+      },
+      {
+        "frames": 49152,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 763
+      },
+      {
+        "frames": 16998,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 266
+      },
+      {
+        "frames": 49152,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 762
+      },
+      {
+        "frames": 39048,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 607
+      },
+      {
+        "frames": 49152,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 764
+      },
+      {
+        "frames": 16998,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 260
+      },
+      {
+        "frames": 44100,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 689
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 44100,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 688
+      },
+      {
+        "frames": 49152,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 767
+      },
+      {
+        "frames": 44100,
+        "channels": 1,
+        "sampleRate": 44100,
+        "nonzeroSamples": 686
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      }
+    ],
+    "closed": []
+  },
+  "engineErrors": [],
+  "shutdown": {
+    "samples": [
+      {
+        "seconds": 0.0028833000105805695,
+        "sdk": {
+          "running": [],
+          "pooled": [],
+          "pthreads": []
+        },
+        "workers": []
+      }
+    ],
+    "sdk": {
+      "running": [],
+      "pooled": [],
+      "pthreads": []
+    },
+    "workers": [],
+    "liveApplicationTargets": []
+  }
+}

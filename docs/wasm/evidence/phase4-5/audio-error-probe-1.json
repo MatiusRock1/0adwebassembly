@@ -1,0 +1,93 @@
+{
+  "passed": true,
+  "diagnosticOnly": true,
+  "performanceAcceptance": false,
+  "phase45Accepted": false,
+  "sourceSHA256": {
+    "/workspace/wasm/probes/application-openal-error.cpp": "4620d3ec34f790de00ac4bb1d4046c017c26983cdb4510a328224863fffb17ee",
+    "/workspace/wasm/harness/application-openal-error.cpp": "7fc50dde59bfaaaf08e18735db8aa30f8a2689cbe8cecfc6097a84da731dc8cb",
+    "/workspace/wasm/browser/application-openal-error.js": "9cc7cd051e8e7ab1aa250198985e18aa5dd0091ac53aed863c7f9eb9dd0f6e12",
+    "/emsdk/upstream/emscripten/src/lib/libopenal.js": "e176c0641f1b1b6fafa11cfd629c6ef8838bdf21426fc42e997feecb69728a47"
+  },
+  "modes": {
+    "sdk": {
+      "command": [
+        "em++",
+        "-O2",
+        "-std=c++20",
+        "-pthread",
+        "-fwasm-exceptions",
+        "-sSUPPORT_LONGJMP=wasm",
+        "/workspace/wasm/probes/application-openal-error.cpp",
+        "/workspace/wasm/harness/application-openal-error.cpp",
+        "-lopenal",
+        "-sINITIAL_MEMORY=134217728",
+        "-sALLOW_MEMORY_GROWTH=1",
+        "-sSTACK_SIZE=5242880",
+        "-sPROXY_TO_PTHREAD=1",
+        "-sPTHREAD_POOL_SIZE=4",
+        "-sENVIRONMENT=node",
+        "-sEXIT_RUNTIME=1",
+        "-sASSERTIONS=2",
+        "-o",
+        "/phase45-build/audio-error-probe/sdk.js"
+      ],
+      "compileExitCode": 0,
+      "exitCode": 0,
+      "stdout": "{\"passed\":true,\"checks\":15,\"readsPerTrial\":10000,\"milliseconds\":[518.579834,510.619873,510.114746]}\n",
+      "stderr": "w:4,t:0x00506970: Heap resize call from 134217728 to 161087488 took 0.05712890625 msecs. Success: true\n",
+      "result": {
+        "passed": true,
+        "checks": 15,
+        "readsPerTrial": 10000,
+        "milliseconds": [
+          518.579834,
+          510.619873,
+          510.114746
+        ]
+      },
+      "medianMilliseconds": 510.619873
+    },
+    "shared": {
+      "command": [
+        "em++",
+        "-O2",
+        "-std=c++20",
+        "-pthread",
+        "-fwasm-exceptions",
+        "-sSUPPORT_LONGJMP=wasm",
+        "/workspace/wasm/probes/application-openal-error.cpp",
+        "/workspace/wasm/harness/application-openal-error.cpp",
+        "-lopenal",
+        "-sINITIAL_MEMORY=134217728",
+        "-sALLOW_MEMORY_GROWTH=1",
+        "-sSTACK_SIZE=5242880",
+        "-sPROXY_TO_PTHREAD=1",
+        "-sPTHREAD_POOL_SIZE=4",
+        "-sENVIRONMENT=node",
+        "-sEXIT_RUNTIME=1",
+        "-sASSERTIONS=2",
+        "--js-library",
+        "/workspace/wasm/browser/application-openal-error.js",
+        "-o",
+        "/phase45-build/audio-error-probe/shared.js"
+      ],
+      "compileExitCode": 0,
+      "exitCode": 0,
+      "stdout": "{\"passed\":true,\"checks\":15,\"readsPerTrial\":10000,\"milliseconds\":[2.084473,1.237305,1.241943]}\n",
+      "stderr": "w:4,t:0x00506970: Heap resize call from 134217728 to 161087488 took 0.065185546875 msecs. Success: true\n",
+      "result": {
+        "passed": true,
+        "checks": 15,
+        "readsPerTrial": 10000,
+        "milliseconds": [
+          2.084473,
+          1.237305,
+          1.241943
+        ]
+      },
+      "medianMilliseconds": 1.241943
+    }
+  },
+  "scope": "Real SDK AL functions and synthetic internal context records in Node/pthreads. Error values/reset, inactive contexts, concurrent readers, concurrent context switches, heap growth and id reuse. No audio device or game-FPS claim."
+}

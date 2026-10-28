@@ -1,0 +1,15 @@
+{
+  "native": {
+    "nonLocalDebugSHA256": "2ad8dc533769c215115a5c1d507de875dacd7cb981d278b9c8f9e1d6c77ecca3",
+    "localDebugSHA256": "e0acc01e3024ddb3b9ccb60e373c080d91e1f7d1749a7dcd2cbca8b58866c5d3",
+    "localEntityCount": 12
+  },
+  "webgpu": {
+    "nonLocalDebugSHA256": "2ad8dc533769c215115a5c1d507de875dacd7cb981d278b9c8f9e1d6c77ecca3",
+    "localDebugSHA256": "cf9a01450a5e530eeb93dc726e2e9bd28ee516dd40d8c6fe9bc98914068f7d2d",
+    "localEntityCount": 12
+  },
+  "nonLocalMatches": true,
+  "localMatches": false,
+  "scope": "Diagnosis only; original binary snapshots are still required for acceptance."
+}

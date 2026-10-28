@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "phase45Accepted": false,
+  "performanceAcceptance": false,
+  "iteration": 3,
+  "package": "C:\\Users\\jorlu\\OneDrive\\Documentos\\emprendimiento\\0 AD\\0adwebassembly\\wasm\\dist\\application-phase4-5-bundles-3",
+  "binaryMatchesBest": true,
+  "vmSHA256": "dd057a4ea34a1a5028660d9992bef5b749c9116a3502828611a240c2df07b642",
+  "experimentalJSSHA256": {
+    "webgpu-engine.mjs": "26210cbb4d0d300d5c47c58b2459e87db67d03c43a7e7b8394553d8b653c1e26",
+    "webgpu-upload-probe.mjs": "aee68de5e75ecfc8777e5f2349bf833158d2bf3bcab1ed5ed4cd6fd55f1c8bae",
+    "webgpu-bundles.mjs": "a1ad313f741f476bc19dbf5be85e6d6e6c447c18225be4cbe1aae9d361bb7a97",
+    "webgpu-bundles-probe.mjs": "3c11f437e721b9da3917d5871a5dcc82d6e527cae88de1ce1a1ed135fa26a0d3"
+  },
+  "cpuChecks": 16,
+  "scope": "Only private JS encoder/probe changed. Best binary, VM, AL-error order, shaders, original game quality and simulation preserved. GPU correctness and physical performance still pending."
+}

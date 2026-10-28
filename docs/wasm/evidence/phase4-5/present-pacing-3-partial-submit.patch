@@ -1,0 +1,166 @@
+diff --git a/wasm/browser/webgpu-engine.mjs b/wasm/browser/webgpu-engine.mjs
+index 3db7249501..95df6bbbb6 100644
+--- a/wasm/browser/webgpu-engine.mjs
++++ b/wasm/browser/webgpu-engine.mjs
+@@ -641,23 +641,46 @@ export class WebGPUEngine {
+     const s=this.attachment(this.get(sourceId)),d=this.attachment(this.get(destId));if(this.pass)throw new Error('Resolve inside render pass');
+     const pass=this.encoderForWork().beginRenderPass({colorAttachments:[{view:s.color.createView(),resolveTarget:d.color.createView(),loadOp:'load',storeOp:'store'}]});pass.end();
+   }
++  // Each draw owns an immutable arena range until the frame is submitted.
++  // Upload the bytes written since the previous submit of this frame before
++  // their command buffer, preserving both queue order across frames and
++  // distinct uniform values within the current frame.
++  uploadArenas(){
++    const upload=(buffer,bytes,offset)=>this.uploadBelt?this.uploadBelt.stage(buffer,bytes,offset):this.device.queue.writeBuffer(buffer,offset,bytes);
++    const uniformFrom=this.uniformUploaded??0;
++    if(this.uniformCursor>uniformFrom)upload(this.uniformBuffer,this.uniformHost.subarray(uniformFrom,this.uniformCursor),uniformFrom);
++    this.uniformUploaded=this.uniformCursor;
++    for(const arenas of Object.values(this.transientArenas))for(const arena of arenas){
++      const from=arena.uploaded??0;
++      if(arena.cursor>from)upload(arena.buffer,arena.bytes.subarray(from,arena.cursor),from);
++      arena.uploaded=arena.cursor;
++    }
++  }
++  submitEncoder(){
++    this.uploadArenas();
++    const uploads=this.uploadBelt?.beforeFrame();
++    this.device.queue.submit(uploads?[uploads,this.encoder.finish()]:[this.encoder.finish()]);
++    this.uploadBelt?.afterSubmit();this.encoder=null;
++  }
++  // Paced presentation: submit the work recorded so far, so the GPU starts on a
++  // frame while the engine still records it. Arena data keeps its offsets, so
++  // cursors, uniform snapshots and transient bindings stay valid for the rest
++  // of the frame; an open framebuffer pass resumes with its contents loaded, as
++  // for buffer uploads. Retired objects wait for the frame's last submit.
++  flushWork(){
++    if(!this.encoder||this.computePass)return false;
++    const target=this.pass?this.target:null;
++    this.endFramebuffer();this.submitEncoder();
++    this.stats.partialSubmissions=(this.stats.partialSubmissions??0)+1;
++    if(target)this.beginFramebuffer(target,true);
++    return true;
++  }
+   submit(){
+     if(this.pass||this.computePass)throw new Error('Cannot submit an open WebGPU pass');
+-    if(this.encoder){
+-      // Each draw owns an immutable range until submission. Upload the full
+-      // arenas once before their command buffer, preserving both queue order
+-      // across frames and distinct uniform values within the current frame.
+-      const upload=(buffer,bytes)=>this.uploadBelt?this.uploadBelt.stage(buffer,bytes):this.device.queue.writeBuffer(buffer,0,bytes);
+-      if(this.uniformCursor)upload(this.uniformBuffer,this.uniformHost.subarray(0,this.uniformCursor));
+-      for(const arenas of Object.values(this.transientArenas))for(const arena of arenas)
+-        if(arena.cursor)upload(arena.buffer,arena.bytes.subarray(0,arena.cursor));
+-      const uploads=this.uploadBelt?.beforeFrame();
+-      this.device.queue.submit(uploads?[uploads,this.encoder.finish()]:[this.encoder.finish()]);
+-      this.uploadBelt?.afterSubmit();this.encoder=null;this.stats.submissions++;
+-    }
+-    this.uniformCursor=0;
++    if(this.encoder){this.submitEncoder();this.stats.submissions++;}
++    this.uniformCursor=0;this.uniformUploaded=0;
+     this.uniformEpoch=(this.uniformEpoch??0)+1;
+-    for(const arenas of Object.values(this.transientArenas))for(const arena of arenas)arena.cursor=0;
++    for(const arenas of Object.values(this.transientArenas))for(const arena of arenas){arena.cursor=0;arena.uploaded=0;}
+     const retired=[...this.retired];this.retired.clear();
+     if(retired.length){const release=()=>{
+       for(const id of retired){
+diff --git a/wasm/browser/webgpu-upload.mjs b/wasm/browser/webgpu-upload.mjs
+index 7281b81b22..17b9b65e3f 100644
+--- a/wasm/browser/webgpu-upload.mjs
++++ b/wasm/browser/webgpu-upload.mjs
+@@ -7,9 +7,9 @@ export class UploadBelt {
+     this.chunks=[];this.active=[];this.reserved=0;this.encoder=null;this.disposed=false;
+     this.stats={mappedBytes:0,fallbackBytes:0,createdBuffers:0,reusedBuffers:0,mapFailures:0};
+   }
+-  stage(destination,bytes) {
++  stage(destination,bytes,destinationOffset=0) {
+     if(this.disposed)throw new Error('Upload belt is disposed');
+-    if(!(bytes instanceof Uint8Array)||bytes.length%4)throw new Error('Unaligned upload belt bytes');
++    if(!(bytes instanceof Uint8Array)||bytes.length%4||destinationOffset%4)throw new Error('Unaligned upload belt bytes');
+     if(!bytes.length)return;
+     let chunk=this.active.at(-1);
+     if(!chunk||chunk.size-chunk.cursor<bytes.length) {
+@@ -27,11 +27,11 @@ export class UploadBelt {
+       if(chunk){chunk.state='recording';chunk.cursor=0;this.active.push(chunk);}
+     }
+     if(!chunk) {
+-      this.device.queue.writeBuffer(destination,0,bytes);this.stats.fallbackBytes+=bytes.length;return;
++      this.device.queue.writeBuffer(destination,destinationOffset,bytes);this.stats.fallbackBytes+=bytes.length;return;
+     }
+     chunk.bytes.set(bytes,chunk.cursor);
+     this.encoder??=this.device.createCommandEncoder({label:'0ad uploads before frame'});
+-    this.encoder.copyBufferToBuffer(chunk.buffer,chunk.cursor,destination,0,bytes.length);
++    this.encoder.copyBufferToBuffer(chunk.buffer,chunk.cursor,destination,destinationOffset,bytes.length);
+     chunk.cursor+=bytes.length;this.stats.mappedBytes+=bytes.length;
+   }
+   beforeFrame() {
+diff --git a/wasm/scripts/test-webgpu-command-data.mjs b/wasm/scripts/test-webgpu-command-data.mjs
+index 41a39c2080..d730cdd647 100644
+--- a/wasm/scripts/test-webgpu-command-data.mjs
++++ b/wasm/scripts/test-webgpu-command-data.mjs
+@@ -114,6 +114,39 @@ test('arena uploads precede submission, retain each draw and safely reuse the ne
+   assert.equal(events[4],'submit');
+ });
+ 
++test('paced partial submits upload only new arena bytes, keep offsets and resume the pass',()=>{
++  globalThis.GPUBufferUsage={COPY_DST:1,VERTEX:2,INDEX:4};
++  const events=[];
++  const engine=Object.assign(Object.create(WebGPUEngine.prototype),{
++    uniformCapacity:1024,uniformCursor:0,uniformHost:new Uint8Array(1024),uniformBuffer:'uniform',
++    device:{limits:{minUniformBufferOffsetAlignment:256},createBuffer:()=> 'vertex',
++      queue:{writeBuffer(buffer,offset,bytes){events.push({buffer,offset,bytes:[...bytes]});},submit(list){events.push(['submit',...list]);}}},
++    transientArenas:{vertex:[],index:[]},encoder:{finish:()=> 'first'},
++    retired:new Set(),objects:new Map(),stats:{submissions:0,uploadBytes:0},report(){},
++    pass:{},target:'framebuffer',
++    endFramebuffer(){events.push('end');this.pass=null;},
++    beginFramebuffer(target,load){events.push(['begin',target,load]);this.encoder={finish:()=> 'second'};this.pass={};}
++  });
++  const bytes=new Uint8Array([1,2,3,4]);
++  const shader={group0:{},variant:{uniforms:[{binding:0}],textures:[]},uniformBlocks:new Map([[0,bytes]]),uniformSnapshots:new Map()};
++  const offsets=[],pass=()=>({setBindGroup(group,binding,values){offsets.push([...values]);}});
++  engine.bindShader(pass(),shader);engine.uploadTransient('vertex',new Uint8Array([9,10,11,12]));
++  assert.equal(engine.flushWork(),true);
++  assert.deepEqual(events,['end',{buffer:'uniform',offset:0,bytes:[1,2,3,4]},
++    {buffer:'vertex',offset:0,bytes:[9,10,11,12]},['submit','first'],['begin','framebuffer',true]]);
++  // The resumed pass reuses the uploaded block; later data appends at its own offset.
++  events.length=0;engine.bindShader(pass(),shader);engine.uploadTransient('vertex',new Uint8Array([13,14,15,16]));
++  engine.pass=null;engine.submit();
++  assert.deepEqual(offsets,[[0],[0]]);
++  assert.deepEqual(events,[{buffer:'vertex',offset:4,bytes:[13,14,15,16]},['submit','second']]);
++  assert.equal(engine.uniformCursor,0);assert.equal(engine.transientArenas.vertex[0].cursor,0);
++  assert.equal(engine.stats.partialSubmissions,1);assert.equal(engine.stats.submissions,1);
++  // The next frame starts again at offset zero with a new snapshot.
++  events.length=0;engine.encoder={finish:()=> 'next'};engine.bindShader(pass(),shader);engine.submit();
++  assert.deepEqual(events,[{buffer:'uniform',offset:0,bytes:[1,2,3,4]},['submit','next']]);
++  assert.equal(engine.flushWork(),false,'nothing recorded since the last submit');
++});
++
+ test('binary command stream preserves interleaved state, uniforms and signed base vertex',()=>{
+   const data=new Uint8Array(256),floats=new Float32Array(data.buffer,0,8);
+   floats.set([1,2,3,4,5,6,7,8]);
+diff --git a/wasm/scripts/test-webgpu-upload.mjs b/wasm/scripts/test-webgpu-upload.mjs
+index a8333318d3..85d6858335 100644
+--- a/wasm/scripts/test-webgpu-upload.mjs
++++ b/wasm/scripts/test-webgpu-upload.mjs
+@@ -64,9 +64,18 @@ test('failed mapping frees its budget and disposal ignores late completions',asy
+ test('alignment is enforced before recording a copy',()=>{
+   const device=fakeDevice(),belt=new UploadBelt(device,{chunkBytes:8,maxBytes:8});
+   assert.throws(()=>belt.stage({},new Uint8Array(3)),/Unaligned/);
++  assert.throws(()=>belt.stage({},new Uint8Array(4),2),/Unaligned/);
+   assert.equal(device.buffers.length,0);belt.dispose();
+ });
+ 
++test('a destination offset applies to mapped copies and to the fallback write',async()=>{
++  const device=fakeDevice(),belt=new UploadBelt(device,{chunkBytes:8,maxBytes:8}),dst={data:new Uint8Array(12)};
++  belt.stage(dst,new Uint8Array([1,2,3,4]),4);const pending=submit(belt,device);
++  belt.stage(dst,new Uint8Array([5,6,7,8]),8);submit(belt,device);
++  assert.deepEqual([...dst.data],[0,0,0,0,1,2,3,4,5,6,7,8]);assert.equal(belt.stats.fallbackBytes,4);
++  device.buffers[0].remap();await Promise.all(pending);belt.dispose();
++});
++
+ test('engine submission uploads uniform and transient arenas before original commands',async()=>{
+   const device=fakeDevice(),belt=new UploadBelt(device,{chunkBytes:16,maxBytes:16});
+   const uniform={data:new Uint8Array(4)},vertex={data:new Uint8Array(4)};
+# wasm/browser/webgpu-render-worker.mjs (on top of present-pacing-2), not shown above:
+#   module state: ...,pacingViews=null,paced=false;
+#   in consume(): if(pacing){paced=true;engine.submit();}
+#   after the awaited call: if(paced&&message.method==='commands')engine.flushWork();

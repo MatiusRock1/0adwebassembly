@@ -1,0 +1,211 @@
+{
+  "scope": "Diagnostic identity review; not a reproducible native build acceptance",
+  "gamePin": "40b8794eecb9618da69e10bacffa8814c561aa51",
+  "criticalSources": {
+    "simulation2/components/CCmpAIManager.cpp": {
+      "matches": true,
+      "sourceSHA256": "9ff83c564b52d71d5b37227b62302139d40ddae732284775eb6ac5d88a4685c6",
+      "nativeSourceSHA256": "9ff83c564b52d71d5b37227b62302139d40ddae732284775eb6ac5d88a4685c6"
+    },
+    "simulation2/Simulation2.cpp": {
+      "matches": true,
+      "sourceSHA256": "cc5ebdc9f02592a721b47e6789d20bd960f6bb4de3a8160712884c50ee44e244",
+      "nativeSourceSHA256": "cc5ebdc9f02592a721b47e6789d20bd960f6bb4de3a8160712884c50ee44e244"
+    },
+    "ps/Game.cpp": {
+      "matches": true,
+      "sourceSHA256": "2aa065e17e5f5fbe19f96d16abdadd453f3b63816e3f67894839832ea2718072",
+      "nativeSourceSHA256": "2aa065e17e5f5fbe19f96d16abdadd453f3b63816e3f67894839832ea2718072"
+    },
+    "scriptinterface/Context.cpp": {
+      "matches": true,
+      "sourceSHA256": "a476e2a94181a3815a873188ca91aa8e784e65ae140926eb4ca05d7380ed38f3",
+      "nativeSourceSHA256": "a476e2a94181a3815a873188ca91aa8e784e65ae140926eb4ca05d7380ed38f3"
+    },
+    "scriptinterface/Interface.cpp": {
+      "matches": true,
+      "sourceSHA256": "b529e38deb3ec6035aca46dabfbe9a32a820043ba16744f19326af5c285ac12b",
+      "nativeSourceSHA256": "b529e38deb3ec6035aca46dabfbe9a32a820043ba16744f19326af5c285ac12b"
+    },
+    "scriptinterface/StructuredClone.cpp": {
+      "matches": true,
+      "sourceSHA256": "ccb34050c57ffa7036f9b8938f2626564aa22946acfcf60a66681e32049980aa",
+      "nativeSourceSHA256": "ccb34050c57ffa7036f9b8938f2626564aa22946acfcf60a66681e32049980aa"
+    }
+  },
+  "aiScripts": {
+    "simulation/ai/common-api/baseAI.js": {
+      "matches": false,
+      "reason": "missing native loose script"
+    },
+    "simulation/ai/common-api/entity.js": {
+      "matches": false,
+      "reason": "missing native loose script"
+    },
+    "simulation/ai/common-api/entitycollection.js": {
+      "matches": false,
+      "reason": "missing native loose script"
+    },
+    "simulation/ai/common-api/filters.js": {
+      "matches": false,
+      "reason": "missing native loose script"
+    },
+    "simulation/ai/common-api/gamestate.js": {
+      "matches": false,
+      "reason": "missing native loose script"
+    },
+    "simulation/ai/common-api/map-module.js": {
+      "matches": false,
+      "reason": "missing native loose script"
+    },
+    "simulation/ai/common-api/resources.js": {
+      "matches": false,
+      "reason": "missing native loose script"
+    },
+    "simulation/ai/common-api/shared.js": {
+      "matches": false,
+      "reason": "missing native loose script"
+    },
+    "simulation/ai/common-api/technology.js": {
+      "matches": false,
+      "reason": "missing native loose script"
+    },
+    "simulation/ai/common-api/terrain-analysis.js": {
+      "matches": false,
+      "reason": "missing native loose script"
+    },
+    "simulation/ai/common-api/terrain-states.js": {
+      "matches": false,
+      "reason": "missing native loose script"
+    },
+    "simulation/ai/common-api/utils.js": {
+      "matches": false,
+      "reason": "missing native loose script"
+    },
+    "simulation/ai/petra/_petrabot.js": {
+      "matches": false,
+      "reason": "missing native loose script"
+    },
+    "simulation/ai/petra/attackManager.js": {
+      "matches": false,
+      "reason": "missing native loose script"
+    },
+    "simulation/ai/petra/attackPlan.js": {
+      "matches": false,
+      "reason": "missing native loose script"
+    },
+    "simulation/ai/petra/baseManager.js": {
+      "matches": false,
+      "reason": "missing native loose script"
+    },
+    "simulation/ai/petra/basesManager.js": {
+      "matches": false,
+      "reason": "missing native loose script"
+    },
+    "simulation/ai/petra/buildManager.js": {
+      "matches": false,
+      "reason": "missing native loose script"
+    },
+    "simulation/ai/petra/chatHelper.js": {
+      "matches": false,
+      "reason": "missing native loose script"
+    },
+    "simulation/ai/petra/config.js": {
+      "matches": false,
+      "reason": "missing native loose script"
+    },
+    "simulation/ai/petra/defenseArmy.js": {
+      "matches": false,
+      "reason": "missing native loose script"
+    },
+    "simulation/ai/petra/defenseManager.js": {
+      "matches": false,
+      "reason": "missing native loose script"
+    },
+    "simulation/ai/petra/difficultyLevel.js": {
+      "matches": false,
+      "reason": "missing native loose script"
+    },
+    "simulation/ai/petra/diplomacyManager.js": {
+      "matches": false,
+      "reason": "missing native loose script"
+    },
+    "simulation/ai/petra/emergencyManager.js": {
+      "matches": false,
+      "reason": "missing native loose script"
+    },
+    "simulation/ai/petra/entityExtend.js": {
+      "matches": false,
+      "reason": "missing native loose script"
+    },
+    "simulation/ai/petra/garrisonManager.js": {
+      "matches": false,
+      "reason": "missing native loose script"
+    },
+    "simulation/ai/petra/headquarters.js": {
+      "matches": false,
+      "reason": "missing native loose script"
+    },
+    "simulation/ai/petra/mapMask.js": {
+      "matches": false,
+      "reason": "missing native loose script"
+    },
+    "simulation/ai/petra/mapModule.js": {
+      "matches": false,
+      "reason": "missing native loose script"
+    },
+    "simulation/ai/petra/navalManager.js": {
+      "matches": false,
+      "reason": "missing native loose script"
+    },
+    "simulation/ai/petra/queue.js": {
+      "matches": false,
+      "reason": "missing native loose script"
+    },
+    "simulation/ai/petra/queueManager.js": {
+      "matches": false,
+      "reason": "missing native loose script"
+    },
+    "simulation/ai/petra/queueplan.js": {
+      "matches": false,
+      "reason": "missing native loose script"
+    },
+    "simulation/ai/petra/queueplanBuilding.js": {
+      "matches": false,
+      "reason": "missing native loose script"
+    },
+    "simulation/ai/petra/queueplanResearch.js": {
+      "matches": false,
+      "reason": "missing native loose script"
+    },
+    "simulation/ai/petra/queueplanTraining.js": {
+      "matches": false,
+      "reason": "missing native loose script"
+    },
+    "simulation/ai/petra/researchManager.js": {
+      "matches": false,
+      "reason": "missing native loose script"
+    },
+    "simulation/ai/petra/startingStrategy.js": {
+      "matches": false,
+      "reason": "missing native loose script"
+    },
+    "simulation/ai/petra/tradeManager.js": {
+      "matches": false,
+      "reason": "missing native loose script"
+    },
+    "simulation/ai/petra/transportPlan.js": {
+      "matches": false,
+      "reason": "missing native loose script"
+    },
+    "simulation/ai/petra/victoryManager.js": {
+      "matches": false,
+      "reason": "missing native loose script"
+    },
+    "simulation/ai/petra/worker.js": {
+      "matches": false,
+      "reason": "missing native loose script"
+    }
+  },
+  "executableSHA256": "21dce2c8f275ec5975cb403a67083494a1ee4b538d2570bce1d9b106df87d330"
+}

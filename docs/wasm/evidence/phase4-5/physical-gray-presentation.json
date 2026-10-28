@@ -1,0 +1,10 @@
+{
+  "physicalPresentationPassed": false,
+  "operatorReportedGrayWithAudio": true,
+  "pages": [
+    "http://localhost:8095/application.html?automation=1"
+  ],
+  "exit": {
+    "code": 0
+  }
+}

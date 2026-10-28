@@ -1,0 +1,17 @@
+--- a/lib/posix/posix_aio.h
++++ b/lib/posix/posix_aio.h
+@@ -27,10 +27,13 @@
+ // POSIX declarations, this one is harmless (no incompatible declarations)
+ // and can safely be used on Windows as well.
+ #include <fcntl.h>
++#if defined(__EMSCRIPTEN__)
++#include <signal.h>
++#endif
+ 
+ #if OS_WIN
+ # include "lib/sysdep/os/win/wposix/waio.h"
+-#elif OS_ANDROID || OS_OPENBSD
++#elif OS_ANDROID || OS_OPENBSD || defined(__EMSCRIPTEN__)
+ // Android doesn't provide aio.h. We don't actually use aio on Linuxes (see
+ // CONFIG2_FILE_ENABLE_AIO) but we use its symbols and structs, so define
+ // them here

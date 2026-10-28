@@ -1,0 +1,46 @@
+{
+  "paused": true,
+  "localTime": "2026-10-19 16:15 America/Bogota",
+  "phase45Accepted": false,
+  "compilationStoppedByOperatorPause": true,
+  "guardCandidateValidated": false,
+  "previous15HashesUnchanged": true,
+  "files": {
+    "wasm/scripts/phase45_portable_guards.py": {
+      "bytes": 3362,
+      "SHA256": "c5323dcd7b34ef36cafca6d5a79e982a7f2fc80308a96c65f86ad76791bd155c"
+    },
+    "wasm/scripts/phase4-5-scripting-build.py": {
+      "bytes": 12159,
+      "SHA256": "93e6d71e0efda59c67d6a3880dfc3ad3a25253134c528a3b03601e290ed659c2"
+    },
+    "wasm/scripts/docker-phase4-5.ps1": {
+      "bytes": 9396,
+      "SHA256": "538e3212b68568bdb733f5062a4ac6a1de0b86bbf4dd65829a70fe5831aa7f12"
+    },
+    "wasm/scripts/verify-phase4-5-portable-vm.py": {
+      "bytes": 3886,
+      "SHA256": "3914a96b49b13a3e0b63acf211c9c0498476ad7ad5a40284fb3c0755f288f9a0"
+    },
+    "wasm/probes/spidermonkey-portable.cpp": {
+      "bytes": 8187,
+      "SHA256": "01010c2b4026c0093bbe958b742c9f5efef63d4847f257a8c8ad8643d32caf1d"
+    },
+    "wasm/probes/spidermonkey-portable-guards.inc": {
+      "bytes": 3419,
+      "SHA256": "85530cc694a503f64cdab4e1bd08d44ab3decabaa9b87d461cd589b298abc56b"
+    },
+    "wasm/build/phase4-5/portable-vm-probe-portable-switch-o3-guards/report.json": {
+      "bytes": 3252,
+      "SHA256": "56296bd6d3cabb5ea2bad9d1cfbb8ec50afabbc0e2a38a9fe52ffd7f9e95e7a8"
+    },
+    "wasm/build/phase4-5/spidermonkey-portable-guards-o3/PortableBaselineInterpret.cpp": {
+      "bytes": 211090,
+      "SHA256": "1cd5612bfca05a80960db25194bac7d3435585b381da4a80e9a476cd846ddc59"
+    },
+    "wasm/build/phase4-5/spidermonkey-portable-guards-o3/PortableBaselineInterpret.o.log": {
+      "bytes": 4702,
+      "SHA256": "d286d280ce6bfe9a833b2ebc727e3a0fbef810d5589c9d13568a9077cae74a48"
+    }
+  }
+}

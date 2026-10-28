@@ -1,0 +1,30 @@
+{
+  "passed": true,
+  "performanceAcceptance": false,
+  "phase45Accepted": false,
+  "command": [
+    "g++",
+    "-std=c++20",
+    "-pthread",
+    "-O2",
+    "-I/workspace/source",
+    "-I/workspace/wasm/harness",
+    "/workspace/wasm/probes/application-deferred-audio.cpp",
+    "-o",
+    "/phase45-build/deferred-audio-probe/probe"
+  ],
+  "sourceSHA256": {
+    "/workspace/wasm/probes/application-deferred-audio.cpp": "9d7fc274e02ee296238e87b65a38689111ec8e464b2a479175a189bbd50163fd",
+    "/workspace/wasm/harness/application-deferred-audio.h": "2037cb6d8d7c03630c635f5d8af82d07014f4d7671b250b5eaafbd4e6f8a4ec6"
+  },
+  "compileExitCode": 0,
+  "compileOutput": "",
+  "exitCode": 0,
+  "stdout": "{\"passed\":true,\"checks\":6}\n",
+  "stderr": "",
+  "result": {
+    "passed": true,
+    "checks": 6
+  },
+  "executableSHA256": "9d7494e227e92d2b1b8aeb7445d5aa4537b7780a013afca6b0bef72177123f51"
+}

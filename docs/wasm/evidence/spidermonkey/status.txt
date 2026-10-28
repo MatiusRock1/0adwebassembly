@@ -1,0 +1,1 @@
+CONFIGURED_ONLY: compilation/runtime not tested

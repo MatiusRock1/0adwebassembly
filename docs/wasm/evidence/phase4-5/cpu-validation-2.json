@@ -1,0 +1,69 @@
+{
+  "passed": true,
+  "createdUTC": "2026-10-16T21:50:38.758500+00:00",
+  "phase45Accepted": false,
+  "scope": "CPU-only code tests; no GPU rendering or performance measurement",
+  "checks": [
+    {
+      "command": [
+        "node",
+        "--test",
+        "wasm/scripts/test-renderer-session.mjs",
+        "wasm/scripts/test-webgpu-textures.mjs",
+        "wasm/scripts/test-webgpu-lifetime.mjs",
+        "wasm/scripts/test-webgpu-formats.mjs"
+      ],
+      "exitCode": 0,
+      "seconds": 0.23914310001418926,
+      "stdout": "\u2714 WebGPU owns its canvas, records prototype limits and drains before destruction (3.3546ms)\n\u2714 missing API, isolation or required feature never fall back to GL (0.6991ms)\n\u2714 canvas configuration failure destroys the requested device (0.523ms)\n\u2714 validation scopes unwind on thrown work and surface validation errors (0.5076ms)\n\u2714 device loss is reported and prevents further work (0.5214ms)\n\u2714 rejected queue completion still releases the device and canvas (0.6315ms)\n\u2714 WebGL selection creates only GL and reports the effective renderer (0.3648ms)\n\u2714 optional capabilities are requested only when available and absence is recorded (0.4488ms)\n\u2714 optional sampled/renderable formats follow enabled device features (1.5425ms)\n\u2714 queue failure during engine disposal still frees resources and closes the session (2.6154ms)\n\u2714 retirement waits for submitted work and drops shader bindings and pipeline cache entries (1.6887ms)\n\u2714 1x1 BC1 original texture retains its logical texel and dimensions (1.9284ms)\n\u2714 BC1 interpolation and cropped block rows preserve palette order (0.3614ms)\n\u2714 BC1 RGB and RGBA differ only in the transparent palette entry (0.3145ms)\n\u2714 BC2 explicit alpha and BC3 endpoint/interpolated alpha are retained (0.2926ms)\n\u2714 truncated compressed resource data fails explicitly (0.5593ms)\n\u2139 tests 16\n\u2139 suites 0\n\u2139 pass 16\n\u2139 fail 0\n\u2139 cancelled 0\n\u2139 skipped 0\n\u2139 todo 0\n\u2139 duration_ms 160.9715\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\jorlu\\OneDrive\\Documentos\\emprendimiento\\0 AD\\0adwebassembly\\wasm\\.venv-phase3\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "wasm/scripts",
+        "-p",
+        "test_phase45_*.py",
+        "-v"
+      ],
+      "exitCode": 0,
+      "seconds": 0.36173790000611916,
+      "stdout": "PLAN_ONLY_NO_GPU C:\\Users\\jorlu\\OneDrive\\Documentos\\emprendimiento\\0 AD\\0adwebassembly\\wasm\\build\\phase4-5\\test-tmp\\tmp7d_6m28b\\plan\nPLAN_ONLY_NO_GPU C:\\Users\\jorlu\\OneDrive\\Documentos\\emprendimiento\\0 AD\\0adwebassembly\\wasm\\build\\phase4-5\\test-tmp\\tmp9dvxucw3\\plan\n",
+      "stderr": "test_duplicate_repetition_does_not_count_three_times (test_phase45_benchmark_contract.AcceptanceContract.test_duplicate_repetition_does_not_count_three_times) ... ok\ntest_missing_or_partial_run_cannot_pass (test_phase45_benchmark_contract.AcceptanceContract.test_missing_or_partial_run_cannot_pass) ... ok\ntest_original_turn_backlog_must_be_observed_and_not_grow (test_phase45_benchmark_contract.AcceptanceContract.test_original_turn_backlog_must_be_observed_and_not_grow) ... ok\ntest_plan_is_serial_and_validates_arguments (test_phase45_benchmark_contract.AcceptanceContract.test_plan_is_serial_and_validates_arguments) ... ok\ntest_short_measured_duration_cannot_use_long_plan (test_phase45_benchmark_contract.AcceptanceContract.test_short_measured_duration_cannot_use_long_plan) ... ok\ntest_six_complete_runs_pass_performance_but_never_accept_phase (test_phase45_benchmark_contract.AcceptanceContract.test_six_complete_runs_pass_performance_but_never_accept_phase) ... ok\ntest_wrong_backend_adapter_errors_lost_events_or_slow_simulation_fail (test_phase45_benchmark_contract.AcceptanceContract.test_wrong_backend_adapter_errors_lost_events_or_slow_simulation_fail) ... ok\ntest_dry_modes_never_spawn_processes_or_connect_to_browser (test_phase45_standalone_safety.StandaloneSafety.test_dry_modes_never_spawn_processes_or_connect_to_browser) ... ok\ntest_occupied_port_is_rejected_before_a_browser_can_be_launched (test_phase45_standalone_safety.StandaloneSafety.test_occupied_port_is_rejected_before_a_browser_can_be_launched) ... ok\n\n----------------------------------------------------------------------\nRan 9 tests in 0.072s\n\nOK\n"
+    },
+    {
+      "command": [
+        "C:\\Users\\jorlu\\OneDrive\\Documentos\\emprendimiento\\0 AD\\0adwebassembly\\wasm\\.venv-phase3\\Scripts\\python.exe",
+        "wasm/scripts/test-presentation.py"
+      ],
+      "exitCode": 0,
+      "seconds": 0.19205469998996705,
+      "stdout": "",
+      "stderr": "..........\n----------------------------------------------------------------------\nRan 10 tests in 0.014s\n\nOK\n"
+    }
+  ],
+  "sourceSHA256": {
+    "wasm/browser/webgpu-engine.mjs": "789c7b0c1b3514816389859109da3f9c54a2b506395007a52638c8bda3a935e1",
+    "wasm/browser/application.mjs": "b1ccb20d694ca5696126c0351776f849c4f0bb52d76f7d36cd118153a381ab31",
+    "wasm/harness/application-clock.h": "63c2b7833f119677a1ee31b0a80489d05cb13e7643d378f9b855c32f1f713d4e",
+    "wasm/scripts/phase45_benchmark_contract.py": "c523ee6412d05919ee347ddb4ecc2badd870fe9c48b75755508ad3378a87cec4",
+    "wasm/scripts/benchmark-phase4-5-standalone.py": "4bb14d73362152864845f3890d0d16906fbe674c804b250fe529275e1892728a",
+    "wasm/scripts/verify-phase4-5-standalone.py": "07bf6646975833341cbb1be0ea81ec2b90492384bcded49f4a5cd70b7c5ae9b6",
+    "wasm/scripts/benchmark-phase4.py": "2610c6542a95f2811d2e5c320cc72eb2cb8b65078738e542b0a9195f59b0b151",
+    "wasm/scripts/benchmark-native-phase4.py": "042dee2b84af4bfa1ce8efcff8e519cb4cb852eafd30747acf330dc59a94b9d1",
+    "wasm/scripts/phase4_browser.py": "8d44fc3de13f48d6fe33fc399c1f352ac0cd120013521411d41fe95b3618e869",
+    "wasm/scripts/phase4_native.py": "e8d86daf10020780074b74c08367ea424f5d7a06f9d56bccd4f375f7e745382e",
+    "wasm/scripts/scene_surface.py": "df538f4a16b746abfb04879852f7c88007106d170591ff9f061b1a90719cce53",
+    "wasm/scripts/verify-phase4-input.py": "8ac0d1019817feec8d957c847158fa71f2b2c47666a246a079651087e5cba9d0",
+    "wasm/scripts/run-phase4-5-offline.ps1": "e8c58c5dc26ab8c9e2eb0919b0c205d14901a560521698b251f8735880cc6431",
+    "wasm/scripts/analyze-presentation.py": "7ec30012823c29c2e1ac1bd1943f80a7292f83e3add6ade215e763b2f303a4cb",
+    "wasm/scripts/test-presentation.py": "555d38c0c1ebb18e158a329978bb70bb62bcf9899d714dedf9272d2fb9bcca9b",
+    "wasm/scripts/verify-phase4-5-lifecycle.py": "fa1c385270cefc838b4ec8506335f8966011e4e590c52a07a00b8b039393c17e",
+    "wasm/scripts/verify-phase4-5-stability.py": "9309f4d8476a62503f283031b5f7941d3927863ffed58140e82a5199b0f74229",
+    "wasm/browser/application-audio-state.js": "0e161ee0d58437ad071c50c0db4f072d293da9da819367201799e0c49c3d5f6a"
+  }
+}

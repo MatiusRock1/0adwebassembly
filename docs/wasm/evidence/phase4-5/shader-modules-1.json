@@ -1,0 +1,18 @@
+{
+  "passed": false,
+  "adapter": {
+    "vendor": "nvidia",
+    "architecture": "ampere"
+  },
+  "fingerprint": "bca7ebf9c7ce4ec7cfde3d243edcfc77b08e7b601184657034c7377ab70a0e96",
+  "modules": 1116,
+  "errors": [
+    {
+      "name": "glsl/water_high",
+      "defines": "{}",
+      "stage": "fragment",
+      "line": 95,
+      "message": "'textureSample' must only be called from uniform control flow"
+    }
+  ]
+}

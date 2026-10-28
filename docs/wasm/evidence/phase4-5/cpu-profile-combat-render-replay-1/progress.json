@@ -1,0 +1,26 @@
+[
+  {
+    "elapsedSeconds": 10.472044400004961,
+    "liveUnitsAfterReplenishment": 306
+  },
+  {
+    "elapsedSeconds": 20.79651020000165,
+    "liveUnitsAfterReplenishment": 306
+  },
+  {
+    "elapsedSeconds": 31.120172900002217,
+    "liveUnitsAfterReplenishment": 306
+  },
+  {
+    "elapsedSeconds": 41.50251250000292,
+    "liveUnitsAfterReplenishment": 303
+  },
+  {
+    "elapsedSeconds": 52.04075680000096,
+    "liveUnitsAfterReplenishment": 275
+  },
+  {
+    "elapsedSeconds": 60,
+    "liveUnitsAfterReplenishment": 284
+  }
+]

@@ -1,0 +1,72 @@
+{
+  "gamePin": "40b8794eecb9618da69e10bacffa8814c561aa51",
+  "phase45Accepted": false,
+  "runs": [
+    {
+      "backend": "webgl",
+      "workload": "skirmish",
+      "repetition": 1,
+      "warmupSeconds": 30,
+      "durationSeconds": 30,
+      "complete": false,
+      "eligibleForAcceptance": false,
+      "gate30": false,
+      "displayedFps": 42.113666110880665,
+      "p95FrameMs": 50.0735,
+      "adapter": null,
+      "graphicsSettings": {
+        "vsync": "true",
+        "adaptivefps.session": "60",
+        "shadows": "true",
+        "shadowpcf": "true",
+        "postproc": "true",
+        "particles": "true",
+        "gpuskinning": "true",
+        "silhouettes": "true",
+        "watereffects": "true",
+        "waterfancyeffects": "false",
+        "waterrealdepth": "true",
+        "waterreflection": "true",
+        "waterrefraction": "true",
+        "textures.quality": "2",
+        "shadowquality": "2",
+        "textures.maxanisotropy": "2",
+        "antialiasing": "disabled",
+        "renderactors": "true",
+        "max_actor_quality": "200",
+        "materialmgr.quality": "10.0",
+        "shadowscascadecount": "1",
+        "shadowscascadedistanceratio": "1.7",
+        "shadowscutoffdistance": "300.0",
+        "shadowscovermap": "false"
+      },
+      "backlog": {
+        "nonGrowing": false,
+        "reason": "Insufficient original turn backlog samples",
+        "samples": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "workerPresentation": {
+        "valid": true,
+        "required": false,
+        "scope": "No render-worker presentation"
+      },
+      "cleanShutdown": true,
+      "failure": "{'nonGrowing': False, 'reason': 'Insufficient original turn backlog samples', 'samples': [0, 0, 0, 0]}"
+    }
+  ],
+  "webgpuPerformanceGate": false,
+  "workloadGates": {
+    "skirmish": false,
+    "combat": false
+  },
+  "consistentReportedWebGPUAdapter": false,
+  "allPlannedMeasurementsComplete": false,
+  "nativeAndWebGLIncluded": false,
+  "sameActiveGPUVerified": false,
+  "scope": "Independent presentation measurements. Active native GPU, matched graphics, functional/visual parity and stability require separate review; this summary never accepts phase 4.5."
+}

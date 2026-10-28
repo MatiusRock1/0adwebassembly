@@ -1,0 +1,21 @@
+--- a/js/src/threading/posix/PosixThread.cpp
++++ b/js/src/threading/posix/PosixThread.cpp
+@@ -1,3 +1,6 @@
++#ifdef __EMSCRIPTEN__
++#include <emscripten/threading.h>
++#endif
+ /* -*- Mode: C++; tab-width: 8; indent-tabs-mode: nil; c-basic-offset: 2 -*- */
+ /* vim: set ts=8 sts=2 et sw=2 tw=80: */
+ /* This Source Code Form is subject to the terms of the Mozilla Public
+@@ -108,7 +111,10 @@
+ #endif
+ 
+   int rv;
+-#ifdef XP_DARWIN
++#ifdef __EMSCRIPTEN__
++  emscripten_set_thread_name(pthread_self(), name);
++  rv = 0;
++#elif defined(XP_DARWIN)
+   rv = pthread_setname_np(name);
+ #elif defined(__DragonFly__) || defined(__FreeBSD__) || defined(__OpenBSD__)
+   pthread_set_name_np(pthread_self(), name);

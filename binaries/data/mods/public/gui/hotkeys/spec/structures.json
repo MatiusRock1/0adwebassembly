@@ -1,0 +1,424 @@
+{
+	"categories": {
+		"structures": {
+			"name": "Structures",
+			"desc": "Hotkeys for placing and selecting structures."
+		}
+	},
+	"mapped_hotkeys": {
+		"structures": {
+			"structures.place.civil_centre": {
+				"name": "Build Civil Center",
+				"desc": "Place a Civic Center on the map."
+			},
+			"structures.place.house": {
+				"name": "Build House",
+				"desc": "Place a House on the map."
+			},
+			"structures.place.storehouse": {
+				"name": "Build Storehouse",
+				"desc": "Place a Storehouse on the map."
+			},
+			"structures.place.farmstead": {
+				"name": "Build Farmstead",
+				"desc": "Place a Farmstead on the map."
+			},
+			"structures.place.field": {
+				"name": "Build Field",
+				"desc": "Place a Field on the map."
+			},
+			"structures.place.corral": {
+				"name": "Build Corral",
+				"desc": "Place a Corral on the map."
+			},
+			"structures.place.barracks": {
+				"name": "Build Barracks",
+				"desc": "Place a Barracks on the map."
+			},
+			"structures.place.stable": {
+				"name": "Build Stable",
+				"desc": "Place a Stable on the map."
+			},
+			"structures.place.temple": {
+				"name": "Build Temple",
+				"desc": "Place a Temple on the map."
+			},
+			"structures.place.arsenal": {
+				"name": "Build Arsenal",
+				"desc": "Place an Arsenal on the map."
+			},
+			"structures.place.fortress": {
+				"name": "Build Fortress",
+				"desc": "Place a Fortress on the map."
+			},
+			"structures.place.forge": {
+				"name": "Build Forge",
+				"desc": "Place a Forge on the map."
+			},
+			"structures.place.outpost": {
+				"name": "Build Outpost",
+				"desc": "Place an Outpost on the map."
+			},
+			"structures.place.sentry_tower": {
+				"name": "Build Sentry Tower",
+				"desc": "Place a Sentry Tower on the map."
+			},
+			"structures.place.defense_tower": {
+				"name": "Build Tower",
+				"desc": "Place a Tower on the map."
+			},
+			"structures.place.market": {
+				"name": "Build Market",
+				"desc": "Place a Market on the map."
+			},
+			"structures.place.dock": {
+				"name": "Build Dock",
+				"desc": "Place a Dock on the map."
+			},
+			"structures.place.wonder": {
+				"name": "Build Wonder",
+				"desc": "Place a Wonder on the map."
+			},
+			"structures.place.military_colony": {
+				"name": "Build Military Colony",
+				"desc": "Place a Military Colony on the map."
+			},
+			"structures.place.colony": {
+				"name": "Build Colony",
+				"desc": "Place a Colony on the map."
+			},
+			"structures.place.elephant_stable": {
+				"name": "Build Elephant Stable",
+				"desc": "Place an Elephant Stable on the map."
+			},
+			"structures.place.lighthouse": {
+				"name": "Build Lighthouse",
+				"desc": "Place a Lighthouse on the map."
+			},
+			"structures.place.library": {
+				"name": "Build Library",
+				"desc": "Place a Library on the map."
+			},
+			"structures.place.theater": {
+				"name": "Build Theater",
+				"desc": "Place a Theater on the map."
+			},
+			"structures.place.gymnasium": {
+				"name": "Build Gymnasium",
+				"desc": "Place a Gymnasium on the map."
+			},
+			"structures.place.prytaneion": {
+				"name": "Build Prytaneion",
+				"desc": "Place a Prytaneion on the map."
+			},
+			"structures.place.crannog": {
+				"name": "Build Cranogion",
+				"desc": "Place a Cranogion on the map."
+			},
+			"structures.place.kennel": {
+				"name": "Build Kennel",
+				"desc": "Place a Kennel on the map."
+			},
+			"structures.place.apartment": {
+				"name": "Build Apartment",
+				"desc": "Place an Apartment on the map."
+			},
+			"structures.place.super_dock": {
+				"name": "Build Super Dock",
+				"desc": "Place a Super Dock on the map."
+			},
+			"structures.place.embassy_celtic": {
+				"name": "Build Celtic Embassy",
+				"desc": "Place a Celtic Embassy on the map."
+			},
+			"structures.place.embassy_iberian": {
+				"name": "Build Iberian Embassy",
+				"desc": "Place an Iberian Embassy on the map."
+			},
+			"structures.place.embassy_italic": {
+				"name": "Build Italic Embassy",
+				"desc": "Place an Italic Embassy on the map."
+			},
+			"structures.place.assembly": {
+				"name": "Build Assembly",
+				"desc": "Place an Assembly on the map."
+			},
+			"structures.place.ministry": {
+				"name": "Build Ministry",
+				"desc": "Place a Ministry on the map."
+			},
+			"structures.place.academy": {
+				"name": "Build Academy",
+				"desc": "Place an Academy on the map."
+			},
+			"structures.place.monument": {
+				"name": "Build Monument",
+				"desc": "Place a Monument on the map."
+			},
+			"structures.place.pyramid_small": {
+				"name": "Build Small Pyramid",
+				"desc": "Place a Small Pyramid on the map."
+			},
+			"structures.place.pyramid_large": {
+				"name": "Build Large Pyramid",
+				"desc": "Place a Large Pyramid on the map."
+			},
+			"structures.place.temple_amun": {
+				"name": "Build Temple of Amun",
+				"desc": "Place the Temple of Amun on the map."
+			},
+			"structures.place.temple_vesta": {
+				"name": "Build Temple of Vesta",
+				"desc": "Place the Temple of Vesta on the map."
+			},
+			"structures.place.camp_blemmye": {
+				"name": "Build Blemmyes Camp",
+				"desc": "Place a Blemmyes Camp on the map."
+			},
+			"structures.place.camp_noba": {
+				"name": "Build Noba Camp",
+				"desc": "Place a Noba Camp on the map."
+			},
+			"structures.place.palace": {
+				"name": "Build Palace",
+				"desc": "Place a Palace on the map."
+			},
+			"structures.place.pillar_ashoka": {
+				"name": "Build Ashoka Pillar",
+				"desc": "Place an Ashoka Pillar on the map."
+			},
+			"structures.place.ice_house": {
+				"name": "Build Ice House",
+				"desc": "Place an Ice House on the map."
+			},
+			"structures.place.tachara": {
+				"name": "Build Winter Palace",
+				"desc": "Place a Winter Palace on the map."
+			},
+			"structures.place.army_camp": {
+				"name": "Build Army Camp",
+				"desc": "Place an Army Camp on the map."
+			},
+			"structures.place.encampment": {
+				"name": "Build Wagon Encampment",
+				"desc": "Place Wagon Encampment on the map."
+			},
+			"structures.place.great_hall": {
+				"name": "Build Great Hall",
+				"desc": "Place a built Great Hall on the map."
+			},
+			"structures.place.temple_2": {
+				"name": "Build Temple of Isis",
+				"desc": "Place the Temple of Isis on the map."
+			},
+			"structures.place.gerousia": {
+				"name": "Build Gerousia",
+				"desc": "Place a Gerousia on the map."
+			},
+			"structures.place.syssiton": {
+				"name": "Build Syssiton",
+				"desc": "Place a Syssiton on the map."
+			},
+			"selection.structures.civil_centre": {
+				"name": "Select Civic Center",
+				"desc": "Select a built Civic Center."
+			},
+			"selection.structures.field": {
+				"name": "Select Field",
+				"desc": "Select a built Field."
+			},
+			"selection.structures.corral": {
+				"name": "Select Corral",
+				"desc": "Select a built Corral."
+			},
+			"selection.structures.barracks": {
+				"name": "Select Barracks",
+				"desc": "Select a built Barracks."
+			},
+			"selection.structures.stable": {
+				"name": "Select Stable",
+				"desc": "Select a built Stable."
+			},
+			"selection.structures.temple": {
+				"name": "Select Temple",
+				"desc": "Select a built Temple."
+			},
+			"selection.structures.arsenal": {
+				"name": "Select Arsenal",
+				"desc": "Select a built Arsenal."
+			},
+			"selection.structures.fortress": {
+				"name": "Select Fortress",
+				"desc": "Select a built Fortress."
+			},
+			"selection.structures.colony": {
+				"name": "Select Colony",
+				"desc": "Select a built Colony."
+			},
+			"selection.structures.forge": {
+				"name": "Select Forge",
+				"desc": "Select a built Forge on the map."
+			},
+			"selection.structures.outpost": {
+				"name": "Select Outpost",
+				"desc": "Select a built Outpost on the map."
+			},
+			"selection.structures.defense_tower": {
+				"name": "Select Tower",
+				"desc": "Select a built Tower on the map."
+			},
+			"selection.structures.sentry_tower": {
+				"name": "Select Sentry Tower",
+				"desc": "Select a built Sentry Tower on the map."
+			},
+			"selection.structures.market": {
+				"name": "Select Market",
+				"desc": "Select a built Market."
+			},
+			"selection.structures.dock": {
+				"name": "Select Dock",
+				"desc": "Select a built Dock."
+			},
+			"selection.structures.wonder": {
+				"name": "Select Wonder",
+				"desc": "Select a built Wonder."
+			},
+			"selection.structures.elephant_stable": {
+				"name": "Select Elephant Stable",
+				"desc": "Select a built Elephant Stable."
+			},
+			"selection.structures.lighthouse": {
+				"name": "Select Lighthouse",
+				"desc": "Select a built Lighthouse."
+			},
+			"selection.structures.library": {
+				"name": "Select Library",
+				"desc": "Select a built Library."
+			},
+			"selection.structures.theater": {
+				"name": "Select Theater",
+				"desc": "Select a Theater Gymnasium."
+			},
+			"selection.structures.gymnasium": {
+				"name": "Select Gymnasium",
+				"desc": "Select a built Gymnasium."
+			},
+			"selection.structures.crannog": {
+				"name": "Select Cranogion",
+				"desc": "Select a built Cranogion."
+			},
+			"selection.structures.kennel": {
+				"name": "Select Kennel",
+				"desc": "Select a built Kennel."
+			},
+			"selection.structures.apartment": {
+				"name": "Select Apartment",
+				"desc": "Select a built Apartment."
+			},
+			"selection.structures.super_dock": {
+				"name": "Select Super Dock",
+				"desc": "Select a built Super Dock."
+			},
+			"selection.structures.embassy_celtic": {
+				"name": "Select Celtic Embassy",
+				"desc": "Place a Celtic Embassy on the map."
+			},
+			"selection.structures.embassy_iberian": {
+				"name": "Select Iberian Embassy",
+				"desc": "Select an Iberian Embassy on the map."
+			},
+			"selection.structures.embassy_italic": {
+				"name": "Select Italic Embassy",
+				"desc": "Select an Italic Embassy on the map."
+			},
+			"selection.structures.ministry": {
+				"name": "Select Ministry",
+				"desc": "Select a built Ministry."
+			},
+			"selection.structures.academy": {
+				"name": "Select Academy",
+				"desc": "Select a built Academy."
+			},
+			"selection.structures.monument": {
+				"name": "Select Monument",
+				"desc": "Select a built Monument."
+			},
+			"selection.structures.pyramid_small": {
+				"name": "Select Small Pyramid",
+				"desc": "Select a Small Pyramid"
+			},
+			"selection.structures.pyramid_large": {
+				"name": "Select Large Pyramid",
+				"desc": "Select a Large Pyramid"
+			},
+			"selection.structures.temple_amun": {
+				"name": "Select Temple of Amun",
+				"desc": "Select a built Temple of Amun."
+			},
+			"selection.structures.temple_vesta": {
+				"name": "Select Temple of Vesta",
+				"desc": "Select a built Temple of Vesta."
+			},
+			"selection.structures.palace": {
+				"name": "Select Palace",
+				"desc": "Select a built Palace."
+			},
+			"selection.structures.pillar_ashoka": {
+				"name": "Select Ashoka Pillar",
+				"desc": "Select a built Ashoka Pillar."
+			},
+			"selection.structures.ice_house": {
+				"name": "Select Ice House",
+				"desc": "Select a built Ice House."
+			},
+			"selection.structures.army_camp": {
+				"name": "Select Army Camp",
+				"desc": "Select a built Army Camp."
+			},
+			"selection.structures.camp_blemmye": {
+				"name": "Select Blemmye Camp",
+				"desc": "Select a built Blemmye Camp."
+			},
+			"selection.structures.camp_noba": {
+				"name": "Select Noba Camp",
+				"desc": "Select a built Noba Camp."
+			},
+			"selection.structures.encampment": {
+				"name": "Select Wagon Encampment",
+				"desc": "Select a built Wagon Encampment."
+			},
+			"selection.structures.encampment_fortified": {
+				"name": "Select Fortified Wagon Encampment",
+				"desc": "Select a built Fortified Wagon Encampment."
+			},
+			"selection.structures.great_hall": {
+				"name": "Select Great Hall",
+				"desc": "Select a built Great Hall."
+			},
+			"selection.structures.temple_2": {
+				"name": "Select Temple of Isis",
+				"desc": "Select a built Temple of Isis."
+			},
+			"selection.structures.assembly": {
+				"name": "Select Assembly",
+				"desc": "Select a built Assembly."
+			},
+			"selection.structures.gerousia": {
+				"name": "Select Gerousia",
+				"desc": "Select a built Gerousia."
+			},
+			"selection.structures.remogantion": {
+				"name": "Select Remogantion",
+				"desc": "Select a built Remogantion."
+			},
+			"selection.structures.prytaneion": {
+				"name": "Select Prytaneion",
+				"desc": "Select a built Prytaneion."
+			},
+			"selection.structures.syssiton": {
+				"name": "Select Syssiton",
+				"desc": "Select a built Syssiton."
+			}
+		}
+	}
+}

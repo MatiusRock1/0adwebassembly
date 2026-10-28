@@ -1,0 +1,883 @@
+{
+  "browser": "chromium",
+  "console": [
+    {
+      "type": "log",
+      "text": "SCENE_ACTOR_QUALITY_HOOK_BEGIN"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_QUALITY_GET_BEGIN"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_QUALITY_GET_END 100 100"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_ACTOR_QUALITY_HOOK_END"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_ACTOR_VALIDATOR_BEGIN"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_MAP_LOAD_BEGIN"
+    },
+    {
+      "type": "warning",
+      "text": "w:8,t:0x00600030: Heap resize call from 67108864 to 80543744 took 0.10009765625 msecs. Success: true"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_LOADER_FINISHED"
+    },
+    {
+      "type": "warning",
+      "text": "w:8,t:0x00600030: Heap resize call from 80543744 to 96665600 took 0.1201171875 msecs. Success: true"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_GAME_INITIALIZED"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_MAP_LOADED 0"
+    },
+    {
+      "type": "log",
+      "text": "ERROR: Failed to convert texture \"art/textures/misc/territory_border_mask.png\" (NVTT not available)"
+    },
+    {
+      "type": "log",
+      "text": "ERROR: Failed to convert texture \"art/textures/misc/territory_border.png\" (NVTT not available)"
+    },
+    {
+      "type": "warning",
+      "text": "w:8,t:0x00600030: Heap resize call from 96665600 to 115998720 took 0.09521484375 msecs. Success: true"
+    },
+    {
+      "type": "warning",
+      "text": "w:8,t:0x00600030: Heap resize call from 115998720 to 139198464 took 0.06494140625 msecs. Success: true"
+    },
+    {
+      "type": "warning",
+      "text": "w:8,t:0x00600030: Heap resize call from 139198464 to 167051264 took 0.074951171875 msecs. Success: true"
+    },
+    {
+      "type": "warning",
+      "text": "w:8,t:0x00600030: Heap resize call from 167051264 to 200474624 took 0.080078125 msecs. Success: true"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_READY"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_STATS {\"frame\":30,\"tick\":8,\"restarts\":0,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":317.544,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_STATS {\"frame\":30,\"tick\":8,\"restarts\":0,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":317.544,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}"
+    },
+    {
+      "type": "warning",
+      "text": "w:8,t:0x00600030: Heap resize call from 200474624 to 240582656 took 0.065185546875 msecs. Success: true"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_STATS {\"frame\":60,\"tick\":24,\"restarts\":0,\"paused\":false,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":317.544,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_SELECTED 8"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_STATS {\"frame\":90,\"tick\":38,\"restarts\":0,\"paused\":false,\"selected\":8,\"x\":155.36400,\"z\":243.10500,\"screenX\":317.544,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":10,\"width\":640,\"height\":480}"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_WALK_QUEUED 8 145.36389 243.06433"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_STATS {\"frame\":120,\"tick\":49,\"restarts\":0,\"paused\":false,\"selected\":8,\"x\":145.83043,\"z\":243.06592,\"screenX\":381.853,\"screenY\":136.011,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":10,\"width\":640,\"height\":480}"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_PAUSED 1"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_STATS {\"frame\":150,\"tick\":51,\"restarts\":0,\"paused\":true,\"selected\":8,\"x\":145.83043,\"z\":243.06592,\"screenX\":381.853,\"screenY\":136.011,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":10,\"width\":640,\"height\":480}"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_STATS {\"frame\":180,\"tick\":52,\"restarts\":0,\"paused\":true,\"selected\":8,\"x\":145.83043,\"z\":243.06592,\"screenX\":381.853,\"screenY\":136.011,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":10,\"width\":640,\"height\":480}"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_STATS {\"frame\":210,\"tick\":52,\"restarts\":0,\"paused\":true,\"selected\":8,\"x\":145.83043,\"z\":243.06592,\"screenX\":449.308,\"screenY\":136.011,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":10,\"width\":640,\"height\":480}"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_RESIZED 800 600"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_STATS {\"frame\":240,\"tick\":52,\"restarts\":0,\"paused\":true,\"selected\":8,\"x\":145.83043,\"z\":243.06592,\"screenX\":561.635,\"screenY\":170.014,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":10,\"width\":800,\"height\":600}"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_RESIZED 640 480"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_SELECTED 0"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_MAP_LOAD_BEGIN"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_LOADER_FINISHED"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_GAME_INITIALIZED"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_MAP_LOADED 1"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_STATS {\"frame\":270,\"tick\":0,\"restarts\":1,\"paused\":true,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_MAP_LOAD_BEGIN"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_LOADER_FINISHED"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_GAME_INITIALIZED"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_MAP_LOADED 2"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_STATS {\"frame\":300,\"tick\":0,\"restarts\":2,\"paused\":true,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_MAP_LOAD_BEGIN"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_LOADER_FINISHED"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_GAME_INITIALIZED"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_MAP_LOADED 3"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_STATS {\"frame\":330,\"tick\":0,\"restarts\":3,\"paused\":true,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}"
+    },
+    {
+      "type": "log",
+      "text": "SCENE_STOPPED"
+    }
+  ],
+  "errors": [],
+  "workerEvents": [
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-scene.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-scene.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-scene.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-scene.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-scene.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-scene.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-scene.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-scene.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-scene.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-scene.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-scene.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-scene.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-scene.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-scene.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-scene.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-scene.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-scene.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-scene.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-scene.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-scene.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-scene.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-scene.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-scene.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-scene.mjs"
+    }
+  ],
+  "cycleMetrics": [],
+  "version": "141.0.7390.37",
+  "headers": {
+    "cache-control": "no-store",
+    "content-length": "1569",
+    "content-type": "text/html",
+    "cross-origin-embedder-policy": "require-corp",
+    "cross-origin-opener-policy": "same-origin",
+    "cross-origin-resource-policy": "same-origin",
+    "date": "Mon, 12 Oct 2026 16:08:42 GMT",
+    "last-modified": "Mon, 12 Oct 2026 15:34:11 GMT",
+    "server": "SimpleHTTP/0.6 Python/3.12.3"
+  },
+  "isolated": true,
+  "imageMetrics": {
+    "size": [
+      642,
+      483
+    ],
+    "channelStdDev": [
+      37.46472534169769,
+      37.276725940301866,
+      35.49261808089841
+    ],
+    "quantizedColors": 128
+  },
+  "readyState": {
+    "ready": true,
+    "metrics": {
+      "frame": 60,
+      "tick": 24,
+      "restarts": 0,
+      "paused": false,
+      "selected": 0,
+      "x": 155.364,
+      "z": 243.105,
+      "screenX": 317.544,
+      "screenY": 136.198,
+      "terrainTriangles": 3072,
+      "modelTriangles": 6998,
+      "drawCalls": 9,
+      "width": 640,
+      "height": 480
+    },
+    "events": [
+      "SCENE_ACTOR_QUALITY_HOOK_BEGIN",
+      "SCENE_QUALITY_GET_BEGIN",
+      "SCENE_QUALITY_GET_END 100 100",
+      "SCENE_ACTOR_QUALITY_HOOK_END",
+      "SCENE_ACTOR_VALIDATOR_BEGIN",
+      "SCENE_MAP_LOAD_BEGIN",
+      "SCENE_LOADER_FINISHED",
+      "SCENE_GAME_INITIALIZED",
+      "SCENE_MAP_LOADED 0"
+    ]
+  },
+  "movementState": {
+    "ready": true,
+    "metrics": {
+      "frame": 120,
+      "tick": 49,
+      "restarts": 0,
+      "paused": false,
+      "selected": 8,
+      "x": 145.83043,
+      "z": 243.06592,
+      "screenX": 381.853,
+      "screenY": 136.011,
+      "terrainTriangles": 3072,
+      "modelTriangles": 6998,
+      "drawCalls": 10,
+      "width": 640,
+      "height": 480
+    },
+    "events": [
+      "SCENE_ACTOR_QUALITY_HOOK_BEGIN",
+      "SCENE_QUALITY_GET_BEGIN",
+      "SCENE_QUALITY_GET_END 100 100",
+      "SCENE_ACTOR_QUALITY_HOOK_END",
+      "SCENE_ACTOR_VALIDATOR_BEGIN",
+      "SCENE_MAP_LOAD_BEGIN",
+      "SCENE_LOADER_FINISHED",
+      "SCENE_GAME_INITIALIZED",
+      "SCENE_MAP_LOADED 0",
+      "SCENE_SELECTED 8",
+      "SCENE_WALK_QUEUED 8 145.36389 243.06433"
+    ]
+  },
+  "pausedState": {
+    "ready": true,
+    "metrics": {
+      "frame": 150,
+      "tick": 51,
+      "restarts": 0,
+      "paused": true,
+      "selected": 8,
+      "x": 145.83043,
+      "z": 243.06592,
+      "screenX": 381.853,
+      "screenY": 136.011,
+      "terrainTriangles": 3072,
+      "modelTriangles": 6998,
+      "drawCalls": 10,
+      "width": 640,
+      "height": 480
+    },
+    "events": [
+      "SCENE_ACTOR_QUALITY_HOOK_BEGIN",
+      "SCENE_QUALITY_GET_BEGIN",
+      "SCENE_QUALITY_GET_END 100 100",
+      "SCENE_ACTOR_QUALITY_HOOK_END",
+      "SCENE_ACTOR_VALIDATOR_BEGIN",
+      "SCENE_MAP_LOAD_BEGIN",
+      "SCENE_LOADER_FINISHED",
+      "SCENE_GAME_INITIALIZED",
+      "SCENE_MAP_LOADED 0",
+      "SCENE_SELECTED 8",
+      "SCENE_WALK_QUEUED 8 145.36389 243.06433",
+      "SCENE_PAUSED 1"
+    ]
+  },
+  "singleStepState": {
+    "ready": true,
+    "metrics": {
+      "frame": 180,
+      "tick": 52,
+      "restarts": 0,
+      "paused": true,
+      "selected": 8,
+      "x": 145.83043,
+      "z": 243.06592,
+      "screenX": 381.853,
+      "screenY": 136.011,
+      "terrainTriangles": 3072,
+      "modelTriangles": 6998,
+      "drawCalls": 10,
+      "width": 640,
+      "height": 480
+    },
+    "events": [
+      "SCENE_ACTOR_QUALITY_HOOK_BEGIN",
+      "SCENE_QUALITY_GET_BEGIN",
+      "SCENE_QUALITY_GET_END 100 100",
+      "SCENE_ACTOR_QUALITY_HOOK_END",
+      "SCENE_ACTOR_VALIDATOR_BEGIN",
+      "SCENE_MAP_LOAD_BEGIN",
+      "SCENE_LOADER_FINISHED",
+      "SCENE_GAME_INITIALIZED",
+      "SCENE_MAP_LOADED 0",
+      "SCENE_SELECTED 8",
+      "SCENE_WALK_QUEUED 8 145.36389 243.06433",
+      "SCENE_PAUSED 1"
+    ]
+  },
+  "cameraState": {
+    "ready": true,
+    "metrics": {
+      "frame": 210,
+      "tick": 52,
+      "restarts": 0,
+      "paused": true,
+      "selected": 8,
+      "x": 145.83043,
+      "z": 243.06592,
+      "screenX": 449.308,
+      "screenY": 136.011,
+      "terrainTriangles": 3072,
+      "modelTriangles": 6998,
+      "drawCalls": 10,
+      "width": 640,
+      "height": 480
+    },
+    "events": [
+      "SCENE_ACTOR_QUALITY_HOOK_BEGIN",
+      "SCENE_QUALITY_GET_BEGIN",
+      "SCENE_QUALITY_GET_END 100 100",
+      "SCENE_ACTOR_QUALITY_HOOK_END",
+      "SCENE_ACTOR_VALIDATOR_BEGIN",
+      "SCENE_MAP_LOAD_BEGIN",
+      "SCENE_LOADER_FINISHED",
+      "SCENE_GAME_INITIALIZED",
+      "SCENE_MAP_LOADED 0",
+      "SCENE_SELECTED 8",
+      "SCENE_WALK_QUEUED 8 145.36389 243.06433",
+      "SCENE_PAUSED 1"
+    ]
+  },
+  "resizeState": {
+    "ready": true,
+    "metrics": {
+      "frame": 240,
+      "tick": 52,
+      "restarts": 0,
+      "paused": true,
+      "selected": 8,
+      "x": 145.83043,
+      "z": 243.06592,
+      "screenX": 561.635,
+      "screenY": 170.014,
+      "terrainTriangles": 3072,
+      "modelTriangles": 6998,
+      "drawCalls": 10,
+      "width": 800,
+      "height": 600
+    },
+    "events": [
+      "SCENE_ACTOR_QUALITY_HOOK_BEGIN",
+      "SCENE_QUALITY_GET_BEGIN",
+      "SCENE_QUALITY_GET_END 100 100",
+      "SCENE_ACTOR_QUALITY_HOOK_END",
+      "SCENE_ACTOR_VALIDATOR_BEGIN",
+      "SCENE_MAP_LOAD_BEGIN",
+      "SCENE_LOADER_FINISHED",
+      "SCENE_GAME_INITIALIZED",
+      "SCENE_MAP_LOADED 0",
+      "SCENE_SELECTED 8",
+      "SCENE_WALK_QUEUED 8 145.36389 243.06433",
+      "SCENE_PAUSED 1",
+      "SCENE_RESIZED 800 600"
+    ]
+  },
+  "restartState": {
+    "ready": true,
+    "metrics": {
+      "frame": 330,
+      "tick": 0,
+      "restarts": 3,
+      "paused": true,
+      "selected": 0,
+      "x": 155.364,
+      "z": 243.105,
+      "screenX": 385.011,
+      "screenY": 136.198,
+      "terrainTriangles": 3072,
+      "modelTriangles": 6998,
+      "drawCalls": 9,
+      "width": 640,
+      "height": 480
+    },
+    "events": [
+      "SCENE_ACTOR_QUALITY_HOOK_BEGIN",
+      "SCENE_QUALITY_GET_BEGIN",
+      "SCENE_QUALITY_GET_END 100 100",
+      "SCENE_ACTOR_QUALITY_HOOK_END",
+      "SCENE_ACTOR_VALIDATOR_BEGIN",
+      "SCENE_MAP_LOAD_BEGIN",
+      "SCENE_LOADER_FINISHED",
+      "SCENE_GAME_INITIALIZED",
+      "SCENE_MAP_LOADED 0",
+      "SCENE_SELECTED 8",
+      "SCENE_WALK_QUEUED 8 145.36389 243.06433",
+      "SCENE_PAUSED 1",
+      "SCENE_RESIZED 800 600",
+      "SCENE_RESIZED 640 480",
+      "SCENE_SELECTED 0",
+      "SCENE_MAP_LOAD_BEGIN",
+      "SCENE_LOADER_FINISHED",
+      "SCENE_GAME_INITIALIZED",
+      "SCENE_MAP_LOADED 1",
+      "SCENE_MAP_LOAD_BEGIN",
+      "SCENE_LOADER_FINISHED",
+      "SCENE_GAME_INITIALIZED",
+      "SCENE_MAP_LOADED 2",
+      "SCENE_MAP_LOAD_BEGIN",
+      "SCENE_LOADER_FINISHED",
+      "SCENE_GAME_INITIALIZED",
+      "SCENE_MAP_LOADED 3"
+    ]
+  },
+  "sceneResult": {
+    "passed": true,
+    "exitCode": 0,
+    "lines": [
+      "VFS_READ cache/public/simulation/templates/template_unit.xml.434217902c333228.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/builder.xml.48ca1365a049630e.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/hoplite.xml.b5dce6bda1a13c3d.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/civ/athen.xml.3dc5c92e789daf01.xmb",
+      "VFS_READ cache/public/simulation/templates/units/athen/siege_lithobolos_packed.xml.01f81eab538caef7.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_siege_stonethrower.xml.8007879e0e02f38b.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_siege.xml.158447519c42de5a.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit.xml.434217902c333228.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/civ/athen.xml.3dc5c92e789daf01.xmb",
+      "VFS_READ cache/public/simulation/templates/units/athen/cavalry_swordsman_b.xml.b1d69903a89e5e0f.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_cavalry_melee_swordsman.xml.476f2c861f75680e.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_cavalry_melee.xml.7feb13b12535e6e0.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_cavalry.xml.b111456156041593.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit.xml.434217902c333228.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/civ/athen.xml.3dc5c92e789daf01.xmb",
+      "VFS_READ cache/public/simulation/templates/structures/athen/barracks.xml.1329d5ac0d226e23.xmb",
+      "VFS_READ cache/public/simulation/templates/template_structure_military_barracks.xml.c2f90b167ee9159b.xmb",
+      "VFS_READ cache/public/simulation/templates/template_structure_military.xml.ef16acdabc86445b.xmb",
+      "VFS_READ cache/public/simulation/templates/template_structure.xml.d4545261c72a3d4e.xmb",
+      "VFS_READ cache/public/simulation/templates/units/athen/infantry_javelineer_b.xml.8c96e71418b9b452.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_infantry_ranged_javelineer.xml.9e74728b82b83196.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_infantry_ranged.xml.e60f0bafa433759b.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_infantry.xml.d0a006272362f8df.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit.xml.434217902c333228.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/builder.xml.48ca1365a049630e.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/merc_inf.xml.8334d891713a89f3.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/mercenary.xml.182500ee78505d12.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/civ/athen.xml.3dc5c92e789daf01.xmb",
+      "VFS_READ cache/public/simulation/templates/units/athen/infantry_slinger_b.xml.e60f0bafa433759b.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_infantry_ranged_slinger.xml.fbd5a567ae6c8928.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_infantry_ranged.xml.e60f0bafa433759b.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_infantry.xml.d0a006272362f8df.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit.xml.434217902c333228.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/builder.xml.48ca1365a049630e.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/civ/athen.xml.3dc5c92e789daf01.xmb",
+      "VFS_READ cache/public/simulation/templates/units/athen/infantry_archer_b.xml.56e82a9d5a9ed0b5.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_infantry_ranged_archer.xml.9e74728b82b83196.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_infantry_ranged.xml.e60f0bafa433759b.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_infantry.xml.d0a006272362f8df.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit.xml.434217902c333228.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/builder.xml.48ca1365a049630e.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/merc_inf.xml.8334d891713a89f3.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/mercenary.xml.182500ee78505d12.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/civ/athen.xml.3dc5c92e789daf01.xmb",
+      "VFS_READ cache/public/simulation/templates/structures/athen/dock.xml.02e6c83600a0baf5.xmb",
+      "VFS_READ cache/public/simulation/templates/template_structure_military_dock.xml.5dd9c6f665d2bf1c.xmb",
+      "VFS_READ cache/public/simulation/templates/template_structure_military.xml.ef16acdabc86445b.xmb",
+      "VFS_READ cache/public/simulation/templates/template_structure.xml.d4545261c72a3d4e.xmb",
+      "VFS_READ cache/public/simulation/templates/units/athen/ship_fishing.xml.df297c05d4ba9d95.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_ship_fishing.xml.6c205b59f468d1a0.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_ship.xml.21ef5be3a59a3344.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit.xml.434217902c333228.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/civ/athen.xml.3dc5c92e789daf01.xmb",
+      "VFS_READ cache/public/simulation/templates/units/athen/ship_arrow.xml.e4b30e05d19c7e8c.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_ship_warship_arrow.xml.21d87b4d4e0cdd25.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_ship_warship.xml.171344c68ac9b1be.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_ship.xml.21ef5be3a59a3344.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit.xml.434217902c333228.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/civ/athen.xml.3dc5c92e789daf01.xmb",
+      "VFS_READ cache/public/simulation/templates/units/athen/ship_ram.xml.e4b30e05d19c7e8c.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_ship_warship_ram.xml.7153e728e79c71ae.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_ship_warship.xml.171344c68ac9b1be.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_ship.xml.21ef5be3a59a3344.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit.xml.434217902c333228.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/civ/athen.xml.3dc5c92e789daf01.xmb",
+      "VFS_READ cache/public/simulation/templates/units/athen/champion_marine_dock.xml.711541fae94653cb.xmb",
+      "VFS_READ cache/public/simulation/templates/units/athen/champion_marine.xml.174a73df7cc2b996.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_champion_infantry_swordsman.xml.d063008876559046.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_champion_infantry.xml.f29dcb15cae7a53f.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_champion.xml.5551a29978336b7e.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit.xml.434217902c333228.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/spec_champ.xml.2db112711b08a23e.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/civ/athen.xml.3dc5c92e789daf01.xmb",
+      "VFS_READ cache/public/simulation/templates/units/athen/infantry_archer_b_dock.xml.8458988c0384032e.xmb",
+      "VFS_READ cache/public/simulation/templates/units/athen/infantry_archer_b.xml.56e82a9d5a9ed0b5.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_infantry_ranged_archer.xml.9e74728b82b83196.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_infantry_ranged.xml.e60f0bafa433759b.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_infantry.xml.d0a006272362f8df.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit.xml.434217902c333228.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/builder.xml.48ca1365a049630e.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/merc_inf.xml.8334d891713a89f3.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/mercenary.xml.182500ee78505d12.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/civ/athen.xml.3dc5c92e789daf01.xmb",
+      "Hotloading new value for global \"InitAttributes\".",
+      "SCENE_LOADER_FINISHED",
+      "VFS_READ cache/public/simulation/templates/units/athen/infantry_javelineer_a.xml.e0dd2b49baac9f5f.xmb",
+      "VFS_READ cache/public/simulation/templates/units/athen/infantry_javelineer_b.xml.8c96e71418b9b452.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_infantry_ranged_javelineer.xml.9e74728b82b83196.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_infantry_ranged.xml.e60f0bafa433759b.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_infantry.xml.d0a006272362f8df.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit.xml.434217902c333228.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/builder.xml.48ca1365a049630e.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/merc_inf.xml.8334d891713a89f3.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/mercenary.xml.182500ee78505d12.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/civ/athen.xml.3dc5c92e789daf01.xmb",
+      "VFS_READ cache/public/simulation/templates/units/athen/infantry_archer_a.xml.aa67f08372dd14f8.xmb",
+      "VFS_READ cache/public/simulation/templates/units/athen/infantry_archer_b.xml.56e82a9d5a9ed0b5.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_infantry_ranged_archer.xml.9e74728b82b83196.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_infantry_ranged.xml.e60f0bafa433759b.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_infantry.xml.d0a006272362f8df.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit.xml.434217902c333228.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/builder.xml.48ca1365a049630e.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/merc_inf.xml.8334d891713a89f3.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/mercenary.xml.182500ee78505d12.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/civ/athen.xml.3dc5c92e789daf01.xmb",
+      "VFS_READ cache/public/simulation/templates/units/athen/infantry_archer_a_dock.xml.a76ba41b2ce5b09e.xmb",
+      "VFS_READ cache/public/simulation/templates/units/athen/infantry_archer_b_dock.xml.8458988c0384032e.xmb",
+      "VFS_READ cache/public/simulation/templates/units/athen/infantry_archer_b.xml.56e82a9d5a9ed0b5.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_infantry_ranged_archer.xml.9e74728b82b83196.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_infantry_ranged.xml.e60f0bafa433759b.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_infantry.xml.d0a006272362f8df.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit.xml.434217902c333228.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/builder.xml.48ca1365a049630e.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/merc_inf.xml.8334d891713a89f3.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/mercenary.xml.182500ee78505d12.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/civ/athen.xml.3dc5c92e789daf01.xmb",
+      "SCENE_GAME_INITIALIZED",
+      "VFS_READ simulation/data/pathfinder.rng",
+      "VFS_READ cache/mod/simulation/data/pathfinder.xml.bc9f60cc3185e32f.xmb",
+      "VFS_READ cache/mod/shaders/effects/minimap.xml.ac12dfb130b9d55f.xmb",
+      "SCENE_MAP_LOADED 2",
+      "SCENE_STATS {\"frame\":300,\"tick\":0,\"restarts\":2,\"paused\":true,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}",
+      "SCENE_MAP_LOAD_BEGIN",
+      "VFS_READ maps/scenarios/pathfinding_terrain_demo.pmp",
+      "VFS_READ simulation/data/pathfinder.rng",
+      "VFS_READ cache/mod/simulation/data/pathfinder.xml.bc9f60cc3185e32f.xmb",
+      "VFS_READ simulation/data/territorymanager.rng",
+      "VFS_READ cache/mod/simulation/data/territorymanager.xml.a65f18fd0760176a.xmb",
+      "VFS_READ cache/mod/simulation/data/pathfinder.xml.bc9f60cc3185e32f.xmb",
+      "VFS_READ globalscripts/AttackEffects.js",
+      "VFS_READ globalscripts/DamageTypes.js",
+      "VFS_READ globalscripts/FSM.js",
+      "VFS_READ globalscripts/Formation.js",
+      "VFS_READ globalscripts/Math.js",
+      "VFS_READ globalscripts/ModificationTemplates.js",
+      "VFS_READ globalscripts/MultiKeyMap.js",
+      "VFS_READ globalscripts/Resources.js",
+      "VFS_READ globalscripts/StatusEffects.js",
+      "VFS_READ globalscripts/Technologies.js",
+      "VFS_READ globalscripts/Templates.js",
+      "VFS_READ globalscripts/Trade.js",
+      "VFS_READ globalscripts/WeightedList.js",
+      "VFS_READ globalscripts/interpolation.js",
+      "VFS_READ globalscripts/l10n.js",
+      "VFS_READ globalscripts/random.js",
+      "VFS_READ globalscripts/sprintf.js",
+      "VFS_READ globalscripts/utility.js",
+      "VFS_READ globalscripts/vector.js",
+      "'art/terrains/terrains.xml' does not exist. Using previous properties.",
+      "VFS_READ art/terrains/biome-desert/terrains.xml.cached.xmb",
+      "VFS_READ art/terrains/biome-desert/desert_city_tile.xml.cached.xmb",
+      "VFS_READ art/terrains/biome-desert/desert_city_tile_plaza.xml.cached.xmb",
+      "VFS_READ art/terrains/biome-desert/desert_cliff_1.xml.cached.xmb",
+      "VFS_READ art/terrains/biome-mediterranean/terrains.xml.cached.xmb",
+      "VFS_READ art/terrains/biome-mediterranean/medit_grass_wild.xml.cached.xmb",
+      "VFS_READ art/terrains/grass/terrains.xml.cached.xmb",
+      "VFS_READ art/terrains/grass/grass1_spring.xml.cached.xmb",
+      "VFS_READ simulation/data/settings/player_defaults.json",
+      "VFS_READ cache/public/simulation/templates/special/players/gaia.xml.5097f96bf37b375d.xmb",
+      "VFS_READ cache/public/simulation/templates/special/players/athen.xml.5d3dc31c0341176e.xmb",
+      "VFS_READ cache/public/simulation/templates/template_player.xml.378b26de2d8d87ea.xmb",
+      "VFS_READ cache/public/maps/scenarios/pathfinding_terrain_demo.xml.9f487f3dd86e2a53.xmb",
+      "VFS_READ cache/public/simulation/templates/units/athen/ship_scout.xml.71954f68a506e7df.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_ship_warship_scout.xml.d8efae5ca05f899e.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_ship_warship.xml.171344c68ac9b1be.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_ship.xml.21ef5be3a59a3344.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit.xml.434217902c333228.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/civ/athen.xml.3dc5c92e789daf01.xmb",
+      "VFS_READ cache/public/simulation/templates/units/athen/ship_merchant.xml.df297c05d4ba9d95.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_ship_merchant.xml.9a0b938fcb70c336.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_ship.xml.21ef5be3a59a3344.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit.xml.434217902c333228.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/civ/athen.xml.3dc5c92e789daf01.xmb",
+      "VFS_READ cache/public/simulation/templates/units/athen/infantry_spearman_b.xml.7d079c23d395de88.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_infantry_melee_spearman.xml.c523f139395fc3e5.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_infantry_melee.xml.fc5d1feb7262a7d4.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_infantry.xml.d0a006272362f8df.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit.xml.434217902c333228.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/builder.xml.48ca1365a049630e.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/hoplite.xml.b5dce6bda1a13c3d.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/civ/athen.xml.3dc5c92e789daf01.xmb",
+      "VFS_READ cache/public/simulation/templates/units/athen/siege_lithobolos_packed.xml.01f81eab538caef7.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_siege_stonethrower.xml.8007879e0e02f38b.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_siege.xml.158447519c42de5a.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit.xml.434217902c333228.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/civ/athen.xml.3dc5c92e789daf01.xmb",
+      "VFS_READ cache/public/simulation/templates/units/athen/cavalry_swordsman_b.xml.b1d69903a89e5e0f.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_cavalry_melee_swordsman.xml.476f2c861f75680e.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_cavalry_melee.xml.7feb13b12535e6e0.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_cavalry.xml.b111456156041593.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit.xml.434217902c333228.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/civ/athen.xml.3dc5c92e789daf01.xmb",
+      "VFS_READ cache/public/simulation/templates/structures/athen/barracks.xml.1329d5ac0d226e23.xmb",
+      "VFS_READ cache/public/simulation/templates/template_structure_military_barracks.xml.c2f90b167ee9159b.xmb",
+      "VFS_READ cache/public/simulation/templates/template_structure_military.xml.ef16acdabc86445b.xmb",
+      "VFS_READ cache/public/simulation/templates/template_structure.xml.d4545261c72a3d4e.xmb",
+      "VFS_READ cache/public/simulation/templates/units/athen/infantry_javelineer_b.xml.8c96e71418b9b452.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_infantry_ranged_javelineer.xml.9e74728b82b83196.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_infantry_ranged.xml.e60f0bafa433759b.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_infantry.xml.d0a006272362f8df.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit.xml.434217902c333228.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/builder.xml.48ca1365a049630e.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/merc_inf.xml.8334d891713a89f3.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/mercenary.xml.182500ee78505d12.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/civ/athen.xml.3dc5c92e789daf01.xmb",
+      "VFS_READ cache/public/simulation/templates/units/athen/infantry_slinger_b.xml.e60f0bafa433759b.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_infantry_ranged_slinger.xml.fbd5a567ae6c8928.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_infantry_ranged.xml.e60f0bafa433759b.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_infantry.xml.d0a006272362f8df.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit.xml.434217902c333228.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/builder.xml.48ca1365a049630e.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/civ/athen.xml.3dc5c92e789daf01.xmb",
+      "VFS_READ cache/public/simulation/templates/units/athen/infantry_archer_b.xml.56e82a9d5a9ed0b5.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_infantry_ranged_archer.xml.9e74728b82b83196.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_infantry_ranged.xml.e60f0bafa433759b.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_infantry.xml.d0a006272362f8df.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit.xml.434217902c333228.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/builder.xml.48ca1365a049630e.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/merc_inf.xml.8334d891713a89f3.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/mercenary.xml.182500ee78505d12.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/civ/athen.xml.3dc5c92e789daf01.xmb",
+      "VFS_READ cache/public/simulation/templates/structures/athen/dock.xml.02e6c83600a0baf5.xmb",
+      "VFS_READ cache/public/simulation/templates/template_structure_military_dock.xml.5dd9c6f665d2bf1c.xmb",
+      "VFS_READ cache/public/simulation/templates/template_structure_military.xml.ef16acdabc86445b.xmb",
+      "VFS_READ cache/public/simulation/templates/template_structure.xml.d4545261c72a3d4e.xmb",
+      "VFS_READ cache/public/simulation/templates/units/athen/ship_fishing.xml.df297c05d4ba9d95.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_ship_fishing.xml.6c205b59f468d1a0.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_ship.xml.21ef5be3a59a3344.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit.xml.434217902c333228.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/civ/athen.xml.3dc5c92e789daf01.xmb",
+      "VFS_READ cache/public/simulation/templates/units/athen/ship_arrow.xml.e4b30e05d19c7e8c.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_ship_warship_arrow.xml.21d87b4d4e0cdd25.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_ship_warship.xml.171344c68ac9b1be.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_ship.xml.21ef5be3a59a3344.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit.xml.434217902c333228.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/civ/athen.xml.3dc5c92e789daf01.xmb",
+      "VFS_READ cache/public/simulation/templates/units/athen/ship_ram.xml.e4b30e05d19c7e8c.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_ship_warship_ram.xml.7153e728e79c71ae.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_ship_warship.xml.171344c68ac9b1be.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_ship.xml.21ef5be3a59a3344.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit.xml.434217902c333228.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/civ/athen.xml.3dc5c92e789daf01.xmb",
+      "VFS_READ cache/public/simulation/templates/units/athen/champion_marine_dock.xml.711541fae94653cb.xmb",
+      "VFS_READ cache/public/simulation/templates/units/athen/champion_marine.xml.174a73df7cc2b996.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_champion_infantry_swordsman.xml.d063008876559046.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_champion_infantry.xml.f29dcb15cae7a53f.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_champion.xml.5551a29978336b7e.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit.xml.434217902c333228.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/spec_champ.xml.2db112711b08a23e.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/civ/athen.xml.3dc5c92e789daf01.xmb",
+      "VFS_READ cache/public/simulation/templates/units/athen/infantry_archer_b_dock.xml.8458988c0384032e.xmb",
+      "VFS_READ cache/public/simulation/templates/units/athen/infantry_archer_b.xml.56e82a9d5a9ed0b5.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_infantry_ranged_archer.xml.9e74728b82b83196.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_infantry_ranged.xml.e60f0bafa433759b.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_infantry.xml.d0a006272362f8df.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit.xml.434217902c333228.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/builder.xml.48ca1365a049630e.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/merc_inf.xml.8334d891713a89f3.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/mercenary.xml.182500ee78505d12.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/civ/athen.xml.3dc5c92e789daf01.xmb",
+      "Hotloading new value for global \"InitAttributes\".",
+      "SCENE_LOADER_FINISHED",
+      "VFS_READ cache/public/simulation/templates/units/athen/infantry_javelineer_a.xml.e0dd2b49baac9f5f.xmb",
+      "VFS_READ cache/public/simulation/templates/units/athen/infantry_javelineer_b.xml.8c96e71418b9b452.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_infantry_ranged_javelineer.xml.9e74728b82b83196.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_infantry_ranged.xml.e60f0bafa433759b.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_infantry.xml.d0a006272362f8df.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit.xml.434217902c333228.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/builder.xml.48ca1365a049630e.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/merc_inf.xml.8334d891713a89f3.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/mercenary.xml.182500ee78505d12.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/civ/athen.xml.3dc5c92e789daf01.xmb",
+      "VFS_READ cache/public/simulation/templates/units/athen/infantry_archer_a.xml.aa67f08372dd14f8.xmb",
+      "VFS_READ cache/public/simulation/templates/units/athen/infantry_archer_b.xml.56e82a9d5a9ed0b5.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_infantry_ranged_archer.xml.9e74728b82b83196.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_infantry_ranged.xml.e60f0bafa433759b.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_infantry.xml.d0a006272362f8df.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit.xml.434217902c333228.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/builder.xml.48ca1365a049630e.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/merc_inf.xml.8334d891713a89f3.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/mercenary.xml.182500ee78505d12.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/civ/athen.xml.3dc5c92e789daf01.xmb",
+      "VFS_READ cache/public/simulation/templates/units/athen/infantry_archer_a_dock.xml.a76ba41b2ce5b09e.xmb",
+      "VFS_READ cache/public/simulation/templates/units/athen/infantry_archer_b_dock.xml.8458988c0384032e.xmb",
+      "VFS_READ cache/public/simulation/templates/units/athen/infantry_archer_b.xml.56e82a9d5a9ed0b5.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_infantry_ranged_archer.xml.9e74728b82b83196.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_infantry_ranged.xml.e60f0bafa433759b.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit_infantry.xml.d0a006272362f8df.xmb",
+      "VFS_READ cache/public/simulation/templates/template_unit.xml.434217902c333228.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/builder.xml.48ca1365a049630e.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/merc_inf.xml.8334d891713a89f3.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/mercenary.xml.182500ee78505d12.xmb",
+      "VFS_READ cache/public/simulation/templates/mixins/civ/athen.xml.3dc5c92e789daf01.xmb",
+      "SCENE_GAME_INITIALIZED",
+      "VFS_READ simulation/data/pathfinder.rng",
+      "VFS_READ cache/mod/simulation/data/pathfinder.xml.bc9f60cc3185e32f.xmb",
+      "VFS_READ cache/mod/shaders/effects/minimap.xml.ac12dfb130b9d55f.xmb",
+      "SCENE_MAP_LOADED 3",
+      "SCENE_STATS {\"frame\":330,\"tick\":0,\"restarts\":3,\"paused\":true,\"selected\":0,\"x\":155.36400,\"z\":243.10500,\"screenX\":385.011,\"screenY\":136.198,\"terrainTriangles\":3072,\"modelTriangles\":6998,\"drawCalls\":9,\"width\":640,\"height\":480}",
+      "SCENE_STOPPED"
+    ]
+  },
+  "heartbeat": 1513,
+  "remainingWorkerTargets": [],
+  "workersClosedBeforeBrowserExit": 12,
+  "passed": true
+}

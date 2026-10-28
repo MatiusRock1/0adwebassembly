@@ -1,0 +1,22 @@
+{
+  "swapChain": "0x21A1A6B4630",
+  "processId": 36920,
+  "otherChains": {},
+  "presents": 54000,
+  "displayedPresents": 54000,
+  "notDisplayed": 0,
+  "displayIntervals": 54000,
+  "displayedFps": 59.99999791333341,
+  "medianFrameMs": 13.89875,
+  "p95FrameMs": 27.7906,
+  "p99FrameMs": 27.8131,
+  "onePercentLowFps": 35.775228532159865,
+  "pausesOver100Ms": 0,
+  "measurementComplete": true,
+  "actualSurfaceVerified": true,
+  "presentmonEventsLost": 0,
+  "validFullscreen1080pRun": true,
+  "presentationGate30": true,
+  "attribution": "Dedicated fullscreen window swap chain; native simulation frame IDs are not exposed by PresentMon",
+  "acceptance": "Individual 30 FPS gate; closure requires three complete 900-second repetitions and functional checks"
+}

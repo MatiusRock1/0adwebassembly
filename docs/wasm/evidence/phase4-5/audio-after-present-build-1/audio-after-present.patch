@@ -1,0 +1,29 @@
+--- a/main.cpp
++++ b/main.cpp
+@@ -460,7 +460,6 @@
+ 
+ 	g_Renderer.RenderFrame(true);
+ 	WasmApplication::replayFlushes.Drain(); // fallback when rendering is skipped
+-	WasmApplication::RunDeferredAudioIdle(); // fallback when rendering is skipped
+ 	static unsigned browserFrame = 0;
+ 	MAIN_THREAD_ASYNC_EM_ASM({
+ 		const publish = () => {
+@@ -478,6 +477,8 @@
+ 		g_Game && g_Game->IsGameStarted(), g_VideoMode.GetWindowWidth(), g_VideoMode.GetWindowHeight(),
+ 		g_Game && g_Game->m_Paused, phase4UpdateMilliseconds, realTimeSinceLastFrame * 1000);
+ 
++	WasmApplication::RunDeferredAudioIdle(); // fallback when rendering is skipped
++
+ 	g_Profiler.Frame();
+ 
+ 	LimitFPS();
+--- a/renderer/backend/webgpu/Device.cpp
++++ b/renderer/backend/webgpu/Device.cpp
+@@ -323,7 +323,6 @@
+     void Flush() override
+     {
+         WasmApplication::replayFlushes.Drain();
+-        WasmApplication::RunDeferredAudioIdle();
+         FlushCommands();
+         transient.clear();
+     }

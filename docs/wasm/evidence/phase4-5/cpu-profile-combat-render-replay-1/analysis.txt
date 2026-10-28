@@ -1,0 +1,90 @@
+cpu-1.cpuprofile [
+  {
+    "function": "(root)",
+    "seconds": 32.445552
+  },
+  {
+    "function": "_main_thread",
+    "seconds": 32.378251
+  },
+  {
+    "function": "main",
+    "seconds": 32.378251
+  },
+  {
+    "function": "CRenderer::RenderFrame(bool)",
+    "seconds": 17.50029
+  },
+  {
+    "function": "CRenderer::RenderFrameImpl(Renderer::Backend::ISwapChain&, bool, bool)",
+    "seconds": 16.827917
+  },
+  {
+    "function": "CComponentManager::BroadcastMessage(CMessage const&)",
+    "seconds": 12.478027
+  },
+  {
+    "function": "CGame::Update(double, bool)",
+    "seconds": 10.424662
+  },
+  {
+    "function": "JS_CallFunctionValue(JSContext*, JS::Handle<JSObject*>, JS::Handle<JS::Value>, JS::HandleValueArray const&, JS::MutableHandle<JS::Value>)",
+    "seconds": 8.881223
+  },
+  {
+    "function": "js::Call(JSContext*, JS::Handle<JS::Value>, JS::Handle<JS::Value>, js::AnyInvokeArgs const&, JS::MutableHandle<JS::Value>, js::CallReason)",
+    "seconds": 8.857005
+  },
+  {
+    "function": "js::InternalCallOrConstruct(JSContext*, JS::CallArgs const&, js::MaybeConstruct, js::CallReason)",
+    "seconds": 8.852811
+  },
+  {
+    "function": "js::RunScript(JSContext*, js::RunState&)",
+    "seconds": 8.815968
+  },
+  {
+    "function": "CTurnManager::Update(float, unsigned long, std::__2::function<void (std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>> const&, std::__2::optional<JS::HandleValueArray>)> const&)",
+    "seconds": 7.930912
+  },
+  {
+    "function": "CSimulation2Impl::Update(int, std::__2::vector<SimulationCommand, std::__2::allocator<SimulationCommand>> const&)",
+    "seconds": 7.921623
+  },
+  {
+    "function": "CSimulation2Impl::UpdateComponents(CSimContext&, CFixed<int, 2147483647, 32, 15, 16, 65536>, std::__2::vector<SimulationCommand, std::__2::allocator<SimulationCommand>> const&)",
+    "seconds": 7.920023
+  },
+  {
+    "function": "js::jit::MaybeEnterJit(JSContext*, js::RunState&)",
+    "seconds": 7.687151
+  },
+  {
+    "function": "js::pbl::PortableBaselineInterpret(JSContext*, js::pbl::State&, js::pbl::Stack&, js::pbl::StackVal*, JSObject*, JS::Value*)",
+    "seconds": 7.538945
+  },
+  {
+    "function": "CCmpUnitRenderer::HandleMessage(CMessage const&, bool)",
+    "seconds": 7.256763
+  },
+  {
+    "function": "CSceneRenderer::EnumerateSceneObjects(Scene&)",
+    "seconds": 6.394724
+  },
+  {
+    "function": "CSceneRenderer::PrepareSubmissions(Renderer::Backend::IDeviceCommandContext*)",
+    "seconds": 5.945036
+  },
+  {
+    "function": "ModelRenderer::Render(Renderer::Backend::IDeviceCommandContext*, ModelVertexRenderer&, RenderModifier&, CShaderDefines const&, int, int, ERenderMode, std::__2::span<CModel*, 4294967295ul>)",
+    "seconds": 5.73602
+  },
+  {
+    "function": "CGameView::EnumerateObjects(CFrustum const&, SceneCollector*)",
+    "seconds": 5.650044
+  },
+  {
+    "function": "CSimulation2::RenderSubmit(SceneCollector&, CFrustum const&, bool)",
+    "seconds": 5.603149
+  }
+]

@@ -1,0 +1,19 @@
+{
+  "swapChain": "0x1F6BAA98700",
+  "processId": 31292,
+  "otherChains": {},
+  "presents": 1777,
+  "displayedPresents": 1777,
+  "notDisplayed": 0,
+  "displayIntervals": 1777,
+  "displayedFps": 59.21692294225783,
+  "medianFrameMs": 16.6941,
+  "p95FrameMs": 18.4413,
+  "p99FrameMs": 19.537,
+  "onePercentLowFps": 22.37909136413243,
+  "pausesOver100Ms": 3,
+  "measurementComplete": true,
+  "validFullscreen1080pRun": true,
+  "attribution": "Dedicated fullscreen window swap chain; native simulation frame IDs are not exposed by PresentMon",
+  "acceptance": "PENDING native comparison and three repetitions"
+}

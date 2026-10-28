@@ -1,0 +1,120 @@
+{
+  "passed": false,
+  "surfaces": [
+    {
+      "canvas": [
+        800,
+        600
+      ],
+      "drawingBuffer": [
+        800,
+        600
+      ],
+      "proxiedDepthAttachment": [
+        800,
+        600
+      ],
+      "viewport": [
+        0,
+        0,
+        800,
+        600
+      ],
+      "fullscreen": false,
+      "innerSize": [
+        1028,
+        706
+      ],
+      "dpr": 1.25
+    },
+    {
+      "canvas": [
+        1920,
+        1080
+      ],
+      "drawingBuffer": [
+        1920,
+        1080
+      ],
+      "proxiedDepthAttachment": [
+        1920,
+        1080
+      ],
+      "viewport": [
+        0,
+        0,
+        1920,
+        1080
+      ],
+      "fullscreen": false,
+      "innerSize": [
+        1028,
+        706
+      ],
+      "dpr": 1.25
+    },
+    {
+      "canvas": [
+        640,
+        480
+      ],
+      "drawingBuffer": [
+        640,
+        480
+      ],
+      "proxiedDepthAttachment": [
+        640,
+        480
+      ],
+      "viewport": [
+        0,
+        0,
+        640,
+        480
+      ],
+      "fullscreen": false,
+      "innerSize": [
+        1028,
+        706
+      ],
+      "dpr": 1.25
+    },
+    {
+      "canvas": [
+        1285,
+        883
+      ],
+      "drawingBuffer": [
+        1285,
+        883
+      ],
+      "proxiedDepthAttachment": [
+        1285,
+        883
+      ],
+      "viewport": [
+        0,
+        0,
+        1285,
+        883
+      ],
+      "fullscreen": true,
+      "innerSize": [
+        1028,
+        706
+      ],
+      "dpr": 1.25
+    }
+  ],
+  "window": {
+    "windowId": 374615260,
+    "bounds": {
+      "left": 10,
+      "top": 10,
+      "width": 1051,
+      "height": 797,
+      "windowState": "normal"
+    }
+  },
+  "failure": ""
+}

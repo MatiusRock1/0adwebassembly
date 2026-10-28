@@ -1,0 +1,9 @@
+{
+  "gamePin": "40b8794eecb9618da69e10bacffa8814c561aa51",
+  "baseImage": "0ad-wasm-phase4:dependencies",
+  "baseImageId": "sha256:652e518d94d2b52e9396dba77347535ee822a4d960a55d2b8d51b6ea5d06f133",
+  "emscripten": "4.0.10",
+  "emdawnTag": "v20250531.224602",
+  "emdawnArchiveSHA512": "e3db5b2a4cc97cbb9b8a0c1f6fe7a740bf644322dfa4641a7b0902c192c58205d76acb9b359a0d6da1fdc9795e85eb1cf1927aa47f2a82814ee29868fef6670e",
+  "emdawnSDKPortSHA256": "18f832a609a1c06d92f348365c8a80dff5e85d896f68c234d1d3725724096dfa"
+}

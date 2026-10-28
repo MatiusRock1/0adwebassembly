@@ -1,0 +1,269 @@
+{
+  "diagnosticOnly": true,
+  "phase45Accepted": false,
+  "scope": "Original CGame::Update boundary correlated with completed engine-frame intervals; remaining interval also contains rendering, pacing and harness work and is not an exclusive GPU timer",
+  "reports": [
+    {
+      "file": "performance-binary-diagnostic-1.json",
+      "SHA256": "07e06a468d4f54aa1a5b4d09884936c72f4770baeffc2bfafc993fb398474c2a",
+      "frameIntervals": 1072,
+      "over100Ms": 58,
+      "maximumOriginalUpdateMs": 808.9551359999803,
+      "medianOriginalUpdateUnder100Ms": 1.5001600000061899,
+      "medianOriginalUpdateOver100Ms": 82.40000000000691,
+      "worstFrames": [
+        {
+          "frame": 3326,
+          "receivedMs": 175508.7800000012,
+          "intervalMs": 860.6599999964237,
+          "originalUpdateMs": 808.9551359999803
+        },
+        {
+          "frame": 3111,
+          "receivedMs": 164059.4549999833,
+          "intervalMs": 830.5300000011921,
+          "originalUpdateMs": 779.6101120000003
+        },
+        {
+          "frame": 2328,
+          "receivedMs": 121143.59000000358,
+          "intervalMs": 757.8550000190735,
+          "originalUpdateMs": 698.7251199999918
+        },
+        {
+          "frame": 2269,
+          "receivedMs": 117318.91499999166,
+          "intervalMs": 737.4849999845028,
+          "originalUpdateMs": 686.1998079999978
+        },
+        {
+          "frame": 2878,
+          "receivedMs": 150988.87999999523,
+          "intervalMs": 736.7249999940395,
+          "originalUpdateMs": 676.2301440000158
+        },
+        {
+          "frame": 2999,
+          "receivedMs": 157742.01999998093,
+          "intervalMs": 729.8599999845028,
+          "originalUpdateMs": 680.1098239999988
+        },
+        {
+          "frame": 2347,
+          "receivedMs": 122747.75999999046,
+          "intervalMs": 717.9099999964237,
+          "originalUpdateMs": 668.3399680000122
+        },
+        {
+          "frame": 2435,
+          "receivedMs": 127761.02500000596,
+          "intervalMs": 715.630000025034,
+          "originalUpdateMs": 667.244800000006
+        },
+        {
+          "frame": 2823,
+          "receivedMs": 146877.0149999857,
+          "intervalMs": 700.1949999928474,
+          "originalUpdateMs": 652.1500160000073
+        },
+        {
+          "frame": 2894,
+          "receivedMs": 152058.3449999988,
+          "intervalMs": 228.22499999403954,
+          "originalUpdateMs": 169.46995200001425
+        },
+        {
+          "frame": 2324,
+          "receivedMs": 120250.87999999523,
+          "intervalMs": 213.61500000953674,
+          "originalUpdateMs": 161.41516800000488
+        },
+        {
+          "frame": 3278,
+          "receivedMs": 172215.15999999642,
+          "intervalMs": 205.34000000357628,
+          "originalUpdateMs": 156.53990399999884
+        },
+        {
+          "frame": 2766,
+          "receivedMs": 143592.34999999404,
+          "intervalMs": 200.77000001072884,
+          "originalUpdateMs": 154.87999999999147
+        },
+        {
+          "frame": 2462,
+          "receivedMs": 129117.34999999404,
+          "intervalMs": 199.97499999403954,
+          "originalUpdateMs": 154.04979199999502
+        },
+        {
+          "frame": 2619,
+          "receivedMs": 136511.31499999762,
+          "intervalMs": 194.74500000476837,
+          "originalUpdateMs": 149.91001600000686
+        },
+        {
+          "frame": 2826,
+          "receivedMs": 147333.28999999166,
+          "intervalMs": 187.13499999046326,
+          "originalUpdateMs": 37.66502400000604
+        },
+        {
+          "frame": 3029,
+          "receivedMs": 159309.92499998212,
+          "intervalMs": 182.7349999845028,
+          "originalUpdateMs": 133.62022399999773
+        },
+        {
+          "frame": 2265,
+          "receivedMs": 116434.00999999046,
+          "intervalMs": 171.12000000476837,
+          "originalUpdateMs": 26.790144000003124
+        },
+        {
+          "frame": 2846,
+          "receivedMs": 148508.01999998093,
+          "intervalMs": 162.2199999988079,
+          "originalUpdateMs": 48.320256000010886
+        },
+        {
+          "frame": 3318,
+          "receivedMs": 174327.9199999869,
+          "intervalMs": 153.0799999833107,
+          "originalUpdateMs": 36.825088000000505
+        }
+      ]
+    },
+    {
+      "file": "performance-state-cache-diagnostic-1.json",
+      "SHA256": "f5ce755e6a18817318688f6b81cfccd94cd15947747ee132a6147068695e061f",
+      "frameIntervals": 1362,
+      "over100Ms": 48,
+      "maximumOriginalUpdateMs": 751.1449600000049,
+      "medianOriginalUpdateUnder100Ms": 1.4750720000051842,
+      "medianOriginalUpdateOver100Ms": 86.86502400000506,
+      "worstFrames": [
+        {
+          "frame": 3170,
+          "receivedMs": 146665.0149999857,
+          "intervalMs": 827.2649999856949,
+          "originalUpdateMs": 677.0350079999901
+        },
+        {
+          "frame": 3368,
+          "receivedMs": 155651.67500001192,
+          "intervalMs": 794.1500000059605,
+          "originalUpdateMs": 751.1449600000049
+        },
+        {
+          "frame": 2636,
+          "receivedMs": 123811.24500000477,
+          "intervalMs": 750.2899999916553,
+          "originalUpdateMs": 703.0750720000043
+        },
+        {
+          "frame": 3636,
+          "receivedMs": 166992.5449999869,
+          "intervalMs": 741.375,
+          "originalUpdateMs": 697.6898560000109
+        },
+        {
+          "frame": 2695,
+          "receivedMs": 126703.18500000238,
+          "intervalMs": 735.0699999928474,
+          "originalUpdateMs": 691.4900480000057
+        },
+        {
+          "frame": 2587,
+          "receivedMs": 121196.25499999523,
+          "intervalMs": 714.7899999916553,
+          "originalUpdateMs": 672.4799999999931
+        },
+        {
+          "frame": 3281,
+          "receivedMs": 151440.7649999857,
+          "intervalMs": 202.09999999403954,
+          "originalUpdateMs": 159.7900799999934
+        },
+        {
+          "frame": 2938,
+          "receivedMs": 136445.86500000954,
+          "intervalMs": 200.55000001192093,
+          "originalUpdateMs": 156.80000000000405
+        },
+        {
+          "frame": 3118,
+          "receivedMs": 143655.74500000477,
+          "intervalMs": 196.8900000154972,
+          "originalUpdateMs": 154.87001599998962
+        },
+        {
+          "frame": 3536,
+          "receivedMs": 162298.50499999523,
+          "intervalMs": 193.89500001072884,
+          "originalUpdateMs": 153.24518400001352
+        },
+        {
+          "frame": 2577,
+          "receivedMs": 120141.375,
+          "intervalMs": 193.50999999046326,
+          "originalUpdateMs": 154.35494399999072
+        },
+        {
+          "frame": 2756,
+          "receivedMs": 129219.56999999285,
+          "intervalMs": 192.60499998927116,
+          "originalUpdateMs": 153.19014400000697
+        },
+        {
+          "frame": 3796,
+          "receivedMs": 173687.2050000131,
+          "intervalMs": 188.05500000715256,
+          "originalUpdateMs": 1.8099199999994653
+        },
+        {
+          "frame": 2466,
+          "receivedMs": 115235.80000001192,
+          "intervalMs": 180.1050000190735,
+          "originalUpdateMs": 28.15001599999789
+        },
+        {
+          "frame": 3542,
+          "receivedMs": 162637.61500000954,
+          "intervalMs": 173.26000002026558,
+          "originalUpdateMs": 132.39500800000314
+        },
+        {
+          "frame": 3168,
+          "receivedMs": 145702.97999998927,
+          "intervalMs": 170.92999997735023,
+          "originalUpdateMs": 29.71980799998164
+        },
+        {
+          "frame": 3555,
+          "receivedMs": 163217.40000000596,
+          "intervalMs": 150.0,
+          "originalUpdateMs": 109.07007999998086
+        },
+        {
+          "frame": 3692,
+          "receivedMs": 169325.44999998808,
+          "intervalMs": 148.61999997496605,
+          "originalUpdateMs": 107.20000000000596
+        },
+        {
+          "frame": 3600,
+          "receivedMs": 164998.33500000834,
+          "intervalMs": 141.98500001430511,
+          "originalUpdateMs": 97.84499199997754
+        },
+        {
+          "frame": 3818,
+          "receivedMs": 174619.7349999845,
+          "intervalMs": 139.7049999833107,
+          "originalUpdateMs": 98.9450240000167
+        }
+      ]
+    }
+  ]
+}

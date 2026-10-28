@@ -1,0 +1,1 @@
+BLOCKED_BUILD: not a successful SpiderMonkey WASM build

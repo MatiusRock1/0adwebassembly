@@ -1,0 +1,949 @@
+{
+  "browser": "chromium",
+  "console": [
+    {
+      "type": "warning",
+      "text": "w:2,t:0x00580030: Heap resize call from 16777216 to 20185088 took 0.06005859375 msecs. Success: true"
+    },
+    {
+      "type": "warning",
+      "text": "w:2,t:0x00580030: Heap resize call from 20185088 to 24248320 took 0.045166015625 msecs. Success: true"
+    },
+    {
+      "type": "warning",
+      "text": "w:2,t:0x00580030: Heap resize call from 24248320 to 29097984 took 0.044921875 msecs. Success: true"
+    },
+    {
+      "type": "warning",
+      "text": "w:2,t:0x00580030: Heap resize call from 29097984 to 34930688 took 0.054931640625 msecs. Success: true"
+    },
+    {
+      "type": "warning",
+      "text": "w:2,t:0x00580030: Heap resize call from 16777216 to 20185088 took 0.06494140625 msecs. Success: true"
+    },
+    {
+      "type": "warning",
+      "text": "w:2,t:0x00580030: Heap resize call from 20185088 to 24248320 took 0.06005859375 msecs. Success: true"
+    },
+    {
+      "type": "warning",
+      "text": "w:2,t:0x00580030: Heap resize call from 24248320 to 29097984 took 0.0751953125 msecs. Success: true"
+    },
+    {
+      "type": "warning",
+      "text": "w:2,t:0x00580030: Heap resize call from 29097984 to 34930688 took 0.0400390625 msecs. Success: true"
+    },
+    {
+      "type": "warning",
+      "text": "w:2,t:0x00580030: Heap resize call from 16777216 to 20185088 took 0.070068359375 msecs. Success: true"
+    },
+    {
+      "type": "warning",
+      "text": "w:2,t:0x00580030: Heap resize call from 20185088 to 24248320 took 0.06494140625 msecs. Success: true"
+    },
+    {
+      "type": "warning",
+      "text": "w:2,t:0x00580030: Heap resize call from 24248320 to 29097984 took 0.070068359375 msecs. Success: true"
+    },
+    {
+      "type": "warning",
+      "text": "w:2,t:0x00580030: Heap resize call from 29097984 to 34930688 took 0.03515625 msecs. Success: true"
+    },
+    {
+      "type": "warning",
+      "text": "w:2,t:0x00580030: Heap resize call from 16777216 to 20185088 took 0.054931640625 msecs. Success: true"
+    },
+    {
+      "type": "warning",
+      "text": "w:2,t:0x00580030: Heap resize call from 20185088 to 24248320 took 0.030029296875 msecs. Success: true"
+    },
+    {
+      "type": "warning",
+      "text": "w:2,t:0x00580030: Heap resize call from 24248320 to 29097984 took 0.0400390625 msecs. Success: true"
+    },
+    {
+      "type": "warning",
+      "text": "w:2,t:0x00580030: Heap resize call from 29097984 to 34930688 took 0.02490234375 msecs. Success: true"
+    },
+    {
+      "type": "warning",
+      "text": "w:2,t:0x00580030: Heap resize call from 16777216 to 20185088 took 0.06494140625 msecs. Success: true"
+    },
+    {
+      "type": "warning",
+      "text": "w:2,t:0x00580030: Heap resize call from 20185088 to 24248320 took 0.06494140625 msecs. Success: true"
+    },
+    {
+      "type": "warning",
+      "text": "w:2,t:0x00580030: Heap resize call from 24248320 to 29097984 took 0.0498046875 msecs. Success: true"
+    },
+    {
+      "type": "warning",
+      "text": "w:2,t:0x00580030: Heap resize call from 29097984 to 34930688 took 0.034912109375 msecs. Success: true"
+    },
+    {
+      "type": "warning",
+      "text": "w:2,t:0x00580030: Heap resize call from 16777216 to 20185088 took 0.110107421875 msecs. Success: true"
+    },
+    {
+      "type": "warning",
+      "text": "w:2,t:0x00580030: Heap resize call from 20185088 to 24248320 took 0.06005859375 msecs. Success: true"
+    },
+    {
+      "type": "warning",
+      "text": "w:2,t:0x00580030: Heap resize call from 24248320 to 29097984 took 0.080078125 msecs. Success: true"
+    },
+    {
+      "type": "warning",
+      "text": "w:2,t:0x00580030: Heap resize call from 29097984 to 34930688 took 0.0400390625 msecs. Success: true"
+    },
+    {
+      "type": "warning",
+      "text": "w:2,t:0x00580030: Heap resize call from 16777216 to 20185088 took 0.070068359375 msecs. Success: true"
+    },
+    {
+      "type": "warning",
+      "text": "w:2,t:0x00580030: Heap resize call from 20185088 to 24248320 took 0.0400390625 msecs. Success: true"
+    },
+    {
+      "type": "warning",
+      "text": "w:2,t:0x00580030: Heap resize call from 24248320 to 29097984 took 0.074951171875 msecs. Success: true"
+    },
+    {
+      "type": "warning",
+      "text": "w:2,t:0x00580030: Heap resize call from 29097984 to 34930688 took 0.044921875 msecs. Success: true"
+    },
+    {
+      "type": "warning",
+      "text": "w:2,t:0x00580030: Heap resize call from 16777216 to 20185088 took 0.074951171875 msecs. Success: true"
+    },
+    {
+      "type": "warning",
+      "text": "w:2,t:0x00580030: Heap resize call from 20185088 to 24248320 took 0.050048828125 msecs. Success: true"
+    },
+    {
+      "type": "warning",
+      "text": "w:2,t:0x00580030: Heap resize call from 24248320 to 29097984 took 0.094970703125 msecs. Success: true"
+    },
+    {
+      "type": "warning",
+      "text": "w:2,t:0x00580030: Heap resize call from 29097984 to 34930688 took 0.03515625 msecs. Success: true"
+    },
+    {
+      "type": "warning",
+      "text": "w:2,t:0x00580030: Heap resize call from 16777216 to 20185088 took 0.110107421875 msecs. Success: true"
+    },
+    {
+      "type": "warning",
+      "text": "w:2,t:0x00580030: Heap resize call from 20185088 to 24248320 took 0.044921875 msecs. Success: true"
+    },
+    {
+      "type": "warning",
+      "text": "w:2,t:0x00580030: Heap resize call from 24248320 to 29097984 took 0.074951171875 msecs. Success: true"
+    },
+    {
+      "type": "warning",
+      "text": "w:2,t:0x00580030: Heap resize call from 29097984 to 34930688 took 0.0400390625 msecs. Success: true"
+    },
+    {
+      "type": "warning",
+      "text": "w:2,t:0x00580030: Heap resize call from 16777216 to 20185088 took 0.06494140625 msecs. Success: true"
+    },
+    {
+      "type": "warning",
+      "text": "w:2,t:0x00580030: Heap resize call from 20185088 to 24248320 took 0.039794921875 msecs. Success: true"
+    },
+    {
+      "type": "warning",
+      "text": "w:2,t:0x00580030: Heap resize call from 24248320 to 29097984 took 0.18994140625 msecs. Success: true"
+    },
+    {
+      "type": "warning",
+      "text": "w:2,t:0x00580030: Heap resize call from 29097984 to 34930688 took 0.025146484375 msecs. Success: true"
+    }
+  ],
+  "errors": [],
+  "workerEvents": [
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-browser.mjs"
+    }
+  ],
+  "cycleMetrics": [
+    {
+      "heartbeat": 45,
+      "jsHeapUsedBytes": 10000000
+    },
+    {
+      "heartbeat": 67,
+      "jsHeapUsedBytes": 10000000
+    },
+    {
+      "heartbeat": 86,
+      "jsHeapUsedBytes": 10000000
+    },
+    {
+      "heartbeat": 106,
+      "jsHeapUsedBytes": 10000000
+    },
+    {
+      "heartbeat": 118,
+      "jsHeapUsedBytes": 10000000
+    },
+    {
+      "heartbeat": 140,
+      "jsHeapUsedBytes": 10000000
+    },
+    {
+      "heartbeat": 161,
+      "jsHeapUsedBytes": 10000000
+    },
+    {
+      "heartbeat": 181,
+      "jsHeapUsedBytes": 10000000
+    },
+    {
+      "heartbeat": 208,
+      "jsHeapUsedBytes": 10000000
+    },
+    {
+      "heartbeat": 222,
+      "jsHeapUsedBytes": 10000000
+    }
+  ],
+  "version": "141.0.7390.37",
+  "headers": {
+    "cache-control": "no-store",
+    "content-length": "517",
+    "content-type": "text/html",
+    "cross-origin-embedder-policy": "require-corp",
+    "cross-origin-opener-policy": "same-origin",
+    "cross-origin-resource-policy": "same-origin",
+    "date": "Sun, 11 Oct 2026 22:08:42 GMT",
+    "last-modified": "Sun, 11 Oct 2026 21:26:03 GMT",
+    "server": "SimpleHTTP/0.6 Python/3.12.3"
+  },
+  "isolated": true,
+  "remainingWorkerTargets": [],
+  "workersClosedBeforeBrowserExit": 90,
+  "heartbeat": 224,
+  "statusText": "Diez ciclos coinciden con la referencia nativa. Memoria y workers requieren inspecci?n adicional.",
+  "log": "Ciclo 1: salida 0, 489 ms\nwarning: unsupported syscall: __syscall_madvise\n\n{\"scenario\":\"component-ticks-01\",\"seed\":12345,\"ticks\":100,\"rng\":1658515168,\"promise\":9,\"entities\":[{\"id\":2,\"x\":11100},{\"id\":3,\"x\":203500}]}\n0ad-browser-wasm-memory-bytes=34930688\nCiclo 2: salida 0, 394 ms\nwarning: unsupported syscall: __syscall_madvise\n\n{\"scenario\":\"component-ticks-01\",\"seed\":12345,\"ticks\":100,\"rng\":1658515168,\"promise\":9,\"entities\":[{\"id\":2,\"x\":11100},{\"id\":3,\"x\":203500}]}\n0ad-browser-wasm-memory-bytes=34930688\nCiclo 3: salida 0, 305 ms\nwarning: unsupported syscall: __syscall_madvise\n\n{\"scenario\":\"component-ticks-01\",\"seed\":12345,\"ticks\":100,\"rng\":1658515168,\"promise\":9,\"entities\":[{\"id\":2,\"x\":11100},{\"id\":3,\"x\":203500}]}\n0ad-browser-wasm-memory-bytes=34930688\nCiclo 4: salida 0, 288 ms\nwarning: unsupported syscall: __syscall_madvise\n\n{\"scenario\":\"component-ticks-01\",\"seed\":12345,\"ticks\":100,\"rng\":1658515168,\"promise\":9,\"entities\":[{\"id\":2,\"x\":11100},{\"id\":3,\"x\":203500}]}\n0ad-browser-wasm-memory-bytes=34930688\nCiclo 5: salida 0, 214 ms\nwarning: unsupported syscall: __syscall_madvise\n\n{\"scenario\":\"component-ticks-01\",\"seed\":12345,\"ticks\":100,\"rng\":1658515168,\"promise\":9,\"entities\":[{\"id\":2,\"x\":11100},{\"id\":3,\"x\":203500}]}\n0ad-browser-wasm-memory-bytes=34930688\nCiclo 6: salida 0, 380 ms\nwarning: unsupported syscall: __syscall_madvise\n\n{\"scenario\":\"component-ticks-01\",\"seed\":12345,\"ticks\":100,\"rng\":1658515168,\"promise\":9,\"entities\":[{\"id\":2,\"x\":11100},{\"id\":3,\"x\":203500}]}\n0ad-browser-wasm-memory-bytes=34930688\nCiclo 7: salida 0, 271 ms\nwarning: unsupported syscall: __syscall_madvise\n\n{\"scenario\":\"component-ticks-01\",\"seed\":12345,\"ticks\":100,\"rng\":1658515168,\"promise\":9,\"entities\":[{\"id\":2,\"x\":11100},{\"id\":3,\"x\":203500}]}\n0ad-browser-wasm-memory-bytes=34930688\nCiclo 8: salida 0, 297 ms\nwarning: unsupported syscall: __syscall_madvise\n\n{\"scenario\":\"component-ticks-01\",\"seed\":12345,\"ticks\":100,\"rng\":1658515168,\"promise\":9,\"entities\":[{\"id\":2,\"x\":11100},{\"id\":3,\"x\":203500}]}\n0ad-browser-wasm-memory-bytes=34930688\nCiclo 9: salida 0, 367 ms\nwarning: unsupported syscall: __syscall_madvise\n\n{\"scenario\":\"component-ticks-01\",\"seed\":12345,\"ticks\":100,\"rng\":1658515168,\"promise\":9,\"entities\":[{\"id\":2,\"x\":11100},{\"id\":3,\"x\":203500}]}\n0ad-browser-wasm-memory-bytes=34930688\nCiclo 10: salida 0, 278 ms\nwarning: unsupported syscall: __syscall_madvise\n\n{\"scenario\":\"component-ticks-01\",\"seed\":12345,\"ticks\":100,\"rng\":1658515168,\"promise\":9,\"entities\":[{\"id\":2,\"x\":11100},{\"id\":3,\"x\":203500}]}\n0ad-browser-wasm-memory-bytes=34930688\n",
+  "status": "TEN_CYCLES_PARITY_PASSED"
+}

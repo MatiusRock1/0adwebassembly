@@ -1,0 +1,42 @@
+{
+  "gamePin": "40b8794eecb9618da69e10bacffa8814c561aa51",
+  "phase45Accepted": false,
+  "runs": [
+    {
+      "backend": "webgpu",
+      "workload": "skirmish",
+      "repetition": 1,
+      "warmupSeconds": 120,
+      "durationSeconds": 120,
+      "complete": false,
+      "eligibleForAcceptance": false,
+      "gate30": false,
+      "displayedFps": null,
+      "p95FrameMs": null,
+      "adapter": null,
+      "graphicsSettings": null,
+      "backlog": {
+        "nonGrowing": false,
+        "reason": "Insufficient original turn backlog samples",
+        "samples": []
+      },
+      "workerPresentation": {
+        "valid": true,
+        "required": false,
+        "scope": "No render-worker presentation"
+      },
+      "cleanShutdown": false,
+      "failure": null
+    }
+  ],
+  "webgpuPerformanceGate": false,
+  "workloadGates": {
+    "skirmish": false,
+    "combat": false
+  },
+  "consistentReportedWebGPUAdapter": false,
+  "allPlannedMeasurementsComplete": false,
+  "nativeAndWebGLIncluded": false,
+  "sameActiveGPUVerified": false,
+  "scope": "Independent presentation measurements. Active native GPU, matched graphics, functional/visual parity and stability require separate review; this summary never accepts phase 4.5."
+}

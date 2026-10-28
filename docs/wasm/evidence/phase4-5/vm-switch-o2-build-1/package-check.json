@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "package": "wasm\\dist\\application-phase4-5-switch-o2",
+  "engineObjectsMatchControl": true,
+  "engineObjects": 483,
+  "vmSHA256": "609d1d7829dcad020b29a94a4182e0efb24d42fd9d95a9db2b7fc063c1a9100d",
+  "staticFilesMatchBest": {
+    "application.html": true,
+    "application.mjs": true,
+    "application-pointer.mjs": true,
+    "application-failure.mjs": true,
+    "renderer-session.mjs": true,
+    "webgpu-engine.mjs": true,
+    "webgpu-border.mjs": true,
+    "webgpu-upload.mjs": true,
+    "webgpu-dispatch.mjs": true,
+    "webgpu-upload-probe.mjs": true,
+    "webgpu-shaders.json": true,
+    "application-data.json": true
+  },
+  "artifacts": {
+    "pyrogenesis-application.mjs": "436933b4ec2f90894713d48d61bb9a6f6ac1078080e54ee469e8498ae2d6d951",
+    "pyrogenesis-application.mjs.symbols": "4781cd65f64b149237ce685fe64e633f3580ba45c754ba74000f4a6f01ec9303",
+    "pyrogenesis-application.wasm": "74b84ff9eb4466814e32dce515eb3c279d3a33a52db18d7c0d7267cf3ce01e19"
+  },
+  "phase45Accepted": false
+}

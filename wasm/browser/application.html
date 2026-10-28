@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="es">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<!-- Directory holding public.zip and mod.zip; deployments fill it in, empty means next to this page. -->
+<meta name="archive-base" content="">
+<meta name="archive-public" content="">
+<meta name="archive-mod" content="">
+<title>0 A.D. — aplicación local</title>
+<style>
+body { margin: 0; background: #111; color: #eee; font-family: sans-serif; }
+nav { padding: 8px; display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+canvas { display: block; width: min(100vw, 1280px); aspect-ratio: 16 / 9; margin: auto; }
+canvas.render-input { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); opacity: 0; }
+canvas:fullscreen { width: 100vw; height: 100vh; }
+#game-surface:fullscreen { width: 100vw; height: 100vh; background: #111; display: flex; align-items: center; justify-content: center; }
+#game-surface:fullscreen canvas { width: min(100vw, 177.77777778vh); height: min(100vh, 56.25vw); margin: 0; flex: none; }
+.original-pointer { position: fixed; top: 0; left: 0; pointer-events: none; z-index: 1; }
+#game-surface { position: relative; }
+#loading { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; background: #111; text-align: center; padding: 16px; }
+#loading[hidden] { display: none; }
+#loading .bar { width: min(420px, 80%); height: 6px; background: #333; border-radius: 3px; overflow: hidden; }
+#loading .bar::after { content: ""; display: block; width: 30%; height: 100%; background: #c9a24a; animation: loading 1.2s ease-in-out infinite; }
+@keyframes loading { from { transform: translateX(-100%); } to { transform: translateX(340%); } }
+pre { white-space: pre-wrap; max-height: 160px; overflow: auto; margin: 8px; }
+#gpu-guide { margin: 8px; padding: 8px; border: 1px solid #c9a24a; border-radius: 4px; }
+#gpu-guide > summary { color: #c9a24a; cursor: pointer; }
+#gpu-guide details { margin: 8px 0 0 16px; }
+#gpu-guide code { overflow-wrap: anywhere; }
+</style>
+<nav><button id="start">Iniciar 0 A.D.</button><button id="fullscreen" disabled>Pantalla completa</button><button id="close" disabled>Cerrar juego</button><span id="status">Partida local con los menús originales.</span></nav>
+<nav aria-label="Preferencia de gráfica"><label for="renderer-backend">Renderer:</label><select id="renderer-backend"><option value="webgl">WebGL 2</option><option value="webgpu">WebGPU (experimental)</option></select><label for="gpu-preference">Gráfica:</label><select id="gpu-preference"><option value="high-performance">Alto rendimiento (preferencia)</option><option value="default">Automática</option></select><label for="graphics-quality">Calidad gráfica:</label><select id="graphics-quality"><option value="auto">Automática (según la GPU)</option><option value="low">Baja</option><option value="original">Original del juego</option></select><span id="gpu-info">La elección final depende del navegador y del sistema operativo.</span></nav>
+<details id="gpu-guide" hidden><summary></summary>
+<div data-guide="dedicated">
+<p>El navegador usa una sola gráfica para todas las páginas y, en Windows y Linux, la página no puede elegirla: se elige en el sistema operativo. Después de cambiarla, cierra el navegador por completo (también si sigue abierto en segundo plano), vuelve a abrirlo y recarga esta página; aquí debe aparecer tu gráfica dedicada.</p>
+<details data-os="windows"><summary>Windows 10 y 11</summary><ol>
+<li>Abre Configuración › Sistema › Pantalla › Gráficos.</li>
+<li>Busca tu navegador en la lista. Si no está, añádelo con «Examinar» (Chrome: <code>C:\Program Files\Google\Chrome\Application\chrome.exe</code>).</li>
+<li>Abre sus opciones, elige «Alto rendimiento» y guarda.</li>
+</ol>
+<p>Otra opción en Chrome o Edge, si Windows no tiene una preferencia fijada para el navegador: abre <code>chrome://flags/#force-high-performance-gpu</code> (Edge: <code>edge://flags/#force-high-performance-gpu</code>), elige «Enabled» y pulsa «Relaunch». Algunos portátiles tienen además un modo de gráfica del fabricante (modo MUX o «solo gráfica dedicada») que hace que todo use la dedicada.</p></details>
+<details data-os="macos"><summary>macOS</summary><ul>
+<li>Mac con Apple Silicon (M1, M2…): tiene una sola gráfica; no hay nada que cambiar.</li>
+<li>Mac con Intel y dos gráficas: elige «Alto rendimiento» en el selector «Gráfica» de arriba y recarga; el navegador cambia a la dedicada. Para usarla siempre, desactiva el cambio automático de gráficos en Ajustes del Sistema › Batería › Opciones.</li>
+</ul></details>
+<details data-os="linux"><summary>Linux</summary><ul>
+<li>GNOME o KDE: clic derecho en el icono del navegador y elige lanzarlo con la tarjeta gráfica dedicada.</li>
+<li>NVIDIA con el controlador propietario: <code>prime-run google-chrome</code>, o <code>__NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia __VK_LAYER_NV_optimus=NVIDIA_only google-chrome</code>.</li>
+<li>AMD o Intel dedicada (controlador Mesa): <code>DRI_PRIME=1 google-chrome</code>.</li>
+</ul></details>
+</div>
+<div data-guide="acceleration"><ol>
+<li>Abre <code>chrome://settings/system</code> (Edge: <code>edge://settings/system</code>), activa «Usar aceleración gráfica cuando esté disponible» y reinicia el navegador.</li>
+<li>Si sigue igual, abre <code>chrome://gpu</code>: si indica que la gráfica está bloqueada o desactivada, actualiza su controlador.</li>
+</ol></div>
+<p>Las direcciones <code>chrome://</code> y <code>edge://</code> se copian en la barra de direcciones; una página no puede abrirlas.</p>
+</details>
+<p style="margin:8px">Calidad automática: con una GPU integrada o dedicada de gama de entrada, texturas, sombras, agua y efectos empiezan en bajo. Lo que guardes en Opciones del juego tiene prioridad.</p>
+<p style="margin:8px">Resolución interna en pantalla completa: 1920 × 1080; se ajusta a la pantalla conservando la proporción.</p>
+<p style="margin:8px">En pantalla completa se captura el ratón para usar los cuatro bordes con varios monitores. Escape lo libera; haz clic en el juego para volver a capturarlo.</p>
+<div id="game-surface"><div id="loading" hidden><div id="loading-text"></div><div class="bar"></div></div><canvas id="canvas" width="1280" height="720" tabindex="0"></canvas></div>
+<pre id="log"></pre>
+<script type="module" src="application.mjs"></script>
+</html>

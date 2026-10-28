@@ -1,0 +1,55 @@
+{
+  "kind": "syntax-only-not-a-game-build",
+  "units": [
+    {
+      "source": "simulation2/Simulation2.cpp",
+      "exitCode": 0,
+      "log": "simulation2_Simulation2.cpp.log"
+    },
+    {
+      "source": "ps/scripting/JSInterface_VFS.cpp",
+      "exitCode": 0,
+      "log": "ps_scripting_JSInterface_VFS.cpp.log"
+    },
+    {
+      "source": "lib/file/vfs/vfs.cpp",
+      "exitCode": 0,
+      "log": "lib_file_vfs_vfs.cpp.log"
+    },
+    {
+      "source": "lib/file/io/io.cpp",
+      "exitCode": 0,
+      "log": "lib_file_io_io.cpp.log"
+    },
+    {
+      "source": "simulation2/components/CCmpPathfinder.cpp",
+      "exitCode": 0,
+      "log": "simulation2_components_CCmpPathfinder.cpp.log"
+    },
+    {
+      "source": "simulation2/components/CCmpUnitMotion_System.cpp",
+      "exitCode": 0,
+      "log": "simulation2_components_CCmpUnitMotion_System.cpp.log"
+    },
+    {
+      "source": "graphics/MapReader.cpp",
+      "exitCode": 0,
+      "log": "graphics_MapReader.cpp.log"
+    },
+    {
+      "source": "renderer/backend/gl/Device.cpp",
+      "exitCode": 0,
+      "log": "renderer_backend_gl_Device.cpp.log"
+    },
+    {
+      "source": "renderer/backend/gl/Buffer.cpp",
+      "exitCode": 0,
+      "log": "renderer_backend_gl_Buffer.cpp.log"
+    },
+    {
+      "source": "renderer/backend/gl/ShaderProgram.cpp",
+      "exitCode": 0,
+      "log": "renderer_backend_gl_ShaderProgram.cpp.log"
+    }
+  ]
+}

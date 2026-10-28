@@ -1,0 +1,5 @@
+{
+	"genericName": "Civil Service",
+	"pair": ["civil_service_01", "civil_service_02"],
+	"requirements": { "civ": "han" }
+}

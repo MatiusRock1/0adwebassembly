@@ -1,0 +1,380 @@
+{
+  "id": "pathfinding-terrain-01",
+  "baseCommit": "40b8794eecb9618da69e10bacffa8814c561aa51",
+  "map": "maps/scenarios/pathfinding_terrain_demo",
+  "seed": 12345,
+  "turnLengthMs": 200,
+  "initialTicks": 100,
+  "movementTicks": 1000,
+  "player": 1,
+  "entity": 8,
+  "command": {
+    "type": "walk",
+    "entities": [
+      8
+    ],
+    "x": 160,
+    "z": 245,
+    "queued": false
+  },
+  "checkpoints": [
+    1,
+    100,
+    101,
+    110,
+    200,
+    500,
+    1100
+  ],
+  "status": "native-reference-preparation",
+  "mapFiles": [
+    {
+      "path": "binaries/data/mods/public/maps/scenarios/pathfinding_terrain_demo.xml",
+      "bytes": 7616,
+      "sha256": "d4414d9e0b1508ce4223a2d65d235da75f147a5c4895d1b1aa2b973d356cf399"
+    },
+    {
+      "path": "binaries/data/mods/public/maps/scenarios/pathfinding_terrain_demo.pmp",
+      "bytes": 208059,
+      "sha256": "107189f13bf9ac316d26fd4ad8fe9475f3af5a3925a6491dd3c2a252d87f1253"
+    }
+  ],
+  "initialEntities": [
+    {
+      "id": 6,
+      "template": "units/athen/ship_scout",
+      "player": 1,
+      "position": {
+        "x": "198.163",
+        "z": "302.211"
+      }
+    },
+    {
+      "id": 7,
+      "template": "units/athen/ship_merchant",
+      "player": 1,
+      "position": {
+        "x": "89.6642",
+        "z": "376.786"
+      }
+    },
+    {
+      "id": 8,
+      "template": "units/athen/infantry_spearman_b",
+      "player": 1,
+      "position": {
+        "x": "155.364",
+        "z": "243.105"
+      }
+    },
+    {
+      "id": 9,
+      "template": "units/athen/infantry_spearman_b",
+      "player": 1,
+      "position": {
+        "x": "144.809",
+        "z": "466.948"
+      }
+    },
+    {
+      "id": 10,
+      "template": "units/athen/infantry_spearman_b",
+      "player": 1,
+      "position": {
+        "x": "267.654",
+        "z": "291.773"
+      }
+    },
+    {
+      "id": 11,
+      "template": "units/athen/infantry_spearman_b",
+      "player": 1,
+      "position": {
+        "x": "327.819",
+        "z": "286.36"
+      }
+    },
+    {
+      "id": 12,
+      "template": "units/athen/infantry_spearman_b",
+      "player": 1,
+      "position": {
+        "x": "335.744",
+        "z": "285.895"
+      }
+    },
+    {
+      "id": 13,
+      "template": "units/athen/siege_lithobolos_packed",
+      "player": 1,
+      "position": {
+        "x": "326.233",
+        "z": "280.563"
+      }
+    },
+    {
+      "id": 14,
+      "template": "units/athen/cavalry_swordsman_b",
+      "player": 1,
+      "position": {
+        "x": "320.352",
+        "z": "278.001"
+      }
+    },
+    {
+      "id": 15,
+      "template": "units/athen/cavalry_swordsman_b",
+      "player": 1,
+      "position": {
+        "x": "336.717",
+        "z": "277.086"
+      }
+    },
+    {
+      "id": 16,
+      "template": "units/athen/cavalry_swordsman_b",
+      "player": 1,
+      "position": {
+        "x": "267.617",
+        "z": "280.286"
+      }
+    },
+    {
+      "id": 21,
+      "template": "structures/athen/barracks",
+      "player": 1,
+      "position": {
+        "x": "282.786",
+        "z": "226.382"
+      }
+    },
+    {
+      "id": 22,
+      "template": "structures/athen/dock",
+      "player": 1,
+      "position": {
+        "x": "221.451",
+        "z": "344.716"
+      }
+    },
+    {
+      "id": 27,
+      "template": "units/athen/infantry_spearman_b",
+      "player": 1,
+      "position": {
+        "x": "340.293",
+        "z": "472.431"
+      }
+    },
+    {
+      "id": 28,
+      "template": "units/athen/infantry_spearman_b",
+      "player": 1,
+      "position": {
+        "x": "343.354",
+        "z": "472.185"
+      }
+    },
+    {
+      "id": 29,
+      "template": "units/athen/infantry_spearman_b",
+      "player": 1,
+      "position": {
+        "x": "346.246",
+        "z": "472.103"
+      }
+    },
+    {
+      "id": 30,
+      "template": "units/athen/infantry_spearman_b",
+      "player": 1,
+      "position": {
+        "x": "349.294",
+        "z": "472.103"
+      }
+    },
+    {
+      "id": 31,
+      "template": "units/athen/infantry_spearman_b",
+      "player": 1,
+      "position": {
+        "x": "352.119",
+        "z": "471.94"
+      }
+    },
+    {
+      "id": 32,
+      "template": "units/athen/infantry_spearman_b",
+      "player": 1,
+      "position": {
+        "x": "354.945",
+        "z": "471.859"
+      }
+    },
+    {
+      "id": 33,
+      "template": "units/athen/infantry_spearman_b",
+      "player": 1,
+      "position": {
+        "x": "357.893",
+        "z": "471.941"
+      }
+    },
+    {
+      "id": 34,
+      "template": "units/athen/infantry_spearman_b",
+      "player": 1,
+      "position": {
+        "x": "361.224",
+        "z": "472.104"
+      }
+    },
+    {
+      "id": 35,
+      "template": "units/athen/infantry_spearman_b",
+      "player": 1,
+      "position": {
+        "x": "361.122",
+        "z": "467.291"
+      }
+    },
+    {
+      "id": 36,
+      "template": "units/athen/infantry_spearman_b",
+      "player": 1,
+      "position": {
+        "x": "358",
+        "z": "467.372"
+      }
+    },
+    {
+      "id": 37,
+      "template": "units/athen/infantry_spearman_b",
+      "player": 1,
+      "position": {
+        "x": "355.072",
+        "z": "467.371"
+      }
+    },
+    {
+      "id": 38,
+      "template": "units/athen/infantry_spearman_b",
+      "player": 1,
+      "position": {
+        "x": "351.836",
+        "z": "467.371"
+      }
+    },
+    {
+      "id": 39,
+      "template": "units/athen/infantry_spearman_b",
+      "player": 1,
+      "position": {
+        "x": "349.166",
+        "z": "467.452"
+      }
+    },
+    {
+      "id": 40,
+      "template": "units/athen/infantry_spearman_b",
+      "player": 1,
+      "position": {
+        "x": "346.077",
+        "z": "467.614"
+      }
+    },
+    {
+      "id": 41,
+      "template": "units/athen/infantry_spearman_b",
+      "player": 1,
+      "position": {
+        "x": "343.3",
+        "z": "467.533"
+      }
+    },
+    {
+      "id": 42,
+      "template": "units/athen/infantry_spearman_b",
+      "player": 1,
+      "position": {
+        "x": "340.316",
+        "z": "467.533"
+      }
+    },
+    {
+      "id": 43,
+      "template": "units/athen/infantry_spearman_b",
+      "player": 1,
+      "position": {
+        "x": "340.276",
+        "z": "463.142"
+      }
+    },
+    {
+      "id": 44,
+      "template": "units/athen/infantry_spearman_b",
+      "player": 1,
+      "position": {
+        "x": "343.705",
+        "z": "463.069"
+      }
+    },
+    {
+      "id": 45,
+      "template": "units/athen/infantry_spearman_b",
+      "player": 1,
+      "position": {
+        "x": "346.247",
+        "z": "463.069"
+      }
+    },
+    {
+      "id": 46,
+      "template": "units/athen/infantry_spearman_b",
+      "player": 1,
+      "position": {
+        "x": "349.424",
+        "z": "463.069"
+      }
+    },
+    {
+      "id": 47,
+      "template": "units/athen/infantry_spearman_b",
+      "player": 1,
+      "position": {
+        "x": "351.718",
+        "z": "462.996"
+      }
+    },
+    {
+      "id": 48,
+      "template": "units/athen/infantry_spearman_b",
+      "player": 1,
+      "position": {
+        "x": "354.801",
+        "z": "463.069"
+      }
+    },
+    {
+      "id": 49,
+      "template": "units/athen/infantry_spearman_b",
+      "player": 1,
+      "position": {
+        "x": "357.872",
+        "z": "462.996"
+      }
+    },
+    {
+      "id": 50,
+      "template": "units/athen/infantry_spearman_b",
+      "player": 1,
+      "position": {
+        "x": "361.058",
+        "z": "463.069"
+      }
+    }
+  ],
+  "license": "See LICENSE.md and the longest applicable path; map-specific license requires verification",
+  "mapHistory": "994645930c61e4dac33c4a2b33fab604d2cfeab4 Itms <itms@wildfiregames.com> Move maps XML files out of LFS\nd51b4687e9a88e163075ae568365719a469fa11c wowgetoffyourcellphone <wowgetoffyourcellphone@wildfiregames.com> [Gameplay] Complete Naval Overhaul (UnitAI and Warship Classes)\n1cb4ee163473d25c98b6d347b1c363fd45ac7977 vladislavbelov <vladislavbelov@wildfiregames.com> Combines terrain and units ambient colors into the single color.\n2f8c7cf575de83ef4c9d0ec78bd984148cbca11e vladislavbelov <vladislavbelov@wildfiregames.com> Increases the maps version to 7 for XML and PMP files.\n051807ffae4089a6eb093bc1b31f559813656d7a vladislavbelov <vladislavbelov@wildfiregames.com> Using same value for unit and terrain ambient colors for scenarios and tutorial maps.\n",
+  "mapLicenseFound": false
+}

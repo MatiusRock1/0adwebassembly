@@ -1,0 +1,63 @@
+{
+  "diagnosticOnly": true,
+  "performanceAcceptance": false,
+  "scope": "PresentMon timings attributed to the dedicated Chrome GPU-process swap chain in the measured QPC interval. They do not expose original engine frame IDs; overlapping CPU/GPU metrics must not be added.",
+  "metrics": {
+    "MsCPUBusy": {
+      "samples": 4296,
+      "median": 17.253349999999998,
+      "p95": 72.2625,
+      "p99": 139.5246,
+      "maximum": 593.9055
+    },
+    "MsCPUWait": {
+      "samples": 4296,
+      "median": 0.1074,
+      "p95": 0.1606,
+      "p99": 0.219,
+      "maximum": 0.4048
+    },
+    "MsGPULatency": {
+      "samples": 4296,
+      "median": 12.820699999999999,
+      "p95": 63.9221,
+      "p99": 132.9214,
+      "maximum": 592.2653
+    },
+    "MsGPUTime": {
+      "samples": 4296,
+      "median": 11.3786,
+      "p95": 23.3642,
+      "p99": 25.7906,
+      "maximum": 35.2088
+    },
+    "MsGPUBusy": {
+      "samples": 4296,
+      "median": 9.0568,
+      "p95": 14.5569,
+      "p99": 16.389,
+      "maximum": 19.0225
+    },
+    "MsGPUWait": {
+      "samples": 4296,
+      "median": 1.84175,
+      "p95": 8.8494,
+      "p99": 12.1669,
+      "maximum": 25.1822
+    },
+    "MsRenderPresentLatency": {
+      "samples": 4296,
+      "median": 5.0049,
+      "p95": 8.6778,
+      "p99": 9.3165,
+      "maximum": 10.5629
+    },
+    "MsUntilDisplayed": {
+      "samples": 4270,
+      "median": 22.860999999999997,
+      "p95": 29.1845,
+      "p99": 31.8169,
+      "maximum": 40.3296
+    }
+  }
+}

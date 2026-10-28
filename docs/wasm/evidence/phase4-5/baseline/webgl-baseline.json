@@ -1,0 +1,81 @@
+{
+  "scope": "BASELINE_FINGERPRINT_NOT_ACCEPTANCE",
+  "pin": "40b8794eecb9618da69e10bacffa8814c561aa51",
+  "generatedUTC": "2026-10-15T00:28:01.485268+00:00",
+  "snapshotCreated": true,
+  "files": {
+    "application-data.json": {
+      "bytes": 872,
+      "sha256": "6d2c6947710e02a2a395c51541baefdfd3b8ee0540ab5848a22702838823e9bc"
+    },
+    "application.html": {
+      "bytes": 1430,
+      "sha256": "f1e8555b4470ae3d70c1982c2df7fd46f556da2beca6dc7a0fa7c59c5490e2e4"
+    },
+    "application.mjs": {
+      "bytes": 8998,
+      "sha256": "8a22632683380d986ac619079936cc7a8edf2828beb72d7151a031547685d72d"
+    },
+    "data/config/default.cfg": {
+      "bytes": 33126,
+      "sha256": "46d5c14b6e38f8da110e6efccd957191e8d6a009be0eb3a996dabe6247b484ad"
+    },
+    "data/config/dev.cfg": {
+      "bytes": 533,
+      "sha256": "df579a01d545f3fbd08399780b277e9544a61c2676135a3be55153baa5250962"
+    },
+    "data/config/keys.txt": {
+      "bytes": 2525,
+      "sha256": "469f8fa2807838de81d53dda3a78b1676013e4fd18bd696d53693f09a21b9410"
+    },
+    "data/icu/icudt68l.dat": {
+      "bytes": 28566176,
+      "sha256": "d8e42c5c797e98f934a6a31e959231c2396ab68242f95d9e7b9f7783f71dc611"
+    },
+    "data/l10n/.tx/config": {
+      "bytes": 148,
+      "sha256": "5f52c7d149211b418ca602c5e737248be8b263bdd8ac3d79ecc7c5584f65b4e8"
+    },
+    "data/l10n/messages.json": {
+      "bytes": 677,
+      "sha256": "69075b1f49598bce2061f8cf5f6667b14a83e852790c645da4801d3d590fe3ec"
+    },
+    "index.html": {
+      "bytes": 995,
+      "sha256": "70c086c1ed6c98466eafce14575d26bf105475022d79a6cb85742d566087b97f"
+    },
+    "mod-resource-hashes.json": {
+      "bytes": 74562,
+      "sha256": "bb8a81a07eea3edf217d09ccffa63ccfaac6c338ece92cc7f4d39d1fd1293665"
+    },
+    "mod.zip": {
+      "bytes": 62959007,
+      "sha256": "10eb081fd68dc6f398bea3e4d8fdb074f39b9b74c0da958742b809d7c5eccf19"
+    },
+    "public-resource-hashes.json": {
+      "bytes": 4934754,
+      "sha256": "5971235e33d4a6936356d5bca560fc8d2095e39a8fb67c49d387e3d53e9ae62f"
+    },
+    "public.zip": {
+      "bytes": 1914886590,
+      "sha256": "b8729bbc2f66cd66c5779ed1fcce78e60dad753e74134da6be700f2419558515"
+    },
+    "pyrogenesis-application.mjs": {
+      "bytes": 677426,
+      "sha256": "ceba55d3ae8e191051d2f4c03715fbfee937fc9ea92c7c40a97d9e14bb2e7a85"
+    },
+    "pyrogenesis-application.mjs.symbols": {
+      "bytes": 6360407,
+      "sha256": "a8f6fc15e9bc820c15a5fa906f5238d8409f86769f36c975021ca2d7b77a6dba"
+    },
+    "pyrogenesis-application.wasm": {
+      "bytes": 22287459,
+      "sha256": "8cfc476312bd668072a219fd0c97391b071321d8609eae3ca668fc3b1569c0ec"
+    },
+    "pyrogenesis-application.wasm.debug.wasm": {
+      "bytes": 185851835,
+      "sha256": "b088868bca38c9faf90f4e857233b3dc38dca7ff2e280e663af3345af2de36e8"
+    }
+  },
+  "phase45Accepted": false
+}

@@ -1,0 +1,10 @@
+[
+  {
+    "name": "glsl/model_solid",
+    "defines": {
+      "USE_INSTANCING": "1",
+      "USE_NORMAL_MAP": "1",
+      "USE_SPECULAR_MAP": "1"
+    }
+  }
+]

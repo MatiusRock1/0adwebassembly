@@ -1,0 +1,30 @@
+--- a/lib/timer.cpp
++++ b/lib/timer.cpp
+@@ -36,7 +36,7 @@
+ 
+ #include <algorithm>
+ #include <ctime>
+-#include <mutex>
++#include "application-timer-monotonic.h"
+ #include <sstream>
+ 
+ #if OS_WIN
+@@ -118,15 +118,11 @@
+ 	ENSURE(resolution != 0.0);
+ }
+ 
+-static std::mutex ensure_monotonic_mutex;
+-// NB: does not guarantee strict monotonicity - callers must avoid
+-// dividing by the difference of two equal times.
++static WasmApplication::MonotonicClock monotonicClock;
++// Same non-strict global maximum as the original; the time source is unchanged.
+ static void EnsureMonotonic(double& newTime)
+ {
+-	std::lock_guard<std::mutex> lock(ensure_monotonic_mutex);
+-	static double maxTime;
+-	maxTime = std::max(maxTime, newTime);
+-	newTime = maxTime;
++	newTime = monotonicClock.Publish(newTime);
+ }
+ 
+ double timer_Time()

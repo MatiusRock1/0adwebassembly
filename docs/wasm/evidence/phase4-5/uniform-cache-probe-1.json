@@ -1,0 +1,32 @@
+{
+  "passed": true,
+  "performanceAcceptance": false,
+  "phase45Accepted": false,
+  "command": [
+    "g++",
+    "-std=c++20",
+    "-pthread",
+    "-O2",
+    "-I/workspace/source",
+    "-I/workspace/wasm/harness",
+    "/workspace/wasm/probes/webgpu-uniform-cache.cpp",
+    "-o",
+    "/phase45-build/uniform-cache-probe/probe"
+  ],
+  "sourceSHA256": {
+    "/workspace/wasm/probes/webgpu-uniform-cache.cpp": "06c59349a5308cf654b92d586773c40d0c91a961f7151b45e457333037796ba9",
+    "/workspace/source/renderer/backend/webgpu/UniformCache.h": "89246b2e47d2444e96d0cf9312ef69a4ad9b99186bfa30a4046784d5def73140"
+  },
+  "compileExitCode": 0,
+  "compileOutput": "",
+  "exitCode": 0,
+  "stdout": "{\"passed\":true,\"checks\":8,\"differentialDraws\":32768,\"omittedWrites\":1110}\n",
+  "stderr": "",
+  "result": {
+    "passed": true,
+    "checks": 8,
+    "differentialDraws": 32768,
+    "omittedWrites": 1110
+  },
+  "executableSHA256": "dfa860a80787f1eaf65ee0ae8fb0fd52788aa09e309b5f43fcd50587b9c95909"
+}

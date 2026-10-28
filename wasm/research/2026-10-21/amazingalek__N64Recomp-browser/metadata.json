@@ -1,0 +1,862 @@
+{
+  "repository": "amazingalek/N64Recomp-browser",
+  "defaultBranch": "main",
+  "commit": "cabd2fe3e8e7c74091646f7d6299351fccfb6961",
+  "commitDate": "2026-10-21T20:06:45Z",
+  "license": {
+    "key": "gpl-3.0",
+    "name": "GNU General Public License v3.0",
+    "spdx_id": "GPL-3.0",
+    "url": "https://api.github.com/licenses/gpl-3.0",
+    "node_id": "MDc6TGljZW5zZTk="
+  },
+  "tree": {
+    "sha": "cabd2fe3e8e7c74091646f7d6299351fccfb6961",
+    "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/trees/cabd2fe3e8e7c74091646f7d6299351fccfb6961",
+    "tree": [
+      {
+        "path": ".gitattributes",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "adadb8e13482598e481f09a483478e2bcb947e1d",
+        "size": 215,
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/blobs/adadb8e13482598e481f09a483478e2bcb947e1d"
+      },
+      {
+        "path": ".github",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "54b1776cd77e911ea6ddbeb673d8c1e848bfc0ba",
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/trees/54b1776cd77e911ea6ddbeb673d8c1e848bfc0ba"
+      },
+      {
+        "path": ".github/workflows",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "a038907e6ad826e5536ea9426c0b43a6939cce3c",
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/trees/a038907e6ad826e5536ea9426c0b43a6939cce3c"
+      },
+      {
+        "path": ".github/workflows/ci.yml",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "04399f0658c79f6bd412143b144c64c2bac0473e",
+        "size": 23675,
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/blobs/04399f0658c79f6bd412143b144c64c2bac0473e"
+      },
+      {
+        "path": ".gitignore",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "7554bd6cd824051a05d8c3726ac302c118832c64",
+        "size": 58,
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/blobs/7554bd6cd824051a05d8c3726ac302c118832c64"
+      },
+      {
+        "path": "CLAUDE.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "28b24e70bc7707c36f9a07c5c366995976b14c96",
+        "size": 19517,
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/blobs/28b24e70bc7707c36f9a07c5c366995976b14c96"
+      },
+      {
+        "path": "COPYING",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f288702d2fa16d3cdf0035b15a9fcbc552cd88e7",
+        "size": 35149,
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/blobs/f288702d2fa16d3cdf0035b15a9fcbc552cd88e7"
+      },
+      {
+        "path": "README.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "2cf64212ca78352904201c241a0d71c2b5675e60",
+        "size": 42545,
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/blobs/2cf64212ca78352904201c241a0d71c2b5675e60"
+      },
+      {
+        "path": "docs",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "d6642fea077f935cd4d4b2486dc65ed8a85d8d34",
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/trees/d6642fea077f935cd4d4b2486dc65ed8a85d8d34"
+      },
+      {
+        "path": "docs/findings.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "082ad4ae73f1fda6f9543e9e365bf75c49966697",
+        "size": 126521,
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/blobs/082ad4ae73f1fda6f9543e9e365bf75c49966697"
+      },
+      {
+        "path": "docs/forks.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "6a3c90c69f91a28713981f5773e8ca8482510fb9",
+        "size": 30167,
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/blobs/6a3c90c69f91a28713981f5773e8ca8482510fb9"
+      },
+      {
+        "path": "docs/game-forks.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "eb3b1fd5251970d72406980f91190eb1864b847f",
+        "size": 31501,
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/blobs/eb3b1fd5251970d72406980f91190eb1864b847f"
+      },
+      {
+        "path": "docs/playing.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "daf3e0b3a6423caf86f7af68e3baccce70dd108a",
+        "size": 24372,
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/blobs/daf3e0b3a6423caf86f7af68e3baccce70dd108a"
+      },
+      {
+        "path": "docs/porting.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "82b07afd0da4028ba84a5819ddbda5e939cd1fed",
+        "size": 11570,
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/blobs/82b07afd0da4028ba84a5819ddbda5e939cd1fed"
+      },
+      {
+        "path": "docs/publishing.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d0a269b3309501c7f23b311723a64e55fe251161",
+        "size": 5842,
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/blobs/d0a269b3309501c7f23b311723a64e55fe251161"
+      },
+      {
+        "path": "forks.txt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "a098c3871a61c0f5c6f112e3d935798dc1cc6940",
+        "size": 699,
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/blobs/a098c3871a61c0f5c6f112e3d935798dc1cc6940"
+      },
+      {
+        "path": "frontend",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "769a9f2827ac899109bc402a515996e87c67f8f9",
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/trees/769a9f2827ac899109bc402a515996e87c67f8f9"
+      },
+      {
+        "path": "frontend/CMakeLists.txt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "20b7fe682c16a82349fa133e6f71d66cbb69d62d",
+        "size": 8998,
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/blobs/20b7fe682c16a82349fa133e6f71d66cbb69d62d"
+      },
+      {
+        "path": "frontend/audio_output.cpp",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "b56a6c17ebb517904da30312af8b6013f75465dd",
+        "size": 1704,
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/blobs/b56a6c17ebb517904da30312af8b6013f75465dd"
+      },
+      {
+        "path": "frontend/audio_output.h",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "6d288575d6eee3681b56712aa4fdea9cc761eadb",
+        "size": 1136,
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/blobs/6d288575d6eee3681b56712aa4fdea9cc761eadb"
+      },
+      {
+        "path": "frontend/audio_output.js",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d4102251d98ef442800c87d00e33d966c9a9f089",
+        "size": 3012,
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/blobs/d4102251d98ef442800c87d00e33d966c9a9f089"
+      },
+      {
+        "path": "frontend/build_speed.cmake",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "04537879e7719903436af5e9d604e7e81c0fc700",
+        "size": 3367,
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/blobs/04537879e7719903436af5e9d604e7e81c0fc700"
+      },
+      {
+        "path": "frontend/ccache_launcher.cmake",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e3f578abf620ad7913d2b53877f8ae103b5cbc85",
+        "size": 2494,
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/blobs/e3f578abf620ad7913d2b53877f8ae103b5cbc85"
+      },
+      {
+        "path": "frontend/coi_serviceworker.js",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "12e1cf279d7fe6eb3ae7832ba8fe02fd01a6262d",
+        "size": 2762,
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/blobs/12e1cf279d7fe6eb3ae7832ba8fe02fd01a6262d"
+      },
+      {
+        "path": "frontend/file_picker.cpp",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "52209310453f654e806287e78e27bc13f70dfd82",
+        "size": 2880,
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/blobs/52209310453f654e806287e78e27bc13f70dfd82"
+      },
+      {
+        "path": "frontend/file_picker.h",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "9cf0c3768843a13cfb01a71a583133e3fa89031a",
+        "size": 1163,
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/blobs/9cf0c3768843a13cfb01a71a583133e3fa89031a"
+      },
+      {
+        "path": "frontend/persistent_home.js",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "2f8789f49e84c4bbdf70d78ac2bf2663e4afdfd7",
+        "size": 10239,
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/blobs/2f8789f49e84c4bbdf70d78ac2bf2663e4afdfd7"
+      },
+      {
+        "path": "frontend/sdl_audio.js",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "8709405aff885e9f9c8da2a65809808f29cee941",
+        "size": 1421,
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/blobs/8709405aff885e9f9c8da2a65809808f29cee941"
+      },
+      {
+        "path": "frontend/shell.html",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d66d817ee9232b65806ea4d3325eb34c40ff6a80",
+        "size": 11039,
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/blobs/d66d817ee9232b65806ea4d3325eb34c40ff6a80"
+      },
+      {
+        "path": "frontend/thread_stdio.js",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "26f2c7d715449edc572969abe565d60a0029a58d",
+        "size": 2634,
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/blobs/26f2c7d715449edc572969abe565d60a0029a58d"
+      },
+      {
+        "path": "frontend/worker_alert.js",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f6e3bd33f76aaa456166689d563e8a042277c060",
+        "size": 452,
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/blobs/f6e3bd33f76aaa456166689d563e8a042277c060"
+      },
+      {
+        "path": "patches",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "099906eb084afbeb4c2cec11fe0ed3cb5682f55d",
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/trees/099906eb084afbeb4c2cec11fe0ed3cb5682f55d"
+      },
+      {
+        "path": "patches/N64ModernRuntime.patch",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "0da796baee15328e3cd4277e44fa96bc6e7c177d",
+        "size": 55867,
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/blobs/0da796baee15328e3cd4277e44fa96bc6e7c177d"
+      },
+      {
+        "path": "patches/N64Recomp.patch",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "1cd6cdf3aa5cd230fd698bc1704859e1f7ac9ef6",
+        "size": 35913,
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/blobs/1cd6cdf3aa5cd230fd698bc1704859e1f7ac9ef6"
+      },
+      {
+        "path": "patches/RecompFrontend.patch",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "3fcdc436c5565adbf65225279b88c747befd5622",
+        "size": 35536,
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/blobs/3fcdc436c5565adbf65225279b88c747befd5622"
+      },
+      {
+        "path": "patches/apply.cmake",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "12a6631361d86afd688de5eaa9dc6466ce9a7b03",
+        "size": 17177,
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/blobs/12a6631361d86afd688de5eaa9dc6466ce9a7b03"
+      },
+      {
+        "path": "patches/hlslpp.patch",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d09b691ac040745e8e02ab2640dbbeee72710540",
+        "size": 3978,
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/blobs/d09b691ac040745e8e02ab2640dbbeee72710540"
+      },
+      {
+        "path": "patches/patches.txt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "fdb24ccec91dfbf68406dc24140dd6033b6f44f1",
+        "size": 1406,
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/blobs/fdb24ccec91dfbf68406dc24140dd6033b6f44f1"
+      },
+      {
+        "path": "patches/pins.txt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "2a575577cb1d47dd0c4eb94b1cb3a2bcd40176b3",
+        "size": 3422,
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/blobs/2a575577cb1d47dd0c4eb94b1cb3a2bcd40176b3"
+      },
+      {
+        "path": "patches/plume.patch",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "5fb89afdf2710d61d2c04606f6d9f07a8b824134",
+        "size": 354460,
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/blobs/5fb89afdf2710d61d2c04606f6d9f07a8b824134"
+      },
+      {
+        "path": "patches/rt64.patch",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "92949323addc4bc220095209d169ed5290831835",
+        "size": 416965,
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/blobs/92949323addc4bc220095209d169ed5290831835"
+      },
+      {
+        "path": "plays.jsonl",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "bee8c936a0a181636b7f96f4e36b6de6c9e5ebf0",
+        "size": 4422337,
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/blobs/bee8c936a0a181636b7f96f4e36b6de6c9e5ebf0"
+      },
+      {
+        "path": "renderer",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "3c29d6d8bc4ac90f899b173c15db69ffee4ce533",
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/trees/3c29d6d8bc4ac90f899b173c15db69ffee4ce533"
+      },
+      {
+        "path": "renderer/CMakeLists.txt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "2852c49636403cba70ddecea8fd1229be37ac1b5",
+        "size": 1402,
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/blobs/2852c49636403cba70ddecea8fd1229be37ac1b5"
+      },
+      {
+        "path": "renderer/rt64_web_renderer.cpp",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "b8d7ef11bec0f09df67cb89386ea4208cfff6897",
+        "size": 7253,
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/blobs/b8d7ef11bec0f09df67cb89386ea4208cfff6897"
+      },
+      {
+        "path": "renderer/rt64_web_renderer.h",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "41a1714405dcefc3df3859c64d8144e95bfd905c",
+        "size": 639,
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/blobs/41a1714405dcefc3df3859c64d8144e95bfd905c"
+      },
+      {
+        "path": "site",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "373e554ab7db38fcbd715d44dc9432efbf54c970",
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/trees/373e554ab7db38fcbd715d44dc9432efbf54c970"
+      },
+      {
+        "path": "site/img",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "2ededae4fb16f8fa796fd65df4a39a0f2c75bdf9",
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/trees/2ededae4fb16f8fa796fd65df4a39a0f2c75bdf9"
+      },
+      {
+        "path": "site/img/BanjoRecomp-web.webp",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "7c21ea3589de31e710f1315c7e949521893ba618",
+        "size": 19482,
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/blobs/7c21ea3589de31e710f1315c7e949521893ba618"
+      },
+      {
+        "path": "site/img/BanjoTooieRecompiled-web.webp",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "72a8e0c5476a0a729cfec854d69fef5c5acb4322",
+        "size": 39818,
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/blobs/72a8e0c5476a0a729cfec854d69fef5c5acb4322"
+      },
+      {
+        "path": "site/img/CBFD-Recompiled-web.webp",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f66b3fce9cd102ecfbf47bf202340a3d6a316dc3",
+        "size": 5548,
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/blobs/f66b3fce9cd102ecfbf47bf202340a3d6a316dc3"
+      },
+      {
+        "path": "site/img/DKR-R-web.webp",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "9c345567ee437f4020cb8ac0e6351402848258a3",
+        "size": 2950,
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/blobs/9c345567ee437f4020cb8ac0e6351402848258a3"
+      },
+      {
+        "path": "site/img/Donkey-Kong-64-Recompiled-web.webp",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "77690506a2cb5c3012741e48260c9778f59f38a2",
+        "size": 16116,
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/blobs/77690506a2cb5c3012741e48260c9778f59f38a2"
+      },
+      {
+        "path": "site/img/GoldenEye64Recomp-web.webp",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d9a61ebea46ef377dd50816c0ab509a2141c4280",
+        "size": 4656,
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/blobs/d9a61ebea46ef377dd50816c0ab509a2141c4280"
+      },
+      {
+        "path": "site/img/JetForceGemini-Recomp-web.webp",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f94ff91acef7145aa684735d73846da6f569cae6",
+        "size": 12646,
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/blobs/f94ff91acef7145aa684735d73846da6f569cae6"
+      },
+      {
+        "path": "site/img/MarioKart64Recomp-web.webp",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "4abee1a597056bc88d08d21ac95746a97d268e1c",
+        "size": 6036,
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/blobs/4abee1a597056bc88d08d21ac95746a97d268e1c"
+      },
+      {
+        "path": "site/img/Snap64Recomp-web.webp",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "bef8db61aa664bb81cf9fa50e6620c54511de911",
+        "size": 3528,
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/blobs/bef8db61aa664bb81cf9fa50e6620c54511de911"
+      },
+      {
+        "path": "site/img/Starfox64Recomp-web.webp",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "bb0c14b7167b634eb301e1f846e855fad34b992a",
+        "size": 4856,
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/blobs/bb0c14b7167b634eb301e1f846e855fad34b992a"
+      },
+      {
+        "path": "site/img/Zelda64Recomp-web.webp",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "6d3638f4ba54f31731336220757597dc30cd7e9d",
+        "size": 5698,
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/blobs/6d3638f4ba54f31731336220757597dc30cd7e9d"
+      },
+      {
+        "path": "site/img/oot-recompiled-web.webp",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "449b19d0abbb8390330fdec257b6c9d869b55911",
+        "size": 7258,
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/blobs/449b19d0abbb8390330fdec257b6c9d869b55911"
+      },
+      {
+        "path": "site/img/pilotwings-64-recomp-web.webp",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "a054876fdf9a4eefc9595947c7f3bb57fc4e516c",
+        "size": 5070,
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/blobs/a054876fdf9a4eefc9595947c7f3bb57fc4e516c"
+      },
+      {
+        "path": "site/img/rush-2049-recomp.webp",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "a9f12f9d4cd0a75be0647cc8810d9acb06afc04f",
+        "size": 5856,
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/blobs/a9f12f9d4cd0a75be0647cc8810d9acb06afc04f"
+      },
+      {
+        "path": "site/img/rush2recompiled-web.webp",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "7a71134d61c38a9fce7ea74f8390ae12c0121596",
+        "size": 16126,
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/blobs/7a71134d61c38a9fce7ea74f8390ae12c0121596"
+      },
+      {
+        "path": "site/img/wave-race-64-recomp-web.webp",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "1ef81cfb1c9ceb5da07eddf3426c9e11c7d0bf3b",
+        "size": 9418,
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/blobs/1ef81cfb1c9ceb5da07eddf3426c9e11c7d0bf3b"
+      },
+      {
+        "path": "site/index.html",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "9654f1b2f26016c7196b40146c4dc3287573c6e9",
+        "size": 1776,
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/blobs/9654f1b2f26016c7196b40146c4dc3287573c6e9"
+      },
+      {
+        "path": "site/site.css",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "1845c0b62fd850f29d57a3c59ffdfbf6ce25e10b",
+        "size": 3398,
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/blobs/1845c0b62fd850f29d57a3c59ffdfbf6ce25e10b"
+      },
+      {
+        "path": "site/site.js",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "653c4ffc5665ee67881b49faa8d87b0851255459",
+        "size": 8950,
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/blobs/653c4ffc5665ee67881b49faa8d87b0851255459"
+      },
+      {
+        "path": "tests",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "d2047e0ee56f50b9acfd30eceab13b9162a8c876",
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/trees/d2047e0ee56f50b9acfd30eceab13b9162a8c876"
+      },
+      {
+        "path": "tests/build",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "242afddfbfd511d34d144ac3121ebd2678ebf88b",
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/trees/242afddfbfd511d34d144ac3121ebd2678ebf88b"
+      },
+      {
+        "path": "tests/build/CMakeLists.txt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f05a7ace3fac8d4becb662b5a71e8936dd204c59",
+        "size": 4147,
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/blobs/f05a7ace3fac8d4becb662b5a71e8936dd204c59"
+      },
+      {
+        "path": "tests/build/link_check",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "e648ae6cf77f397bb197855171cbf5a0a355bb55",
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/trees/e648ae6cf77f397bb197855171cbf5a0a355bb55"
+      },
+      {
+        "path": "tests/build/link_check/main.c",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "39c4415b4f71abea29440505ad8c163129a6c2e4",
+        "size": 119,
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/blobs/39c4415b4f71abea29440505ad8c163129a6c2e4"
+      },
+      {
+        "path": "tests/build/link_check/native.c",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "ee797478852244caffd2ee59513655bc72498a50",
+        "size": 100,
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/blobs/ee797478852244caffd2ee59513655bc72498a50"
+      },
+      {
+        "path": "tests/build/link_check/patch.c",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "59d8fa699819b9430f92d1c8d7192887d8eb1fab",
+        "size": 343,
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/blobs/59d8fa699819b9430f92d1c8d7192887d8eb1fab"
+      },
+      {
+        "path": "tests/build/patches",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "609e558d9630ff3801d34a2ef081cc006418d05c",
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/trees/609e558d9630ff3801d34a2ef081cc006418d05c"
+      },
+      {
+        "path": "tests/build/patches/recompui_event_structs.h",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "549508156457594458827f1c184b428ba7f8cbc7",
+        "size": 1374,
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/blobs/549508156457594458827f1c184b428ba7f8cbc7"
+      },
+      {
+        "path": "tests/build/patches/ui_funcs.h",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "4b25313a3a70c25b9526f59f08df2ff9174b2bcf",
+        "size": 718,
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/blobs/4b25313a3a70c25b9526f59f08df2ff9174b2bcf"
+      },
+      {
+        "path": "tests/build/shaders.txt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "6f425ea077d8d983aefe5f42d7c87be05b703246",
+        "size": 326,
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/blobs/6f425ea077d8d983aefe5f42d7c87be05b703246"
+      },
+      {
+        "path": "tests/depfile",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "8d6ed71d19e823ad62eb7f25a040df8c172b66ca",
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/trees/8d6ed71d19e823ad62eb7f25a040df8c172b66ca"
+      },
+      {
+        "path": "tests/depfile/CMakeLists.txt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "9a1f9b0e4d08d4993908a57a8937801a6dafa2e4",
+        "size": 925,
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/blobs/9a1f9b0e4d08d4993908a57a8937801a6dafa2e4"
+      },
+      {
+        "path": "tests/depfile/check.c",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "1ff546ac0c6a78e5716855ee26bcec5ff830fd76",
+        "size": 21,
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/blobs/1ff546ac0c6a78e5716855ee26bcec5ff830fd76"
+      },
+      {
+        "path": "tests/depfile/run.sh",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e342bc29bb719419b360fce947b042c39c8e4e30",
+        "size": 908,
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/blobs/e342bc29bb719419b360fce947b042c39c8e4e30"
+      },
+      {
+        "path": "tests/hlslpp_wasm_test.cpp",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "207264d0b4233ca160457eb8ac88a2011f485237",
+        "size": 7143,
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/blobs/207264d0b4233ca160457eb8ac88a2011f485237"
+      },
+      {
+        "path": "tests/plume_device_thread_test.cpp",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "82ca4f1df350c622a245f8fac3f1a986042a0229",
+        "size": 43725,
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/blobs/82ca4f1df350c622a245f8fac3f1a986042a0229"
+      },
+      {
+        "path": "tests/wgsl_check.mjs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "1a61c240812a0e5145e3824910fb62e28f277bf0",
+        "size": 5969,
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/blobs/1a61c240812a0e5145e3824910fb62e28f277bf0"
+      },
+      {
+        "path": "tools",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "46ad7b0a661b453b7233cd4284cab73965d1b690",
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/trees/46ad7b0a661b453b7233cd4284cab73965d1b690"
+      },
+      {
+        "path": "tools/ab_pages.mjs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e5b8e52628303f0da9e25dcd7b7bd39f78c60226",
+        "size": 13778,
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/blobs/e5b8e52628303f0da9e25dcd7b7bd39f78c60226"
+      },
+      {
+        "path": "tools/export_patches.sh",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "1e98c3edf725c154d794d3cebb31f9730fc3cb90",
+        "size": 1943,
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/blobs/1e98c3edf725c154d794d3cebb31f9730fc3cb90"
+      },
+      {
+        "path": "tools/fetch_forks.sh",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d1015d1c58a8a61ec582bd5dc6efc1ce25f59524",
+        "size": 1156,
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/blobs/d1015d1c58a8a61ec582bd5dc6efc1ce25f59524"
+      },
+      {
+        "path": "tools/fetch_pins.sh",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "b700943a6d7c71e9422ac932ab48f063a1fa611e",
+        "size": 1557,
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/blobs/b700943a6d7c71e9422ac932ab48f063a1fa611e"
+      },
+      {
+        "path": "tools/frame_lengths.js",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "4183b44db34632b9897ae7d9d5ea5b7239fec19f",
+        "size": 2753,
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/blobs/4183b44db34632b9897ae7d9d5ea5b7239fec19f"
+      },
+      {
+        "path": "tools/frame_lengths.mjs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "3fe0cdb84912faa3f901da157adbc695d034d409",
+        "size": 4731,
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/blobs/3fe0cdb84912faa3f901da157adbc695d034d409"
+      },
+      {
+        "path": "tools/gpu_growth.html",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "bc58e272b9e7ea852235ebf21cf60917eb0f3143",
+        "size": 12263,
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/blobs/bc58e272b9e7ea852235ebf21cf60917eb0f3143"
+      },
+      {
+        "path": "tools/gpu_growth.mjs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "df8f42394ff5630ff50d2e40fd8c18426508bf09",
+        "size": 5507,
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/blobs/df8f42394ff5630ff50d2e40fd8c18426508bf09"
+      },
+      {
+        "path": "tools/heap_probe.js",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "29abb3ac8032af43812a2daa57cb951c3f901140",
+        "size": 8177,
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/blobs/29abb3ac8032af43812a2daa57cb951c3f901140"
+      },
+      {
+        "path": "tools/memory_scan.ps1",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "112c811485b3d86b8236a53dc9b7e93dbf7f1093",
+        "size": 9862,
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/blobs/112c811485b3d86b8236a53dc9b7e93dbf7f1093"
+      },
+      {
+        "path": "tools/page_driver.mjs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d9c98dee8b60d300ac7234af446d141e668ce471",
+        "size": 51026,
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/blobs/d9c98dee8b60d300ac7234af446d141e668ce471"
+      },
+      {
+        "path": "tools/pass_probe.js",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "be02020ea2efc8c00c3e3dbb45323d651d75f56f",
+        "size": 12910,
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/blobs/be02020ea2efc8c00c3e3dbb45323d651d75f56f"
+      },
+      {
+        "path": "tools/play_page.mjs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "fc31b64ce3ff21a5777658326ef76989e3259032",
+        "size": 64784,
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/blobs/fc31b64ce3ff21a5777658326ef76989e3259032"
+      },
+      {
+        "path": "tools/publish_page.sh",
+        "mode": "100755",
+        "type": "blob",
+        "sha": "5614f3c0e245c720d8e5e791cda8f6f39f1818f8",
+        "size": 5225,
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/blobs/5614f3c0e245c720d8e5e791cda8f6f39f1818f8"
+      },
+      {
+        "path": "tools/publish_pages.sh",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "eeebdf5a44fbe5697ae3eb151d44e421e7bd428b",
+        "size": 26388,
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/blobs/eeebdf5a44fbe5697ae3eb151d44e421e7bd428b"
+      },
+      {
+        "path": "tools/record_shaders.mjs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "cbfe84c69091c8bb1c10c5cd5458dc6bde484274",
+        "size": 6822,
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/blobs/cbfe84c69091c8bb1c10c5cd5458dc6bde484274"
+      },
+      {
+        "path": "tools/serve_site.mjs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "82e81be1ac397734a05d4468bb980b23b1b13161",
+        "size": 2435,
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/blobs/82e81be1ac397734a05d4468bb980b23b1b13161"
+      },
+      {
+        "path": "tools/timer_tick.c",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "19ef56248a4d529718c6d69d4cd3df931a30411e",
+        "size": 4304,
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/blobs/19ef56248a4d529718c6d69d4cd3df931a30411e"
+      },
+      {
+        "path": "tools/wait_probe.js",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "8ff816ee4530236cb912e5931069dd90150d5a29",
+        "size": 1365,
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/blobs/8ff816ee4530236cb912e5931069dd90150d5a29"
+      },
+      {
+        "path": "tools/wasm_offset.mjs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f22a4e5be47ad0103a41a684b6a94b4cdf1e7464",
+        "size": 3696,
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/blobs/f22a4e5be47ad0103a41a684b6a94b4cdf1e7464"
+      },
+      {
+        "path": "tools/webgpu_census.js",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d0c9302aba9cb249409ce7ded507edf5f59bf39b",
+        "size": 7295,
+        "url": "https://api.github.com/repos/amazingalek/N64Recomp-browser/git/blobs/d0c9302aba9cb249409ce7ded507edf5f59bf39b"
+      }
+    ],
+    "truncated": false
+  }
+}

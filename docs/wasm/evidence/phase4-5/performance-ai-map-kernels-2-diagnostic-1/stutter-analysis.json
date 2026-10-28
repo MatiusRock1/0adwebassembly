@@ -1,0 +1,22 @@
+{
+  "sourceSHA256": "4ec9f0717ed730b81f0847062d7bc9d4650767ba113e8c45fb8dc3337744f815",
+  "scope": "Original Update wall timers grouped by changed simulation tick; first observation omitted; not CPU-exclusive cost.",
+  "groups": {
+    "turn": {
+      "count": 600,
+      "median": 37.29254400001025,
+      "p95": 47.19628800002765,
+      "maximum": 126.18035200000577,
+      "over33_4": 553,
+      "over100": 1
+    },
+    "betweenTurns": {
+      "count": 4866,
+      "median": 0.9200639999704663,
+      "p95": 1.5152640000266615,
+      "maximum": 3.790080000015905,
+      "over33_4": 0,
+      "over100": 0
+    }
+  }
+}

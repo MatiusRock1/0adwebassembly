@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<effect>
+	<technique>
+		<require shaders="glsl"/>
+		<require shaders="spirv"/>
+		<pass shader="model_solid_tex">
+			<define name="REQUIRE_ALPHA_GEQUAL" value="0.4"/>
+			<!-- Disable face-culling for two-sided models -->
+			<cull mode="NONE"/>
+			<color mask_red="FALSE" mask_green="FALSE" mask_blue="FALSE" mask_alpha="FALSE"/>
+		</pass>
+	</technique>
+</effect>

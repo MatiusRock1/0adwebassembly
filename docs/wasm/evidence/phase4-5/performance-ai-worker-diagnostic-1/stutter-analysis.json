@@ -1,0 +1,339 @@
+{
+  "diagnosticOnly": true,
+  "performanceAcceptance": false,
+  "phase45Accepted": false,
+  "inputSHA256": "2cb799a11a2ff301c8a05aaf96591422458790df24aa299d6b22bc22178a7dac",
+  "frames": 5206,
+  "skippedIntervals": 0,
+  "groups": {
+    "turn": {
+      "updates": {
+        "count": 599,
+        "totalSeconds": 27.39031372800045,
+        "medianMs": 39.97004799998649,
+        "p95Ms": 51.84511999999586,
+        "p99Ms": 393.8749440000038,
+        "maximumMs": 484.16998400000466,
+        "over33_4Ms": 590,
+        "over100Ms": 8
+      },
+      "receipts": {
+        "count": 599,
+        "totalSeconds": 39.31553500011563,
+        "medianMs": 58.74000000953674,
+        "p95Ms": 87.62000000476837,
+        "p99Ms": 408.77000001072884,
+        "maximumMs": 485.7049999833107,
+        "over33_4Ms": 596,
+        "over100Ms": 18
+      }
+    },
+    "betweenTurns": {
+      "updates": {
+        "count": 4606,
+        "totalSeconds": 4.585607680000521,
+        "medianMs": 0.9096959999794763,
+        "p95Ms": 1.5452159999540527,
+        "p99Ms": 1.9599359999915578,
+        "maximumMs": 3.0399999999985994,
+        "over33_4Ms": 0,
+        "over100Ms": 0
+      },
+      "receipts": {
+        "count": 4606,
+        "totalSeconds": 80.61202499988676,
+        "medianMs": 16.53499999642372,
+        "p95Ms": 23.87999999523163,
+        "p99Ms": 32.900000005960464,
+        "maximumMs": 256.8449999988079,
+        "over33_4Ms": 45,
+        "over100Ms": 5
+      }
+    }
+  },
+  "worstUpdates": [
+    {
+      "frame": 8932,
+      "tick": 1039,
+      "turns": 1,
+      "receiptIntervalMs": 485.7049999833107,
+      "updateMs": 484.16998400000466
+    },
+    {
+      "frame": 9881,
+      "tick": 1151,
+      "turns": 1,
+      "receiptIntervalMs": 421.3149999976158,
+      "updateMs": 411.8054400000233
+    },
+    {
+      "frame": 11714,
+      "tick": 1360,
+      "turns": 1,
+      "receiptIntervalMs": 431.2199999988079,
+      "updateMs": 403.0901759999779
+    },
+    {
+      "frame": 9063,
+      "tick": 1056,
+      "turns": 1,
+      "receiptIntervalMs": 413.8550000190735,
+      "updateMs": 397.15968000001567
+    },
+    {
+      "frame": 7695,
+      "tick": 897,
+      "turns": 1,
+      "receiptIntervalMs": 409.294999986887,
+      "updateMs": 394.09023999999704
+    },
+    {
+      "frame": 7767,
+      "tick": 907,
+      "turns": 1,
+      "receiptIntervalMs": 408.77000001072884,
+      "updateMs": 393.8749440000038
+    },
+    {
+      "frame": 7661,
+      "tick": 891,
+      "turns": 1,
+      "receiptIntervalMs": 397.9399999976158,
+      "updateMs": 376.2199040000098
+    },
+    {
+      "frame": 7835,
+      "tick": 917,
+      "turns": 1,
+      "receiptIntervalMs": 157.1550000011921,
+      "updateMs": 138.10022399999866
+    },
+    {
+      "frame": 7517,
+      "tick": 874,
+      "turns": 1,
+      "receiptIntervalMs": 100.33000001311302,
+      "updateMs": 82.24000000001297
+    },
+    {
+      "frame": 11075,
+      "tick": 1286,
+      "turns": 1,
+      "receiptIntervalMs": 96.1700000166893,
+      "updateMs": 81.07033600003888
+    },
+    {
+      "frame": 11555,
+      "tick": 1341,
+      "turns": 1,
+      "receiptIntervalMs": 91.77500000596046,
+      "updateMs": 80.54527999996708
+    },
+    {
+      "frame": 10102,
+      "tick": 1179,
+      "turns": 1,
+      "receiptIntervalMs": 97.03499999642372,
+      "updateMs": 78.23487999996814
+    },
+    {
+      "frame": 8867,
+      "tick": 1031,
+      "turns": 1,
+      "receiptIntervalMs": 99.36499997973442,
+      "updateMs": 76.96025600000667
+    },
+    {
+      "frame": 11480,
+      "tick": 1332,
+      "turns": 1,
+      "receiptIntervalMs": 92.63499999046326,
+      "updateMs": 75.0100480000242
+    },
+    {
+      "frame": 8822,
+      "tick": 1026,
+      "turns": 1,
+      "receiptIntervalMs": 92.875,
+      "updateMs": 73.21984000000725
+    },
+    {
+      "frame": 7636,
+      "tick": 888,
+      "turns": 1,
+      "receiptIntervalMs": 91.51499998569489,
+      "updateMs": 70.54028800001788
+    },
+    {
+      "frame": 7769,
+      "tick": 909,
+      "turns": 1,
+      "receiptIntervalMs": 87.8449999988079,
+      "updateMs": 67.69996799999944
+    },
+    {
+      "frame": 11542,
+      "tick": 1339,
+      "turns": 1,
+      "receiptIntervalMs": 87.62000000476837,
+      "updateMs": 67.04511999998886
+    },
+    {
+      "frame": 7663,
+      "tick": 893,
+      "turns": 1,
+      "receiptIntervalMs": 81.43999999761581,
+      "updateMs": 60.86041600002545
+    },
+    {
+      "frame": 11517,
+      "tick": 1336,
+      "turns": 1,
+      "receiptIntervalMs": 50.900000005960464,
+      "updateMs": 59.15494399999943
+    }
+  ],
+  "worstReceipts": [
+    {
+      "frame": 8932,
+      "tick": 1039,
+      "turns": 1,
+      "receiptIntervalMs": 485.7049999833107,
+      "updateMs": 484.16998400000466
+    },
+    {
+      "frame": 11714,
+      "tick": 1360,
+      "turns": 1,
+      "receiptIntervalMs": 431.2199999988079,
+      "updateMs": 403.0901759999779
+    },
+    {
+      "frame": 9881,
+      "tick": 1151,
+      "turns": 1,
+      "receiptIntervalMs": 421.3149999976158,
+      "updateMs": 411.8054400000233
+    },
+    {
+      "frame": 9063,
+      "tick": 1056,
+      "turns": 1,
+      "receiptIntervalMs": 413.8550000190735,
+      "updateMs": 397.15968000001567
+    },
+    {
+      "frame": 7695,
+      "tick": 897,
+      "turns": 1,
+      "receiptIntervalMs": 409.294999986887,
+      "updateMs": 394.09023999999704
+    },
+    {
+      "frame": 7767,
+      "tick": 907,
+      "turns": 1,
+      "receiptIntervalMs": 408.77000001072884,
+      "updateMs": 393.8749440000038
+    },
+    {
+      "frame": 7661,
+      "tick": 891,
+      "turns": 1,
+      "receiptIntervalMs": 397.9399999976158,
+      "updateMs": 376.2199040000098
+    },
+    {
+      "frame": 9840,
+      "tick": 1144,
+      "turns": 0,
+      "receiptIntervalMs": 256.8449999988079,
+      "updateMs": 1.1647999999695458
+    },
+    {
+      "frame": 11471,
+      "tick": 1329,
+      "turns": 1,
+      "receiptIntervalMs": 171.13999998569489,
+      "updateMs": 41.160447999970984
+    },
+    {
+      "frame": 8815,
+      "tick": 1024,
+      "turns": 1,
+      "receiptIntervalMs": 169.61500000953674,
+      "updateMs": 39.87968000001274
+    },
+    {
+      "frame": 11472,
+      "tick": 1330,
+      "turns": 1,
+      "receiptIntervalMs": 165.41500002145767,
+      "updateMs": 39.25017599999592
+    },
+    {
+      "frame": 11473,
+      "tick": 1331,
+      "turns": 1,
+      "receiptIntervalMs": 165.28499999642372,
+      "updateMs": 38.23001599999998
+    },
+    {
+      "frame": 10095,
+      "tick": 1178,
+      "turns": 1,
+      "receiptIntervalMs": 160.99000000953674,
+      "updateMs": 38.050048000002334
+    },
+    {
+      "frame": 7835,
+      "tick": 917,
+      "turns": 1,
+      "receiptIntervalMs": 157.1550000011921,
+      "updateMs": 138.10022399999866
+    },
+    {
+      "frame": 7505,
+      "tick": 872,
+      "turns": 1,
+      "receiptIntervalMs": 155.63999998569489,
+      "updateMs": 37.03987199997982
+    },
+    {
+      "frame": 10094,
+      "tick": 1177,
+      "turns": 1,
+      "receiptIntervalMs": 154.47499999403954,
+      "updateMs": 38.03008000005548
+    },
+    {
+      "frame": 7504,
+      "tick": 871,
+      "turns": 1,
+      "receiptIntervalMs": 148.2000000178814,
+      "updateMs": 35.03513600000474
+    },
+    {
+      "frame": 10092,
+      "tick": 1176,
+      "turns": 0,
+      "receiptIntervalMs": 119.4699999988079,
+      "updateMs": 1.0150400000270565
+    },
+    {
+      "frame": 8816,
+      "tick": 1024,
+      "turns": 0,
+      "receiptIntervalMs": 108.87999999523163,
+      "updateMs": 0.9702400000151101
+    },
+    {
+      "frame": 7506,
+      "tick": 872,
+      "turns": 0,
+      "receiptIntervalMs": 106.61500000953674,
+      "updateMs": 0.9049599999855218
+    }
+  ],
+  "scope": "Correlation only: original Game::Update wall duration, turn IDs, and ordered post-encoding receipt times. No direct mapping to physical display frames or exclusive CPU attribution."
+}

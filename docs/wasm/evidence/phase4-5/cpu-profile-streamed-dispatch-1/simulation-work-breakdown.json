@@ -1,0 +1,12 @@
+{
+  "diagnosticOnly": true,
+  "performanceAcceptance": false,
+  "profile": "cpu-9.cpuprofile",
+  "inclusiveSeconds": {
+    "CAIWorker::PerformComputation()": 5.537135,
+    "CSimulation2Impl::UpdateComponents(CSimContext&, CFixed<int, 2147483647, 32, 15, 16, 65536>, std::__2::vector<SimulationCommand, std::__2::allocator<SimulationCommand>> const&)": 9.168864,
+    "js::pbl::PortableBaselineInterpret(JSContext*, js::pbl::State&, js::pbl::Stack&, js::pbl::StackVal*, JSObject*, JS::Value*)": 7.53084,
+    "CGame::Update(double, bool)": 11.191551
+  },
+  "scope": "Inclusive CPU samples restricted to original CGame::Update; nested totals overlap and must not be added"
+}

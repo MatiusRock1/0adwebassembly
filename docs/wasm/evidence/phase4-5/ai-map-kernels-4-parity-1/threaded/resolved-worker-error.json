@@ -1,0 +1,64 @@
+{
+  "symbolsSHA256": "e9882ce93ba665c985b70778856e2914e8e97c3aa3c152067444f9bb96dc9451",
+  "event": {
+    "type": "application-worker-error",
+    "message": "Uncaught RuntimeError: memory access out of bounds",
+    "stack": "RuntimeError: memory access out of bounds\n    at http://localhost:8097/pyrogenesis-application.wasm:wasm-function[8730]:0x5b3d46\n    at http://localhost:8097/pyrogenesis-application.wasm:wasm-function[7630]:0x5259ed\n    at http://localhost:8097/pyrogenesis-application.wasm:wasm-function[14773]:0x8f391c\n    at http://localhost:8097/pyrogenesis-application.wasm:wasm-function[1052]:0xe349d\n    at http://localhost:8097/pyrogenesis-application.wasm:wasm-function[8688]:0x5abd4f\n    at http://localhost:8097/pyrogenesis-application.wasm:wasm-function[9297]:0x631bcf\n    at http://localhost:8097/pyrogenesis-application.wasm:wasm-function[3903]:0x296742\n    at http://localhost:8097/pyrogenesis-application.wasm:wasm-function[6059]:0x40c196\n    at http://localhost:8097/pyrogenesis-application.wasm:wasm-function[1052]:0xb80b9\n    at http://localhost:8097/pyrogenesis-application.wasm:wasm-function[8688]:0x5abd4f",
+    "filename": "http://localhost:8097/pyrogenesis-application.mjs",
+    "line": 7,
+    "column": 1510
+  },
+  "frames": [
+    {
+      "index": 8730,
+      "offset": "0x5b3d46",
+      "function": "js::jit::GetPropIRGenerator::tryAttachStub()"
+    },
+    {
+      "index": 7630,
+      "offset": "0x5259ed",
+      "function": "void js::jit::TryAttachStub<js::jit::GetPropIRGenerator, js::jit::CacheKind, JS::MutableHandle<JS::Value>&, JS::Rooted<JS::Value>&>(char const*, JSContext*, js::jit::BaselineFrame*, js::jit::ICFallbackStub*, js::jit::CacheKind&&, JS::MutableHandle<JS::Value>&, JS::Rooted<JS::Value>&)"
+    },
+    {
+      "index": 14773,
+      "offset": "0x8f391c",
+      "function": "js::jit::DoGetPropFallback(JSContext*, js::jit::BaselineFrame*, js::jit::ICFallbackStub*, JS::MutableHandle<JS::Value>, JS::MutableHandle<JS::Value>)"
+    },
+    {
+      "index": 1052,
+      "offset": "0xe349d",
+      "function": "js::pbl::PortableBaselineInterpret(JSContext*, js::pbl::State&, js::pbl::Stack&, js::pbl::StackVal*, JSObject*, JS::Value*)"
+    },
+    {
+      "index": 8688,
+      "offset": "0x5abd4f",
+      "function": "js::jit::MaybeEnterJit(JSContext*, js::RunState&)"
+    },
+    {
+      "index": 9297,
+      "offset": "0x631bcf",
+      "function": "js::RunScript(JSContext*, js::RunState&)"
+    },
+    {
+      "index": 3903,
+      "offset": "0x296742",
+      "function": "js::InternalCallOrConstruct(JSContext*, JS::CallArgs const&, js::MaybeConstruct, js::CallReason)"
+    },
+    {
+      "index": 6059,
+      "offset": "0x40c196",
+      "function": "js::jit::DoCallFallback(JSContext*, js::jit::BaselineFrame*, js::jit::ICFallbackStub*, unsigned int, JS::Value*, JS::MutableHandle<JS::Value>)"
+    },
+    {
+      "index": 1052,
+      "offset": "0xb80b9",
+      "function": "js::pbl::PortableBaselineInterpret(JSContext*, js::pbl::State&, js::pbl::Stack&, js::pbl::StackVal*, JSObject*, JS::Value*)"
+    },
+    {
+      "index": 8688,
+      "offset": "0x5abd4f",
+      "function": "js::jit::MaybeEnterJit(JSContext*, js::RunState&)"
+    }
+  ],
+  "scope": "Resolved call stack only; not proof of the original invalid write or its cause."
+}

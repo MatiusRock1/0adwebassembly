@@ -1,0 +1,825 @@
+{
+  "passed": true,
+  "phase45Accepted": false,
+  "performanceAcceptance": false,
+  "scope": "Controlled SDK worker error, not reproduction or resolution of the native null-function fault",
+  "errors": [
+    "ErrorEvent"
+  ],
+  "console": [
+    "The powerPreference option is currently ignored when calling requestAdapter() on Windows. See https://crbug.com/369219127",
+    "{\"type\":\"ready\",\"backend\":\"webgpu\",\"powerPreference\":\"high-performance\",\"owner\":\"main-thread\",\"adapter\":{\"vendor\":\"nvidia\",\"architecture\":\"ampere\",\"device\":\"\",\"description\":\"\"},\"adapterFeatures\":[\"bgra8unorm-storage\",\"clip-distances\",\"core-features-and-limits\",\"depth-clip-control\",\"depth32float-stencil8\",\"dual-source-blending\",\"float32-blendable\",\"float32-filterable\",\"indirect-first-instance\",\"primitive-index\",\"rg11b10ufloat-renderable\",\"shader-f16\",\"subgroup-size-control\",\"subgroups\",\"texture-component-swizzle\",\"texture-compression-bc\",\"texture-compression-bc-sliced-3d\",\"texture-formats-tier1\",\"texture-formats-tier2\",\"timestamp-query\"],\"adapterLimits\":{\"maxTextureDimension1D\":16384,\"maxTextureDimension2D\":16384,\"maxTextureDimension3D\":2048,\"maxTextureArrayLayers\":2048,\"maxBindGroups\":4,\"maxBindGroupsPlusVertexBuffers\":24,\"maxBindingsPerBindGroup\":1000,\"maxDynamicUniformBuffersPerPipelineLayout\":10,\"maxDynamicStorageBuffersPerPipelineLayout\":8,\"maxSampledTexturesPerShaderStage\":48,\"maxSamplersPerShaderStage\":16,\"maxStorageBuffersPerShaderStage\":16,\"maxStorageTexturesPerShaderStage\":8,\"maxUniformBuffersPerShaderStage\":12,\"maxUniformBufferBindingSize\":65536,\"maxStorageBufferBindingSize\":2147483644,\"minUniformBufferOffsetAlignment\":256,\"minStorageBufferOffsetAlignment\":256,\"maxVertexBuffers\":8,\"maxBufferSize\":2147483648,\"maxVertexAttributes\":30,\"maxVertexBufferArrayStride\":2048,\"maxInterStageShaderVariables\":28,\"maxColorAttachments\":8,\"maxColorAttachmentBytesPerSample\":128,\"maxComputeWorkgroupStorageSize\":32768,\"maxComputeInvocationsPerWorkgroup\":1024,\"maxComputeWorkgroupSizeX\":1024,\"maxComputeWorkgroupSizeY\":1024,\"maxComputeWorkgroupSizeZ\":64,\"maxComputeWorkgroupsPerDimension\":65535,\"maxImmediateSize\":64,\"maxStorageBuffersInFragmentStage\":16,\"maxStorageTexturesInFragmentStage\":8,\"maxStorageBuffersInVertexStage\":16,\"maxStorageTexturesInVertexStage\":8},\"deviceFeatures\":[\"core-features-and-limits\",\"depth32float-stencil8\",\"dual-source-blending\",\"float32-blendable\",\"float32-filterable\",\"rg11b10ufloat-renderable\",\"texture-compression-bc\"],\"deviceLimits\":{\"maxTextureDimension1D\":8192,\"maxTextureDimension2D\":8192,\"maxTextureDimension3D\":2048,\"maxTextureArrayLayers\":256,\"maxBindGroups\":4,\"maxBindGroupsPlusVertexBuffers\":24,\"maxBindingsPerBindGroup\":1000,\"maxDynamicUniformBuffersPerPipelineLayout\":8,\"maxDynamicStorageBuffersPerPipelineLayout\":4,\"maxSampledTexturesPerShaderStage\":16,\"maxSamplersPerShaderStage\":16,\"maxStorageBuffersPerShaderStage\":8,\"maxStorageTexturesPerShaderStage\":4,\"maxUniformBuffersPerShaderStage\":12,\"maxUniformBufferBindingSize\":65536,\"maxStorageBufferBindingSize\":134217728,\"minUniformBufferOffsetAlignment\":256,\"minStorageBufferOffsetAlignment\":256,\"maxVertexBuffers\":8,\"maxBufferSize\":268435456,\"maxVertexAttributes\":16,\"maxVertexBufferArrayStride\":2048,\"maxInterStageShaderVariables\":16,\"maxColorAttachments\":8,\"maxColorAttachmentBytesPerSample\":32,\"maxComputeWorkgroupStorageSize\":16384,\"maxComputeInvocationsPerWorkgroup\":256,\"maxComputeWorkgroupSizeX\":256,\"maxComputeWorkgroupSizeY\":256,\"maxComputeWorkgroupSizeZ\":64,\"maxComputeWorkgroupsPerDimension\":65535,\"maxImmediateSize\":64,\"maxStorageBuffersInFragmentStage\":8,\"maxStorageTexturesInFragmentStage\":4,\"maxStorageBuffersInVertexStage\":8,\"maxStorageTexturesInVertexStage\":4},\"unavailableOptionalFeatures\":[],\"fallbackAdapter\":null,\"format\":\"bgra8unorm\"}",
+    "Main log written to '/logs/mainlog.html'",
+    "Interesting log written to '/logs/interestinglog.html'",
+    "Sound: AlcInit success, using Emscripten OpenAL",
+    "Hardware details written to '/logs/system_info.txt'",
+    "Failed to query SDL WM info: That operation is not supportedUserReport written to '/logs/userreport_hwdetect.txt'",
+    "Failed to load resource: the server responded with a status of 404 (File not found)",
+    "worker sent an error! http://localhost:8095/pyrogenesis-application.mjs:0: Controlled SDK worker failure",
+    "{\"type\":\"device-lost\",\"backend\":\"webgpu\",\"reason\":\"destroyed\",\"message\":\"Device was destroyed.\",\"expected\":true}",
+    "{\"type\":\"engine-device-lost\",\"reason\":\"destroyed\",\"message\":\"Device was destroyed.\",\"expected\":true}",
+    "The powerPreference option is currently ignored when calling requestAdapter() on Windows. See https://crbug.com/369219127",
+    "{\"type\":\"ready\",\"backend\":\"webgpu\",\"powerPreference\":\"high-performance\",\"owner\":\"main-thread\",\"adapter\":{\"vendor\":\"nvidia\",\"architecture\":\"ampere\",\"device\":\"\",\"description\":\"\"},\"adapterFeatures\":[\"bgra8unorm-storage\",\"clip-distances\",\"core-features-and-limits\",\"depth-clip-control\",\"depth32float-stencil8\",\"dual-source-blending\",\"float32-blendable\",\"float32-filterable\",\"indirect-first-instance\",\"primitive-index\",\"rg11b10ufloat-renderable\",\"shader-f16\",\"subgroup-size-control\",\"subgroups\",\"texture-component-swizzle\",\"texture-compression-bc\",\"texture-compression-bc-sliced-3d\",\"texture-formats-tier1\",\"texture-formats-tier2\",\"timestamp-query\"],\"adapterLimits\":{\"maxTextureDimension1D\":16384,\"maxTextureDimension2D\":16384,\"maxTextureDimension3D\":2048,\"maxTextureArrayLayers\":2048,\"maxBindGroups\":4,\"maxBindGroupsPlusVertexBuffers\":24,\"maxBindingsPerBindGroup\":1000,\"maxDynamicUniformBuffersPerPipelineLayout\":10,\"maxDynamicStorageBuffersPerPipelineLayout\":8,\"maxSampledTexturesPerShaderStage\":48,\"maxSamplersPerShaderStage\":16,\"maxStorageBuffersPerShaderStage\":16,\"maxStorageTexturesPerShaderStage\":8,\"maxUniformBuffersPerShaderStage\":12,\"maxUniformBufferBindingSize\":65536,\"maxStorageBufferBindingSize\":2147483644,\"minUniformBufferOffsetAlignment\":256,\"minStorageBufferOffsetAlignment\":256,\"maxVertexBuffers\":8,\"maxBufferSize\":2147483648,\"maxVertexAttributes\":30,\"maxVertexBufferArrayStride\":2048,\"maxInterStageShaderVariables\":28,\"maxColorAttachments\":8,\"maxColorAttachmentBytesPerSample\":128,\"maxComputeWorkgroupStorageSize\":32768,\"maxComputeInvocationsPerWorkgroup\":1024,\"maxComputeWorkgroupSizeX\":1024,\"maxComputeWorkgroupSizeY\":1024,\"maxComputeWorkgroupSizeZ\":64,\"maxComputeWorkgroupsPerDimension\":65535,\"maxImmediateSize\":64,\"maxStorageBuffersInFragmentStage\":16,\"maxStorageTexturesInFragmentStage\":8,\"maxStorageBuffersInVertexStage\":16,\"maxStorageTexturesInVertexStage\":8},\"deviceFeatures\":[\"core-features-and-limits\",\"depth32float-stencil8\",\"dual-source-blending\",\"float32-blendable\",\"float32-filterable\",\"rg11b10ufloat-renderable\",\"texture-compression-bc\"],\"deviceLimits\":{\"maxTextureDimension1D\":8192,\"maxTextureDimension2D\":8192,\"maxTextureDimension3D\":2048,\"maxTextureArrayLayers\":256,\"maxBindGroups\":4,\"maxBindGroupsPlusVertexBuffers\":24,\"maxBindingsPerBindGroup\":1000,\"maxDynamicUniformBuffersPerPipelineLayout\":8,\"maxDynamicStorageBuffersPerPipelineLayout\":4,\"maxSampledTexturesPerShaderStage\":16,\"maxSamplersPerShaderStage\":16,\"maxStorageBuffersPerShaderStage\":8,\"maxStorageTexturesPerShaderStage\":4,\"maxUniformBuffersPerShaderStage\":12,\"maxUniformBufferBindingSize\":65536,\"maxStorageBufferBindingSize\":134217728,\"minUniformBufferOffsetAlignment\":256,\"minStorageBufferOffsetAlignment\":256,\"maxVertexBuffers\":8,\"maxBufferSize\":268435456,\"maxVertexAttributes\":16,\"maxVertexBufferArrayStride\":2048,\"maxInterStageShaderVariables\":16,\"maxColorAttachments\":8,\"maxColorAttachmentBytesPerSample\":32,\"maxComputeWorkgroupStorageSize\":16384,\"maxComputeInvocationsPerWorkgroup\":256,\"maxComputeWorkgroupSizeX\":256,\"maxComputeWorkgroupSizeY\":256,\"maxComputeWorkgroupSizeZ\":64,\"maxComputeWorkgroupsPerDimension\":65535,\"maxImmediateSize\":64,\"maxStorageBuffersInFragmentStage\":8,\"maxStorageTexturesInFragmentStage\":4,\"maxStorageBuffersInVertexStage\":8,\"maxStorageTexturesInVertexStage\":4},\"unavailableOptionalFeatures\":[],\"fallbackAdapter\":null,\"format\":\"bgra8unorm\"}",
+    "Main log written to '/logs/mainlog.html'",
+    "Interesting log written to '/logs/interestinglog.html'",
+    "Sound: AlcInit success, using Emscripten OpenAL",
+    "Hardware details written to '/logs/system_info.txt'",
+    "Failed to query SDL WM info: That operation is not supportedUserReport written to '/logs/userreport_hwdetect.txt'",
+    "{\"type\":\"device-lost\",\"backend\":\"webgpu\",\"reason\":\"destroyed\",\"message\":\"Device was destroyed.\",\"expected\":true}",
+    "{\"type\":\"engine-device-lost\",\"reason\":\"destroyed\",\"message\":\"Device was destroyed.\",\"expected\":true}"
+  ],
+  "buildSHA256": {
+    "pyrogenesis-application.mjs": "8b4c2bbbf7baf76f429b29f7bca8ae72443d0b42b24ec9a9a65c7524eb47c454",
+    "pyrogenesis-application.wasm": "d7cc122be72ea67f443b4f9c7d245c3f9a26582cb7f7b2f0fb8d2e0478ae40e5",
+    "application.html": "a95439568efb0c65fe6c728ec2241470a4bc384679080ee5c4936be1a68433ce",
+    "application.mjs": "89c9a54b383a5c9b41c9091909668af752867338758693d6dcf29050803c5a7d",
+    "application-data.json": "5b84e2a95559994231e6408e51f4bd45f2048d274e63e9d0e8b7fc6f704c810a",
+    "webgpu-shaders.json": "8d9280a27514b940ed61a9d0710ad92c39c8b425ff013b2d29c8b4fb33f08085",
+    "renderer-session.mjs": "95058d8db9311e844a5b69d3a895d7eb40c80e17b1f08691451b452a463f63c4",
+    "webgpu-engine.mjs": "fc808918332b98430a4f1be58db4b41ac1560275d6ec4296265a08816fbcdb5e",
+    "webgpu-border.mjs": "e9a7d9a88ac447b908249dc863e8adf9907b07830615019699588cbb2d695e8b",
+    "application-pointer.mjs": "0e781c584dff24c3005f875b070f715046dabe3ea1e388edfecd3f998b36bb47",
+    "application-failure.mjs": "6f5b5d70105db9366e978fd0ba7a51578db9b22298c1272f24795f23b591ccc1"
+  },
+  "fullscreen": {
+    "window": {
+      "windowId": 976006395,
+      "bounds": {
+        "left": 0,
+        "top": 0,
+        "width": 2560,
+        "height": 1080,
+        "windowState": "fullscreen"
+      }
+    },
+    "dimensions": {
+      "inner": [
+        2560,
+        1080
+      ],
+      "screen": [
+        2560,
+        1080
+      ],
+      "dpr": 1,
+      "focused": true,
+      "canvasCSS": [
+        1920,
+        1080
+      ],
+      "foregroundWindow": {
+        "hwnd": 724066,
+        "ownerProcessId": 17684,
+        "expectedProcessId": 17684,
+        "clientSize": [
+          2560,
+          1080
+        ]
+      }
+    },
+    "internalResolution": [
+      1920,
+      1080
+    ]
+  },
+  "before": {
+    "audio": {
+      "contexts": [
+        {
+          "id": 2,
+          "state": "running",
+          "sampleRate": 48000,
+          "sources": 64,
+          "gain": 0.8999999761581421,
+          "playingSources": 1
+        }
+      ],
+      "decodedBuffers": [
+        {
+          "frames": 24576,
+          "channels": 2,
+          "sampleRate": 48000,
+          "nonzeroSamples": 384
+        },
+        {
+          "frames": 24576,
+          "channels": 2,
+          "sampleRate": 48000,
+          "nonzeroSamples": 384
+        },
+        {
+          "frames": 24576,
+          "channels": 2,
+          "sampleRate": 48000,
+          "nonzeroSamples": 384
+        },
+        {
+          "frames": 24576,
+          "channels": 2,
+          "sampleRate": 48000,
+          "nonzeroSamples": 384
+        },
+        {
+          "frames": 24576,
+          "channels": 2,
+          "sampleRate": 48000,
+          "nonzeroSamples": 384
+        },
+        {
+          "frames": 24576,
+          "channels": 2,
+          "sampleRate": 48000,
+          "nonzeroSamples": 384
+        },
+        {
+          "frames": 24576,
+          "channels": 2,
+          "sampleRate": 48000,
+          "nonzeroSamples": 382
+        },
+        {
+          "frames": 24576,
+          "channels": 2,
+          "sampleRate": 48000,
+          "nonzeroSamples": 384
+        },
+        {
+          "frames": 24576,
+          "channels": 2,
+          "sampleRate": 48000,
+          "nonzeroSamples": 384
+        },
+        {
+          "frames": 24576,
+          "channels": 2,
+          "sampleRate": 48000,
+          "nonzeroSamples": 384
+        },
+        {
+          "frames": 24576,
+          "channels": 2,
+          "sampleRate": 48000,
+          "nonzeroSamples": 384
+        },
+        {
+          "frames": 24576,
+          "channels": 2,
+          "sampleRate": 48000,
+          "nonzeroSamples": 384
+        },
+        {
+          "frames": 24576,
+          "channels": 2,
+          "sampleRate": 48000,
+          "nonzeroSamples": 384
+        },
+        {
+          "frames": 24576,
+          "channels": 2,
+          "sampleRate": 48000,
+          "nonzeroSamples": 384
+        },
+        {
+          "frames": 24576,
+          "channels": 2,
+          "sampleRate": 48000,
+          "nonzeroSamples": 384
+        },
+        {
+          "frames": 24576,
+          "channels": 2,
+          "sampleRate": 48000,
+          "nonzeroSamples": 384
+        },
+        {
+          "frames": 24576,
+          "channels": 2,
+          "sampleRate": 48000,
+          "nonzeroSamples": 384
+        },
+        {
+          "frames": 24576,
+          "channels": 2,
+          "sampleRate": 48000,
+          "nonzeroSamples": 384
+        },
+        {
+          "frames": 24576,
+          "channels": 2,
+          "sampleRate": 48000,
+          "nonzeroSamples": 384
+        },
+        {
+          "frames": 24576,
+          "channels": 2,
+          "sampleRate": 48000,
+          "nonzeroSamples": 384
+        },
+        {
+          "frames": 24576,
+          "channels": 2,
+          "sampleRate": 48000,
+          "nonzeroSamples": 384
+        },
+        {
+          "frames": 24576,
+          "channels": 2,
+          "sampleRate": 48000,
+          "nonzeroSamples": 384
+        },
+        {
+          "frames": 24576,
+          "channels": 2,
+          "sampleRate": 48000,
+          "nonzeroSamples": 384
+        },
+        {
+          "frames": 24576,
+          "channels": 2,
+          "sampleRate": 48000,
+          "nonzeroSamples": 384
+        },
+        {
+          "frames": 24576,
+          "channels": 2,
+          "sampleRate": 48000,
+          "nonzeroSamples": 384
+        },
+        {
+          "frames": 24576,
+          "channels": 2,
+          "sampleRate": 48000,
+          "nonzeroSamples": 384
+        },
+        {
+          "frames": 24576,
+          "channels": 2,
+          "sampleRate": 48000,
+          "nonzeroSamples": 384
+        },
+        {
+          "frames": 24576,
+          "channels": 2,
+          "sampleRate": 48000,
+          "nonzeroSamples": 384
+        },
+        {
+          "frames": 24576,
+          "channels": 2,
+          "sampleRate": 48000,
+          "nonzeroSamples": 384
+        },
+        {
+          "frames": 24576,
+          "channels": 2,
+          "sampleRate": 48000,
+          "nonzeroSamples": 384
+        },
+        {
+          "frames": 24576,
+          "channels": 2,
+          "sampleRate": 48000,
+          "nonzeroSamples": 383
+        },
+        {
+          "frames": 24576,
+          "channels": 2,
+          "sampleRate": 48000,
+          "nonzeroSamples": 384
+        },
+        {
+          "frames": 24576,
+          "channels": 2,
+          "sampleRate": 48000,
+          "nonzeroSamples": 384
+        },
+        {
+          "frames": 24576,
+          "channels": 2,
+          "sampleRate": 48000,
+          "nonzeroSamples": 384
+        },
+        {
+          "frames": 24576,
+          "channels": 2,
+          "sampleRate": 48000,
+          "nonzeroSamples": 383
+        },
+        {
+          "frames": 24576,
+          "channels": 2,
+          "sampleRate": 48000,
+          "nonzeroSamples": 384
+        },
+        {
+          "frames": 24576,
+          "channels": 2,
+          "sampleRate": 48000,
+          "nonzeroSamples": 383
+        },
+        {
+          "frames": 24576,
+          "channels": 2,
+          "sampleRate": 48000,
+          "nonzeroSamples": 384
+        },
+        {
+          "frames": 24576,
+          "channels": 2,
+          "sampleRate": 48000,
+          "nonzeroSamples": 384
+        },
+        {
+          "frames": 24576,
+          "channels": 2,
+          "sampleRate": 48000,
+          "nonzeroSamples": 384
+        },
+        {
+          "frames": 24576,
+          "channels": 2,
+          "sampleRate": 48000,
+          "nonzeroSamples": 384
+        },
+        {
+          "frames": 24576,
+          "channels": 2,
+          "sampleRate": 48000,
+          "nonzeroSamples": 384
+        },
+        {
+          "frames": 24576,
+          "channels": 2,
+          "sampleRate": 48000,
+          "nonzeroSamples": 384
+        },
+        {
+          "frames": 24576,
+          "channels": 2,
+          "sampleRate": 48000,
+          "nonzeroSamples": 384
+        },
+        {
+          "frames": 24576,
+          "channels": 2,
+          "sampleRate": 48000,
+          "nonzeroSamples": 384
+        },
+        {
+          "frames": 24576,
+          "channels": 2,
+          "sampleRate": 48000,
+          "nonzeroSamples": 384
+        },
+        {
+          "frames": 24576,
+          "channels": 2,
+          "sampleRate": 48000,
+          "nonzeroSamples": 384
+        },
+        {
+          "frames": 24576,
+          "channels": 2,
+          "sampleRate": 48000,
+          "nonzeroSamples": 384
+        },
+        {
+          "frames": 24576,
+          "channels": 2,
+          "sampleRate": 48000,
+          "nonzeroSamples": 384
+        },
+        {
+          "frames": 24576,
+          "channels": 2,
+          "sampleRate": 48000,
+          "nonzeroSamples": 384
+        }
+      ],
+      "closed": []
+    },
+    "workers": {
+      "running": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "pooled": [],
+      "pthreads": [
+        "7864368",
+        "17305400",
+        "22552120",
+        "27798840",
+        "46260032",
+        "48352832",
+        "50445632",
+        "52539976",
+        "54634320",
+        "56728664",
+        "58823008",
+        "60917352",
+        "86625384",
+        "91872104"
+      ]
+    }
+  },
+  "fatalResult": {
+    "error": "Controlled SDK worker failure"
+  },
+  "shutdown": {
+    "samples": [
+      {
+        "seconds": 0.004822899999908259,
+        "sdk": {
+          "running": [],
+          "pooled": [],
+          "pthreads": []
+        },
+        "workers": [
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs"
+        ]
+      },
+      {
+        "seconds": 0.26578710000012506,
+        "sdk": {
+          "running": [],
+          "pooled": [],
+          "pthreads": []
+        },
+        "workers": [
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs"
+        ]
+      },
+      {
+        "seconds": 0.5276966000001266,
+        "sdk": {
+          "running": [],
+          "pooled": [],
+          "pthreads": []
+        },
+        "workers": [
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs"
+        ]
+      },
+      {
+        "seconds": 0.7927515999999741,
+        "sdk": {
+          "running": [],
+          "pooled": [],
+          "pthreads": []
+        },
+        "workers": [
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs"
+        ]
+      },
+      {
+        "seconds": 1.0588183999998364,
+        "sdk": {
+          "running": [],
+          "pooled": [],
+          "pthreads": []
+        },
+        "workers": [
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs"
+        ]
+      },
+      {
+        "seconds": 1.3351579999998648,
+        "sdk": {
+          "running": [],
+          "pooled": [],
+          "pthreads": []
+        },
+        "workers": [
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs"
+        ]
+      },
+      {
+        "seconds": 1.6003989999999249,
+        "sdk": {
+          "running": [],
+          "pooled": [],
+          "pthreads": []
+        },
+        "workers": [
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs"
+        ]
+      },
+      {
+        "seconds": 1.859396199999992,
+        "sdk": {
+          "running": [],
+          "pooled": [],
+          "pthreads": []
+        },
+        "workers": [
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs",
+          "http://localhost:8095/pyrogenesis-application.mjs"
+        ]
+      },
+      {
+        "seconds": 2.1245442999997977,
+        "sdk": {
+          "running": [],
+          "pooled": [],
+          "pthreads": []
+        },
+        "workers": []
+      }
+    ],
+    "sdk": {
+      "running": [],
+      "pooled": [],
+      "pthreads": []
+    },
+    "workers": [],
+    "liveApplicationTargets": []
+  },
+  "after": {
+    "audio": {
+      "contexts": [],
+      "decodedBuffers": [],
+      "closed": []
+    },
+    "fullscreen": false,
+    "pointerLocked": false,
+    "gpuDisposed": true,
+    "status": "Error del motor: Controlled SDK worker failure. Recarga la p\u00e1gina para continuar."
+  },
+  "restartedRenderer": {
+    "backend": "webgpu",
+    "powerPreference": "high-performance",
+    "owner": "main-thread",
+    "adapter": {
+      "vendor": "nvidia",
+      "architecture": "ampere",
+      "device": "",
+      "description": ""
+    },
+    "adapterFeatures": [
+      "bgra8unorm-storage",
+      "clip-distances",
+      "core-features-and-limits",
+      "depth-clip-control",
+      "depth32float-stencil8",
+      "dual-source-blending",
+      "float32-blendable",
+      "float32-filterable",
+      "indirect-first-instance",
+      "primitive-index",
+      "rg11b10ufloat-renderable",
+      "shader-f16",
+      "subgroup-size-control",
+      "subgroups",
+      "texture-component-swizzle",
+      "texture-compression-bc",
+      "texture-compression-bc-sliced-3d",
+      "texture-formats-tier1",
+      "texture-formats-tier2",
+      "timestamp-query"
+    ],
+    "adapterLimits": {
+      "maxTextureDimension1D": 16384,
+      "maxTextureDimension2D": 16384,
+      "maxTextureDimension3D": 2048,
+      "maxTextureArrayLayers": 2048,
+      "maxBindGroups": 4,
+      "maxBindGroupsPlusVertexBuffers": 24,
+      "maxBindingsPerBindGroup": 1000,
+      "maxDynamicUniformBuffersPerPipelineLayout": 10,
+      "maxDynamicStorageBuffersPerPipelineLayout": 8,
+      "maxSampledTexturesPerShaderStage": 48,
+      "maxSamplersPerShaderStage": 16,
+      "maxStorageBuffersPerShaderStage": 16,
+      "maxStorageTexturesPerShaderStage": 8,
+      "maxUniformBuffersPerShaderStage": 12,
+      "maxUniformBufferBindingSize": 65536,
+      "maxStorageBufferBindingSize": 2147483644,
+      "minUniformBufferOffsetAlignment": 256,
+      "minStorageBufferOffsetAlignment": 256,
+      "maxVertexBuffers": 8,
+      "maxBufferSize": 2147483648,
+      "maxVertexAttributes": 30,
+      "maxVertexBufferArrayStride": 2048,
+      "maxInterStageShaderVariables": 28,
+      "maxColorAttachments": 8,
+      "maxColorAttachmentBytesPerSample": 128,
+      "maxComputeWorkgroupStorageSize": 32768,
+      "maxComputeInvocationsPerWorkgroup": 1024,
+      "maxComputeWorkgroupSizeX": 1024,
+      "maxComputeWorkgroupSizeY": 1024,
+      "maxComputeWorkgroupSizeZ": 64,
+      "maxComputeWorkgroupsPerDimension": 65535,
+      "maxImmediateSize": 64,
+      "maxStorageBuffersInFragmentStage": 16,
+      "maxStorageTexturesInFragmentStage": 8,
+      "maxStorageBuffersInVertexStage": 16,
+      "maxStorageTexturesInVertexStage": 8
+    },
+    "deviceFeatures": [
+      "core-features-and-limits",
+      "depth32float-stencil8",
+      "dual-source-blending",
+      "float32-blendable",
+      "float32-filterable",
+      "rg11b10ufloat-renderable",
+      "texture-compression-bc"
+    ],
+    "deviceLimits": {
+      "maxTextureDimension1D": 8192,
+      "maxTextureDimension2D": 8192,
+      "maxTextureDimension3D": 2048,
+      "maxTextureArrayLayers": 256,
+      "maxBindGroups": 4,
+      "maxBindGroupsPlusVertexBuffers": 24,
+      "maxBindingsPerBindGroup": 1000,
+      "maxDynamicUniformBuffersPerPipelineLayout": 8,
+      "maxDynamicStorageBuffersPerPipelineLayout": 4,
+      "maxSampledTexturesPerShaderStage": 16,
+      "maxSamplersPerShaderStage": 16,
+      "maxStorageBuffersPerShaderStage": 8,
+      "maxStorageTexturesPerShaderStage": 4,
+      "maxUniformBuffersPerShaderStage": 12,
+      "maxUniformBufferBindingSize": 65536,
+      "maxStorageBufferBindingSize": 134217728,
+      "minUniformBufferOffsetAlignment": 256,
+      "minStorageBufferOffsetAlignment": 256,
+      "maxVertexBuffers": 8,
+      "maxBufferSize": 268435456,
+      "maxVertexAttributes": 16,
+      "maxVertexBufferArrayStride": 2048,
+      "maxInterStageShaderVariables": 16,
+      "maxColorAttachments": 8,
+      "maxColorAttachmentBytesPerSample": 32,
+      "maxComputeWorkgroupStorageSize": 16384,
+      "maxComputeInvocationsPerWorkgroup": 256,
+      "maxComputeWorkgroupSizeX": 256,
+      "maxComputeWorkgroupSizeY": 256,
+      "maxComputeWorkgroupSizeZ": 64,
+      "maxComputeWorkgroupsPerDimension": 65535,
+      "maxImmediateSize": 64,
+      "maxStorageBuffersInFragmentStage": 8,
+      "maxStorageTexturesInFragmentStage": 4,
+      "maxStorageBuffersInVertexStage": 8,
+      "maxStorageTexturesInVertexStage": 4
+    },
+    "unavailableOptionalFeatures": [],
+    "fallbackAdapter": null,
+    "format": "bgra8unorm"
+  },
+  "restartExitCode": 0,
+  "restartShutdown": {
+    "samples": [
+      {
+        "seconds": 0.00459099999989121,
+        "sdk": {
+          "running": [],
+          "pooled": [],
+          "pthreads": []
+        },
+        "workers": []
+      }
+    ],
+    "sdk": {
+      "running": [],
+      "pooled": [],
+      "pthreads": []
+    },
+    "workers": [],
+    "liveApplicationTargets": []
+  },
+  "finalShutdown": {
+    "samples": [
+      {
+        "seconds": 0.004112499999791908,
+        "sdk": {
+          "running": [],
+          "pooled": [],
+          "pthreads": []
+        },
+        "workers": []
+      }
+    ],
+    "sdk": {
+      "running": [],
+      "pooled": [],
+      "pthreads": []
+    },
+    "workers": [],
+    "liveApplicationTargets": []
+  }
+}

@@ -1,0 +1,231 @@
+{
+  "diagnosticOnly": true,
+  "performanceAcceptance": false,
+  "profiles": [
+    {
+      "file": "cpu-12.cpuprofile",
+      "SHA256": "d4200d69a22451b7f826727827779825cb90faa147773efec0e5fc7137546c01",
+      "sampledSeconds": 31.251968,
+      "regionsSeconds": {
+        "gameUpdate": 9.546868,
+        "snapshotCapture": 2.302193,
+        "aiSetup": 2.517453,
+        "aiResultBarrier": 1.983395,
+        "actorComputation": 0.0,
+        "uploadRaw": 6.740669,
+        "uploadCallback": 7.206281,
+        "appendUpload": 0.983369,
+        "garbageCollection": 0.001514
+      },
+      "topSelf": [
+        {
+          "function": "Renderer::Backend::WebGPU::(anonymous namespace)::Context::UploadBufferRegion(Renderer::Backend::IBuffer*, void const*, unsigned int, unsigned int)",
+          "seconds": 4.748738
+        },
+        {
+          "function": "emscripten_futex_wait",
+          "seconds": 2.58927
+        },
+        {
+          "function": "js::pbl::PortableBaselineInterpret(JSContext*, js::pbl::State&, js::pbl::Stack&, js::pbl::StackVal*, JSObject*, JS::Value*)",
+          "seconds": 2.111951
+        },
+        {
+          "function": "ModelRenderer::Render(Renderer::Backend::IDeviceCommandContext*, ModelVertexRenderer&, RenderModifier&, CShaderDefines const&, int, int, ERenderMode, std::__2::span<CModel*, 4294967295ul>)",
+          "seconds": 1.933941
+        },
+        {
+          "function": "_emscripten_get_now",
+          "seconds": 1.433389
+        },
+        {
+          "function": "Renderer::Backend::WebGPU::AppendUploadBytes(std::__2::vector<unsigned char, std::__2::allocator<unsigned char>>&, std::__2::span<unsigned char const, 4294967295ul>, unsigned int, unsigned int)",
+          "seconds": 0.983369
+        },
+        {
+          "function": "Renderer::Backend::WebGPU::(anonymous namespace)::CallAsync(char const*, std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>> const&, void const*, unsigned long)",
+          "seconds": 0.838292
+        },
+        {
+          "function": "Renderer::Backend::WebGPU::(anonymous namespace)::Context::SetUniform(int, std::__2::span<float const, 4294967295ul>)",
+          "seconds": 0.758855
+        },
+        {
+          "function": "CModel::InvalidatePosition()",
+          "seconds": 0.698174
+        },
+        {
+          "function": "CCmpUnitRenderer::HandleMessage(CMessage const&, bool)",
+          "seconds": 0.619941
+        },
+        {
+          "function": "CUnitAnimation::Update(float)",
+          "seconds": 0.610278
+        },
+        {
+          "function": "ShaderRenderModifier::PrepareModel(Renderer::Backend::IDeviceCommandContext*, CModel*)",
+          "seconds": 0.465991
+        },
+        {
+          "function": "CSceneRenderer::SubmitNonRecursive(CModel*)",
+          "seconds": 0.460277
+        },
+        {
+          "function": "Renderer::Backend::WebGPU::(anonymous namespace)::Context::UploadBufferRegion(Renderer::Backend::IBuffer*, unsigned int, unsigned int, std::__2::function<void (unsigned char*)> const&)",
+          "seconds": 0.43996
+        },
+        {
+          "function": "CModel::GetWorldBoundsRec()",
+          "seconds": 0.369395
+        }
+      ],
+      "timerParents": [
+        {
+          "stack": "wasm-to-js -> bool CComponentTypeScript::Call<bool>(char const*) const -> CCmpUnitRenderer::HandleMessage(CMessage const&, bool)",
+          "seconds": 0.405146
+        },
+        {
+          "stack": "_clock_time_get -> wasm-to-js -> __clock_gettime",
+          "seconds": 0.377687
+        },
+        {
+          "stack": "_clock_time_get -> wasm-to-js -> timer_Time()",
+          "seconds": 0.336168
+        },
+        {
+          "stack": "_clock_time_get -> wasm-to-js -> js::RunScript(JSContext*, js::RunState&)",
+          "seconds": 0.232042
+        },
+        {
+          "stack": "wasm-to-js -> bool Script::Function::Call_<Script::Function::IgnoreResult_t, JS::Rooted<JS::Value>>(Script::Request const&, JS::Handle<JS::Value>, char const*, Script::Function::IgnoreResult_t&, JS::Rooted<JS::Value> const&) -> CComponentTypeScript::HandleMessage(CMessage const&, bool)",
+          "seconds": 0.026844
+        },
+        {
+          "stack": "wasm-to-js -> __timedwait_cp -> __pthread_cond_timedwait",
+          "seconds": 0.012341
+        },
+        {
+          "stack": "wasm-to-js -> CCmpSoundScripted::GetSoundGroup(std::__2::basic_string<wchar_t, std::__2::char_traits<wchar_t>, std::__2::allocator<wchar_t>> const&) const -> CCmpVisualActor::SelectAnimation(std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>> const&, bool, CFixed<int, 2147483647, 32, 15, 16, 65536>)",
+          "seconds": 0.010892
+        },
+        {
+          "stack": "wasm-to-js -> bool CComponentTypeScript::Call<bool>(char const*) const -> CCmpFoggingScripted::IsActivated()",
+          "seconds": 0.010693
+        },
+        {
+          "stack": "wasm-to-js -> CCmpGuiInterfaceScripted::ScriptCall(int, std::__2::basic_string<wchar_t, std::__2::char_traits<wchar_t>, std::__2::allocator<wchar_t>> const&, JS::Handle<JS::Value>, JS::MutableHandle<JS::Value>) -> bool Script::Function::ToJSNative<&JSI_Simulation::GuiInterfaceCall(Script::Interface const&, std::__2::basic_string<wchar_t, std::__2::char_traits<wchar_t>, std::__2::allocator<wchar_t>> const&, JS::Handle<JS::Value>), (void* (*)(Script::Request const&, JS::CallArgs&))0>(JSContext*, unsigned int, JS::Value*)",
+          "seconds": 0.004639
+        },
+        {
+          "stack": "wasm-to-js -> unsigned int CComponentTypeScript::Call<unsigned int, int>(char const*, int const&) const -> CCmpPlayerManagerScripted::GetPlayerByID(int)",
+          "seconds": 0.004556
+        },
+        {
+          "stack": "wasm-to-js -> int CComponentTypeScript::Call<int>(char const*) const -> CCmpPlayerManagerScripted::GetNumPlayers()",
+          "seconds": 0.003057
+        },
+        {
+          "stack": "wasm-to-js -> CColor CComponentTypeScript::Call<CColor>(char const*) const -> CCmpPlayerScripted::GetDisplayedColor()",
+          "seconds": 0.001596
+        }
+      ]
+    },
+    {
+      "file": "cpu-16.cpuprofile",
+      "SHA256": "ac6408d87b819fb789c3896450ddceac77f23bf40edb3c768002d5f53e9284a7",
+      "sampledSeconds": 31.043197,
+      "regionsSeconds": {
+        "gameUpdate": 0.0,
+        "snapshotCapture": 0.0,
+        "aiSetup": 0.0,
+        "aiResultBarrier": 0.0,
+        "actorComputation": 4.55827,
+        "uploadRaw": 0.0,
+        "uploadCallback": 0.0,
+        "appendUpload": 0.0,
+        "garbageCollection": 0.0
+      },
+      "topSelf": [
+        {
+          "function": "emscripten_futex_wait",
+          "seconds": 25.994135
+        },
+        {
+          "function": "js::pbl::PortableBaselineInterpret(JSContext*, js::pbl::State&, js::pbl::Stack&, js::pbl::StackVal*, JSObject*, JS::Value*)",
+          "seconds": 2.938256
+        },
+        {
+          "function": "js::jit::ICScript::interpreterICEntryFromPCOffset(unsigned int)",
+          "seconds": 0.127482
+        },
+        {
+          "function": "js::NativeGetPropertyNoGC(JSContext*, js::NativeObject*, JS::Value const&, JS::PropertyKey, JS::Value*)",
+          "seconds": 0.117603
+        },
+        {
+          "function": "js::InternalCallOrConstruct(JSContext*, JS::CallArgs const&, js::MaybeConstruct, js::CallReason)",
+          "seconds": 0.097522
+        },
+        {
+          "function": "js::jit::DoCallFallback(JSContext*, js::jit::BaselineFrame*, js::jit::ICFallbackStub*, unsigned int, JS::Value*, JS::MutableHandle<JS::Value>)",
+          "seconds": 0.089724
+        },
+        {
+          "function": "ReadStructuredClone(JSContext*, JSStructuredCloneData const&, JS::StructuredCloneScope, JS::MutableHandle<JS::Value>, JS::CloneDataPolicy const&, JSStructuredCloneCallbacks const*, void*)",
+          "seconds": 0.077385
+        },
+        {
+          "function": "js::jit::MaybeForwardedScriptFromCalleeToken(void*)",
+          "seconds": 0.075461
+        },
+        {
+          "function": "js::jit::CacheIRReader::CacheIRReader(js::jit::CacheIRStubInfo const*)",
+          "seconds": 0.074837
+        },
+        {
+          "function": "_emscripten_get_now",
+          "seconds": 0.074729
+        },
+        {
+          "function": "js::GetElementNoGC(JSContext*, JSObject*, JS::Value const&, unsigned int, JS::Value*)",
+          "seconds": 0.069279
+        },
+        {
+          "function": "JSStructuredCloneReader::startRead(JS::MutableHandle<JS::Value>, JSStructuredCloneReader::ShouldAtomizeStrings)",
+          "seconds": 0.063734
+        },
+        {
+          "function": "js::jit::MaybeEnterJit(JSContext*, js::RunState&)",
+          "seconds": 0.059495
+        },
+        {
+          "function": "js::NativeObject::addProperty(JSContext*, JS::Handle<js::NativeObject*>, JS::Handle<JS::PropertyKey>, js::PropertyFlags, unsigned int*)",
+          "seconds": 0.04975
+        },
+        {
+          "function": "js::TypedArrayObject::getElementPure(unsigned long, JS::Value*)",
+          "seconds": 0.043267
+        }
+      ],
+      "timerParents": [
+        {
+          "stack": "wasm-to-js -> __timedwait_cp -> __pthread_cond_timedwait",
+          "seconds": 0.065443
+        },
+        {
+          "stack": "_clock_time_get -> wasm-to-js -> __clock_gettime",
+          "seconds": 0.004658
+        },
+        {
+          "stack": "_clock_time_get -> wasm-to-js -> timer_Time()",
+          "seconds": 0.003104
+        },
+        {
+          "stack": "__timedwait_cp -> __pthread_cond_timedwait -> std::__2::condition_variable::wait(std::__2::unique_lock<std::__2::mutex>&)",
+          "seconds": 0.001524
+        }
+      ]
+    }
+  ],
+  "scope": "Sampled wall-stack residence. Nested regions overlap; self samples are not proof of exclusive CPU consumption. Timer parents locate sampled callers, not call counts."
+}

@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="es" translate="no">
+<meta charset="utf-8">
+<title>0 A.D. - escena original WebGL 2</title>
+<style>body{font-family:system-ui;margin:16px}canvas{display:block;border:1px solid #777;max-width:100%;height:auto}canvas:fullscreen{width:100vw;height:100vh;border:0;max-width:none}pre{max-height:220px;overflow:auto;font-size:12px}button,select{margin:4px}</style>
+<h1>Mapa original de 0 A.D.</h1>
+<p id="status">Cargando motor y recursos...</p>
+<p>Flechas: camara. Q/E o rueda: zoom. Clic: seleccionar. Clic derecho: mover.<br>Espacio: pausa. N: un turno durante pausa. R: reiniciar. Esc: salir de pantalla completa y pausar.</p>
+<div><button data-key="Space">Pausa / continuar</button><button data-key="KeyN">Un turno</button><button data-key="KeyR">Reiniciar mapa</button><button data-key="Escape">Cerrar escena</button><label>Resolucion <select id="resolution"><option value="640,480">640 x 480</option><option value="800,600">800 x 600</option><option value="1920,1080">1920 x 1080</option></select></label></div>
+<p id="metrics"></p>
+<div><button id="fullscreen">Pantalla completa</button><label>Escala de render en pantalla completa <select id="render-scale"><option value="1">100%</option><option value="0.75">75%</option><option value="0.5">50%</option></select></label><button id="recover">Recuperar escena</button><button id="export-profile">Exportar perfil</button></div>
+<canvas id="canvas" width="640" height="480" tabindex="0"></canvas>
+<details><summary>Registro</summary><pre id="log"></pre></details>
+<script type="module" src="scene.mjs"></script>
+</html>

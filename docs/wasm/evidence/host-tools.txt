@@ -1,0 +1,8 @@
+git: 2.42.0.windows.2
+git-lfs: 3.4.0
+node: v24.20.0
+python: 3.13.1
+cmake: 3.27.4
+emscripten: no encontrado en PATH
+Docker: motor Linux denegado desde sandbox
+WSL: Wsl/E_ACCESSDENIED

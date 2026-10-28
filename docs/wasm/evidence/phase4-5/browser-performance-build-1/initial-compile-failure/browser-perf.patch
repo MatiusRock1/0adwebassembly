@@ -1,0 +1,197 @@
+--- a/renderer/backend/webgpu/Device.cpp
++++ b/renderer/backend/webgpu/Device.cpp
+@@ -89,6 +89,11 @@
+         const fail = error => { err(error.stack || String(error)); abort(String(error)); };
+         const backend = Module.webgpuBackend;
+         if (!backend) { acknowledge(false);fail(new Error('Missing WebGPU engine bridge'));return; }
++        if (backend.dispatchShared) {
++            backend.dispatchShared(UTF8ToString($0 >>> 0), JSON.parse(UTF8ToString($1 >>> 0)),
++                HEAPU8.buffer, $2 >>> 0, $3 >>> 0, $4 >>> 0, $5 >>> 0);
++            return;
++        }
+         backend.commandDispatcher.enqueue(() => {
+             if ((((Module.webgpuAsyncSequence || 0) + 1) >>> 0) !== ($4 >>> 0)) throw new Error('WebGPU asynchronous command order changed');
+             Module.webgpuAsyncSequence = $4 >>> 0;
+@@ -101,6 +106,40 @@
+ int Call(const char* method, const S& args = "[]", const void* data = nullptr, size_t size = 0)
+ {
+     ReclaimAsyncCalls(true);
++#if defined(WASM_WEBGPU_RENDER_WORKER)
++    // Only this engine pthread waits. The window forwards the request and can
++    // process input while the dedicated render worker owns all GPU objects.
++    alignas(4) std::atomic<int> ready{0};
++    alignas(4) std::atomic<int> result{0};
++    MAIN_THREAD_ASYNC_EM_ASM({
++        const backend = Module.webgpuBackend;
++        const complete = value => {
++            Atomics.store(HEAP32, $5 >>> 2, value | 0);
++            Atomics.store(HEAP32, $4 >>> 2, 1); Atomics.notify(HEAP32, $4 >>> 2);
++        };
++        try {
++            if (!backend) throw new Error('Missing WebGPU engine bridge');
++            if (backend.requestShared) {
++                backend.requestShared(UTF8ToString($0 >>> 0), JSON.parse(UTF8ToString($1 >>> 0)),
++                    HEAPU8.buffer, $2 >>> 0, $3 >>> 0, $4 >>> 0, $5 >>> 0);
++            } else {
++                backend.heap = () => HEAPU8;
++                complete(backend.call(UTF8ToString($0 >>> 0), JSON.parse(UTF8ToString($1 >>> 0)),
++                    HEAPU8.subarray($2 >>> 0, ($2 >>> 0) + ($3 >>> 0))) || 0);
++            }
++        } catch (error) {
++            Atomics.store(HEAP32, $4 >>> 2, 2); Atomics.notify(HEAP32, $4 >>> 2);
++            err(error.stack || String(error)); abort(String(error));
++        }
++    }, method, args.c_str(), data, size, &ready, &result);
++    while (!ready.load())
++    {
++        emscripten_current_thread_process_queued_calls();
++        emscripten_futex_wait(&ready, 0, 100);
++    }
++    ENSURE(ready.load() == 1);
++    return result.load();
++#else
+     return MAIN_THREAD_EM_ASM_INT({
+         const backend = Module.webgpuBackend;
+         if (!backend) { err('WebGPU engine bridge was not initialized'); abort('Missing WebGPU engine bridge'); }
+@@ -108,6 +147,7 @@
+         try { return backend.call(UTF8ToString($0), JSON.parse(UTF8ToString($1)), HEAPU8.subarray($2, $2 + $3)) || 0; }
+         catch (error) { err(error.stack || String(error)); abort(String(error)); }
+     }, method, args.c_str(), data, size);
++#endif
+ }
+ void Wait(const char* method, S args = "[")
+ {
+--- a/lib/file/io/io.cpp
++++ b/lib/file/io/io.cpp
+@@ -27,6 +27,9 @@
+ #include "lib/config2.h"
+ 
+ #include <cerrno>
++#if defined(WASM_BROWSER_ARCHIVES)
++#include "browser_archives.h"
++#endif
+ 
+ static const StatusDefinition ioStatusDefinitions[] = {
+ 	{ ERR::IO, L"Error during IO", EIO }
+@@ -41,6 +44,20 @@
+ 
+ Status Issue(aiocb& cb, [[maybe_unused]] size_t queueDepth)
+ {
++#if defined(WASM_BROWSER_ARCHIVES)
++	if (cb.aio_lio_opcode == LIO_READ)
++	{
++		const int bytes = ReadBrowserArchive(cb.aio_fildes, static_cast<double>(cb.aio_offset),
++			const_cast<void*>(cb.aio_buf), cb.aio_nbytes);
++		if (bytes != -2)
++		{
++			if (bytes < 0)
++				WARN_RETURN(ERR::IO);
++			cb.aio_nbytes = static_cast<size_t>(bytes);
++			return INFO::OK;
++		}
++	}
++#endif
+ #if CONFIG2_FILE_ENABLE_AIO
+ 	if(queueDepth > 1)
+ 	{
+--- a/renderer/backend/gl/ShaderProgram.cpp
++++ b/renderer/backend/gl/ShaderProgram.cpp
+@@ -16,6 +16,9 @@
+  */
+ 
+ #include "precompiled.h"
++#if defined(WASM_PARALLEL_SHADER_COMPILE)
++#include "BrowserShaderCompile.h"
++#endif
+ 
+ #include "ShaderProgram.h"
+ 
+@@ -214,47 +217,6 @@
+ 				return false;
+ 			}
+ 			out = includeFile.GetAsString();
+-#if defined(__EMSCRIPTEN__)
+-			if (includePath == "common/shadows_fragment.h")
+-			{
+-				out.Replace("float getShadowImpl(vec4 shadowVertex, float shadowBias)",
+-					R"phase4(
+-#if USE_SHADOW && USE_SHADOW_PCF && !USE_SHADOW_SAMPLER
+-float phase4BilinearShadow(vec2 uv, float depth)
+-{
+-  vec2 pixel = uv * shadowScale.xy - 0.5;
+-  vec2 fraction = fract(pixel);
+-  vec2 base = (floor(pixel) + 0.5) * shadowScale.zw;
+-  vec2 texel = shadowScale.zw;
+-  vec4 comparisons = step(vec4(depth), vec4(
+-    SAMPLE_2D(GET_DRAW_TEXTURE_2D(shadowTex), base).r,
+-    SAMPLE_2D(GET_DRAW_TEXTURE_2D(shadowTex), base + vec2(texel.x, 0.0)).r,
+-    SAMPLE_2D(GET_DRAW_TEXTURE_2D(shadowTex), base + vec2(0.0, texel.y)).r,
+-    SAMPLE_2D(GET_DRAW_TEXTURE_2D(shadowTex), base + texel).r));
+-  return mix(mix(comparisons.x, comparisons.y, fraction.x),
+-             mix(comparisons.z, comparisons.w, fraction.x), fraction.y);
+-}
+-#endif
+-float getShadowImpl(vec4 shadowVertex, float shadowBias))phase4");
+-				out.Replace("    return (biasedShdwZ < SAMPLE_2D(GET_DRAW_TEXTURE_2D(shadowTex), shadowVertex.xy).x ? 1.0 : 0.0);",
+-					R"phase4(
+-#if USE_SHADOW_PCF
+-    // The non-shadow-sampler vertex path supplies normalized UVs.
+-    vec2 shadowTexelCoordinates = shadowVertex.xy * shadowScale.xy;
+-    vec2 offset = fract(shadowTexelCoordinates - 0.5);
+-    vec4 size = vec4(offset + 1.0, 2.0 - offset);
+-    vec4 weight = (vec4(1.0, 1.0, -0.5, -0.5) + (shadowTexelCoordinates - 0.5*offset).xyxy) * shadowScale.zwzw;
+-    return (1.0/9.0)*dot(size.zxzx*size.wwyy, vec4(
+-      phase4BilinearShadow(weight.zw, biasedShdwZ),
+-      phase4BilinearShadow(weight.xw, biasedShdwZ),
+-      phase4BilinearShadow(weight.zy, biasedShdwZ),
+-      phase4BilinearShadow(weight.xy, biasedShdwZ)));
+-#else
+-    return (biasedShdwZ < SAMPLE_2D(GET_DRAW_TEXTURE_2D(shadowTex), shadowVertex.xy).x ? 1.0 : 0.0);
+-#endif
+-)phase4");
+-			}
+-#endif
+ 			return true;
+ 		});
+ 	preprocessor.AddDefines(defines);
+@@ -267,15 +229,7 @@
+ 	preprocessor.AddDefine("GL_ES", "1");
+ #endif
+ 
+-	CStr shaderText = file.GetAsString();
+-#if defined(__EMSCRIPTEN__)
+-	// Original parallax iteration count is capped at 20. ES 1.00 requires
+-	// a constant loop bound; the early break preserves every sample.
+-	if (path == VfsPath("shaders/glsl/model_common.fs"))
+-		shaderText.Replace("for (int i = 0; i < iter; ++i) {",
+-			"for (int i = 0; i < 20; ++i) { if (i >= iter) break;");
+-#endif
+-	source = preprocessor.Preprocess(shaderText);
++	source = preprocessor.Preprocess(file.GetAsString());
+ 
+ 	return true;
+ }
+@@ -287,6 +241,12 @@
+ 	glShaderSource(shader, 1, &codeString, &codeLength);
+ 
+ 	glCompileShader(shader);
++#if defined(WASM_PARALLEL_SHADER_COMPILE)
++	// Poll completion after linking, before querying any blocking status.
++	// A compile failure still makes the original link-status check fail.
++	if (BrowserParallelShaderCompileAvailable())
++		return true;
++#endif
+ 
+ 	GLint ok = 0;
+ 	glGetShaderiv(shader, GL_COMPILE_STATUS, &ok);
+@@ -429,6 +389,10 @@
+ 		glBindAttribLocation(m_Program, it->second, it->first.c_str());
+ 
+ 	glLinkProgram(m_Program);
++#if defined(WASM_PARALLEL_SHADER_COMPILE)
++	if (!BrowserWaitForShaderProgram(m_Program))
++		return false;
++#endif
+ 
+ 	GLint ok = 0;
+ 	glGetProgramiv(m_Program, GL_LINK_STATUS, &ok);

@@ -1,0 +1,61 @@
+{
+  "passed": true,
+  "diagnosticOnly": true,
+  "performanceAcceptance": false,
+  "phase45Accepted": false,
+  "sourceSHA256": "db7e77e128197c49cb1dd4b8471a992c1ae5fd26e7fd04fb6ec014425e2c4db8",
+  "headerSHA256": "da8080743c9a9d39c5d5bd9a0d709111687b00185801b0301938adff926c8170",
+  "scope": "Exact sequential clamp outputs and concurrent maximum invariants; CPU timings are not game FPS evidence.",
+  "command": [
+    "em++",
+    "/workspace/wasm/probes/timer-monotonic.cpp",
+    "-std=c++20",
+    "-O2",
+    "-pthread",
+    "-fwasm-exceptions",
+    "-sSUPPORT_LONGJMP=wasm",
+    "-sPTHREAD_POOL_SIZE=8",
+    "-sENVIRONMENT=node",
+    "-sINITIAL_MEMORY=134217728",
+    "-sALLOW_MEMORY_GROWTH=1",
+    "-sEXIT_RUNTIME=1",
+    "-sASSERTIONS=2",
+    "-o",
+    "/phase45-build/timer-monotonic-probe/probe.js"
+  ],
+  "compileExitCode": 0,
+  "exitCode": 0,
+  "stdout": "{\"diagnosticOnly\":true,\"performanceAcceptance\":false,\"concurrency\":[{\"threads\":2,\"callsPerClock\":400000,\"mutexMs\":43.466,\"atomicMs\":6.216},{\"threads\":4,\"callsPerClock\":800000,\"mutexMs\":85.927,\"atomicMs\":18.252},{\"threads\":8,\"callsPerClock\":1600000,\"mutexMs\":457.798,\"atomicMs\":80.813}],\"passed\":true,\"checks\":10,\"lockFree\":true}\n",
+  "stderr": "",
+  "result": {
+    "diagnosticOnly": true,
+    "performanceAcceptance": false,
+    "concurrency": [
+      {
+        "threads": 2,
+        "callsPerClock": 400000,
+        "mutexMs": 43.466,
+        "atomicMs": 6.216
+      },
+      {
+        "threads": 4,
+        "callsPerClock": 800000,
+        "mutexMs": 85.927,
+        "atomicMs": 18.252
+      },
+      {
+        "threads": 8,
+        "callsPerClock": 1600000,
+        "mutexMs": 457.798,
+        "atomicMs": 80.813
+      }
+    ],
+    "passed": true,
+    "checks": 10,
+    "lockFree": true
+  },
+  "artifacts": {
+    "probe.js": "b97b9ae01401d912443c327817e57c35b8d8923350e4d211013ef5dba0f0115d",
+    "probe.wasm": "a3bab39b95807144da77f193575e2d106d3fb9a8e4584589c9d08e133a7a56a8"
+  }
+}

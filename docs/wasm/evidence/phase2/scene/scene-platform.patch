@@ -1,0 +1,282 @@
+--- a/source/renderer/Renderer.h
++++ b/source/renderer/Renderer.h
+@@ -19,6 +19,7 @@
+ #define INCLUDED_RENDERER
+ 
+ #include "ps/Singleton.h"
++#include "ps/Input.h"
+ #include "renderer/RenderingOptions.h"
+ 
+ #include <cstring>
+@@ -79,6 +80,7 @@
+ 
+ public:
+ 	CRenderer(Renderer::Backend::IDevice* device);
++ CRenderer(Renderer::Backend::IDevice* device, Input::Manager& inputManager, uint32_t width, uint32_t height);
+ 	~CRenderer();
+ 
+ 	// open up the renderer: performs any necessary initialisation
+--- a/source/renderer/Renderer.cpp
++++ b/source/renderer/Renderer.cpp
+@@ -397,16 +397,15 @@
+ 		}
+ 	};
+ 
+-	Input::Handler<InputHandler> m_InputHandler{g_VideoMode.m_InputManager, Input::Slot::SCREENSHOT,
+-		{m_ScreenShotType}};
+-
+-	Internals(Renderer::Backend::IDevice* device) :
++	Input::Handler<InputHandler> m_InputHandler;
++
++	Internals(Renderer::Backend::IDevice* device, Input::Manager& inputManager) :
+ 		device(device),
+ 		deviceCommandContext(device->CreateCommandContext()),
+ 		IsOpen(false), ShadersDirty(true), profileTable(g_Renderer.m_Stats, linearAllocator),
+ 		backendProfileTable(*device),
+ 		shaderManager(device), textureManager(g_VFS, false, device), vertexBufferManager(device),
+-		postprocManager(device), sceneRenderer(device), fontManager(device)
++		postprocManager(device), sceneRenderer(device), fontManager(device), m_InputHandler(inputManager, Input::Slot::SCREENSHOT, {m_ScreenShotType})
+ 	{
+ 	}
+ };
+@@ -428,14 +427,18 @@
+ 	return seed;
+ }
+ 
+-CRenderer::CRenderer(Renderer::Backend::IDevice* device)
++CRenderer::CRenderer(Renderer::Backend::IDevice* device) : CRenderer(device, g_VideoMode.m_InputManager, g_VideoMode.GetWindowWidth(), g_VideoMode.GetWindowHeight()) {}
++
++CRenderer::CRenderer(Renderer::Backend::IDevice* device, Input::Manager& inputManager, uint32_t width, uint32_t height)
+ {
+ 	PROFILE2("InitRenderer");
+ 
+-	m = std::make_unique<Internals>(device);
+-
+-	g_ProfileViewer.AddRootTable(&m->profileTable);
+-	g_ProfileViewer.AddRootTable(&m->backendProfileTable);
++	m = std::make_unique<Internals>(device, inputManager);
++
++	if (CProfileViewer::IsInitialised()) {
++ g_ProfileViewer.AddRootTable(&m->profileTable);
++ g_ProfileViewer.AddRootTable(&m->backendProfileTable);
++ }
+ 
+ 	m_Width = 0;
+ 	m_Height = 0;
+@@ -445,7 +448,7 @@
+ 	// Create terrain related stuff.
+ 	new CTerrainTextureManager(device);
+ 
+-	Open(g_VideoMode.GetWindowWidth(), g_VideoMode.GetWindowHeight());
++	Open(width, height);
+ 
+ 	// Setup lighting environment. Since the Renderer accesses the
+ 	// lighting environment through a pointer, this has to be done before
+--- a/source/renderer/SilhouetteRenderer.cpp
++++ b/source/renderer/SilhouetteRenderer.cpp
+@@ -269,9 +269,9 @@
+ #if 0
+ 	// For debugging ray-patch intersections - casts a ton of rays and draws
+ 	// a sphere where they intersect
+-	for (int y = 0; y < g_VideoMode.GetWindowHeight(); y += 8)
+-	{
+-		for (int x = 0; x < g_VideoMode.GetWindowWidth(); x += 8)
++	for (int y = 0; y < g_Renderer.GetHeight(); y += 8)
++	{
++		for (int x = 0; x < g_Renderer.GetWidth(); x += 8)
+ 		{
+ 			SOverlaySphere sphere;
+ 			sphere.m_Color = CColor(1, 0, 0, 1);
+@@ -494,7 +494,7 @@
+ 	CMatrix3D m;
+ 	m.SetIdentity();
+ 	m.Scale(1.0f, -1.f, 1.0f);
+-	m.Translate(0.0f, static_cast<float>(g_VideoMode.GetWindowHeight()), -1000.0f);
++	m.Translate(0.0f, static_cast<float>(g_Renderer.GetHeight()), -1000.0f);
+ 
+ 	CMatrix3D proj;
+ 	proj.SetOrtho(0.f, g_MaxCoord, 0.f, g_MaxCoord, -1.f, 1000.f);
+--- a/source/renderer/backend/gl/Texture.cpp
++++ b/source/renderer/backend/gl/Texture.cpp
+@@ -188,7 +188,7 @@
+ 		case Format::R8G8B8A8_UNORM:
+ 			break;
+ 		case Format::R8G8B8A8_SRGB:
+-			internalFormat = GL_SRGB_ALPHA_EXT;
++			internalFormat = 0x8C43 /* GL_SRGB8_ALPHA8, WebGL 2 */;
+ 			break;
+ 		case Format::R8G8B8_UNORM:
+ 			internalFormat = GL_RGB;
+@@ -214,13 +214,12 @@
+ 			break;
+ #if CONFIG2_GLES
+ 		// GLES requires pixel type == UNSIGNED_SHORT or UNSIGNED_INT for depth.
+-		case Format::D16_UNORM: [[fallthrough]];
+-		case Format::D24_UNORM: [[fallthrough]];
+-		case Format::D32_SFLOAT:
+-			internalFormat = GL_DEPTH_COMPONENT;
+-			pixelFormat = GL_DEPTH_COMPONENT;
+-			pixelType = GL_UNSIGNED_SHORT;
+-			break;
++		case Format::D16_UNORM:
++            internalFormat = GL_DEPTH_COMPONENT16; pixelFormat = GL_DEPTH_COMPONENT; pixelType = GL_UNSIGNED_SHORT; break;
++        case Format::D24_UNORM:
++            internalFormat = 0x81A6 /* GL_DEPTH_COMPONENT24, GLES3 */; pixelFormat = GL_DEPTH_COMPONENT; pixelType = GL_UNSIGNED_INT; break;
++        case Format::D32_SFLOAT:
++            internalFormat = 0x8CAC /* GL_DEPTH_COMPONENT32F, GLES3 */; pixelFormat = GL_DEPTH_COMPONENT; pixelType = GL_FLOAT; break;
+ 		case Format::D24_UNORM_S8_UINT:
+ 			debug_warn("Unsupported format");
+ 			break;
+--- a/source/renderer/backend/gl/DeviceCommandContext.cpp
++++ b/source/renderer/backend/gl/DeviceCommandContext.cpp
+@@ -1,3 +1,4 @@
++#include <vector>
+ /* Copyright (C) 2026 Wildfire Games.
+  * This file is part of 0 A.D.
+  *
+@@ -135,6 +136,14 @@
+ 	ENSURE(dataOffset < dataSize);
+ 	// Tell the driver that it can reallocate the whole VBO
+ 	glBufferData(target, bufferSize, nullptr, GL_DYNAMIC_DRAW);
++#if defined(__EMSCRIPTEN__)
++    ENSURE(dataOffset <= bufferSize && dataSize <= bufferSize - dataOffset);
++    std::vector<std::uint8_t> staging(dataSize);
++    uploadFunction(staging.data());
++    glBufferSubData(target, dataOffset, dataSize, staging.data());
++    return;
++#endif
++
+ 
+ 	while (true)
+ 	{
+--- a/source/renderer/WaterManager.h
++++ b/source/renderer/WaterManager.h
+@@ -46,9 +46,12 @@
+  * Anything that affects gameplay should go in CcmpWaterManager.cpp and passed to this (possibly as copy).
+  */
+ 
++class CTerrain;
++
+ class WaterManager
+ {
+ public:
++ void SetTerrain(const CTerrain* terrain) { m_ExplicitTerrain = terrain; }
+ 	CTexturePtr m_WaterTexture[60];
+ 	CTexturePtr m_NormalMap[60];
+ 
+@@ -217,6 +220,9 @@
+ 
+ private:
+ 	Renderer::Backend::IDevice* m_Device = nullptr;
++
++private:
++ const CTerrain* m_ExplicitTerrain = nullptr;
+ };
+ 
+ 
+--- a/source/renderer/WaterManager.cpp
++++ b/source/renderer/WaterManager.cpp
+@@ -528,7 +528,7 @@
+ // Calculate our binary heightmap from the terrain heightmap.
+ void WaterManager::RecomputeDistanceHeightmap()
+ {
+-	const CTerrain& terrain = g_Game->GetWorld()->GetTerrain();
++	const CTerrain& terrain = (m_ExplicitTerrain ? *m_ExplicitTerrain : g_Game->GetWorld()->GetTerrain());
+ 	if (!terrain.GetHeightMap())
+ 		return;
+ 
+@@ -558,7 +558,7 @@
+ 	if (m_MapSize == 0)
+ 		return;
+ 
+-	const CTerrain& terrain = g_Game->GetWorld()->GetTerrain();
++	const CTerrain& terrain = (m_ExplicitTerrain ? *m_ExplicitTerrain : g_Game->GetWorld()->GetTerrain());
+ 	if (!terrain.GetHeightMap())
+ 		return;
+ 
+@@ -1039,7 +1039,7 @@
+ 	if (!m_WindStrength)
+ 		m_WindStrength = std::make_unique<float[]>(m_MapSize * m_MapSize);
+ 
+-	const CTerrain& terrain = g_Game->GetWorld()->GetTerrain();
++	const CTerrain& terrain = (m_ExplicitTerrain ? *m_ExplicitTerrain : g_Game->GetWorld()->GetTerrain());
+ 	if (!terrain.GetHeightMap())
+ 		return;
+ 
+--- a/source/graphics/ObjectManager.cpp
++++ b/source/graphics/ObjectManager.cpp
+@@ -18,6 +18,7 @@
+ #include "precompiled.h"
+ 
+ #include "ObjectManager.h"
++#include <cstdio>
+ 
+ #include "graphics/ObjectBase.h"
+ #include "graphics/ObjectEntry.h"
+@@ -60,10 +61,10 @@
+ {
+ 	RegisterFileReloadFunc(ReloadChangedFileCB, this);
+ 
+-	m_QualityHook = std::make_unique<CConfigDBHook>(g_ConfigDB.RegisterHookAndCall("max_actor_quality", [this]() { ActorQualityChanged(); }));
+-	m_VariantDiversityHook = std::make_unique<CConfigDBHook>(g_ConfigDB.RegisterHookAndCall("variant_diversity", [this]() { VariantDiversityChanged(); }));
+-
+-	if (!g_Xeromyces.AddValidator(g_VFS, "actor", "art/actors/actor.rng"))
++	std::puts("SCENE_ACTOR_QUALITY_HOOK_BEGIN"); m_QualityHook = std::make_unique<CConfigDBHook>(g_ConfigDB.RegisterHookAndCall("max_actor_quality", [this]() { ActorQualityChanged(); }));
++	std::puts("SCENE_ACTOR_QUALITY_HOOK_END"); m_VariantDiversityHook = std::make_unique<CConfigDBHook>(g_ConfigDB.RegisterHookAndCall("variant_diversity", [this]() { VariantDiversityChanged(); }));
++
++	std::puts("SCENE_ACTOR_VALIDATOR_BEGIN"); if (!g_Xeromyces.AddValidator(g_VFS, "actor", "art/actors/actor.rng"))
+ 		LOGERROR("CObjectManager: failed to load actor grammar file 'art/actors/actor.rng'");
+ }
+ 
+@@ -198,14 +199,14 @@
+ 
+ 	if (changed)
+ 		// Trigger an interpolate call - needed because the game may be paused & if so, models disappear.
+-		m_Simulation.Interpolate(0.f, 0.f, 0.f);
++		std::puts("SCENE_QUALITY_INTERPOLATE_BEGIN"); m_Simulation.Interpolate(0.f, 0.f, 0.f); std::puts("SCENE_QUALITY_INTERPOLATE_END");
+ 
+ 	return INFO::OK;
+ }
+ 
+ void CObjectManager::ActorQualityChanged()
+ {
+-	const int quality{g_ConfigDB.Get("max_actor_quality", 0)};
++	std::puts("SCENE_QUALITY_GET_BEGIN"); const int quality{g_ConfigDB.Get("max_actor_quality", 0)}; std::printf("SCENE_QUALITY_GET_END %d %d\n",quality,int(m_QualityLevel));
+ 	if (quality == m_QualityLevel)
+ 		return;
+ 
+@@ -217,7 +218,7 @@
+ 		static_cast<ICmpVisual*>(eit->second)->Hotload();
+ 
+ 	// Trigger an interpolate call - needed because the game is generally paused & models disappear otherwise.
+-	m_Simulation.Interpolate(0.f, 0.f, 0.f);
++	std::puts("SCENE_QUALITY_INTERPOLATE_BEGIN"); m_Simulation.Interpolate(0.f, 0.f, 0.f); std::puts("SCENE_QUALITY_INTERPOLATE_END");
+ }
+ 
+ void CObjectManager::VariantDiversityChanged()
+@@ -249,5 +250,5 @@
+ 		static_cast<ICmpVisual*>(eit->second)->Hotload();
+ 
+ 	// Trigger an interpolate call - needed because the game is generally paused & models disappear otherwise.
+-	m_Simulation.Interpolate(0.f, 0.f, 0.f);
+-}
++	std::puts("SCENE_QUALITY_INTERPOLATE_BEGIN"); m_Simulation.Interpolate(0.f, 0.f, 0.f); std::puts("SCENE_QUALITY_INTERPOLATE_END");
++}
+--- a/source/graphics/TextureManager.cpp
++++ b/source/graphics/TextureManager.cpp
+@@ -104,9 +104,12 @@
+ 		ENSURE(!sRGB);
+ 		return Renderer::Backend::Format::L8_UNORM;
+ 	case 24:
+-		ENSURE(grey);
+-		ENSURE(!alpha);
+-		ENSURE(!sRGB);
++        ENSURE(!grey);
++        ENSURE(!alpha);
++        if (sRGB) {
++            ENSURE(textureData.transform_to(textureData.m_Flags | TEX_ALPHA) >= 0);
++            return Renderer::Backend::Format::R8G8B8A8_SRGB;
++        }
+ 		if (device->IsTextureFormatSupported(Renderer::Backend::Format::R8G8B8_UNORM))
+ 			return Renderer::Backend::Format::R8G8B8_UNORM;
+ 		else

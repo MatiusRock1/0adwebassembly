@@ -1,0 +1,58 @@
+{
+  "durationSeconds": 900,
+  "samples": 60,
+  "runtimeErrors": [],
+  "nativeExitCode": 0,
+  "movement": {
+    "frame": 90,
+    "tick": 249,
+    "restarts": 0,
+    "paused": false,
+    "selected": 8,
+    "x": 145.83043,
+    "z": 243.06592,
+    "screenX": 381.853,
+    "screenY": 136.011,
+    "terrainTriangles": 3072,
+    "modelTriangles": 6998,
+    "drawCalls": 10,
+    "width": 640,
+    "height": 480
+  },
+  "restarts": 3,
+  "resize": {
+    "frame": 210,
+    "tick": 252,
+    "restarts": 0,
+    "paused": true,
+    "selected": 8,
+    "x": 145.83043,
+    "z": 243.06592,
+    "screenX": 561.635,
+    "screenY": 170.014,
+    "terrainTriangles": 3072,
+    "modelTriangles": 6998,
+    "drawCalls": 10,
+    "width": 800,
+    "height": 600
+  },
+  "image": {
+    "size": [
+      642,
+      483
+    ],
+    "channelStdDev": [
+      37.469232247615835,
+      37.285426844109374,
+      35.492544522888984
+    ],
+    "quantizedColors": 128
+  },
+  "processRSSMinBytes": 1236017152,
+  "processRSSMaxBytes": 1290776576,
+  "processRSSFirstBytes": 1241321472,
+  "processRSSLastBytes": 1289744384,
+  "lastTenSamplesRSSRangeBytes": 3289088,
+  "workersAtInitialExitCapture": 1,
+  "closureRevalidationRequired": true
+}

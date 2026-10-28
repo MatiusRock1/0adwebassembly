@@ -1,0 +1,31 @@
+--- a/renderer/backend/gl/Device.cpp
++++ b/renderer/backend/gl/Device.cpp
+@@ -230,7 +230,13 @@
+ 	{
+ 		std::fill(std::begin(values), std::end(values), -1);
+ 		if constexpr (doQueryCounterBits)
+-			glGetQueryiv(parameter, GL_QUERY_COUNTER_BITS, values);
++			{
++#if CONFIG2_GLES
++            static_assert(!doQueryCounterBits, "Query counter bits require desktop GL");
++#else
++            glGetQueryiv(parameter, GL_QUERY_COUNTER_BITS, values);
++#endif
++        }
+ 		else
+ 			glGetIntegerv(parameter, values);
+ 	}
+@@ -321,7 +327,12 @@
+ 	const bool minimumRequiredGLVersionSupported{version >= GLAD_MAKE_VERSION(2, 0)};
+ #endif
+ 
+-	if (!minimumRequiredGLVersionSupported || !GLAD_GL_EXT_framebuffer_object)
++	#if CONFIG2_GLES
++    const bool hasFramebufferObjects = true; // Core in GLES 2.0 and newer.
++#else
++    const bool hasFramebufferObjects = GLAD_GL_EXT_framebuffer_object;
++#endif
++    if (!minimumRequiredGLVersionSupported || !hasFramebufferObjects)
+ 	{
+ 		// It doesn't make sense to continue working here, because we're not
+ 		// able to display anything.

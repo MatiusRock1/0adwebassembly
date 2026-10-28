@@ -1,0 +1,22 @@
+{
+  "retired": true,
+  "reason": "No physical fluency gain: 34.83 displayed FPS, p95 66.81ms",
+  "sources": {
+    "source/renderer/backend/webgpu/Device.cpp": {
+      "origin": "wasm\\build\\phase4-5\\application\\source\\renderer\\backend\\webgpu\\Device.cpp",
+      "SHA256": "66d902b9477347c31740d2fc7a6de8ef7439541d962fa010169eb21abe208182"
+    },
+    "vm/PortableBaselineInterpret.cpp": {
+      "origin": "wasm\\build\\phase4-5\\spidermonkey-portable-underflow-o3\\PortableBaselineInterpret.cpp",
+      "SHA256": "2648143d3944199e1b2477d2a6ac6a6cb8552b8d539f9d2fa2f0145914e96c0a"
+    },
+    "wasm/browser/webgpu-engine.mjs": {
+      "origin": "wasm\\dist\\application-phase4-5\\webgpu-engine.mjs",
+      "SHA256": "7e0d971de60c8da41717d493fe30e3b2b044edf33b40084569bf6114ea35064f"
+    },
+    "wasm/scripts/phase45_portable_underflow.py": {
+      "origin": "wasm\\scripts\\phase45_portable_underflow.py",
+      "SHA256": "542b7e61681b6c7e54fec305634e09a493e494da26a51c22c2f93dc8cb352412"
+    }
+  }
+}

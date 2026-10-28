@@ -1,0 +1,90 @@
+cpu-7.cpuprofile [
+  {
+    "function": "(root)",
+    "seconds": 31.181237
+  },
+  {
+    "function": "invokeEntryPoint",
+    "seconds": 31.115416
+  },
+  {
+    "function": "js-to-wasm:i:i",
+    "seconds": 31.115416
+  },
+  {
+    "function": "main",
+    "seconds": 31.115416
+  },
+  {
+    "function": "handleMessage",
+    "seconds": 31.115416
+  },
+  {
+    "function": "_main_thread",
+    "seconds": 31.115416
+  },
+  {
+    "function": "CRenderer::RenderFrame(bool)",
+    "seconds": 20.57301
+  },
+  {
+    "function": "wasm-to-js",
+    "seconds": 12.413229
+  },
+  {
+    "function": "proxyToMainThread",
+    "seconds": 10.435615
+  },
+  {
+    "function": "__timedwait_cp",
+    "seconds": 10.406312
+  },
+  {
+    "function": "__pthread_cond_timedwait",
+    "seconds": 10.396865
+  },
+  {
+    "function": "emscripten_futex_wait",
+    "seconds": 10.396779
+  },
+  {
+    "function": "Renderer::Backend::WebGPU::(anonymous namespace)::Context::Flush()",
+    "seconds": 10.305725
+  },
+  {
+    "function": "js-to-wasm:iiiii:d",
+    "seconds": 10.303117
+  },
+  {
+    "function": "CRenderer::RenderFrameImpl(Renderer::Backend::ISwapChain&, bool, bool)",
+    "seconds": 10.256444
+  },
+  {
+    "function": "CSoundManager::IdleTask()",
+    "seconds": 10.116775
+  },
+  {
+    "function": "Frame(RL::Interface*, int)::$_0::__invoke()",
+    "seconds": 10.116775
+  },
+  {
+    "function": "CSoundBase::EnsurePlay()",
+    "seconds": 10.113566
+  },
+  {
+    "function": "CSoundBase::IsPlaying()",
+    "seconds": 10.112089
+  },
+  {
+    "function": "_alGetSourcei",
+    "seconds": 10.110599
+  },
+  {
+    "function": "CGame::Update(double, bool)",
+    "seconds": 9.507238
+  },
+  {
+    "function": "CTurnManager::Update(float, unsigned long, std::__2::function<void (std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>> const&, std::__2::optional<JS::HandleValueArray>)> const&)",
+    "seconds": 8.040313
+  }
+]

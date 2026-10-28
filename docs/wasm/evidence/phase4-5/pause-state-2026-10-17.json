@@ -1,0 +1,191 @@
+{
+  "recordedUTC": "2026-10-18T04:39:36.904540+00:00",
+  "pausedByUser": true,
+  "phase45Accepted": false,
+  "performanceClosed": false,
+  "originalPin": "40b8794eecb9618da69e10bacffa8814c561aa51",
+  "repositoryHEAD": "aeffe749a1dc2a28e64fa0eeb60a29fc099ac70f",
+  "priority": "Reach at least 30 actual fullscreen display FPS with original load and simulation speed before unrelated tests",
+  "nextAction": "Package the already-linked asynchronous candidate, then run only performance diagnosis on resume; do not use the stale dist experiment as this candidate",
+  "linkedExitCode": 0,
+  "linkedApplicationExecuted": false,
+  "linkedArtifactsVerified": true,
+  "linkedArtifactChecks": {
+    "pyrogenesis-application.mjs": true,
+    "pyrogenesis-application.mjs.symbols": true,
+    "pyrogenesis-application.wasm": true
+  },
+  "scriptingArchive": "/phase45-build/spidermonkey-portable-fixed-o3/libjs_static.a",
+  "builds": {
+    "linked": {
+      "pyrogenesis-application.wasm": "cc977c2f2e43d9ebe9696b9689dfe131573a04f071846f771549d28837a864a7",
+      "pyrogenesis-application.mjs": "4972765c73369bfdf51994495e36192332b04dd3ae80f257d3623ba101532597"
+    },
+    "served": {
+      "pyrogenesis-application.wasm": "1a75185775bb5af7dd4a99f1442dd83c1757a66d4fa3b2a2094a30c3ecb887ee",
+      "pyrogenesis-application.mjs": "948c84b757ac7abb86dd9f682af3b96918835ffff31929149dde76ab9203875c",
+      "webgpu-engine.mjs": "9d81d2c53d3e5de69d0c81f653745990928a41ff323ae247e2de571dfec539da",
+      "webgpu-skinning.mjs": "6694ea0afb1a41e4728726761e1e956552d326581c1ec3e6e39a988ef332b44b"
+    }
+  },
+  "sourceSHA256": {
+    "source/renderer/backend/webgpu/Device.cpp": "ed231e8346a3f604ce0757f9e474679f366fbe94c11015da8c0329580099827b",
+    "source/renderer/backend/webgpu/CommandQueue.h": "1324349f42debe507c914c6e6ac8375becdded7ad9b44e186c7771bb19134512",
+    "wasm/browser/webgpu-engine.mjs": "29d3b7960740ab3a75f58031f36621465b52e800942f60b4dead8cd2fc03fff5",
+    "wasm/browser/application-failure.mjs": "6f5b5d70105db9366e978fd0ba7a51578db9b22298c1272f24795f23b591ccc1",
+    "wasm/browser/application-audio-state.js": "d804736f15a344fe2fba3805b1768de7d36b61aa381d5aeae97546f2371a50ce",
+    "wasm/browser/application.mjs": "89c9a54b383a5c9b41c9091909668af752867338758693d6dcf29050803c5a7d",
+    "wasm/browser/application.html": "a95439568efb0c65fe6c728ec2241470a4bc384679080ee5c4936be1a68433ce",
+    "wasm/harness/application-clock.h": "4fc78aeef4b74782df44243e92a2e5dbedbaa7383e5b684b549300b1138dbe45",
+    "wasm/harness/application-frame-time.h": "67dcf18508f305a4bf177a77ca08d970b80165274efb97a28b71c9bcde9698d7",
+    "wasm/scripts/phase4-5-engine-build.py": "3caca2567cc54811957177598f9ed781bddbb32cf73f9c2ffd2cbb1e95b3a242",
+    "wasm/scripts/phase4-application-patch.py": "ff823fb48f891be72cb854c6a225160294fee13ef2c093f1a2be49999f89279f",
+    "wasm/scripts/phase4-5-package.py": "c659743feac9a382b1b70357cf131b20134bad25bd13412c182c782f65bfde80",
+    "wasm/scripts/phase4-package.py": "3074e7422267589c6a48aa94fef78153495dafc7c70694c7aeec178c08ecc88f",
+    "wasm/scripts/phase4-startup-package.py": "53cc8edc370e84c113aea110e6993f3077e5f46fe0ea7329f80bd916a6627e65",
+    "wasm/scripts/verify-phase4-5-probes.py": "964471f7eb0dece7975bcbd86cd7ad019afa86ec9823ab612b41268903b119af",
+    "wasm/scripts/phase4-5-scripting-build.py": "56d141ee5b74cdefd04b979a97f8b6929ab1089eb77eef1e8b7e92b94de393aa",
+    "wasm/scripts/phase4-5-portable-scripting-build.py": "0ff8947f3b1b19878eedb6c66d17af79b19778658fa5aa8746fe65e66043e9b6",
+    "wasm/scripts/docker-phase4-5.ps1": "47c457556f3603c33ad317b798c1451dea302519a91f9a841c4d9ac74cb32bcd",
+    "wasm/scripts/phase4-link.py": "2d315a3c49ff6398353d5c03f08beac0ceba4b9f1a1eed97911867dbf5bc15d5",
+    "wasm/scripts/benchmark-phase4.py": "c05b6c09114abbff2d125d5e90e404deb541cf29385e0c06992f2876bdf63ea5",
+    "wasm/scripts/benchmark-native-phase4.py": "8b0f6c238ecc7df1b5ada672dc908aa86fd5255c3e77bcabba51e528e2a9a660",
+    "wasm/scripts/benchmark-phase4-5-standalone.py": "c8358d6c37d31d587250fe08c304702c73e660a5c624fd602ae5381438bf0591",
+    "wasm/scripts/phase45_benchmark_contract.py": "9d46812ccce274849f9dac26021ab146693d56ebc7464c2e7f6c1bb6fb793be9",
+    "wasm/scripts/phase45_window_focus.py": "8085fe8fec923abfbde45cae0fafe4f1e283d7afeca963a7b5cb6a3b9356cc15",
+    "wasm/scripts/phase4_browser.py": "6f2b83493b129c3779b6e12a91e64104ff3f13b1747941b85af4c0d45a676ee4",
+    "wasm/scripts/profile-phase4-5.py": "276fa4c34900657abb52e250de72a5a9450859fecf23c6a46810aa6df875f00e",
+    "wasm/scripts/verify-phase4-5-command-queue.py": "471aea447a4d776168270675e98b35545e6e7d6564725d1ac8ae3c0892893217",
+    "wasm/probes/webgpu-command-queue.cpp": "0bae08d0252ee70df660a6635ff2f7ee71955b47bde288b152acf77f6e627cf6",
+    "wasm/scripts/test-webgpu-command-data.mjs": "0eafaa6b6d2ecabafa2fa35242bf0c1783c912a372973ccb65831f174113ecb4",
+    "wasm/scripts/test-webgpu-state.mjs": "6956e6e721189b491ab2e574f8120c7b62afdfdb9828351997439a19e2141a30",
+    "wasm/scripts/test-webgpu-lifetime.mjs": "3eb9dbf49ec77a3e1ade44f9fa59deb50f1836b0e212d61188336d0fcf55888d",
+    "wasm/build/phase4-5/application/compile-report.json": "949bf166c66f81621565351867e62a98c6aa15cacaf788957d736855207bafc4",
+    "wasm/build/phase4-5/linked/link-report.json": "caef17e10b1d70c5aa0b0df2bec37a15a0efc4f5dec2c0205e5921db52390209",
+    "wasm/build/phase4-5/spidermonkey-portable-fixed-o3/report.json": "18966ccfcf569a627b4143df7dd596697519b173143b33dfa076869038e4db81",
+    "wasm/patches/upstream/mozjs-D224659.patch": "77757974a93f4061924c1b318ba93b0278a6d7dd2a1ece0aa51f1a8d65937e95",
+    "wasm/patches/upstream/mozjs-D224659.json": "9831a0a2eb8eef676e7c4c62d5ef4a52d732e27a9b6b5e2db793b674bf7a7063"
+  },
+  "measurements": [
+    {
+      "evidence": "docs/wasm/evidence/phase4-5/performance-portable-fixed-diagnostic-1/webgpu-skirmish-1.json",
+      "SHA256": "cd8a2af66b7fb1800892e9026a46d88da4f15aed2235837dde5fdd0efbdcf8ae",
+      "displayedFps": 18.863072449684424,
+      "engineFps": 20.1402985199048,
+      "p95Milliseconds": 116.7928,
+      "pausesOver100Ms": 211,
+      "simulationRate": 0.9947597938887753,
+      "simulationTiming": {
+        "withinTolerance": true,
+        "rate": 0.9947597938887753,
+        "minimumRate": 0.9935236006906749,
+        "maximumRate": 0.9959990671896999,
+        "elapsedSecondsBounds": [
+          241.36568789999978,
+          241.96707539999997
+        ],
+        "simulationSeconds": 240.4,
+        "scope": "Actual monotonic host intervals enclosing original simulation-state reads; strict +/-2% for the entire uncertainty interval"
+      },
+      "exitCode": 0,
+      "eventsLost": 0,
+      "gate30": false
+    },
+    {
+      "evidence": "docs/wasm/evidence/phase4-5/performance-renderer-cache-diagnostic-1/webgpu-skirmish-1.json",
+      "SHA256": "fa5313b657d516e94a5f35ccdd6248af9aadda59ae2756202fdb13395f16590d",
+      "displayedFps": 20.77682456879157,
+      "engineFps": 22.340097251555076,
+      "p95Milliseconds": 116.7791,
+      "pausesOver100Ms": 179,
+      "simulationRate": 0.9921721624821966,
+      "simulationTiming": {
+        "withinTolerance": true,
+        "rate": 0.9921721624821966,
+        "minimumRate": 0.9915568040109161,
+        "maximumRate": 0.9927882852086204,
+        "elapsedSecondsBounds": [
+          241.3404786999994,
+          241.6402156999996
+        ],
+        "simulationSeconds": 239.6,
+        "scope": "Actual monotonic host intervals enclosing original simulation-state reads; strict +/-2% for the entire uncertainty interval"
+      },
+      "exitCode": 0,
+      "eventsLost": 0,
+      "gate30": false
+    },
+    {
+      "evidence": "docs/wasm/evidence/phase4-5/performance-buffer-arena-diagnostic-1/webgpu-skirmish-1.json",
+      "SHA256": "0d6a1a05bbec0955310baf35687ce2435f9df72cec74911d2df5b5154b7cf85b",
+      "displayedFps": 24.45708318914522,
+      "engineFps": 25.880037980726986,
+      "p95Milliseconds": 83.4488,
+      "pausesOver100Ms": 124,
+      "simulationRate": 0.9961399009556019,
+      "simulationTiming": {
+        "withinTolerance": true,
+        "rate": 0.9961399009556019,
+        "minimumRate": 0.9954944595182815,
+        "maximumRate": 0.9967861798961845,
+        "elapsedSecondsBounds": [
+          241.37573820000048,
+          241.68893929999973
+        ],
+        "simulationSeconds": 240.6,
+        "scope": "Actual monotonic host intervals enclosing original simulation-state reads; strict +/-2% for the entire uncertainty interval"
+      },
+      "exitCode": 0,
+      "eventsLost": 0,
+      "gate30": false
+    },
+    {
+      "evidence": "docs/wasm/evidence/phase4-5/performance-shared-skinning-diagnostic-1/webgpu-skirmish-1.json",
+      "SHA256": "26d4f5be0086028873c7b97f601b433de13ecff40c66a4de5b103dc2f0425784",
+      "displayedFps": 23.258501117833156,
+      "engineFps": 24.640365321141523,
+      "p95Milliseconds": 100.03930000000001,
+      "pausesOver100Ms": 140,
+      "simulationRate": 0.9908249590155053,
+      "simulationTiming": {
+        "withinTolerance": true,
+        "rate": 0.9908249590155053,
+        "minimumRate": 0.9902238285507318,
+        "maximumRate": 0.9914268197744329,
+        "elapsedSecondsBounds": [
+          241.2684378000004,
+          241.56154710000007
+        ],
+        "simulationSeconds": 239.2,
+        "scope": "Actual monotonic host intervals enclosing original simulation-state reads; strict +/-2% for the entire uncertainty interval"
+      },
+      "exitCode": 0,
+      "eventsLost": 0,
+      "gate30": false
+    }
+  ],
+  "tests": {
+    "targetedRendererNodeLastRun": {
+      "passed": 15,
+      "failed": 0,
+      "scope": "Tool output; no separate JSON aggregate"
+    },
+    "queueProbe": "docs/wasm/evidence/phase4-5/command-queue-probe-1.json"
+  },
+  "runtimeAtPause": {
+    "activePerformanceTests": false,
+    "activeBuilds": false,
+    "activeDockerContainers": false,
+    "taskPortsListening": [],
+    "ownIdleServerStoppedPID": 35664,
+    "taskPortsChecked": [
+      8095,
+      8096,
+      8097,
+      8099,
+      9227,
+      9229
+    ]
+  },
+  "retiredExperiment": "docs/wasm/evidence/phase4-5/skinning-shared-layout-4/source"
+}

@@ -1,0 +1,8 @@
+{
+  "dependency": "workspace-private Playwright 1.56 driver",
+  "file": "wasm\\.venv-phase3\\Lib\\site-packages\\playwright\\driver\\package\\lib\\server\\chromium\\crPage.js",
+  "originalSHA256": "79a25e4eac0d0fa97dcc6eae4edce83436bcdb4bb1322731f65610adaa8e150f",
+  "patchedSHA256": "6576de7d05e7b865aae2eaeb436f9e5193828f3c8f8d234c73d529530cdbda6d",
+  "change": "SCENE_REAL_WINDOW=1 disables focus emulation on the original CDP session; default behavior unchanged",
+  "purpose": "Real native fullscreen/focus verification; game runtime unaffected"
+}

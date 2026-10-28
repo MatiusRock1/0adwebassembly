@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "performanceAcceptance": false,
+  "phase45Accepted": false,
+  "command": [
+    "g++",
+    "-std=c++20",
+    "-pthread",
+    "-O2",
+    "-I/workspace/source",
+    "-I/workspace/wasm/harness",
+    "/workspace/wasm/probes/webgpu-command-data.cpp",
+    "-o",
+    "/phase45-build/command-data-probe/probe"
+  ],
+  "sourceSHA256": {
+    "/workspace/wasm/probes/webgpu-command-data.cpp": "c51955651c213b91e1eab1c5f1df06ef6003c538ce8917db935feee180b9dbe6",
+    "/workspace/source/renderer/backend/webgpu/CommandData.h": "be85a18ab95bb46b492a88fcd4b654c04d092c48f800496fd5b662dd516a5524"
+  },
+  "compileExitCode": 0,
+  "compileOutput": "",
+  "exitCode": 0,
+  "stdout": "{\"passed\":true,\"checks\":5,\"differentialCases\":200464}\n",
+  "stderr": "",
+  "result": {
+    "passed": true,
+    "checks": 5,
+    "differentialCases": 200464
+  },
+  "executableSHA256": "31bf9ab0aaaf492d8ce2dbec358eb6c7c0106f7b5fcd774e11d5eb81c03d4001"
+}

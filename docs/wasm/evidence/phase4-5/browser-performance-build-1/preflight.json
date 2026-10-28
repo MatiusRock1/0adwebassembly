@@ -1,0 +1,66 @@
+{
+  "passed": true,
+  "executed": false,
+  "phase45Accepted": false,
+  "features": {
+    "simdEngine": true,
+    "renderWorker": true,
+    "asyncPipelines": true,
+    "persistentArchives": true,
+    "persistentConfig": true,
+    "asyncify": false,
+    "asyncSuspension": "jspi"
+  },
+  "simdObjects": 483,
+  "scriptingArchive": "dd057a4ea34a1a5028660d9992bef5b749c9116a3502828611a240c2df07b642",
+  "archiveBytes": {
+    "mod": 62959007,
+    "public": 1914886590
+  },
+  "blockBytes": 1048576,
+  "checks": [
+    {
+      "exitCode": 0,
+      "command": [
+        "node",
+        "--test",
+        "C:\\Users\\jorlu\\OneDrive\\Documentos\\emprendimiento\\0 AD\\0adwebassembly\\wasm\\scripts\\test-webgpu-command-data.mjs",
+        "C:\\Users\\jorlu\\OneDrive\\Documentos\\emprendimiento\\0 AD\\0adwebassembly\\wasm\\scripts\\test-webgpu-dispatch.mjs",
+        "C:\\Users\\jorlu\\OneDrive\\Documentos\\emprendimiento\\0 AD\\0adwebassembly\\wasm\\scripts\\test-webgpu-formats.mjs",
+        "C:\\Users\\jorlu\\OneDrive\\Documentos\\emprendimiento\\0 AD\\0adwebassembly\\wasm\\scripts\\test-webgpu-lifetime.mjs",
+        "C:\\Users\\jorlu\\OneDrive\\Documentos\\emprendimiento\\0 AD\\0adwebassembly\\wasm\\scripts\\test-webgpu-state.mjs",
+        "C:\\Users\\jorlu\\OneDrive\\Documentos\\emprendimiento\\0 AD\\0adwebassembly\\wasm\\scripts\\test-webgpu-textures.mjs",
+        "C:\\Users\\jorlu\\OneDrive\\Documentos\\emprendimiento\\0 AD\\0adwebassembly\\wasm\\scripts\\test-webgpu-upload.mjs",
+        "C:\\Users\\jorlu\\OneDrive\\Documentos\\emprendimiento\\0 AD\\0adwebassembly\\wasm\\scripts\\test-renderer-session.mjs",
+        "C:\\Users\\jorlu\\OneDrive\\Documentos\\emprendimiento\\0 AD\\0adwebassembly\\wasm\\scripts\\test-browser-performance.mjs"
+      ]
+    },
+    {
+      "exitCode": 0,
+      "command": [
+        "C:\\Users\\jorlu\\OneDrive\\Documentos\\emprendimiento\\0 AD\\0adwebassembly\\wasm\\.venv-phase3\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "wasm/scripts",
+        "-p",
+        "test_phase45_benchmark_contract.py"
+      ]
+    },
+    {
+      "exitCode": 0,
+      "command": [
+        "C:\\Users\\jorlu\\OneDrive\\Documentos\\emprendimiento\\0 AD\\0adwebassembly\\wasm\\.venv-phase3\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "wasm/scripts",
+        "-p",
+        "test_phase45_http_ranges.py"
+      ]
+    }
+  ],
+  "scope": "Build and CPU checks only; integrated Chrome/GPU/performance remain to execute"
+}

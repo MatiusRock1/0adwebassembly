@@ -1,0 +1,12 @@
+{
+  "diagnosticOnly": true,
+  "performanceAcceptance": false,
+  "scope": "Reported original SpiderMonkey GC slices whose receipt falls within the measured window; receipt time is not exclusive frame attribution.",
+  "windowBrowserMs": [
+    206397.84000000358,
+    326397.8400000036
+  ],
+  "reportedSlices": 35,
+  "totalDurationMs": 173.979392,
+  "maximumSliceMs": 9.609984
+}

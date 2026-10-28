@@ -1,0 +1,5 @@
+{
+  "nodeCases": 10,
+  "exitCode": 0,
+  "scope": "Node cases observed passing before combined run 2. Fix default fetch receiver; immutable failed package and run 1 preserved."
+}

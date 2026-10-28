@@ -1,0 +1,85 @@
+{
+  "gamePin": "40b8794eecb9618da69e10bacffa8814c561aa51",
+  "phase45Accepted": false,
+  "runs": [
+    {
+      "backend": "webgpu",
+      "workload": "skirmish",
+      "repetition": 1,
+      "warmupSeconds": 60,
+      "durationSeconds": 60,
+      "complete": false,
+      "eligibleForAcceptance": false,
+      "gate30": false,
+      "displayedFps": 47.337510553056234,
+      "p95FrameMs": 33.4211,
+      "adapter": {
+        "vendor": "nvidia",
+        "architecture": "ampere",
+        "device": "",
+        "description": ""
+      },
+      "graphicsSettings": {
+        "vsync": "true",
+        "adaptivefps.session": "60",
+        "shadows": "true",
+        "shadowpcf": "true",
+        "postproc": "true",
+        "particles": "true",
+        "gpuskinning": "true",
+        "silhouettes": "true",
+        "watereffects": "true",
+        "waterfancyeffects": "false",
+        "waterrealdepth": "true",
+        "waterreflection": "true",
+        "waterrefraction": "true",
+        "textures.quality": "2",
+        "shadowquality": "2",
+        "textures.maxanisotropy": "2",
+        "antialiasing": "disabled",
+        "renderactors": "true",
+        "max_actor_quality": "200",
+        "materialmgr.quality": "10.0",
+        "shadowscascadecount": "1",
+        "shadowscascadedistanceratio": "1.7",
+        "shadowscutoffdistance": "300.0",
+        "shadowscovermap": "false"
+      },
+      "backlog": {
+        "nonGrowing": false,
+        "reason": "Insufficient original turn backlog samples",
+        "samples": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "workerPresentation": {
+        "valid": true,
+        "required": true,
+        "delta": {
+          "rafPresents": 5834,
+          "backgroundFallbackPresents": 0,
+          "failedPresents": 0,
+          "cancelledPresents": 0
+        },
+        "scope": "Entire renderer snapshot interval, including warmup; fallback, failures, cancellation or reset invalidate capture"
+      },
+      "cleanShutdown": true,
+      "failure": "{'nonGrowing': False, 'reason': 'Insufficient original turn backlog samples', 'samples': [0, 0, 0, 0, 0, 0]}"
+    }
+  ],
+  "webgpuPerformanceGate": false,
+  "workloadGates": {
+    "skirmish": false,
+    "combat": false
+  },
+  "consistentReportedWebGPUAdapter": true,
+  "allPlannedMeasurementsComplete": false,
+  "nativeAndWebGLIncluded": false,
+  "sameActiveGPUVerified": false,
+  "scope": "Independent presentation measurements. Active native GPU, matched graphics, functional/visual parity and stability require separate review; this summary never accepts phase 4.5."
+}

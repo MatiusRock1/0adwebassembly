@@ -1,0 +1,14 @@
+{
+  "exitCode": 0,
+  "finalStateHash": [
+    "d745fdb2637775d5495b66a9f6395d54"
+  ],
+  "ticks": 1100,
+  "dumpsFound": 1100,
+  "movementObserved": true,
+  "repeatExitCode": 0,
+  "repeatFinalStateHash": [
+    "d745fdb2637775d5495b66a9f6395d54"
+  ],
+  "reproducible": true
+}

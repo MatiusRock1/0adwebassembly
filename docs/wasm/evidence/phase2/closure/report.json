@@ -1,0 +1,1239 @@
+{
+  "kind": "integration-probe-not-a-map-runtime",
+  "jobs": 2,
+  "compile": [
+    {
+      "source": "/spike/phase2-source/simulation2/Simulation2.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_Simulation2.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/components/CCmpAIManager.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_components_CCmpAIManager.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/components/CCmpCinemaManager.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_components_CCmpCinemaManager.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/components/CCmpCommandQueue.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_components_CCmpCommandQueue.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/components/CCmpDecay.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_components_CCmpDecay.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/components/CCmpFootprint.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_components_CCmpFootprint.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/components/CCmpMinimap.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_components_CCmpMinimap.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/components/CCmpMotionBall.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_components_CCmpMotionBall.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/components/CCmpObstruction.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_components_CCmpObstruction.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/components/CCmpObstructionManager.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_components_CCmpObstructionManager.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/components/CCmpOverlayRenderer.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_components_CCmpOverlayRenderer.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/components/CCmpOwnership.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_components_CCmpOwnership.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/components/CCmpParticleManager.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_components_CCmpParticleManager.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/components/CCmpPathfinder.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_components_CCmpPathfinder.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/components/CCmpPosition.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_components_CCmpPosition.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/components/CCmpProjectileManager.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_components_CCmpProjectileManager.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/components/CCmpRallyPointRenderer.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_components_CCmpRallyPointRenderer.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/components/CCmpRangeManager.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_components_CCmpRangeManager.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/components/CCmpRangeOverlayRenderer.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_components_CCmpRangeOverlayRenderer.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/components/CCmpSelectable.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_components_CCmpSelectable.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/components/CCmpSoundManager.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_components_CCmpSoundManager.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/components/CCmpTemplateManager.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_components_CCmpTemplateManager.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/components/CCmpTerrain.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_components_CCmpTerrain.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/components/CCmpTerritoryInfluence.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_components_CCmpTerritoryInfluence.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/components/CCmpTerritoryManager.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_components_CCmpTerritoryManager.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/components/CCmpTest.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_components_CCmpTest.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/components/CCmpUnitMotion_System.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_components_CCmpUnitMotion_System.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/components/CCmpUnitRenderer.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_components_CCmpUnitRenderer.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/components/CCmpVision.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_components_CCmpVision.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/components/CCmpVisualActor.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_components_CCmpVisualActor.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/components/CCmpWaterManager.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_components_CCmpWaterManager.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/components/ICmpAIInterface.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_components_ICmpAIInterface.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/components/ICmpAIManager.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_components_ICmpAIManager.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/components/ICmpAttack.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_components_ICmpAttack.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/components/ICmpCinemaManager.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_components_ICmpCinemaManager.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/components/ICmpCommandQueue.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_components_ICmpCommandQueue.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/components/ICmpDecay.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_components_ICmpDecay.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/components/ICmpFogging.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_components_ICmpFogging.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/components/ICmpFootprint.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_components_ICmpFootprint.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/components/ICmpGarrisonHolder.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_components_ICmpGarrisonHolder.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/components/ICmpGuiInterface.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_components_ICmpGuiInterface.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/components/ICmpIdentity.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_components_ICmpIdentity.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/components/ICmpMinimap.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_components_ICmpMinimap.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/components/ICmpMirage.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_components_ICmpMirage.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/components/ICmpMotion.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_components_ICmpMotion.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/components/ICmpObstruction.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_components_ICmpObstruction.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/components/ICmpObstructionManager.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_components_ICmpObstructionManager.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/components/ICmpOverlayRenderer.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_components_ICmpOverlayRenderer.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/components/ICmpOwnership.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_components_ICmpOwnership.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/components/ICmpParticleManager.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_components_ICmpParticleManager.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/components/ICmpPathfinder.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_components_ICmpPathfinder.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/components/ICmpPlayer.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_components_ICmpPlayer.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/components/ICmpPlayerManager.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_components_ICmpPlayerManager.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/components/ICmpPosition.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_components_ICmpPosition.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/components/ICmpProjectileManager.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_components_ICmpProjectileManager.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/components/ICmpRallyPoint.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_components_ICmpRallyPoint.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/components/ICmpRallyPointRenderer.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_components_ICmpRallyPointRenderer.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/components/ICmpRangeManager.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_components_ICmpRangeManager.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/components/ICmpRangeOverlayRenderer.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_components_ICmpRangeOverlayRenderer.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/components/ICmpSelectable.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_components_ICmpSelectable.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/components/ICmpSettlement.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_components_ICmpSettlement.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/components/ICmpSound.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_components_ICmpSound.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/components/ICmpSoundManager.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_components_ICmpSoundManager.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/components/ICmpTemplateManager.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_components_ICmpTemplateManager.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/components/ICmpTerrain.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_components_ICmpTerrain.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/components/ICmpTerritoryDecayManager.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_components_ICmpTerritoryDecayManager.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/components/ICmpTerritoryInfluence.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_components_ICmpTerritoryInfluence.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/components/ICmpTerritoryManager.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_components_ICmpTerritoryManager.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/components/ICmpTest.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_components_ICmpTest.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/components/ICmpTurretHolder.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_components_ICmpTurretHolder.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/components/ICmpUnitMotion.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_components_ICmpUnitMotion.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/components/ICmpUnitMotionManager.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_components_ICmpUnitMotionManager.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/components/ICmpUnitRenderer.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_components_ICmpUnitRenderer.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/components/ICmpUnknownScript.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_components_ICmpUnknownScript.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/components/ICmpValueModificationManager.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_components_ICmpValueModificationManager.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/components/ICmpVisibility.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_components_ICmpVisibility.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/components/ICmpVision.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_components_ICmpVision.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/components/ICmpVisual.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_components_ICmpVisual.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/components/ICmpWaterManager.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_components_ICmpWaterManager.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/helpers/CinemaPath.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_helpers_CinemaPath.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/helpers/Geometry.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_helpers_Geometry.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/helpers/HierarchicalPathfinder.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_helpers_HierarchicalPathfinder.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/helpers/LongPathfinder.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_helpers_LongPathfinder.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/helpers/PathGoal.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_helpers_PathGoal.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/helpers/Pathfinding.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_helpers_Pathfinding.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/helpers/Rasterize.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_helpers_Rasterize.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/helpers/Render.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_helpers_Render.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/helpers/Selection.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_helpers_Selection.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/helpers/VertexPathfinder.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_helpers_VertexPathfinder.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/scripting/EngineScriptConversions.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_scripting_EngineScriptConversions.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/scripting/JSInterface_Simulation.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_scripting_JSInterface_Simulation.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/scripting/MessageTypeConversions.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_scripting_MessageTypeConversions.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/scripting/ScriptComponent.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_scripting_ScriptComponent.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/serialization/BinarySerializer.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_serialization_BinarySerializer.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/serialization/DebugSerializer.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_serialization_DebugSerializer.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/serialization/HashSerializer.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_serialization_HashSerializer.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/serialization/IDeserializer.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_serialization_IDeserializer.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/serialization/ISerializer.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_serialization_ISerializer.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/serialization/StdDeserializer.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_serialization_StdDeserializer.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/serialization/StdSerializer.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_serialization_StdSerializer.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/system/CmpPtr.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_system_CmpPtr.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/system/ComponentManager.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_system_ComponentManager.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/system/ComponentManagerSerialization.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_system_ComponentManagerSerialization.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/system/DynamicSubscription.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_system_DynamicSubscription.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/system/IComponent.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_system_IComponent.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/system/LocalTurnManager.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_system_LocalTurnManager.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/system/ParamNode.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_system_ParamNode.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/system/ReplayTurnManager.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_system_ReplayTurnManager.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/system/SimContext.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_system_SimContext.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/simulation2/system/TurnManager.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_simulation2_system_TurnManager.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/scriptinterface/Conversions.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_scriptinterface_Conversions.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/scriptinterface/Context.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_scriptinterface_Context.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/scriptinterface/Stats.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_scriptinterface_Stats.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/scriptinterface/Exceptions.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_scriptinterface_Exceptions.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/scriptinterface/JSON.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_scriptinterface_JSON.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/scriptinterface/Promises.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_scriptinterface_Promises.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/scriptinterface/ModuleLoader.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_scriptinterface_ModuleLoader.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/scriptinterface/StructuredClone.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_scriptinterface_StructuredClone.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/scriptinterface/Interface.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_scriptinterface_Interface.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/ps/scripting/JSInterface_VFS.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_ps_scripting_JSInterface_VFS.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/lib/file/vfs/vfs.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_lib_file_vfs_vfs.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/lib/file/io/io.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_lib_file_io_io.cpp.o"
+    },
+    {
+      "source": "/spike/wasm/harness/map-link.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/wasm_harness_map-link.cpp.o"
+    },
+    {
+      "source": "/spike/wasm/harness/platform.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/wasm_harness_platform.cpp.o"
+    }
+  ],
+  "linkExitCode": 1,
+  "status": "LINK_FAILED",
+  "fullDiagnosticLinkExitCode": 1,
+  "unresolvedErrors": 574,
+  "foundationCompile": [
+    {
+      "source": "/spike/phase2-source/lib/file/archive/archive.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_lib_file_archive_archive.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/lib/file/archive/archive_zip.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_lib_file_archive_archive_zip.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/lib/file/archive/codec.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_lib_file_archive_codec.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/lib/file/archive/codec_zlib.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_lib_file_archive_codec_zlib.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/lib/file/archive/stream.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_lib_file_archive_stream.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/lib/file/common/file_loader.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_lib_file_common_file_loader.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/lib/file/common/file_stats.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_lib_file_common_file_stats.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/lib/file/common/real_directory.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_lib_file_common_real_directory.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/lib/file/common/trace.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_lib_file_common_trace.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/lib/file/file.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_lib_file_file.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/lib/file/file_system.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_lib_file_file_system.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/lib/file/io/write_buffer.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_lib_file_io_write_buffer.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/lib/file/vfs/vfs_lookup.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_lib_file_vfs_vfs_lookup.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/lib/file/vfs/vfs_populate.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_lib_file_vfs_vfs_populate.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/lib/file/vfs/vfs_tree.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_lib_file_vfs_vfs_tree.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/lib/file/vfs/vfs_util.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_lib_file_vfs_vfs_util.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/maths/BoundingBoxAligned.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_maths_BoundingBoxAligned.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/maths/BoundingBoxOriented.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_maths_BoundingBoxOriented.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/maths/BoundingSphere.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_maths_BoundingSphere.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/maths/Brush.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_maths_Brush.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/maths/Fixed.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_maths_Fixed.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/maths/Frustum.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_maths_Frustum.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/maths/MD5.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_maths_MD5.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/maths/Matrix3D.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_maths_Matrix3D.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/maths/NUSpline.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_maths_NUSpline.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/maths/Plane.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_maths_Plane.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/maths/Quaternion.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_maths_Quaternion.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/maths/Rect.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_maths_Rect.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/maths/Size2D.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_maths_Size2D.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/maths/Sqrt.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_maths_Sqrt.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/maths/Vector2D.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_maths_Vector2D.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/maths/Vector3D.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_maths_Vector3D.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/ps/XML/RelaxNG.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_ps_XML_RelaxNG.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/ps/XML/XMLWriter.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_ps_XML_XMLWriter.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/ps/XML/Xeromyces.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_ps_XML_Xeromyces.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/ps/CStr.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_ps_CStr.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/ps/CStrIntern.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_ps_CStrIntern.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/ps/ConfigDB.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_ps_ConfigDB.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/ps/Errors.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_ps_Errors.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/ps/Filesystem.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_ps_Filesystem.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/ps/FileIo.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_ps_FileIo.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/ps/CacheLoader.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_ps_CacheLoader.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/ps/TemplateLoader.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_ps_TemplateLoader.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/lib/utf8.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_lib_utf8.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/lib/secure_crt.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_lib_secure_crt.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/lib/status.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_lib_status.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/lib/regex.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_lib_regex.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/lib/sysdep/rtl/gcc/gcc.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/phase2-source_lib_sysdep_rtl_gcc_gcc.cpp.o"
+    }
+  ],
+  "foundationLinkExitCode": 1,
+  "foundationStatus": "LINK_FAILED",
+  "terrainCompile": [
+    {
+      "source": "/spike/phase2-source/graphics/Camera.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/terrain_phase2-source_graphics_Camera.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/graphics/Color.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/terrain_phase2-source_graphics_Color.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/graphics/Terrain.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/terrain_phase2-source_graphics_Terrain.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/graphics/HeightMipmap.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/terrain_phase2-source_graphics_HeightMipmap.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/graphics/Patch.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/terrain_phase2-source_graphics_Patch.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/graphics/MiniPatch.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/terrain_phase2-source_graphics_MiniPatch.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/graphics/TerritoryBoundary.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/terrain_phase2-source_graphics_TerritoryBoundary.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/ps/TaskManager.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/terrain_phase2-source_ps_TaskManager.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/ps/XMB/XMBStorage.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/terrain_phase2-source_ps_XMB_XMBStorage.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/ps/XMB/XMBData.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/terrain_phase2-source_ps_XMB_XMBData.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/lib/byte_order.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/terrain_phase2-source_lib_byte_order.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/lib/path.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/terrain_phase2-source_lib_path.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/lib/fnv_hash.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/terrain_phase2-source_lib_fnv_hash.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/lib/sysdep/os/unix/ufilesystem.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/terrain_phase2-source_lib_sysdep_os_unix_ufilesystem.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/lib/secure_crt.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/terrain_phase2-source_lib_secure_crt.cpp.o"
+    }
+  ],
+  "terrainLinkExitCode": 1,
+  "terrainStatus": "LINK_FAILED",
+  "servicesCompile": [
+    {
+      "source": "/spike/phase2-source/graphics/Model.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/services_phase2-source_graphics_Model.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/graphics/ModelAbstract.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/services_phase2-source_graphics_ModelAbstract.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/graphics/Decal.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/services_phase2-source_graphics_Decal.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/graphics/Unit.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/services_phase2-source_graphics_Unit.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/graphics/UnitAnimation.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/services_phase2-source_graphics_UnitAnimation.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/graphics/UnitManager.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/services_phase2-source_graphics_UnitManager.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/graphics/Overlay.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/services_phase2-source_graphics_Overlay.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/graphics/ParticleManager.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/services_phase2-source_graphics_ParticleManager.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/graphics/TextureManager.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/services_phase2-source_graphics_TextureManager.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/renderer/TerrainOverlay.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/services_phase2-source_renderer_TerrainOverlay.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/renderer/WaterManager.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/services_phase2-source_renderer_WaterManager.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/renderer/Renderer.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/services_phase2-source_renderer_Renderer.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/renderer/SceneRenderer.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/services_phase2-source_renderer_SceneRenderer.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/renderer/RenderingOptions.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/services_phase2-source_renderer_RenderingOptions.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/ps/Util.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/services_phase2-source_ps_Util.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/ps/Pyrogenesis.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/services_phase2-source_ps_Pyrogenesis.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/ps/Game.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/services_phase2-source_ps_Game.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/soundmanager/SoundManager.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/services_phase2-source_soundmanager_SoundManager.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/lib/tex/tex.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/services_phase2-source_lib_tex_tex.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/lib/tex/tex_codec.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/services_phase2-source_lib_tex_tex_codec.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/lib/tex/tex_bmp.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/services_phase2-source_lib_tex_tex_bmp.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/lib/tex/tex_dds.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/services_phase2-source_lib_tex_tex_dds.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/lib/tex/tex_png.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/services_phase2-source_lib_tex_tex_png.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/lib/tex/tex_tga.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/services_phase2-source_lib_tex_tex_tga.cpp.o"
+    }
+  ],
+  "servicesLinkExitCode": 1,
+  "servicesStatus": "LINK_FAILED",
+  "actorsCompile": [
+    {
+      "source": "/spike/phase2-source/graphics/ObjectBase.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/actors_phase2-source_graphics_ObjectBase.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/graphics/ObjectEntry.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/actors_phase2-source_graphics_ObjectEntry.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/graphics/ObjectManager.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/actors_phase2-source_graphics_ObjectManager.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/graphics/Material.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/actors_phase2-source_graphics_Material.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/renderer/TexturedLineRData.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/actors_phase2-source_renderer_TexturedLineRData.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/renderer/VertexBuffer.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/actors_phase2-source_renderer_VertexBuffer.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/renderer/VertexBufferManager.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/actors_phase2-source_renderer_VertexBufferManager.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/renderer/TerrainRenderer.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/actors_phase2-source_renderer_TerrainRenderer.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/renderer/backend/Sampler.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/actors_phase2-source_renderer_backend_Sampler.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/lib/allocators/dynarray.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/actors_phase2-source_lib_allocators_dynarray.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/lib/rand.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/actors_phase2-source_lib_rand.cpp.o"
+    }
+  ],
+  "actorsLinkExitCode": 1,
+  "actorsStatus": "LINK_FAILED",
+  "supportCompile": [
+    {
+      "source": "/spike/phase2-source/graphics/MaterialManager.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/support_phase2-source_graphics_MaterialManager.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/graphics/MeshManager.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/support_phase2-source_graphics_MeshManager.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/graphics/ModelDef.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/support_phase2-source_graphics_ModelDef.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/graphics/ParticleEmitter.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/support_phase2-source_graphics_ParticleEmitter.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/graphics/ParticleEmitterType.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/support_phase2-source_graphics_ParticleEmitterType.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/graphics/ShaderDefines.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/support_phase2-source_graphics_ShaderDefines.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/graphics/ShaderManager.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/support_phase2-source_graphics_ShaderManager.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/graphics/ShaderTechnique.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/support_phase2-source_graphics_ShaderTechnique.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/graphics/SkeletonAnimDef.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/support_phase2-source_graphics_SkeletonAnimDef.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/graphics/SkeletonAnimManager.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/support_phase2-source_graphics_SkeletonAnimManager.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/renderer/PatchRData.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/support_phase2-source_renderer_PatchRData.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/ps/GameSetup/CmdLineArgs.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/support_phase2-source_ps_GameSetup_CmdLineArgs.cpp.o"
+    },
+    {
+      "source": "/spike/wasm/harness/scene-platform.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/support_wasm_harness_scene-platform.cpp.o"
+    }
+  ],
+  "supportLinkExitCode": 1,
+  "supportStatus": "LINK_FAILED",
+  "closureCompile": [
+    {
+      "source": "/spike/phase2-source/graphics/ColladaManager.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/closure_phase2-source_graphics_ColladaManager.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/graphics/PreprocessorWrapper.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/closure_phase2-source_graphics_PreprocessorWrapper.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/graphics/ShaderProgram.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/closure_phase2-source_graphics_ShaderProgram.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/renderer/backend/PipelineState.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/closure_phase2-source_renderer_backend_PipelineState.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/renderer/VertexArray.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/closure_phase2-source_renderer_VertexArray.cpp.o"
+    },
+    {
+      "source": "/spike/phase2-source/third_party/ogre3d_preprocessor/OgreGLSLPreprocessor.cpp",
+      "exitCode": 0,
+      "object": "/spike/phase2-link/objects/closure_phase2-source_third_party_ogre3d_preprocessor_OgreGLSLPreprocessor.cpp.o"
+    }
+  ],
+  "closureLinkExitCode": 1,
+  "closureStatus": "LINK_FAILED"
+}

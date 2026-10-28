@@ -1,0 +1,44 @@
+{
+  "replayExitCode": 0,
+  "restoreExitCode": 0,
+  "checkpoints": [
+    {
+      "tick": 1,
+      "identicalBytes": true,
+      "sha256": "06ef2d0f4a4338f19c7d7505921069f495dea687c166a7de2925b25df7d8abe8"
+    },
+    {
+      "tick": 100,
+      "identicalBytes": true,
+      "sha256": "0259e3af27c6acadb718f9be5cb30d0974df73ae85ff11cc6539d37b9130d8d8"
+    },
+    {
+      "tick": 101,
+      "identicalBytes": true,
+      "sha256": "57ca88458902889992bd13ce27a5278eaf79c93e63a464969e56461ecd1af406"
+    },
+    {
+      "tick": 110,
+      "identicalBytes": true,
+      "sha256": "10e8b52ba8b10a31666dd7d578bf752881bbfdfdfc6a06697f7c11d76ebe0eaf"
+    },
+    {
+      "tick": 200,
+      "identicalBytes": true,
+      "sha256": "63dab01a962c04d4bbd458331c00e3436bde9e33b33c0ff528a6c4dea057fcb7"
+    },
+    {
+      "tick": 500,
+      "identicalBytes": true,
+      "sha256": "08e093c920d497d9fbfeca47fce703cb397f4bff3cb02a27c782b1d4a7f374d2"
+    },
+    {
+      "tick": 1100,
+      "identicalBytes": true,
+      "sha256": "cd88571d1d5321ba1df006bab2c5c4055526b94ffc552c29d12b81976d4fb9e4"
+    }
+  ],
+  "restorePassed": true,
+  "profile": "o3-lto",
+  "passed": true
+}

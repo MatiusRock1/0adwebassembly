@@ -1,0 +1,98 @@
+{
+  "browser": "chromium",
+  "console": [],
+  "errors": [],
+  "workerEvents": [
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-gl.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-gl.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-gl.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-gl.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-gl.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-gl.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-gl.mjs"
+    },
+    {
+      "event": "created",
+      "url": "http://localhost:8080/pyrogenesis-gl.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-gl.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-gl.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-gl.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-gl.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-gl.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-gl.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-gl.mjs"
+    },
+    {
+      "event": "closed",
+      "url": "http://localhost:8080/pyrogenesis-gl.mjs"
+    }
+  ],
+  "cycleMetrics": [],
+  "version": "141.0.7390.37",
+  "headers": {
+    "cache-control": "no-store",
+    "content-length": "402",
+    "content-type": "text/html",
+    "cross-origin-embedder-policy": "require-corp",
+    "cross-origin-opener-policy": "same-origin",
+    "cross-origin-resource-policy": "same-origin",
+    "date": "Sun, 11 Oct 2026 23:20:56 GMT",
+    "last-modified": "Sun, 11 Oct 2026 23:13:30 GMT",
+    "server": "SimpleHTTP/0.6 Python/3.12.3"
+  },
+  "isolated": true,
+  "glResult": {
+    "passed": true,
+    "exitCode": 0,
+    "lines": [
+      "warning: unsupported syscall: __syscall_madvise\n",
+      "GL device name: WebKit WebKit WebGL",
+      "GL version: OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium))",
+      "GL_ENGINE_CLEAR_PASSED OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium))"
+    ]
+  },
+  "heartbeat": 23,
+  "remainingWorkerTargets": [],
+  "workersClosedBeforeBrowserExit": 8
+}

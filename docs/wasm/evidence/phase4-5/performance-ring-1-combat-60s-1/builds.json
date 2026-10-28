@@ -1,0 +1,30 @@
+{
+  "webgpu": {
+    "pyrogenesis-application.mjs": "96c556c70aa98600ec074a06a8b34c2dff51d1f28de10d23ce30691cf5463532",
+    "pyrogenesis-application.wasm": "4f3a0f2a74aece0ed9d2bb2a628eccd5c629e7afb03e2615a09e027a563f7471",
+    "application.html": "2507c2d2ec648bc374f8cfb1e26793eba239bae450b6c3537e7d0e5c3afff3b9",
+    "application.mjs": "3fc08b218574316ad75ff58c7458a8cb968454d8672deb5ed690c9dac5faec38",
+    "application-data.json": "16156264abb845d622820dd1d985a9c8ce2f71114d75f4d9163c5f13b4717475",
+    "webgpu-shaders.json": "8d9280a27514b940ed61a9d0710ad92c39c8b425ff013b2d29c8b4fb33f08085",
+    "renderer-session.mjs": "970bb6a44961f620da6a62bedb93bc18c62169373eb86cbbf9b9a7b56ecf0076",
+    "webgpu-engine.mjs": "ba876b0ec80f0754534e84d10e8ed134e9a6ab506619405deabd64e26cb7bcd3",
+    "webgpu-border.mjs": "e9a7d9a88ac447b908249dc863e8adf9907b07830615019699588cbb2d695e8b",
+    "webgpu-upload.mjs": "739a196dfbae26f0a4f73d2a451214124c3031a5b0363d47336989313cf8717c",
+    "webgpu-dispatch.mjs": "49cbe7a352ccfae51bc7762d531e3c5930fa62737d82ba79673e03a7d2bb6287",
+    "webgpu-upload-probe.mjs": "0962f84e7258005582e4e23f8c81352a07c1d91861a994c3345411be044133a9",
+    "application-pointer.mjs": "0e781c584dff24c3005f875b070f715046dabe3ea1e388edfecd3f998b36bb47",
+    "application-failure.mjs": "6f5b5d70105db9366e978fd0ba7a51578db9b22298c1272f24795f23b591ccc1",
+    "shared-request.mjs": "bca23eebff9eb199449b1cd3959804162cda310cc64ae689a7d601599eadfb8d",
+    "webgpu-worker-bridge.mjs": "e1cd9f7b8b53a84b222e23b5782e4116799d9e923d205ab85180ce297f6a4aef",
+    "webgpu-render-worker.mjs": "30debb572883b6c9992e9a2e65600c118c2be0b733927503155498075680ba09",
+    "webgpu-worker-present.mjs": "94b8ba8fae5c547820830282e96b19521835a7377234f63344e7ba183a18fe29",
+    "webgpu-pipeline-pending.mjs": "7b02f374a8f2527739d4af53495f7337e2a40deb53740795c74f5016a54c284d",
+    "application-archives.mjs": "ccad2296d7e745aa608330c7c84b5e9b6b613b06a4d5b7758c8963c8635e4795",
+    "archive-worker.mjs": "0ebfe1654c34b478a1ce8a9ac56be76ff18aa1d7d06b73f97833021a630ce7c5",
+    "archive-blocks.mjs": "12790a99ad0e82875c34c4f20cc41e903496a5672a161e9d0a048404a3b6e72e",
+    "archive-blocks.json": "0a8ab2e1caa33776ed993338a1b4ff97b3aa2b042a51a93f3ca8233b82eccc50",
+    "application-graphics.mjs": "dd8089ef087256a8981f34d52b3e3b35c9fbb67211aa5b6286e69141b1488b5a",
+    "webgpu-command-ring.mjs": "fd08a90fc7398081f1dec3f9784d31d53d5bef7418d1f0b97159f3291ad0b6bf",
+    "webgpu-pipeline-cache.mjs": "e3d64f0cd573f6d00a505027017fe6e65113c78cc34042f1e895cd00dac36c21"
+  }
+}

@@ -1,0 +1,8 @@
+[
+  {
+    "name": "glsl/bloom",
+    "defines": {
+      "BLOOM_PASS_H": "1"
+    }
+  }
+]

@@ -1,0 +1,22 @@
+{
+  "frames": [],
+  "errors": [],
+  "acceptance": "PENDING",
+  "fullscreen": true,
+  "warmupSeconds": 0,
+  "durationSeconds": 30,
+  "executableSHA256": "f475331d2e2fb9556b757542bf97a4d00cfe716def865fb54cbd566b06b1688c",
+  "build": {
+    "baseCommit": "40b8794eecb9618da69e10bacffa8814c561aa51",
+    "windowsLibrariesSvnRevision": 28278,
+    "harnessSourceSHA256": "9e5ba696df0b568851059522c91135400b128a0144bc02eeca32dd86b96a75ba",
+    "nativeEntrySHA256": "74dbb7942b0f1f52cb0bcec647432cc0eaf0e43a57f7d6cfa2787dbe814a5e36",
+    "scope": "Original scene engine, same 37 entities/camera/seed/settings/tick; native SDL/OpenGL presentation. Not full-game acceptance.",
+    "nativeEngineCompatibility": "Missing <numbers> include only; no simulation/rendering logic changes. ENet include path supplied for lobby-disabled build.",
+    "compatibilityPatch": "native-build-compatibility.patch",
+    "terrainBridge": "native-scene-terrain-bridge.patch; same bridge as browser, original CGame fallback retained",
+    "surfaceBridge": "native-scene-surface-bridge.patch; same constructor injection as browser, desktop default retained"
+  },
+  "exitCode": 3221225477,
+  "failure": "Native startup or exit failed"
+}

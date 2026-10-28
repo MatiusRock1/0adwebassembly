@@ -1,0 +1,2967 @@
+{
+  "diagnosticOnly": true,
+  "symbolsSHA256": "3562ed0281269aa7535fb11a4495767d47579e12bf91f23c546dab18772d975b",
+  "profiles": [
+    {
+      "file": "cpu-0.cpuprofile",
+      "seconds": 31.728,
+      "self": [
+        {
+          "function": "emscripten_futex_wait",
+          "seconds": 31.576486
+        },
+        {
+          "function": "_emscripten_get_now",
+          "seconds": 0.081687
+        },
+        {
+          "function": "__timedwait_cp",
+          "seconds": 0.014034
+        },
+        {
+          "function": "emscripten_builtin_free",
+          "seconds": 0.012601
+        },
+        {
+          "function": "wasm-to-js",
+          "seconds": 0.0075
+        },
+        {
+          "function": "now",
+          "seconds": 0.006394
+        },
+        {
+          "function": "compress_block",
+          "seconds": 0.004688
+        },
+        {
+          "function": "build_tree",
+          "seconds": 0.003119
+        },
+        {
+          "function": "__pthread_mutex_lock",
+          "seconds": 0.003081
+        },
+        {
+          "function": "emscripten_futex_wake",
+          "seconds": 0.003053
+        },
+        {
+          "function": "FinalizeArenas(JS::GCContext*, js::gc::ArenaList&, js::gc::SortedArenaList&, js::gc::AllocKind, js::SliceBudget&)",
+          "seconds": 0.003026
+        },
+        {
+          "function": "bool FinalizeTypedArenas<JSObject>(JS::GCContext*, js::gc::ArenaList&, js::gc::SortedArenaList&, js::gc::AllocKind, js::SliceBudget&)",
+          "seconds": 0.003024
+        },
+        {
+          "function": "js::GlobalHelperThreadState::dispatch(js::AutoLockHelperThreadState const&)",
+          "seconds": 0.001626
+        },
+        {
+          "function": "deflate_fast",
+          "seconds": 0.001582
+        },
+        {
+          "function": "unsigned long js::gc::Arena::finalize<js::CompactPropMap>(JS::GCContext*, js::gc::AllocKind, unsigned long)",
+          "seconds": 0.001542
+        },
+        {
+          "function": "js::gc::Arena::unmarkAll()",
+          "seconds": 0.00152
+        },
+        {
+          "function": "js::gc::BackgroundSweepTask::run(js::AutoLockHelperThreadState&)",
+          "seconds": 0.001519
+        },
+        {
+          "function": "__pthread_mutex_unlock",
+          "seconds": 0.001518
+        }
+      ],
+      "inclusive": [
+        {
+          "function": "handleMessage",
+          "seconds": 31.728
+        },
+        {
+          "function": "(root)",
+          "seconds": 31.728
+        },
+        {
+          "function": "js::HelperThread::ThreadMain(js::InternalThreadPool*, js::HelperThread*)",
+          "seconds": 31.728
+        },
+        {
+          "function": "js::detail::ThreadTrampoline<void (&)(js::InternalThreadPool*, js::HelperThread*), js::InternalThreadPool*&, js::HelperThread*>::Start(void*)",
+          "seconds": 31.728
+        },
+        {
+          "function": "invokeEntryPoint",
+          "seconds": 31.728
+        },
+        {
+          "function": "js-to-wasm:i:i",
+          "seconds": 31.728
+        },
+        {
+          "function": "__timedwait_cp",
+          "seconds": 31.684678
+        },
+        {
+          "function": "mozilla::detail::ConditionVariableImpl::wait(mozilla::detail::MutexImpl&)",
+          "seconds": 31.684554
+        },
+        {
+          "function": "__pthread_cond_timedwait",
+          "seconds": 31.684554
+        },
+        {
+          "function": "emscripten_futex_wait",
+          "seconds": 31.576486
+        },
+        {
+          "function": "wasm-to-js",
+          "seconds": 0.092488
+        },
+        {
+          "function": "_emscripten_get_now",
+          "seconds": 0.088081
+        },
+        {
+          "function": "js::GCParallelTask::runTask(JS::GCContext*, js::AutoLockHelperThreadState&)",
+          "seconds": 0.032431
+        },
+        {
+          "function": "js::GCParallelTask::runHelperThreadTask(js::AutoLockHelperThreadState&)",
+          "seconds": 0.032431
+        },
+        {
+          "function": "js::gc::BackgroundFreeTask::run(js::AutoLockHelperThreadState&)",
+          "seconds": 0.0218
+        },
+        {
+          "function": "emscripten_builtin_free",
+          "seconds": 0.0218
+        },
+        {
+          "function": "deflate",
+          "seconds": 0.009389
+        },
+        {
+          "function": "deflate_fast",
+          "seconds": 0.009389
+        },
+        {
+          "function": "js::SourceCompressionTask::runHelperThreadTask(js::AutoLockHelperThreadState&)",
+          "seconds": 0.009389
+        },
+        {
+          "function": "js::Compressor::compressMore()",
+          "seconds": 0.009389
+        },
+        {
+          "function": "void js::SourceCompressionTask::workEncodingSpecific<mozilla::Utf8Unit>()",
+          "seconds": 0.009389
+        },
+        {
+          "function": "js::gc::BackgroundSweepTask::run(js::AutoLockHelperThreadState&)",
+          "seconds": 0.009111
+        },
+        {
+          "function": "_tr_flush_block",
+          "seconds": 0.007807
+        },
+        {
+          "function": "__pthread_mutex_lock",
+          "seconds": 0.007787
+        },
+        {
+          "function": "FinalizeArenas(JS::GCContext*, js::gc::ArenaList&, js::gc::SortedArenaList&, js::gc::AllocKind, js::SliceBudget&)",
+          "seconds": 0.007592
+        },
+        {
+          "function": "now",
+          "seconds": 0.006394
+        },
+        {
+          "function": "__timedwait",
+          "seconds": 0.004706
+        },
+        {
+          "function": "compress_block",
+          "seconds": 0.004688
+        },
+        {
+          "function": "__pthread_mutex_unlock",
+          "seconds": 0.004571
+        },
+        {
+          "function": "build_tree",
+          "seconds": 0.003119
+        },
+        {
+          "function": "emscripten_futex_wake",
+          "seconds": 0.003053
+        },
+        {
+          "function": "bool FinalizeTypedArenas<JSObject>(JS::GCContext*, js::gc::ArenaList&, js::gc::SortedArenaList&, js::gc::AllocKind, js::SliceBudget&)",
+          "seconds": 0.003024
+        },
+        {
+          "function": "js::GlobalHelperThreadState::dispatch(js::AutoLockHelperThreadState const&)",
+          "seconds": 0.001626
+        },
+        {
+          "function": "unsigned long js::gc::Arena::finalize<js::CompactPropMap>(JS::GCContext*, js::gc::AllocKind, unsigned long)",
+          "seconds": 0.001542
+        },
+        {
+          "function": "js::gc::BackgroundUnmarkTask::run(js::AutoLockHelperThreadState&)",
+          "seconds": 0.00152
+        },
+        {
+          "function": "js::gc::Arena::unmarkAll()",
+          "seconds": 0.00152
+        }
+      ],
+      "futexWaitSites": [
+        {
+          "function": "(other futex wait)",
+          "seconds": 31.576486
+        }
+      ]
+    },
+    {
+      "file": "cpu-1.cpuprofile",
+      "seconds": 31.687184,
+      "self": [
+        {
+          "function": "emscripten_futex_wait",
+          "seconds": 31.456544
+        },
+        {
+          "function": "_emscripten_get_now",
+          "seconds": 0.054487
+        },
+        {
+          "function": "FastSpatialSubdivision::GetInRange(std::__2::vector<unsigned int, std::__2::allocator<unsigned int>>&, CFixedVector2D, CFixedVector2D) const",
+          "seconds": 0.025237
+        },
+        {
+          "function": "VertexPathfinder::ComputeShortPath(ShortPathRequest const&, CmpPtr<ICmpObstructionManager>) const",
+          "seconds": 0.024063
+        },
+        {
+          "function": "CCmpRangeManager::TestEntityQuery((anonymous namespace)::Query const&, unsigned int, (anonymous namespace)::EntityData const&) const",
+          "seconds": 0.023378
+        },
+        {
+          "function": "CCmpRangeManager::PerformQuery((anonymous namespace)::Query const&, std::__2::vector<unsigned int, std::__2::allocator<unsigned int>>&, CFixedVector2D, std::__2::vector<unsigned int, std::__2::allocator<unsigned int>>&)",
+          "seconds": 0.022156
+        },
+        {
+          "function": "CComponentManager::QueryInterface(unsigned int, int) const",
+          "seconds": 0.014119
+        },
+        {
+          "function": "Threading::HandleExceptionsBase<&void Threading::Thread::DoStart<Threading::WorkerThread, &Threading::WorkerThread::RunUntilDeath()>(Threading::WorkerThread*), void (*)(Threading::WorkerThread*)>::Wrapper(Threading::WorkerThread*)",
+          "seconds": 0.009369
+        },
+        {
+          "function": "CCmpObstructionManager::GetUnitObstructionsInRange(IObstructionTestFilter const&, CFixed<int, 2147483647, 32, 15, 16, 65536>, CFixed<int, 2147483647, 32, 15, 16, 65536>, CFixed<int, 2147483647, 32, 15, 16, 65536>, CFixed<int, 2147483647, 32, 15, 16, 65536>, std::__2::vector<ICmpObstructionManager::ObstructionSquare, std::__2::allocator<ICmpObstructionManager::ObstructionSquare>>&) const",
+          "seconds": 0.00776
+        },
+        {
+          "function": "wasm-to-js",
+          "seconds": 0.0064
+        },
+        {
+          "function": "CCmpRangeManager::ExecuteActiveQueries()::'lambda'(std::__2::vector<unsigned int, std::__2::allocator<unsigned int>>&)::operator()(std::__2::vector<unsigned int, std::__2::allocator<unsigned int>>&) const",
+          "seconds": 0.006206
+        },
+        {
+          "function": "emscripten_futex_wake",
+          "seconds": 0.004751
+        },
+        {
+          "function": "CCmpObstructionManager::GetStaticObstructionsInRange(IObstructionTestFilter const&, CFixed<int, 2147483647, 32, 15, 16, 65536>, CFixed<int, 2147483647, 32, 15, 16, 65536>, CFixed<int, 2147483647, 32, 15, 16, 65536>, CFixed<int, 2147483647, 32, 15, 16, 65536>, std::__2::vector<ICmpObstructionManager::ObstructionSquare, std::__2::allocator<ICmpObstructionManager::ObstructionSquare>>&) const",
+          "seconds": 0.004663
+        },
+        {
+          "function": "now",
+          "seconds": 0.003182
+        },
+        {
+          "function": "LongPathfinder::AddJumpedHoriz(int, int, int, PathCost, PathfinderState&, bool) const",
+          "seconds": 0.003176
+        },
+        {
+          "function": "__pthread_mutex_lock",
+          "seconds": 0.003079
+        },
+        {
+          "function": "__timedwait_cp",
+          "seconds": 0.003023
+        },
+        {
+          "function": "PathGoal::NavcellContainsGoal(int, int) const",
+          "seconds": 0.001753
+        },
+        {
+          "function": "LongPathfinder::ComputePath(HierarchicalPathfinder const&, CFixed<int, 2147483647, 32, 15, 16, 65536>, CFixed<int, 2147483647, 32, 15, 16, 65536>, PathGoal const&, unsigned short, WaypointPath&) const",
+          "seconds": 0.001594
+        },
+        {
+          "function": "(garbage collector)",
+          "seconds": 0.00158
+        },
+        {
+          "function": "CProfileSample::CProfileSample(char const*)",
+          "seconds": 0.001573
+        },
+        {
+          "function": "__pthread_mutex_trylock",
+          "seconds": 0.001529
+        },
+        {
+          "function": "growMemViews",
+          "seconds": 0.001526
+        },
+        {
+          "function": "HierarchicalPathfinder::FindGoalRegionsAndBestNavcells(unsigned short, unsigned short, unsigned short, unsigned short, PathGoal const&, std::__2::set<HierarchicalPathfinder::InterestingRegion, HierarchicalPathfinder::SortByBestToPoint, std::__2::allocator<HierarchicalPathfinder::InterestingRegion>>&, unsigned short) const",
+          "seconds": 0.001514
+        },
+        {
+          "function": "std::__2::__function::__func<PackagedTask<CCmpRangeManager::ExecuteActiveQueries()::'lambda'()>, std::__2::allocator<PackagedTask<CCmpRangeManager::ExecuteActiveQueries()::'lambda'()>>, void ()>::operator()()",
+          "seconds": 0.001512
+        },
+        {
+          "function": "HierarchicalPathfinder::FindNearestNavcellInRegions(std::__2::set<HierarchicalPathfinder::RegionID, HierarchicalPathfinder::SortByCenterToPoint, std::__2::allocator<HierarchicalPathfinder::RegionID>> const&, unsigned short&, unsigned short&, unsigned short) const",
+          "seconds": 0.001506
+        },
+        {
+          "function": "void std::__2::__introsort<std::__2::_ClassicAlgPolicy, std::__2::ranges::less, unsigned int*, true>(unsigned int*, unsigned int*, std::__2::ranges::less, std::__2::iterator_traits<unsigned int*>::difference_type, bool)",
+          "seconds": 0.001504
+        }
+      ],
+      "inclusive": [
+        {
+          "function": "(root)",
+          "seconds": 31.687184
+        },
+        {
+          "function": "handleMessage",
+          "seconds": 31.685604
+        },
+        {
+          "function": "invokeEntryPoint",
+          "seconds": 31.685604
+        },
+        {
+          "function": "js-to-wasm:i:i",
+          "seconds": 31.685604
+        },
+        {
+          "function": "void* std::__2::__thread_proxy[abi:ne200100]<std::__2::tuple<std::__2::unique_ptr<std::__2::__thread_struct, std::__2::default_delete<std::__2::__thread_struct>>, void (*)(CNetClientSession*), CNetClientSession*>>(void*)",
+          "seconds": 31.685604
+        },
+        {
+          "function": "Threading::HandleExceptionsBase<&void Threading::Thread::DoStart<Threading::WorkerThread, &Threading::WorkerThread::RunUntilDeath()>(Threading::WorkerThread*), void (*)(Threading::WorkerThread*)>::Wrapper(Threading::WorkerThread*)",
+          "seconds": 31.685604
+        },
+        {
+          "function": "__timedwait_cp",
+          "seconds": 31.512475
+        },
+        {
+          "function": "std::__2::condition_variable::wait(std::__2::unique_lock<std::__2::mutex>&)",
+          "seconds": 31.504777
+        },
+        {
+          "function": "__pthread_cond_timedwait",
+          "seconds": 31.504777
+        },
+        {
+          "function": "emscripten_futex_wait",
+          "seconds": 31.456544
+        },
+        {
+          "function": "std::__2::__function::__func<PackagedTask<CCmpRangeManager::ExecuteActiveQueries()::'lambda'()>, std::__2::allocator<PackagedTask<CCmpRangeManager::ExecuteActiveQueries()::'lambda'()>>, void ()>::operator()()",
+          "seconds": 0.102188
+        },
+        {
+          "function": "CCmpRangeManager::ExecuteActiveQueries()::'lambda'(std::__2::vector<unsigned int, std::__2::allocator<unsigned int>>&)::operator()(std::__2::vector<unsigned int, std::__2::allocator<unsigned int>>&) const",
+          "seconds": 0.100676
+        },
+        {
+          "function": "CCmpRangeManager::PerformQuery((anonymous namespace)::Query const&, std::__2::vector<unsigned int, std::__2::allocator<unsigned int>>&, CFixedVector2D, std::__2::vector<unsigned int, std::__2::allocator<unsigned int>>&)",
+          "seconds": 0.083305
+        },
+        {
+          "function": "std::__2::__function::__func<PackagedTask<CCmpPathfinder::StartProcessingMoves(bool)::$_0>, std::__2::allocator<PackagedTask<CCmpPathfinder::StartProcessingMoves(bool)::$_0>>, void ()>::operator()()",
+          "seconds": 0.06927
+        },
+        {
+          "function": "wasm-to-js",
+          "seconds": 0.065595
+        },
+        {
+          "function": "_emscripten_get_now",
+          "seconds": 0.057669
+        },
+        {
+          "function": "VertexPathfinder::ComputeShortPath(ShortPathRequest const&, CmpPtr<ICmpObstructionManager>) const",
+          "seconds": 0.053534
+        },
+        {
+          "function": "void CCmpPathfinder::PathRequests<ShortPathRequest>::Compute<VertexPathfinder>(CCmpPathfinder const&, VertexPathfinder const&)",
+          "seconds": 0.053534
+        },
+        {
+          "function": "CCmpRangeManager::TestEntityQuery((anonymous namespace)::Query const&, unsigned int, (anonymous namespace)::EntityData const&) const",
+          "seconds": 0.037497
+        },
+        {
+          "function": "FastSpatialSubdivision::GetInRange(std::__2::vector<unsigned int, std::__2::allocator<unsigned int>>&, CFixedVector2D, CFixedVector2D) const",
+          "seconds": 0.025237
+        },
+        {
+          "function": "__pthread_mutex_lock",
+          "seconds": 0.015485
+        },
+        {
+          "function": "CComponentManager::QueryInterface(unsigned int, int) const",
+          "seconds": 0.014119
+        },
+        {
+          "function": "CCmpObstructionManager::GetUnitObstructionsInRange(IObstructionTestFilter const&, CFixed<int, 2147483647, 32, 15, 16, 65536>, CFixed<int, 2147483647, 32, 15, 16, 65536>, CFixed<int, 2147483647, 32, 15, 16, 65536>, CFixed<int, 2147483647, 32, 15, 16, 65536>, std::__2::vector<ICmpObstructionManager::ObstructionSquare, std::__2::allocator<ICmpObstructionManager::ObstructionSquare>>&) const",
+          "seconds": 0.013994
+        },
+        {
+          "function": "timer_Time()",
+          "seconds": 0.012587
+        },
+        {
+          "function": "LongPathfinder::ComputePath(HierarchicalPathfinder const&, CFixed<int, 2147483647, 32, 15, 16, 65536>, CFixed<int, 2147483647, 32, 15, 16, 65536>, PathGoal const&, unsigned short, WaypointPath&) const",
+          "seconds": 0.012561
+        },
+        {
+          "function": "CProfiler2::RecordRegionEnter(char const*)",
+          "seconds": 0.011051
+        },
+        {
+          "function": "LongPathfinder::ComputeJPSPath(HierarchicalPathfinder const&, CFixed<int, 2147483647, 32, 15, 16, 65536>, CFixed<int, 2147483647, 32, 15, 16, 65536>, PathGoal const&, unsigned short, WaypointPath&) const",
+          "seconds": 0.010967
+        },
+        {
+          "function": "__timedwait",
+          "seconds": 0.010877
+        },
+        {
+          "function": "CCmpObstructionManager::GetStaticObstructionsInRange(IObstructionTestFilter const&, CFixed<int, 2147483647, 32, 15, 16, 65536>, CFixed<int, 2147483647, 32, 15, 16, 65536>, CFixed<int, 2147483647, 32, 15, 16, 65536>, CFixed<int, 2147483647, 32, 15, 16, 65536>, std::__2::vector<ICmpObstructionManager::ObstructionSquare, std::__2::allocator<ICmpObstructionManager::ObstructionSquare>>&) const",
+          "seconds": 0.010831
+        },
+        {
+          "function": "_clock_time_get",
+          "seconds": 0.009412
+        },
+        {
+          "function": "emscripten_builtin_free",
+          "seconds": 0.006249
+        },
+        {
+          "function": "SpatialSubdivision::GetInRange(std::__2::vector<unsigned int, std::__2::allocator<unsigned int>>&, CFixedVector2D, CFixedVector2D) const",
+          "seconds": 0.006062
+        },
+        {
+          "function": "emscripten_futex_wake",
+          "seconds": 0.004751
+        },
+        {
+          "function": "emscripten_builtin_malloc",
+          "seconds": 0.004581
+        },
+        {
+          "function": "operator new(unsigned long)",
+          "seconds": 0.004581
+        },
+        {
+          "function": "std::__2::__wrap_iter<unsigned int*> std::__2::vector<unsigned int, std::__2::allocator<unsigned int>>::__insert_with_size[abi:ne200100]<std::__2::__wrap_iter<unsigned int const*>, std::__2::__wrap_iter<unsigned int const*>>(std::__2::__wrap_iter<unsigned int const*>, std::__2::__wrap_iter<unsigned int const*>, std::__2::__wrap_iter<unsigned int const*>, long)",
+          "seconds": 0.004558
+        },
+        {
+          "function": "HierarchicalPathfinder::FindGoalRegionsAndBestNavcells(unsigned short, unsigned short, unsigned short, unsigned short, PathGoal const&, std::__2::set<HierarchicalPathfinder::InterestingRegion, HierarchicalPathfinder::SortByBestToPoint, std::__2::allocator<HierarchicalPathfinder::InterestingRegion>>&, unsigned short) const",
+          "seconds": 0.003267
+        },
+        {
+          "function": "now",
+          "seconds": 0.003182
+        },
+        {
+          "function": "LongPathfinder::AddJumpedHoriz(int, int, int, PathCost, PathfinderState&, bool) const",
+          "seconds": 0.003176
+        },
+        {
+          "function": "PathGoal::NavcellContainsGoal(int, int) const",
+          "seconds": 0.001753
+        },
+        {
+          "function": "__pthread_mutex_unlock",
+          "seconds": 0.001606
+        },
+        {
+          "function": "(garbage collector)",
+          "seconds": 0.00158
+        },
+        {
+          "function": "CProfileSample::CProfileSample(char const*)",
+          "seconds": 0.001573
+        },
+        {
+          "function": "CProfiler2::RecordRegionLeave()",
+          "seconds": 0.001536
+        },
+        {
+          "function": "__pthread_mutex_trylock",
+          "seconds": 0.001529
+        }
+      ],
+      "futexWaitSites": [
+        {
+          "function": "(other futex wait)",
+          "seconds": 31.456544
+        }
+      ]
+    },
+    {
+      "file": "cpu-10.cpuprofile",
+      "seconds": 31.151225,
+      "self": [
+        {
+          "function": "emscripten_futex_wait",
+          "seconds": 31.039293
+        },
+        {
+          "function": "_emscripten_get_now",
+          "seconds": 0.094053
+        },
+        {
+          "function": "mozilla::detail::ConditionVariableImpl::wait(mozilla::detail::MutexImpl&)",
+          "seconds": 0.007382
+        },
+        {
+          "function": "now",
+          "seconds": 0.006216
+        },
+        {
+          "function": "wasm-to-js",
+          "seconds": 0.004281
+        }
+      ],
+      "inclusive": [
+        {
+          "function": "handleMessage",
+          "seconds": 31.151225
+        },
+        {
+          "function": "(root)",
+          "seconds": 31.151225
+        },
+        {
+          "function": "js::HelperThread::ThreadMain(js::InternalThreadPool*, js::HelperThread*)",
+          "seconds": 31.151225
+        },
+        {
+          "function": "js::detail::ThreadTrampoline<void (&)(js::InternalThreadPool*, js::HelperThread*), js::InternalThreadPool*&, js::HelperThread*>::Start(void*)",
+          "seconds": 31.151225
+        },
+        {
+          "function": "invokeEntryPoint",
+          "seconds": 31.151225
+        },
+        {
+          "function": "mozilla::detail::ConditionVariableImpl::wait(mozilla::detail::MutexImpl&)",
+          "seconds": 31.151225
+        },
+        {
+          "function": "js-to-wasm:i:i",
+          "seconds": 31.151225
+        },
+        {
+          "function": "emscripten_futex_wait",
+          "seconds": 31.039293
+        },
+        {
+          "function": "wasm-to-js",
+          "seconds": 0.101474
+        },
+        {
+          "function": "_emscripten_get_now",
+          "seconds": 0.100269
+        },
+        {
+          "function": "now",
+          "seconds": 0.006216
+        }
+      ],
+      "futexWaitSites": [
+        {
+          "function": "(other futex wait)",
+          "seconds": 31.039293
+        }
+      ]
+    },
+    {
+      "file": "cpu-11.cpuprofile",
+      "seconds": 31.069655,
+      "self": [
+        {
+          "function": "emscripten_futex_wait",
+          "seconds": 30.980543
+        },
+        {
+          "function": "_emscripten_get_now",
+          "seconds": 0.075241
+        },
+        {
+          "function": "SDL_TimerThread",
+          "seconds": 0.009192
+        },
+        {
+          "function": "wasm-to-js",
+          "seconds": 0.003171
+        },
+        {
+          "function": "now",
+          "seconds": 0.001508
+        }
+      ],
+      "inclusive": [
+        {
+          "function": "SDL_TimerThread",
+          "seconds": 31.069655
+        },
+        {
+          "function": "handleMessage",
+          "seconds": 31.069655
+        },
+        {
+          "function": "(root)",
+          "seconds": 31.069655
+        },
+        {
+          "function": "invokeEntryPoint",
+          "seconds": 31.069655
+        },
+        {
+          "function": "RunThread",
+          "seconds": 31.069655
+        },
+        {
+          "function": "js-to-wasm:i:i",
+          "seconds": 31.069655
+        },
+        {
+          "function": "emscripten_futex_wait",
+          "seconds": 30.980543
+        },
+        {
+          "function": "wasm-to-js",
+          "seconds": 0.07992
+        },
+        {
+          "function": "_emscripten_get_now",
+          "seconds": 0.076749
+        },
+        {
+          "function": "now",
+          "seconds": 0.001508
+        }
+      ],
+      "futexWaitSites": [
+        {
+          "function": "(other futex wait)",
+          "seconds": 30.980543
+        }
+      ]
+    },
+    {
+      "file": "cpu-12.cpuprofile",
+      "seconds": 30.99298,
+      "self": [
+        {
+          "function": "emscripten_futex_wait",
+          "seconds": 30.895931
+        },
+        {
+          "function": "_emscripten_get_now",
+          "seconds": 0.08304
+        },
+        {
+          "function": "__timedwait_cp",
+          "seconds": 0.004735
+        },
+        {
+          "function": "now",
+          "seconds": 0.004688
+        },
+        {
+          "function": "wasm-to-js",
+          "seconds": 0.004586
+        }
+      ],
+      "inclusive": [
+        {
+          "function": "handleMessage",
+          "seconds": 30.99298
+        },
+        {
+          "function": "(root)",
+          "seconds": 30.99298
+        },
+        {
+          "function": "js::HelperThread::ThreadMain(js::InternalThreadPool*, js::HelperThread*)",
+          "seconds": 30.99298
+        },
+        {
+          "function": "__timedwait_cp",
+          "seconds": 30.99298
+        },
+        {
+          "function": "js::detail::ThreadTrampoline<void (&)(js::InternalThreadPool*, js::HelperThread*), js::InternalThreadPool*&, js::HelperThread*>::Start(void*)",
+          "seconds": 30.99298
+        },
+        {
+          "function": "invokeEntryPoint",
+          "seconds": 30.99298
+        },
+        {
+          "function": "mozilla::detail::ConditionVariableImpl::wait(mozilla::detail::MutexImpl&)",
+          "seconds": 30.99298
+        },
+        {
+          "function": "__pthread_cond_timedwait",
+          "seconds": 30.99298
+        },
+        {
+          "function": "js-to-wasm:i:i",
+          "seconds": 30.99298
+        },
+        {
+          "function": "emscripten_futex_wait",
+          "seconds": 30.895931
+        },
+        {
+          "function": "wasm-to-js",
+          "seconds": 0.092314
+        },
+        {
+          "function": "_emscripten_get_now",
+          "seconds": 0.087728
+        },
+        {
+          "function": "now",
+          "seconds": 0.004688
+        }
+      ],
+      "futexWaitSites": [
+        {
+          "function": "(other futex wait)",
+          "seconds": 30.895931
+        }
+      ]
+    },
+    {
+      "file": "cpu-13.cpuprofile",
+      "seconds": 30.951032,
+      "self": [
+        {
+          "function": "emscripten_futex_wait",
+          "seconds": 30.866289
+        },
+        {
+          "function": "_emscripten_get_now",
+          "seconds": 0.066436
+        },
+        {
+          "function": "wasm-to-js",
+          "seconds": 0.006268
+        },
+        {
+          "function": "__timedwait_cp",
+          "seconds": 0.005948
+        },
+        {
+          "function": "now",
+          "seconds": 0.003053
+        },
+        {
+          "function": "JS::WeakCache<JS::GCHashSet<js::WeakHeapPtr<js::SharedShape*>, js::InitialShapeHasher, js::SystemAllocPolicy>>::traceWeak(JSTracer*, JS::detail::WeakCacheBase::NeedsLock)",
+          "seconds": 0.001525
+        },
+        {
+          "function": "js::GenericTracerImpl<js::gc::SweepingTracer>::onBaseShapeEdge(js::BaseShape**, char const*)",
+          "seconds": 0.001513
+        }
+      ],
+      "inclusive": [
+        {
+          "function": "handleMessage",
+          "seconds": 30.951032
+        },
+        {
+          "function": "(root)",
+          "seconds": 30.951032
+        },
+        {
+          "function": "js::detail::ThreadTrampoline<void (&)(js::InternalThreadPool*, js::HelperThread*), js::InternalThreadPool*&, js::HelperThread*>::Start(void*)",
+          "seconds": 30.951032
+        },
+        {
+          "function": "invokeEntryPoint",
+          "seconds": 30.951032
+        },
+        {
+          "function": "js-to-wasm:i:i",
+          "seconds": 30.951032
+        },
+        {
+          "function": "mozilla::detail::ConditionVariableImpl::wait(mozilla::detail::MutexImpl&)",
+          "seconds": 30.946486
+        },
+        {
+          "function": "__pthread_cond_timedwait",
+          "seconds": 30.946486
+        },
+        {
+          "function": "__timedwait_cp",
+          "seconds": 30.941875
+        },
+        {
+          "function": "emscripten_futex_wait",
+          "seconds": 30.866289
+        },
+        {
+          "function": "wasm-to-js",
+          "seconds": 0.071162
+        },
+        {
+          "function": "_emscripten_get_now",
+          "seconds": 0.069489
+        },
+        {
+          "function": "js::GCParallelTask::runTask(JS::GCContext*, js::AutoLockHelperThreadState&)",
+          "seconds": 0.004546
+        },
+        {
+          "function": "js::GCParallelTask::runHelperThreadTask(js::AutoLockHelperThreadState&)",
+          "seconds": 0.004546
+        },
+        {
+          "function": "now",
+          "seconds": 0.003053
+        },
+        {
+          "function": "JS::WeakCache<JS::GCHashSet<js::WeakHeapPtr<js::SharedShape*>, js::InitialShapeHasher, js::SystemAllocPolicy>>::traceWeak(JSTracer*, JS::detail::WeakCacheBase::NeedsLock)",
+          "seconds": 0.003038
+        },
+        {
+          "function": "IncrementalSweepWeakCache(js::gc::GCRuntime*, js::gc::WeakCacheToSweep const&)",
+          "seconds": 0.003038
+        },
+        {
+          "function": "js::gc::ParallelWorker<js::gc::WeakCacheToSweep, js::gc::WeakCacheSweepIterator>::run(js::AutoLockHelperThreadState&)",
+          "seconds": 0.003038
+        },
+        {
+          "function": "js::GenericTracerImpl<js::gc::SweepingTracer>::onBaseShapeEdge(js::BaseShape**, char const*)",
+          "seconds": 0.001513
+        },
+        {
+          "function": "__clock_gettime",
+          "seconds": 0.001508
+        },
+        {
+          "function": "mozilla::TimeStamp::Now(bool)",
+          "seconds": 0.001508
+        },
+        {
+          "function": "_clock_time_get",
+          "seconds": 0.001508
+        }
+      ],
+      "futexWaitSites": [
+        {
+          "function": "(other futex wait)",
+          "seconds": 30.866289
+        }
+      ]
+    },
+    {
+      "file": "cpu-2.cpuprofile",
+      "seconds": 31.62336,
+      "self": [
+        {
+          "function": "emscripten_futex_wait",
+          "seconds": 31.519804
+        },
+        {
+          "function": "_emscripten_get_now",
+          "seconds": 0.088124
+        },
+        {
+          "function": "mozilla::detail::ConditionVariableImpl::wait(mozilla::detail::MutexImpl&)",
+          "seconds": 0.006214
+        },
+        {
+          "function": "now",
+          "seconds": 0.004664
+        },
+        {
+          "function": "wasm-to-js",
+          "seconds": 0.004554
+        }
+      ],
+      "inclusive": [
+        {
+          "function": "handleMessage",
+          "seconds": 31.62336
+        },
+        {
+          "function": "(root)",
+          "seconds": 31.62336
+        },
+        {
+          "function": "js::HelperThread::ThreadMain(js::InternalThreadPool*, js::HelperThread*)",
+          "seconds": 31.62336
+        },
+        {
+          "function": "js::detail::ThreadTrampoline<void (&)(js::InternalThreadPool*, js::HelperThread*), js::InternalThreadPool*&, js::HelperThread*>::Start(void*)",
+          "seconds": 31.62336
+        },
+        {
+          "function": "invokeEntryPoint",
+          "seconds": 31.62336
+        },
+        {
+          "function": "mozilla::detail::ConditionVariableImpl::wait(mozilla::detail::MutexImpl&)",
+          "seconds": 31.62336
+        },
+        {
+          "function": "js-to-wasm:i:i",
+          "seconds": 31.62336
+        },
+        {
+          "function": "emscripten_futex_wait",
+          "seconds": 31.519804
+        },
+        {
+          "function": "wasm-to-js",
+          "seconds": 0.095796
+        },
+        {
+          "function": "_emscripten_get_now",
+          "seconds": 0.092788
+        },
+        {
+          "function": "now",
+          "seconds": 0.004664
+        }
+      ],
+      "futexWaitSites": [
+        {
+          "function": "(other futex wait)",
+          "seconds": 31.519804
+        }
+      ]
+    },
+    {
+      "file": "cpu-3.cpuprofile",
+      "seconds": 31.537828,
+      "self": [
+        {
+          "function": "emscripten_futex_wait",
+          "seconds": 31.439698
+        },
+        {
+          "function": "_emscripten_get_now",
+          "seconds": 0.082831
+        },
+        {
+          "function": "__timedwait_cp",
+          "seconds": 0.004585
+        },
+        {
+          "function": "wasm-to-js",
+          "seconds": 0.004534
+        },
+        {
+          "function": "now",
+          "seconds": 0.0031
+        },
+        {
+          "function": "emscripten_builtin_free",
+          "seconds": 0.001564
+        },
+        {
+          "function": "deflate_fast",
+          "seconds": 0.001516
+        }
+      ],
+      "inclusive": [
+        {
+          "function": "handleMessage",
+          "seconds": 31.537828
+        },
+        {
+          "function": "(root)",
+          "seconds": 31.537828
+        },
+        {
+          "function": "js::detail::ThreadTrampoline<void (&)(js::InternalThreadPool*, js::HelperThread*), js::InternalThreadPool*&, js::HelperThread*>::Start(void*)",
+          "seconds": 31.537828
+        },
+        {
+          "function": "invokeEntryPoint",
+          "seconds": 31.537828
+        },
+        {
+          "function": "js-to-wasm:i:i",
+          "seconds": 31.537828
+        },
+        {
+          "function": "__timedwait_cp",
+          "seconds": 31.534748
+        },
+        {
+          "function": "mozilla::detail::ConditionVariableImpl::wait(mozilla::detail::MutexImpl&)",
+          "seconds": 31.534748
+        },
+        {
+          "function": "__pthread_cond_timedwait",
+          "seconds": 31.534748
+        },
+        {
+          "function": "emscripten_futex_wait",
+          "seconds": 31.439698
+        },
+        {
+          "function": "wasm-to-js",
+          "seconds": 0.090465
+        },
+        {
+          "function": "_emscripten_get_now",
+          "seconds": 0.085931
+        },
+        {
+          "function": "now",
+          "seconds": 0.0031
+        },
+        {
+          "function": "js::gc::BackgroundFreeTask::run(js::AutoLockHelperThreadState&)",
+          "seconds": 0.001564
+        },
+        {
+          "function": "emscripten_builtin_free",
+          "seconds": 0.001564
+        },
+        {
+          "function": "js::GCParallelTask::runTask(JS::GCContext*, js::AutoLockHelperThreadState&)",
+          "seconds": 0.001564
+        },
+        {
+          "function": "js::GCParallelTask::runHelperThreadTask(js::AutoLockHelperThreadState&)",
+          "seconds": 0.001564
+        },
+        {
+          "function": "deflate",
+          "seconds": 0.001516
+        },
+        {
+          "function": "js::SourceCompressionTask::runHelperThreadTask(js::AutoLockHelperThreadState&)",
+          "seconds": 0.001516
+        },
+        {
+          "function": "deflate_fast",
+          "seconds": 0.001516
+        },
+        {
+          "function": "js::Compressor::compressMore()",
+          "seconds": 0.001516
+        },
+        {
+          "function": "void js::SourceCompressionTask::workEncodingSpecific<mozilla::Utf8Unit>()",
+          "seconds": 0.001516
+        },
+        {
+          "function": "__pthread_mutex_lock",
+          "seconds": 0.001507
+        },
+        {
+          "function": "__timedwait",
+          "seconds": 0.001507
+        }
+      ],
+      "futexWaitSites": [
+        {
+          "function": "(other futex wait)",
+          "seconds": 31.439698
+        }
+      ]
+    },
+    {
+      "file": "cpu-4.cpuprofile",
+      "seconds": 31.470633,
+      "self": [
+        {
+          "function": "emscripten_futex_wait",
+          "seconds": 31.359214
+        },
+        {
+          "function": "_emscripten_get_now",
+          "seconds": 0.088951
+        },
+        {
+          "function": "now",
+          "seconds": 0.009385
+        },
+        {
+          "function": "mozilla::detail::ConditionVariableImpl::wait(mozilla::detail::MutexImpl&)",
+          "seconds": 0.008738
+        },
+        {
+          "function": "wasm-to-js",
+          "seconds": 0.004345
+        }
+      ],
+      "inclusive": [
+        {
+          "function": "handleMessage",
+          "seconds": 31.470633
+        },
+        {
+          "function": "(root)",
+          "seconds": 31.470633
+        },
+        {
+          "function": "js::HelperThread::ThreadMain(js::InternalThreadPool*, js::HelperThread*)",
+          "seconds": 31.470633
+        },
+        {
+          "function": "js::detail::ThreadTrampoline<void (&)(js::InternalThreadPool*, js::HelperThread*), js::InternalThreadPool*&, js::HelperThread*>::Start(void*)",
+          "seconds": 31.470633
+        },
+        {
+          "function": "invokeEntryPoint",
+          "seconds": 31.470633
+        },
+        {
+          "function": "mozilla::detail::ConditionVariableImpl::wait(mozilla::detail::MutexImpl&)",
+          "seconds": 31.470633
+        },
+        {
+          "function": "js-to-wasm:i:i",
+          "seconds": 31.470633
+        },
+        {
+          "function": "emscripten_futex_wait",
+          "seconds": 31.359214
+        },
+        {
+          "function": "wasm-to-js",
+          "seconds": 0.101173
+        },
+        {
+          "function": "_emscripten_get_now",
+          "seconds": 0.098336
+        },
+        {
+          "function": "now",
+          "seconds": 0.009385
+        }
+      ],
+      "futexWaitSites": [
+        {
+          "function": "(other futex wait)",
+          "seconds": 31.359214
+        }
+      ]
+    },
+    {
+      "file": "cpu-5.cpuprofile",
+      "seconds": 31.385246,
+      "self": [
+        {
+          "function": "emscripten_futex_wait",
+          "seconds": 5.891949
+        },
+        {
+          "function": "js::pbl::PortableBaselineInterpret(JSContext*, js::pbl::State&, js::pbl::Stack&, js::pbl::StackVal*, JSObject*, JS::Value*)",
+          "seconds": 4.953998
+        },
+        {
+          "function": "_emscripten_get_now",
+          "seconds": 1.334318
+        },
+        {
+          "function": "ModelRenderer::Render(Renderer::Backend::IDeviceCommandContext*, ModelVertexRenderer&, RenderModifier&, CShaderDefines const&, int, int, ERenderMode, std::__2::span<CModel*, 4294967295ul>)",
+          "seconds": 1.327426
+        },
+        {
+          "function": "Renderer::Backend::WebGPU::(anonymous namespace)::Context::UploadBufferRegion(Renderer::Backend::IBuffer*, void const*, unsigned int, unsigned int)",
+          "seconds": 0.964644
+        },
+        {
+          "function": "Renderer::Backend::WebGPU::AppendUploadBytes(std::__2::vector<unsigned char, std::__2::allocator<unsigned char>>&, std::__2::span<unsigned char const, 4294967295ul>, unsigned int, unsigned int)",
+          "seconds": 0.753769
+        },
+        {
+          "function": "Renderer::Backend::WebGPU::(anonymous namespace)::CallAsync(char const*, std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>> const&, void const*, unsigned long)",
+          "seconds": 0.695361
+        },
+        {
+          "function": "CUnitAnimation::Update(float)",
+          "seconds": 0.563902
+        },
+        {
+          "function": "CModel::InvalidatePosition()",
+          "seconds": 0.56004
+        },
+        {
+          "function": "Renderer::Backend::WebGPU::(anonymous namespace)::Context::SetUniform(int, std::__2::span<float const, 4294967295ul>)",
+          "seconds": 0.521794
+        },
+        {
+          "function": "CCmpUnitRenderer::HandleMessage(CMessage const&, bool)",
+          "seconds": 0.519396
+        },
+        {
+          "function": "CSceneRenderer::SubmitNonRecursive(CModel*)",
+          "seconds": 0.417788
+        },
+        {
+          "function": "VertexArray::UploadIfNeeded(Renderer::Backend::IDeviceCommandContext*)",
+          "seconds": 0.397821
+        },
+        {
+          "function": "CModel::ValidatePosition()",
+          "seconds": 0.391453
+        },
+        {
+          "function": "ShaderRenderModifier::PrepareModel(Renderer::Backend::IDeviceCommandContext*, CModel*)",
+          "seconds": 0.323469
+        },
+        {
+          "function": "CTextureManager::MakeProgress()",
+          "seconds": 0.317464
+        },
+        {
+          "function": "CModel::GetWorldBoundsRec()",
+          "seconds": 0.312819
+        },
+        {
+          "function": "CMatrix3D::operator*(CMatrix3D const&) const",
+          "seconds": 0.305415
+        },
+        {
+          "function": "js::NativeGetPropertyNoGC(JSContext*, js::NativeObject*, JS::Value const&, JS::PropertyKey, JS::Value*)",
+          "seconds": 0.296322
+        },
+        {
+          "function": "void std::__2::__introsort<std::__2::_ClassicAlgPolicy, SMRBatchModel&, CModel**, false>(CModel**, CModel**, SMRBatchModel&, std::__2::iterator_traits<CModel**>::difference_type, bool)",
+          "seconds": 0.284153
+        },
+        {
+          "function": "SilhouetteRenderer::ComputeSubmissions(CCamera const&)",
+          "seconds": 0.283744
+        },
+        {
+          "function": "Renderer::Backend::WebGPU::(anonymous namespace)::Shader::GetBindingSlot(CStrIntern) const",
+          "seconds": 0.27004
+        },
+        {
+          "function": "emscripten_builtin_malloc",
+          "seconds": 0.236593
+        },
+        {
+          "function": "now",
+          "seconds": 0.201227
+        },
+        {
+          "function": "CCmpRangeManager::GetLosVisibility(CEntityHandle, int) const",
+          "seconds": 0.199026
+        },
+        {
+          "function": "std::__2::pair<std::__2::__hash_iterator<std::__2::__hash_node<Path, void*>*>, bool> std::__2::__hash_table<Path, std::__2::hash<Path>, std::__2::equal_to<Path>, std::__2::allocator<Path>>::__emplace_unique_key_args<Path, Path const&>(Path const&, Path const&)",
+          "seconds": 0.194518
+        },
+        {
+          "function": "js::TypedArrayObject::getElementPure(unsigned long, JS::Value*)",
+          "seconds": 0.182408
+        },
+        {
+          "function": "js::jit::ICScript::interpreterICEntryFromPCOffset(unsigned int)",
+          "seconds": 0.179548
+        },
+        {
+          "function": "js::InternalCallOrConstruct(JSContext*, JS::CallArgs const&, js::MaybeConstruct, js::CallReason)",
+          "seconds": 0.171534
+        },
+        {
+          "function": "CSkeletonAnimDef::BuildBoneMatrices(float, CMatrix3D*, bool) const",
+          "seconds": 0.164928
+        },
+        {
+          "function": "js::jit::CacheIRReader::CacheIRReader(js::jit::CacheIRStubInfo const*)",
+          "seconds": 0.162253
+        },
+        {
+          "function": "js::jit::MaybeEnterJit(JSContext*, js::RunState&)",
+          "seconds": 0.159654
+        },
+        {
+          "function": "CComponentManager::BroadcastMessage(CMessage const&)",
+          "seconds": 0.151861
+        },
+        {
+          "function": "js::GetElementNoGC(JSContext*, JSObject*, JS::Value const&, unsigned int, JS::Value*)",
+          "seconds": 0.1343
+        },
+        {
+          "function": "bigintToI53Checked",
+          "seconds": 0.132171
+        },
+        {
+          "function": "void std::__2::__introsort<std::__2::_ClassicAlgPolicy, std::__2::ranges::less, unsigned int*, true>(unsigned int*, unsigned int*, std::__2::ranges::less, std::__2::iterator_traits<unsigned int*>::difference_type, bool)",
+          "seconds": 0.128662
+        },
+        {
+          "function": "wasm-to-js",
+          "seconds": 0.126699
+        },
+        {
+          "function": "js::jit::DoCallFallback(JSContext*, js::jit::BaselineFrame*, js::jit::ICFallbackStub*, unsigned int, JS::Value*, JS::MutableHandle<JS::Value>)",
+          "seconds": 0.126544
+        },
+        {
+          "function": "_clock_time_get",
+          "seconds": 0.114943
+        },
+        {
+          "function": "CMatrix3D::GetInverse(CMatrix3D&) const",
+          "seconds": 0.107837
+        },
+        {
+          "function": "CQuaternion::Slerp(CQuaternion const&, CQuaternion const&, float)",
+          "seconds": 0.10731
+        },
+        {
+          "function": "InstancingModelRenderer::PrepareModelDef(Renderer::Backend::IDeviceCommandContext*, CModelDef const&)",
+          "seconds": 0.106487
+        },
+        {
+          "function": "std::__2::__wrap_iter<unsigned int*> std::__2::vector<unsigned int, std::__2::allocator<unsigned int>>::__insert_with_size[abi:ne200100]<std::__2::__wrap_iter<unsigned int const*>, std::__2::__wrap_iter<unsigned int const*>>(std::__2::__wrap_iter<unsigned int const*>, std::__2::__wrap_iter<unsigned int const*>, std::__2::__wrap_iter<unsigned int const*>, long)",
+          "seconds": 0.104198
+        },
+        {
+          "function": "CBoundingBoxAligned::Transform(CMatrix3D const&, CBoundingBoxAligned&) const",
+          "seconds": 0.102211
+        },
+        {
+          "function": "CModel::SetTransform(CMatrix3D const&)",
+          "seconds": 0.091112
+        }
+      ],
+      "inclusive": [
+        {
+          "function": "(root)",
+          "seconds": 31.385246
+        },
+        {
+          "function": "main",
+          "seconds": 31.300338
+        },
+        {
+          "function": "_main_thread",
+          "seconds": 31.300338
+        },
+        {
+          "function": "handleMessage",
+          "seconds": 31.300338
+        },
+        {
+          "function": "js-to-wasm:ii:",
+          "seconds": 31.300338
+        },
+        {
+          "function": "invokeEntryPoint",
+          "seconds": 31.300338
+        },
+        {
+          "function": "CRenderer::RenderFrame(bool)",
+          "seconds": 18.97574
+        },
+        {
+          "function": "CRenderer::RenderFrameImpl(Renderer::Backend::ISwapChain&, bool, bool)",
+          "seconds": 13.043726
+        },
+        {
+          "function": "CGame::Update(double, bool)",
+          "seconds": 10.935775
+        },
+        {
+          "function": "CTurnManager::Update(float, unsigned long, std::__2::function<void (std::__2::basic_string<char, std::__2::char_traits<char>, std::__2::allocator<char>> const&, std::__2::optional<JS::HandleValueArray>)> const&)",
+          "seconds": 9.25751
+        },
+        {
+          "function": "JS_CallFunctionValue(JSContext*, JS::Handle<JSObject*>, JS::Handle<JS::Value>, JS::HandleValueArray const&, JS::MutableHandle<JS::Value>)",
+          "seconds": 9.255558
+        },
+        {
+          "function": "CSimulation2Impl::Update(int, std::__2::vector<SimulationCommand, std::__2::allocator<SimulationCommand>> const&)",
+          "seconds": 9.249416
+        },
+        {
+          "function": "js::Call(JSContext*, JS::Handle<JS::Value>, JS::Handle<JS::Value>, js::AnyInvokeArgs const&, JS::MutableHandle<JS::Value>, js::CallReason)",
+          "seconds": 9.24311
+        },
+        {
+          "function": "CSimulation2Impl::UpdateComponents(CSimContext&, CFixed<int, 2147483647, 32, 15, 16, 65536>, std::__2::vector<SimulationCommand, std::__2::allocator<SimulationCommand>> const&)",
+          "seconds": 9.232179
+        },
+        {
+          "function": "js::InternalCallOrConstruct(JSContext*, JS::CallArgs const&, js::MaybeConstruct, js::CallReason)",
+          "seconds": 9.228072
+        },
+        {
+          "function": "js::RunScript(JSContext*, js::RunState&)",
+          "seconds": 9.187551
+        },
+        {
+          "function": "CComponentManager::BroadcastMessage(CMessage const&)",
+          "seconds": 8.547777
+        },
+        {
+          "function": "js::jit::MaybeEnterJit(JSContext*, js::RunState&)",
+          "seconds": 8.394549
+        },
+        {
+          "function": "js::pbl::PortableBaselineInterpret(JSContext*, js::pbl::State&, js::pbl::Stack&, js::pbl::StackVal*, JSObject*, JS::Value*)",
+          "seconds": 8.288568
+        },
+        {
+          "function": "wasm-to-js",
+          "seconds": 7.892855
+        },
+        {
+          "function": "CAIWorker::PerformComputation()",
+          "seconds": 6.09296
+        },
+        {
+          "function": "CCmpAIManager::PushCommands()",
+          "seconds": 6.09296
+        },
+        {
+          "function": "Renderer::Backend::WebGPU::(anonymous namespace)::Context::Flush()",
+          "seconds": 5.905914
+        },
+        {
+          "function": "emscripten_futex_wait",
+          "seconds": 5.891949
+        },
+        {
+          "function": "proxyToMainThread",
+          "seconds": 5.8489
+        },
+        {
+          "function": "__timedwait_cp",
+          "seconds": 5.814373
+        },
+        {
+          "function": "__pthread_cond_timedwait",
+          "seconds": 5.800443
+        },
+        {
+          "function": "js-to-wasm:iiiii:d",
+          "seconds": 5.750057
+        },
+        {
+          "function": "CSoundManager::IdleTask()",
+          "seconds": 5.655078
+        },
+        {
+          "function": "Frame(RL::Interface*, int)::$_0::__invoke()",
+          "seconds": 5.653455
+        },
+        {
+          "function": "CSoundBase::IsPlaying()",
+          "seconds": 5.648646
+        },
+        {
+          "function": "CSoundBase::EnsurePlay()",
+          "seconds": 5.648646
+        },
+        {
+          "function": "_alGetSourcei",
+          "seconds": 5.639731
+        },
+        {
+          "function": "CCmpUnitRenderer::HandleMessage(CMessage const&, bool)",
+          "seconds": 5.563218
+        },
+        {
+          "function": "CSceneRenderer::EnumerateSceneObjects(Scene&)",
+          "seconds": 5.23438
+        },
+        {
+          "function": "CSceneRenderer::PrepareSubmissions(Renderer::Backend::IDeviceCommandContext*)",
+          "seconds": 5.048732
+        },
+        {
+          "function": "js::jit::DoCallFallback(JSContext*, js::jit::BaselineFrame*, js::jit::ICFallbackStub*, unsigned int, JS::Value*, JS::MutableHandle<JS::Value>)",
+          "seconds": 4.58063
+        },
+        {
+          "function": "CGameView::EnumerateObjects(CFrustum const&, SceneCollector*)",
+          "seconds": 4.576063
+        },
+        {
+          "function": "CSimulation2::RenderSubmit(SceneCollector&, CFrustum const&, bool)",
+          "seconds": 4.528088
+        },
+        {
+          "function": "_emscripten_run_on_main_thread_js",
+          "seconds": 3.468651
+        },
+        {
+          "function": "ModelRenderer::Render(Renderer::Backend::IDeviceCommandContext*, ModelVertexRenderer&, RenderModifier&, CShaderDefines const&, int, int, ERenderMode, std::__2::span<CModel*, 4294967295ul>)",
+          "seconds": 3.407095
+        },
+        {
+          "function": "bool Script::Function::Call_<Script::Function::IgnoreResult_t, JS::PersistentRooted<JS::Value>>(Script::Request const&, JS::Handle<JS::Value>, char const*, Script::Function::IgnoreResult_t&, JS::PersistentRooted<JS::Value> const&)",
+          "seconds": 2.964141
+        },
+        {
+          "function": "VertexArray::UploadIfNeeded(Renderer::Backend::IDeviceCommandContext*)",
+          "seconds": 2.693453
+        },
+        {
+          "function": "Renderer::Backend::WebGPU::(anonymous namespace)::Context::UploadBufferRegion(Renderer::Backend::IBuffer*, void const*, unsigned int, unsigned int)",
+          "seconds": 2.27948
+        },
+        {
+          "function": "CSceneRenderer::Internals::CallOpaqueModelRenderers(Renderer::Backend::IDeviceCommandContext*, CShaderDefines const&, int, int, ERenderMode)",
+          "seconds": 2.085714
+        }
+      ],
+      "futexWaitSites": [
+        {
+          "function": "CSoundBase::IsPlaying()",
+          "seconds": 5.60089
+        },
+        {
+          "function": "(other futex wait)",
+          "seconds": 0.183868
+        },
+        {
+          "function": "CGame::Update(double, bool)",
+          "seconds": 0.082578
+        },
+        {
+          "function": "Renderer::Backend::WebGPU::(anonymous namespace)::Context::Flush()",
+          "seconds": 0.024613
+        }
+      ]
+    },
+    {
+      "file": "cpu-6.cpuprofile",
+      "seconds": 31.436987,
+      "self": [
+        {
+          "function": "emscripten_futex_wait",
+          "seconds": 31.188537
+        },
+        {
+          "function": "_emscripten_get_now",
+          "seconds": 0.042335
+        },
+        {
+          "function": "FastSpatialSubdivision::GetInRange(std::__2::vector<unsigned int, std::__2::allocator<unsigned int>>&, CFixedVector2D, CFixedVector2D) const",
+          "seconds": 0.034805
+        },
+        {
+          "function": "CCmpRangeManager::TestEntityQuery((anonymous namespace)::Query const&, unsigned int, (anonymous namespace)::EntityData const&) const",
+          "seconds": 0.034663
+        },
+        {
+          "function": "CCmpRangeManager::PerformQuery((anonymous namespace)::Query const&, std::__2::vector<unsigned int, std::__2::allocator<unsigned int>>&, CFixedVector2D, std::__2::vector<unsigned int, std::__2::allocator<unsigned int>>&)",
+          "seconds": 0.022096
+        },
+        {
+          "function": "VertexPathfinder::ComputeShortPath(ShortPathRequest const&, CmpPtr<ICmpObstructionManager>) const",
+          "seconds": 0.021722
+        },
+        {
+          "function": "wasm-to-js",
+          "seconds": 0.012256
+        },
+        {
+          "function": "__timedwait_cp",
+          "seconds": 0.007797
+        },
+        {
+          "function": "HierarchicalPathfinder::FindGoalRegionsAndBestNavcells(unsigned short, unsigned short, unsigned short, unsigned short, PathGoal const&, std::__2::set<HierarchicalPathfinder::InterestingRegion, HierarchicalPathfinder::SortByBestToPoint, std::__2::allocator<HierarchicalPathfinder::InterestingRegion>>&, unsigned short) const",
+          "seconds": 0.006451
+        },
+        {
+          "function": "CComponentManager::QueryInterface(unsigned int, int) const",
+          "seconds": 0.006413
+        },
+        {
+          "function": "CCmpObstructionManager::GetUnitObstructionsInRange(IObstructionTestFilter const&, CFixed<int, 2147483647, 32, 15, 16, 65536>, CFixed<int, 2147483647, 32, 15, 16, 65536>, CFixed<int, 2147483647, 32, 15, 16, 65536>, CFixed<int, 2147483647, 32, 15, 16, 65536>, std::__2::vector<ICmpObstructionManager::ObstructionSquare, std::__2::allocator<ICmpObstructionManager::ObstructionSquare>>&) const",
+          "seconds": 0.006287
+        },
+        {
+          "function": "CCmpRangeManager::ExecuteActiveQueries()::'lambda'(std::__2::vector<unsigned int, std::__2::allocator<unsigned int>>&)::operator()(std::__2::vector<unsigned int, std::__2::allocator<unsigned int>>&) const",
+          "seconds": 0.006009
+        },
+        {
+          "function": "void std::__2::__introsort<std::__2::_ClassicAlgPolicy, std::__2::ranges::less, unsigned int*, true>(unsigned int*, unsigned int*, std::__2::ranges::less, std::__2::iterator_traits<unsigned int*>::difference_type, bool)",
+          "seconds": 0.005854
+        },
+        {
+          "function": "emscripten_futex_wake",
+          "seconds": 0.004702
+        },
+        {
+          "function": "bigintToI53Checked",
+          "seconds": 0.003129
+        },
+        {
+          "function": "HierarchicalPathfinder::FindNearestNavcellInRegions(std::__2::set<HierarchicalPathfinder::RegionID, HierarchicalPathfinder::SortByCenterToPoint, std::__2::allocator<HierarchicalPathfinder::RegionID>> const&, unsigned short&, unsigned short&, unsigned short) const",
+          "seconds": 0.003058
+        },
+        {
+          "function": "__pthread_mutex_lock",
+          "seconds": 0.003016
+        },
+        {
+          "function": "now",
+          "seconds": 0.002959
+        },
+        {
+          "function": "HierarchicalPathfinder::FindNearestPassableNavcell(unsigned short&, unsigned short&, unsigned short) const",
+          "seconds": 0.001633
+        },
+        {
+          "function": "operator new(unsigned long)",
+          "seconds": 0.001628
+        },
+        {
+          "function": "emscripten_builtin_malloc",
+          "seconds": 0.001599
+        },
+        {
+          "function": "__pthread_mutex_trylock",
+          "seconds": 0.001569
+        },
+        {
+          "function": "LongPathfinder::AddJumpedDiag(int, int, int, int, PathCost, PathfinderState&) const",
+          "seconds": 0.001565
+        },
+        {
+          "function": "CCmpPosition::GetPosition() const",
+          "seconds": 0.001564
+        },
+        {
+          "function": "void std::__2::__swap_bitmap_pos[abi:ne200100]<std::__2::_ClassicAlgPolicy, int*>(int*, int*, unsigned long long&, unsigned long long&)",
+          "seconds": 0.001562
+        },
+        {
+          "function": "CProfiler2::RecordRegionEnter(char const*)",
+          "seconds": 0.001559
+        },
+        {
+          "function": "get buffer",
+          "seconds": 0.001556
+        },
+        {
+          "function": "std::__2::__wrap_iter<unsigned int*> std::__2::vector<unsigned int, std::__2::allocator<unsigned int>>::__insert_with_size[abi:ne200100]<std::__2::__wrap_iter<unsigned int const*>, std::__2::__wrap_iter<unsigned int const*>>(std::__2::__wrap_iter<unsigned int const*>, std::__2::__wrap_iter<unsigned int const*>, std::__2::__wrap_iter<unsigned int const*>, long)",
+          "seconds": 0.001538
+        },
+        {
+          "function": "WriteBuffer::~WriteBuffer()",
+          "seconds": 0.001537
+        },
+        {
+          "function": "isqrt64(unsigned long long)",
+          "seconds": 0.00153
+        },
+        {
+          "function": "growMemViews",
+          "seconds": 0.001522
+        },
+        {
+          "function": "Threading::HandleExceptionsBase<&void Threading::Thread::DoStart<Threading::WorkerThread, &Threading::WorkerThread::RunUntilDeath()>(Threading::WorkerThread*), void (*)(Threading::WorkerThread*)>::Wrapper(Threading::WorkerThread*)",
+          "seconds": 0.001519
+        },
+        {
+          "function": "SpatialSubdivision::GetInRange(std::__2::vector<unsigned int, std::__2::allocator<unsigned int>>&, CFixedVector2D, CFixedVector2D) const",
+          "seconds": 0.001517
+        },
+        {
+          "function": "void std::__2::__sift_down[abi:ne200100]<std::__2::_ClassicAlgPolicy, SquareSort&, std::__2::__wrap_iter<Square*>>(std::__2::__wrap_iter<Square*>, SquareSort&, std::__2::iterator_traits<std::__2::__wrap_iter<Square*>>::difference_type, std::__2::__wrap_iter<Square*>)",
+          "seconds": 0.0015
+        }
+      ],
+      "inclusive": [
+        {
+          "function": "handleMessage",
+          "seconds": 31.436987
+        },
+        {
+          "function": "(root)",
+          "seconds": 31.436987
+        },
+        {
+          "function": "invokeEntryPoint",
+          "seconds": 31.436987
+        },
+        {
+          "function": "js-to-wasm:i:i",
+          "seconds": 31.436987
+        },
+        {
+          "function": "void* std::__2::__thread_proxy[abi:ne200100]<std::__2::tuple<std::__2::unique_ptr<std::__2::__thread_struct, std::__2::default_delete<std::__2::__thread_struct>>, void (*)(CNetClientSession*), CNetClientSession*>>(void*)",
+          "seconds": 31.436987
+        },
+        {
+          "function": "Threading::HandleExceptionsBase<&void Threading::Thread::DoStart<Threading::WorkerThread, &Threading::WorkerThread::RunUntilDeath()>(Threading::WorkerThread*), void (*)(Threading::WorkerThread*)>::Wrapper(Threading::WorkerThread*)",
+          "seconds": 31.436987
+        },
+        {
+          "function": "__timedwait_cp",
+          "seconds": 31.242982
+        },
+        {
+          "function": "std::__2::condition_variable::wait(std::__2::unique_lock<std::__2::mutex>&)",
+          "seconds": 31.239816
+        },
+        {
+          "function": "__pthread_cond_timedwait",
+          "seconds": 31.239816
+        },
+        {
+          "function": "emscripten_futex_wait",
+          "seconds": 31.188537
+        },
+        {
+          "function": "CCmpRangeManager::ExecuteActiveQueries()::'lambda'(std::__2::vector<unsigned int, std::__2::allocator<unsigned int>>&)::operator()(std::__2::vector<unsigned int, std::__2::allocator<unsigned int>>&) const",
+          "seconds": 0.111695
+        },
+        {
+          "function": "std::__2::__function::__func<PackagedTask<CCmpRangeManager::ExecuteActiveQueries()::'lambda'()>, std::__2::allocator<PackagedTask<CCmpRangeManager::ExecuteActiveQueries()::'lambda'()>>, void ()>::operator()()",
+          "seconds": 0.111695
+        },
+        {
+          "function": "CCmpRangeManager::PerformQuery((anonymous namespace)::Query const&, std::__2::vector<unsigned int, std::__2::allocator<unsigned int>>&, CFixedVector2D, std::__2::vector<unsigned int, std::__2::allocator<unsigned int>>&)",
+          "seconds": 0.099541
+        },
+        {
+          "function": "std::__2::__function::__func<PackagedTask<CCmpPathfinder::StartProcessingMoves(bool)::$_0>, std::__2::allocator<PackagedTask<CCmpPathfinder::StartProcessingMoves(bool)::$_0>>, void ()>::operator()()",
+          "seconds": 0.08242
+        },
+        {
+          "function": "VertexPathfinder::ComputeShortPath(ShortPathRequest const&, CmpPtr<ICmpObstructionManager>) const",
+          "seconds": 0.061908
+        },
+        {
+          "function": "void CCmpPathfinder::PathRequests<ShortPathRequest>::Compute<VertexPathfinder>(CCmpPathfinder const&, VertexPathfinder const&)",
+          "seconds": 0.061908
+        },
+        {
+          "function": "wasm-to-js",
+          "seconds": 0.056241
+        },
+        {
+          "function": "_emscripten_get_now",
+          "seconds": 0.045294
+        },
+        {
+          "function": "CCmpRangeManager::TestEntityQuery((anonymous namespace)::Query const&, unsigned int, (anonymous namespace)::EntityData const&) const",
+          "seconds": 0.039399
+        },
+        {
+          "function": "FastSpatialSubdivision::GetInRange(std::__2::vector<unsigned int, std::__2::allocator<unsigned int>>&, CFixedVector2D, CFixedVector2D) const",
+          "seconds": 0.034805
+        },
+        {
+          "function": "CCmpObstructionManager::GetUnitObstructionsInRange(IObstructionTestFilter const&, CFixed<int, 2147483647, 32, 15, 16, 65536>, CFixed<int, 2147483647, 32, 15, 16, 65536>, CFixed<int, 2147483647, 32, 15, 16, 65536>, CFixed<int, 2147483647, 32, 15, 16, 65536>, std::__2::vector<ICmpObstructionManager::ObstructionSquare, std::__2::allocator<ICmpObstructionManager::ObstructionSquare>>&) const",
+          "seconds": 0.021466
+        },
+        {
+          "function": "LongPathfinder::ComputeJPSPath(HierarchicalPathfinder const&, CFixed<int, 2147483647, 32, 15, 16, 65536>, CFixed<int, 2147483647, 32, 15, 16, 65536>, PathGoal const&, unsigned short, WaypointPath&) const",
+          "seconds": 0.015839
+        },
+        {
+          "function": "LongPathfinder::ComputePath(HierarchicalPathfinder const&, CFixed<int, 2147483647, 32, 15, 16, 65536>, CFixed<int, 2147483647, 32, 15, 16, 65536>, PathGoal const&, unsigned short, WaypointPath&) const",
+          "seconds": 0.015839
+        },
+        {
+          "function": "timer_Time()",
+          "seconds": 0.01557
+        },
+        {
+          "function": "SpatialSubdivision::GetInRange(std::__2::vector<unsigned int, std::__2::allocator<unsigned int>>&, CFixedVector2D, CFixedVector2D) const",
+          "seconds": 0.015105
+        },
+        {
+          "function": "_clock_time_get",
+          "seconds": 0.012529
+        },
+        {
+          "function": "CProfiler2::RecordRegionEnter(char const*)",
+          "seconds": 0.010859
+        },
+        {
+          "function": "operator new(unsigned long)",
+          "seconds": 0.00952
+        },
+        {
+          "function": "emscripten_builtin_malloc",
+          "seconds": 0.009491
+        },
+        {
+          "function": "__pthread_mutex_lock",
+          "seconds": 0.00929
+        },
+        {
+          "function": "void std::__2::__introsort<std::__2::_ClassicAlgPolicy, std::__2::ranges::less, unsigned int*, true>(unsigned int*, unsigned int*, std::__2::ranges::less, std::__2::iterator_traits<unsigned int*>::difference_type, bool)",
+          "seconds": 0.007416
+        },
+        {
+          "function": "HierarchicalPathfinder::FindGoalRegionsAndBestNavcells(unsigned short, unsigned short, unsigned short, unsigned short, PathGoal const&, std::__2::set<HierarchicalPathfinder::InterestingRegion, HierarchicalPathfinder::SortByBestToPoint, std::__2::allocator<HierarchicalPathfinder::InterestingRegion>>&, unsigned short) const",
+          "seconds": 0.006451
+        },
+        {
+          "function": "CComponentManager::QueryInterface(unsigned int, int) const",
+          "seconds": 0.006413
+        },
+        {
+          "function": "CProfiler2::RecordRegionLeave()",
+          "seconds": 0.00627
+        },
+        {
+          "function": "std::__2::__wrap_iter<unsigned int*> std::__2::vector<unsigned int, std::__2::allocator<unsigned int>>::__insert_with_size[abi:ne200100]<std::__2::__wrap_iter<unsigned int const*>, std::__2::__wrap_iter<unsigned int const*>>(std::__2::__wrap_iter<unsigned int const*>, std::__2::__wrap_iter<unsigned int const*>, std::__2::__wrap_iter<unsigned int const*>, long)",
+          "seconds": 0.006172
+        },
+        {
+          "function": "__timedwait",
+          "seconds": 0.004705
+        },
+        {
+          "function": "emscripten_futex_wake",
+          "seconds": 0.004702
+        },
+        {
+          "function": "HierarchicalPathfinder::FindNearestPassableNavcell(unsigned short&, unsigned short&, unsigned short) const",
+          "seconds": 0.004691
+        },
+        {
+          "function": "emscripten_builtin_free",
+          "seconds": 0.004585
+        },
+        {
+          "function": "PriorityQueueHeap<unsigned short, CFixed<int, 2147483647, 32, 15, 16, 65536>, CFixed<int, 2147483647, 32, 15, 16, 65536>, std::__2::less<CFixed<int, 2147483647, 32, 15, 16, 65536>>>::push(PriorityQueueHeap<unsigned short, CFixed<int, 2147483647, 32, 15, 16, 65536>, CFixed<int, 2147483647, 32, 15, 16, 65536>, std::__2::less<CFixed<int, 2147483647, 32, 15, 16, 65536>>>::Item const&)",
+          "seconds": 0.003193
+        },
+        {
+          "function": "bigintToI53Checked",
+          "seconds": 0.003129
+        },
+        {
+          "function": "growMemViews",
+          "seconds": 0.003078
+        },
+        {
+          "function": "HierarchicalPathfinder::FindNearestNavcellInRegions(std::__2::set<HierarchicalPathfinder::RegionID, HierarchicalPathfinder::SortByCenterToPoint, std::__2::allocator<HierarchicalPathfinder::RegionID>> const&, unsigned short&, unsigned short&, unsigned short) const",
+          "seconds": 0.003058
+        },
+        {
+          "function": "CCmpObstructionManager::GetStaticObstructionsInRange(IObstructionTestFilter const&, CFixed<int, 2147483647, 32, 15, 16, 65536>, CFixed<int, 2147483647, 32, 15, 16, 65536>, CFixed<int, 2147483647, 32, 15, 16, 65536>, CFixed<int, 2147483647, 32, 15, 16, 65536>, std::__2::vector<ICmpObstructionManager::ObstructionSquare, std::__2::allocator<ICmpObstructionManager::ObstructionSquare>>&) const",
+          "seconds": 0.003055
+        },
+        {
+          "function": "now",
+          "seconds": 0.002959
+        }
+      ],
+      "futexWaitSites": [
+        {
+          "function": "(other futex wait)",
+          "seconds": 31.188537
+        }
+      ]
+    },
+    {
+      "file": "cpu-7.cpuprofile",
+      "seconds": 31.407649,
+      "self": [
+        {
+          "function": "emscripten_futex_wait",
+          "seconds": 31.054453
+        },
+        {
+          "function": "_emscripten_get_now",
+          "seconds": 0.08714
+        },
+        {
+          "function": "mapping0_inverse",
+          "seconds": 0.042612
+        },
+        {
+          "function": "decode_packed_entry_number",
+          "seconds": 0.04032
+        },
+        {
+          "function": "res2_inverse",
+          "seconds": 0.034692
+        },
+        {
+          "function": "mdct_butterflies",
+          "seconds": 0.024933
+        },
+        {
+          "function": "OggStreamImpl<VorbisBufferAdapter>::GetNextChunk(std::__2::span<unsigned char, 4294967295ul>)",
+          "seconds": 0.015928
+        },
+        {
+          "function": "floor1_inverse2",
+          "seconds": 0.015478
+        },
+        {
+          "function": "wasm-to-js",
+          "seconds": 0.010741
+        },
+        {
+          "function": "get_tasks_for_thread",
+          "seconds": 0.010545
+        },
+        {
+          "function": "oggpack_look",
+          "seconds": 0.010156
+        },
+        {
+          "function": "now",
+          "seconds": 0.007793
+        },
+        {
+          "function": "nanosleep",
+          "seconds": 0.007742
+        },
+        {
+          "function": "CSoundManagerWorker::Run()",
+          "seconds": 0.006309
+        },
+        {
+          "function": "vorbis_synthesis_blockin",
+          "seconds": 0.006178
+        },
+        {
+          "function": "floor1_inverse1",
+          "seconds": 0.005778
+        },
+        {
+          "function": "_alGetSourcei",
+          "seconds": 0.003174
+        },
+        {
+          "function": "do_proxy",
+          "seconds": 0.003139
+        },
+        {
+          "function": "growMemViews",
+          "seconds": 0.003084
+        },
+        {
+          "function": "_get_next_page",
+          "seconds": 0.001698
+        },
+        {
+          "function": "CStreamItem::IdleTask()",
+          "seconds": 0.001651
+        },
+        {
+          "function": "take",
+          "seconds": 0.001622
+        },
+        {
+          "function": "get buffer",
+          "seconds": 0.001595
+        },
+        {
+          "function": "__pthread_mutex_unlock",
+          "seconds": 0.001582
+        },
+        {
+          "function": "__pthread_mutex_lock",
+          "seconds": 0.001574
+        },
+        {
+          "function": "COggData::FetchDataIntoBuffer(int, unsigned int*)",
+          "seconds": 0.001567
+        },
+        {
+          "function": "lock",
+          "seconds": 0.001559
+        },
+        {
+          "function": "__pthread_once",
+          "seconds": 0.001557
+        },
+        {
+          "function": "emscripten_proxy_execute_queue",
+          "seconds": 0.001527
+        },
+        {
+          "function": "proxyToMainThread",
+          "seconds": 0.001522
+        }
+      ],
+      "inclusive": [
+        {
+          "function": "handleMessage",
+          "seconds": 31.407649
+        },
+        {
+          "function": "(root)",
+          "seconds": 31.407649
+        },
+        {
+          "function": "Threading::HandleExceptionsBase<&CSoundManagerWorker::RunThread(CSoundManagerWorker*), void (*)(CSoundManagerWorker*)>::Wrapper(CSoundManagerWorker*)",
+          "seconds": 31.407649
+        },
+        {
+          "function": "CSoundManagerWorker::Run()",
+          "seconds": 31.407649
+        },
+        {
+          "function": "invokeEntryPoint",
+          "seconds": 31.407649
+        },
+        {
+          "function": "void* std::__2::__thread_proxy[abi:ne200100]<std::__2::tuple<std::__2::unique_ptr<std::__2::__thread_struct, std::__2::default_delete<std::__2::__thread_struct>>, void (*)(CNetClientSession*), CNetClientSession*>>(void*)",
+          "seconds": 31.407649
+        },
+        {
+          "function": "js-to-wasm:i:i",
+          "seconds": 31.407649
+        },
+        {
+          "function": "emscripten_futex_wait",
+          "seconds": 31.054453
+        },
+        {
+          "function": "SDL_Delay",
+          "seconds": 29.346364
+        },
+        {
+          "function": "nanosleep",
+          "seconds": 29.344837
+        },
+        {
+          "function": "CStreamItem::IdleTask()",
+          "seconds": 2.05178
+        },
+        {
+          "function": "wasm-to-js",
+          "seconds": 1.955042
+        },
+        {
+          "function": "proxyToMainThread",
+          "seconds": 1.84602
+        },
+        {
+          "function": "js-to-wasm:iiiii:d",
+          "seconds": 1.841414
+        },
+        {
+          "function": "_emscripten_run_on_main_thread_js",
+          "seconds": 1.839857
+        },
+        {
+          "function": "__timedwait_cp",
+          "seconds": 1.832526
+        },
+        {
+          "function": "__pthread_cond_timedwait",
+          "seconds": 1.832526
+        },
+        {
+          "function": "COggData::FetchDataIntoBuffer(int, unsigned int*)",
+          "seconds": 1.197302
+        },
+        {
+          "function": "_alBufferData",
+          "seconds": 0.997962
+        },
+        {
+          "function": "_alGetSourcei",
+          "seconds": 0.445536
+        },
+        {
+          "function": "_alSourceQueueBuffers",
+          "seconds": 0.279297
+        },
+        {
+          "function": "OggStreamImpl<VorbisBufferAdapter>::GetNextChunk(std::__2::span<unsigned char, 4294967295ul>)",
+          "seconds": 0.197773
+        },
+        {
+          "function": "_fetch_and_process_packet",
+          "seconds": 0.181845
+        },
+        {
+          "function": "mapping0_inverse",
+          "seconds": 0.173969
+        },
+        {
+          "function": "_alSourceUnqueueBuffers",
+          "seconds": 0.126399
+        },
+        {
+          "function": "_emscripten_get_now",
+          "seconds": 0.094933
+        },
+        {
+          "function": "res2_inverse",
+          "seconds": 0.080894
+        },
+        {
+          "function": "decode_packed_entry_number",
+          "seconds": 0.050476
+        },
+        {
+          "function": "mdct_butterflies",
+          "seconds": 0.024933
+        },
+        {
+          "function": "floor1_inverse2",
+          "seconds": 0.015478
+        },
+        {
+          "function": "get_tasks_for_thread",
+          "seconds": 0.010545
+        },
+        {
+          "function": "oggpack_look",
+          "seconds": 0.010156
+        },
+        {
+          "function": "emscripten_proxy_execute_queue",
+          "seconds": 0.009453
+        },
+        {
+          "function": "now",
+          "seconds": 0.007793
+        },
+        {
+          "function": "floor1_inverse1",
+          "seconds": 0.007369
+        },
+        {
+          "function": "vorbis_synthesis_blockin",
+          "seconds": 0.006178
+        },
+        {
+          "function": "growMemViews",
+          "seconds": 0.004679
+        },
+        {
+          "function": "do_proxy",
+          "seconds": 0.004256
+        },
+        {
+          "function": "_alGetError",
+          "seconds": 0.003217
+        },
+        {
+          "function": "take",
+          "seconds": 0.003217
+        },
+        {
+          "function": "_get_next_page",
+          "seconds": 0.001698
+        },
+        {
+          "function": "CSoundManager::al_check(char const*, int)",
+          "seconds": 0.001595
+        },
+        {
+          "function": "get buffer",
+          "seconds": 0.001595
+        },
+        {
+          "function": "vorbis_book_decode",
+          "seconds": 0.001591
+        },
+        {
+          "function": "__pthread_mutex_unlock",
+          "seconds": 0.001582
+        }
+      ],
+      "futexWaitSites": [
+        {
+          "function": "CSoundManagerWorker::Run()",
+          "seconds": 31.054453
+        }
+      ]
+    },
+    {
+      "file": "cpu-8.cpuprofile",
+      "seconds": 31.323638,
+      "self": [
+        {
+          "function": "emscripten_futex_wait",
+          "seconds": 31.093136
+        },
+        {
+          "function": "_emscripten_get_now",
+          "seconds": 0.044428
+        },
+        {
+          "function": "CCmpRangeManager::TestEntityQuery((anonymous namespace)::Query const&, unsigned int, (anonymous namespace)::EntityData const&) const",
+          "seconds": 0.036982
+        },
+        {
+          "function": "CCmpRangeManager::PerformQuery((anonymous namespace)::Query const&, std::__2::vector<unsigned int, std::__2::allocator<unsigned int>>&, CFixedVector2D, std::__2::vector<unsigned int, std::__2::allocator<unsigned int>>&)",
+          "seconds": 0.025595
+        },
+        {
+          "function": "FastSpatialSubdivision::GetInRange(std::__2::vector<unsigned int, std::__2::allocator<unsigned int>>&, CFixedVector2D, CFixedVector2D) const",
+          "seconds": 0.024852
+        },
+        {
+          "function": "VertexPathfinder::ComputeShortPath(ShortPathRequest const&, CmpPtr<ICmpObstructionManager>) const",
+          "seconds": 0.017798
+        },
+        {
+          "function": "CCmpRangeManager::ExecuteActiveQueries()::'lambda'(std::__2::vector<unsigned int, std::__2::allocator<unsigned int>>&)::operator()(std::__2::vector<unsigned int, std::__2::allocator<unsigned int>>&) const",
+          "seconds": 0.0125
+        },
+        {
+          "function": "wasm-to-js",
+          "seconds": 0.010853
+        },
+        {
+          "function": "CCmpObstructionManager::GetUnitObstructionsInRange(IObstructionTestFilter const&, CFixed<int, 2147483647, 32, 15, 16, 65536>, CFixed<int, 2147483647, 32, 15, 16, 65536>, CFixed<int, 2147483647, 32, 15, 16, 65536>, CFixed<int, 2147483647, 32, 15, 16, 65536>, std::__2::vector<ICmpObstructionManager::ObstructionSquare, std::__2::allocator<ICmpObstructionManager::ObstructionSquare>>&) const",
+          "seconds": 0.007799
+        },
+        {
+          "function": "HierarchicalPathfinder::FindGoalRegionsAndBestNavcells(unsigned short, unsigned short, unsigned short, unsigned short, PathGoal const&, std::__2::set<HierarchicalPathfinder::InterestingRegion, HierarchicalPathfinder::SortByBestToPoint, std::__2::allocator<HierarchicalPathfinder::InterestingRegion>>&, unsigned short) const",
+          "seconds": 0.006581
+        },
+        {
+          "function": "emscripten_builtin_malloc",
+          "seconds": 0.006204
+        },
+        {
+          "function": "__timedwait_cp",
+          "seconds": 0.005751
+        },
+        {
+          "function": "CComponentManager::QueryInterface(unsigned int, int) const",
+          "seconds": 0.004771
+        },
+        {
+          "function": "LongPathfinder::HasJumpedHoriz(int, int, int, PathfinderState&, bool) const",
+          "seconds": 0.004627
+        },
+        {
+          "function": "LongPathfinder::ComputeJPSPath(HierarchicalPathfinder const&, CFixed<int, 2147483647, 32, 15, 16, 65536>, CFixed<int, 2147483647, 32, 15, 16, 65536>, PathGoal const&, unsigned short, WaypointPath&) const",
+          "seconds": 0.003139
+        },
+        {
+          "function": "emscripten_futex_wake",
+          "seconds": 0.00308
+        },
+        {
+          "function": "_clock_time_get",
+          "seconds": 0.001634
+        },
+        {
+          "function": "growMemViews",
+          "seconds": 0.001615
+        },
+        {
+          "function": "void std::__2::__introsort<std::__2::_ClassicAlgPolicy, std::__2::ranges::less, unsigned int*, true>(unsigned int*, unsigned int*, std::__2::ranges::less, std::__2::iterator_traits<unsigned int*>::difference_type, bool)",
+          "seconds": 0.001596
+        },
+        {
+          "function": "std::__2::__wrap_iter<unsigned int*> std::__2::vector<unsigned int, std::__2::allocator<unsigned int>>::__insert_with_size[abi:ne200100]<std::__2::__wrap_iter<unsigned int const*>, std::__2::__wrap_iter<unsigned int const*>>(std::__2::__wrap_iter<unsigned int const*>, std::__2::__wrap_iter<unsigned int const*>, std::__2::__wrap_iter<unsigned int const*>, long)",
+          "seconds": 0.001545
+        },
+        {
+          "function": "SpatialSubdivision::GetInRange(std::__2::vector<unsigned int, std::__2::allocator<unsigned int>>&, CFixedVector2D, CFixedVector2D) const",
+          "seconds": 0.001544
+        },
+        {
+          "function": "void std::__2::__sift_down[abi:ne200100]<std::__2::_ClassicAlgPolicy, SquareSort&, std::__2::__wrap_iter<Square*>>(std::__2::__wrap_iter<Square*>, SquareSort&, std::__2::iterator_traits<std::__2::__wrap_iter<Square*>>::difference_type, std::__2::__wrap_iter<Square*>)",
+          "seconds": 0.001538
+        },
+        {
+          "function": "PriorityQueueHeap<unsigned short, CFixed<int, 2147483647, 32, 15, 16, 65536>, CFixed<int, 2147483647, 32, 15, 16, 65536>, std::__2::less<CFixed<int, 2147483647, 32, 15, 16, 65536>>>::push(PriorityQueueHeap<unsigned short, CFixed<int, 2147483647, 32, 15, 16, 65536>, CFixed<int, 2147483647, 32, 15, 16, 65536>, std::__2::less<CFixed<int, 2147483647, 32, 15, 16, 65536>>>::Item const&)",
+          "seconds": 0.001525
+        },
+        {
+          "function": "HierarchicalPathfinder::FindNearestNavcellInRegions(std::__2::set<HierarchicalPathfinder::RegionID, HierarchicalPathfinder::SortByCenterToPoint, std::__2::allocator<HierarchicalPathfinder::RegionID>> const&, unsigned short&, unsigned short&, unsigned short) const",
+          "seconds": 0.001516
+        },
+        {
+          "function": "LongPathfinder::ProcessNeighbour(int, int, int, int, PathCost, PathfinderState&) const",
+          "seconds": 0.001516
+        },
+        {
+          "function": "Threading::HandleExceptionsBase<&void Threading::Thread::DoStart<Threading::WorkerThread, &Threading::WorkerThread::RunUntilDeath()>(Threading::WorkerThread*), void (*)(Threading::WorkerThread*)>::Wrapper(Threading::WorkerThread*)",
+          "seconds": 0.001513
+        }
+      ],
+      "inclusive": [
+        {
+          "function": "handleMessage",
+          "seconds": 31.323638
+        },
+        {
+          "function": "(root)",
+          "seconds": 31.323638
+        },
+        {
+          "function": "invokeEntryPoint",
+          "seconds": 31.323638
+        },
+        {
+          "function": "js-to-wasm:i:i",
+          "seconds": 31.323638
+        },
+        {
+          "function": "void* std::__2::__thread_proxy[abi:ne200100]<std::__2::tuple<std::__2::unique_ptr<std::__2::__thread_struct, std::__2::default_delete<std::__2::__thread_struct>>, void (*)(CNetClientSession*), CNetClientSession*>>(void*)",
+          "seconds": 31.323638
+        },
+        {
+          "function": "Threading::HandleExceptionsBase<&void Threading::Thread::DoStart<Threading::WorkerThread, &Threading::WorkerThread::RunUntilDeath()>(Threading::WorkerThread*), void (*)(Threading::WorkerThread*)>::Wrapper(Threading::WorkerThread*)",
+          "seconds": 31.323638
+        },
+        {
+          "function": "__timedwait_cp",
+          "seconds": 31.139926
+        },
+        {
+          "function": "std::__2::condition_variable::wait(std::__2::unique_lock<std::__2::mutex>&)",
+          "seconds": 31.132195
+        },
+        {
+          "function": "__pthread_cond_timedwait",
+          "seconds": 31.132195
+        },
+        {
+          "function": "emscripten_futex_wait",
+          "seconds": 31.093136
+        },
+        {
+          "function": "CCmpRangeManager::ExecuteActiveQueries()::'lambda'(std::__2::vector<unsigned int, std::__2::allocator<unsigned int>>&)::operator()(std::__2::vector<unsigned int, std::__2::allocator<unsigned int>>&) const",
+          "seconds": 0.115726
+        },
+        {
+          "function": "std::__2::__function::__func<PackagedTask<CCmpRangeManager::ExecuteActiveQueries()::'lambda'()>, std::__2::allocator<PackagedTask<CCmpRangeManager::ExecuteActiveQueries()::'lambda'()>>, void ()>::operator()()",
+          "seconds": 0.115726
+        },
+        {
+          "function": "CCmpRangeManager::PerformQuery((anonymous namespace)::Query const&, std::__2::vector<unsigned int, std::__2::allocator<unsigned int>>&, CFixedVector2D, std::__2::vector<unsigned int, std::__2::allocator<unsigned int>>&)",
+          "seconds": 0.0922
+        },
+        {
+          "function": "std::__2::__function::__func<PackagedTask<CCmpPathfinder::StartProcessingMoves(bool)::$_0>, std::__2::allocator<PackagedTask<CCmpPathfinder::StartProcessingMoves(bool)::$_0>>, void ()>::operator()()",
+          "seconds": 0.07266
+        },
+        {
+          "function": "wasm-to-js",
+          "seconds": 0.05853
+        },
+        {
+          "function": "VertexPathfinder::ComputeShortPath(ShortPathRequest const&, CmpPtr<ICmpObstructionManager>) const",
+          "seconds": 0.047399
+        },
+        {
+          "function": "void CCmpPathfinder::PathRequests<ShortPathRequest>::Compute<VertexPathfinder>(CCmpPathfinder const&, VertexPathfinder const&)",
+          "seconds": 0.047399
+        },
+        {
+          "function": "_emscripten_get_now",
+          "seconds": 0.044428
+        },
+        {
+          "function": "CCmpRangeManager::TestEntityQuery((anonymous namespace)::Query const&, unsigned int, (anonymous namespace)::EntityData const&) const",
+          "seconds": 0.041753
+        },
+        {
+          "function": "FastSpatialSubdivision::GetInRange(std::__2::vector<unsigned int, std::__2::allocator<unsigned int>>&, CFixedVector2D, CFixedVector2D) const",
+          "seconds": 0.024852
+        },
+        {
+          "function": "LongPathfinder::ComputeJPSPath(HierarchicalPathfinder const&, CFixed<int, 2147483647, 32, 15, 16, 65536>, CFixed<int, 2147483647, 32, 15, 16, 65536>, PathGoal const&, unsigned short, WaypointPath&) const",
+          "seconds": 0.020509
+        },
+        {
+          "function": "LongPathfinder::ComputePath(HierarchicalPathfinder const&, CFixed<int, 2147483647, 32, 15, 16, 65536>, CFixed<int, 2147483647, 32, 15, 16, 65536>, PathGoal const&, unsigned short, WaypointPath&) const",
+          "seconds": 0.020509
+        },
+        {
+          "function": "timer_Time()",
+          "seconds": 0.017491
+        },
+        {
+          "function": "_clock_time_get",
+          "seconds": 0.014285
+        },
+        {
+          "function": "CCmpObstructionManager::GetUnitObstructionsInRange(IObstructionTestFilter const&, CFixed<int, 2147483647, 32, 15, 16, 65536>, CFixed<int, 2147483647, 32, 15, 16, 65536>, CFixed<int, 2147483647, 32, 15, 16, 65536>, CFixed<int, 2147483647, 32, 15, 16, 65536>, std::__2::vector<ICmpObstructionManager::ObstructionSquare, std::__2::allocator<ICmpObstructionManager::ObstructionSquare>>&) const",
+          "seconds": 0.014055
+        },
+        {
+          "function": "emscripten_builtin_malloc",
+          "seconds": 0.010822
+        },
+        {
+          "function": "CProfiler2::RecordRegionEnter(char const*)",
+          "seconds": 0.009547
+        },
+        {
+          "function": "CProfiler2::RecordRegionLeave()",
+          "seconds": 0.007944
+        },
+        {
+          "function": "SpatialSubdivision::GetInRange(std::__2::vector<unsigned int, std::__2::allocator<unsigned int>>&, CFixedVector2D, CFixedVector2D) const",
+          "seconds": 0.007815
+        },
+        {
+          "function": "__pthread_mutex_lock",
+          "seconds": 0.007731
+        },
+        {
+          "function": "operator new(unsigned long)",
+          "seconds": 0.007725
+        },
+        {
+          "function": "HierarchicalPathfinder::FindGoalRegionsAndBestNavcells(unsigned short, unsigned short, unsigned short, unsigned short, PathGoal const&, std::__2::set<HierarchicalPathfinder::InterestingRegion, HierarchicalPathfinder::SortByBestToPoint, std::__2::allocator<HierarchicalPathfinder::InterestingRegion>>&, unsigned short) const",
+          "seconds": 0.006581
+        },
+        {
+          "function": "__timedwait",
+          "seconds": 0.006187
+        },
+        {
+          "function": "CCmpObstructionManager::GetStaticObstructionsInRange(IObstructionTestFilter const&, CFixed<int, 2147483647, 32, 15, 16, 65536>, CFixed<int, 2147483647, 32, 15, 16, 65536>, CFixed<int, 2147483647, 32, 15, 16, 65536>, CFixed<int, 2147483647, 32, 15, 16, 65536>, std::__2::vector<ICmpObstructionManager::ObstructionSquare, std::__2::allocator<ICmpObstructionManager::ObstructionSquare>>&) const",
+          "seconds": 0.006125
+        },
+        {
+          "function": "CComponentManager::QueryInterface(unsigned int, int) const",
+          "seconds": 0.004771
+        },
+        {
+          "function": "std::__2::__wrap_iter<unsigned int*> std::__2::vector<unsigned int, std::__2::allocator<unsigned int>>::__insert_with_size[abi:ne200100]<std::__2::__wrap_iter<unsigned int const*>, std::__2::__wrap_iter<unsigned int const*>>(std::__2::__wrap_iter<unsigned int const*>, std::__2::__wrap_iter<unsigned int const*>, std::__2::__wrap_iter<unsigned int const*>, long)",
+          "seconds": 0.004675
+        },
+        {
+          "function": "PriorityQueueHeap<unsigned short, CFixed<int, 2147483647, 32, 15, 16, 65536>, CFixed<int, 2147483647, 32, 15, 16, 65536>, std::__2::less<CFixed<int, 2147483647, 32, 15, 16, 65536>>>::push(PriorityQueueHeap<unsigned short, CFixed<int, 2147483647, 32, 15, 16, 65536>, CFixed<int, 2147483647, 32, 15, 16, 65536>, std::__2::less<CFixed<int, 2147483647, 32, 15, 16, 65536>>>::Item const&)",
+          "seconds": 0.004667
+        },
+        {
+          "function": "LongPathfinder::HasJumpedHoriz(int, int, int, PathfinderState&, bool) const",
+          "seconds": 0.004627
+        },
+        {
+          "function": "LongPathfinder::AddJumpedDiag(int, int, int, int, PathCost, PathfinderState&) const",
+          "seconds": 0.004627
+        },
+        {
+          "function": "emscripten_builtin_free",
+          "seconds": 0.003113
+        },
+        {
+          "function": "emscripten_futex_wake",
+          "seconds": 0.00308
+        },
+        {
+          "function": "growMemViews",
+          "seconds": 0.001615
+        },
+        {
+          "function": "void std::__2::__introsort<std::__2::_ClassicAlgPolicy, std::__2::ranges::less, unsigned int*, true>(unsigned int*, unsigned int*, std::__2::ranges::less, std::__2::iterator_traits<unsigned int*>::difference_type, bool)",
+          "seconds": 0.001596
+        },
+        {
+          "function": "__pthread_mutex_unlock",
+          "seconds": 0.001565
+        },
+        {
+          "function": "std::__2::mutex::lock()",
+          "seconds": 0.001544
+        }
+      ],
+      "futexWaitSites": [
+        {
+          "function": "(other futex wait)",
+          "seconds": 31.093136
+        }
+      ]
+    },
+    {
+      "file": "cpu-9.cpuprofile",
+      "seconds": 31.236321,
+      "self": [
+        {
+          "function": "emscripten_futex_wait",
+          "seconds": 31.111272
+        },
+        {
+          "function": "_emscripten_get_now",
+          "seconds": 0.104849
+        },
+        {
+          "function": "mozilla::detail::ConditionVariableImpl::wait(mozilla::detail::MutexImpl&)",
+          "seconds": 0.011003
+        },
+        {
+          "function": "wasm-to-js",
+          "seconds": 0.007586
+        },
+        {
+          "function": "now",
+          "seconds": 0.001611
+        }
+      ],
+      "inclusive": [
+        {
+          "function": "handleMessage",
+          "seconds": 31.236321
+        },
+        {
+          "function": "(root)",
+          "seconds": 31.236321
+        },
+        {
+          "function": "js::HelperThread::ThreadMain(js::InternalThreadPool*, js::HelperThread*)",
+          "seconds": 31.236321
+        },
+        {
+          "function": "js::detail::ThreadTrampoline<void (&)(js::InternalThreadPool*, js::HelperThread*), js::InternalThreadPool*&, js::HelperThread*>::Start(void*)",
+          "seconds": 31.236321
+        },
+        {
+          "function": "invokeEntryPoint",
+          "seconds": 31.236321
+        },
+        {
+          "function": "mozilla::detail::ConditionVariableImpl::wait(mozilla::detail::MutexImpl&)",
+          "seconds": 31.236321
+        },
+        {
+          "function": "js-to-wasm:i:i",
+          "seconds": 31.236321
+        },
+        {
+          "function": "emscripten_futex_wait",
+          "seconds": 31.111272
+        },
+        {
+          "function": "wasm-to-js",
+          "seconds": 0.114046
+        },
+        {
+          "function": "_emscripten_get_now",
+          "seconds": 0.10646
+        },
+        {
+          "function": "now",
+          "seconds": 0.001611
+        }
+      ],
+      "futexWaitSites": [
+        {
+          "function": "(other futex wait)",
+          "seconds": 31.111272
+        }
+      ]
+    },
+    {
+      "file": "cpu-main.cpuprofile",
+      "seconds": 31.828358,
+      "self": [
+        {
+          "function": "(idle)",
+          "seconds": 10.761047
+        },
+        {
+          "function": "bindShader",
+          "seconds": 3.239232
+        },
+        {
+          "function": "draw",
+          "seconds": 2.874165
+        },
+        {
+          "function": "setBindGroup",
+          "seconds": 2.371701
+        },
+        {
+          "function": "setUniform",
+          "seconds": 1.761292
+        },
+        {
+          "function": "(program)",
+          "seconds": 1.329128
+        },
+        {
+          "function": "binaryCommands",
+          "seconds": 1.306842
+        },
+        {
+          "function": "bindGroup",
+          "seconds": 1.081707
+        },
+        {
+          "function": "uploadTransient",
+          "seconds": 1.060072
+        },
+        {
+          "function": "stage",
+          "seconds": 0.789409
+        },
+        {
+          "function": "",
+          "seconds": 0.690828
+        },
+        {
+          "function": "(garbage collector)",
+          "seconds": 0.610184
+        },
+        {
+          "function": "command",
+          "seconds": 0.58901
+        },
+        {
+          "function": "passState",
+          "seconds": 0.35907
+        },
+        {
+          "function": "setVertexBuffer",
+          "seconds": 0.291176
+        },
+        {
+          "function": "drawIndexed",
+          "seconds": 0.231744
+        },
+        {
+          "function": "beginComputePass",
+          "seconds": 0.180811
+        },
+        {
+          "function": "pushDebugGroup",
+          "seconds": 0.168883
+        },
+        {
+          "function": "borderConstants",
+          "seconds": 0.15815
+        },
+        {
+          "function": "growMemViews",
+          "seconds": 0.153754
+        },
+        {
+          "function": "UTF8ArrayToString",
+          "seconds": 0.144269
+        },
+        {
+          "function": "get",
+          "seconds": 0.092416
+        },
+        {
+          "function": "beginRenderPass",
+          "seconds": 0.086662
+        },
+        {
+          "function": "setPipeline",
+          "seconds": 0.085006
+        },
+        {
+          "function": "call",
+          "seconds": 0.079237
+        },
+        {
+          "function": "copyBufferToBuffer",
+          "seconds": 0.073468
+        },
+        {
+          "function": "get buffer",
+          "seconds": 0.072059
+        },
+        {
+          "function": "setTexture",
+          "seconds": 0.071457
+        },
+        {
+          "function": "align",
+          "seconds": 0.058897
+        },
+        {
+          "function": "validateCommandDataRange",
+          "seconds": 0.05777
+        },
+        {
+          "function": "createView",
+          "seconds": 0.050651
+        },
+        {
+          "function": "beginFramebuffer",
+          "seconds": 0.049888
+        },
+        {
+          "function": "submit",
+          "seconds": 0.04737
+        },
+        {
+          "function": "commandDataRange",
+          "seconds": 0.046723
+        },
+        {
+          "function": "postMessage",
+          "seconds": 0.046658
+        },
+        {
+          "function": "paint",
+          "seconds": 0.044652
+        },
+        {
+          "function": "_alBufferData",
+          "seconds": 0.041363
+        },
+        {
+          "function": "requestAnimationFrame",
+          "seconds": 0.037212
+        },
+        {
+          "function": "__emscripten_thread_mailbox_await",
+          "seconds": 0.030738
+        },
+        {
+          "function": "b.call",
+          "seconds": 0.029392
+        },
+        {
+          "function": "getBoundingClientRect",
+          "seconds": 0.02853
+        },
+        {
+          "function": "popDebugGroup",
+          "seconds": 0.020188
+        },
+        {
+          "function": "updateSourceTime",
+          "seconds": 0.019255
+        },
+        {
+          "function": "getCurrentTexture",
+          "seconds": 0.018804
+        },
+        {
+          "function": "decode",
+          "seconds": 0.017626
+        }
+      ],
+      "inclusive": [
+        {
+          "function": "(root)",
+          "seconds": 31.828358
+        },
+        {
+          "function": "",
+          "seconds": 18.521914
+        },
+        {
+          "function": "channel.port1.onmessage",
+          "seconds": 18.498806
+        },
+        {
+          "function": "drain",
+          "seconds": 18.495802
+        },
+        {
+          "function": "b.call",
+          "seconds": 18.001229
+        },
+        {
+          "function": "call",
+          "seconds": 17.965519
+        },
+        {
+          "function": "command",
+          "seconds": 16.974661
+        },
+        {
+          "function": "binaryCommands",
+          "seconds": 14.820501
+        },
+        {
+          "function": "(idle)",
+          "seconds": 10.761047
+        },
+        {
+          "function": "draw",
+          "seconds": 10.452633
+        },
+        {
+          "function": "bindShader",
+          "seconds": 7.048735
+        },
+        {
+          "function": "bindGroup",
+          "seconds": 3.734344
+        },
+        {
+          "function": "setBindGroup",
+          "seconds": 2.371701
+        },
+        {
+          "function": "setUniform",
+          "seconds": 1.761292
+        },
+        {
+          "function": "(program)",
+          "seconds": 1.329128
+        },
+        {
+          "function": "uploadTransient",
+          "seconds": 1.061612
+        },
+        {
+          "function": "uploadBufferRange",
+          "seconds": 1.02875
+        },
+        {
+          "function": "submit",
+          "seconds": 0.882105
+        },
+        {
+          "function": "upload",
+          "seconds": 0.800519
+        },
+        {
+          "function": "stage",
+          "seconds": 0.799004
+        },
+        {
+          "function": "(garbage collector)",
+          "seconds": 0.610184
+        },
+        {
+          "function": "checkMailbox",
+          "seconds": 0.401471
+        },
+        {
+          "function": "passState",
+          "seconds": 0.35907
+        },
+        {
+          "function": "callUserCallback",
+          "seconds": 0.355257
+        },
+        {
+          "function": "_emscripten_check_mailbox",
+          "seconds": 0.353665
+        },
+        {
+          "function": "em_task_queue_execute",
+          "seconds": 0.349436
+        },
+        {
+          "function": "wasm-to-js",
+          "seconds": 0.329093
+        },
+        {
+          "function": "__emscripten_receive_on_main_thread_js",
+          "seconds": 0.319767
+        },
+        {
+          "function": "call_with_ctx",
+          "seconds": 0.295504
+        },
+        {
+          "function": "setVertexBuffer",
+          "seconds": 0.291176
+        },
+        {
+          "function": "call_then_finish_task",
+          "seconds": 0.289253
+        },
+        {
+          "function": "_alBufferData",
+          "seconds": 0.258093
+        },
+        {
+          "function": "drawIndexed",
+          "seconds": 0.231744
+        },
+        {
+          "function": "beginFramebuffer",
+          "seconds": 0.22996
+        },
+        {
+          "function": "growMemViews",
+          "seconds": 0.225813
+        },
+        {
+          "function": "borderConstants",
+          "seconds": 0.201983
+        },
+        {
+          "function": "beginComputePass",
+          "seconds": 0.180811
+        },
+        {
+          "function": "pushDebugGroup",
+          "seconds": 0.168883
+        },
+        {
+          "function": "UTF8ToString",
+          "seconds": 0.165098
+        },
+        {
+          "function": "UTF8ArrayToString",
+          "seconds": 0.161895
+        },
+        {
+          "function": "get",
+          "seconds": 0.092416
+        },
+        {
+          "function": "beginRenderPass",
+          "seconds": 0.086662
+        },
+        {
+          "function": "setPipeline",
+          "seconds": 0.085006
+        },
+        {
+          "function": "paint",
+          "seconds": 0.080996
+        },
+        {
+          "function": "copyBufferToBuffer",
+          "seconds": 0.073468
+        }
+      ],
+      "futexWaitSites": []
+    }
+  ]
+}

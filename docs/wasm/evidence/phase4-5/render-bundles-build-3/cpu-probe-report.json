@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "checks": 16,
+  "diagnosticOnly": true,
+  "performanceAcceptance": false,
+  "scope": "Semantic draw snapshots against direct encoding, including native binding reset, live buffer data, ownership, dynamic barriers, ranges, LRU and segment limits.",
+  "sourceSHA256": "8029a439de2d0140db13c8dd9162877e20b78da08946f2daf1244b7bc5c72687",
+  "helperSHA256": "a1ad313f741f476bc19dbf5be85e6d6e6c447c18225be4cbe1aae9d361bb7a97"
+}

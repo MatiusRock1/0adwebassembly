@@ -1,0 +1,35 @@
+Much to our regret we must report the program has encountered an error.
+
+Please let us know at https://gitea.wildfiregames.com/0ad/0ad/issues/ and attach the crashlog.txt and crashlog.dmp files.
+You may find paths to these files at https://gitea.wildfiregames.com/0ad/0ad/wiki/GameDataPaths 
+
+Details: unhandled exception (Access violation reading 0x252861B87C0)
+
+Location: unknown:0 (?)
+
+Call stack:
+
+(error while dumping stack: No stack frames found)
+errno = 0 (No error reported here)
+OS error = 0 (no error code was set)
+
+
+
+====================================
+
+Build Version: custom build
+
+Engine Version: 0.29.0
+
+System info:
+
+(unavailable)
+
+====================================
+
+Main log:
+
+(unavailable)
+
+====================================
+

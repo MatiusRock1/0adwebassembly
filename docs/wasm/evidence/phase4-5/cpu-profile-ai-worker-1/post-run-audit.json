@@ -1,0 +1,10 @@
+{
+  "runtimeValidated": false,
+  "phase45Accepted": false,
+  "originalRunnerPassed": true,
+  "engineErrors": [
+    "ERROR: JavaScript error: (eval) line 4",
+    "ERROR: JavaScript error: simulation/helpers/InitGame.js line 91"
+  ],
+  "reason": "Runner did not reject engine console errors; initialization effects cleanup failed on read-only property. Candidate -1 must not be adopted."
+}

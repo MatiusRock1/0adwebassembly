@@ -1,0 +1,6 @@
+{
+  "compileReportSHA256": "063ee3c7882ec8ef6a2ea6d8fb4ec84a35f3cac6e00e931d693743354027e16c",
+  "executedDerivedBuildScriptSHA256": "5e45cb7776b07a326022e203488814e78322d46e9152abfe4ec8c4a3e2741c44",
+  "inheritedBaseBuildScriptSHA256": "26ef6abf06f1a6a8cb876660f1533d0fed1b0d4e86d6eceb27e0399080d629d4",
+  "note": "The inherited buildScriptSHA256 field names the base transfer builder. This archived derived script was executed for candidate 4. Future builder reports now override that inherited field; no linked binaries were changed for this metadata clarification."
+}

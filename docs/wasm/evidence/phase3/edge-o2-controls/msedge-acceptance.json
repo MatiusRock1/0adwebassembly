@@ -1,0 +1,31 @@
+{
+  "passed": false,
+  "errors": [],
+  "channel": "msedge",
+  "softwareRequested": false,
+  "physicalPresentationVerified": false,
+  "gpuTiming": null,
+  "gcTiming": null,
+  "headers": {
+    "cache-control": "no-store",
+    "content-length": "1569",
+    "content-type": "text/html",
+    "cross-origin-embedder-policy": "require-corp",
+    "cross-origin-opener-policy": "same-origin",
+    "cross-origin-resource-policy": "same-origin",
+    "date": "Mon, 12 Oct 2026 15:50:57 GMT",
+    "last-modified": "Mon, 12 Oct 2026 15:34:11 GMT",
+    "server": "SimpleHTTP/0.6 Python/3.13.1"
+  },
+  "browserVersion": "155.0.4283.45",
+  "hardware": {
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 Edg/155.0.0.0",
+    "concurrency": 16,
+    "deviceMemoryGiB": 32,
+    "dpr": 1.0000000149011612,
+    "renderer": "ANGLE (AMD, AMD Radeon(TM) Graphics (0x00001638) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "gpuTimerAvailable": true,
+    "offscreenAvailable": true
+  },
+  "failure": "Page.wait_for_function: Timeout 30000ms exceeded."
+}

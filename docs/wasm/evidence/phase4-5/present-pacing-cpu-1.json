@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "diagnosticOnly": true,
+  "performanceAcceptance": false,
+  "phase45Accepted": false,
+  "checks": 37,
+  "exitCode": 0,
+  "command": [
+    "node",
+    "--test",
+    "wasm/scripts/test-webgpu-command-data.mjs",
+    "wasm/scripts/test-webgpu-dispatch.mjs",
+    "wasm/scripts/test-webgpu-formats.mjs",
+    "wasm/scripts/test-webgpu-lifetime.mjs",
+    "wasm/scripts/test-webgpu-state.mjs",
+    "wasm/scripts/test-webgpu-textures.mjs",
+    "wasm/scripts/test-webgpu-upload.mjs"
+  ],
+  "sourceSHA256": {
+    "wasm/scripts/test-webgpu-command-data.mjs": "0eafaa6b6d2ecabafa2fa35242bf0c1783c912a372973ccb65831f174113ecb4",
+    "wasm/scripts/test-webgpu-dispatch.mjs": "fc93e7f82448aef4cd95da2457925f4ecfce8f58d05c86c8758588a59f776f32",
+    "wasm/scripts/test-webgpu-formats.mjs": "480c88b3716e7554b89a2bf663f8cb6751f7bd2a3baa708448c2f8ae7b5a3202",
+    "wasm/scripts/test-webgpu-lifetime.mjs": "bb9f922c60e9910aa7e524d24636cf1e1ec105b0d2d51db01cd839dcedf8fd23",
+    "wasm/scripts/test-webgpu-state.mjs": "6956e6e721189b491ab2e574f8120c7b62afdfdb9828351997439a19e2141a30",
+    "wasm/scripts/test-webgpu-textures.mjs": "8ee61323406d0cffe909cbb3c5610299fb70d021675eda5a31a0aa723aeb2ca4",
+    "wasm/scripts/test-webgpu-upload.mjs": "d712535d0fd4dd7099456bc532ad49dc5b56f20e5bbef7848c77460a1d722d9e",
+    "wasm/browser/webgpu-dispatch.mjs": "1550b7c8c159164c6741af482a3aedd79e1c04028008fa7f788dba7de714a9a7",
+    "source/renderer/backend/webgpu/Device.cpp": "e685fb204662be08b9fd2fdc1990a1a9d83922c1d931229767c4ac0a0dd8ed80"
+  },
+  "scope": "Node correctness checks for ordered presentation, pending/active cancellation, visibility loss, original binary bytes, GPU state and upload ownership; no FPS measurement"
+}

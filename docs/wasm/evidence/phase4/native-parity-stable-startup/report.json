@@ -1,0 +1,9 @@
+{
+  "passed": false,
+  "phase4Accepted": false,
+  "checkpoints": [],
+  "mailbox": "C:\\Users\\jorlu\\AppData\\Local\\Temp\\0ad-phase4-native-adrq9t49",
+  "executableSHA256": "fc31931e0e36baf6e410a4aa51e866c0c8922a203c30ea8852049ca0619856ff",
+  "failure": "SCRIPT_EVALUATION_FAILED: Engine.GetGUIObjectByName(\"mainMenuButtons\").children[2].onPress(); \"ok\"",
+  "exitCode": 0
+}

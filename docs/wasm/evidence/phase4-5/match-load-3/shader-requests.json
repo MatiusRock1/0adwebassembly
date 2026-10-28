@@ -1,0 +1,15 @@
+[
+  {
+    "name": "glsl/terrain_blend",
+    "defines": {
+      "BLEND": "1",
+      "RENDER_DEBUG_MODE": "RENDER_DEBUG_MODE_NONE",
+      "USE_SHADOW": "1",
+      "SHADOWS_CASCADE_COUNT": "1",
+      "USE_SHADOW_PCF": "1",
+      "USE_SHADOW_SAMPLER": "1",
+      "USE_NORMAL_MAP": "1",
+      "USE_SPECULAR_MAP": "1"
+    }
+  }
+]

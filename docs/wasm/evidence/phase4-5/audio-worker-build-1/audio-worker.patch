@@ -1,0 +1,191 @@
+--- a/soundmanager/SoundManager.cpp
++++ b/soundmanager/SoundManager.cpp
+@@ -18,6 +18,10 @@
+ #include "precompiled.h"
+ 
+ #include "SoundManager.h"
++
++#if defined(__EMSCRIPTEN__)
++#include "application-audio-ensure.h"
++#endif
+ 
+ #include "items/CBufferItem.h"
+ #include "items/CSoundItem.h"
+@@ -79,6 +83,9 @@
+ 			std::lock_guard<std::mutex> lock(m_WorkerMutex);
+ 
+ 			m_Shutdown = true;
++#if defined(__EMSCRIPTEN__)
++			m_EnsureQueue.Close();
++#endif
+ 
+ 			ItemsList::iterator lstr = m_Items->begin();
+ 			while (lstr != m_Items->end())
+@@ -98,7 +105,17 @@
+ 	{
+ 		std::lock_guard<std::mutex> lock(m_WorkerMutex);
+ 		m_Items->push_back(anItem);
+-	}
++#if defined(__EMSCRIPTEN__)
++		m_EnsureQueue.Track(anItem);
++#endif
++	}
++
++#if defined(__EMSCRIPTEN__)
++	void RequestEnsurePlay(ISoundItem* item)
++	{
++		m_EnsureQueue.Request(item);
++	}
++#endif
+ 
+ 	void CleanupItems()
+ 	{
+@@ -126,12 +143,31 @@
+ 
+ 	void Run()
+ 	{
++#if defined(__EMSCRIPTEN__)
++		using EnsureClock = WasmApplication::AudioEnsureQueue<ISoundItem>::Clock;
++		auto nextMaintenance = EnsureClock::now();
++#endif
+ 		while (true)
+ 		{
+ 			// Handle shutdown requests as soon as possible
+ 			if (GetShutdown())
+ 				return;
+ 
++#if defined(__EMSCRIPTEN__)
++            // Wait without the ownership mutex. Fast checks do not run the
++            // streaming/fade maintenance more often than its original cadence.
++            auto checks = m_EnsureQueue.WaitUntil(nextMaintenance);
++            {
++                std::lock_guard<std::mutex> workerLock(m_WorkerMutex);
++                if (m_Shutdown)
++                    return;
++                for (const auto& check : checks)
++                    if (m_EnsureQueue.IsCurrent(check))
++                        check.item->EnsurePlay();
++            }
++            if (EnsureClock::now() < nextMaintenance)
++                continue;
++#endif
+ 			int pauseTime = 500;
+ 			if (g_SoundManager->InDistress())
+ 				pauseTime = 50;
+@@ -155,7 +191,10 @@
+ 					else
+ 					{
+ 						std::lock_guard<std::mutex> deadItemsLock(m_DeadItemsMutex);
+-						m_DeadItems->push_back(*lstr);
++						#if defined(__EMSCRIPTEN__)
++					m_EnsureQueue.Forget(*lstr);
++					#endif
++					m_DeadItems->push_back(*lstr);
+ 					}
+ 					++lstr;
+ 
+@@ -167,7 +206,11 @@
+ 
+ 				AL_CHECK;
+ 			}
++#if defined(__EMSCRIPTEN__)
++			nextMaintenance = EnsureClock::now() + std::chrono::milliseconds(pauseTime);
++#else
+ 			SDL_Delay(pauseTime);
++#endif
+ 		}
+ 	}
+ 
+@@ -180,6 +223,9 @@
+ private:
+ 	// Thread-related members:
+ 	std::thread m_WorkerThread;
++#if defined(__EMSCRIPTEN__)
++	WasmApplication::AudioEnsureQueue<ISoundItem> m_EnsureQueue;
++#endif
+ 	std::mutex m_WorkerMutex;
+ 	std::mutex m_DeadItemsMutex;
+ 
+@@ -568,6 +614,11 @@
+ 	{
+ 		if (m_CurrentTune)
+ 		{
++#if defined(__EMSCRIPTEN__)
++			if (m_Worker)
++				m_Worker->RequestEnsurePlay(m_CurrentTune);
++			else
++#endif
+ 			m_CurrentTune->EnsurePlay();
+ 			if (m_PlayingPlaylist && m_RunningPlaylist)
+ 			{
+@@ -601,7 +652,14 @@
+ 		}
+ 
+ 		if (m_CurrentEnvirons)
+-			m_CurrentEnvirons->EnsurePlay();
++        {
++#if defined(__EMSCRIPTEN__)
++            if (m_Worker)
++                m_Worker->RequestEnsurePlay(m_CurrentEnvirons);
++            else
++#endif
++                m_CurrentEnvirons->EnsurePlay();
++        }
+ 
+ 		if (m_Worker)
+ 			m_Worker->CleanupItems();
+--- a/soundmanager/items/CSoundBase.cpp
++++ b/soundmanager/items/CSoundBase.cpp
+@@ -146,8 +146,29 @@
+ 
+ void CSoundBase::EnsurePlay()
+ {
+-	if (m_ShouldBePlaying && !m_IsPaused && !IsPlaying())
+-		Play();
++    std::lock_guard<std::mutex> lock(m_ItemMutex);
++    if (!m_ShouldBePlaying || m_IsPaused)
++        return;
++    if (m_ALSource)
++    {
++        int state;
++        alGetSourcei(m_ALSource, AL_SOURCE_STATE, &state);
++        AL_CHECK;
++        if (state == AL_PLAYING)
++            return;
++    }
++    AL_CHECK;
++    if (!m_ALSource)
++        return;
++    alSourcePlay(m_ALSource);
++    ALenum err = alGetError();
++    if (err != AL_NO_ERROR)
++    {
++        if (err == AL_INVALID)
++            ((CSoundManager*)g_SoundManager)->SetDistressThroughError();
++        else
++            ((CSoundManager*)g_SoundManager)->al_ReportError(err, __func__, __LINE__);
++    }
+ }
+ 
+ void CSoundBase::SetCone(ALfloat innerCone, ALfloat outerCone, ALfloat coneGain)
+@@ -349,11 +370,10 @@
+ 
+ void CSoundBase::Stop()
+ {
++	std::lock_guard<std::mutex> lock(m_ItemMutex);
+ 	m_ShouldBePlaying = false;
+ 	if (m_ALSource != 0)
+ 	{
+-		std::lock_guard<std::mutex> lock(m_ItemMutex);
+-
+ 		AL_CHECK;
+ 		alSourcei(m_ALSource, AL_LOOPING, AL_FALSE);
+ 		AL_CHECK;
+@@ -372,6 +392,7 @@
+ 
+ void CSoundBase::Pause()
+ {
++	std::lock_guard<std::mutex> lock(m_ItemMutex);
+ 	if (m_ALSource != 0)
+ 	{
+ 		m_IsPaused = true;

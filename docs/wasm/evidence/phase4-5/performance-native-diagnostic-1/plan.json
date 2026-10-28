@@ -1,0 +1,14 @@
+{
+  "gamePin": "40b8794eecb9618da69e10bacffa8814c561aa51",
+  "runs": [
+    {
+      "backend": "native",
+      "workload": "skirmish",
+      "repetition": 1,
+      "warmupSeconds": 120,
+      "durationSeconds": 120
+    }
+  ],
+  "screenshots": false,
+  "computerUse": false
+}

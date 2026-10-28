@@ -1,0 +1,3045 @@
+{
+  "passed": true,
+  "phase4Accepted": false,
+  "assertions": {
+    "keyboardPause": true,
+    "mouseMultipleSelection": true,
+    "keyboardControlGroup": true,
+    "mouseRallyPoint": true,
+    "keyboardCamera": true,
+    "mouseMinimap": true,
+    "contextualMovement": true
+  },
+  "errors": [],
+  "console": [
+    "The powerPreference option is currently ignored when calling requestAdapter() on Windows. See https://crbug.com/369219127",
+    "{\"type\":\"ready\",\"backend\":\"webgpu\",\"powerPreference\":\"high-performance\",\"owner\":\"main-thread\",\"adapter\":{\"vendor\":\"nvidia\",\"architecture\":\"ampere\",\"device\":\"\",\"description\":\"\"},\"adapterFeatures\":[\"bgra8unorm-storage\",\"clip-distances\",\"core-features-and-limits\",\"depth-clip-control\",\"depth32float-stencil8\",\"dual-source-blending\",\"float32-blendable\",\"float32-filterable\",\"indirect-first-instance\",\"primitive-index\",\"rg11b10ufloat-renderable\",\"shader-f16\",\"subgroup-size-control\",\"subgroups\",\"texture-component-swizzle\",\"texture-compression-bc\",\"texture-compression-bc-sliced-3d\",\"texture-formats-tier1\",\"texture-formats-tier2\",\"timestamp-query\"],\"adapterLimits\":{\"maxTextureDimension1D\":16384,\"maxTextureDimension2D\":16384,\"maxTextureDimension3D\":2048,\"maxTextureArrayLayers\":2048,\"maxBindGroups\":4,\"maxBindGroupsPlusVertexBuffers\":24,\"maxBindingsPerBindGroup\":1000,\"maxDynamicUniformBuffersPerPipelineLayout\":10,\"maxDynamicStorageBuffersPerPipelineLayout\":8,\"maxSampledTexturesPerShaderStage\":48,\"maxSamplersPerShaderStage\":16,\"maxStorageBuffersPerShaderStage\":16,\"maxStorageTexturesPerShaderStage\":8,\"maxUniformBuffersPerShaderStage\":12,\"maxUniformBufferBindingSize\":65536,\"maxStorageBufferBindingSize\":2147483644,\"minUniformBufferOffsetAlignment\":256,\"minStorageBufferOffsetAlignment\":256,\"maxVertexBuffers\":8,\"maxBufferSize\":2147483648,\"maxVertexAttributes\":30,\"maxVertexBufferArrayStride\":2048,\"maxInterStageShaderVariables\":28,\"maxColorAttachments\":8,\"maxColorAttachmentBytesPerSample\":128,\"maxComputeWorkgroupStorageSize\":32768,\"maxComputeInvocationsPerWorkgroup\":1024,\"maxComputeWorkgroupSizeX\":1024,\"maxComputeWorkgroupSizeY\":1024,\"maxComputeWorkgroupSizeZ\":64,\"maxComputeWorkgroupsPerDimension\":65535,\"maxImmediateSize\":64,\"maxStorageBuffersInFragmentStage\":16,\"maxStorageTexturesInFragmentStage\":8,\"maxStorageBuffersInVertexStage\":16,\"maxStorageTexturesInVertexStage\":8},\"deviceFeatures\":[\"core-features-and-limits\",\"depth32float-stencil8\",\"dual-source-blending\",\"float32-blendable\",\"float32-filterable\",\"rg11b10ufloat-renderable\",\"texture-compression-bc\"],\"deviceLimits\":{\"maxTextureDimension1D\":8192,\"maxTextureDimension2D\":8192,\"maxTextureDimension3D\":2048,\"maxTextureArrayLayers\":256,\"maxBindGroups\":4,\"maxBindGroupsPlusVertexBuffers\":24,\"maxBindingsPerBindGroup\":1000,\"maxDynamicUniformBuffersPerPipelineLayout\":8,\"maxDynamicStorageBuffersPerPipelineLayout\":4,\"maxSampledTexturesPerShaderStage\":16,\"maxSamplersPerShaderStage\":16,\"maxStorageBuffersPerShaderStage\":8,\"maxStorageTexturesPerShaderStage\":4,\"maxUniformBuffersPerShaderStage\":12,\"maxUniformBufferBindingSize\":65536,\"maxStorageBufferBindingSize\":134217728,\"minUniformBufferOffsetAlignment\":256,\"minStorageBufferOffsetAlignment\":256,\"maxVertexBuffers\":8,\"maxBufferSize\":268435456,\"maxVertexAttributes\":16,\"maxVertexBufferArrayStride\":2048,\"maxInterStageShaderVariables\":16,\"maxColorAttachments\":8,\"maxColorAttachmentBytesPerSample\":32,\"maxComputeWorkgroupStorageSize\":16384,\"maxComputeInvocationsPerWorkgroup\":256,\"maxComputeWorkgroupSizeX\":256,\"maxComputeWorkgroupSizeY\":256,\"maxComputeWorkgroupSizeZ\":64,\"maxComputeWorkgroupsPerDimension\":65535,\"maxImmediateSize\":64,\"maxStorageBuffersInFragmentStage\":8,\"maxStorageTexturesInFragmentStage\":4,\"maxStorageBuffersInVertexStage\":8,\"maxStorageTexturesInVertexStage\":4},\"unavailableOptionalFeatures\":[],\"fallbackAdapter\":null,\"format\":\"bgra8unorm\"}",
+    "Main log written to '/logs/mainlog.html'",
+    "Interesting log written to '/logs/interestinglog.html'",
+    "Sound: AlcInit success, using Emscripten OpenAL",
+    "Hardware details written to '/logs/system_info.txt'",
+    "Failed to query SDL WM info: That operation is not supportedUserReport written to '/logs/userreport_hwdetect.txt'",
+    "Failed to load resource: the server responded with a status of 404 (File not found)",
+    "JSON data written to '/data/config/matchsettings.json'",
+    "SCENE_ACTOR_QUALITY_HOOK_BEGIN",
+    "SCENE_QUALITY_GET_BEGIN",
+    "SCENE_QUALITY_GET_END 200 100",
+    "SCENE_QUALITY_INTERPOLATE_BEGIN",
+    "SCENE_QUALITY_INTERPOLATE_END",
+    "SCENE_ACTOR_QUALITY_HOOK_END",
+    "SCENE_ACTOR_VALIDATOR_BEGIN",
+    "Replay written to '/data/replays/0.29.0/2026-10-16_0001'",
+    "Setting biome generic/temperate.",
+    "Creating playerbases...",
+    "Creating bumps...",
+    "Creating hills...",
+    "Creating forests...",
+    "Creating dirt patches...",
+    "Creating grass patches...",
+    "Creating metal mines...",
+    "Creating stone mines...",
+    "Creating decoration...",
+    "Creating food...",
+    "Creating food...",
+    "Creating straggler trees...",
+    "Map generation finished.",
+    "Total entities: 825, Terrain entities: 525, Textures: 12.",
+    "{\"type\":\"sampler-address-emulation\",\"label\":\"art/textures/skins/props/decal_struct_paving_aegean_large.png\",\"requested\":[3,3,0],\"effective\":\"portable border filtering in the original shader sampling path\"}",
+    "GAME STARTED, ALL INIT COMPLETE",
+    "{\"type\":\"sampler-address-emulation\",\"label\":\"art/textures/misc/territory_border.png\",\"requested\":[3,2,0],\"effective\":\"portable border filtering in the original shader sampling path\"}",
+    "PHASE45_FULLSCREEN {\"full\":true,\"time\":20128.399999976158,\"inner\":[2560,1080]}",
+    "PHASE45_FULLSCREEN {\"full\":false,\"time\":37025.96999999881,\"inner\":[1249,917]}",
+    "Replay metadata written to '/data/replays/0.29.0/2026-10-16_0001/metadata.json'",
+    "{\"type\":\"device-lost\",\"backend\":\"webgpu\",\"reason\":\"destroyed\",\"message\":\"Device was destroyed.\",\"expected\":true}",
+    "{\"type\":\"engine-device-lost\",\"reason\":\"destroyed\",\"message\":\"Device was destroyed.\",\"expected\":true}"
+  ],
+  "attributes": {
+    "settings": {
+      "Biome": "generic/temperate",
+      "Ceasefire": 0,
+      "CheatsEnabled": false,
+      "CircularMap": true,
+      "DisableSpies": false,
+      "DisableTreasures": false,
+      "LastManStanding": false,
+      "LockTeams": false,
+      "RevealMap": false,
+      "ExploreMap": false,
+      "AllyView": false,
+      "mapName": "Mainland",
+      "mapPreview": "cropped:0.78125,0.5859375:session/icons/mappreview/mainland.png",
+      "Size": 128,
+      "Nomad": false,
+      "PlayerData": [
+        {
+          "AI": false,
+          "Civ": "athen",
+          "Color": {
+            "r": 10,
+            "g": 10,
+            "b": 190
+          },
+          "Name": "Phase4Human",
+          "Removed": false,
+          "Team": -1
+        },
+        {
+          "AI": "petra",
+          "AIDiff": 3,
+          "AIBehavior": "balanced",
+          "Civ": "mace",
+          "Color": {
+            "r": 230,
+            "g": 10,
+            "b": 10
+          },
+          "Name": "Phase4Petra",
+          "Removed": false,
+          "Team": -1
+        }
+      ],
+      "PlayerPlacement": "circle",
+      "PopulationCapType": "player",
+      "PopulationCap": 200,
+      "Seed": 12345,
+      "AISeed": 54321,
+      "StartingResources": 1000,
+      "TriggerScripts": [],
+      "VictoryConditions": [
+        "conquest"
+      ]
+    },
+    "gameSpeed": 1,
+    "map": "maps/random/mainland",
+    "mapType": "random",
+    "script": "mainland.js"
+  },
+  "stage": "selection-cleared",
+  "observedSurface": {
+    "fullscreen": true,
+    "focused": true,
+    "canvas": [
+      1920,
+      1080
+    ]
+  },
+  "fullscreen": {
+    "window": {
+      "windowId": 1693801319,
+      "bounds": {
+        "left": 0,
+        "top": 0,
+        "width": 2560,
+        "height": 1080,
+        "windowState": "fullscreen"
+      }
+    },
+    "dimensions": {
+      "inner": [
+        2560,
+        1080
+      ],
+      "screen": [
+        2560,
+        1080
+      ],
+      "dpr": 1,
+      "focused": true
+    },
+    "internalResolution": [
+      1920,
+      1080
+    ]
+  },
+  "pausedBeforeKeyboard": false,
+  "inputFocus": {
+    "focused": true,
+    "element": "canvas"
+  },
+  "points": [
+    {
+      "id": 150,
+      "unit": false,
+      "template": "structures/athen/civil_centre",
+      "x": 960,
+      "y": 514
+    },
+    {
+      "id": 159,
+      "unit": true,
+      "template": "units/athen/cavalry_javelineer_b",
+      "x": 792,
+      "y": 418
+    },
+    {
+      "id": 158,
+      "unit": true,
+      "template": "units/athen/infantry_slinger_b",
+      "x": 1096,
+      "y": 410
+    },
+    {
+      "id": 157,
+      "unit": true,
+      "template": "units/athen/infantry_slinger_b",
+      "x": 1160,
+      "y": 442
+    },
+    {
+      "id": 151,
+      "unit": true,
+      "template": "units/athen/support_civilian",
+      "x": 664,
+      "y": 570
+    },
+    {
+      "id": 152,
+      "unit": true,
+      "template": "units/athen/support_civilian",
+      "x": 720,
+      "y": 618
+    },
+    {
+      "id": 155,
+      "unit": true,
+      "template": "units/athen/infantry_spearman_b",
+      "x": 1200,
+      "y": 618
+    },
+    {
+      "id": 153,
+      "unit": true,
+      "template": "units/athen/support_civilian",
+      "x": 784,
+      "y": 666
+    },
+    {
+      "id": 156,
+      "unit": true,
+      "template": "units/athen/infantry_spearman_b",
+      "x": 1144,
+      "y": 658
+    },
+    {
+      "id": 154,
+      "unit": true,
+      "template": "units/athen/support_civilian",
+      "x": 848,
+      "y": 714
+    }
+  ],
+  "nativeInputEvents": [
+    {
+      "handler": "handleInputBeforeGui",
+      "type": "hotkeypresssilent",
+      "picked": null,
+      "clickedEntity": 158,
+      "inputState": 0,
+      "selected": [
+        159,
+        158
+      ]
+    },
+    {
+      "handler": "handleInputAfterGui",
+      "type": "hotkeypresssilent",
+      "picked": null,
+      "clickedEntity": 158,
+      "inputState": 0,
+      "selected": [
+        159,
+        158
+      ]
+    },
+    {
+      "handler": "handleInputBeforeGui",
+      "type": "hotkeypresssilent",
+      "picked": null,
+      "clickedEntity": 158,
+      "inputState": 0,
+      "selected": [
+        159,
+        158
+      ]
+    },
+    {
+      "handler": "handleInputAfterGui",
+      "type": "hotkeypresssilent",
+      "picked": null,
+      "clickedEntity": 158,
+      "inputState": 0,
+      "selected": [
+        159,
+        158
+      ]
+    },
+    {
+      "handler": "handleInputBeforeGui",
+      "type": "hotkeypresssilent",
+      "picked": null,
+      "clickedEntity": 158,
+      "inputState": 0,
+      "selected": [
+        159,
+        158
+      ]
+    },
+    {
+      "handler": "handleInputAfterGui",
+      "type": "hotkeypresssilent",
+      "picked": null,
+      "clickedEntity": 158,
+      "inputState": 0,
+      "selected": [
+        159,
+        158
+      ]
+    },
+    {
+      "handler": "handleInputBeforeGui",
+      "type": "hotkeypresssilent",
+      "picked": null,
+      "clickedEntity": 158,
+      "inputState": 0,
+      "selected": [
+        159,
+        158
+      ]
+    },
+    {
+      "handler": "handleInputAfterGui",
+      "type": "hotkeypresssilent",
+      "picked": null,
+      "clickedEntity": 158,
+      "inputState": 0,
+      "selected": [
+        159,
+        158
+      ]
+    },
+    {
+      "handler": "handleInputBeforeGui",
+      "type": "hotkeypresssilent",
+      "picked": null,
+      "clickedEntity": 158,
+      "inputState": 0,
+      "selected": [
+        159,
+        158
+      ]
+    },
+    {
+      "handler": "handleInputAfterGui",
+      "type": "hotkeypresssilent",
+      "picked": null,
+      "clickedEntity": 158,
+      "inputState": 0,
+      "selected": [
+        159,
+        158
+      ]
+    },
+    {
+      "handler": "handleInputBeforeGui",
+      "type": "hotkeypresssilent",
+      "picked": null,
+      "clickedEntity": 158,
+      "inputState": 0,
+      "selected": [
+        159,
+        158
+      ]
+    },
+    {
+      "handler": "handleInputAfterGui",
+      "type": "hotkeypresssilent",
+      "picked": null,
+      "clickedEntity": 158,
+      "inputState": 0,
+      "selected": [
+        159,
+        158
+      ]
+    },
+    {
+      "handler": "handleInputBeforeGui",
+      "type": "hotkeypresssilent",
+      "picked": null,
+      "clickedEntity": 158,
+      "inputState": 0,
+      "selected": [
+        159,
+        158
+      ]
+    },
+    {
+      "handler": "handleInputAfterGui",
+      "type": "hotkeypresssilent",
+      "picked": null,
+      "clickedEntity": 158,
+      "inputState": 0,
+      "selected": [
+        159,
+        158
+      ]
+    },
+    {
+      "handler": "handleInputBeforeGui",
+      "type": "hotkeyup",
+      "picked": null,
+      "clickedEntity": 158,
+      "inputState": 0,
+      "selected": [
+        159,
+        158
+      ]
+    },
+    {
+      "handler": "handleInputAfterGui",
+      "type": "hotkeyup",
+      "picked": null,
+      "clickedEntity": 158,
+      "inputState": 0,
+      "selected": [
+        159,
+        158
+      ]
+    },
+    {
+      "handler": "handleInputBeforeGui",
+      "type": "keyup",
+      "picked": null,
+      "clickedEntity": 158,
+      "inputState": 0,
+      "selected": [
+        159,
+        158
+      ]
+    },
+    {
+      "handler": "handleInputAfterGui",
+      "type": "keyup",
+      "picked": null,
+      "clickedEntity": 158,
+      "inputState": 0,
+      "selected": [
+        159,
+        158
+      ]
+    },
+    {
+      "handler": "handleInputBeforeGui",
+      "type": "hotkeyupsilent",
+      "picked": null,
+      "clickedEntity": 158,
+      "inputState": 0,
+      "selected": [
+        159,
+        158
+      ]
+    },
+    {
+      "handler": "handleInputAfterGui",
+      "type": "hotkeyupsilent",
+      "picked": null,
+      "clickedEntity": 158,
+      "inputState": 0,
+      "selected": [
+        159,
+        158
+      ]
+    },
+    {
+      "handler": "handleInputBeforeGui",
+      "type": "hotkeyupsilent",
+      "picked": null,
+      "clickedEntity": 158,
+      "inputState": 0,
+      "selected": [
+        159,
+        158
+      ]
+    },
+    {
+      "handler": "handleInputAfterGui",
+      "type": "hotkeyupsilent",
+      "picked": null,
+      "clickedEntity": 158,
+      "inputState": 0,
+      "selected": [
+        159,
+        158
+      ]
+    },
+    {
+      "handler": "handleInputBeforeGui",
+      "type": "hotkeyupsilent",
+      "picked": null,
+      "clickedEntity": 158,
+      "inputState": 0,
+      "selected": [
+        159,
+        158
+      ]
+    },
+    {
+      "handler": "handleInputAfterGui",
+      "type": "hotkeyupsilent",
+      "picked": null,
+      "clickedEntity": 158,
+      "inputState": 0,
+      "selected": [
+        159,
+        158
+      ]
+    },
+    {
+      "handler": "handleInputBeforeGui",
+      "type": "hotkeyupsilent",
+      "picked": null,
+      "clickedEntity": 158,
+      "inputState": 0,
+      "selected": [
+        159,
+        158
+      ]
+    },
+    {
+      "handler": "handleInputAfterGui",
+      "type": "hotkeyupsilent",
+      "picked": null,
+      "clickedEntity": 158,
+      "inputState": 0,
+      "selected": [
+        159,
+        158
+      ]
+    },
+    {
+      "handler": "handleInputBeforeGui",
+      "type": "hotkeyupsilent",
+      "picked": null,
+      "clickedEntity": 158,
+      "inputState": 0,
+      "selected": [
+        159,
+        158
+      ]
+    },
+    {
+      "handler": "handleInputAfterGui",
+      "type": "hotkeyupsilent",
+      "picked": null,
+      "clickedEntity": 158,
+      "inputState": 0,
+      "selected": [
+        159,
+        158
+      ]
+    },
+    {
+      "handler": "handleInputBeforeGui",
+      "type": "hotkeyupsilent",
+      "picked": null,
+      "clickedEntity": 158,
+      "inputState": 0,
+      "selected": [
+        159,
+        158
+      ]
+    },
+    {
+      "handler": "handleInputAfterGui",
+      "type": "hotkeyupsilent",
+      "picked": null,
+      "clickedEntity": 158,
+      "inputState": 0,
+      "selected": [
+        159,
+        158
+      ]
+    },
+    {
+      "handler": "handleInputBeforeGui",
+      "type": "hotkeyupsilent",
+      "picked": null,
+      "clickedEntity": 158,
+      "inputState": 0,
+      "selected": [
+        159,
+        158
+      ]
+    },
+    {
+      "handler": "handleInputAfterGui",
+      "type": "hotkeyupsilent",
+      "picked": null,
+      "clickedEntity": 158,
+      "inputState": 0,
+      "selected": [
+        159,
+        158
+      ]
+    },
+    {
+      "handler": "handleInputBeforeGui",
+      "type": "keydown",
+      "picked": null,
+      "clickedEntity": 158,
+      "inputState": 0,
+      "selected": [
+        159,
+        158
+      ]
+    },
+    {
+      "handler": "handleInputAfterGui",
+      "type": "keydown",
+      "picked": null,
+      "clickedEntity": 158,
+      "inputState": 0,
+      "selected": [
+        159,
+        158
+      ]
+    },
+    {
+      "handler": "handleInputBeforeGui",
+      "type": "hotkeypress",
+      "picked": null,
+      "clickedEntity": 158,
+      "inputState": 0,
+      "selected": [
+        159,
+        158
+      ]
+    },
+    {
+      "handler": "handleInputBeforeGui",
+      "type": "hotkeydown",
+      "picked": null,
+      "clickedEntity": 158,
+      "inputState": 0,
+      "selected": [
+        159,
+        158
+      ]
+    },
+    {
+      "handler": "handleInputBeforeGui",
+      "type": "hotkeypress",
+      "picked": null,
+      "clickedEntity": 158,
+      "inputState": 0,
+      "selected": [
+        159,
+        158
+      ]
+    },
+    {
+      "handler": "handleInputBeforeGui",
+      "type": "hotkeydown",
+      "picked": null,
+      "clickedEntity": 158,
+      "inputState": 0,
+      "selected": [
+        159,
+        158
+      ]
+    },
+    {
+      "handler": "handleInputBeforeGui",
+      "type": "keyup",
+      "picked": null,
+      "clickedEntity": 158,
+      "inputState": 0,
+      "selected": []
+    },
+    {
+      "handler": "handleInputAfterGui",
+      "type": "keyup",
+      "picked": null,
+      "clickedEntity": 158,
+      "inputState": 0,
+      "selected": []
+    },
+    {
+      "handler": "handleInputBeforeGui",
+      "type": "hotkeyup",
+      "picked": null,
+      "clickedEntity": 158,
+      "inputState": 0,
+      "selected": []
+    },
+    {
+      "handler": "handleInputBeforeGui",
+      "type": "hotkeyup",
+      "picked": null,
+      "clickedEntity": 158,
+      "inputState": 0,
+      "selected": []
+    },
+    {
+      "handler": "handleInputBeforeGui",
+      "type": "keydown",
+      "picked": null,
+      "clickedEntity": 158,
+      "inputState": 0,
+      "selected": []
+    },
+    {
+      "handler": "handleInputAfterGui",
+      "type": "keydown",
+      "picked": null,
+      "clickedEntity": 158,
+      "inputState": 0,
+      "selected": []
+    },
+    {
+      "handler": "handleInputBeforeGui",
+      "type": "hotkeypress",
+      "picked": null,
+      "clickedEntity": 158,
+      "inputState": 0,
+      "selected": []
+    },
+    {
+      "handler": "handleInputAfterGui",
+      "type": "hotkeypress",
+      "picked": null,
+      "clickedEntity": 158,
+      "inputState": 0,
+      "selected": [
+        158,
+        159
+      ]
+    },
+    {
+      "handler": "handleInputBeforeGui",
+      "type": "hotkeydown",
+      "picked": null,
+      "clickedEntity": 158,
+      "inputState": 0,
+      "selected": [
+        158,
+        159
+      ]
+    },
+    {
+      "handler": "handleInputAfterGui",
+      "type": "hotkeydown",
+      "picked": null,
+      "clickedEntity": 158,
+      "inputState": 0,
+      "selected": [
+        158,
+        159
+      ]
+    },
+    {
+      "handler": "handleInputBeforeGui",
+      "type": "keyup",
+      "picked": null,
+      "clickedEntity": 158,
+      "inputState": 0,
+      "selected": [
+        158,
+        159
+      ]
+    },
+    {
+      "handler": "handleInputAfterGui",
+      "type": "keyup",
+      "picked": null,
+      "clickedEntity": 158,
+      "inputState": 0,
+      "selected": [
+        158,
+        159
+      ]
+    },
+    {
+      "handler": "handleInputBeforeGui",
+      "type": "hotkeyup",
+      "picked": null,
+      "clickedEntity": 158,
+      "inputState": 0,
+      "selected": [
+        158,
+        159
+      ]
+    },
+    {
+      "handler": "handleInputAfterGui",
+      "type": "hotkeyup",
+      "picked": null,
+      "clickedEntity": 158,
+      "inputState": 0,
+      "selected": [
+        158,
+        159
+      ]
+    },
+    {
+      "handler": "handleInputBeforeGui",
+      "type": "mousemotion",
+      "x": 960,
+      "y": 514,
+      "picked": 150,
+      "clickedEntity": 158,
+      "inputState": 0,
+      "selected": [
+        158,
+        159
+      ]
+    },
+    {
+      "handler": "handleInputAfterGui",
+      "type": "mousemotion",
+      "x": 960,
+      "y": 514,
+      "picked": 150,
+      "clickedEntity": 158,
+      "inputState": 0,
+      "selected": [
+        158,
+        159
+      ]
+    },
+    {
+      "handler": "handleInputBeforeGui",
+      "type": "mousebuttondown",
+      "x": 960,
+      "y": 514,
+      "clicks": 1,
+      "picked": 150,
+      "clickedEntity": 158,
+      "inputState": 0,
+      "selected": [
+        158,
+        159
+      ]
+    },
+    {
+      "handler": "handleInputAfterGui",
+      "type": "mousebuttondown",
+      "x": 960,
+      "y": 514,
+      "clicks": 1,
+      "picked": 150,
+      "clickedEntity": 150,
+      "inputState": 1,
+      "selected": [
+        158,
+        159
+      ]
+    },
+    {
+      "handler": "handleInputBeforeGui",
+      "type": "mousebuttonup",
+      "x": 960,
+      "y": 514,
+      "clicks": 1,
+      "picked": 150,
+      "clickedEntity": 150,
+      "inputState": 1,
+      "selected": [
+        158,
+        159
+      ]
+    },
+    {
+      "handler": "handleInputAfterGui",
+      "type": "mousebuttonup",
+      "x": 960,
+      "y": 514,
+      "clicks": 1,
+      "picked": 150,
+      "clickedEntity": 150,
+      "inputState": 0,
+      "selected": [
+        150
+      ]
+    },
+    {
+      "handler": "handleInputBeforeGui",
+      "type": "mousemotion",
+      "x": 1110,
+      "y": 390,
+      "picked": 0,
+      "clickedEntity": 150,
+      "inputState": 0,
+      "selected": [
+        150
+      ]
+    },
+    {
+      "handler": "handleInputAfterGui",
+      "type": "mousemotion",
+      "x": 1110,
+      "y": 390,
+      "picked": 0,
+      "clickedEntity": 150,
+      "inputState": 0,
+      "selected": [
+        150
+      ]
+    },
+    {
+      "handler": "handleInputBeforeGui",
+      "type": "mousebuttondown",
+      "x": 1110,
+      "y": 390,
+      "clicks": 1,
+      "picked": 0,
+      "clickedEntity": 150,
+      "inputState": 0,
+      "selected": [
+        150
+      ]
+    },
+    {
+      "handler": "handleInputAfterGui",
+      "type": "mousebuttondown",
+      "x": 1110,
+      "y": 390,
+      "clicks": 1,
+      "picked": 0,
+      "clickedEntity": 150,
+      "inputState": 10,
+      "selected": [
+        150
+      ]
+    },
+    {
+      "handler": "handleInputBeforeGui",
+      "type": "mousebuttonup",
+      "x": 1110,
+      "y": 390,
+      "clicks": 1,
+      "picked": 0,
+      "clickedEntity": 150,
+      "inputState": 10,
+      "selected": [
+        150
+      ]
+    },
+    {
+      "handler": "handleInputAfterGui",
+      "type": "mousebuttonup",
+      "x": 1110,
+      "y": 390,
+      "clicks": 1,
+      "picked": 0,
+      "clickedEntity": 0,
+      "inputState": 0,
+      "selected": [
+        150
+      ]
+    },
+    {
+      "handler": "handleInputBeforeGui",
+      "type": "keydown",
+      "picked": null,
+      "clickedEntity": 0,
+      "inputState": 0,
+      "selected": [
+        150
+      ]
+    },
+    {
+      "handler": "handleInputAfterGui",
+      "type": "keydown",
+      "picked": null,
+      "clickedEntity": 0,
+      "inputState": 0,
+      "selected": [
+        150
+      ]
+    },
+    {
+      "handler": "handleInputBeforeGui",
+      "type": "hotkeypress",
+      "picked": null,
+      "clickedEntity": 0,
+      "inputState": 0,
+      "selected": [
+        150
+      ]
+    },
+    {
+      "handler": "handleInputAfterGui",
+      "type": "hotkeypress",
+      "picked": null,
+      "clickedEntity": 0,
+      "inputState": 0,
+      "selected": [
+        158,
+        159
+      ]
+    },
+    {
+      "handler": "handleInputBeforeGui",
+      "type": "hotkeydown",
+      "picked": null,
+      "clickedEntity": 0,
+      "inputState": 0,
+      "selected": [
+        158,
+        159
+      ]
+    },
+    {
+      "handler": "handleInputAfterGui",
+      "type": "hotkeydown",
+      "picked": null,
+      "clickedEntity": 0,
+      "inputState": 0,
+      "selected": [
+        158,
+        159
+      ]
+    },
+    {
+      "handler": "handleInputBeforeGui",
+      "type": "keyup",
+      "picked": null,
+      "clickedEntity": 0,
+      "inputState": 0,
+      "selected": [
+        158,
+        159
+      ]
+    },
+    {
+      "handler": "handleInputAfterGui",
+      "type": "keyup",
+      "picked": null,
+      "clickedEntity": 0,
+      "inputState": 0,
+      "selected": [
+        158,
+        159
+      ]
+    },
+    {
+      "handler": "handleInputBeforeGui",
+      "type": "hotkeyup",
+      "picked": null,
+      "clickedEntity": 0,
+      "inputState": 0,
+      "selected": [
+        158,
+        159
+      ]
+    },
+    {
+      "handler": "handleInputAfterGui",
+      "type": "hotkeyup",
+      "picked": null,
+      "clickedEntity": 0,
+      "inputState": 0,
+      "selected": [
+        158,
+        159
+      ]
+    },
+    {
+      "handler": "handleInputBeforeGui",
+      "type": "keydown",
+      "picked": null,
+      "clickedEntity": 0,
+      "inputState": 0,
+      "selected": [
+        158,
+        159
+      ]
+    },
+    {
+      "handler": "handleInputAfterGui",
+      "type": "keydown",
+      "picked": null,
+      "clickedEntity": 0,
+      "inputState": 0,
+      "selected": [
+        158,
+        159
+      ]
+    },
+    {
+      "handler": "handleInputBeforeGui",
+      "type": "hotkeypress",
+      "picked": null,
+      "clickedEntity": 0,
+      "inputState": 0,
+      "selected": [
+        158,
+        159
+      ]
+    },
+    {
+      "handler": "handleInputAfterGui",
+      "type": "hotkeypress",
+      "picked": null,
+      "clickedEntity": 0,
+      "inputState": 0,
+      "selected": [
+        158,
+        159
+      ]
+    },
+    {
+      "handler": "handleInputBeforeGui",
+      "type": "hotkeydown",
+      "picked": null,
+      "clickedEntity": 0,
+      "inputState": 0,
+      "selected": [
+        158,
+        159
+      ]
+    },
+    {
+      "handler": "handleInputAfterGui",
+      "type": "hotkeydown",
+      "picked": null,
+      "clickedEntity": 0,
+      "inputState": 0,
+      "selected": [
+        158,
+        159
+      ]
+    },
+    {
+      "handler": "handleInputBeforeGui",
+      "type": "hotkeypress",
+      "picked": null,
+      "clickedEntity": 0,
+      "inputState": 0,
+      "selected": [
+        158,
+        159
+      ]
+    },
+    {
+      "handler": "handleInputAfterGui",
+      "type": "hotkeypress",
+      "picked": null,
+      "clickedEntity": 0,
+      "inputState": 0,
+      "selected": [
+        158,
+        159
+      ]
+    },
+    {
+      "handler": "handleInputBeforeGui",
+      "type": "hotkeydown",
+      "picked": null,
+      "clickedEntity": 0,
+      "inputState": 0,
+      "selected": [
+        158,
+        159
+      ]
+    },
+    {
+      "handler": "handleInputAfterGui",
+      "type": "hotkeydown",
+      "picked": null,
+      "clickedEntity": 0,
+      "inputState": 0,
+      "selected": [
+        158,
+        159
+      ]
+    },
+    {
+      "handler": "handleInputBeforeGui",
+      "type": "keyup",
+      "picked": null,
+      "clickedEntity": 0,
+      "inputState": 0,
+      "selected": [
+        158,
+        159
+      ]
+    },
+    {
+      "handler": "handleInputAfterGui",
+      "type": "keyup",
+      "picked": null,
+      "clickedEntity": 0,
+      "inputState": 0,
+      "selected": [
+        158,
+        159
+      ]
+    },
+    {
+      "handler": "handleInputBeforeGui",
+      "type": "hotkeyup",
+      "picked": null,
+      "clickedEntity": 0,
+      "inputState": 0,
+      "selected": [
+        158,
+        159
+      ]
+    },
+    {
+      "handler": "handleInputAfterGui",
+      "type": "hotkeyup",
+      "picked": null,
+      "clickedEntity": 0,
+      "inputState": 0,
+      "selected": [
+        158,
+        159
+      ]
+    },
+    {
+      "handler": "handleInputBeforeGui",
+      "type": "hotkeyup",
+      "picked": null,
+      "clickedEntity": 0,
+      "inputState": 0,
+      "selected": [
+        158,
+        159
+      ]
+    },
+    {
+      "handler": "handleInputAfterGui",
+      "type": "hotkeyup",
+      "picked": null,
+      "clickedEntity": 0,
+      "inputState": 0,
+      "selected": [
+        158,
+        159
+      ]
+    },
+    {
+      "handler": "handleInputBeforeGui",
+      "type": "mousemotion",
+      "x": 566,
+      "y": 996,
+      "picked": 0,
+      "clickedEntity": 0,
+      "inputState": 0,
+      "selected": [
+        158,
+        159
+      ]
+    },
+    {
+      "handler": "handleInputAfterGui",
+      "type": "mousemotion",
+      "x": 566,
+      "y": 996,
+      "picked": 0,
+      "clickedEntity": 0,
+      "inputState": 0,
+      "selected": [
+        158,
+        159
+      ]
+    },
+    {
+      "handler": "handleInputBeforeGui",
+      "type": "mousebuttondown",
+      "x": 566,
+      "y": 996,
+      "clicks": 1,
+      "hovered": "minimap",
+      "picked": 0,
+      "clickedEntity": 0,
+      "inputState": 0,
+      "selected": [
+        158,
+        159
+      ]
+    },
+    {
+      "handler": "handleInputBeforeGui",
+      "type": "mousebuttonup",
+      "x": 566,
+      "y": 996,
+      "clicks": 1,
+      "hovered": "minimap",
+      "picked": 0,
+      "clickedEntity": 0,
+      "inputState": 0,
+      "selected": [
+        158,
+        159
+      ]
+    },
+    {
+      "handler": "handleInputBeforeGui",
+      "type": "mousemotion",
+      "x": 999,
+      "y": 500,
+      "hovered": "minimap",
+      "picked": 0,
+      "clickedEntity": 0,
+      "inputState": 0,
+      "selected": [
+        158,
+        159
+      ]
+    },
+    {
+      "handler": "handleInputAfterGui",
+      "type": "mousemotion",
+      "x": 999,
+      "y": 500,
+      "picked": 0,
+      "clickedEntity": 0,
+      "inputState": 0,
+      "selected": [
+        158,
+        159
+      ]
+    },
+    {
+      "handler": "handleInputBeforeGui",
+      "type": "mousebuttondown",
+      "x": 999,
+      "y": 500,
+      "clicks": 1,
+      "picked": 0,
+      "clickedEntity": 0,
+      "inputState": 0,
+      "selected": [
+        158,
+        159
+      ]
+    },
+    {
+      "handler": "handleInputAfterGui",
+      "type": "mousebuttondown",
+      "x": 999,
+      "y": 500,
+      "clicks": 1,
+      "picked": 0,
+      "clickedEntity": 0,
+      "inputState": 10,
+      "selected": [
+        158,
+        159
+      ]
+    },
+    {
+      "handler": "handleInputBeforeGui",
+      "type": "mousebuttonup",
+      "x": 999,
+      "y": 500,
+      "clicks": 1,
+      "picked": 0,
+      "clickedEntity": 0,
+      "inputState": 10,
+      "selected": [
+        158,
+        159
+      ]
+    },
+    {
+      "handler": "handleInputAfterGui",
+      "type": "mousebuttonup",
+      "x": 999,
+      "y": 500,
+      "clicks": 1,
+      "picked": 0,
+      "clickedEntity": 0,
+      "inputState": 0,
+      "selected": [
+        158,
+        159
+      ]
+    }
+  ],
+  "mouseEvents": [
+    {
+      "requested": [
+        792,
+        418
+      ],
+      "button": "left",
+      "canvasBox": {
+        "x": 0,
+        "y": 0,
+        "width": 2560,
+        "height": 1080
+      },
+      "dom": [
+        {
+          "client": [
+            53,
+            18
+          ],
+          "rect": {
+            "x": 0,
+            "y": 106,
+            "width": 1249,
+            "height": 702.5625,
+            "top": 106,
+            "right": 1249,
+            "bottom": 808.5625,
+            "left": 0
+          },
+          "target": "start"
+        },
+        {
+          "client": [
+            284,
+            18
+          ],
+          "rect": {
+            "x": 0,
+            "y": 106,
+            "width": 1249,
+            "height": 702.5625,
+            "top": 106,
+            "right": 1249,
+            "bottom": 808.5625,
+            "left": 0
+          },
+          "target": "audio"
+        },
+        {
+          "client": [
+            168,
+            18
+          ],
+          "rect": {
+            "x": 0,
+            "y": 106,
+            "width": 1249,
+            "height": 702.5625,
+            "top": 106,
+            "right": 1249,
+            "bottom": 808.5625,
+            "left": 0
+          },
+          "target": "fullscreen"
+        },
+        {
+          "client": [
+            1280,
+            540
+          ],
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 2560,
+            "height": 1080,
+            "top": 0,
+            "right": 2560,
+            "bottom": 1080,
+            "left": 0
+          },
+          "target": "canvas"
+        },
+        {
+          "client": [
+            1056,
+            418
+          ],
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 2560,
+            "height": 1080,
+            "top": 0,
+            "right": 2560,
+            "bottom": 1080,
+            "left": 0
+          },
+          "target": "canvas"
+        }
+      ],
+      "observed": {
+        "x": 792,
+        "y": 418,
+        "selected": [
+          159
+        ],
+        "inputState": 0,
+        "clickedEntity": 159,
+        "picked": 159
+      }
+    },
+    {
+      "requested": [
+        1096,
+        410
+      ],
+      "button": "left",
+      "canvasBox": {
+        "x": 0,
+        "y": 0,
+        "width": 2560,
+        "height": 1080
+      },
+      "dom": [
+        {
+          "client": [
+            53,
+            18
+          ],
+          "rect": {
+            "x": 0,
+            "y": 106,
+            "width": 1249,
+            "height": 702.5625,
+            "top": 106,
+            "right": 1249,
+            "bottom": 808.5625,
+            "left": 0
+          },
+          "target": "start"
+        },
+        {
+          "client": [
+            284,
+            18
+          ],
+          "rect": {
+            "x": 0,
+            "y": 106,
+            "width": 1249,
+            "height": 702.5625,
+            "top": 106,
+            "right": 1249,
+            "bottom": 808.5625,
+            "left": 0
+          },
+          "target": "audio"
+        },
+        {
+          "client": [
+            168,
+            18
+          ],
+          "rect": {
+            "x": 0,
+            "y": 106,
+            "width": 1249,
+            "height": 702.5625,
+            "top": 106,
+            "right": 1249,
+            "bottom": 808.5625,
+            "left": 0
+          },
+          "target": "fullscreen"
+        },
+        {
+          "client": [
+            1280,
+            540
+          ],
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 2560,
+            "height": 1080,
+            "top": 0,
+            "right": 2560,
+            "bottom": 1080,
+            "left": 0
+          },
+          "target": "canvas"
+        },
+        {
+          "client": [
+            1056,
+            418
+          ],
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 2560,
+            "height": 1080,
+            "top": 0,
+            "right": 2560,
+            "bottom": 1080,
+            "left": 0
+          },
+          "target": "canvas"
+        },
+        {
+          "client": [
+            1461,
+            410
+          ],
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 2560,
+            "height": 1080,
+            "top": 0,
+            "right": 2560,
+            "bottom": 1080,
+            "left": 0
+          },
+          "target": "canvas"
+        }
+      ],
+      "observed": {
+        "x": 1095,
+        "y": 410,
+        "selected": [
+          159,
+          158
+        ],
+        "inputState": 0,
+        "clickedEntity": 158,
+        "picked": 158
+      }
+    },
+    {
+      "requested": [
+        960,
+        514
+      ],
+      "button": "left",
+      "canvasBox": {
+        "x": 0,
+        "y": 0,
+        "width": 2560,
+        "height": 1080
+      },
+      "dom": [
+        {
+          "client": [
+            53,
+            18
+          ],
+          "rect": {
+            "x": 0,
+            "y": 106,
+            "width": 1249,
+            "height": 702.5625,
+            "top": 106,
+            "right": 1249,
+            "bottom": 808.5625,
+            "left": 0
+          },
+          "target": "start"
+        },
+        {
+          "client": [
+            284,
+            18
+          ],
+          "rect": {
+            "x": 0,
+            "y": 106,
+            "width": 1249,
+            "height": 702.5625,
+            "top": 106,
+            "right": 1249,
+            "bottom": 808.5625,
+            "left": 0
+          },
+          "target": "audio"
+        },
+        {
+          "client": [
+            168,
+            18
+          ],
+          "rect": {
+            "x": 0,
+            "y": 106,
+            "width": 1249,
+            "height": 702.5625,
+            "top": 106,
+            "right": 1249,
+            "bottom": 808.5625,
+            "left": 0
+          },
+          "target": "fullscreen"
+        },
+        {
+          "client": [
+            1280,
+            540
+          ],
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 2560,
+            "height": 1080,
+            "top": 0,
+            "right": 2560,
+            "bottom": 1080,
+            "left": 0
+          },
+          "target": "canvas"
+        },
+        {
+          "client": [
+            1056,
+            418
+          ],
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 2560,
+            "height": 1080,
+            "top": 0,
+            "right": 2560,
+            "bottom": 1080,
+            "left": 0
+          },
+          "target": "canvas"
+        },
+        {
+          "client": [
+            1461,
+            410
+          ],
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 2560,
+            "height": 1080,
+            "top": 0,
+            "right": 2560,
+            "bottom": 1080,
+            "left": 0
+          },
+          "target": "canvas"
+        },
+        {
+          "client": [
+            1280,
+            514
+          ],
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 2560,
+            "height": 1080,
+            "top": 0,
+            "right": 2560,
+            "bottom": 1080,
+            "left": 0
+          },
+          "target": "canvas"
+        }
+      ],
+      "observed": {
+        "x": 960,
+        "y": 514,
+        "selected": [
+          150
+        ],
+        "inputState": 0,
+        "clickedEntity": 150,
+        "picked": 150
+      }
+    },
+    {
+      "requested": [
+        1110,
+        390
+      ],
+      "button": "right",
+      "canvasBox": {
+        "x": 0,
+        "y": 0,
+        "width": 2560,
+        "height": 1080
+      },
+      "dom": [
+        {
+          "client": [
+            53,
+            18
+          ],
+          "rect": {
+            "x": 0,
+            "y": 106,
+            "width": 1249,
+            "height": 702.5625,
+            "top": 106,
+            "right": 1249,
+            "bottom": 808.5625,
+            "left": 0
+          },
+          "target": "start"
+        },
+        {
+          "client": [
+            284,
+            18
+          ],
+          "rect": {
+            "x": 0,
+            "y": 106,
+            "width": 1249,
+            "height": 702.5625,
+            "top": 106,
+            "right": 1249,
+            "bottom": 808.5625,
+            "left": 0
+          },
+          "target": "audio"
+        },
+        {
+          "client": [
+            168,
+            18
+          ],
+          "rect": {
+            "x": 0,
+            "y": 106,
+            "width": 1249,
+            "height": 702.5625,
+            "top": 106,
+            "right": 1249,
+            "bottom": 808.5625,
+            "left": 0
+          },
+          "target": "fullscreen"
+        },
+        {
+          "client": [
+            1280,
+            540
+          ],
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 2560,
+            "height": 1080,
+            "top": 0,
+            "right": 2560,
+            "bottom": 1080,
+            "left": 0
+          },
+          "target": "canvas"
+        },
+        {
+          "client": [
+            1056,
+            418
+          ],
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 2560,
+            "height": 1080,
+            "top": 0,
+            "right": 2560,
+            "bottom": 1080,
+            "left": 0
+          },
+          "target": "canvas"
+        },
+        {
+          "client": [
+            1461,
+            410
+          ],
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 2560,
+            "height": 1080,
+            "top": 0,
+            "right": 2560,
+            "bottom": 1080,
+            "left": 0
+          },
+          "target": "canvas"
+        },
+        {
+          "client": [
+            1280,
+            514
+          ],
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 2560,
+            "height": 1080,
+            "top": 0,
+            "right": 2560,
+            "bottom": 1080,
+            "left": 0
+          },
+          "target": "canvas"
+        },
+        {
+          "client": [
+            1480,
+            390
+          ],
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 2560,
+            "height": 1080,
+            "top": 0,
+            "right": 2560,
+            "bottom": 1080,
+            "left": 0
+          },
+          "target": "canvas"
+        }
+      ],
+      "observed": {
+        "x": 1110,
+        "y": 390,
+        "selected": [
+          150
+        ],
+        "inputState": 0,
+        "clickedEntity": 0,
+        "picked": 0
+      }
+    },
+    {
+      "requested": [
+        566.4,
+        996.4
+      ],
+      "button": "left",
+      "canvasBox": {
+        "x": 0,
+        "y": 0,
+        "width": 2560,
+        "height": 1080
+      },
+      "dom": [
+        {
+          "client": [
+            53,
+            18
+          ],
+          "rect": {
+            "x": 0,
+            "y": 106,
+            "width": 1249,
+            "height": 702.5625,
+            "top": 106,
+            "right": 1249,
+            "bottom": 808.5625,
+            "left": 0
+          },
+          "target": "start"
+        },
+        {
+          "client": [
+            284,
+            18
+          ],
+          "rect": {
+            "x": 0,
+            "y": 106,
+            "width": 1249,
+            "height": 702.5625,
+            "top": 106,
+            "right": 1249,
+            "bottom": 808.5625,
+            "left": 0
+          },
+          "target": "audio"
+        },
+        {
+          "client": [
+            168,
+            18
+          ],
+          "rect": {
+            "x": 0,
+            "y": 106,
+            "width": 1249,
+            "height": 702.5625,
+            "top": 106,
+            "right": 1249,
+            "bottom": 808.5625,
+            "left": 0
+          },
+          "target": "fullscreen"
+        },
+        {
+          "client": [
+            1280,
+            540
+          ],
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 2560,
+            "height": 1080,
+            "top": 0,
+            "right": 2560,
+            "bottom": 1080,
+            "left": 0
+          },
+          "target": "canvas"
+        },
+        {
+          "client": [
+            1056,
+            418
+          ],
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 2560,
+            "height": 1080,
+            "top": 0,
+            "right": 2560,
+            "bottom": 1080,
+            "left": 0
+          },
+          "target": "canvas"
+        },
+        {
+          "client": [
+            1461,
+            410
+          ],
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 2560,
+            "height": 1080,
+            "top": 0,
+            "right": 2560,
+            "bottom": 1080,
+            "left": 0
+          },
+          "target": "canvas"
+        },
+        {
+          "client": [
+            1280,
+            514
+          ],
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 2560,
+            "height": 1080,
+            "top": 0,
+            "right": 2560,
+            "bottom": 1080,
+            "left": 0
+          },
+          "target": "canvas"
+        },
+        {
+          "client": [
+            1480,
+            390
+          ],
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 2560,
+            "height": 1080,
+            "top": 0,
+            "right": 2560,
+            "bottom": 1080,
+            "left": 0
+          },
+          "target": "canvas"
+        },
+        {
+          "client": [
+            755,
+            996
+          ],
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 2560,
+            "height": 1080,
+            "top": 0,
+            "right": 2560,
+            "bottom": 1080,
+            "left": 0
+          },
+          "target": "canvas"
+        }
+      ],
+      "observed": {
+        "x": 566,
+        "y": 996,
+        "selected": [
+          158,
+          159
+        ],
+        "inputState": 0,
+        "clickedEntity": 0,
+        "picked": 0
+      }
+    },
+    {
+      "requested": [
+        1000,
+        500
+      ],
+      "button": "right",
+      "canvasBox": {
+        "x": 0,
+        "y": 0,
+        "width": 2560,
+        "height": 1080
+      },
+      "dom": [
+        {
+          "client": [
+            53,
+            18
+          ],
+          "rect": {
+            "x": 0,
+            "y": 106,
+            "width": 1249,
+            "height": 702.5625,
+            "top": 106,
+            "right": 1249,
+            "bottom": 808.5625,
+            "left": 0
+          },
+          "target": "start"
+        },
+        {
+          "client": [
+            284,
+            18
+          ],
+          "rect": {
+            "x": 0,
+            "y": 106,
+            "width": 1249,
+            "height": 702.5625,
+            "top": 106,
+            "right": 1249,
+            "bottom": 808.5625,
+            "left": 0
+          },
+          "target": "audio"
+        },
+        {
+          "client": [
+            168,
+            18
+          ],
+          "rect": {
+            "x": 0,
+            "y": 106,
+            "width": 1249,
+            "height": 702.5625,
+            "top": 106,
+            "right": 1249,
+            "bottom": 808.5625,
+            "left": 0
+          },
+          "target": "fullscreen"
+        },
+        {
+          "client": [
+            1280,
+            540
+          ],
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 2560,
+            "height": 1080,
+            "top": 0,
+            "right": 2560,
+            "bottom": 1080,
+            "left": 0
+          },
+          "target": "canvas"
+        },
+        {
+          "client": [
+            1056,
+            418
+          ],
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 2560,
+            "height": 1080,
+            "top": 0,
+            "right": 2560,
+            "bottom": 1080,
+            "left": 0
+          },
+          "target": "canvas"
+        },
+        {
+          "client": [
+            1461,
+            410
+          ],
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 2560,
+            "height": 1080,
+            "top": 0,
+            "right": 2560,
+            "bottom": 1080,
+            "left": 0
+          },
+          "target": "canvas"
+        },
+        {
+          "client": [
+            1280,
+            514
+          ],
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 2560,
+            "height": 1080,
+            "top": 0,
+            "right": 2560,
+            "bottom": 1080,
+            "left": 0
+          },
+          "target": "canvas"
+        },
+        {
+          "client": [
+            1480,
+            390
+          ],
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 2560,
+            "height": 1080,
+            "top": 0,
+            "right": 2560,
+            "bottom": 1080,
+            "left": 0
+          },
+          "target": "canvas"
+        },
+        {
+          "client": [
+            755,
+            996
+          ],
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 2560,
+            "height": 1080,
+            "top": 0,
+            "right": 2560,
+            "bottom": 1080,
+            "left": 0
+          },
+          "target": "canvas"
+        },
+        {
+          "client": [
+            1333,
+            500
+          ],
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 2560,
+            "height": 1080,
+            "top": 0,
+            "right": 2560,
+            "bottom": 1080,
+            "left": 0
+          },
+          "target": "canvas"
+        }
+      ],
+      "observed": {
+        "x": 999,
+        "y": 500,
+        "selected": [
+          158,
+          159
+        ],
+        "inputState": 0,
+        "clickedEntity": 0,
+        "picked": 0
+      }
+    }
+  ],
+  "rallyPoint": {
+    "requested": {
+      "x": 1110,
+      "y": 390,
+      "world": {
+        "x": 168.53579711914062,
+        "y": 23,
+        "z": 432.9109191894531
+      }
+    },
+    "actual": {
+      "x": 168.53579711914062,
+      "z": 432.9109191894531
+    }
+  },
+  "orders": [
+    {
+      "state": "INDIVIDUAL.WALKING",
+      "orders": [
+        {
+          "type": "Walk",
+          "data": {
+            "x": 310.8958282470703,
+            "z": 203.68109130859375,
+            "force": true,
+            "relaxed": true
+          }
+        }
+      ],
+      "hasWorkOrders": false,
+      "canGuard": true,
+      "canPatrol": true,
+      "selectableStances": [
+        "violent",
+        "aggressive",
+        "defensive",
+        "passive",
+        "standground"
+      ],
+      "isIdle": false,
+      "formations": [
+        "special/formations/null",
+        "special/formations/box",
+        "special/formations/column_closed",
+        "special/formations/line_closed",
+        "special/formations/column_open",
+        "special/formations/line_open",
+        "special/formations/flank",
+        "special/formations/battle_line",
+        "special/formations/skirmish"
+      ],
+      "formation": 0
+    },
+    {
+      "state": "INDIVIDUAL.WALKING",
+      "orders": [
+        {
+          "type": "Walk",
+          "data": {
+            "x": 312.8580017089844,
+            "z": 203.95443725585938,
+            "force": true,
+            "relaxed": true
+          }
+        }
+      ],
+      "hasWorkOrders": false,
+      "canGuard": true,
+      "canPatrol": true,
+      "selectableStances": [
+        "violent",
+        "aggressive",
+        "defensive",
+        "passive",
+        "standground"
+      ],
+      "isIdle": false,
+      "formations": [
+        "special/formations/null",
+        "special/formations/box",
+        "special/formations/column_closed",
+        "special/formations/line_closed",
+        "special/formations/column_open",
+        "special/formations/line_open",
+        "special/formations/flank",
+        "special/formations/battle_line",
+        "special/formations/wedge",
+        "special/formations/skirmish"
+      ],
+      "formation": 0
+    }
+  ],
+  "audio": {
+    "contexts": [
+      {
+        "id": 2,
+        "state": "running",
+        "sampleRate": 48000,
+        "sources": 64,
+        "gain": 0.8999999761581421,
+        "playingSources": 2
+      }
+    ],
+    "decodedBuffers": [
+      {
+        "frames": 49152,
+        "channels": 1,
+        "sampleRate": 48000,
+        "nonzeroSamples": 768
+      },
+      {
+        "frames": 9024,
+        "channels": 1,
+        "sampleRate": 48000,
+        "nonzeroSamples": 136
+      },
+      {
+        "frames": 30873,
+        "channels": 1,
+        "sampleRate": 48000,
+        "nonzeroSamples": 481
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 373
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 375
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 381
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 377
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 377
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 379
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 374
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 379
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 375
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 373
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 381
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 378
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 377
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 375
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 373
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 366
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 375
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 382
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 378
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 383
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 376
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 378
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 381
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 372
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 372
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 370
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 370
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 372
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 377
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 375
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 378
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 378
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 382
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 376
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 376
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 378
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 377
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 382
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 365
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 367
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 376
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 377
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 370
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 368
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 378
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 379
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 378
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 371
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 381
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 379
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 383
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 27554,
+        "channels": 1,
+        "sampleRate": 48000,
+        "nonzeroSamples": 431
+      }
+    ],
+    "closed": []
+  },
+  "engineErrors": [],
+  "fullscreenTrace": [
+    {
+      "full": true,
+      "time": 20128.399999976158,
+      "inner": [
+        2560,
+        1080
+      ]
+    }
+  ],
+  "shutdown": {
+    "samples": [
+      {
+        "seconds": 0.002851199998985976,
+        "sdk": {
+          "running": [],
+          "pooled": [],
+          "pthreads": []
+        },
+        "workers": []
+      }
+    ],
+    "sdk": {
+      "running": [],
+      "pooled": [],
+      "pthreads": []
+    },
+    "workers": [],
+    "liveApplicationTargets": []
+  }
+}

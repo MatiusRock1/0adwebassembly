@@ -1,0 +1,188 @@
+{
+  "passed": true,
+  "files": [
+    {
+      "path": "/spike/xml-wasm/lib/libxml2.a",
+      "SHA256": "eba81b692a1b94a017a60bba1fc163ac0dcad34f4267fda2fd498703d45e0a8b",
+      "legacyHandlers": [],
+      "nativeLongjmpHandlers": []
+    },
+    {
+      "path": "/phase45-build/spidermonkey-portable-switch-o3/libjs_static.a",
+      "SHA256": "dd057a4ea34a1a5028660d9992bef5b749c9116a3502828611a240c2df07b642",
+      "legacyHandlers": [],
+      "nativeLongjmpHandlers": []
+    },
+    {
+      "path": "/spike/mozjs-128.13.0/build-wasm/build/pure_virtual/libpure_virtual.a",
+      "SHA256": "cb1da634d87284a5d76fc1dbb9ce8361c4dbfcd7318b812952154bcf45dd6a94",
+      "legacyHandlers": [],
+      "nativeLongjmpHandlers": []
+    },
+    {
+      "path": "/spike/phase4-deps/prefix/lib/libenet.a",
+      "SHA256": "537511e745424ff4884be08e196a73c2ea08dadd877b95f1012c4475edcb5f15",
+      "legacyHandlers": [],
+      "nativeLongjmpHandlers": []
+    },
+    {
+      "path": "/phase45-build/native-deps/curl-wasm-sjlj/libcurl.a",
+      "SHA256": "b539fb0badf6ca077bfeac1f0893f912e792798afd7020cf55e7bc61d0872b92",
+      "legacyHandlers": [],
+      "nativeLongjmpHandlers": [
+        "/phase45-build/native-deps/curl-wasm-sjlj/libcurl.a:libcurl_la-hostip.o:          U __wasm_setjmp"
+      ]
+    },
+    {
+      "path": "/spike/phase4-deps/prefix/lib/libsodium.a",
+      "SHA256": "4fa367275146c45cc0a092fcb10ea923c3479483dd899c05a2af0a20f38a01f4",
+      "legacyHandlers": [],
+      "nativeLongjmpHandlers": []
+    },
+    {
+      "path": "/spike/mozjs-128.13.0/build-wasm/memory/build/Unified_cpp_memory_build0.o",
+      "SHA256": "b2c4f169d1e99113a88985aad3330e46d9429e7fe001d1b26dcde475567bdb54",
+      "legacyHandlers": [],
+      "nativeLongjmpHandlers": []
+    },
+    {
+      "path": "/spike/mozjs-128.13.0/build-wasm/memory/mozalloc/Unified_cpp_memory_mozalloc0.o",
+      "SHA256": "cddada9c70e5376bb1b1ebbf4a11d8160922410cd29514758ad4a3dfd488d0c2",
+      "legacyHandlers": [],
+      "nativeLongjmpHandlers": []
+    },
+    {
+      "path": "/spike/mozjs-128.13.0/build-wasm/mfbt/Unified_cpp_mfbt0.o",
+      "SHA256": "6c8c62afb2c797979d5440ed761180fc01bba616ece855c3fd7367c3d3e197af",
+      "legacyHandlers": [],
+      "nativeLongjmpHandlers": []
+    },
+    {
+      "path": "/spike/mozjs-128.13.0/build-wasm/mfbt/Unified_cpp_mfbt1.o",
+      "SHA256": "c9f619faf5fb7c25a95c11c5b1ca5c01ceb0804ce377783511278912621d9f33",
+      "legacyHandlers": [],
+      "nativeLongjmpHandlers": []
+    },
+    {
+      "path": "/spike/mozjs-128.13.0/build-wasm/mfbt/lz4.o",
+      "SHA256": "1d34e6b2bc8398050678fcff90817067894a09646916c6b093f1179052b7d049",
+      "legacyHandlers": [],
+      "nativeLongjmpHandlers": []
+    },
+    {
+      "path": "/spike/mozjs-128.13.0/build-wasm/mfbt/lz4file.o",
+      "SHA256": "51e09eb7c119f6ff371306787c64180f9656c6590f17654109b4020ca54f4892",
+      "legacyHandlers": [],
+      "nativeLongjmpHandlers": []
+    },
+    {
+      "path": "/spike/mozjs-128.13.0/build-wasm/mfbt/lz4frame.o",
+      "SHA256": "964a6ae195d5843982b2349ab8002565b822462b7c7b4519df42cb9ce6668177",
+      "legacyHandlers": [],
+      "nativeLongjmpHandlers": []
+    },
+    {
+      "path": "/spike/mozjs-128.13.0/build-wasm/mfbt/lz4hc.o",
+      "SHA256": "5c655c88cde738eb4557c7954079ec93c4860e3153191536d5fd1279b690454c",
+      "legacyHandlers": [],
+      "nativeLongjmpHandlers": []
+    },
+    {
+      "path": "/spike/mozjs-128.13.0/build-wasm/mfbt/xxhash.o",
+      "SHA256": "1ac09ba35600f93e84918a03af7f60f456feb97866180d5d48533f04f57c6d73",
+      "legacyHandlers": [],
+      "nativeLongjmpHandlers": []
+    },
+    {
+      "path": "/spike/mozjs-128.13.0/build-wasm/mozglue/baseprofiler/Unified_cpp_mozglue_baseprofiler0.o",
+      "SHA256": "b1b967191b2467394d6dc8d28c449859fef7a6e8d122581ab14f480debd68a64",
+      "legacyHandlers": [],
+      "nativeLongjmpHandlers": []
+    },
+    {
+      "path": "/spike/mozjs-128.13.0/build-wasm/mozglue/misc/AutoProfilerLabel.o",
+      "SHA256": "3dd45d3ba849f2d13d2adbedcc39fd4526c546da154ffbe0d1e25e7000c15a47",
+      "legacyHandlers": [],
+      "nativeLongjmpHandlers": []
+    },
+    {
+      "path": "/spike/mozjs-128.13.0/build-wasm/mozglue/misc/AwakeTimeStamp.o",
+      "SHA256": "8f02949e2a4ae6923bae1166c86f5d111ff3b7cce01c17c92def32f179b01b58",
+      "legacyHandlers": [],
+      "nativeLongjmpHandlers": []
+    },
+    {
+      "path": "/spike/mozjs-128.13.0/build-wasm/mozglue/misc/ConditionVariable_posix.o",
+      "SHA256": "d874ea177b01709a5fc2234c706b93afa1ebcd473f8264a6d1ee3202c5cdb1c2",
+      "legacyHandlers": [],
+      "nativeLongjmpHandlers": []
+    },
+    {
+      "path": "/spike/mozjs-128.13.0/build-wasm/mozglue/misc/Debug.o",
+      "SHA256": "96f93dfe499dd48b08f1a39fc7f5dabfbb9a266487dc5a6a855bd80fa0472217",
+      "legacyHandlers": [],
+      "nativeLongjmpHandlers": []
+    },
+    {
+      "path": "/spike/mozjs-128.13.0/build-wasm/mozglue/misc/Decimal.o",
+      "SHA256": "0eb38c93e8f0ace4f77f0f7bef77ee8d4184f3dcf3f00e1ac6e57fd3105d7722",
+      "legacyHandlers": [],
+      "nativeLongjmpHandlers": []
+    },
+    {
+      "path": "/spike/mozjs-128.13.0/build-wasm/mozglue/misc/MmapFaultHandler.o",
+      "SHA256": "7536368d01db868dfb439dbe3506bcd68fbbb8bdf572d5536cc8f85136980bd8",
+      "legacyHandlers": [],
+      "nativeLongjmpHandlers": []
+    },
+    {
+      "path": "/spike/mozjs-128.13.0/build-wasm/mozglue/misc/Mutex_posix.o",
+      "SHA256": "845d1852cb1f6c5dd1f0b8bb9d658985e5cf5c2189d6b6f135f9605feae63a5f",
+      "legacyHandlers": [],
+      "nativeLongjmpHandlers": []
+    },
+    {
+      "path": "/spike/mozjs-128.13.0/build-wasm/mozglue/misc/Printf.o",
+      "SHA256": "7dd0027d78a87784d29c8bf0b204730d06f86b369681114fd66fc77b00ba694c",
+      "legacyHandlers": [],
+      "nativeLongjmpHandlers": []
+    },
+    {
+      "path": "/spike/mozjs-128.13.0/build-wasm/mozglue/misc/RWLock_posix.o",
+      "SHA256": "aa711a56d985a097974b01d4878a8b508f6d56392b5c4f3f6f4c7d169dbebb90",
+      "legacyHandlers": [],
+      "nativeLongjmpHandlers": []
+    },
+    {
+      "path": "/spike/mozjs-128.13.0/build-wasm/mozglue/misc/SIMD.o",
+      "SHA256": "12704030d550c372755b4b1e36034ad5604d8244b01d018a2c3e48bb67ff72ec",
+      "legacyHandlers": [],
+      "nativeLongjmpHandlers": []
+    },
+    {
+      "path": "/spike/mozjs-128.13.0/build-wasm/mozglue/misc/StackWalk.o",
+      "SHA256": "0c7dcd783ae034a817d9410f28fc680e32ce79903265d0bd7439207e38e76ee5",
+      "legacyHandlers": [],
+      "nativeLongjmpHandlers": []
+    },
+    {
+      "path": "/spike/mozjs-128.13.0/build-wasm/mozglue/misc/TimeStamp.o",
+      "SHA256": "af827a12e5eed6c365362b96966d1858177898078de17ada722b943a93d9061b",
+      "legacyHandlers": [],
+      "nativeLongjmpHandlers": []
+    },
+    {
+      "path": "/spike/mozjs-128.13.0/build-wasm/mozglue/misc/TimeStamp_posix.o",
+      "SHA256": "95f4ff2d0c6d1421a0a2d5c53b4100ff73b61a5704f4b7d32122d481c13bfa5c",
+      "legacyHandlers": [],
+      "nativeLongjmpHandlers": []
+    },
+    {
+      "path": "/spike/mozjs-128.13.0/build-wasm/mozglue/misc/Uptime.o",
+      "SHA256": "c40ca82ae0965eec30fd2e9b22fcf812b04cc89407498c2ec4d684157bded115",
+      "legacyHandlers": [],
+      "nativeLongjmpHandlers": []
+    }
+  ],
+  "scope": "Undefined-symbol audit of cached C/C++ dependencies. Native-EH engine objects and SDK-selected native-EH system ports are built separately; the cached Rust archive uses panic=abort."
+}

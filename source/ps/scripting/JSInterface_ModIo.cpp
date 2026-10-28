@@ -1,0 +1,137 @@
+/* Copyright (C) 2026 Wildfire Games.
+ * This file is part of 0 A.D.
+ *
+ * 0 A.D. is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * 0 A.D. is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with 0 A.D.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+#include "precompiled.h"
+
+#include "JSInterface_ModIo.h"
+
+#include "lib/debug.h"
+#include "ps/CLogger.h"
+#include "ps/ModIo.h"
+#include "scriptinterface/FunctionWrapper.h"
+#include "scriptinterface/Object.h"
+#include "scriptinterface/Request.h"
+
+#include <js/RootingAPI.h>
+#include <js/TypeDecls.h>
+#include <js/Value.h>
+#include <map>
+#include <string>
+#include <utility>
+#include <vector>
+
+namespace JS { class CallArgs; }
+
+namespace JSI_ModIo
+{
+ModIo* ModIoGetter(const Script::Request&, JS::CallArgs&)
+{
+	if (!g_ModIo)
+	{
+		LOGERROR("Trying to access ModIO when it's not initialized!");
+		return nullptr;
+	}
+	return g_ModIo;
+}
+
+void StartGetGameId()
+{
+	if (!g_ModIo)
+		g_ModIo = new ModIo();
+
+	ENSURE(g_ModIo);
+
+	g_ModIo->StartGetGameId();
+}
+
+// TODO: could provide a FromJSVal for ModIoModData
+JS::Value GetMods(const Script::Request& rq)
+{
+	if (!g_ModIo)
+	{
+		LOGERROR("ModIoGetMods called before ModIoStartGetGameId");
+		return JS::NullValue();
+	}
+
+	const std::vector<ModIoModData>& availableMods = g_ModIo->GetMods();
+
+	JS::RootedValueVector mods{rq.cx};
+	if (!mods.reserve(availableMods.size()))
+		throw std::runtime_error{"Reserve failed"};
+
+	for (const ModIoModData& mod : availableMods)
+	{
+		JS::RootedValue m(rq.cx);
+		Script::CreateObject(rq, &m);
+
+		for (const std::pair<const std::string, std::string>& prop : mod.properties)
+			Script::SetProperty(rq, m, prop.first.c_str(), prop.second, true);
+
+		Script::SetProperty(rq, m, "dependencies", mod.dependencies, true);
+		if (!mods.append(m))
+			throw std::runtime_error{"Append failed"};
+	}
+
+	return JS::ObjectValue(*JS::NewArrayObject(rq.cx, mods));
+}
+
+const std::map<DownloadProgressStatus, std::string> statusStrings = {
+	{ DownloadProgressStatus::NONE, "none" },
+	{ DownloadProgressStatus::GAMEID, "gameid" },
+	{ DownloadProgressStatus::READY, "ready" },
+	{ DownloadProgressStatus::LISTING, "listing" },
+	{ DownloadProgressStatus::LISTED, "listed" },
+	{ DownloadProgressStatus::DOWNLOADING, "downloading" },
+	{ DownloadProgressStatus::SUCCESS, "success" },
+	{ DownloadProgressStatus::FAILED_GAMEID, "failed_gameid" },
+	{ DownloadProgressStatus::FAILED_LISTING, "failed_listing" },
+	{ DownloadProgressStatus::FAILED_DOWNLOADING, "failed_downloading" },
+	{ DownloadProgressStatus::FAILED_FILECHECK, "failed_filecheck" }
+};
+
+// TODO: could provide a FromJSVal for DownloadProgressData
+JS::Value GetDownloadProgress(const Script::Request& rq)
+{
+	if (!g_ModIo)
+	{
+		LOGERROR("ModIoGetDownloadProgress called before ModIoGetMods");
+		return JS::NullValue();
+	}
+
+
+	const DownloadProgressData& progress = g_ModIo->GetDownloadProgress();
+
+	JS::RootedValue progressData(rq.cx);
+	Script::CreateObject(rq, &progressData);
+	Script::SetProperty(rq, progressData, "status", statusStrings.at(progress.status), true);
+	Script::SetProperty(rq, progressData, "progress", progress.progress, true);
+	Script::SetProperty(rq, progressData, "error", progress.error, true);
+
+	return progressData;
+}
+
+void RegisterScriptFunctions(const Script::Request& rq)
+{
+	Script::Function::Register<&StartGetGameId>(rq, "ModIoStartGetGameId");
+	Script::Function::Register<&ModIo::StartListMods, &ModIoGetter>(rq, "ModIoStartListMods");
+	Script::Function::Register<&ModIo::StartDownloadMod, &ModIoGetter>(rq, "ModIoStartDownloadMod");
+	Script::Function::Register<&ModIo::AdvanceRequest, &ModIoGetter>(rq, "ModIoAdvanceRequest");
+	Script::Function::Register<&ModIo::CancelRequest, &ModIoGetter>(rq, "ModIoCancelRequest");
+	Script::Function::Register<&GetMods>(rq, "ModIoGetMods");
+	Script::Function::Register<&GetDownloadProgress>(rq, "ModIoGetDownloadProgress");
+}
+}

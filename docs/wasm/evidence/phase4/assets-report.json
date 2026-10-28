@@ -1,0 +1,45 @@
+{
+  "status": "PACKAGED_NOT_RUNTIME_VERIFIED",
+  "originalArchiveBuilder": true,
+  "generatedArt": false,
+  "mods": {
+    "mod": {
+      "exitCode": 0,
+      "command": [
+        "/build/0ad/binaries/system/pyrogenesis",
+        "-archivebuild=/build/0ad/binaries/data/mods/mod",
+        "-archivebuild-output=/phase4-assets/mod.zip",
+        "-mod=mod",
+        "-mod=public"
+      ],
+      "files": 640,
+      "bytes": 87889481,
+      "sha256": "e97fa323a28ef23191e1223ed63b46d2501bd24d09cb912b6a5010841b009322"
+    },
+    "public": {
+      "archive": "public-complete.zip",
+      "files": 38108,
+      "bytes": 1914886590,
+      "nativeParts": [
+        "public-prefix.zip",
+        "public-tail-0000.zip",
+        "public-tail-0001.zip",
+        "public-tail-0002.zip",
+        "public-tail-0003.zip",
+        "public-tail-0004.zip",
+        "public-tail-0005.zip",
+        "public-tail-0006.zip",
+        "public-tail-0007.zip",
+        "public-tail-0008.zip",
+        "public-tail-0009.zip",
+        "public-tail-0010.zip"
+      ]
+    }
+  },
+  "pin": "40b8794eecb9618da69e10bacffa8814c561aa51",
+  "resumed": true,
+  "missing": [],
+  "emptyInputsSkippedByOriginalBuilder": [
+    "gui/gamesetup/Pages/GameSetupPage/GameSettings/Single/Dropdowns/WorldPopulationCap.js"
+  ]
+}

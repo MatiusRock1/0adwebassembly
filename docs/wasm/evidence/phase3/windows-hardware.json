@@ -1,0 +1,51 @@
+﻿{
+    "powerPlan":  "Power Scheme GUID: 64a64f24-65b9-4b56-befd-5ec1eaced9b3  (Silent)",
+    "gpu":  [
+                {
+                    "Name":  "Parsec Virtual Display Adapter",
+                    "DriverVersion":  "0.45.0.0",
+                    "DriverDate":  "\/Date(1706140800000)\/",
+                    "AdapterRAM":  null,
+                    "CurrentHorizontalResolution":  null,
+                    "CurrentVerticalResolution":  null,
+                    "CurrentRefreshRate":  null
+                },
+                {
+                    "Name":  "AMD Radeon(TM) Graphics",
+                    "DriverVersion":  "31.0.21923.11000",
+                    "DriverDate":  "\/Date(1751328000000)\/",
+                    "AdapterRAM":  536870912,
+                    "CurrentHorizontalResolution":  1920,
+                    "CurrentVerticalResolution":  1080,
+                    "CurrentRefreshRate":  60
+                },
+                {
+                    "Name":  "NVIDIA GeForce RTX 3060 Laptop GPU",
+                    "DriverVersion":  "32.0.16.1742",
+                    "DriverDate":  "\/Date(1790726400000)\/",
+                    "AdapterRAM":  4293918720,
+                    "CurrentHorizontalResolution":  null,
+                    "CurrentVerticalResolution":  null,
+                    "CurrentRefreshRate":  null
+                }
+            ],
+    "os":  {
+               "Caption":  "Microsoft Windows 11 Pro",
+               "Version":  "10.0.26300",
+               "BuildNumber":  "26300"
+           },
+    "note":  "Correlacionar con renderer WebGL del informe: la GPU instalada no prueba aceleracion efectiva.",
+    "recordedAt":  "2026-10-12T15:44:32.0337237Z",
+    "system":  {
+                   "Manufacturer":  "ASUSTeK COMPUTER INC.",
+                   "Model":  "ASUS TUF Gaming A15 FA506QM_FA506QM",
+                   "TotalPhysicalMemory":  68079124480
+               },
+    "cpu":  [
+                {
+                    "Name":  "AMD Ryzen 7 5800H with Radeon Graphics         ",
+                    "NumberOfCores":  8,
+                    "NumberOfLogicalProcessors":  16
+                }
+            ]
+}

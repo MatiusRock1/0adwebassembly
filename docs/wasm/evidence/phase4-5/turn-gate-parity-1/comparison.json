@@ -1,0 +1,70 @@
+{
+  "passed": true,
+  "phase45Accepted": false,
+  "performanceAcceptance": false,
+  "scope": "Same WASM package, sync versus threaded AI; exact original simulation serialization at limited checkpoints, no native executable.",
+  "runs": [
+    {
+      "mode": "sync",
+      "command": [
+        "C:\\Users\\jorlu\\OneDrive\\Documentos\\emprendimiento\\0 AD\\0adwebassembly\\wasm\\.venv-phase3\\Scripts\\python.exe",
+        "C:\\Users\\jorlu\\OneDrive\\Documentos\\emprendimiento\\0 AD\\0adwebassembly\\wasm\\scripts\\profile-phase4-5.py",
+        "--webgpu-directory",
+        "C:\\Users\\jorlu\\OneDrive\\Documentos\\emprendimiento\\0 AD\\0adwebassembly\\wasm\\dist\\application-phase4-5-turn-gate-1",
+        "--ai-worker-mode",
+        "sync",
+        "--seconds",
+        "1",
+        "--settle-seconds",
+        "0",
+        "--simulation-checkpoints",
+        "10000",
+        "30000",
+        "--output",
+        "docs\\wasm\\evidence\\phase4-5\\turn-gate-parity-1\\sync"
+      ],
+      "exitCode": 0
+    },
+    {
+      "mode": "threaded",
+      "command": [
+        "C:\\Users\\jorlu\\OneDrive\\Documentos\\emprendimiento\\0 AD\\0adwebassembly\\wasm\\.venv-phase3\\Scripts\\python.exe",
+        "C:\\Users\\jorlu\\OneDrive\\Documentos\\emprendimiento\\0 AD\\0adwebassembly\\wasm\\scripts\\profile-phase4-5.py",
+        "--webgpu-directory",
+        "C:\\Users\\jorlu\\OneDrive\\Documentos\\emprendimiento\\0 AD\\0adwebassembly\\wasm\\dist\\application-phase4-5-turn-gate-1",
+        "--ai-worker-mode",
+        "threaded",
+        "--seconds",
+        "1",
+        "--settle-seconds",
+        "0",
+        "--simulation-checkpoints",
+        "10000",
+        "30000",
+        "--output",
+        "docs\\wasm\\evidence\\phase4-5\\turn-gate-parity-1\\threaded"
+      ],
+      "exitCode": 0
+    }
+  ],
+  "checks": [
+    {
+      "simulationMs": 10000,
+      "exactTimes": true,
+      "serializationMatches": true,
+      "nonLocalDebugMatches": true,
+      "guiStateMatches": true,
+      "syncSHA256": "e35b3f94c701f74e20833f81cad68c754b659dd7240028cb1b9d77afd112020a",
+      "threadedSHA256": "e35b3f94c701f74e20833f81cad68c754b659dd7240028cb1b9d77afd112020a"
+    },
+    {
+      "simulationMs": 30000,
+      "exactTimes": true,
+      "serializationMatches": true,
+      "nonLocalDebugMatches": true,
+      "guiStateMatches": true,
+      "syncSHA256": "b218d9a3887a14fb8e1f33f5c99204afdd24379cb4b5be1da4bb24701e20c737",
+      "threadedSHA256": "b218d9a3887a14fb8e1f33f5c99204afdd24379cb4b5be1da4bb24701e20c737"
+    }
+  ]
+}

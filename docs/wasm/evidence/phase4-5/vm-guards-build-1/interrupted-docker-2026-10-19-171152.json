@@ -1,0 +1,8 @@
+{
+  "status": "interrupted",
+  "stage": "scripting",
+  "time": "2026-10-19T17:11:52-05:00",
+  "dockerExitCode": 125,
+  "message": "error waiting for container: unexpected EOF",
+  "vmSuccessReportExists": false
+}

@@ -1,0 +1,116 @@
+    "--enable-artifact-builds",
+    env="MOZ_ARTIFACT_BUILDS",
+    help="Download and use prebuilt binary artifacts.",
+)
+
+
+@depends("--enable-artifact-builds")
+def artifact_builds(value):
+    if value:
+        return True
+
+
+set_config("MOZ_ARTIFACT_BUILDS", artifact_builds)
+
+# Host and target systems
+# ==============================================================
+option("--host", nargs=1, help="Define the system type performing the build")
+
+option(
+    "--target",
+    nargs=1,
+    help="Define the system type where the resulting executables will be " "used",
+)
+
+
+@imports(_from="mozbuild.configure.constants", _import="Abi")
+@imports(_from="mozbuild.configure.constants", _import="CPU")
+@imports(_from="mozbuild.configure.constants", _import="CPU_bitness")
+@imports(_from="mozbuild.configure.constants", _import="Endianness")
+@imports(_from="mozbuild.configure.constants", _import="Kernel")
+@imports(_from="mozbuild.configure.constants", _import="OS")
+@imports(_from="__builtin__", _import="ValueError")
+def split_triplet(triplet, allow_wasi=False):
+    # The standard triplet is defined as
+    #   CPU_TYPE-VENDOR-OPERATING_SYSTEM
+    # There is also a quartet form:
+    #   CPU_TYPE-VENDOR-KERNEL-OPERATING_SYSTEM
+    # But we can consider the "KERNEL-OPERATING_SYSTEM" as one.
+    # Additionally, some may omit "unknown" when the vendor
+    # is not specified and emit
+    #   CPU_TYPE-OPERATING_SYSTEM
+    vendor = "unknown"
+    parts = triplet.split("-", 2)
+    if len(parts) == 3:
+        cpu, vendor, os = parts
+    elif len(parts) == 2:
+        cpu, os = parts
+    else:
+        raise ValueError("Unexpected triplet string: %s" % triplet)
+
+    # Autoconf uses config.sub to validate and canonicalize those triplets,
+    # but the granularity of its results has never been satisfying to our
+    # use, so we've had our own, different, canonicalization. We've also
+    # historically not been very consistent with how we use the canonicalized
+    # values. Hopefully, this will help us make things better.
+    # The tests are inherited from our decades-old autoconf-based configure,
+    # which can probably be improved/cleaned up because they are based on a
+    # mix of uname and config.guess output, while we now only use the latter,
+    # which presumably has a cleaner and leaner output. Let's refine later.
+    raw_os = os = os.replace("/", "_")
+    abi = None
+    sub_configure_alias = triplet
+    if "android" in os:
+        canonical_os = "Android"
+        canonical_kernel = "Linux"
+    elif os.startswith("linux"):
+        canonical_os = "GNU"
+        canonical_kernel = "Linux"
+    elif os.startswith("kfreebsd") and os.endswith("-gnu"):
+        canonical_os = "GNU"
+        canonical_kernel = "kFreeBSD"
+    elif os.startswith("gnu"):
+        canonical_os = canonical_kernel = "GNU"
+    elif os.startswith("mingw") or os in ("windows-msvc", "windows-gnu"):
+        canonical_os = canonical_kernel = "WINNT"
+        if not os.startswith("mingw"):
+            if os == "windows-msvc":
+                abi = "msvc"
+            elif os == "windows-gnu":
+                abi = "mingw"
+            # Many things down the line are looking for the string "mingw32"
+            # until they are all fixed, we pretend that's the raw os we had
+            # in the first place, even when we didn't.
+            sub_configure_alias = sub_configure_alias[: -len(os)] + "mingw32"
+            raw_os = "mingw32"
+    elif os.startswith("darwin"):
+        canonical_kernel = "Darwin"
+        canonical_os = "OSX"
+    elif os.startswith("ios"):
+        canonical_kernel = "Darwin"
+        canonical_os = "iOS"
+        # old-configure does plenty of tests against $target and $target_os
+        # and expects darwin for iOS, so make it happy.
+        sub_configure_alias = sub_configure_alias[: -len(os)] + "darwin"
+        # rust knows ios-sim, clang knows ios-simulator. We only take the
+        # former as --target, but we need to make clang happy.
+        if os == "ios-sim":
+            os = "ios-simulator"
+    elif os.startswith("dragonfly"):
+        canonical_os = canonical_kernel = "DragonFly"
+    elif os.startswith("freebsd"):
+        canonical_os = canonical_kernel = "FreeBSD"
+    elif os.startswith("netbsd"):
+        canonical_os = canonical_kernel = "NetBSD"
+    elif os.startswith("openbsd"):
+        canonical_os = canonical_kernel = "OpenBSD"
+    elif os.startswith("solaris"):
+        canonical_os = canonical_kernel = "SunOS"
+    elif os.startswith("wasi") and allow_wasi:
+        canonical_os = canonical_kernel = "WASI"
+    else:
+        raise ValueError("Unknown OS: %s" % os)
+
+    # The CPU granularity is probably not enough. Moving more things from
+    # old-configure will tell us if we need more
+    if cpu.endswith("86") or (cpu.startswith("i") and "86" in cpu):

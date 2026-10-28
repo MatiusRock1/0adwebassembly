@@ -1,0 +1,30 @@
+{
+  "passed": true,
+  "performanceAcceptance": false,
+  "phase45Accepted": false,
+  "command": [
+    "g++",
+    "-std=c++20",
+    "-pthread",
+    "-O2",
+    "-I/workspace/source",
+    "-I/workspace/wasm/harness",
+    "/workspace/wasm/probes/application-deferred-replay.cpp",
+    "-o",
+    "/phase45-build/deferred-replay-probe/probe"
+  ],
+  "sourceSHA256": {
+    "/workspace/wasm/probes/application-deferred-replay.cpp": "97fdeb782b66c3345e3a932fae86a8525fa014e4c32733abc497d8cef6cc0235",
+    "/workspace/wasm/harness/application-deferred-replay.h": "46bdc29ba0798e7243946cc828a347061c608b36f0135b5a255355b41f22aae4"
+  },
+  "compileExitCode": 0,
+  "compileOutput": "",
+  "exitCode": 0,
+  "stdout": "{\"passed\":true,\"checks\":8}\n",
+  "stderr": "",
+  "result": {
+    "passed": true,
+    "checks": 8
+  },
+  "executableSHA256": "3a56301c619f87ac858058afde0dc4b1ec764980607f581d1959b2db20e73312"
+}

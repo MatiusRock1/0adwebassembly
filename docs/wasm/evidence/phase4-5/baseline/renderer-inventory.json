@@ -1,0 +1,3504 @@
+{
+  "shaders": [
+    {
+      "path": "binaries/data/mods/mod/shaders/effects/bloom.xml",
+      "sha256": "7509cbc82fce68c6b090b377d6f2199c1354fbb0c422ec0d1ebc201b2f3a3c3f",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false,
+      "declarations": [
+        {
+          "tag": "require",
+          "attributes": {
+            "shaders": "glsl"
+          }
+        },
+        {
+          "tag": "require",
+          "attributes": {
+            "shaders": "spirv"
+          }
+        },
+        {
+          "tag": "pass",
+          "attributes": {
+            "shader": "bloom"
+          }
+        },
+        {
+          "tag": "depth",
+          "attributes": {
+            "test": "FALSE",
+            "mask": "false"
+          }
+        }
+      ]
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/effects/canvas2d.xml",
+      "sha256": "0f15cb8df9b300471bf004760a16711522da3fe07cbfcd99b13c3dc79341629b",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false,
+      "declarations": [
+        {
+          "tag": "require",
+          "attributes": {
+            "shaders": "glsl"
+          }
+        },
+        {
+          "tag": "require",
+          "attributes": {
+            "shaders": "spirv"
+          }
+        },
+        {
+          "tag": "pass",
+          "attributes": {
+            "shader": "canvas2d"
+          }
+        },
+        {
+          "tag": "depth",
+          "attributes": {
+            "test": "FALSE",
+            "mask": "false"
+          }
+        },
+        {
+          "tag": "blend",
+          "attributes": {
+            "src": "src_alpha",
+            "dst": "one_minus_src_alpha"
+          }
+        }
+      ]
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/effects/cas.xml",
+      "sha256": "f7ea284d3d9ce66165f8e706a24c11d280c8fe7ce8a418182c69c8695bce37a8",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false,
+      "declarations": [
+        {
+          "tag": "require",
+          "attributes": {
+            "shaders": "glsl"
+          }
+        },
+        {
+          "tag": "require",
+          "attributes": {
+            "shaders": "spirv"
+          }
+        },
+        {
+          "tag": "pass",
+          "attributes": {
+            "shader": "cas"
+          }
+        },
+        {
+          "tag": "depth",
+          "attributes": {
+            "test": "FALSE",
+            "mask": "false"
+          }
+        }
+      ]
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/effects/compute_downscale.xml",
+      "sha256": "0ebc651be5a8c53cb83a1abb80cbc30ed01a5d8304801f94c0150171edd19763",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false,
+      "declarations": [
+        {
+          "tag": "require",
+          "attributes": {
+            "shaders": "glsl"
+          }
+        },
+        {
+          "tag": "require",
+          "attributes": {
+            "shaders": "spirv"
+          }
+        },
+        {
+          "tag": "compute",
+          "attributes": {
+            "shader": "compute_downscale"
+          }
+        }
+      ]
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/effects/compute_rcas.xml",
+      "sha256": "ef839f0899ce32c1b701b5550dfa300a5a8f0295d25e5e8f3d474774a9408325",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false,
+      "declarations": [
+        {
+          "tag": "require",
+          "attributes": {
+            "shaders": "glsl"
+          }
+        },
+        {
+          "tag": "require",
+          "attributes": {
+            "shaders": "spirv"
+          }
+        },
+        {
+          "tag": "compute",
+          "attributes": {
+            "shader": "compute_rcas"
+          }
+        }
+      ]
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/effects/compute_resolve_pbr.xml",
+      "sha256": "d5dc6b7387c491ad20955192ed6ad2fe38ecf7a2e63675e0f6421776151833d9",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false,
+      "declarations": [
+        {
+          "tag": "require",
+          "attributes": {
+            "shaders": "glsl"
+          }
+        },
+        {
+          "tag": "require",
+          "attributes": {
+            "shaders": "spirv"
+          }
+        },
+        {
+          "tag": "compute",
+          "attributes": {
+            "shader": "compute_resolve_pbr"
+          }
+        }
+      ]
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/effects/compute_skinning.xml",
+      "sha256": "d9721d5e23b753024a4c4ab5d3e443aca7f6f3988ebba12019d766298ed4e987",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false,
+      "declarations": [
+        {
+          "tag": "require",
+          "attributes": {
+            "shaders": "glsl"
+          }
+        },
+        {
+          "tag": "require",
+          "attributes": {
+            "shaders": "spirv"
+          }
+        },
+        {
+          "tag": "compute",
+          "attributes": {
+            "shader": "compute_skinning"
+          }
+        }
+      ]
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/effects/compute_upscale_fsr.xml",
+      "sha256": "5fb5293f10c6e15729e46bc4c392a2880d10ca84c9a00622c2944cf23a10d5ae",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false,
+      "declarations": [
+        {
+          "tag": "require",
+          "attributes": {
+            "shaders": "glsl"
+          }
+        },
+        {
+          "tag": "require",
+          "attributes": {
+            "shaders": "spirv"
+          }
+        },
+        {
+          "tag": "compute",
+          "attributes": {
+            "shader": "compute_upscale_fsr"
+          }
+        }
+      ]
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/effects/debug_line.xml",
+      "sha256": "369ddb50bcf95dcece0ead5d76d5c880595006781b9f94913e3dee0b0737076b",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false,
+      "declarations": [
+        {
+          "tag": "require",
+          "attributes": {
+            "shaders": "glsl"
+          }
+        },
+        {
+          "tag": "require",
+          "attributes": {
+            "shaders": "spirv"
+          }
+        },
+        {
+          "tag": "pass",
+          "attributes": {
+            "shader": "debug_overlay"
+          }
+        }
+      ]
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/effects/debug_overlay.xml",
+      "sha256": "f1d52e01a478f92b63b7ce976ff818a120e2bad65724ae2a0330d2dafc120258",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false,
+      "declarations": [
+        {
+          "tag": "define",
+          "attributes": {
+            "name": "DEBUG_TEXTURED",
+            "value": "1"
+          }
+        },
+        {
+          "tag": "require",
+          "attributes": {
+            "shaders": "glsl"
+          }
+        },
+        {
+          "tag": "require",
+          "attributes": {
+            "shaders": "spirv"
+          }
+        },
+        {
+          "tag": "pass",
+          "attributes": {
+            "shader": "debug_overlay"
+          }
+        },
+        {
+          "tag": "depth",
+          "attributes": {
+            "test": "FALSE",
+            "mask": "false"
+          }
+        },
+        {
+          "tag": "blend",
+          "attributes": {
+            "src": "src_alpha",
+            "dst": "one_minus_src_alpha"
+          }
+        }
+      ]
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/effects/dummy.xml",
+      "sha256": "dc932a6dc00777c3dbd5f973c44d65295765e6b09750c3d44bad1a64f4ee2b4e",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false,
+      "declarations": [
+        {
+          "tag": "require",
+          "attributes": {
+            "shaders": "glsl"
+          }
+        },
+        {
+          "tag": "require",
+          "attributes": {
+            "shaders": "spirv"
+          }
+        },
+        {
+          "tag": "pass",
+          "attributes": {
+            "shader": "dummy"
+          }
+        }
+      ]
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/effects/foreground_overlay.xml",
+      "sha256": "9b015c4d8131c5b2613b2ce2be2a2393674428030ecc0d6d666415cb112196c8",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false,
+      "declarations": [
+        {
+          "tag": "require",
+          "attributes": {
+            "shaders": "glsl"
+          }
+        },
+        {
+          "tag": "require",
+          "attributes": {
+            "shaders": "spirv"
+          }
+        },
+        {
+          "tag": "pass",
+          "attributes": {
+            "shader": "foreground_overlay"
+          }
+        }
+      ]
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/effects/fxaa.xml",
+      "sha256": "740b81240754cd2ad6185d8b3582988ab8f33aaf420b0aa0e286489dd43b5d6c",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false,
+      "declarations": [
+        {
+          "tag": "require",
+          "attributes": {
+            "shaders": "glsl"
+          }
+        },
+        {
+          "tag": "require",
+          "attributes": {
+            "shaders": "spirv"
+          }
+        },
+        {
+          "tag": "pass",
+          "attributes": {
+            "shader": "fxaa"
+          }
+        },
+        {
+          "tag": "depth",
+          "attributes": {
+            "test": "FALSE",
+            "mask": "false"
+          }
+        }
+      ]
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/effects/los_interp.xml",
+      "sha256": "e89bb3421e8c45eabc25c629b95774688f31f37677c701edec0c460ed18e02b9",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false,
+      "declarations": [
+        {
+          "tag": "require",
+          "attributes": {
+            "shaders": "glsl"
+          }
+        },
+        {
+          "tag": "require",
+          "attributes": {
+            "shaders": "spirv"
+          }
+        },
+        {
+          "tag": "pass",
+          "attributes": {
+            "shader": "los_interp"
+          }
+        }
+      ]
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/effects/minimap.xml",
+      "sha256": "8ef5c14125bf801296c65f94352ebdf3015f2bc439f6a8ed43af54c1757d2d1b",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false,
+      "declarations": [
+        {
+          "tag": "require",
+          "attributes": {
+            "shaders": "glsl"
+          }
+        },
+        {
+          "tag": "require",
+          "attributes": {
+            "shaders": "spirv"
+          }
+        },
+        {
+          "tag": "pass",
+          "attributes": {
+            "shader": "minimap"
+          }
+        },
+        {
+          "tag": "depth",
+          "attributes": {
+            "test": "FALSE",
+            "mask": "false"
+          }
+        }
+      ]
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/effects/minimap_los.xml",
+      "sha256": "801b25fb530c7a511b5d8031ddf302a600d8a5025aef3ebd095f5397e52143cd",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false,
+      "declarations": [
+        {
+          "tag": "require",
+          "attributes": {
+            "shaders": "glsl"
+          }
+        },
+        {
+          "tag": "require",
+          "attributes": {
+            "shaders": "spirv"
+          }
+        },
+        {
+          "tag": "define",
+          "attributes": {
+            "name": "MINIMAP_LOS",
+            "value": "1"
+          }
+        },
+        {
+          "tag": "pass",
+          "attributes": {
+            "shader": "minimap"
+          }
+        },
+        {
+          "tag": "depth",
+          "attributes": {
+            "test": "FALSE",
+            "mask": "false"
+          }
+        },
+        {
+          "tag": "color",
+          "attributes": {
+            "mask_red": "FALSE",
+            "mask_green": "FALSE",
+            "mask_blue": "FALSE",
+            "mask_alpha": "TRUE"
+          }
+        }
+      ]
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/effects/overlay_line.xml",
+      "sha256": "6a9cf1c23646f7432812e4ed6c4b0b2fecc2741e1f102dfe82aead8eebf4bdc5",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false,
+      "declarations": [
+        {
+          "tag": "require",
+          "attributes": {
+            "shaders": "glsl"
+          }
+        },
+        {
+          "tag": "require",
+          "attributes": {
+            "shaders": "spirv"
+          }
+        },
+        {
+          "tag": "pass",
+          "attributes": {
+            "shader": "overlayline"
+          }
+        }
+      ]
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/effects/overlay_solid.xml",
+      "sha256": "918e9cc2dfbc2934df24c20646a118e79f1df998dcef2a2234297155880c2e5a",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false,
+      "declarations": [
+        {
+          "tag": "require",
+          "attributes": {
+            "shaders": "glsl"
+          }
+        },
+        {
+          "tag": "require",
+          "attributes": {
+            "shaders": "spirv"
+          }
+        },
+        {
+          "tag": "pass",
+          "attributes": {
+            "shader": "overlay_solid"
+          }
+        }
+      ]
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/effects/particle.xml",
+      "sha256": "e27e6f84fc3975e166ff46c24b363b9e5d38330d22339f281100a96b27137396",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false,
+      "declarations": [
+        {
+          "tag": "require",
+          "attributes": {
+            "shaders": "glsl"
+          }
+        },
+        {
+          "tag": "require",
+          "attributes": {
+            "shaders": "spirv"
+          }
+        },
+        {
+          "tag": "pass",
+          "attributes": {
+            "shader": "particle"
+          }
+        },
+        {
+          "tag": "blend",
+          "attributes": {
+            "src": "src_alpha",
+            "dst": "one_minus_src_alpha"
+          }
+        }
+      ]
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/effects/particle_add.xml",
+      "sha256": "941ee40d472e44ff87184cda8856689d0b8866f80abf040e3b0e3943caef0976",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false,
+      "declarations": [
+        {
+          "tag": "require",
+          "attributes": {
+            "shaders": "glsl"
+          }
+        },
+        {
+          "tag": "require",
+          "attributes": {
+            "shaders": "spirv"
+          }
+        },
+        {
+          "tag": "pass",
+          "attributes": {
+            "shader": "particle"
+          }
+        },
+        {
+          "tag": "blend",
+          "attributes": {
+            "src": "src_alpha",
+            "dst": "one"
+          }
+        },
+        {
+          "tag": "depth",
+          "attributes": {
+            "mask": "false"
+          }
+        }
+      ]
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/effects/particle_multiply.xml",
+      "sha256": "3f7f00b5ac2269ccf07981f834806a6ba8c68c60e4cb51bae5ab3ab37db8453f",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false,
+      "declarations": [
+        {
+          "tag": "require",
+          "attributes": {
+            "shaders": "glsl"
+          }
+        },
+        {
+          "tag": "require",
+          "attributes": {
+            "shaders": "spirv"
+          }
+        },
+        {
+          "tag": "pass",
+          "attributes": {
+            "shader": "particle"
+          }
+        },
+        {
+          "tag": "blend",
+          "attributes": {
+            "src": "zero",
+            "dst": "one_minus_src_color"
+          }
+        },
+        {
+          "tag": "depth",
+          "attributes": {
+            "mask": "false"
+          }
+        }
+      ]
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/effects/particle_overlay.xml",
+      "sha256": "3fe818539fab96b592a84ac4402353a0e22fcd151ca3d8af08f78fa24d6f8b85",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false,
+      "declarations": [
+        {
+          "tag": "require",
+          "attributes": {
+            "shaders": "glsl"
+          }
+        },
+        {
+          "tag": "require",
+          "attributes": {
+            "shaders": "spirv"
+          }
+        },
+        {
+          "tag": "pass",
+          "attributes": {
+            "shader": "particle"
+          }
+        },
+        {
+          "tag": "blend",
+          "attributes": {
+            "src": "src_alpha",
+            "dst": "one_minus_src_alpha"
+          }
+        },
+        {
+          "tag": "depth",
+          "attributes": {
+            "mask": "false"
+          }
+        }
+      ]
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/effects/particle_solid.xml",
+      "sha256": "9c491884cd047903b6edd0496db410d3fd6935d74b15271cf6a1e6159f64843d",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false,
+      "declarations": [
+        {
+          "tag": "require",
+          "attributes": {
+            "shaders": "glsl"
+          }
+        },
+        {
+          "tag": "require",
+          "attributes": {
+            "shaders": "spirv"
+          }
+        },
+        {
+          "tag": "pass",
+          "attributes": {
+            "shader": "particle_solid"
+          }
+        },
+        {
+          "tag": "depth",
+          "attributes": {
+            "mask": "false"
+          }
+        }
+      ]
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/effects/particle_subtract.xml",
+      "sha256": "dbbfff51b3ac0fafaf988b755abf27700145e8bf57d1e96d517a78a2274dd6e1",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false,
+      "declarations": [
+        {
+          "tag": "require",
+          "attributes": {
+            "shaders": "glsl"
+          }
+        },
+        {
+          "tag": "require",
+          "attributes": {
+            "shaders": "spirv"
+          }
+        },
+        {
+          "tag": "pass",
+          "attributes": {
+            "shader": "particle"
+          }
+        },
+        {
+          "tag": "blend",
+          "attributes": {
+            "src": "src_alpha",
+            "dst": "one",
+            "op": "REVERSE_SUBTRACT"
+          }
+        },
+        {
+          "tag": "depth",
+          "attributes": {
+            "mask": "false"
+          }
+        }
+      ]
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/effects/particle_wireframe.xml",
+      "sha256": "a863d015131859da06aac506607bc2776e4d952032072cae399638855821d292",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false,
+      "declarations": [
+        {
+          "tag": "require",
+          "attributes": {
+            "shaders": "glsl"
+          }
+        },
+        {
+          "tag": "require",
+          "attributes": {
+            "shaders": "spirv"
+          }
+        },
+        {
+          "tag": "pass",
+          "attributes": {
+            "shader": "particle_solid"
+          }
+        },
+        {
+          "tag": "polygon",
+          "attributes": {
+            "mode": "LINE"
+          }
+        }
+      ]
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/effects/postproc/DOF.xml",
+      "sha256": "594cb4854d1351bdb1152b41c51a23034b42d778a69add4ae38adf37da8416a3",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false,
+      "declarations": [
+        {
+          "tag": "require",
+          "attributes": {
+            "shaders": "glsl"
+          }
+        },
+        {
+          "tag": "require",
+          "attributes": {
+            "shaders": "spirv"
+          }
+        },
+        {
+          "tag": "pass",
+          "attributes": {
+            "shader": "dof"
+          }
+        },
+        {
+          "tag": "define",
+          "attributes": {
+            "name": "BLUR_FOV",
+            "value": "3"
+          }
+        },
+        {
+          "tag": "depth",
+          "attributes": {
+            "test": "FALSE",
+            "mask": "false"
+          }
+        },
+        {
+          "tag": "pass",
+          "attributes": {
+            "shader": "hdr"
+          }
+        },
+        {
+          "tag": "depth",
+          "attributes": {
+            "test": "FALSE",
+            "mask": "false"
+          }
+        }
+      ]
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/effects/postproc/hdr.xml",
+      "sha256": "4583916d3972c4ef89ac4367c47fc7907df196b150a464e6e3a5080f5ed2dd4a",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false,
+      "declarations": [
+        {
+          "tag": "require",
+          "attributes": {
+            "shaders": "glsl"
+          }
+        },
+        {
+          "tag": "require",
+          "attributes": {
+            "shaders": "spirv"
+          }
+        },
+        {
+          "tag": "pass",
+          "attributes": {
+            "shader": "hdr"
+          }
+        },
+        {
+          "tag": "depth",
+          "attributes": {
+            "test": "FALSE",
+            "mask": "false"
+          }
+        }
+      ]
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/effects/resolve_pbr.xml",
+      "sha256": "b7825dde1e0861c2b0a38e7b063744ea6678a78351b8ce873fd9cd54e0796b99",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false,
+      "declarations": [
+        {
+          "tag": "require",
+          "attributes": {
+            "shaders": "glsl"
+          }
+        },
+        {
+          "tag": "require",
+          "attributes": {
+            "shaders": "spirv"
+          }
+        },
+        {
+          "tag": "pass",
+          "attributes": {
+            "shader": "resolve_pbr"
+          }
+        },
+        {
+          "tag": "depth",
+          "attributes": {
+            "test": "FALSE",
+            "mask": "false"
+          }
+        }
+      ]
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/effects/sky_simple.xml",
+      "sha256": "82c3e3b21abffac364066dff48a49eff6d734c1343b5b59b644906b905858a29",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false,
+      "declarations": [
+        {
+          "tag": "require",
+          "attributes": {
+            "shaders": "glsl"
+          }
+        },
+        {
+          "tag": "require",
+          "attributes": {
+            "shaders": "spirv"
+          }
+        },
+        {
+          "tag": "pass",
+          "attributes": {
+            "shader": "sky"
+          }
+        },
+        {
+          "tag": "depth",
+          "attributes": {
+            "mask": "false"
+          }
+        }
+      ]
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/effects/solid.xml",
+      "sha256": "fc191a0c0ee807f23ab2634f6123fd6ba7d7ab4c2d05be79351d87be8904d351",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false,
+      "declarations": [
+        {
+          "tag": "require",
+          "attributes": {
+            "shaders": "glsl"
+          }
+        },
+        {
+          "tag": "require",
+          "attributes": {
+            "shaders": "spirv"
+          }
+        },
+        {
+          "tag": "pass",
+          "attributes": {
+            "shader": "solid"
+          }
+        }
+      ]
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/effects/terrain_base.xml",
+      "sha256": "f36e89082cf0d8d29fa4ee092068602a867785f77da537f6219a96537f063ca0",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false,
+      "declarations": [
+        {
+          "tag": "require",
+          "attributes": {
+            "shaders": "glsl"
+          }
+        },
+        {
+          "tag": "require",
+          "attributes": {
+            "shaders": "spirv"
+          }
+        },
+        {
+          "tag": "pass",
+          "attributes": {
+            "shader": "terrain_base"
+          }
+        }
+      ]
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/effects/terrain_base_reflections.xml",
+      "sha256": "16709fa02185029393241c053249178f524e6e683df34cb73b75f4e9a3ef367d",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false,
+      "declarations": [
+        {
+          "tag": "require",
+          "attributes": {
+            "shaders": "glsl"
+          }
+        },
+        {
+          "tag": "require",
+          "attributes": {
+            "shaders": "spirv"
+          }
+        },
+        {
+          "tag": "pass",
+          "attributes": {
+            "shader": "terrain_base"
+          }
+        },
+        {
+          "tag": "cull",
+          "attributes": {
+            "mode": "FRONT"
+          }
+        }
+      ]
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/effects/terrain_base_wireframe.xml",
+      "sha256": "c9dfe29305aea96135b5ee8b0e918fa0a92c2e2540146dd276e290597d0309f4",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false,
+      "declarations": [
+        {
+          "tag": "require",
+          "attributes": {
+            "shaders": "glsl"
+          }
+        },
+        {
+          "tag": "require",
+          "attributes": {
+            "shaders": "spirv"
+          }
+        },
+        {
+          "tag": "pass",
+          "attributes": {
+            "shader": "terrain_base"
+          }
+        },
+        {
+          "tag": "polygon",
+          "attributes": {
+            "mode": "LINE"
+          }
+        }
+      ]
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/effects/terrain_blend.xml",
+      "sha256": "623e504d52a2ac6c644b54952ea2fbecf30c7fbedc1bff62de5f927f1e6e811b",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false,
+      "declarations": [
+        {
+          "tag": "require",
+          "attributes": {
+            "shaders": "glsl"
+          }
+        },
+        {
+          "tag": "require",
+          "attributes": {
+            "shaders": "spirv"
+          }
+        },
+        {
+          "tag": "pass",
+          "attributes": {
+            "shader": "terrain_blend"
+          }
+        },
+        {
+          "tag": "depth",
+          "attributes": {
+            "mask": "false"
+          }
+        },
+        {
+          "tag": "blend",
+          "attributes": {
+            "src": "src_alpha",
+            "dst": "one_minus_src_alpha"
+          }
+        }
+      ]
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/effects/terrain_blend_reflections.xml",
+      "sha256": "92736dd191b4259ded3378154c3396ceeb36a92b899aec93017c60daa0c4452d",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false,
+      "declarations": [
+        {
+          "tag": "require",
+          "attributes": {
+            "shaders": "glsl"
+          }
+        },
+        {
+          "tag": "require",
+          "attributes": {
+            "shaders": "spirv"
+          }
+        },
+        {
+          "tag": "pass",
+          "attributes": {
+            "shader": "terrain_blend"
+          }
+        },
+        {
+          "tag": "depth",
+          "attributes": {
+            "mask": "false"
+          }
+        },
+        {
+          "tag": "cull",
+          "attributes": {
+            "mode": "FRONT"
+          }
+        },
+        {
+          "tag": "blend",
+          "attributes": {
+            "src": "src_alpha",
+            "dst": "one_minus_src_alpha"
+          }
+        }
+      ]
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/effects/terrain_blend_wireframe.xml",
+      "sha256": "9d3a4259901fb88a63b2458e7a560cac839ca1986de0d12bbfabc346965c3fe1",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false,
+      "declarations": [
+        {
+          "tag": "require",
+          "attributes": {
+            "shaders": "glsl"
+          }
+        },
+        {
+          "tag": "require",
+          "attributes": {
+            "shaders": "spirv"
+          }
+        },
+        {
+          "tag": "pass",
+          "attributes": {
+            "shader": "terrain_blend"
+          }
+        },
+        {
+          "tag": "depth",
+          "attributes": {
+            "mask": "false"
+          }
+        },
+        {
+          "tag": "polygon",
+          "attributes": {
+            "mode": "LINE"
+          }
+        },
+        {
+          "tag": "blend",
+          "attributes": {
+            "src": "src_alpha",
+            "dst": "one_minus_src_alpha"
+          }
+        }
+      ]
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/effects/terrain_decal.xml",
+      "sha256": "79eee8888d592079beb920c606c2905d3e9374326827a29a11d3545ce851e3d4",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false,
+      "declarations": [
+        {
+          "tag": "require",
+          "attributes": {
+            "shaders": "glsl"
+          }
+        },
+        {
+          "tag": "require",
+          "attributes": {
+            "shaders": "spirv"
+          }
+        },
+        {
+          "tag": "pass",
+          "attributes": {
+            "shader": "terrain_decal"
+          }
+        },
+        {
+          "tag": "depth",
+          "attributes": {
+            "mask": "false"
+          }
+        },
+        {
+          "tag": "blend",
+          "attributes": {
+            "src": "src_alpha",
+            "dst": "one_minus_src_alpha"
+          }
+        }
+      ]
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/effects/terrain_decal_reflections.xml",
+      "sha256": "67a13b9689739c17fab242b742524b0ce06faaa7f8baa723f75b10f26dc005a3",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false,
+      "declarations": [
+        {
+          "tag": "require",
+          "attributes": {
+            "shaders": "glsl"
+          }
+        },
+        {
+          "tag": "require",
+          "attributes": {
+            "shaders": "spirv"
+          }
+        },
+        {
+          "tag": "pass",
+          "attributes": {
+            "shader": "terrain_decal"
+          }
+        },
+        {
+          "tag": "depth",
+          "attributes": {
+            "mask": "false"
+          }
+        },
+        {
+          "tag": "cull",
+          "attributes": {
+            "mode": "FRONT"
+          }
+        },
+        {
+          "tag": "blend",
+          "attributes": {
+            "src": "src_alpha",
+            "dst": "one_minus_src_alpha"
+          }
+        }
+      ]
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/effects/terrain_decal_wireframe.xml",
+      "sha256": "6868b89bcbe1e94c9fe80430fa40e2a3af2ac7d5ef9b12a765dc8f7cf8616308",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false,
+      "declarations": [
+        {
+          "tag": "require",
+          "attributes": {
+            "shaders": "glsl"
+          }
+        },
+        {
+          "tag": "require",
+          "attributes": {
+            "shaders": "spirv"
+          }
+        },
+        {
+          "tag": "pass",
+          "attributes": {
+            "shader": "terrain_decal"
+          }
+        },
+        {
+          "tag": "depth",
+          "attributes": {
+            "mask": "false"
+          }
+        },
+        {
+          "tag": "polygon",
+          "attributes": {
+            "mode": "LINE"
+          }
+        },
+        {
+          "tag": "blend",
+          "attributes": {
+            "src": "src_alpha",
+            "dst": "one_minus_src_alpha"
+          }
+        }
+      ]
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/effects/terrain_shadow_caster.xml",
+      "sha256": "76456d87a0f5dd82bf472543f0cb655a90a4add2786dbd71771389250abaf4a8",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false,
+      "declarations": [
+        {
+          "tag": "require",
+          "attributes": {
+            "shaders": "glsl"
+          }
+        },
+        {
+          "tag": "require",
+          "attributes": {
+            "shaders": "spirv"
+          }
+        },
+        {
+          "tag": "pass",
+          "attributes": {
+            "shader": "dummy"
+          }
+        },
+        {
+          "tag": "cull",
+          "attributes": {
+            "mode": "FRONT"
+          }
+        },
+        {
+          "tag": "color",
+          "attributes": {
+            "mask_red": "FALSE",
+            "mask_green": "FALSE",
+            "mask_blue": "FALSE",
+            "mask_alpha": "FALSE"
+          }
+        }
+      ]
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/effects/terrain_silhouette_occluder.xml",
+      "sha256": "ad481809f50c68c473719d42ad2b1de04b7f7446506b4a4df85584bb3494c103",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false,
+      "declarations": [
+        {
+          "tag": "require",
+          "attributes": {
+            "shaders": "glsl"
+          }
+        },
+        {
+          "tag": "require",
+          "attributes": {
+            "shaders": "spirv"
+          }
+        },
+        {
+          "tag": "pass",
+          "attributes": {
+            "shader": "dummy"
+          }
+        },
+        {
+          "tag": "cull",
+          "attributes": {
+            "mode": "FRONT"
+          }
+        },
+        {
+          "tag": "color",
+          "attributes": {
+            "mask_red": "FALSE",
+            "mask_green": "FALSE",
+            "mask_blue": "FALSE",
+            "mask_alpha": "FALSE"
+          }
+        }
+      ]
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/effects/terrain_solid.xml",
+      "sha256": "dc932a6dc00777c3dbd5f973c44d65295765e6b09750c3d44bad1a64f4ee2b4e",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false,
+      "declarations": [
+        {
+          "tag": "require",
+          "attributes": {
+            "shaders": "glsl"
+          }
+        },
+        {
+          "tag": "require",
+          "attributes": {
+            "shaders": "spirv"
+          }
+        },
+        {
+          "tag": "pass",
+          "attributes": {
+            "shader": "dummy"
+          }
+        }
+      ]
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/effects/terrain_wireframe.xml",
+      "sha256": "be14eee8f060585e2623fbb923b3cf360ac118285078f1cfbe6ca1124dbfd591",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false,
+      "declarations": [
+        {
+          "tag": "require",
+          "attributes": {
+            "shaders": "glsl"
+          }
+        },
+        {
+          "tag": "require",
+          "attributes": {
+            "shaders": "spirv"
+          }
+        },
+        {
+          "tag": "pass",
+          "attributes": {
+            "shader": "dummy"
+          }
+        },
+        {
+          "tag": "polygon",
+          "attributes": {
+            "mode": "LINE"
+          }
+        }
+      ]
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/effects/upscale_bilinear.xml",
+      "sha256": "383182849217c3cbd9e2395f1c399382fc25a9106bd270712654615ec7d90d24",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false,
+      "declarations": [
+        {
+          "tag": "require",
+          "attributes": {
+            "shaders": "glsl"
+          }
+        },
+        {
+          "tag": "require",
+          "attributes": {
+            "shaders": "spirv"
+          }
+        },
+        {
+          "tag": "pass",
+          "attributes": {
+            "shader": "upscale_bilinear"
+          }
+        },
+        {
+          "tag": "depth",
+          "attributes": {
+            "test": "FALSE",
+            "mask": "false"
+          }
+        }
+      ]
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/effects/upscale_nearest.xml",
+      "sha256": "d4fc8c7ca0ad2600403fae7348e77688a77021bcb9564190b0d5aec04be903d2",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false,
+      "declarations": [
+        {
+          "tag": "require",
+          "attributes": {
+            "shaders": "glsl"
+          }
+        },
+        {
+          "tag": "require",
+          "attributes": {
+            "shaders": "spirv"
+          }
+        },
+        {
+          "tag": "pass",
+          "attributes": {
+            "shader": "upscale_nearest"
+          }
+        },
+        {
+          "tag": "depth",
+          "attributes": {
+            "test": "FALSE",
+            "mask": "false"
+          }
+        }
+      ]
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/effects/water_high.xml",
+      "sha256": "d615aecf46def333989d3c15583c942d91b50521b9fcbc1a500b831ff88b7fc8",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false,
+      "declarations": [
+        {
+          "tag": "require",
+          "attributes": {
+            "shaders": "glsl"
+          }
+        },
+        {
+          "tag": "require",
+          "attributes": {
+            "shaders": "spirv"
+          }
+        },
+        {
+          "tag": "pass",
+          "attributes": {
+            "shader": "water_high"
+          }
+        },
+        {
+          "tag": "depth",
+          "attributes": {
+            "test": "TRUE"
+          }
+        },
+        {
+          "tag": "blend",
+          "attributes": {
+            "src": "src_alpha",
+            "dst": "one_minus_src_alpha"
+          }
+        }
+      ]
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/effects/water_simple.xml",
+      "sha256": "5b7b647b7d58869dd68889127f01bc1215ed86066ef5b283b587f2968fd7de57",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false,
+      "declarations": [
+        {
+          "tag": "require",
+          "attributes": {
+            "shaders": "glsl"
+          }
+        },
+        {
+          "tag": "require",
+          "attributes": {
+            "shaders": "spirv"
+          }
+        },
+        {
+          "tag": "pass",
+          "attributes": {
+            "shader": "water_simple"
+          }
+        },
+        {
+          "tag": "depth",
+          "attributes": {
+            "test": "TRUE"
+          }
+        }
+      ]
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/effects/water_simple_wireframe.xml",
+      "sha256": "6efe56fd75482f781a20d22cd9e45186875844170dfa37370ec4b98c98e35c70",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false,
+      "declarations": [
+        {
+          "tag": "require",
+          "attributes": {
+            "shaders": "glsl"
+          }
+        },
+        {
+          "tag": "require",
+          "attributes": {
+            "shaders": "spirv"
+          }
+        },
+        {
+          "tag": "pass",
+          "attributes": {
+            "shader": "water_simple"
+          }
+        },
+        {
+          "tag": "depth",
+          "attributes": {
+            "test": "TRUE"
+          }
+        },
+        {
+          "tag": "polygon",
+          "attributes": {
+            "mode": "LINE"
+          }
+        }
+      ]
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/effects/water_waves.xml",
+      "sha256": "8a0bc167bd0436c0ff8348fe64aaf5e33da1e963e23a6d9f2c880a4906e68d25",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false,
+      "declarations": [
+        {
+          "tag": "require",
+          "attributes": {
+            "shaders": "glsl"
+          }
+        },
+        {
+          "tag": "require",
+          "attributes": {
+            "shaders": "spirv"
+          }
+        },
+        {
+          "tag": "pass",
+          "attributes": {
+            "shader": "waves"
+          }
+        },
+        {
+          "tag": "depth",
+          "attributes": {
+            "test": "TRUE",
+            "func": "always"
+          }
+        },
+        {
+          "tag": "blend",
+          "attributes": {
+            "src": "src_alpha",
+            "dst": "one_minus_src_alpha"
+          }
+        }
+      ]
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/bloom.fs",
+      "sha256": "09aefe8d1e04f951d4a792ba13df544981871781aba605c60b5775127187c1b8",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/bloom.xml",
+      "sha256": "d41e64bc1d2f47bcb6b1e0552da4231af5f742ea11f2e18953508c382cc9bc66",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false,
+      "declarations": [
+        {
+          "tag": "program",
+          "attributes": {
+            "type": "glsl"
+          }
+        },
+        {
+          "tag": "vertex",
+          "attributes": {
+            "file": "glsl/simple.vs"
+          }
+        },
+        {
+          "tag": "stream",
+          "attributes": {
+            "name": "pos",
+            "attribute": "a_vertex"
+          }
+        },
+        {
+          "tag": "stream",
+          "attributes": {
+            "name": "uv0",
+            "attribute": "a_uv0"
+          }
+        },
+        {
+          "tag": "fragment",
+          "attributes": {
+            "file": "glsl/bloom.fs"
+          }
+        }
+      ]
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/canvas2d.fs",
+      "sha256": "0b49fb4ae02cf99ef36e99b3828cdd39a853f4864b973836a8b585563ede8e16",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/canvas2d.h",
+      "sha256": "7cccaf8da34b91600f41d9ea464a69cc1018f35c614de2bb56afd7663a309d36",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/canvas2d.vs",
+      "sha256": "b615e755ad2e89007f2322ff16b2ce95c707958fb3f25bba00a06e05f85028d0",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/canvas2d.xml",
+      "sha256": "1ca8beb337e79439649133196d4ad9c1bdbb00c4c506116f2162bdfe07d3a4bd",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false,
+      "declarations": [
+        {
+          "tag": "program",
+          "attributes": {
+            "type": "glsl"
+          }
+        },
+        {
+          "tag": "vertex",
+          "attributes": {
+            "file": "glsl/canvas2d.vs"
+          }
+        },
+        {
+          "tag": "stream",
+          "attributes": {
+            "name": "pos",
+            "attribute": "a_vertex"
+          }
+        },
+        {
+          "tag": "stream",
+          "attributes": {
+            "name": "uv0",
+            "attribute": "a_uv0"
+          }
+        },
+        {
+          "tag": "fragment",
+          "attributes": {
+            "file": "glsl/canvas2d.fs"
+          }
+        }
+      ]
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/cas.fs",
+      "sha256": "d3863ddccb8d5caed57d3f8aee1295c0920d9021a61880d16ebc8140d3d000fe",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/cas.xml",
+      "sha256": "40d58907d6ab0db05bfe7b1898351bd9712dbf6c7d137e9a845e39e592aeb58a",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false,
+      "declarations": [
+        {
+          "tag": "program",
+          "attributes": {
+            "type": "glsl"
+          }
+        },
+        {
+          "tag": "vertex",
+          "attributes": {
+            "file": "glsl/simple.vs"
+          }
+        },
+        {
+          "tag": "stream",
+          "attributes": {
+            "name": "pos",
+            "attribute": "a_vertex"
+          }
+        },
+        {
+          "tag": "stream",
+          "attributes": {
+            "name": "uv0",
+            "attribute": "a_uv0"
+          }
+        },
+        {
+          "tag": "fragment",
+          "attributes": {
+            "file": "glsl/cas.fs"
+          }
+        }
+      ]
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/common/compute.h",
+      "sha256": "5b1dc9d34f3c133a1701098ddf92b75ba182e307600b6ca883892d9ed646e8e3",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/common/debug_fragment.h",
+      "sha256": "50bb45979ddc8b5ae5ba40f9500b0938c1acdf961cd7b12090501b76c8bfeaf8",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/common/descriptor_indexing.h",
+      "sha256": "7ab554712bffd4d6e2b56e0f9518ad819814c0a7b47c669d270667ab931aef0b",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/common/fog.h",
+      "sha256": "b5edaa525e1aa63ce937beac9a90466c7462ee31d77397d9f416611351b93053",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/common/fragment.h",
+      "sha256": "1c9b2eb2ee193fb226ecfbfa38b0cc46fd65a9b811f783307bf13b2bb1c0d964",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/common/los_fragment.h",
+      "sha256": "c34ee7475ad0b50548f6162306ceebff51d45f960de8eb50427865113992c4b0",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/common/los_vertex.h",
+      "sha256": "5d77db4cb7209f99d943238d9bc1be1bdb7e845c68b8d85e318c9bb04989ff74",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/common/shading.h",
+      "sha256": "46ac33e8d0bf775f969fc3b7315f8a76447cea956bd737d647c94e8f55deb92d",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/common/shadows.h",
+      "sha256": "143b384f286974f2384f5b8b243b41d28de8122cce6dca6eb0489fc53bfe9286",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/common/shadows_fragment.h",
+      "sha256": "a999c5a484505689bb1304f5b8c9739ed7548a2ce6804531caec78d972be8332",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/common/shadows_vertex.h",
+      "sha256": "d628ee13ae991ac008d1a3628260acd544cb129a9484b2d2f6086c8e19ffb2a0",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/common/stage.h",
+      "sha256": "045df5b964483313754136d95ca0ff49fe845a1142832167f841d67905ae5f30",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/common/texture.h",
+      "sha256": "0fcc5b2ed1a1342a6aadf53e3ebbeb3501035f0e6bd3f3e8cbe7fe05ea5472b5",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/common/tone_mapper.h",
+      "sha256": "66ef2e6b2c710b147ead6c4dd708ddf9ef6d6ed7f2adfc5683fb91077ab57075",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/common/uniform.h",
+      "sha256": "8e9392369421626b18d7512a9211ba775023964c9c1c4cd4f1d61bf00acb7b1d",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/common/vertex.h",
+      "sha256": "48221ed55242af336ba5c084131a8afeb5eae0d66708354904afd9bcd5a1c114",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/compute_downscale.cs",
+      "sha256": "ff690c2867d93943c626a96e67cff3df6bde72d244f69948a374bead25a91444",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/compute_downscale.xml",
+      "sha256": "2d122bdbec05c357fe90a38575ee4e6d9fbde2d693222d794c16099c284b0b24",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false,
+      "declarations": [
+        {
+          "tag": "program",
+          "attributes": {
+            "type": "glsl"
+          }
+        },
+        {
+          "tag": "compute",
+          "attributes": {
+            "file": "glsl/compute_downscale.cs"
+          }
+        }
+      ]
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/compute_rcas.cs",
+      "sha256": "0824073e147ce3dd634d53309cb3fc88c65c7ed822fbbc47ee10614e94783a8a",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/compute_rcas.xml",
+      "sha256": "0a22cf48af7b5c6107bb25cc62b34994fea0d0c2db808b1e84b9d9f9922703b8",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false,
+      "declarations": [
+        {
+          "tag": "program",
+          "attributes": {
+            "type": "glsl"
+          }
+        },
+        {
+          "tag": "compute",
+          "attributes": {
+            "file": "glsl/compute_rcas.cs"
+          }
+        }
+      ]
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/compute_resolve_pbr.cs",
+      "sha256": "b4803d3c54ddba9e26bdd249dde4d6e24295c282ef28c906ee93249a86255ca5",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/compute_resolve_pbr.xml",
+      "sha256": "1f46f496620443f05ce7ed01438e9c0bc4209caf00544157b3a280a8c935cff4",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false,
+      "declarations": [
+        {
+          "tag": "program",
+          "attributes": {
+            "type": "glsl"
+          }
+        },
+        {
+          "tag": "compute",
+          "attributes": {
+            "file": "glsl/compute_resolve_pbr.cs"
+          }
+        }
+      ]
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/compute_skinning.cs",
+      "sha256": "51f79e2d5c152b99fea2a4368da96e92d0b0b9ef1e16985c673fef84665431da",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/compute_skinning.xml",
+      "sha256": "9b61a3663c032255e47ca3a398830b2fa46530f81021dcb8f27493254108e005",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false,
+      "declarations": [
+        {
+          "tag": "program",
+          "attributes": {
+            "type": "glsl"
+          }
+        },
+        {
+          "tag": "compute",
+          "attributes": {
+            "file": "glsl/compute_skinning.cs"
+          }
+        }
+      ]
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/compute_upscale_fsr.cs",
+      "sha256": "9191ea6b2791a720ad4440da55ea808b5413b89f387b73d092fc980bbd549f78",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/compute_upscale_fsr.xml",
+      "sha256": "b4146f4a6a3518d0282dcc96e2138f264f3e453576130c88b9b6ee60edc2b1ab",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false,
+      "declarations": [
+        {
+          "tag": "program",
+          "attributes": {
+            "type": "glsl"
+          }
+        },
+        {
+          "tag": "compute",
+          "attributes": {
+            "file": "glsl/compute_upscale_fsr.cs"
+          }
+        }
+      ]
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/debug_overlay.fs",
+      "sha256": "f083e5ad608a6c1452929b9ef5b6d6a17c29af4a4b7cf1b49910ffe37a80e634",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/debug_overlay.h",
+      "sha256": "a27b4daaa3286b075ac07b4dad8fd8d12a08d9e6d21457cc85c58908f9d48ea9",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/debug_overlay.vs",
+      "sha256": "e3f654c615598258637a3d9044ab1c091da4bf1c56446c16fe5339049a795141",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/debug_overlay.xml",
+      "sha256": "617f22a9da6d3ae69263cb5a5a2758b1e1a6e4b77ed76f803a2d1b3d489630ab",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false,
+      "declarations": [
+        {
+          "tag": "program",
+          "attributes": {
+            "type": "glsl"
+          }
+        },
+        {
+          "tag": "vertex",
+          "attributes": {
+            "file": "glsl/debug_overlay.vs"
+          }
+        },
+        {
+          "tag": "stream",
+          "attributes": {
+            "name": "pos",
+            "attribute": "a_vertex"
+          }
+        },
+        {
+          "tag": "stream",
+          "attributes": {
+            "name": "uv0",
+            "attribute": "a_uv0",
+            "if": "DEBUG_TEXTURED"
+          }
+        },
+        {
+          "tag": "fragment",
+          "attributes": {
+            "file": "glsl/debug_overlay.fs"
+          }
+        }
+      ]
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/dof.fs",
+      "sha256": "79041194b6a162c0f8d7da7c320ee338c2704e3698747a7ad91df3948d2c2eac",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/dof.xml",
+      "sha256": "be7d6c047c05da10e41db0ce3cb98d3676bbd2c21a22d4efd067589f9a16839f",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false,
+      "declarations": [
+        {
+          "tag": "program",
+          "attributes": {
+            "type": "glsl"
+          }
+        },
+        {
+          "tag": "vertex",
+          "attributes": {
+            "file": "glsl/simple.vs"
+          }
+        },
+        {
+          "tag": "stream",
+          "attributes": {
+            "name": "pos",
+            "attribute": "a_vertex"
+          }
+        },
+        {
+          "tag": "stream",
+          "attributes": {
+            "name": "uv0",
+            "attribute": "a_uv0"
+          }
+        },
+        {
+          "tag": "fragment",
+          "attributes": {
+            "file": "glsl/dof.fs"
+          }
+        }
+      ]
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/dummy.fs",
+      "sha256": "0f1ee35edb9590b3aee0191477065caa81a57321fa5561481a73bb7980f2f86e",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/dummy.h",
+      "sha256": "0f16d76eb311c355145a70909097166779bc8425afb48c793ba885a7ff2ae649",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/dummy.vs",
+      "sha256": "2cfb28aecafc5fef957e8584799cd059ea8345f50acf479130953e1d426a2e94",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/dummy.xml",
+      "sha256": "1e22f87a1f1f912b610c4c50064030acfef0f8c30164f6280b20d5144a9086af",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false,
+      "declarations": [
+        {
+          "tag": "program",
+          "attributes": {
+            "type": "glsl"
+          }
+        },
+        {
+          "tag": "vertex",
+          "attributes": {
+            "file": "glsl/dummy.vs"
+          }
+        },
+        {
+          "tag": "stream",
+          "attributes": {
+            "name": "pos",
+            "attribute": "a_vertex"
+          }
+        },
+        {
+          "tag": "fragment",
+          "attributes": {
+            "file": "glsl/dummy.fs"
+          }
+        }
+      ]
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/ffx_a.h",
+      "sha256": "de853ab7fb037de71aee0cfbf489afb1bbd47f2a29072e8049969349f49ac66a",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/ffx_fsr1.h",
+      "sha256": "d10302bcfe2788d321b1d7ae0e6696dcb9277af5fcc394bf9a63313017e4d1b3",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/foreground_overlay.fs",
+      "sha256": "c13595519b0383c313f244b946523f7244c402b19a2a7996a042751968c089d9",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/foreground_overlay.h",
+      "sha256": "a5de675d1bd94539d336abb3dc09f2070acef180697d57e5e2f59739a05346ef",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/foreground_overlay.vs",
+      "sha256": "59c8aa0a4b2f535efe14418ee34cef55a9a6e8d1f846cab12cbbd896d82a5b00",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/foreground_overlay.xml",
+      "sha256": "208bdbdc50ea3f9c81de50f3f6c32549f0a0f4843cb118a263e6101e28e663cf",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false,
+      "declarations": [
+        {
+          "tag": "program",
+          "attributes": {
+            "type": "glsl"
+          }
+        },
+        {
+          "tag": "vertex",
+          "attributes": {
+            "file": "glsl/foreground_overlay.vs"
+          }
+        },
+        {
+          "tag": "stream",
+          "attributes": {
+            "name": "pos",
+            "attribute": "a_vertex"
+          }
+        },
+        {
+          "tag": "stream",
+          "attributes": {
+            "name": "uv0",
+            "attribute": "a_uv0"
+          }
+        },
+        {
+          "tag": "fragment",
+          "attributes": {
+            "file": "glsl/foreground_overlay.fs"
+          }
+        }
+      ]
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/fxaa.fs",
+      "sha256": "43d57dc9811d94db39ebfaf51b1a64f46456918c1fababb1dd98ed55f83b2a79",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/fxaa.xml",
+      "sha256": "6190fbbc3f3e8d0f81ec81d14625bdaefa1f351e0696e708ea70fe8aa7a9d33a",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false,
+      "declarations": [
+        {
+          "tag": "program",
+          "attributes": {
+            "type": "glsl"
+          }
+        },
+        {
+          "tag": "vertex",
+          "attributes": {
+            "file": "glsl/simple.vs"
+          }
+        },
+        {
+          "tag": "stream",
+          "attributes": {
+            "name": "pos",
+            "attribute": "a_vertex"
+          }
+        },
+        {
+          "tag": "stream",
+          "attributes": {
+            "name": "uv0",
+            "attribute": "a_uv0"
+          }
+        },
+        {
+          "tag": "fragment",
+          "attributes": {
+            "file": "glsl/fxaa.fs"
+          }
+        }
+      ]
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/hdr.fs",
+      "sha256": "ffe060d36284ec4dc529ed5e9817ac604030b07fc93d65818f9d3d61d30e33d5",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/hdr.xml",
+      "sha256": "ac5d9a08e3a55fba23e35ca3b68cc594cce152dc8eb4c179f6b159b6f79a85c9",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false,
+      "declarations": [
+        {
+          "tag": "program",
+          "attributes": {
+            "type": "glsl"
+          }
+        },
+        {
+          "tag": "vertex",
+          "attributes": {
+            "file": "glsl/simple.vs"
+          }
+        },
+        {
+          "tag": "stream",
+          "attributes": {
+            "name": "pos",
+            "attribute": "a_vertex"
+          }
+        },
+        {
+          "tag": "stream",
+          "attributes": {
+            "name": "uv0",
+            "attribute": "a_uv0"
+          }
+        },
+        {
+          "tag": "fragment",
+          "attributes": {
+            "file": "glsl/hdr.fs"
+          }
+        }
+      ]
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/los_interp.fs",
+      "sha256": "ba4544fc67a75b7bc22ac17d41e0d14929ba91fb440726711dd52bdfea21e1d1",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/los_interp.h",
+      "sha256": "304926f073833b26f0d957c9497b977c4e0f2bcad78c0b63203b0824b570627c",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/los_interp.vs",
+      "sha256": "e41e6cd408d39acd4448e3ad870a797e9767bac96413f0ffb611ae60d1f79012",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/los_interp.xml",
+      "sha256": "b12ee08ff8ac7a9ffceab798c07a14ea8d0675095e18119ed4fd607ab3fa684c",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false,
+      "declarations": [
+        {
+          "tag": "program",
+          "attributes": {
+            "type": "glsl"
+          }
+        },
+        {
+          "tag": "vertex",
+          "attributes": {
+            "file": "glsl/los_interp.vs"
+          }
+        },
+        {
+          "tag": "stream",
+          "attributes": {
+            "name": "pos",
+            "attribute": "a_vertex"
+          }
+        },
+        {
+          "tag": "stream",
+          "attributes": {
+            "name": "uv0",
+            "attribute": "a_uv0"
+          }
+        },
+        {
+          "tag": "fragment",
+          "attributes": {
+            "file": "glsl/los_interp.fs"
+          }
+        }
+      ]
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/minimap.fs",
+      "sha256": "5e00759fcb2a657717c33123f81e7b25e1c1cb300c35ac792ab8801408b34205",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/minimap.h",
+      "sha256": "9cce6fa14800cc4fb5a7a73ae1da38e24d7403af2ff49036e8dc40a331d28a11",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/minimap.vs",
+      "sha256": "21f41713b293c1ba94e443ea1cc567ac8f36f16a11277ded378eddc273a5268d",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/minimap.xml",
+      "sha256": "6f09734044888536d3359e6e728eefac314c4b55e6acb24baca866a4dea42716",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false,
+      "declarations": [
+        {
+          "tag": "program",
+          "attributes": {
+            "type": "glsl"
+          }
+        },
+        {
+          "tag": "vertex",
+          "attributes": {
+            "file": "glsl/minimap.vs"
+          }
+        },
+        {
+          "tag": "stream",
+          "attributes": {
+            "name": "pos",
+            "attribute": "a_vertex"
+          }
+        },
+        {
+          "tag": "stream",
+          "attributes": {
+            "name": "uv0",
+            "attribute": "a_uv0",
+            "if": "MINIMAP_BASE || MINIMAP_LOS"
+          }
+        },
+        {
+          "tag": "stream",
+          "attributes": {
+            "name": "uv1",
+            "attribute": "a_uv1",
+            "if": "USE_GPU_INSTANCING"
+          }
+        },
+        {
+          "tag": "stream",
+          "attributes": {
+            "name": "color",
+            "attribute": "a_color",
+            "if": "MINIMAP_POINT"
+          }
+        },
+        {
+          "tag": "fragment",
+          "attributes": {
+            "file": "glsl/minimap.fs"
+          }
+        }
+      ]
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/overlay_solid.fs",
+      "sha256": "7e81fc1816c3463f14dc6af37bdd9568ed687c685ffdf7d9f88e0c5774e57fd3",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/overlay_solid.h",
+      "sha256": "9433fa5bbf1d3c6f973a9377564b702d2a1720f085086e91d9325c19ec790d12",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/overlay_solid.vs",
+      "sha256": "adf92ee8703935bba8b7e918da3710bb42111cd5d6eb2354486f87eb42777f52",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/overlay_solid.xml",
+      "sha256": "44b05dbd4b5163688f5c21bbfc09da000d1841932b5e18dea4b4a0257aff481f",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false,
+      "declarations": [
+        {
+          "tag": "program",
+          "attributes": {
+            "type": "glsl"
+          }
+        },
+        {
+          "tag": "vertex",
+          "attributes": {
+            "file": "glsl/overlay_solid.vs"
+          }
+        },
+        {
+          "tag": "stream",
+          "attributes": {
+            "name": "pos",
+            "attribute": "a_vertex"
+          }
+        },
+        {
+          "tag": "fragment",
+          "attributes": {
+            "file": "glsl/overlay_solid.fs"
+          }
+        }
+      ]
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/overlayline.fs",
+      "sha256": "f89e5f54be6be136ae7b3a64e3b64a65a219fb1da059ac07cd5f81a33b30649d",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/overlayline.h",
+      "sha256": "30e3e41bdd8501fd12e067f699f33828cba3575f191d14d5e775d9dfe1f7d8d8",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/overlayline.vs",
+      "sha256": "d457cc7b34a017eb7e0efce30ac04ee6ff6c4e9441d0fab9d6b573c9b09faa42",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/overlayline.xml",
+      "sha256": "e54fe5642e7a5fb8ef8f560bec014fd4921665e622cbc08f5176c79d9b7b07e2",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false,
+      "declarations": [
+        {
+          "tag": "program",
+          "attributes": {
+            "type": "glsl"
+          }
+        },
+        {
+          "tag": "vertex",
+          "attributes": {
+            "file": "glsl/overlayline.vs"
+          }
+        },
+        {
+          "tag": "stream",
+          "attributes": {
+            "name": "pos",
+            "attribute": "a_vertex"
+          }
+        },
+        {
+          "tag": "stream",
+          "attributes": {
+            "name": "uv0",
+            "attribute": "a_uv0"
+          }
+        },
+        {
+          "tag": "stream",
+          "attributes": {
+            "name": "color",
+            "attribute": "a_color",
+            "if": "!USE_OBJECTCOLOR"
+          }
+        },
+        {
+          "tag": "fragment",
+          "attributes": {
+            "file": "glsl/overlayline.fs"
+          }
+        }
+      ]
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/particle.fs",
+      "sha256": "223cfc5f999c01eeb92aba33ae995dd608d5c62d3e5e79c358c819eb99b96217",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/particle.h",
+      "sha256": "7e3fb2d31529f9dd52e0c53cfdf2fbb7b2e4c9b686c9d4e2fd4eb47a6336125c",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/particle.vs",
+      "sha256": "a9e57e3fb387862be872b441a7b751b6d2c7d11b523ac772e554d52a1120739c",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/particle.xml",
+      "sha256": "a85a4f8c5117bc9cb31014265c7b7ee5eb2626851ae3ac897290f2a20d87b91c",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false,
+      "declarations": [
+        {
+          "tag": "program",
+          "attributes": {
+            "type": "glsl"
+          }
+        },
+        {
+          "tag": "vertex",
+          "attributes": {
+            "file": "glsl/particle.vs"
+          }
+        },
+        {
+          "tag": "stream",
+          "attributes": {
+            "name": "pos",
+            "attribute": "a_vertex"
+          }
+        },
+        {
+          "tag": "stream",
+          "attributes": {
+            "name": "color",
+            "attribute": "a_color"
+          }
+        },
+        {
+          "tag": "stream",
+          "attributes": {
+            "name": "uv0",
+            "attribute": "a_uv0"
+          }
+        },
+        {
+          "tag": "stream",
+          "attributes": {
+            "name": "uv1",
+            "attribute": "a_axisX"
+          }
+        },
+        {
+          "tag": "stream",
+          "attributes": {
+            "name": "uv2",
+            "attribute": "a_axisY"
+          }
+        },
+        {
+          "tag": "fragment",
+          "attributes": {
+            "file": "glsl/particle.fs"
+          }
+        }
+      ]
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/particle_solid.xml",
+      "sha256": "a85a4f8c5117bc9cb31014265c7b7ee5eb2626851ae3ac897290f2a20d87b91c",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false,
+      "declarations": [
+        {
+          "tag": "program",
+          "attributes": {
+            "type": "glsl"
+          }
+        },
+        {
+          "tag": "vertex",
+          "attributes": {
+            "file": "glsl/particle.vs"
+          }
+        },
+        {
+          "tag": "stream",
+          "attributes": {
+            "name": "pos",
+            "attribute": "a_vertex"
+          }
+        },
+        {
+          "tag": "stream",
+          "attributes": {
+            "name": "color",
+            "attribute": "a_color"
+          }
+        },
+        {
+          "tag": "stream",
+          "attributes": {
+            "name": "uv0",
+            "attribute": "a_uv0"
+          }
+        },
+        {
+          "tag": "stream",
+          "attributes": {
+            "name": "uv1",
+            "attribute": "a_axisX"
+          }
+        },
+        {
+          "tag": "stream",
+          "attributes": {
+            "name": "uv2",
+            "attribute": "a_axisY"
+          }
+        },
+        {
+          "tag": "fragment",
+          "attributes": {
+            "file": "glsl/particle.fs"
+          }
+        }
+      ]
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/resolve_pbr.fs",
+      "sha256": "9a0bfcd1565d1017aa82bf032c292552db6f4ca64974e1e507156e934924823c",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/resolve_pbr.xml",
+      "sha256": "1a89419c6b58d5644f3599833f2410bc3c44329a6bc0fd48b0c9a626c7f924f8",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false,
+      "declarations": [
+        {
+          "tag": "program",
+          "attributes": {
+            "type": "glsl"
+          }
+        },
+        {
+          "tag": "vertex",
+          "attributes": {
+            "file": "glsl/simple.vs"
+          }
+        },
+        {
+          "tag": "stream",
+          "attributes": {
+            "name": "pos",
+            "attribute": "a_vertex"
+          }
+        },
+        {
+          "tag": "stream",
+          "attributes": {
+            "name": "uv0",
+            "attribute": "a_uv0"
+          }
+        },
+        {
+          "tag": "fragment",
+          "attributes": {
+            "file": "glsl/resolve_pbr.fs"
+          }
+        }
+      ]
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/simple.vs",
+      "sha256": "4a3d8263327c2a6a9ab79ff4d8d15c006e522412c09e03c6c7e4d760ed828d14",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/sky.fs",
+      "sha256": "19d44acc95bbdefd23d0ee80b79c224ff99e2cfd34fbb4f3cb34ec995d8c8d75",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/sky.h",
+      "sha256": "593e70d1d695d046c2b45d56366b990be7e8bf45f7ef38b3b49ab7c0dbc1d30d",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/sky.vs",
+      "sha256": "f481fd25e607785f1fb4904687c1e59845ba8f1c66955f034fad27a92753ddaf",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/sky.xml",
+      "sha256": "9f5e930549152111c2b7a7712b7175d36f7bafbe601309791ff88fc3add00487",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false,
+      "declarations": [
+        {
+          "tag": "program",
+          "attributes": {
+            "type": "glsl"
+          }
+        },
+        {
+          "tag": "vertex",
+          "attributes": {
+            "file": "glsl/sky.vs"
+          }
+        },
+        {
+          "tag": "stream",
+          "attributes": {
+            "name": "pos",
+            "attribute": "a_vertex"
+          }
+        },
+        {
+          "tag": "stream",
+          "attributes": {
+            "name": "uv0",
+            "attribute": "a_uv0"
+          }
+        },
+        {
+          "tag": "fragment",
+          "attributes": {
+            "file": "glsl/sky.fs"
+          }
+        }
+      ]
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/solid.fs",
+      "sha256": "8dcc20f5be142d5252337d0844997bb730a6cde4a8bec58e62a3754731b4bd84",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/solid.h",
+      "sha256": "0f16d76eb311c355145a70909097166779bc8425afb48c793ba885a7ff2ae649",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/solid.vs",
+      "sha256": "4029bedbd947f4d097092ef2e944c6fb04389a0fdad4b7871a6fafaa60995e78",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/solid.xml",
+      "sha256": "75c2ab57eb61accae944e1875ebab759ed2acce72358f98d7bc2e3be95c1efaa",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false,
+      "declarations": [
+        {
+          "tag": "program",
+          "attributes": {
+            "type": "glsl"
+          }
+        },
+        {
+          "tag": "vertex",
+          "attributes": {
+            "file": "glsl/solid.vs"
+          }
+        },
+        {
+          "tag": "stream",
+          "attributes": {
+            "name": "pos",
+            "attribute": "a_vertex"
+          }
+        },
+        {
+          "tag": "fragment",
+          "attributes": {
+            "file": "glsl/solid.fs"
+          }
+        }
+      ]
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/terrain_base.xml",
+      "sha256": "c76503ed4024092643fa92eebdd6de5107f1110facaa1f829492c70239e834cb",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false,
+      "declarations": [
+        {
+          "tag": "program",
+          "attributes": {
+            "type": "glsl"
+          }
+        },
+        {
+          "tag": "vertex",
+          "attributes": {
+            "file": "glsl/terrain_common.vs"
+          }
+        },
+        {
+          "tag": "stream",
+          "attributes": {
+            "name": "pos",
+            "attribute": "a_vertex"
+          }
+        },
+        {
+          "tag": "stream",
+          "attributes": {
+            "name": "normal",
+            "attribute": "a_normal"
+          }
+        },
+        {
+          "tag": "stream",
+          "attributes": {
+            "name": "uv0",
+            "attribute": "a_uv0",
+            "if": "DECAL"
+          }
+        },
+        {
+          "tag": "stream",
+          "attributes": {
+            "name": "uv1",
+            "attribute": "a_uv1",
+            "if": "BLEND"
+          }
+        },
+        {
+          "tag": "fragment",
+          "attributes": {
+            "file": "glsl/terrain_common.fs"
+          }
+        }
+      ]
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/terrain_blend.xml",
+      "sha256": "0f4c12d78ba307d4e2b1bd2078c75d8f5cd5484d417b8445ea4dd35fca4255c8",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false,
+      "declarations": [
+        {
+          "tag": "program",
+          "attributes": {
+            "type": "glsl"
+          }
+        },
+        {
+          "tag": "define",
+          "attributes": {
+            "name": "BLEND",
+            "value": "1"
+          }
+        },
+        {
+          "tag": "vertex",
+          "attributes": {
+            "file": "glsl/terrain_common.vs"
+          }
+        },
+        {
+          "tag": "stream",
+          "attributes": {
+            "name": "pos",
+            "attribute": "a_vertex"
+          }
+        },
+        {
+          "tag": "stream",
+          "attributes": {
+            "name": "normal",
+            "attribute": "a_normal"
+          }
+        },
+        {
+          "tag": "stream",
+          "attributes": {
+            "name": "uv0",
+            "attribute": "a_uv0",
+            "if": "DECAL"
+          }
+        },
+        {
+          "tag": "stream",
+          "attributes": {
+            "name": "uv1",
+            "attribute": "a_uv1",
+            "if": "BLEND"
+          }
+        },
+        {
+          "tag": "fragment",
+          "attributes": {
+            "file": "glsl/terrain_common.fs"
+          }
+        }
+      ]
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/terrain_common.fs",
+      "sha256": "407b8e5d2346af1e8fd67d44161151cdc0b0a4c5f2e992af610dd4d75a37f673",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/terrain_common.h",
+      "sha256": "499736f348cc8ef17acb70cd66c8aab7ed5d24d5098b176164d626f3b471445d",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/terrain_common.vs",
+      "sha256": "863c879342857a36a59abe9d6110a3039d520ff5dfec26a4547451f1afea4d71",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/terrain_decal.xml",
+      "sha256": "660e43a520c0b3d6cbdf2448ccf59e3f912716a0f1749f44a9e028250e03aae7",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false,
+      "declarations": [
+        {
+          "tag": "program",
+          "attributes": {
+            "type": "glsl"
+          }
+        },
+        {
+          "tag": "define",
+          "attributes": {
+            "name": "DECAL",
+            "value": "1"
+          }
+        },
+        {
+          "tag": "vertex",
+          "attributes": {
+            "file": "glsl/terrain_common.vs"
+          }
+        },
+        {
+          "tag": "stream",
+          "attributes": {
+            "name": "pos",
+            "attribute": "a_vertex"
+          }
+        },
+        {
+          "tag": "stream",
+          "attributes": {
+            "name": "normal",
+            "attribute": "a_normal"
+          }
+        },
+        {
+          "tag": "stream",
+          "attributes": {
+            "name": "uv0",
+            "attribute": "a_uv0",
+            "if": "DECAL"
+          }
+        },
+        {
+          "tag": "stream",
+          "attributes": {
+            "name": "uv1",
+            "attribute": "a_uv1",
+            "if": "BLEND"
+          }
+        },
+        {
+          "tag": "fragment",
+          "attributes": {
+            "file": "glsl/terrain_common.fs"
+          }
+        }
+      ]
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/upscale_bilinear.fs",
+      "sha256": "5c222abfbef513b49c6f89ebb9402c474b0c938333db963b2f26ee44c3ae1764",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/upscale_bilinear.xml",
+      "sha256": "89d4f6e04bc2df8b308eb33df7973c04a40651ecedb45d3c93daaf7434509de7",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false,
+      "declarations": [
+        {
+          "tag": "program",
+          "attributes": {
+            "type": "glsl"
+          }
+        },
+        {
+          "tag": "vertex",
+          "attributes": {
+            "file": "glsl/simple.vs"
+          }
+        },
+        {
+          "tag": "stream",
+          "attributes": {
+            "name": "pos",
+            "attribute": "a_vertex"
+          }
+        },
+        {
+          "tag": "stream",
+          "attributes": {
+            "name": "uv0",
+            "attribute": "a_uv0"
+          }
+        },
+        {
+          "tag": "fragment",
+          "attributes": {
+            "file": "glsl/upscale_bilinear.fs"
+          }
+        }
+      ]
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/upscale_nearest.fs",
+      "sha256": "e836cefa315dae53d4e1a29b6b4111850b832d2525b61e962d7644d6fb8ab834",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/upscale_nearest.xml",
+      "sha256": "2ec5371103ee6264ec5518ff0982507b9ef945276217cbae3235e41f3df7deca",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false,
+      "declarations": [
+        {
+          "tag": "program",
+          "attributes": {
+            "type": "glsl"
+          }
+        },
+        {
+          "tag": "vertex",
+          "attributes": {
+            "file": "glsl/simple.vs"
+          }
+        },
+        {
+          "tag": "stream",
+          "attributes": {
+            "name": "pos",
+            "attribute": "a_vertex"
+          }
+        },
+        {
+          "tag": "stream",
+          "attributes": {
+            "name": "uv0",
+            "attribute": "a_uv0"
+          }
+        },
+        {
+          "tag": "fragment",
+          "attributes": {
+            "file": "glsl/upscale_nearest.fs"
+          }
+        }
+      ]
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/water_high.fs",
+      "sha256": "4035fda106d65f21af8633247f29921b14704cc3c265357e9795e590ab390342",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/water_high.h",
+      "sha256": "624998f2e20edd21863e4c635c5152943e5a4555e4b2e8b5a6c92f46583c0063",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/water_high.vs",
+      "sha256": "08ed45b822a4cdbf32a4a236b6fea72abe18efbc529856d02eb81fc2beda56eb",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/water_high.xml",
+      "sha256": "d2e7443d250727ac9ea37ba851a620c1625495cce275408150c6539df5d2c700",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false,
+      "declarations": [
+        {
+          "tag": "program",
+          "attributes": {
+            "type": "glsl"
+          }
+        },
+        {
+          "tag": "vertex",
+          "attributes": {
+            "file": "glsl/water_high.vs"
+          }
+        },
+        {
+          "tag": "stream",
+          "attributes": {
+            "name": "pos",
+            "attribute": "a_vertex"
+          }
+        },
+        {
+          "tag": "stream",
+          "attributes": {
+            "name": "uv1",
+            "attribute": "a_waterInfo"
+          }
+        },
+        {
+          "tag": "fragment",
+          "attributes": {
+            "file": "glsl/water_high.fs"
+          }
+        }
+      ]
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/water_simple.fs",
+      "sha256": "fb84b6aec3a8582de3a2044e9765b33ae78b961beed8de8e3827fe361e54c73f",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/water_simple.h",
+      "sha256": "26c0ca847a05d0aa9ebc84d489177b31b7429458c660ce13591469c80a7419b1",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/water_simple.vs",
+      "sha256": "294b39512f842045d99f93ae1c0776555b4fe8e8b0cf9d1c89b4fc3946932b28",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/water_simple.xml",
+      "sha256": "7204d6d80e9d408c49a6c234b8c33d5893b896790c12c0f3e3150335365e2959",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false,
+      "declarations": [
+        {
+          "tag": "program",
+          "attributes": {
+            "type": "glsl"
+          }
+        },
+        {
+          "tag": "vertex",
+          "attributes": {
+            "file": "glsl/water_simple.vs"
+          }
+        },
+        {
+          "tag": "stream",
+          "attributes": {
+            "name": "pos",
+            "attribute": "a_vertex"
+          }
+        },
+        {
+          "tag": "fragment",
+          "attributes": {
+            "file": "glsl/water_simple.fs"
+          }
+        }
+      ]
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/waves.fs",
+      "sha256": "87b5b77c4f1de019ff5c3a28f9bf28609ad1857580832092559d5501b4b0402d",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/waves.h",
+      "sha256": "3d69222d7647287f4acbbed7884d33d58dfe2649299ee3cf1a9929dcfdf48876",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/waves.vs",
+      "sha256": "f0c2400d5f05848d6ee8810d383834fe960c9b7ae131e8f5f38297af922d34e2",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/glsl/waves.xml",
+      "sha256": "ba0c0a5cfac2c6955e607a3eb82db257ce8a035bb1fbd20aad4e3187b38174b6",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false,
+      "declarations": [
+        {
+          "tag": "program",
+          "attributes": {
+            "type": "glsl"
+          }
+        },
+        {
+          "tag": "vertex",
+          "attributes": {
+            "file": "glsl/waves.vs"
+          }
+        },
+        {
+          "tag": "stream",
+          "attributes": {
+            "name": "pos",
+            "attribute": "a_basePosition"
+          }
+        },
+        {
+          "tag": "stream",
+          "attributes": {
+            "name": "normal",
+            "attribute": "a_normal"
+          }
+        },
+        {
+          "tag": "stream",
+          "attributes": {
+            "name": "uv0",
+            "attribute": "a_uv0"
+          }
+        },
+        {
+          "tag": "stream",
+          "attributes": {
+            "name": "uv1",
+            "attribute": "a_apexPosition"
+          }
+        },
+        {
+          "tag": "stream",
+          "attributes": {
+            "name": "uv2",
+            "attribute": "a_splashPosition"
+          }
+        },
+        {
+          "tag": "stream",
+          "attributes": {
+            "name": "uv3",
+            "attribute": "a_retreatPosition"
+          }
+        },
+        {
+          "tag": "fragment",
+          "attributes": {
+            "file": "glsl/waves.fs"
+          }
+        }
+      ]
+    },
+    {
+      "path": "binaries/data/mods/mod/shaders/program.rng",
+      "sha256": "f0f88b970cb40e4618088419e41af6e8e38e92f910f9cfa16f5ae2bf9ba5ab73",
+      "conversion": "NOT_CONVERTED",
+      "variantsVerified": false
+    }
+  ],
+  "interfaces": [
+    {
+      "path": "source/renderer/backend/Backend.h",
+      "sha256": "ab44ffa3da9ce8eb480e627ef89d6e089959a58dc54e4e2e4886f0f6edc15f0a",
+      "webgpuImplementation": "MISSING"
+    },
+    {
+      "path": "source/renderer/backend/Barrier.h",
+      "sha256": "c541e109b2ac266427aee9773e19aafe718ab00caed63352baa9ad8d994ca6b8",
+      "webgpuImplementation": "MISSING"
+    },
+    {
+      "path": "source/renderer/backend/CompareOp.h",
+      "sha256": "ccdb750416e8676b37f68d31ea77cc741b8cf63550070cecd915153dcc5a6c27",
+      "webgpuImplementation": "MISSING"
+    },
+    {
+      "path": "source/renderer/backend/Format.h",
+      "sha256": "d30d354b369215bbc64342003d6a2aeb5fd96db08e771f97c6351cbc03eaae0b",
+      "webgpuImplementation": "MISSING"
+    },
+    {
+      "path": "source/renderer/backend/IBuffer.h",
+      "sha256": "b5e52aaabbb0591cd6b37c53925fb3c90ee7c9f80498cbd2b98e3af3880681c2",
+      "webgpuImplementation": "MISSING"
+    },
+    {
+      "path": "source/renderer/backend/IDevice.h",
+      "sha256": "4f5f79d569962d6389641c196e3abb702ed9098f3b452d67e99db0f2feba9248",
+      "webgpuImplementation": "MISSING"
+    },
+    {
+      "path": "source/renderer/backend/IDeviceCommandContext.h",
+      "sha256": "96b07c645e0344ad58a0d6b3b5f943e8478f4525b2f147ae4500840991a3b2db",
+      "webgpuImplementation": "MISSING"
+    },
+    {
+      "path": "source/renderer/backend/IDeviceObject.h",
+      "sha256": "abeb5474e04215370273dd2639a33dddebaff5eb141c9c82fa1875ddcfdea9fb",
+      "webgpuImplementation": "MISSING"
+    },
+    {
+      "path": "source/renderer/backend/IFramebuffer.h",
+      "sha256": "28879f22a6092119b58f68158dcdbfe11b38cc7e8740c3eb1a25406d59988c74",
+      "webgpuImplementation": "MISSING"
+    },
+    {
+      "path": "source/renderer/backend/IShaderProgram.h",
+      "sha256": "1bf3c1f5ac567e760b872f88e6f3894d6c5e34caf7e362e048d8f5c1839981b0",
+      "webgpuImplementation": "MISSING"
+    },
+    {
+      "path": "source/renderer/backend/ISwapChain.h",
+      "sha256": "893676fd00e1be90756902f2f8d6f7d8afb2ca3bac4840da30cd438034f4a9c9",
+      "webgpuImplementation": "MISSING"
+    },
+    {
+      "path": "source/renderer/backend/ITexture.h",
+      "sha256": "bbb131773c6639e41245cb6c956ae4db072e1a5539a5871ae20d13a815c94404",
+      "webgpuImplementation": "MISSING"
+    },
+    {
+      "path": "source/renderer/backend/PipelineState.h",
+      "sha256": "2297de39e690b7208801f18ef611c547e128416efa6ea85504048b90982b4cdd",
+      "webgpuImplementation": "MISSING"
+    },
+    {
+      "path": "source/renderer/backend/Sampler.h",
+      "sha256": "9bb8ef35ab77ab28cb692957f02bf28e6796be8d071c404e67788f89ebaeb670",
+      "webgpuImplementation": "MISSING"
+    }
+  ],
+  "engineBackendIntegrated": false,
+  "note": "Source inventory only; runtime define combinations and effect coverage remain unverified."
+}

@@ -1,0 +1,30 @@
+--- control/webgpu-engine.mjs
++++ experiment/webgpu-engine.mjs
+@@ -3,6 +3,7 @@
+ import {adaptBorderSampling,borderConstants} from './webgpu-border.mjs';
+ import {UploadBelt} from './webgpu-upload.mjs';
+ import {CommandDispatcher} from './webgpu-dispatch.mjs';
++import {RenderBundleCache} from './webgpu-bundles.mjs';
+ const formats = [null,'r8unorm','rg8unorm','rg8uint',null,'rgba8unorm','rgba8unorm-srgb','rgba8uint','bgra8unorm','bgra8unorm-srgb',
+   'rgba8unorm','rgba8unorm','r16unorm','r16uint','r16sint','r16float','rg16unorm','rg16uint','rg16sint','rg16float',null,'rgba16float',
+   'r32float','rg32float',null,'rgba32float','rg11b10ufloat','depth16unorm','depth24plus','depth24plus-stencil8','depth32float','depth32float-stencil8',
+@@ -398,7 +399,10 @@
+       storeOp:'store',clearValue:framebuffer.clear}];
+     if(a.depth){const stencil=a.depthFormat.includes('stencil');descriptor.depthStencilAttachment={view:a.depth.createView(),depthLoadOp:clearFlags?.[1]||(!forceLoad&&framebuffer.dl===1)?'clear':'load',depthStoreOp:'store',depthClearValue:1};
+       if(stencil)Object.assign(descriptor.depthStencilAttachment,{stencilLoadOp:clearFlags?.[2]||(!forceLoad&&framebuffer.dl===1)?'clear':'load',stencilStoreOp:'store',stencilClearValue:0});}
+-    this.pass=this.encoderForWork().beginRenderPass(descriptor);for(const label of this.labels)this.pass.pushDebugGroup(label);this.applyViewport();this.applyScissor();
++    const pass=this.encoderForWork().beginRenderPass(descriptor);
++    this.bundleCache??=new RenderBundleCache(this.device,{stats:this.stats});
++    this.pass=this.bundleCache.begin(pass,{colorFormats:a.format?[a.format]:[],depthStencilFormat:a.depthFormat??undefined,sampleCount:a.samples},framebuffer.width,framebuffer.height);
++    for(const label of this.labels)this.pass.pushDebugGroup(label);this.applyViewport();this.applyScissor();
+   }
+   endFramebuffer() { if(this.pass){for(const label of this.labels)this.pass.popDebugGroup();this.pass.end();this.pass=null;} }
+   applyViewport(){if(!this.pass)return;const [x,y,w,h]=this.viewportRect||[0,0,this.target.width,this.target.height];this.pass.setViewport(x,this.target.height-y-h,w,h,0,1);}
+@@ -617,6 +621,7 @@
+       for(const object of this.objects.values()){object.buffer?.destroy();if(object.kind==='texture')object.texture.destroy();}
+       this.objects.clear();this.bindings.clear();this.pipelines.clear();
+       this.blitPipelines?.clear();this.blitModule=null;
++      this.bundleCache?.clear();this.bundleCache=null;
+       this.lastPipelineLookup=null;this.passStates=null;
+       this.uploadBelt?.dispose();
+       for(const arenas of Object.values(this.transientArenas))for(const arena of arenas)arena.buffer.destroy();

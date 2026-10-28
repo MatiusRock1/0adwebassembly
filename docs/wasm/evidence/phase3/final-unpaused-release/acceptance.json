@@ -1,0 +1,11 @@
+{
+  "passed": false,
+  "minimumDisplayedFps": 30,
+  "maximumP95FrameMs": 33.4,
+  "warmupSeconds": 120,
+  "durationSeconds": 900,
+  "runs": [],
+  "scope": "Phase 3 original 37-entity scene; full game performance requires phase 4",
+  "nativeParity": "Optimization objective, not the operator-authorized minimum",
+  "failure": "Command '['C:\\\\Users\\\\jorlu\\\\OneDrive\\\\Documentos\\\\emprendimiento\\\\0 AD\\\\0adwebassembly\\\\wasm\\\\.venv-phase3\\\\Scripts\\\\python.exe', '-u', 'C:\\\\Users\\\\jorlu\\\\OneDrive\\\\Documentos\\\\emprendimiento\\\\0 AD\\\\0adwebassembly\\\\wasm\\\\scripts\\\\benchmark-phase3.py', '--url', 'http://localhost:8089/scene.html', '--channel', 'msedge', '--high-performance-gpu', '--angle', 'd3d11', '--presentmon', 'wasm\\\\build\\\\tools\\\\PresentMon-2.6.0-x64.exe', '--output', 'docs\\\\wasm\\\\evidence\\\\phase3\\\\final-unpaused-release\\\\msedge-1.json']' returned non-zero exit status 1."
+}

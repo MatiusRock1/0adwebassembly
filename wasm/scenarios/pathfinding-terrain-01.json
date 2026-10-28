@@ -1,0 +1,14 @@
+{
+  "id": "pathfinding-terrain-01",
+  "baseCommit": "40b8794eecb9618da69e10bacffa8814c561aa51",
+  "map": "maps/scenarios/pathfinding_terrain_demo",
+  "seed": 12345,
+  "turnLengthMs": 200,
+  "initialTicks": 100,
+  "movementTicks": 1000,
+  "player": 1,
+  "entity": 8,
+  "command": {"type": "walk", "entities": [8], "x": 160, "z": 245, "queued": false},
+  "checkpoints": [1, 100, 101, 110, 200, 500, 1100],
+  "status": "native-reference-preparation"
+}

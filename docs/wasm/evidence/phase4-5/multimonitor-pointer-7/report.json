@@ -1,0 +1,193 @@
+{
+  "passed": true,
+  "phase45Accepted": false,
+  "edges": {
+    "right": {
+      "position": [
+        1919,
+        540
+      ],
+      "before": {
+        "z": 305.7017517089844,
+        "y": 91.95928192138672,
+        "x": 168.80462646484375
+      },
+      "after": {
+        "z": 305.7017517089844,
+        "y": 92.06340789794922,
+        "x": 299.68804931640625
+      },
+      "cameraDistance": 130.88346427093038
+    },
+    "bottom": {
+      "position": [
+        959,
+        1079
+      ],
+      "before": {
+        "z": 288.8027038574219,
+        "y": 92.02912139892578,
+        "x": 304.9598083496094
+      },
+      "after": {
+        "z": 195.45518493652344,
+        "y": 95.13130950927734,
+        "x": 304.9598083496094
+      },
+      "cameraDistance": 93.39905170696059
+    },
+    "left": {
+      "position": [
+        0,
+        539
+      ],
+      "before": {
+        "z": 188.29721069335938,
+        "y": 97.14277648925781,
+        "x": 289.4652099609375
+      },
+      "after": {
+        "z": 188.29721069335938,
+        "y": 92.30603790283203,
+        "x": 164.2893524169922
+      },
+      "cameraDistance": 125.26926738835631
+    },
+    "top": {
+      "position": [
+        961,
+        0
+      ],
+      "before": {
+        "z": 199.3235321044922,
+        "y": 92.27054595947266,
+        "x": 160.8033905029297
+      },
+      "after": {
+        "z": 317.7832336425781,
+        "y": 91.87850189208984,
+        "x": 160.8033905029297
+      },
+      "cameraDistance": 118.46035027401857
+    }
+  },
+  "errors": [],
+  "attributes": {
+    "settings": {
+      "Biome": "generic/temperate",
+      "Ceasefire": 0,
+      "CheatsEnabled": false,
+      "CircularMap": true,
+      "DisableSpies": false,
+      "DisableTreasures": false,
+      "LastManStanding": false,
+      "LockTeams": false,
+      "RevealMap": false,
+      "ExploreMap": false,
+      "AllyView": false,
+      "mapName": "Mainland",
+      "mapPreview": "cropped:0.78125,0.5859375:session/icons/mappreview/mainland.png",
+      "Size": 128,
+      "Nomad": false,
+      "PlayerData": [
+        {
+          "AI": false,
+          "Civ": "athen",
+          "Color": {
+            "r": 10,
+            "g": 10,
+            "b": 190
+          },
+          "Name": "Phase4Human",
+          "Removed": false,
+          "Team": -1
+        },
+        {
+          "AI": "petra",
+          "AIDiff": 3,
+          "AIBehavior": "balanced",
+          "Civ": "mace",
+          "Color": {
+            "r": 230,
+            "g": 10,
+            "b": 10
+          },
+          "Name": "Phase4Petra",
+          "Removed": false,
+          "Team": -1
+        }
+      ],
+      "PlayerPlacement": "circle",
+      "PopulationCapType": "player",
+      "PopulationCap": 200,
+      "Seed": 12345,
+      "AISeed": 54321,
+      "StartingResources": 1000,
+      "TriggerScripts": [],
+      "VictoryConditions": [
+        "conquest"
+      ]
+    },
+    "gameSpeed": 1,
+    "map": "maps/random/mainland",
+    "mapType": "random",
+    "script": "mainland.js"
+  },
+  "fullscreen": {
+    "window": {
+      "windowId": 1693801319,
+      "bounds": {
+        "left": 0,
+        "top": 0,
+        "width": 2560,
+        "height": 1080,
+        "windowState": "fullscreen"
+      }
+    },
+    "dimensions": {
+      "inner": [
+        2560,
+        1080
+      ],
+      "screen": [
+        2560,
+        1080
+      ],
+      "dpr": 1,
+      "focused": true
+    },
+    "internalResolution": [
+      1920,
+      1080
+    ]
+  },
+  "browserVersion": "155.0.8059.80",
+  "desktop": {
+    "monitors": 3,
+    "virtualWidth": 4480,
+    "virtualHeight": 1949
+  },
+  "originalCursorVisible": true,
+  "escapeReleasedPointer": true,
+  "escapeInput": "trusted browser keyboard dispatch (CDP), explicit page handler",
+  "shutdown": {
+    "samples": [
+      {
+        "seconds": 0.002169799990952015,
+        "sdk": {
+          "running": [],
+          "pooled": [],
+          "pthreads": []
+        },
+        "workers": []
+      }
+    ],
+    "sdk": {
+      "running": [],
+      "pooled": [],
+      "pthreads": []
+    },
+    "workers": [],
+    "liveApplicationTargets": []
+  }
+}

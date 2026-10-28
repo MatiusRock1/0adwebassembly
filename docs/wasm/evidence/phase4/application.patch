@@ -1,0 +1,155 @@
+--- a/source/main.cpp
++++ b/source/main.cpp
+@@ -30,6 +30,7 @@
+ // included there.
+ #define MINIMAL_PCH 2
+ #include "lib/precompiled.h"
++#include "application-clock.h"
+ 
+ #include "dapinterface/DapInterface.h"
+ #include "graphics/GameView.h"
+--- a/source/main.cpp
++++ b/source/main.cpp
+@@ -797,7 +797,8 @@
+ int main(int argc, char* argv[])
+ #endif
+ {
+-#if OS_UNIX
++#if OS_UNIX && !defined(__EMSCRIPTEN__)
++	// Browser virtual UID does not grant host root permissions.
+ 	// Don't allow people to run the game with root permissions,
+ 	//	because bad things can happen, check before we do anything
+ 	if (geteuid() == 0)
+--- a/source/main.cpp
++++ b/source/main.cpp
+@@ -744,6 +744,7 @@
+ 							return std::nullopt;
+ 					}()};
+ 
++				WasmApplication::DisplayClock browserClock;
+ 				while (g_Shutdown == ShutdownType::None)
+ 				{
+ 					if (isVisual)
+--- a/source/main.cpp
++++ b/source/main.cpp
+@@ -749,6 +749,8 @@
+ 				{
+ 					if (isVisual)
+ 					{
++						browserClock.Wait();
++						WasmApplication::ProcessTestRequest();
+ #if CONFIG2_DAP_INTERFACE
+ 						Frame(rlInterface ? &*rlInterface : nullptr, fixedFrameFrequency,
+ 							dapInterface ? &*dapInterface : nullptr);
+--- a/source/main.cpp
++++ b/source/main.cpp
+@@ -592,7 +592,7 @@
+ 	CXeromycesEngine xeromycesEngine;
+ 
+ 	// Initialise the global task manager at this point (JS & Profiler2 are set up).
+-	Threading::TaskManager taskManager;
++	Threading::TaskManager taskManager(3); // bounded browser worker pool
+ 
+ 	if (ATLAS_RunIfOnCmdLine(args, false))
+ 		return;
+--- a/source/main.cpp
++++ b/source/main.cpp
+@@ -453,6 +453,14 @@
+ 		g_SoundManager->IdleTask();
+ 
+ 	g_Renderer.RenderFrame(true);
++	static unsigned browserFrame = 0;
++	MAIN_THREAD_EM_ASM({
++		const sample = {frame:$0, tick:$1, gameStarted:Boolean($2), receivedMs:performance.now()};
++		Module.applicationState = sample;
++		(Module.applicationFrames ||= []).push(sample);
++		if (Module.applicationFrames.length > 65000) Module.applicationFrames.shift();
++	}, ++browserFrame, g_Game && g_Game->GetTurnManager() ? g_Game->GetTurnManager()->GetCurrentTurn() : 0,
++		g_Game && g_Game->IsGameStarted());
+ 
+ 	g_Profiler.Frame();
+ 
+--- a/source/ps/VideoMode.cpp
++++ b/source/ps/VideoMode.cpp
+@@ -691,7 +691,8 @@
+ 		ENSURE(m_BackendDevice);
+ 		break;
+ 	case Renderer::Backend::Backend::VULKAN:
+-		m_BackendDevice = Renderer::Backend::Vulkan::CreateDevice(window);
++		LOGERROR("Vulkan is unavailable in this WebGL browser target");
++		m_BackendDevice.reset();
+ 		// HACK: the repository doesn't have prebuilt SPIR-V shaders. So some
+ 		// users might get an error in case of missing shaders.
+ 		if (m_BackendDevice)
+--- a/source/ps/GameSetup/Paths.cpp
++++ b/source/ps/GameSetup/Paths.cpp
+@@ -169,7 +169,9 @@
+ 
+ /*static*/ OsPath Paths::Root(const OsPath& argv0)
+ {
+-#if OS_ANDROID
++#if defined(__EMSCRIPTEN__)
++	return OsPath("/data"); // browser VFS installation root
++#elif OS_ANDROID
+ 	return OsPath("/sdcard/0ad"); // TODO: this is kind of bogus
+ #else
+ 
+--- a/source/ps/VideoMode.cpp
++++ b/source/ps/VideoMode.cpp
+@@ -400,9 +400,9 @@
+ 			else
+ 			{
+ #if CONFIG2_GLES
+-				// Require GLES 2.0
++				// Require GLES 3.0 / WebGL 2 in the browser.
+ 				SDL_GL_SetAttribute(SDL_GL_CONTEXT_PROFILE_MASK, SDL_GL_CONTEXT_PROFILE_ES);
+-				SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, 2);
++				SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, 3);
+ 				SDL_GL_SetAttribute(SDL_GL_CONTEXT_MINOR_VERSION, 0);
+ #else
+ 				// Some macOS and MESA drivers might not create a context even if they can
+--- a/source/ps/VideoMode.cpp
++++ b/source/ps/VideoMode.cpp
+@@ -871,6 +871,7 @@
+ 
+ void CVideoMode::UpdateRenderer(int w, int h)
+ {
++	emscripten_set_canvas_element_size("#canvas", w, h);
+ 	if (w < 2) w = 2; // avoid GL errors caused by invalid sizes
+ 	if (h < 2) h = 2;
+ 
+--- a/source/ps/VideoMode.cpp
++++ b/source/ps/VideoMode.cpp
+@@ -18,6 +18,7 @@
+ #include "precompiled.h"
+ 
+ #include "VideoMode.h"
++#include <emscripten/html5.h>
+ 
+ #include "graphics/Camera.h"
+ #include "graphics/GameView.h"
+--- a/source/ps/TaskManager.cpp
++++ b/source/ps/TaskManager.cpp
+@@ -50,6 +50,9 @@
+ 
+ size_t GetDefaultNumberOfWorkers()
+ {
++#if defined(__EMSCRIPTEN__)
++	return MIN_WORKERS; // bounded browser worker pool
++#endif
+ 	#if defined(__EMSCRIPTEN__)
+  return MIN_WORKERS;
+ #else
+--- a/source/ps/DllLoader.cpp
++++ b/source/ps/DllLoader.cpp
+@@ -116,6 +116,10 @@
+ // @return valid handle or 0
+ static void* LoadAnyVariant(const CStr& name, std::stringstream& errors)
+ {
++#if defined(__EMSCRIPTEN__)
++	errors << "Native shared libraries are unavailable in the browser: " << name;
++	return nullptr;
++#endif
+ 	for (size_t idxSuffix = 0; idxSuffix < ARRAY_SIZE(suffixes); idxSuffix++)
+ 	{
+ 		for (size_t idxExtension = 0; idxExtension < ARRAY_SIZE(extensions); idxExtension++)

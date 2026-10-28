@@ -1,0 +1,16 @@
+diff --git a/js/src/vm/PortableBaselineInterpret.cpp b/js/src/vm/PortableBaselineInterpret.cpp
+--- a/js/src/vm/PortableBaselineInterpret.cpp
++++ b/js/src/vm/PortableBaselineInterpret.cpp
+@@ -650,10 +650,11 @@
+   if (resultId.id() >= ICRegs::kMaxICVals) FAIL_IC();
+ 
+ #define PREDICT_NEXT(name)                       \
+   if (cacheIRReader.peekOp() == CacheOp::name) { \
+     cacheIRReader.readOp();                      \
++    cacheop = CacheOp::name;                     \
+     goto cacheop_##name;                         \
+   }
+ 
+ #define PREDICT_RETURN()                                 \
+   if (cacheIRReader.peekOp() == CacheOp::ReturnFromIC) { \
+

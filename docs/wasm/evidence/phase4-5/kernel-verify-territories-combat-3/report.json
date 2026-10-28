@@ -1,0 +1,4991 @@
+{
+  "passed": false,
+  "diagnosticOnly": true,
+  "performanceAcceptance": false,
+  "errors": [],
+  "console": [
+    "{\"type\":\"ready\",\"backend\":\"webgpu\",\"powerPreference\":\"high-performance\",\"owner\":\"render-worker\",\"adapter\":{\"vendor\":\"nvidia\",\"architecture\":\"ampere\",\"device\":\"\",\"description\":\"\"},\"adapterFeatures\":[\"bgra8unorm-storage\",\"clip-distances\",\"core-features-and-limits\",\"depth-clip-control\",\"depth32float-stencil8\",\"dual-source-blending\",\"float32-blendable\",\"float32-filterable\",\"indirect-first-instance\",\"primitive-index\",\"rg11b10ufloat-renderable\",\"shader-f16\",\"subgroup-size-control\",\"subgroups\",\"texture-component-swizzle\",\"texture-compression-bc\",\"texture-compression-bc-sliced-3d\",\"texture-formats-tier1\",\"texture-formats-tier2\",\"timestamp-query\"],\"adapterLimits\":{\"maxTextureDimension1D\":16384,\"maxTextureDimension2D\":16384,\"maxTextureDimension3D\":2048,\"maxTextureArrayLayers\":2048,\"maxBindGroups\":4,\"maxBindGroupsPlusVertexBuffers\":24,\"maxBindingsPerBindGroup\":1000,\"maxDynamicUniformBuffersPerPipelineLayout\":10,\"maxDynamicStorageBuffersPerPipelineLayout\":8,\"maxSampledTexturesPerShaderStage\":48,\"maxSamplersPerShaderStage\":16,\"maxStorageBuffersPerShaderStage\":16,\"maxStorageTexturesPerShaderStage\":8,\"maxUniformBuffersPerShaderStage\":12,\"maxUniformBufferBindingSize\":65536,\"maxStorageBufferBindingSize\":2147483644,\"minUniformBufferOffsetAlignment\":256,\"minStorageBufferOffsetAlignment\":256,\"maxVertexBuffers\":8,\"maxBufferSize\":2147483648,\"maxVertexAttributes\":30,\"maxVertexBufferArrayStride\":2048,\"maxInterStageShaderVariables\":28,\"maxColorAttachments\":8,\"maxColorAttachmentBytesPerSample\":128,\"maxComputeWorkgroupStorageSize\":32768,\"maxComputeInvocationsPerWorkgroup\":1024,\"maxComputeWorkgroupSizeX\":1024,\"maxComputeWorkgroupSizeY\":1024,\"maxComputeWorkgroupSizeZ\":64,\"maxComputeWorkgroupsPerDimension\":65535,\"maxImmediateSize\":64,\"maxStorageBuffersInFragmentStage\":16,\"maxStorageTexturesInFragmentStage\":8,\"maxStorageBuffersInVertexStage\":16,\"maxStorageTexturesInVertexStage\":8},\"deviceFeatures\":[\"core-features-and-limits\",\"depth32float-stencil8\",\"dual-source-blending\",\"float32-blendable\",\"float32-filterable\",\"rg11b10ufloat-renderable\",\"texture-compression-bc\"],\"deviceLimits\":{\"maxTextureDimension1D\":8192,\"maxTextureDimension2D\":8192,\"maxTextureDimension3D\":2048,\"maxTextureArrayLayers\":256,\"maxBindGroups\":4,\"maxBindGroupsPlusVertexBuffers\":24,\"maxBindingsPerBindGroup\":1000,\"maxDynamicUniformBuffersPerPipelineLayout\":8,\"maxDynamicStorageBuffersPerPipelineLayout\":4,\"maxSampledTexturesPerShaderStage\":16,\"maxSamplersPerShaderStage\":16,\"maxStorageBuffersPerShaderStage\":8,\"maxStorageTexturesPerShaderStage\":4,\"maxUniformBuffersPerShaderStage\":12,\"maxUniformBufferBindingSize\":65536,\"maxStorageBufferBindingSize\":134217728,\"minUniformBufferOffsetAlignment\":256,\"minStorageBufferOffsetAlignment\":256,\"maxVertexBuffers\":8,\"maxBufferSize\":268435456,\"maxVertexAttributes\":16,\"maxVertexBufferArrayStride\":2048,\"maxInterStageShaderVariables\":16,\"maxColorAttachments\":8,\"maxColorAttachmentBytesPerSample\":32,\"maxComputeWorkgroupStorageSize\":16384,\"maxComputeInvocationsPerWorkgroup\":256,\"maxComputeWorkgroupSizeX\":256,\"maxComputeWorkgroupSizeY\":256,\"maxComputeWorkgroupSizeZ\":64,\"maxComputeWorkgroupsPerDimension\":65535,\"maxImmediateSize\":64,\"maxStorageBuffersInFragmentStage\":8,\"maxStorageTexturesInFragmentStage\":4,\"maxStorageBuffersInVertexStage\":8,\"maxStorageTexturesInVertexStage\":4},\"unavailableOptionalFeatures\":[],\"fallbackAdapter\":null,\"format\":\"bgra8unorm\"}",
+    "Main log written to '/logs/mainlog.html'",
+    "Interesting log written to '/logs/interestinglog.html'",
+    "Sound: AlcInit success, using Emscripten OpenAL",
+    "Hardware details written to '/logs/system_info.txt'",
+    "Failed to query SDL WM info: That operation is not supportedUserReport written to '/logs/userreport_hwdetect.txt'",
+    "Failed to load resource: the server responded with a status of 404 (File not found)",
+    "JSON data written to '/data/config/matchsettings.json'",
+    "SCENE_ACTOR_QUALITY_HOOK_BEGIN",
+    "SCENE_QUALITY_GET_BEGIN",
+    "SCENE_QUALITY_GET_END 200 100",
+    "SCENE_QUALITY_INTERPOLATE_BEGIN",
+    "SCENE_QUALITY_INTERPOLATE_END",
+    "SCENE_ACTOR_QUALITY_HOOK_END",
+    "SCENE_ACTOR_VALIDATOR_BEGIN",
+    "Replay written to '/data/replays/0.29.0/2026-10-24_0001'",
+    "Setting biome generic/temperate.",
+    "Creating playerbases...",
+    "Creating bumps...",
+    "Creating mountains...",
+    "Creating forests...",
+    "Creating dirt patches...",
+    "Creating grass patches...",
+    "Creating metal mines...",
+    "Creating stone mines...",
+    "Creating decoration...",
+    "Creating food...",
+    "Creating food...",
+    "Creating straggler trees...",
+    "Map generation finished.",
+    "Total entities: 3001, Terrain entities: 1961, Textures: 10.",
+    "{\"type\":\"sampler-address-emulation\",\"label\":\"art/textures/skins/props/decal_struct_paving_aegean_large.png\",\"requested\":[3,3,0],\"effective\":\"portable border filtering in the original shader sampling path\"}",
+    "GAME STARTED, ALL INIT COMPLETE",
+    "{\"type\":\"sampler-address-emulation\",\"label\":\"art/textures/misc/territory_border.png\",\"requested\":[3,2,0],\"effective\":\"portable border filtering in the original shader sampling path\"}"
+  ],
+  "workload": "combat",
+  "packageDirectory": "C:\\Users\\jorlu\\OneDrive\\Documentos\\emprendimiento\\0 AD\\0adwebassembly\\wasm\\dist\\application-phase4-5-kernel-verify-5",
+  "aiWorkerMode": null,
+  "buildSHA256": {
+    "pyrogenesis-application.mjs": "dd1a47a54abda497fbeef860f3553b431806ac4e1af266da98a7b9b8db4f6590",
+    "pyrogenesis-application.wasm": "4eab3f1538aab913dd63203be9f52f2bc29c14a4cdb1c847796c81a4c6771a36",
+    "application.html": "9d76e77fae999d877dfb3cd0f977f8e262a8fceab5ce7bc7d28dbb31d8bb6653",
+    "application.mjs": "0cdc65e98d2b4668db00b8ec7cbbb45e7c901d24fd4b69d19e57f2acff7f0e2d",
+    "application-data.json": "de2ef3f3f216e1bfb2c325df5e1d9e0b9cdcff7f621df812eb4b22dd872a60bf",
+    "webgpu-shaders.json": "8d9280a27514b940ed61a9d0710ad92c39c8b425ff013b2d29c8b4fb33f08085",
+    "renderer-session.mjs": "970bb6a44961f620da6a62bedb93bc18c62169373eb86cbbf9b9a7b56ecf0076",
+    "webgpu-engine.mjs": "16d8678be8fcd0b80a1f4b4d8baec80903f09a574a75ce48418691ae52d5c076",
+    "webgpu-border.mjs": "e9a7d9a88ac447b908249dc863e8adf9907b07830615019699588cbb2d695e8b",
+    "webgpu-upload.mjs": "0ecfdb50d3f48d9e6edbf3dc53caf7a51da545db34ba732426ea6433ee387970",
+    "webgpu-dispatch.mjs": "49cbe7a352ccfae51bc7762d531e3c5930fa62737d82ba79673e03a7d2bb6287",
+    "webgpu-upload-probe.mjs": "a205ddc484108ee989dbd062203512d8e5ea08f2a65821ff01c6db6c36d44d5b",
+    "application-pointer.mjs": "0e781c584dff24c3005f875b070f715046dabe3ea1e388edfecd3f998b36bb47",
+    "application-failure.mjs": "6f5b5d70105db9366e978fd0ba7a51578db9b22298c1272f24795f23b591ccc1",
+    "shared-request.mjs": "bca23eebff9eb199449b1cd3959804162cda310cc64ae689a7d601599eadfb8d",
+    "webgpu-worker-bridge.mjs": "5a50dff2872e302afe38cb8041a57bb59398a102b4841a197ad95f1d0d41092c",
+    "webgpu-render-worker.mjs": "81bbf10743ebd7a7b0605f7d2abcf94a40ec7147861c25d1d6381a5b3266a73b",
+    "webgpu-worker-present.mjs": "d2b064679997d0c3bb24db9373f973a254b4a8fd2124d71a4c263fc1f27b7d75",
+    "webgpu-pipeline-pending.mjs": "7b02f374a8f2527739d4af53495f7337e2a40deb53740795c74f5016a54c284d",
+    "application-archives.mjs": "c0f8ef033999894af7be1904d347c35f38cbba21ce2158521eb5c634956ce7da",
+    "archive-worker.mjs": "eeb540c8b915421bc2a09bce894ce789f5c0649928329c12434d7c0cfea81965",
+    "archive-blocks.mjs": "8aadd5a67450b402a94c47ea0a7405b71ab5e376d816f71ded958a2a4fae5c41",
+    "archive-blocks.json": "71bf0f1a917f53a7234698f7bf74eb4ec83df2a0a1401c98c93f6db20e699f93"
+  },
+  "symbolsSHA256": "a3cd196bfc1c64423c7de60630ed6d98f3c4e45004a57748e3c72711f7c1b5e7",
+  "applicationURL": "http://localhost:8097/application.html?automation=1",
+  "attributes": {
+    "settings": {
+      "Biome": "generic/temperate",
+      "Ceasefire": 0,
+      "CheatsEnabled": true,
+      "CircularMap": true,
+      "DisableSpies": false,
+      "DisableTreasures": false,
+      "LastManStanding": false,
+      "LockTeams": false,
+      "RevealMap": false,
+      "ExploreMap": false,
+      "AllyView": false,
+      "mapName": "Mainland",
+      "mapPreview": "cropped:0.78125,0.5859375:session/icons/mappreview/mainland.png",
+      "Size": 256,
+      "Nomad": false,
+      "PlayerData": [
+        {
+          "AI": false,
+          "Civ": "athen",
+          "Color": {
+            "r": 10,
+            "g": 10,
+            "b": 190
+          },
+          "Name": "Phase4Human",
+          "Removed": false,
+          "Team": -1
+        },
+        {
+          "AI": "petra",
+          "AIDiff": 3,
+          "AIBehavior": "balanced",
+          "Civ": "mace",
+          "Color": {
+            "r": 230,
+            "g": 10,
+            "b": 10
+          },
+          "Name": "Phase4Petra",
+          "Removed": false,
+          "Team": -1
+        }
+      ],
+      "PlayerPlacement": "circle",
+      "PopulationCapType": "player",
+      "PopulationCap": 200,
+      "Seed": 12345,
+      "AISeed": 54321,
+      "StartingResources": 10000,
+      "TriggerScripts": [],
+      "VictoryConditions": []
+    },
+    "gameSpeed": 1,
+    "map": "maps/random/mainland",
+    "mapType": "random",
+    "script": "mainland.js"
+  },
+  "setup": {
+    "state": {
+      "players": [
+        {
+          "player": 1,
+          "cc": {
+            "id": 150,
+            "player": 1,
+            "template": "structures/athen/civil_centre",
+            "identity": {
+              "rank": "",
+              "rankTechName": "",
+              "classes": [
+                "Structure",
+                "ConquestCritical",
+                "CivCentre",
+                "Civic",
+                "Defensive",
+                "CivilCentre"
+              ],
+              "selectionGroupName": "template_structure_civic_civil_centre",
+              "canDelete": true,
+              "controllable": true
+            },
+            "position": {
+              "x": 304,
+              "y": 23,
+              "z": 804
+            },
+            "hitpoints": 3300.0000000000005,
+            "maxHitpoints": 3300.0000000000005,
+            "needsRepair": false,
+            "needsHeal": false,
+            "capturePoints": [
+              0,
+              2750,
+              0
+            ],
+            "maxCapturePoints": 2750,
+            "population": {
+              "bonus": 20
+            },
+            "researcher": {
+              "technologies": [
+                "phase_town_athen",
+                "unlock_shared_los",
+                "hoplite_tradition",
+                "unlock_spies"
+              ],
+              "techCostMultiplier": {
+                "food": 0.7,
+                "wood": 0.7,
+                "stone": 0.7,
+                "metal": 0.7,
+                "time": 0.5
+              }
+            },
+            "statusEffects": {},
+            "production": {
+              "queue": [],
+              "autoqueue": false
+            },
+            "trainer": {
+              "entities": [
+                "units/athen/support_civilian",
+                "units/athen/infantry_spearman_b",
+                "units/athen/infantry_slinger_b",
+                "units/athen/cavalry_javelineer_b"
+              ]
+            },
+            "repairable": {
+              "numBuilders": 0,
+              "buildTime": {
+                "timeRemaining": 0,
+                "timeRemainingNew": 0
+              }
+            },
+            "rallyPoint": {},
+            "garrisonHolder": {
+              "entities": [],
+              "buffHeal": 1,
+              "allowedClasses": "Support Infantry Cavalry",
+              "capacity": 20,
+              "occupiedSlots": 0
+            },
+            "guard": {
+              "entities": []
+            },
+            "alertRaiser": {
+              "classes": "Civilian"
+            },
+            "visibility": "visible",
+            "attack": {
+              "Ranged": {
+                "Damage": {
+                  "Pierce": 8
+                },
+                "attackName": {
+                  "name": "Bow"
+                },
+                "projectileCount": 1,
+                "minRange": 0,
+                "maxRange": 60,
+                "yOrigin": 0,
+                "prepareTime": 400,
+                "repeatTime": 4000,
+                "elevationAdaptedRange": 60.074981689453125
+              }
+            },
+            "resistance": {
+              "Damage": {
+                "Crush": 3,
+                "Hack": 29,
+                "Pierce": 35
+              },
+              "ApplyStatus": {
+                "Poisoned": {
+                  "duration": 0,
+                  "blockChance": 1
+                }
+              }
+            },
+            "buildingAI": {
+              "defaultArrowCount": 6,
+              "maxArrowCount": null,
+              "garrisonArrowMultiplier": 1,
+              "garrisonArrowClasses": [
+                "Soldier"
+              ],
+              "arrowCount": 6
+            },
+            "resourceDropsite": {
+              "types": [
+                "food",
+                "wood",
+                "stone",
+                "metal"
+              ],
+              "sharable": true,
+              "shared": true
+            },
+            "loot": {
+              "food": 0,
+              "wood": 60,
+              "stone": 60,
+              "metal": 50,
+              "xp": 0
+            }
+          },
+          "units": [
+            {
+              "id": 151,
+              "position": {
+                "x": 278.54412841796875,
+                "y": 22.999282836914062,
+                "z": 795.5147094726562
+              },
+              "hitpoints": 25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 152,
+              "position": {
+                "x": 284.20098876953125,
+                "y": 22.999282836914062,
+                "z": 789.8578491210938
+              },
+              "hitpoints": 25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 153,
+              "position": {
+                "x": 289.85784912109375,
+                "y": 22.999282836914062,
+                "z": 784.2009887695312
+              },
+              "hitpoints": 25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 154,
+              "position": {
+                "x": 295.51470947265625,
+                "y": 22.999282836914062,
+                "z": 778.5441284179688
+              },
+              "hitpoints": 25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 155,
+              "position": {
+                "x": 323.79901123046875,
+                "y": 22.999282836914062,
+                "z": 789.8578491210938
+              },
+              "hitpoints": 100,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 156,
+              "position": {
+                "x": 318.14215087890625,
+                "y": 22.999282836914062,
+                "z": 784.2009887695312
+              },
+              "hitpoints": 100,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 157,
+              "position": {
+                "x": 323.79901123046875,
+                "y": 22.999282836914062,
+                "z": 818.1421508789062
+              },
+              "hitpoints": 50,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 158,
+              "position": {
+                "x": 318.14215087890625,
+                "y": 22.999282836914062,
+                "z": 823.7990112304688
+              },
+              "hitpoints": 50,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 159,
+              "position": {
+                "x": 287.0294189453125,
+                "y": 23,
+                "z": 820.9705810546875
+              },
+              "hitpoints": 100,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3152,
+              "position": {
+                "x": 316.16773986816406,
+                "y": 23,
+                "z": 791.832763671875
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3153,
+              "position": {
+                "x": 317.86553955078125,
+                "y": 22.999282836914062,
+                "z": 790.1350402832031
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3154,
+              "position": {
+                "x": 319.56333923339844,
+                "y": 22.999282836914062,
+                "z": 788.4373168945312
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3155,
+              "position": {
+                "x": 314.4295654296875,
+                "y": 23,
+                "z": 790.0945129394531
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3156,
+              "position": {
+                "x": 316.1324157714844,
+                "y": 22.999282836914062,
+                "z": 788.4018402099609
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3157,
+              "position": {
+                "x": 317.8341522216797,
+                "y": 23,
+                "z": 786.7080535888672
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3158,
+              "position": {
+                "x": 317.90589904785156,
+                "y": 23,
+                "z": 793.5709991455078
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3159,
+              "position": {
+                "x": 319.59864807128906,
+                "y": 23,
+                "z": 791.8682250976562
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3160,
+              "position": {
+                "x": 321.2925109863281,
+                "y": 23,
+                "z": 790.1665649414062
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3161,
+              "position": {
+                "x": 312.69139099121094,
+                "y": 22.999282836914062,
+                "z": 788.3562622070312
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3162,
+              "position": {
+                "x": 314.3992919921875,
+                "y": 23,
+                "z": 786.6686553955078
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3163,
+              "position": {
+                "x": 316.10496520996094,
+                "y": 22.999282836914062,
+                "z": 784.9787902832031
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3164,
+              "position": {
+                "x": 319.6440734863281,
+                "y": 23,
+                "z": 795.3092498779297
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3165,
+              "position": {
+                "x": 321.33177185058594,
+                "y": 22.999282836914062,
+                "z": 793.6014099121094
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3166,
+              "position": {
+                "x": 323.0216979980469,
+                "y": 22.999282836914062,
+                "z": 791.8958282470703
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3167,
+              "position": {
+                "x": 310.9532165527344,
+                "y": 22.999282836914062,
+                "z": 786.6180114746094
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3168,
+              "position": {
+                "x": 312.6661834716797,
+                "y": 23,
+                "z": 784.9354553222656
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3169,
+              "position": {
+                "x": 314.3757781982422,
+                "y": 23,
+                "z": 783.2495269775391
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3170,
+              "position": {
+                "x": 321.3822479248047,
+                "y": 23,
+                "z": 797.0475006103516
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3171,
+              "position": {
+                "x": 323.06488037109375,
+                "y": 22.999282836914062,
+                "z": 795.3346099853516
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3172,
+              "position": {
+                "x": 324.7508850097656,
+                "y": 23,
+                "z": 793.6250915527344
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3173,
+              "position": {
+                "x": 309.2150421142578,
+                "y": 22.999282836914062,
+                "z": 784.8797607421875
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3174,
+              "position": {
+                "x": 310.9330596923828,
+                "y": 22.999282836914062,
+                "z": 783.2022552490234
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3175,
+              "position": {
+                "x": 312.64659118652344,
+                "y": 22.999282836914062,
+                "z": 781.5202789306641
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3176,
+              "position": {
+                "x": 323.12042236328125,
+                "y": 22.999282836914062,
+                "z": 798.7857513427734
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3177,
+              "position": {
+                "x": 324.7980041503906,
+                "y": 23,
+                "z": 797.0678100585938
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3178,
+              "position": {
+                "x": 326.4800720214844,
+                "y": 22.999282836914062,
+                "z": 795.3543395996094
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3179,
+              "position": {
+                "x": 307.47686767578125,
+                "y": 22.999282836914062,
+                "z": 783.1415100097656
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3180,
+              "position": {
+                "x": 309.199951171875,
+                "y": 23,
+                "z": 781.4690704345703
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3181,
+              "position": {
+                "x": 310.9174041748047,
+                "y": 23,
+                "z": 779.7910003662109
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3182,
+              "position": {
+                "x": 324.8585968017578,
+                "y": 22.999282836914062,
+                "z": 800.5240020751953
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3183,
+              "position": {
+                "x": 326.53111267089844,
+                "y": 22.999282836914062,
+                "z": 798.8009948730469
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3184,
+              "position": {
+                "x": 328.2092590332031,
+                "y": 23,
+                "z": 797.0836181640625
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3185,
+              "position": {
+                "x": 305.7386932373047,
+                "y": 23,
+                "z": 781.4032592773438
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3186,
+              "position": {
+                "x": 307.4668273925781,
+                "y": 23,
+                "z": 779.7358703613281
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3187,
+              "position": {
+                "x": 309.18821716308594,
+                "y": 22.999282836914062,
+                "z": 778.0617523193359
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3188,
+              "position": {
+                "x": 326.5967712402344,
+                "y": 22.999282836914062,
+                "z": 802.2622528076172
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3189,
+              "position": {
+                "x": 328.2642364501953,
+                "y": 22.999282836914062,
+                "z": 800.5341949462891
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3190,
+              "position": {
+                "x": 329.9384460449219,
+                "y": 22.999282836914062,
+                "z": 798.8128662109375
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3191,
+              "position": {
+                "x": 304.00050354003906,
+                "y": 23,
+                "z": 779.6650085449219
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3192,
+              "position": {
+                "x": 305.73370361328125,
+                "y": 22.999282836914062,
+                "z": 778.002685546875
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3193,
+              "position": {
+                "x": 307.4590301513672,
+                "y": 23,
+                "z": 776.3324890136719
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3194,
+              "position": {
+                "x": 328.3349609375,
+                "y": 23,
+                "z": 804.0005035400391
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3195,
+              "position": {
+                "x": 329.9973602294922,
+                "y": 23,
+                "z": 802.2673797607422
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3196,
+              "position": {
+                "x": 331.6676330566406,
+                "y": 23,
+                "z": 800.5421295166016
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3197,
+              "position": {
+                "x": 302.2622528076172,
+                "y": 23,
+                "z": 781.4031982421875
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3198,
+              "position": {
+                "x": 304.0005798339844,
+                "y": 22.999282836914062,
+                "z": 776.2694854736328
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3199,
+              "position": {
+                "x": 305.72984313964844,
+                "y": 22.999282836914062,
+                "z": 774.6032257080078
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3200,
+              "position": {
+                "x": 326.5967102050781,
+                "y": 23,
+                "z": 805.7386932373047
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3201,
+              "position": {
+                "x": 331.73048400878906,
+                "y": 23,
+                "z": 804.0005798339844
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3202,
+              "position": {
+                "x": 333.3968200683594,
+                "y": 22.999282836914062,
+                "z": 802.2713928222656
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3203,
+              "position": {
+                "x": 300.5240020751953,
+                "y": 22.999282836914062,
+                "z": 783.1413726806641
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3204,
+              "position": {
+                "x": 302.2673797607422,
+                "y": 23,
+                "z": 778.0026092529297
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3205,
+              "position": {
+                "x": 304.0006561279297,
+                "y": 23,
+                "z": 772.8739624023438
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3206,
+              "position": {
+                "x": 324.85845947265625,
+                "y": 22.999282836914062,
+                "z": 807.4768676757812
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3207,
+              "position": {
+                "x": 329.9972839355469,
+                "y": 22.999282836914062,
+                "z": 805.7337036132812
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3208,
+              "position": {
+                "x": 335.1260070800781,
+                "y": 23,
+                "z": 804.0006561279297
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3209,
+              "position": {
+                "x": 298.78575134277344,
+                "y": 22.999282836914062,
+                "z": 784.8795471191406
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3210,
+              "position": {
+                "x": 300.53419494628906,
+                "y": 23,
+                "z": 779.7357330322266
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3211,
+              "position": {
+                "x": 302.2713928222656,
+                "y": 23,
+                "z": 774.6031494140625
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3212,
+              "position": {
+                "x": 323.1202087402344,
+                "y": 22.999282836914062,
+                "z": 809.2150421142578
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3213,
+              "position": {
+                "x": 328.26409912109375,
+                "y": 22.999282836914062,
+                "z": 807.4668273925781
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3214,
+              "position": {
+                "x": 333.39674377441406,
+                "y": 23,
+                "z": 805.7298431396484
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3215,
+              "position": {
+                "x": 297.04750061035156,
+                "y": 23,
+                "z": 786.6177215576172
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3216,
+              "position": {
+                "x": 298.8009948730469,
+                "y": 22.999282836914062,
+                "z": 781.4688568115234
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3217,
+              "position": {
+                "x": 300.54212951660156,
+                "y": 23,
+                "z": 776.3323364257812
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3218,
+              "position": {
+                "x": 321.3819580078125,
+                "y": 23,
+                "z": 810.9532165527344
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3219,
+              "position": {
+                "x": 326.53089904785156,
+                "y": 23,
+                "z": 809.199951171875
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3220,
+              "position": {
+                "x": 331.66748046875,
+                "y": 23,
+                "z": 807.4590301513672
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3221,
+              "position": {
+                "x": 295.3092498779297,
+                "y": 23,
+                "z": 788.3558959960938
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3222,
+              "position": {
+                "x": 297.06781005859375,
+                "y": 22.999282836914062,
+                "z": 783.2019653320312
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3223,
+              "position": {
+                "x": 298.8128662109375,
+                "y": 23,
+                "z": 778.0615234375
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3224,
+              "position": {
+                "x": 319.6437072753906,
+                "y": 23,
+                "z": 812.6913909912109
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3225,
+              "position": {
+                "x": 324.79771423339844,
+                "y": 22.999282836914062,
+                "z": 810.9330596923828
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3226,
+              "position": {
+                "x": 329.93821716308594,
+                "y": 22.999282836914062,
+                "z": 809.1882171630859
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3227,
+              "position": {
+                "x": 293.5709991455078,
+                "y": 22.999282836914062,
+                "z": 790.0940704345703
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3228,
+              "position": {
+                "x": 295.33460998535156,
+                "y": 23,
+                "z": 784.9350891113281
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3229,
+              "position": {
+                "x": 317.90545654296875,
+                "y": 22.999282836914062,
+                "z": 814.4295654296875
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3230,
+              "position": {
+                "x": 323.06451416015625,
+                "y": 22.999282836914062,
+                "z": 812.6661834716797
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3231,
+              "position": {
+                "x": 328.20896911621094,
+                "y": 22.999282836914062,
+                "z": 810.9174041748047
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3232,
+              "position": {
+                "x": 291.832763671875,
+                "y": 23,
+                "z": 791.8322448730469
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3233,
+              "position": {
+                "x": 293.6014099121094,
+                "y": 22.999282836914062,
+                "z": 786.6681976318359
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3234,
+              "position": {
+                "x": 295.3543395996094,
+                "y": 22.999282836914062,
+                "z": 781.5198974609375
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3235,
+              "position": {
+                "x": 316.16722106933594,
+                "y": 22.999282836914062,
+                "z": 816.1677398681641
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3236,
+              "position": {
+                "x": 321.33131408691406,
+                "y": 23,
+                "z": 814.3992919921875
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3237,
+              "position": {
+                "x": 326.4796905517578,
+                "y": 22.999282836914062,
+                "z": 812.6465911865234
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3238,
+              "position": {
+                "x": 290.0945129394531,
+                "y": 23,
+                "z": 793.5704040527344
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3239,
+              "position": {
+                "x": 291.86822509765625,
+                "y": 22.999282836914062,
+                "z": 788.4013214111328
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3240,
+              "position": {
+                "x": 293.6250915527344,
+                "y": 22.999282836914062,
+                "z": 783.2490844726562
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3241,
+              "position": {
+                "x": 314.42897033691406,
+                "y": 23,
+                "z": 817.9058990478516
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3242,
+              "position": {
+                "x": 319.59812927246094,
+                "y": 22.999282836914062,
+                "z": 816.1324157714844
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3243,
+              "position": {
+                "x": 324.7504425048828,
+                "y": 22.999282836914062,
+                "z": 814.3757781982422
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3244,
+              "position": {
+                "x": 288.35626220703125,
+                "y": 22.999282836914062,
+                "z": 795.3085784912109
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3245,
+              "position": {
+                "x": 290.1350402832031,
+                "y": 23,
+                "z": 790.1344451904297
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3246,
+              "position": {
+                "x": 291.8958282470703,
+                "y": 22.999282836914062,
+                "z": 784.978271484375
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3247,
+              "position": {
+                "x": 312.6907196044922,
+                "y": 23,
+                "z": 819.6440734863281
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3344,
+              "position": {
+                "x": 317.8649444580078,
+                "y": 22.999282836914062,
+                "z": 817.8655395507812
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3345,
+              "position": {
+                "x": 323.02117919921875,
+                "y": 22.999282836914062,
+                "z": 816.1049652099609
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3346,
+              "position": {
+                "x": 286.6180114746094,
+                "y": 22.999282836914062,
+                "z": 797.0467529296875
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3347,
+              "position": {
+                "x": 288.40184020996094,
+                "y": 22.999282836914062,
+                "z": 791.8675537109375
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3348,
+              "position": {
+                "x": 290.16656494140625,
+                "y": 22.999282836914062,
+                "z": 786.7074584960938
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3349,
+              "position": {
+                "x": 310.9524688720703,
+                "y": 22.999282836914062,
+                "z": 821.3822479248047
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3350,
+              "position": {
+                "x": 316.1317443847656,
+                "y": 23,
+                "z": 819.5986480712891
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3351,
+              "position": {
+                "x": 321.2919158935547,
+                "y": 23,
+                "z": 817.8341522216797
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3352,
+              "position": {
+                "x": 284.8797607421875,
+                "y": 23,
+                "z": 798.7849273681641
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3353,
+              "position": {
+                "x": 286.6686553955078,
+                "y": 22.999282836914062,
+                "z": 793.6006774902344
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3354,
+              "position": {
+                "x": 288.43731689453125,
+                "y": 22.999282836914062,
+                "z": 788.4366455078125
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3355,
+              "position": {
+                "x": 309.21421813964844,
+                "y": 22.999282836914062,
+                "z": 823.1204223632812
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3356,
+              "position": {
+                "x": 314.3985595703125,
+                "y": 23,
+                "z": 821.3317718505859
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3357,
+              "position": {
+                "x": 319.5626678466797,
+                "y": 23,
+                "z": 819.5633392333984
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3358,
+              "position": {
+                "x": 283.1415100097656,
+                "y": 23,
+                "z": 800.5231018066406
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3359,
+              "position": {
+                "x": 284.9354553222656,
+                "y": 23,
+                "z": 795.3337860107422
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3360,
+              "position": {
+                "x": 286.7080535888672,
+                "y": 23,
+                "z": 790.1658172607422
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3361,
+              "position": {
+                "x": 307.47596740722656,
+                "y": 23,
+                "z": 824.8585968017578
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3362,
+              "position": {
+                "x": 312.6653594970703,
+                "y": 22.999282836914062,
+                "z": 823.0648803710938
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3363,
+              "position": {
+                "x": 317.8334045410156,
+                "y": 23,
+                "z": 821.2925109863281
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3364,
+              "position": {
+                "x": 281.40325927734375,
+                "y": 22.999282836914062,
+                "z": 802.2612762451172
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3365,
+              "position": {
+                "x": 283.20225524902344,
+                "y": 22.999282836914062,
+                "z": 797.0669097900391
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3366,
+              "position": {
+                "x": 284.9787902832031,
+                "y": 23,
+                "z": 791.8950042724609
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3367,
+              "position": {
+                "x": 305.7377166748047,
+                "y": 23,
+                "z": 826.5967712402344
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3368,
+              "position": {
+                "x": 310.9321594238281,
+                "y": 23,
+                "z": 824.7980041503906
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3369,
+              "position": {
+                "x": 316.10414123535156,
+                "y": 23,
+                "z": 823.0216979980469
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3370,
+              "position": {
+                "x": 279.6650085449219,
+                "y": 22.999282836914062,
+                "z": 803.9994659423828
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3371,
+              "position": {
+                "x": 281.4690704345703,
+                "y": 22.999282836914062,
+                "z": 798.8000183105469
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3372,
+              "position": {
+                "x": 283.24952697753906,
+                "y": 23,
+                "z": 793.6241912841797
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3373,
+              "position": {
+                "x": 303.9994659423828,
+                "y": 22.999282836914062,
+                "z": 828.3349609375
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3374,
+              "position": {
+                "x": 309.198974609375,
+                "y": 23,
+                "z": 826.5311126708984
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3375,
+              "position": {
+                "x": 314.3748779296875,
+                "y": 23,
+                "z": 824.7508850097656
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3376,
+              "position": {
+                "x": 281.4031982421875,
+                "y": 23,
+                "z": 805.7377166748047
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3377,
+              "position": {
+                "x": 279.7358703613281,
+                "y": 23,
+                "z": 800.5331420898438
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3378,
+              "position": {
+                "x": 281.52027893066406,
+                "y": 23,
+                "z": 795.3533782958984
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3379,
+              "position": {
+                "x": 302.2612762451172,
+                "y": 23,
+                "z": 826.5967102050781
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3380,
+              "position": {
+                "x": 307.4657745361328,
+                "y": 22.999282836914062,
+                "z": 828.2642364501953
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3381,
+              "position": {
+                "x": 312.6456298828125,
+                "y": 23,
+                "z": 826.4800720214844
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3382,
+              "position": {
+                "x": 283.14137268066406,
+                "y": 23,
+                "z": 807.4759674072266
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3383,
+              "position": {
+                "x": 278.002685546875,
+                "y": 23,
+                "z": 802.2662658691406
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3384,
+              "position": {
+                "x": 300.5231018066406,
+                "y": 23,
+                "z": 824.8584594726562
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3385,
+              "position": {
+                "x": 305.7325897216797,
+                "y": 23,
+                "z": 829.9973602294922
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3386,
+              "position": {
+                "x": 310.9163513183594,
+                "y": 22.999282836914062,
+                "z": 828.2092590332031
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3387,
+              "position": {
+                "x": 284.8795471191406,
+                "y": 23,
+                "z": 809.2142181396484
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3388,
+              "position": {
+                "x": 276.2694854736328,
+                "y": 22.999282836914062,
+                "z": 803.9993896484375
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3389,
+              "position": {
+                "x": 278.06175231933594,
+                "y": 22.999282836914062,
+                "z": 798.8117523193359
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3390,
+              "position": {
+                "x": 298.78492736816406,
+                "y": 23,
+                "z": 823.1202087402344
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3391,
+              "position": {
+                "x": 303.9993896484375,
+                "y": 23,
+                "z": 831.7304840087891
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            }
+          ]
+        },
+        {
+          "player": 2,
+          "cc": {
+            "id": 182,
+            "player": 2,
+            "template": "structures/mace/civil_centre",
+            "identity": {
+              "rank": "",
+              "rankTechName": "",
+              "classes": [
+                "Structure",
+                "ConquestCritical",
+                "CivCentre",
+                "Civic",
+                "Defensive",
+                "CivilCentre"
+              ],
+              "selectionGroupName": "template_structure_civic_civil_centre",
+              "canDelete": true,
+              "controllable": true
+            },
+            "position": {
+              "x": 720,
+              "y": 23,
+              "z": 220
+            },
+            "hitpoints": 3300.0000000000005,
+            "maxHitpoints": 3300.0000000000005,
+            "needsRepair": false,
+            "needsHeal": false,
+            "capturePoints": [
+              0,
+              0,
+              2750
+            ],
+            "maxCapturePoints": 2750,
+            "population": {
+              "bonus": 20
+            },
+            "researcher": {
+              "technologies": [
+                "phase_town_generic",
+                "unlock_shared_los",
+                "hellenistic_metropolis",
+                "unlock_spies"
+              ],
+              "techCostMultiplier": {
+                "food": 1,
+                "wood": 1,
+                "stone": 1,
+                "metal": 1,
+                "time": 1
+              }
+            },
+            "statusEffects": {},
+            "production": {
+              "queue": [],
+              "autoqueue": false
+            },
+            "trainer": {
+              "entities": [
+                "units/mace/support_civilian",
+                "units/mace/infantry_pikeman_b",
+                "units/mace/infantry_javelineer_b",
+                "units/mace/cavalry_spearman_b"
+              ]
+            },
+            "repairable": {
+              "numBuilders": 0,
+              "buildTime": {
+                "timeRemaining": 0,
+                "timeRemainingNew": 0
+              }
+            },
+            "rallyPoint": {},
+            "garrisonHolder": {
+              "entities": [],
+              "buffHeal": 1,
+              "allowedClasses": "Support Infantry Cavalry",
+              "capacity": 20,
+              "occupiedSlots": 0
+            },
+            "guard": {
+              "entities": []
+            },
+            "alertRaiser": {
+              "classes": "Civilian"
+            },
+            "visibility": "visible",
+            "attack": {
+              "Ranged": {
+                "Damage": {
+                  "Pierce": 8
+                },
+                "attackName": {
+                  "name": "Bow"
+                },
+                "projectileCount": 1,
+                "minRange": 0,
+                "maxRange": 60,
+                "yOrigin": 0,
+                "prepareTime": 400,
+                "repeatTime": 4000,
+                "elevationAdaptedRange": 60.074981689453125
+              }
+            },
+            "resistance": {
+              "Damage": {
+                "Crush": 3,
+                "Hack": 29,
+                "Pierce": 35
+              },
+              "ApplyStatus": {
+                "Poisoned": {
+                  "duration": 0,
+                  "blockChance": 1
+                }
+              }
+            },
+            "buildingAI": {
+              "defaultArrowCount": 6,
+              "maxArrowCount": null,
+              "garrisonArrowMultiplier": 1,
+              "garrisonArrowClasses": [
+                "Soldier"
+              ],
+              "arrowCount": 6
+            },
+            "resourceDropsite": {
+              "types": [
+                "food",
+                "wood",
+                "stone",
+                "metal"
+              ],
+              "sharable": true,
+              "shared": true
+            },
+            "loot": {
+              "food": 0,
+              "wood": 60,
+              "stone": 60,
+              "metal": 50,
+              "xp": 0
+            }
+          },
+          "units": [
+            {
+              "id": 183,
+              "position": {
+                "x": 702.6454620361328,
+                "y": 22.999282836914062,
+                "z": 231.21377563476562
+              },
+              "hitpoints": 25,
+              "state": "INDIVIDUAL.COMBAT.APPROACHING"
+            },
+            {
+              "id": 184,
+              "position": {
+                "x": 691.4995880126953,
+                "y": 22.999282836914062,
+                "z": 215.1277618408203
+              },
+              "hitpoints": 25,
+              "state": "INDIVIDUAL.REPAIR.APPROACHING"
+            },
+            {
+              "id": 185,
+              "position": {
+                "x": 696.4525146484375,
+                "y": 23,
+                "z": 214.91224670410156
+              },
+              "hitpoints": 25,
+              "state": "INDIVIDUAL.COMBAT.APPROACHING"
+            },
+            {
+              "id": 186,
+              "position": {
+                "x": 706.263427734375,
+                "y": 23,
+                "z": 201.0980224609375
+              },
+              "hitpoints": 25,
+              "state": "INDIVIDUAL.REPAIR.APPROACHING"
+            },
+            {
+              "id": 187,
+              "position": {
+                "x": 752.0283355712891,
+                "y": 23,
+                "z": 218.57801818847656
+              },
+              "hitpoints": 100,
+              "state": "INDIVIDUAL.COMBAT.APPROACHING"
+            },
+            {
+              "id": 188,
+              "position": {
+                "x": 752.477294921875,
+                "y": 23,
+                "z": 209.92514038085938
+              },
+              "hitpoints": 100,
+              "state": "INDIVIDUAL.GATHER.APPROACHING"
+            },
+            {
+              "id": 189,
+              "position": {
+                "x": 751.0883636474609,
+                "y": 22.999282836914062,
+                "z": 234.14215087890625
+              },
+              "hitpoints": 50,
+              "state": "INDIVIDUAL.GATHER.GATHERING"
+            },
+            {
+              "id": 190,
+              "position": {
+                "x": 726.3495788574219,
+                "y": 22.999282836914062,
+                "z": 245.42213439941406
+              },
+              "hitpoints": 50,
+              "state": "INDIVIDUAL.REPAIR.APPROACHING"
+            },
+            {
+              "id": 191,
+              "position": {
+                "x": 702.9257965087891,
+                "y": 23,
+                "z": 253.87876892089844
+              },
+              "hitpoints": 160,
+              "state": "INDIVIDUAL.GATHER.GATHERING"
+            },
+            {
+              "id": 3248,
+              "position": {
+                "x": 732.1677398681641,
+                "y": 23,
+                "z": 207.832763671875
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3249,
+              "position": {
+                "x": 733.8655395507812,
+                "y": 22.999282836914062,
+                "z": 206.13504028320312
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3250,
+              "position": {
+                "x": 735.5633392333984,
+                "y": 22.999282836914062,
+                "z": 204.43731689453125
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3251,
+              "position": {
+                "x": 730.4295654296875,
+                "y": 23,
+                "z": 206.09451293945312
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3252,
+              "position": {
+                "x": 732.1324157714844,
+                "y": 22.999282836914062,
+                "z": 204.40184020996094
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3253,
+              "position": {
+                "x": 733.8341522216797,
+                "y": 23,
+                "z": 202.7080535888672
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3254,
+              "position": {
+                "x": 733.9058990478516,
+                "y": 23,
+                "z": 209.5709991455078
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3255,
+              "position": {
+                "x": 735.5986480712891,
+                "y": 23,
+                "z": 207.86822509765625
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3256,
+              "position": {
+                "x": 737.2925109863281,
+                "y": 23,
+                "z": 206.16656494140625
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3257,
+              "position": {
+                "x": 728.6913909912109,
+                "y": 22.999282836914062,
+                "z": 204.35626220703125
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3258,
+              "position": {
+                "x": 730.3992919921875,
+                "y": 23,
+                "z": 202.6686553955078
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3259,
+              "position": {
+                "x": 732.1049652099609,
+                "y": 22.999282836914062,
+                "z": 200.97879028320312
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3260,
+              "position": {
+                "x": 735.6440734863281,
+                "y": 23,
+                "z": 211.3092498779297
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3261,
+              "position": {
+                "x": 737.3317718505859,
+                "y": 22.999282836914062,
+                "z": 209.60140991210938
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3262,
+              "position": {
+                "x": 739.0216979980469,
+                "y": 22.999282836914062,
+                "z": 207.8958282470703
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3263,
+              "position": {
+                "x": 726.9532165527344,
+                "y": 22.999282836914062,
+                "z": 202.61801147460938
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3264,
+              "position": {
+                "x": 728.6661834716797,
+                "y": 23,
+                "z": 200.93545532226562
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3265,
+              "position": {
+                "x": 730.3757781982422,
+                "y": 23,
+                "z": 199.24952697753906
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3266,
+              "position": {
+                "x": 737.3822479248047,
+                "y": 23,
+                "z": 213.04750061035156
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3267,
+              "position": {
+                "x": 739.0648803710938,
+                "y": 22.999282836914062,
+                "z": 211.33460998535156
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3268,
+              "position": {
+                "x": 725.2150421142578,
+                "y": 22.999282836914062,
+                "z": 200.8797607421875
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3269,
+              "position": {
+                "x": 726.9330596923828,
+                "y": 22.999282836914062,
+                "z": 199.20225524902344
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3270,
+              "position": {
+                "x": 728.6465911865234,
+                "y": 22.999282836914062,
+                "z": 197.52027893066406
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3271,
+              "position": {
+                "x": 739.1204223632812,
+                "y": 22.999282836914062,
+                "z": 214.78575134277344
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3272,
+              "position": {
+                "x": 740.7980041503906,
+                "y": 23,
+                "z": 213.06781005859375
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3273,
+              "position": {
+                "x": 742.4800720214844,
+                "y": 22.999282836914062,
+                "z": 211.35433959960938
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3274,
+              "position": {
+                "x": 723.4768676757812,
+                "y": 22.999282836914062,
+                "z": 199.14151000976562
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3275,
+              "position": {
+                "x": 725.199951171875,
+                "y": 23,
+                "z": 197.4690704345703
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3276,
+              "position": {
+                "x": 726.9174041748047,
+                "y": 23,
+                "z": 195.79100036621094
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3277,
+              "position": {
+                "x": 740.8585968017578,
+                "y": 22.999282836914062,
+                "z": 216.5240020751953
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3278,
+              "position": {
+                "x": 742.5311126708984,
+                "y": 22.999282836914062,
+                "z": 214.80099487304688
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3279,
+              "position": {
+                "x": 744.2092590332031,
+                "y": 23,
+                "z": 213.0836181640625
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3280,
+              "position": {
+                "x": 721.7386932373047,
+                "y": 23,
+                "z": 197.40325927734375
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3281,
+              "position": {
+                "x": 723.4668273925781,
+                "y": 23,
+                "z": 195.73587036132812
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3282,
+              "position": {
+                "x": 725.1882171630859,
+                "y": 22.999282836914062,
+                "z": 194.06175231933594
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3283,
+              "position": {
+                "x": 742.5967712402344,
+                "y": 22.999282836914062,
+                "z": 218.2622528076172
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3284,
+              "position": {
+                "x": 744.2642364501953,
+                "y": 22.999282836914062,
+                "z": 216.53419494628906
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3285,
+              "position": {
+                "x": 745.9384460449219,
+                "y": 22.999282836914062,
+                "z": 214.8128662109375
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3286,
+              "position": {
+                "x": 720.0005035400391,
+                "y": 23,
+                "z": 195.66500854492188
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3287,
+              "position": {
+                "x": 721.7337036132812,
+                "y": 22.999282836914062,
+                "z": 194.002685546875
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3288,
+              "position": {
+                "x": 723.4590301513672,
+                "y": 23,
+                "z": 192.33248901367188
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3289,
+              "position": {
+                "x": 744.3349609375,
+                "y": 23,
+                "z": 220.00050354003906
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3290,
+              "position": {
+                "x": 745.9973602294922,
+                "y": 23,
+                "z": 218.2673797607422
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3291,
+              "position": {
+                "x": 747.6676330566406,
+                "y": 23,
+                "z": 216.54212951660156
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3292,
+              "position": {
+                "x": 718.2622528076172,
+                "y": 23,
+                "z": 197.4031982421875
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3293,
+              "position": {
+                "x": 720.0005798339844,
+                "y": 22.999282836914062,
+                "z": 192.2694854736328
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3294,
+              "position": {
+                "x": 721.7298431396484,
+                "y": 22.999282836914062,
+                "z": 190.6032257080078
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3295,
+              "position": {
+                "x": 742.5967102050781,
+                "y": 23,
+                "z": 221.7386932373047
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3296,
+              "position": {
+                "x": 747.7304840087891,
+                "y": 23,
+                "z": 220.00057983398438
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3297,
+              "position": {
+                "x": 749.3968200683594,
+                "y": 22.999282836914062,
+                "z": 218.27139282226562
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3298,
+              "position": {
+                "x": 716.5240020751953,
+                "y": 22.999282836914062,
+                "z": 199.14137268066406
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3299,
+              "position": {
+                "x": 718.2673797607422,
+                "y": 23,
+                "z": 194.0026092529297
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3300,
+              "position": {
+                "x": 720.0006561279297,
+                "y": 23,
+                "z": 188.87396240234375
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3301,
+              "position": {
+                "x": 740.8584594726562,
+                "y": 22.999282836914062,
+                "z": 223.47686767578125
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3302,
+              "position": {
+                "x": 745.9972839355469,
+                "y": 22.999282836914062,
+                "z": 221.73370361328125
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3303,
+              "position": {
+                "x": 751.1260070800781,
+                "y": 23,
+                "z": 220.0006561279297
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3304,
+              "position": {
+                "x": 714.7857513427734,
+                "y": 22.999282836914062,
+                "z": 200.87954711914062
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3305,
+              "position": {
+                "x": 716.5341949462891,
+                "y": 23,
+                "z": 195.73573303222656
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3306,
+              "position": {
+                "x": 718.2713928222656,
+                "y": 23,
+                "z": 190.6031494140625
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3307,
+              "position": {
+                "x": 739.1202087402344,
+                "y": 22.999282836914062,
+                "z": 225.2150421142578
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3308,
+              "position": {
+                "x": 744.2640991210938,
+                "y": 22.999282836914062,
+                "z": 223.46682739257812
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3309,
+              "position": {
+                "x": 749.3967437744141,
+                "y": 23,
+                "z": 221.72984313964844
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3310,
+              "position": {
+                "x": 713.0475006103516,
+                "y": 23,
+                "z": 202.6177215576172
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3311,
+              "position": {
+                "x": 714.8009948730469,
+                "y": 22.999282836914062,
+                "z": 197.46885681152344
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3312,
+              "position": {
+                "x": 716.5421295166016,
+                "y": 23,
+                "z": 192.33233642578125
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3313,
+              "position": {
+                "x": 737.3819580078125,
+                "y": 23,
+                "z": 226.95321655273438
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3314,
+              "position": {
+                "x": 742.5308990478516,
+                "y": 23,
+                "z": 225.199951171875
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3315,
+              "position": {
+                "x": 747.66748046875,
+                "y": 23,
+                "z": 223.4590301513672
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3316,
+              "position": {
+                "x": 711.3092498779297,
+                "y": 23,
+                "z": 204.35589599609375
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3317,
+              "position": {
+                "x": 713.0678100585938,
+                "y": 22.999282836914062,
+                "z": 199.20196533203125
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3318,
+              "position": {
+                "x": 735.6437072753906,
+                "y": 23,
+                "z": 228.69139099121094
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3319,
+              "position": {
+                "x": 740.7977142333984,
+                "y": 22.999282836914062,
+                "z": 226.9330596923828
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3320,
+              "position": {
+                "x": 745.9382171630859,
+                "y": 22.999282836914062,
+                "z": 225.18821716308594
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3321,
+              "position": {
+                "x": 709.5709991455078,
+                "y": 22.999282836914062,
+                "z": 206.0940704345703
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3322,
+              "position": {
+                "x": 711.3346099853516,
+                "y": 23,
+                "z": 200.93508911132812
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3323,
+              "position": {
+                "x": 713.0836181640625,
+                "y": 23,
+                "z": 195.79071044921875
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3324,
+              "position": {
+                "x": 733.9054565429688,
+                "y": 22.999282836914062,
+                "z": 230.4295654296875
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3325,
+              "position": {
+                "x": 739.0645141601562,
+                "y": 22.999282836914062,
+                "z": 228.6661834716797
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3326,
+              "position": {
+                "x": 744.2089691162109,
+                "y": 22.999282836914062,
+                "z": 226.9174041748047
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3327,
+              "position": {
+                "x": 707.832763671875,
+                "y": 23,
+                "z": 207.83224487304688
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3328,
+              "position": {
+                "x": 709.6014099121094,
+                "y": 22.999282836914062,
+                "z": 202.66819763183594
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3329,
+              "position": {
+                "x": 711.3543395996094,
+                "y": 22.999282836914062,
+                "z": 197.5198974609375
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3330,
+              "position": {
+                "x": 732.1672210693359,
+                "y": 22.999282836914062,
+                "z": 232.16773986816406
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3331,
+              "position": {
+                "x": 737.3313140869141,
+                "y": 23,
+                "z": 230.3992919921875
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3332,
+              "position": {
+                "x": 742.4796905517578,
+                "y": 22.999282836914062,
+                "z": 228.64659118652344
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3333,
+              "position": {
+                "x": 706.0945129394531,
+                "y": 23,
+                "z": 209.57040405273438
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3334,
+              "position": {
+                "x": 707.8682250976562,
+                "y": 22.999282836914062,
+                "z": 204.4013214111328
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3335,
+              "position": {
+                "x": 709.6250915527344,
+                "y": 22.999282836914062,
+                "z": 199.24908447265625
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3336,
+              "position": {
+                "x": 730.4289703369141,
+                "y": 23,
+                "z": 233.90589904785156
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3337,
+              "position": {
+                "x": 735.5981292724609,
+                "y": 22.999282836914062,
+                "z": 232.13241577148438
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3338,
+              "position": {
+                "x": 740.7504425048828,
+                "y": 22.999282836914062,
+                "z": 230.3757781982422
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3339,
+              "position": {
+                "x": 704.3562622070312,
+                "y": 22.999282836914062,
+                "z": 211.30857849121094
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3340,
+              "position": {
+                "x": 706.1350402832031,
+                "y": 23,
+                "z": 206.1344451904297
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3341,
+              "position": {
+                "x": 707.8958282470703,
+                "y": 22.999282836914062,
+                "z": 200.978271484375
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3342,
+              "position": {
+                "x": 728.6907196044922,
+                "y": 23,
+                "z": 235.64407348632812
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3343,
+              "position": {
+                "x": 733.8649444580078,
+                "y": 22.999282836914062,
+                "z": 233.86553955078125
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3392,
+              "position": {
+                "x": 740.7508850097656,
+                "y": 23,
+                "z": 209.62509155273438
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3393,
+              "position": {
+                "x": 714.8128662109375,
+                "y": 23,
+                "z": 194.0615234375
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3394,
+              "position": {
+                "x": 739.0211791992188,
+                "y": 22.999282836914062,
+                "z": 232.10496520996094
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3395,
+              "position": {
+                "x": 702.6180114746094,
+                "y": 22.999282836914062,
+                "z": 213.0467529296875
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3396,
+              "position": {
+                "x": 704.4018402099609,
+                "y": 22.999282836914062,
+                "z": 207.8675537109375
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3397,
+              "position": {
+                "x": 706.1665649414062,
+                "y": 22.999282836914062,
+                "z": 202.70745849609375
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3398,
+              "position": {
+                "x": 726.9524688720703,
+                "y": 22.999282836914062,
+                "z": 237.3822479248047
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3399,
+              "position": {
+                "x": 732.1317443847656,
+                "y": 23,
+                "z": 235.59864807128906
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3400,
+              "position": {
+                "x": 737.2919158935547,
+                "y": 23,
+                "z": 233.8341522216797
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3401,
+              "position": {
+                "x": 700.8797607421875,
+                "y": 23,
+                "z": 214.78492736816406
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3402,
+              "position": {
+                "x": 702.6686553955078,
+                "y": 22.999282836914062,
+                "z": 209.60067749023438
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3403,
+              "position": {
+                "x": 704.4373168945312,
+                "y": 22.999282836914062,
+                "z": 204.4366455078125
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3404,
+              "position": {
+                "x": 725.2142181396484,
+                "y": 22.999282836914062,
+                "z": 239.12042236328125
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3405,
+              "position": {
+                "x": 730.3985595703125,
+                "y": 23,
+                "z": 237.33177185058594
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3406,
+              "position": {
+                "x": 735.5626678466797,
+                "y": 23,
+                "z": 235.56333923339844
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3407,
+              "position": {
+                "x": 699.1415100097656,
+                "y": 23,
+                "z": 216.52310180664062
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3408,
+              "position": {
+                "x": 700.9354553222656,
+                "y": 23,
+                "z": 211.3337860107422
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3409,
+              "position": {
+                "x": 702.7080535888672,
+                "y": 23,
+                "z": 206.1658172607422
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3410,
+              "position": {
+                "x": 723.4759674072266,
+                "y": 23,
+                "z": 240.8585968017578
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3411,
+              "position": {
+                "x": 728.6653594970703,
+                "y": 22.999282836914062,
+                "z": 239.06488037109375
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3412,
+              "position": {
+                "x": 733.8334045410156,
+                "y": 23,
+                "z": 237.29251098632812
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3413,
+              "position": {
+                "x": 697.4032592773438,
+                "y": 22.999282836914062,
+                "z": 218.2612762451172
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3414,
+              "position": {
+                "x": 700.9787902832031,
+                "y": 23,
+                "z": 207.89500427246094
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3415,
+              "position": {
+                "x": 721.7377166748047,
+                "y": 23,
+                "z": 242.59677124023438
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3416,
+              "position": {
+                "x": 726.9321594238281,
+                "y": 23,
+                "z": 240.79800415039062
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3417,
+              "position": {
+                "x": 732.1041412353516,
+                "y": 23,
+                "z": 239.02169799804688
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3418,
+              "position": {
+                "x": 695.6650085449219,
+                "y": 22.999282836914062,
+                "z": 219.9994659423828
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3419,
+              "position": {
+                "x": 699.2495269775391,
+                "y": 23,
+                "z": 209.6241912841797
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3420,
+              "position": {
+                "x": 719.9994659423828,
+                "y": 22.999282836914062,
+                "z": 244.3349609375
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3421,
+              "position": {
+                "x": 725.198974609375,
+                "y": 23,
+                "z": 242.53111267089844
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3422,
+              "position": {
+                "x": 730.3748779296875,
+                "y": 23,
+                "z": 240.75088500976562
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3423,
+              "position": {
+                "x": 697.4031982421875,
+                "y": 23,
+                "z": 221.7377166748047
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3424,
+              "position": {
+                "x": 695.7358703613281,
+                "y": 23,
+                "z": 216.53314208984375
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3425,
+              "position": {
+                "x": 697.5202789306641,
+                "y": 23,
+                "z": 211.35337829589844
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3426,
+              "position": {
+                "x": 718.2612762451172,
+                "y": 23,
+                "z": 242.59671020507812
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3427,
+              "position": {
+                "x": 723.4657745361328,
+                "y": 22.999282836914062,
+                "z": 244.2642364501953
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3428,
+              "position": {
+                "x": 699.1413726806641,
+                "y": 23,
+                "z": 223.47596740722656
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3429,
+              "position": {
+                "x": 694.002685546875,
+                "y": 23,
+                "z": 218.26626586914062
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3430,
+              "position": {
+                "x": 716.5231018066406,
+                "y": 23,
+                "z": 240.85845947265625
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3431,
+              "position": {
+                "x": 721.7325897216797,
+                "y": 23,
+                "z": 245.9973602294922
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3432,
+              "position": {
+                "x": 692.2694854736328,
+                "y": 22.999282836914062,
+                "z": 219.9993896484375
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3433,
+              "position": {
+                "x": 694.0617523193359,
+                "y": 22.999282836914062,
+                "z": 214.81175231933594
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3434,
+              "position": {
+                "x": 714.7849273681641,
+                "y": 23,
+                "z": 239.12020874023438
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3435,
+              "position": {
+                "x": 719.9993896484375,
+                "y": 23,
+                "z": 247.73048400878906
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3436,
+              "position": {
+                "x": 725.1871032714844,
+                "y": 22.999282836914062,
+                "z": 245.93844604492188
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3437,
+              "position": {
+                "x": 702.6177215576172,
+                "y": 23,
+                "z": 226.9524688720703
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3438,
+              "position": {
+                "x": 694.0026092529297,
+                "y": 23,
+                "z": 221.7325897216797
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            },
+            {
+              "id": 3439,
+              "position": {
+                "x": 692.3324890136719,
+                "y": 22.999282836914062,
+                "z": 216.5409393310547
+              },
+              "hitpoints": 156.25,
+              "state": "INDIVIDUAL.IDLE"
+            }
+          ]
+        }
+      ],
+      "simulation": {
+        "players": [
+          {
+            "name": "Gaia",
+            "civ": "gaia",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            },
+            "entity": 2,
+            "controlsAll": false,
+            "popCount": 0,
+            "popLimit": 0,
+            "popMax": 300,
+            "panelEntities": [],
+            "resourceCounts": {
+              "food": 300,
+              "wood": 300,
+              "stone": 300,
+              "metal": 300
+            },
+            "resourceGatherers": {
+              "food": 0,
+              "wood": 0,
+              "stone": 0,
+              "metal": 0
+            },
+            "trainingBlocked": false,
+            "state": "active",
+            "team": -1,
+            "teamLocked": false,
+            "disabledTemplates": {},
+            "disabledTechnologies": {},
+            "hasSharedLos": null,
+            "spyCostMultiplier": 1,
+            "phase": "",
+            "isAlly": [
+              true,
+              false,
+              false
+            ],
+            "isMutualAlly": [
+              true,
+              false,
+              false
+            ],
+            "isNeutral": [
+              false,
+              false,
+              false
+            ],
+            "isEnemy": [
+              false,
+              true,
+              true
+            ],
+            "entityLimits": null,
+            "entityCounts": null,
+            "matchEntityCounts": null,
+            "entityLimitChangers": null,
+            "researchQueued": null,
+            "researchedTechs": null,
+            "classCounts": null,
+            "typeCountsByClass": null,
+            "canBarter": false,
+            "barterPrices": {
+              "buy": {
+                "food": 110,
+                "wood": 110,
+                "stone": 110,
+                "metal": 110
+              },
+              "sell": {
+                "food": 90,
+                "wood": 90,
+                "stone": 90,
+                "metal": 90
+              }
+            }
+          },
+          {
+            "name": "Phase4Human",
+            "civ": "athen",
+            "color": {
+              "r": 0.0392156862745098,
+              "g": 0.0392156862745098,
+              "b": 0.7450980392156863,
+              "a": 1
+            },
+            "entity": 3,
+            "controlsAll": false,
+            "popCount": 153,
+            "popLimit": 20,
+            "popMax": 200,
+            "panelEntities": [],
+            "resourceCounts": {
+              "food": 10000,
+              "wood": 10000,
+              "stone": 10000,
+              "metal": 10000
+            },
+            "resourceGatherers": {
+              "food": 0,
+              "wood": 0,
+              "stone": 0,
+              "metal": 0
+            },
+            "trainingBlocked": false,
+            "state": "active",
+            "team": -1,
+            "teamLocked": false,
+            "disabledTemplates": {},
+            "disabledTechnologies": {},
+            "hasSharedLos": false,
+            "spyCostMultiplier": 1,
+            "phase": "village",
+            "isAlly": [
+              false,
+              true,
+              false
+            ],
+            "isMutualAlly": [
+              false,
+              true,
+              false
+            ],
+            "isNeutral": [
+              false,
+              false,
+              false
+            ],
+            "isEnemy": [
+              true,
+              false,
+              true
+            ],
+            "entityLimits": {
+              "Animal": 50,
+              "Centurion": 8,
+              "CivilCentre": 1,
+              "Gladiator": 0,
+              "Hero": 1,
+              "Juggernaut": 1,
+              "Kennel": 2,
+              "Library": 1,
+              "Lighthouse": 1,
+              "Monument": 5,
+              "Palace": 1,
+              "Pillar": 0,
+              "PyramidLarge": 2,
+              "TempleOfAmun": 1,
+              "TempleOfIsis": 1,
+              "TempleOfVesta": 1,
+              "Theater": 1,
+              "WarDog": 0,
+              "Wonder": 1,
+              "Yakhchal": 5
+            },
+            "entityCounts": {
+              "Animal": 0,
+              "Centurion": 0,
+              "CivilCentre": 1,
+              "Gladiator": 0,
+              "Hero": 0,
+              "Juggernaut": 0,
+              "Kennel": 0,
+              "Library": 0,
+              "Lighthouse": 0,
+              "Monument": 0,
+              "Palace": 0,
+              "Pillar": 0,
+              "PyramidLarge": 0,
+              "TempleOfAmun": 0,
+              "TempleOfIsis": 0,
+              "TempleOfVesta": 0,
+              "Theater": 0,
+              "WarDog": 0,
+              "Wonder": 0,
+              "Yakhchal": 0
+            },
+            "matchEntityCounts": {},
+            "entityLimitChangers": {
+              "Gladiator": {
+                "Amphitheater": 15
+              },
+              "Juggernaut": {
+                "PtolemyIV": 4
+              },
+              "Pillar": {
+                "Ashoka": 5
+              },
+              "WarDog": {
+                "Kennel": 10
+              }
+            },
+            "researchQueued": {},
+            "researchedTechs": {},
+            "classCounts": {
+              "Structure": 1,
+              "ConquestCritical": 154,
+              "CivCentre": 1,
+              "Civic": 1,
+              "Defensive": 1,
+              "CivilCentre": 1,
+              "Unit": 153,
+              "Organic": 153,
+              "Human": 153,
+              "Support": 4,
+              "Builder": 152,
+              "Civilian": 4,
+              "Worker": 152,
+              "CitizenSoldier": 149,
+              "Citizen": 149,
+              "Soldier": 149,
+              "Infantry": 148,
+              "Melee": 146,
+              "Spearman": 146,
+              "Basic": 5,
+              "Ranged": 3,
+              "Slinger": 2,
+              "FastMoving": 1,
+              "Cavalry": 1,
+              "Javelineer": 1,
+              "Elite": 144
+            },
+            "typeCountsByClass": {
+              "Structure": {
+                "structures/athen/civil_centre": 1
+              },
+              "ConquestCritical": {
+                "structures/athen/civil_centre": 1,
+                "units/athen/support_civilian": 4,
+                "units/athen/infantry_spearman_b": 2,
+                "units/athen/infantry_slinger_b": 2,
+                "units/athen/cavalry_javelineer_b": 1,
+                "units/athen/infantry_spearman_e": 144
+              },
+              "CivCentre": {
+                "structures/athen/civil_centre": 1
+              },
+              "Civic": {
+                "structures/athen/civil_centre": 1
+              },
+              "Defensive": {
+                "structures/athen/civil_centre": 1
+              },
+              "CivilCentre": {
+                "structures/athen/civil_centre": 1
+              },
+              "Unit": {
+                "units/athen/support_civilian": 4,
+                "units/athen/infantry_spearman_b": 2,
+                "units/athen/infantry_slinger_b": 2,
+                "units/athen/cavalry_javelineer_b": 1,
+                "units/athen/infantry_spearman_e": 144
+              },
+              "Organic": {
+                "units/athen/support_civilian": 4,
+                "units/athen/infantry_spearman_b": 2,
+                "units/athen/infantry_slinger_b": 2,
+                "units/athen/cavalry_javelineer_b": 1,
+                "units/athen/infantry_spearman_e": 144
+              },
+              "Human": {
+                "units/athen/support_civilian": 4,
+                "units/athen/infantry_spearman_b": 2,
+                "units/athen/infantry_slinger_b": 2,
+                "units/athen/cavalry_javelineer_b": 1,
+                "units/athen/infantry_spearman_e": 144
+              },
+              "Support": {
+                "units/athen/support_civilian": 4
+              },
+              "Builder": {
+                "units/athen/support_civilian": 4,
+                "units/athen/infantry_spearman_b": 2,
+                "units/athen/infantry_slinger_b": 2,
+                "units/athen/infantry_spearman_e": 144
+              },
+              "Civilian": {
+                "units/athen/support_civilian": 4
+              },
+              "Worker": {
+                "units/athen/support_civilian": 4,
+                "units/athen/infantry_spearman_b": 2,
+                "units/athen/infantry_slinger_b": 2,
+                "units/athen/infantry_spearman_e": 144
+              },
+              "CitizenSoldier": {
+                "units/athen/infantry_spearman_b": 2,
+                "units/athen/infantry_slinger_b": 2,
+                "units/athen/cavalry_javelineer_b": 1,
+                "units/athen/infantry_spearman_e": 144
+              },
+              "Citizen": {
+                "units/athen/infantry_spearman_b": 2,
+                "units/athen/infantry_slinger_b": 2,
+                "units/athen/cavalry_javelineer_b": 1,
+                "units/athen/infantry_spearman_e": 144
+              },
+              "Soldier": {
+                "units/athen/infantry_spearman_b": 2,
+                "units/athen/infantry_slinger_b": 2,
+                "units/athen/cavalry_javelineer_b": 1,
+                "units/athen/infantry_spearman_e": 144
+              },
+              "Infantry": {
+                "units/athen/infantry_spearman_b": 2,
+                "units/athen/infantry_slinger_b": 2,
+                "units/athen/infantry_spearman_e": 144
+              },
+              "Melee": {
+                "units/athen/infantry_spearman_b": 2,
+                "units/athen/infantry_spearman_e": 144
+              },
+              "Spearman": {
+                "units/athen/infantry_spearman_b": 2,
+                "units/athen/infantry_spearman_e": 144
+              },
+              "Basic": {
+                "units/athen/infantry_spearman_b": 2,
+                "units/athen/infantry_slinger_b": 2,
+                "units/athen/cavalry_javelineer_b": 1
+              },
+              "Ranged": {
+                "units/athen/infantry_slinger_b": 2,
+                "units/athen/cavalry_javelineer_b": 1
+              },
+              "Slinger": {
+                "units/athen/infantry_slinger_b": 2
+              },
+              "FastMoving": {
+                "units/athen/cavalry_javelineer_b": 1
+              },
+              "Cavalry": {
+                "units/athen/cavalry_javelineer_b": 1
+              },
+              "Javelineer": {
+                "units/athen/cavalry_javelineer_b": 1
+              },
+              "Elite": {
+                "units/athen/infantry_spearman_e": 144
+              }
+            },
+            "canBarter": false,
+            "barterPrices": {
+              "buy": {
+                "food": 110,
+                "wood": 110,
+                "stone": 110,
+                "metal": 110
+              },
+              "sell": {
+                "food": 90,
+                "wood": 90,
+                "stone": 90,
+                "metal": 90
+              }
+            },
+            "statistics": {
+              "resourcesGathered": {
+                "vegetarianFood": 0,
+                "food": 0,
+                "wood": 0,
+                "stone": 0,
+                "metal": 0
+              },
+              "percentMapExplored": 6
+            }
+          },
+          {
+            "name": "Phase4Petra",
+            "civ": "mace",
+            "color": {
+              "r": 0.9019607843137255,
+              "g": 0.0392156862745098,
+              "b": 0.0392156862745098,
+              "a": 1
+            },
+            "entity": 4,
+            "controlsAll": false,
+            "popCount": 153,
+            "popLimit": 20,
+            "popMax": 200,
+            "panelEntities": [],
+            "resourceCounts": {
+              "food": 10000,
+              "wood": 9750,
+              "stone": 10000,
+              "metal": 10000
+            },
+            "resourceGatherers": {
+              "food": 2,
+              "wood": 1,
+              "stone": 0,
+              "metal": 0
+            },
+            "trainingBlocked": false,
+            "state": "active",
+            "team": -1,
+            "teamLocked": false,
+            "disabledTemplates": {},
+            "disabledTechnologies": {},
+            "hasSharedLos": false,
+            "spyCostMultiplier": 1,
+            "phase": "village",
+            "isAlly": [
+              false,
+              false,
+              true
+            ],
+            "isMutualAlly": [
+              false,
+              false,
+              true
+            ],
+            "isNeutral": [
+              false,
+              false,
+              false
+            ],
+            "isEnemy": [
+              true,
+              true,
+              false
+            ],
+            "entityLimits": {
+              "Animal": 50,
+              "Centurion": 8,
+              "CivilCentre": 1,
+              "Gladiator": 0,
+              "Hero": 1,
+              "Juggernaut": 1,
+              "Kennel": 2,
+              "Library": 1,
+              "Lighthouse": 1,
+              "Monument": 5,
+              "Palace": 1,
+              "Pillar": 0,
+              "PyramidLarge": 2,
+              "TempleOfAmun": 1,
+              "TempleOfIsis": 1,
+              "TempleOfVesta": 1,
+              "Theater": 1,
+              "WarDog": 0,
+              "Wonder": 1,
+              "Yakhchal": 5
+            },
+            "entityCounts": {
+              "Animal": 0,
+              "Centurion": 0,
+              "CivilCentre": 1,
+              "Gladiator": 0,
+              "Hero": 0,
+              "Juggernaut": 0,
+              "Kennel": 0,
+              "Library": 0,
+              "Lighthouse": 0,
+              "Monument": 0,
+              "Palace": 0,
+              "Pillar": 0,
+              "PyramidLarge": 0,
+              "TempleOfAmun": 0,
+              "TempleOfIsis": 0,
+              "TempleOfVesta": 0,
+              "Theater": 0,
+              "WarDog": 0,
+              "Wonder": 0,
+              "Yakhchal": 0
+            },
+            "matchEntityCounts": {},
+            "entityLimitChangers": {
+              "Gladiator": {
+                "Amphitheater": 15
+              },
+              "Juggernaut": {
+                "PtolemyIV": 4
+              },
+              "Pillar": {
+                "Ashoka": 5
+              },
+              "WarDog": {
+                "Kennel": 10
+              }
+            },
+            "researchQueued": {},
+            "researchedTechs": {},
+            "classCounts": {
+              "Structure": 1,
+              "ConquestCritical": 154,
+              "CivCentre": 1,
+              "Civic": 1,
+              "Defensive": 1,
+              "CivilCentre": 1,
+              "Unit": 153,
+              "Organic": 153,
+              "Human": 153,
+              "Support": 4,
+              "Builder": 152,
+              "Civilian": 4,
+              "Worker": 152,
+              "CitizenSoldier": 149,
+              "Citizen": 149,
+              "Soldier": 149,
+              "Infantry": 148,
+              "Melee": 147,
+              "Pikeman": 146,
+              "Basic": 5,
+              "Ranged": 2,
+              "Javelineer": 2,
+              "FastMoving": 1,
+              "Cavalry": 1,
+              "Spearman": 1,
+              "Elite": 144
+            },
+            "typeCountsByClass": {
+              "Structure": {
+                "structures/mace/civil_centre": 1
+              },
+              "ConquestCritical": {
+                "structures/mace/civil_centre": 1,
+                "units/mace/support_civilian": 4,
+                "units/mace/infantry_pikeman_b": 2,
+                "units/mace/infantry_javelineer_b": 2,
+                "units/mace/cavalry_spearman_b": 1,
+                "units/mace/infantry_pikeman_e": 144
+              },
+              "CivCentre": {
+                "structures/mace/civil_centre": 1
+              },
+              "Civic": {
+                "structures/mace/civil_centre": 1
+              },
+              "Defensive": {
+                "structures/mace/civil_centre": 1
+              },
+              "CivilCentre": {
+                "structures/mace/civil_centre": 1
+              },
+              "Unit": {
+                "units/mace/support_civilian": 4,
+                "units/mace/infantry_pikeman_b": 2,
+                "units/mace/infantry_javelineer_b": 2,
+                "units/mace/cavalry_spearman_b": 1,
+                "units/mace/infantry_pikeman_e": 144
+              },
+              "Organic": {
+                "units/mace/support_civilian": 4,
+                "units/mace/infantry_pikeman_b": 2,
+                "units/mace/infantry_javelineer_b": 2,
+                "units/mace/cavalry_spearman_b": 1,
+                "units/mace/infantry_pikeman_e": 144
+              },
+              "Human": {
+                "units/mace/support_civilian": 4,
+                "units/mace/infantry_pikeman_b": 2,
+                "units/mace/infantry_javelineer_b": 2,
+                "units/mace/cavalry_spearman_b": 1,
+                "units/mace/infantry_pikeman_e": 144
+              },
+              "Support": {
+                "units/mace/support_civilian": 4
+              },
+              "Builder": {
+                "units/mace/support_civilian": 4,
+                "units/mace/infantry_pikeman_b": 2,
+                "units/mace/infantry_javelineer_b": 2,
+                "units/mace/infantry_pikeman_e": 144
+              },
+              "Civilian": {
+                "units/mace/support_civilian": 4
+              },
+              "Worker": {
+                "units/mace/support_civilian": 4,
+                "units/mace/infantry_pikeman_b": 2,
+                "units/mace/infantry_javelineer_b": 2,
+                "units/mace/infantry_pikeman_e": 144
+              },
+              "CitizenSoldier": {
+                "units/mace/infantry_pikeman_b": 2,
+                "units/mace/infantry_javelineer_b": 2,
+                "units/mace/cavalry_spearman_b": 1,
+                "units/mace/infantry_pikeman_e": 144
+              },
+              "Citizen": {
+                "units/mace/infantry_pikeman_b": 2,
+                "units/mace/infantry_javelineer_b": 2,
+                "units/mace/cavalry_spearman_b": 1,
+                "units/mace/infantry_pikeman_e": 144
+              },
+              "Soldier": {
+                "units/mace/infantry_pikeman_b": 2,
+                "units/mace/infantry_javelineer_b": 2,
+                "units/mace/cavalry_spearman_b": 1,
+                "units/mace/infantry_pikeman_e": 144
+              },
+              "Infantry": {
+                "units/mace/infantry_pikeman_b": 2,
+                "units/mace/infantry_javelineer_b": 2,
+                "units/mace/infantry_pikeman_e": 144
+              },
+              "Melee": {
+                "units/mace/infantry_pikeman_b": 2,
+                "units/mace/cavalry_spearman_b": 1,
+                "units/mace/infantry_pikeman_e": 144
+              },
+              "Pikeman": {
+                "units/mace/infantry_pikeman_b": 2,
+                "units/mace/infantry_pikeman_e": 144
+              },
+              "Basic": {
+                "units/mace/infantry_pikeman_b": 2,
+                "units/mace/infantry_javelineer_b": 2,
+                "units/mace/cavalry_spearman_b": 1
+              },
+              "Ranged": {
+                "units/mace/infantry_javelineer_b": 2
+              },
+              "Javelineer": {
+                "units/mace/infantry_javelineer_b": 2
+              },
+              "FastMoving": {
+                "units/mace/cavalry_spearman_b": 1
+              },
+              "Cavalry": {
+                "units/mace/cavalry_spearman_b": 1
+              },
+              "Spearman": {
+                "units/mace/cavalry_spearman_b": 1
+              },
+              "Elite": {
+                "units/mace/infantry_pikeman_e": 144
+              }
+            },
+            "canBarter": false,
+            "barterPrices": {
+              "buy": {
+                "food": 110,
+                "wood": 110,
+                "stone": 110,
+                "metal": 110
+              },
+              "sell": {
+                "food": 90,
+                "wood": 90,
+                "stone": 90,
+                "metal": 90
+              }
+            },
+            "statistics": {
+              "resourcesGathered": {
+                "vegetarianFood": 0,
+                "food": 2,
+                "wood": 0,
+                "stone": 0,
+                "metal": 0
+              },
+              "percentMapExplored": 6
+            }
+          }
+        ],
+        "circularMap": true,
+        "mapSize": 1024,
+        "timeElapsed": 2800,
+        "ceasefireActive": false,
+        "ceasefireTimeRemaining": 0,
+        "cinemaPathPlaying": false,
+        "victoryConditions": [],
+        "alliedVictory": true,
+        "populationCapType": "player",
+        "populationCap": 200
+      },
+      "pendingTurns": 0,
+      "rate": 1,
+      "paused": false
+    },
+    "target": {
+      "x": 512.0,
+      "z": 512.0
+    },
+    "trace": [
+      {
+        "player": 1,
+        "command": {
+          "type": "cheat",
+          "player": 1,
+          "action": "createunits",
+          "parameter": 200,
+          "selected": [
+            150
+          ],
+          "templates": [
+            "units/athen/infantry_spearman_e"
+          ]
+        }
+      },
+      {
+        "player": 2,
+        "command": {
+          "type": "cheat",
+          "player": 2,
+          "action": "createunits",
+          "parameter": 200,
+          "selected": [
+            182
+          ],
+          "templates": [
+            "units/mace/infantry_pikeman_e"
+          ]
+        }
+      },
+      {
+        "player": 1,
+        "command": {
+          "type": "cheat",
+          "player": 1,
+          "action": "createunits",
+          "parameter": 200,
+          "selected": [
+            150
+          ],
+          "templates": [
+            "units/athen/infantry_spearman_e"
+          ]
+        }
+      },
+      {
+        "player": 2,
+        "command": {
+          "type": "cheat",
+          "player": 2,
+          "action": "createunits",
+          "parameter": 200,
+          "selected": [
+            182
+          ],
+          "templates": [
+            "units/mace/infantry_pikeman_e"
+          ]
+        }
+      },
+      {
+        "player": 1,
+        "command": {
+          "type": "attack-walk",
+          "entities": [
+            151,
+            152,
+            153,
+            154,
+            155,
+            156,
+            157,
+            158,
+            159,
+            3152,
+            3153,
+            3154,
+            3155,
+            3156,
+            3157,
+            3158,
+            3159,
+            3160,
+            3161,
+            3162,
+            3163,
+            3164,
+            3165,
+            3166,
+            3167,
+            3168,
+            3169,
+            3170,
+            3171,
+            3172,
+            3173,
+            3174,
+            3175,
+            3176,
+            3177,
+            3178,
+            3179,
+            3180,
+            3181,
+            3182,
+            3183,
+            3184,
+            3185,
+            3186,
+            3187,
+            3188,
+            3189,
+            3190,
+            3191,
+            3192,
+            3193,
+            3194,
+            3195,
+            3196,
+            3197,
+            3198,
+            3199,
+            3200,
+            3201,
+            3202,
+            3203,
+            3204,
+            3205,
+            3206,
+            3207,
+            3208,
+            3209,
+            3210,
+            3211,
+            3212,
+            3213,
+            3214,
+            3215,
+            3216,
+            3217,
+            3218,
+            3219,
+            3220,
+            3221,
+            3222,
+            3223,
+            3224,
+            3225,
+            3226,
+            3227,
+            3228,
+            3229,
+            3230,
+            3231,
+            3232,
+            3233,
+            3234,
+            3235,
+            3236,
+            3237,
+            3238,
+            3239,
+            3240,
+            3241,
+            3242,
+            3243,
+            3244,
+            3245,
+            3246,
+            3247,
+            3344,
+            3345,
+            3346,
+            3347,
+            3348,
+            3349,
+            3350,
+            3351,
+            3352,
+            3353,
+            3354,
+            3355,
+            3356,
+            3357,
+            3358,
+            3359,
+            3360,
+            3361,
+            3362,
+            3363,
+            3364,
+            3365,
+            3366,
+            3367,
+            3368,
+            3369,
+            3370,
+            3371,
+            3372,
+            3373,
+            3374,
+            3375,
+            3376,
+            3377,
+            3378,
+            3379,
+            3380,
+            3381,
+            3382,
+            3383,
+            3384,
+            3385,
+            3386,
+            3387,
+            3388,
+            3389,
+            3390,
+            3391
+          ],
+          "x": 500.0,
+          "z": 512.0,
+          "queued": false,
+          "allowCapture": false
+        }
+      },
+      {
+        "player": 2,
+        "command": {
+          "type": "attack-walk",
+          "entities": [
+            183,
+            184,
+            185,
+            186,
+            187,
+            188,
+            189,
+            190,
+            191,
+            3248,
+            3249,
+            3250,
+            3251,
+            3252,
+            3253,
+            3254,
+            3255,
+            3256,
+            3257,
+            3258,
+            3259,
+            3260,
+            3261,
+            3262,
+            3263,
+            3264,
+            3265,
+            3266,
+            3267,
+            3268,
+            3269,
+            3270,
+            3271,
+            3272,
+            3273,
+            3274,
+            3275,
+            3276,
+            3277,
+            3278,
+            3279,
+            3280,
+            3281,
+            3282,
+            3283,
+            3284,
+            3285,
+            3286,
+            3287,
+            3288,
+            3289,
+            3290,
+            3291,
+            3292,
+            3293,
+            3294,
+            3295,
+            3296,
+            3297,
+            3298,
+            3299,
+            3300,
+            3301,
+            3302,
+            3303,
+            3304,
+            3305,
+            3306,
+            3307,
+            3308,
+            3309,
+            3310,
+            3311,
+            3312,
+            3313,
+            3314,
+            3315,
+            3316,
+            3317,
+            3318,
+            3319,
+            3320,
+            3321,
+            3322,
+            3323,
+            3324,
+            3325,
+            3326,
+            3327,
+            3328,
+            3329,
+            3330,
+            3331,
+            3332,
+            3333,
+            3334,
+            3335,
+            3336,
+            3337,
+            3338,
+            3339,
+            3340,
+            3341,
+            3342,
+            3343,
+            3392,
+            3393,
+            3394,
+            3395,
+            3396,
+            3397,
+            3398,
+            3399,
+            3400,
+            3401,
+            3402,
+            3403,
+            3404,
+            3405,
+            3406,
+            3407,
+            3408,
+            3409,
+            3410,
+            3411,
+            3412,
+            3413,
+            3414,
+            3415,
+            3416,
+            3417,
+            3418,
+            3419,
+            3420,
+            3421,
+            3422,
+            3423,
+            3424,
+            3425,
+            3426,
+            3427,
+            3428,
+            3429,
+            3430,
+            3431,
+            3432,
+            3433,
+            3434,
+            3435,
+            3436,
+            3437,
+            3438,
+            3439
+          ],
+          "x": 524.0,
+          "z": 512.0,
+          "queued": false,
+          "allowCapture": false
+        }
+      }
+    ],
+    "countCheck": {
+      "unitAI": {
+        "1": 153,
+        "2": 153
+      },
+      "classCounts": [
+        {
+          "player": 1,
+          "units": 153,
+          "liveUnits": 153
+        },
+        {
+          "player": 2,
+          "units": 153,
+          "liveUnits": 153
+        }
+      ]
+    }
+  },
+  "backgroundFunctional": false,
+  "fullscreen": {
+    "window": {
+      "windowId": 288219779,
+      "bounds": {
+        "left": 0,
+        "top": 0,
+        "width": 2560,
+        "height": 1080,
+        "windowState": "fullscreen"
+      }
+    },
+    "dimensions": {
+      "inner": [
+        2560,
+        1080
+      ],
+      "screen": [
+        2560,
+        1080
+      ],
+      "dpr": 1,
+      "focused": true,
+      "canvasCSS": [
+        1920,
+        1080
+      ],
+      "foregroundWindow": {
+        "hwnd": 3674118,
+        "ownerProcessId": 10348,
+        "expectedProcessId": 10348,
+        "clientSize": [
+          2560,
+          1080
+        ]
+      }
+    },
+    "internalResolution": [
+      1920,
+      1080
+    ]
+  },
+  "foregroundWindow": {
+    "hwnd": 3674118,
+    "ownerProcessId": 10348,
+    "expectedProcessId": 10348,
+    "clientSize": [
+      2560,
+      1080
+    ]
+  },
+  "environment": {
+    "focused": true,
+    "hidden": false,
+    "fullscreen": true
+  },
+  "settleScope": "Functional crash diagnostic with original battle/replenishment; transient unit counts below 200 do not qualify as a performance run",
+  "settleSamples": [
+    {
+      "elapsedSeconds": 5.081194999998843,
+      "liveUnitsAfterReplenishment": 306
+    },
+    {
+      "elapsedSeconds": 10.168925199999649,
+      "liveUnitsAfterReplenishment": 306
+    },
+    {
+      "elapsedSeconds": 15.253400499997952,
+      "liveUnitsAfterReplenishment": 306
+    },
+    {
+      "elapsedSeconds": 20.33969249999791,
+      "liveUnitsAfterReplenishment": 306
+    },
+    {
+      "elapsedSeconds": 25.44085189999896,
+      "liveUnitsAfterReplenishment": 306
+    },
+    {
+      "elapsedSeconds": 30.528268200003367,
+      "liveUnitsAfterReplenishment": 306
+    },
+    {
+      "elapsedSeconds": 35.6371558000028,
+      "liveUnitsAfterReplenishment": 306
+    },
+    {
+      "elapsedSeconds": 40.71902840000257,
+      "liveUnitsAfterReplenishment": 304
+    },
+    {
+      "elapsedSeconds": 46.94933940000192,
+      "liveUnitsAfterReplenishment": 297
+    },
+    {
+      "elapsedSeconds": 53.157037600001786,
+      "liveUnitsAfterReplenishment": 283
+    },
+    {
+      "elapsedSeconds": 59.529194599999755,
+      "liveUnitsAfterReplenishment": 279
+    },
+    {
+      "elapsedSeconds": 60,
+      "liveUnitsAfterReplenishment": 290
+    }
+  ],
+  "attachedWorkerTargets": [
+    {
+      "sessionId": "908481865C6872810EB99F8DFBD2116E",
+      "targetInfo": {
+        "targetId": "7A1C170238C7D2145E318E53DEB396FD",
+        "type": "worker",
+        "title": "em-pthread",
+        "url": "http://localhost:8097/pyrogenesis-application.mjs",
+        "attached": true,
+        "parentId": "D18726B29915BF1C3B8043806044555E",
+        "canAccessOpener": false,
+        "parentFrameId": "D18726B29915BF1C3B8043806044555E",
+        "browserContextId": "A4CCAB8B7EC4C3CB24B98823467331F8"
+      },
+      "waitingForDebugger": false
+    },
+    {
+      "sessionId": "B906F2E0C77A3C7402B97AF6B3CE0B44",
+      "targetInfo": {
+        "targetId": "5BA9502DE2E1F8280A0427E759E5E695",
+        "type": "worker",
+        "title": "em-pthread",
+        "url": "http://localhost:8097/pyrogenesis-application.mjs",
+        "attached": true,
+        "parentId": "D18726B29915BF1C3B8043806044555E",
+        "canAccessOpener": false,
+        "parentFrameId": "D18726B29915BF1C3B8043806044555E",
+        "browserContextId": "A4CCAB8B7EC4C3CB24B98823467331F8"
+      },
+      "waitingForDebugger": false
+    },
+    {
+      "sessionId": "52DC93161484F68BB52115EBAE22DEEE",
+      "targetInfo": {
+        "targetId": "D5D4CF1E3983ECA77402152883C7D4AB",
+        "type": "worker",
+        "title": "em-pthread",
+        "url": "http://localhost:8097/pyrogenesis-application.mjs",
+        "attached": true,
+        "parentId": "D18726B29915BF1C3B8043806044555E",
+        "canAccessOpener": false,
+        "parentFrameId": "D18726B29915BF1C3B8043806044555E",
+        "browserContextId": "A4CCAB8B7EC4C3CB24B98823467331F8"
+      },
+      "waitingForDebugger": false
+    },
+    {
+      "sessionId": "E0BA23828AB2F97724263322700551BC",
+      "targetInfo": {
+        "targetId": "7BD4890C4F6BC4DCCBC9E3409120D72E",
+        "type": "worker",
+        "title": "em-pthread",
+        "url": "http://localhost:8097/pyrogenesis-application.mjs",
+        "attached": true,
+        "parentId": "D18726B29915BF1C3B8043806044555E",
+        "canAccessOpener": false,
+        "parentFrameId": "D18726B29915BF1C3B8043806044555E",
+        "browserContextId": "A4CCAB8B7EC4C3CB24B98823467331F8"
+      },
+      "waitingForDebugger": false
+    },
+    {
+      "sessionId": "366845A9C124A4A86C38FE57B9D90A8A",
+      "targetInfo": {
+        "targetId": "42E901F6EBFAFD45C367763939ED9AE0",
+        "type": "worker",
+        "title": "em-pthread",
+        "url": "http://localhost:8097/pyrogenesis-application.mjs",
+        "attached": true,
+        "parentId": "D18726B29915BF1C3B8043806044555E",
+        "canAccessOpener": false,
+        "parentFrameId": "D18726B29915BF1C3B8043806044555E",
+        "browserContextId": "A4CCAB8B7EC4C3CB24B98823467331F8"
+      },
+      "waitingForDebugger": false
+    },
+    {
+      "sessionId": "30400B19EE8F687AA79608392532AFBF",
+      "targetInfo": {
+        "targetId": "6AFFDD15162E61CC3A70CC0F03DF57ED",
+        "type": "worker",
+        "title": "em-pthread",
+        "url": "http://localhost:8097/pyrogenesis-application.mjs",
+        "attached": true,
+        "parentId": "D18726B29915BF1C3B8043806044555E",
+        "canAccessOpener": false,
+        "parentFrameId": "D18726B29915BF1C3B8043806044555E",
+        "browserContextId": "A4CCAB8B7EC4C3CB24B98823467331F8"
+      },
+      "waitingForDebugger": false
+    },
+    {
+      "sessionId": "1CE155D5775498A56CEE59DF52143561",
+      "targetInfo": {
+        "targetId": "02C5F7F553D96405DBCC8C98FDFC3228",
+        "type": "worker",
+        "title": "em-pthread",
+        "url": "http://localhost:8097/pyrogenesis-application.mjs",
+        "attached": true,
+        "parentId": "D18726B29915BF1C3B8043806044555E",
+        "canAccessOpener": false,
+        "parentFrameId": "D18726B29915BF1C3B8043806044555E",
+        "browserContextId": "A4CCAB8B7EC4C3CB24B98823467331F8"
+      },
+      "waitingForDebugger": false
+    },
+    {
+      "sessionId": "FBADD1CBD937C2E4723060B37DBB4BE1",
+      "targetInfo": {
+        "targetId": "6626B1BD98E206E9CC7084879F503DCF",
+        "type": "worker",
+        "title": "0ad-webgpu-render",
+        "url": "http://localhost:8097/webgpu-render-worker.mjs",
+        "attached": true,
+        "parentId": "D18726B29915BF1C3B8043806044555E",
+        "canAccessOpener": false,
+        "parentFrameId": "D18726B29915BF1C3B8043806044555E",
+        "browserContextId": "A4CCAB8B7EC4C3CB24B98823467331F8"
+      },
+      "waitingForDebugger": false
+    },
+    {
+      "sessionId": "CD6726E31B9BB6C2C3164302BA612B12",
+      "targetInfo": {
+        "targetId": "D5699E71EDEDACD952BF774FEB8438FE",
+        "type": "worker",
+        "title": "em-pthread",
+        "url": "http://localhost:8097/pyrogenesis-application.mjs",
+        "attached": true,
+        "parentId": "D18726B29915BF1C3B8043806044555E",
+        "canAccessOpener": false,
+        "parentFrameId": "D18726B29915BF1C3B8043806044555E",
+        "browserContextId": "A4CCAB8B7EC4C3CB24B98823467331F8"
+      },
+      "waitingForDebugger": false
+    },
+    {
+      "sessionId": "497E946B73C12ACA6E7E07EE6ADBD029",
+      "targetInfo": {
+        "targetId": "1A9C5B1AC35646FF1447BDB63C48605D",
+        "type": "worker",
+        "title": "0ad-archive-cache",
+        "url": "http://localhost:8097/archive-worker.mjs",
+        "attached": true,
+        "parentId": "D18726B29915BF1C3B8043806044555E",
+        "canAccessOpener": false,
+        "parentFrameId": "D18726B29915BF1C3B8043806044555E",
+        "browserContextId": "A4CCAB8B7EC4C3CB24B98823467331F8"
+      },
+      "waitingForDebugger": false
+    },
+    {
+      "sessionId": "2C45D0C1825F4218016806F1CE86A1EE",
+      "targetInfo": {
+        "targetId": "72E767CD5A410DF9F358570A7761E534",
+        "type": "worker",
+        "title": "em-pthread",
+        "url": "http://localhost:8097/pyrogenesis-application.mjs",
+        "attached": true,
+        "parentId": "D18726B29915BF1C3B8043806044555E",
+        "canAccessOpener": false,
+        "parentFrameId": "D18726B29915BF1C3B8043806044555E",
+        "browserContextId": "A4CCAB8B7EC4C3CB24B98823467331F8"
+      },
+      "waitingForDebugger": false
+    },
+    {
+      "sessionId": "BBEF0239A4A99684E0E2642ECC278727",
+      "targetInfo": {
+        "targetId": "7A136E57730BA6B020F0D49109545C90",
+        "type": "worker",
+        "title": "em-pthread",
+        "url": "http://localhost:8097/pyrogenesis-application.mjs",
+        "attached": true,
+        "parentId": "D18726B29915BF1C3B8043806044555E",
+        "canAccessOpener": false,
+        "parentFrameId": "D18726B29915BF1C3B8043806044555E",
+        "browserContextId": "A4CCAB8B7EC4C3CB24B98823467331F8"
+      },
+      "waitingForDebugger": false
+    },
+    {
+      "sessionId": "583D738FD55D196AAFD59C17B42AA231",
+      "targetInfo": {
+        "targetId": "7FA8A224972455D83661BD482ECAF1FE",
+        "type": "worker",
+        "title": "em-pthread",
+        "url": "http://localhost:8097/pyrogenesis-application.mjs",
+        "attached": true,
+        "parentId": "D18726B29915BF1C3B8043806044555E",
+        "canAccessOpener": false,
+        "parentFrameId": "D18726B29915BF1C3B8043806044555E",
+        "browserContextId": "A4CCAB8B7EC4C3CB24B98823467331F8"
+      },
+      "waitingForDebugger": false
+    },
+    {
+      "sessionId": "CF57809711835950EFEE104F3178B16A",
+      "targetInfo": {
+        "targetId": "E10BCC80F32CD2D578DFE25A0ED1D472",
+        "type": "worker",
+        "title": "em-pthread",
+        "url": "http://localhost:8097/pyrogenesis-application.mjs",
+        "attached": true,
+        "parentId": "D18726B29915BF1C3B8043806044555E",
+        "canAccessOpener": false,
+        "parentFrameId": "D18726B29915BF1C3B8043806044555E",
+        "browserContextId": "A4CCAB8B7EC4C3CB24B98823467331F8"
+      },
+      "waitingForDebugger": false
+    },
+    {
+      "sessionId": "FE06ECF2EE296D00D53CA4FCFB3FA866",
+      "targetInfo": {
+        "targetId": "02B1B828CEF0E8B35B88D98EC8F7DF6C",
+        "type": "worker",
+        "title": "em-pthread",
+        "url": "http://localhost:8097/pyrogenesis-application.mjs",
+        "attached": true,
+        "parentId": "D18726B29915BF1C3B8043806044555E",
+        "canAccessOpener": false,
+        "parentFrameId": "D18726B29915BF1C3B8043806044555E",
+        "browserContextId": "A4CCAB8B7EC4C3CB24B98823467331F8"
+      },
+      "waitingForDebugger": false
+    },
+    {
+      "sessionId": "A5DBA64FA790B01E010B59A1BAD9C6A8",
+      "targetInfo": {
+        "targetId": "0C9FE1BF00AE3B422F79FD7C611FE09D",
+        "type": "worker",
+        "title": "em-pthread",
+        "url": "http://localhost:8097/pyrogenesis-application.mjs",
+        "attached": true,
+        "parentId": "D18726B29915BF1C3B8043806044555E",
+        "canAccessOpener": false,
+        "parentFrameId": "D18726B29915BF1C3B8043806044555E",
+        "browserContextId": "A4CCAB8B7EC4C3CB24B98823467331F8"
+      },
+      "waitingForDebugger": false
+    },
+    {
+      "sessionId": "BA963D03C823CB713CF0B496FB7C8700",
+      "targetInfo": {
+        "targetId": "4443CF1C98A7AEF2C51736D7953C0DD5",
+        "type": "worker",
+        "title": "em-pthread",
+        "url": "http://localhost:8097/pyrogenesis-application.mjs",
+        "attached": true,
+        "parentId": "D18726B29915BF1C3B8043806044555E",
+        "canAccessOpener": false,
+        "parentFrameId": "D18726B29915BF1C3B8043806044555E",
+        "browserContextId": "A4CCAB8B7EC4C3CB24B98823467331F8"
+      },
+      "waitingForDebugger": false
+    }
+  ],
+  "initialRendererWork": {
+    "stats": {
+      "frames": 3637,
+      "draws": 22059019,
+      "submissions": 3637,
+      "pipelineCompiles": 74,
+      "commandBatches": 10999,
+      "uploadBytes": 14495626416
+    },
+    "uploadBelt": {
+      "mappedBytes": 23717655068,
+      "fallbackBytes": 7636280,
+      "createdBuffers": 4,
+      "reusedBuffers": 3631,
+      "mapFailures": 0
+    },
+    "asyncSequence": 14712,
+    "presentation": {
+      "rafPresents": 3637,
+      "backgroundFallbackPresents": 0,
+      "failedPresents": 0,
+      "cancelledPresents": 0,
+      "totalWaitMilliseconds": 20777.13500009477,
+      "maxWaitMilliseconds": 36.92999999970198,
+      "lastFrameId": 3637
+    },
+    "commandQueue": {
+      "pending": 7,
+      "maxPending": 9,
+      "consumed": 20001,
+      "totalWaitMilliseconds": 78781.18499848247,
+      "maxWaitMilliseconds": 269.98499999940395
+    }
+  },
+  "samplingReplenishment": [],
+  "failure": "Page.evaluate: Error: El motor no respondi\u00f3 a la prueba de GUI.\n    at window.evaluateOriginalGUI (http://localhost:8097/application.mjs:282:9)\n    at async <anonymous>:316:30",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\jorlu\\OneDrive\\Documentos\\emprendimiento\\0 AD\\0adwebassembly\\wasm\\scripts\\profile-phase4-5.py\", line 204, in main\n    replenished=populate(gui,page.wait_for_timeout,'combat',initial=False)\n  File \"C:\\Users\\jorlu\\OneDrive\\Documentos\\emprendimiento\\0 AD\\0adwebassembly\\wasm\\scripts\\phase4_workload.py\", line 84, in populate\n    return replenish(gui, wait, workload)\n  File \"C:\\Users\\jorlu\\OneDrive\\Documentos\\emprendimiento\\0 AD\\0adwebassembly\\wasm\\scripts\\phase4_workload.py\", line 129, in replenish\n    state = observe_counts(gui)\n  File \"C:\\Users\\jorlu\\OneDrive\\Documentos\\emprendimiento\\0 AD\\0adwebassembly\\wasm\\scripts\\phase4_workload.py\", line 47, in observe_counts\n    state = json.loads(gui(OBSERVE_COUNTS))\n                       ~~~^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\jorlu\\OneDrive\\Documentos\\emprendimiento\\0 AD\\0adwebassembly\\wasm\\scripts\\profile-phase4-5.py\", line 78, in <lambda>\n    gui=lambda code:page.evaluate('code=>evaluateOriginalGUI(code)',code)\n                    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\jorlu\\OneDrive\\Documentos\\emprendimiento\\0 AD\\0adwebassembly\\wasm\\.venv-phase3\\Lib\\site-packages\\playwright\\sync_api\\_generated.py\", line 8531, in evaluate\n    self._sync(\n    ~~~~~~~~~~^\n        self._impl_obj.evaluate(expression=expression, arg=mapping.to_impl(arg))\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    )\n    ^\n  File \"C:\\Users\\jorlu\\OneDrive\\Documentos\\emprendimiento\\0 AD\\0adwebassembly\\wasm\\.venv-phase3\\Lib\\site-packages\\playwright\\_impl\\_sync_base.py\", line 115, in _sync\n    return task.result()\n           ~~~~~~~~~~~^^\n  File \"C:\\Users\\jorlu\\OneDrive\\Documentos\\emprendimiento\\0 AD\\0adwebassembly\\wasm\\.venv-phase3\\Lib\\site-packages\\playwright\\_impl\\_page.py\", line 467, in evaluate\n    return await self._main_frame.evaluate(expression, arg)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\jorlu\\OneDrive\\Documentos\\emprendimiento\\0 AD\\0adwebassembly\\wasm\\.venv-phase3\\Lib\\site-packages\\playwright\\_impl\\_frame.py\", line 320, in evaluate\n    await self._channel.send(\n    ...<6 lines>...\n    )\n  File \"C:\\Users\\jorlu\\OneDrive\\Documentos\\emprendimiento\\0 AD\\0adwebassembly\\wasm\\.venv-phase3\\Lib\\site-packages\\playwright\\_impl\\_connection.py\", line 69, in send\n    return await self._connection.wrap_api_call(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    ...<3 lines>...\n    )\n    ^\n  File \"C:\\Users\\jorlu\\OneDrive\\Documentos\\emprendimiento\\0 AD\\0adwebassembly\\wasm\\.venv-phase3\\Lib\\site-packages\\playwright\\_impl\\_connection.py\", line 559, in wrap_api_call\n    raise rewrite_error(error, f\"{parsed_st['apiName']}: {error}\") from None\nplaywright._impl._errors.Error: Page.evaluate: Error: El motor no respondi\u00f3 a la prueba de GUI.\n    at window.evaluateOriginalGUI (http://localhost:8097/application.mjs:282:9)\n    at async <anonymous>:316:30\n",
+  "teardownFailure": "Page.wait_for_function: Timeout 60000ms exceeded.",
+  "browserExitBeforeCleanup": null,
+  "browserExitAfterCleanup": 0,
+  "engineErrors": []
+}

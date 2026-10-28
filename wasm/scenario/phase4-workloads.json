@@ -1,0 +1,51 @@
+{
+  "version": 3,
+  "baseCommit": "40b8794eecb9618da69e10bacffa8814c561aa51",
+  "scope": "Full original CGame, GUI, Petra and components. Original cheat createunits is used only to prepare and replenish benchmark load; functional command tests run with cheats disabled.",
+  "settings": {
+    "mapType": "random",
+    "map": "maps/random/mainland",
+    "settings": {
+      "Size": 256,
+      "Biome": "generic/temperate",
+      "PlayerPlacement": "circle",
+      "Seed": 12345,
+      "AISeed": 54321,
+      "PopulationCap": 200,
+      "StartingResources": 10000,
+      "CheatsEnabled": true,
+      "VictoryConditions": [],
+      "PlayerData": [
+        {"Civ": "athen", "Name": "Phase4Human", "AI": false, "Team": -1, "Color": {"r":10,"g":10,"b":190}},
+        {"Civ": "mace", "Name": "Phase4Petra", "AI": "petra", "AIDiff": 3, "AIBehavior": "balanced", "Team": -1, "Color": {"r":230,"g":10,"b":10}}
+      ]
+    }
+  },
+  "resolution": [1920, 1080],
+  "gameSpeed": 1,
+  "graphicsProfile": {
+    "vsync": "true", "adaptivefps.session": "60", "shadows": "true",
+    "shadowpcf": "true", "shadowquality": "2", "shadowscascadecount": "1",
+    "shadowscascadedistanceratio": "1.7", "shadowscutoffdistance": "300.0", "shadowscovermap": "false",
+    "postproc": "true", "particles": "true", "gpuskinning": "true", "silhouettes": "true",
+    "watereffects": "true", "waterfancyeffects": "false", "waterrealdepth": "true",
+    "waterreflection": "true", "waterrefraction": "true", "textures.quality": "2",
+    "textures.maxanisotropy": "2", "antialiasing": "disabled", "renderactors": "true",
+    "max_actor_quality": "200", "materialmgr.quality": "10.0"
+  },
+  "presentationSync": "Browser RAF/display synchronization; native comparison requests vsync=true. Both retain the original 60 FPS session cap.",
+  "minimumLiveUnits": 200,
+  "targetUnitsPerPlayer": 125,
+  "replenishToUnitsPerPlayer": 125,
+  "measurementObservation": "Samples read classCounts.Unit from GetSimulationState (checked against the UnitAI count at setup). Replenishment creates only the deficit to replenishToUnitsPerPlayer and gives the original order only to the new entities; the full per-entity observation runs only at setup and at the measurement boundaries.",
+  "preparationTemplates": ["units/athen/infantry_spearman_e", "units/mace/infantry_pikeman_e"],
+  "workloads": {
+    "skirmish": {"camera": "human civic centre", "orders": "continuous original patrol near civic centre; original Petra controls opponent", "reinforcementSeconds": 30},
+    "combat": {"camera": "midpoint between civic centres", "orders": "original attack-walk commands towards midpoint for both armies; Petra remains active", "reinforcementSeconds": 5, "allowCapture": false}
+  },
+  "warmupSeconds": 120,
+  "durationSeconds": 900,
+  "repetitions": 3,
+  "requiredDisplayedFPS": 30,
+  "maximumP95Milliseconds": 33.4
+}

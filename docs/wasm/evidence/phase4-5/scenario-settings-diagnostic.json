@@ -1,0 +1,103 @@
+{
+  "console": [
+    "The powerPreference option is currently ignored when calling requestAdapter() on Windows. See https://crbug.com/369219127",
+    "{\"type\":\"ready\",\"backend\":\"webgpu\",\"powerPreference\":\"high-performance\",\"owner\":\"main-thread\",\"adapter\":{\"vendor\":\"nvidia\",\"architecture\":\"ampere\",\"device\":\"\",\"description\":\"\"},\"adapterFeatures\":[\"bgra8unorm-storage\",\"clip-distances\",\"core-features-and-limits\",\"depth-clip-control\",\"depth32float-stencil8\",\"dual-source-blending\",\"float32-blendable\",\"float32-filterable\",\"indirect-first-instance\",\"primitive-index\",\"rg11b10ufloat-renderable\",\"shader-f16\",\"subgroup-size-control\",\"subgroups\",\"texture-component-swizzle\",\"texture-compression-bc\",\"texture-compression-bc-sliced-3d\",\"texture-formats-tier1\",\"texture-formats-tier2\",\"timestamp-query\"],\"adapterLimits\":{\"maxTextureDimension1D\":16384,\"maxTextureDimension2D\":16384,\"maxTextureDimension3D\":2048,\"maxTextureArrayLayers\":2048,\"maxBindGroups\":4,\"maxBindGroupsPlusVertexBuffers\":24,\"maxBindingsPerBindGroup\":1000,\"maxDynamicUniformBuffersPerPipelineLayout\":10,\"maxDynamicStorageBuffersPerPipelineLayout\":8,\"maxSampledTexturesPerShaderStage\":48,\"maxSamplersPerShaderStage\":16,\"maxStorageBuffersPerShaderStage\":16,\"maxStorageTexturesPerShaderStage\":8,\"maxUniformBuffersPerShaderStage\":12,\"maxUniformBufferBindingSize\":65536,\"maxStorageBufferBindingSize\":2147483644,\"minUniformBufferOffsetAlignment\":256,\"minStorageBufferOffsetAlignment\":256,\"maxVertexBuffers\":8,\"maxBufferSize\":2147483648,\"maxVertexAttributes\":30,\"maxVertexBufferArrayStride\":2048,\"maxInterStageShaderVariables\":28,\"maxColorAttachments\":8,\"maxColorAttachmentBytesPerSample\":128,\"maxComputeWorkgroupStorageSize\":32768,\"maxComputeInvocationsPerWorkgroup\":1024,\"maxComputeWorkgroupSizeX\":1024,\"maxComputeWorkgroupSizeY\":1024,\"maxComputeWorkgroupSizeZ\":64,\"maxComputeWorkgroupsPerDimension\":65535,\"maxImmediateSize\":64,\"maxStorageBuffersInFragmentStage\":16,\"maxStorageTexturesInFragmentStage\":8,\"maxStorageBuffersInVertexStage\":16,\"maxStorageTexturesInVertexStage\":8},\"deviceFeatures\":[\"core-features-and-limits\",\"depth32float-stencil8\",\"dual-source-blending\",\"float32-blendable\",\"float32-filterable\",\"rg11b10ufloat-renderable\",\"texture-compression-bc\"],\"deviceLimits\":{\"maxTextureDimension1D\":8192,\"maxTextureDimension2D\":8192,\"maxTextureDimension3D\":2048,\"maxTextureArrayLayers\":256,\"maxBindGroups\":4,\"maxBindGroupsPlusVertexBuffers\":24,\"maxBindingsPerBindGroup\":1000,\"maxDynamicUniformBuffersPerPipelineLayout\":8,\"maxDynamicStorageBuffersPerPipelineLayout\":4,\"maxSampledTexturesPerShaderStage\":16,\"maxSamplersPerShaderStage\":16,\"maxStorageBuffersPerShaderStage\":8,\"maxStorageTexturesPerShaderStage\":4,\"maxUniformBuffersPerShaderStage\":12,\"maxUniformBufferBindingSize\":65536,\"maxStorageBufferBindingSize\":134217728,\"minUniformBufferOffsetAlignment\":256,\"minStorageBufferOffsetAlignment\":256,\"maxVertexBuffers\":8,\"maxBufferSize\":268435456,\"maxVertexAttributes\":16,\"maxVertexBufferArrayStride\":2048,\"maxInterStageShaderVariables\":16,\"maxColorAttachments\":8,\"maxColorAttachmentBytesPerSample\":32,\"maxComputeWorkgroupStorageSize\":16384,\"maxComputeInvocationsPerWorkgroup\":256,\"maxComputeWorkgroupSizeX\":256,\"maxComputeWorkgroupSizeY\":256,\"maxComputeWorkgroupSizeZ\":64,\"maxComputeWorkgroupsPerDimension\":65535,\"maxImmediateSize\":64,\"maxStorageBuffersInFragmentStage\":8,\"maxStorageTexturesInFragmentStage\":4,\"maxStorageBuffersInVertexStage\":8,\"maxStorageTexturesInVertexStage\":4},\"unavailableOptionalFeatures\":[],\"fallbackAdapter\":null,\"format\":\"bgra8unorm\"}",
+    "Main log written to '/logs/mainlog.html'",
+    "Interesting log written to '/logs/interestinglog.html'",
+    "Sound: AlcInit success, using Emscripten OpenAL",
+    "Hardware details written to '/logs/system_info.txt'",
+    "Failed to query SDL WM info: That operation is not supportedUserReport written to '/logs/userreport_hwdetect.txt'",
+    "Failed to load resource: the server responded with a status of 404 (File not found)",
+    "{\"type\":\"device-lost\",\"backend\":\"webgpu\",\"reason\":\"destroyed\",\"message\":\"Device was destroyed.\",\"expected\":true}",
+    "{\"type\":\"engine-device-lost\",\"reason\":\"destroyed\",\"message\":\"Device was destroyed.\",\"expected\":true}"
+  ],
+  "changes": [
+    {
+      "cycle": 0,
+      "comp": "cheats",
+      "before": "[(void 0), true]",
+      "after": "[(void 0), false]"
+    },
+    {
+      "cycle": 0,
+      "comp": "map",
+      "before": "[(void 0), [\"maps/skirmishes/acropolis_bay_2p\", \"maps/skirmishes/alpine_mountains_3p\", \"maps/skirmishes/alpine_valleys_2p\", \"maps/skirmishes/arabian_oases_2p\", \"maps/skirmishes/atlas_valleys_8p\", \"maps/skirmishes/bactria_2p\", \"maps/skirmishes/barcania_3p\", \"maps/skirmishes/belgian_bog_2p\", \"maps/skirmishes/cappadocian_badlands_2p\", \"maps/skirmishes/cappadocian_badlands_4p\", \"maps/skirmishes/caspian_sea_2pv2p\", \"maps/skirmishes/cisalpine_winter_2p\", \"maps/skirmishes/syria_2p\", \"maps/skirmishes/corinthian_isthmus_2p\", \"maps/skirmishes/corinthian_isthmus_4p\", \"maps/skirmishes/crocodilopolis_4p\", \"maps/skirmishes/death_canyon_2p\", \"maps/skirmishes/deccan_plateau_2p\", \"maps/skirmishes/dueling_cliffs_3pv3p\", \"maps/skirmishes/egypt_3pv3p\", \"maps/skirmishes/farmland_2p\", \"maps/skirmishes/forest_battle_4p\", \"maps/skirmishes/gallic_fields_3p\", \"maps/skirmishes/gallic_highlands_2p\", \"maps/skirmishes/gambia_river_3p\", \"maps/skirmishes/golden_oasis_2p\", \"maps/skirmishes/golden_island_2p\", \"maps/skirmishes/greek_acropolis_2p\", \"maps/skirmishes/greek_acropolis_4p\", \"maps/skirmishes/greek_acropolis_night_2p\", \"maps/skirmishes/hindu_kush_2p\", \"maps/skirmishes/hydaspes_river_4p\", \"maps/skirmishes/butana_steppe_2p\", \"maps/skirmishes/isthmus_of_corinth_2p\", \"maps/skirmishes/libyan_oases_4p\", \"maps/skirmishes/libyan_oasis_2p\", \"maps/skirmishes/lorraine_plain_2p\", \"maps/skirmishes/magadha_2p\", \"maps/skirmishes/median_oasis_2p\", \"maps/skirmishes/median_oasis_4p\", \"maps/skirmishes/mediterranean_cove_2p\", \"maps/skirmishes/miletus_peninsula_2p\", \"maps/skirmishes/northern_island_2p\", \"maps/skirmishes/nubian_frontier_2p\", \"maps/skirmishes/obedska_bog_4p\", \"maps/skirmishes/obedska_bog_night_4p\", \"maps/skirmishes/oceanside_2p\", \"maps/skirmishes/persian_highlands_4p\", \"maps/skirmishes/punjab_2p\", \"maps/skirmishes/saharan_oases_2p\", \"maps/skirmishes/saharan_oases_4p\", \"maps/skirmishes/sahel_4p\", \"maps/skirmishes/sahyadri_buttes_5p\", \"maps/skirmishes/savanna_river_2p\", \"maps/skirmishes/scythia_4p\", \"maps/skirmishes/sicilia_2p\", \"maps/skirmishes/sicilia_nomad_2p\", \"maps/skirmishes/tarim_basin_2p\", \"maps/skirmishes/tarim_basin_4p\", \"maps/skirmishes/team_oasis_2pv2p\", \"maps/skirmishes/temperate_roadway_2p\", \"maps/skirmishes/thessalian_plains_4p\", \"maps/skirmishes/tuscan_acropolis_4p\", \"maps/skirmishes/two_seas_6p\", \"maps/skirmishes/vesuvius_6p\", \"maps/skirmishes/via_augusta_4p\", \"maps/skirmishes/watering_holes_4p\", \"maps/skirmishes/white_cliffs_of_dover_5p\", \"maps/skirmishes/zagros_mountains_2p\"], \"skirmish\", {settings:{AISeed:0, AllyView:false, CircularMap:true, Description:\"Each player starts the match atop a large flat plateau, otherwise known as an acropolis.\\n\\nTo the East lies a large bay with fishing opportunities. To the West is a rugged hinterland with an unclaimed acropolis commanding the valley below.\", Keywords:[], LockTeams:false, Name:\"Acropolis Bay (2)\", PlayerData:[{Name:\"Player 1\"}, {Name:\"Player 2\"}], Preview:\"acropolis_bay.png\", RevealMap:false, VictoryConditions:[\"conquest_civic_centers\"]}}, \"maps/skirmishes/acropolis_bay_2p\", (void 0)]",
+      "after": "[(void 0), [\"maps/scenarios/arcadia\", \"maps/scenarios/azure_coast_8p\", \"maps/scenarios/azure_coast_2p\", \"maps/scenarios/azure_coast_4p\", \"maps/scenarios/battle_for_the_tiber\", \"maps/scenarios/belgian_bog_night\", \"maps/scenarios/death_canyon_invasion_force\", \"maps/scenarios/fast_oasis\", \"maps/scenarios/gold_rush\", \"maps/scenarios/laconia\", \"maps/scenarios/the_massacre_of_delphi\", \"maps/scenarios/necropolis\", \"maps/scenarios/peloponnese\", \"maps/scenarios/saharan_oases\", \"maps/scenarios/sahel\", \"maps/scenarios/savanna_ravine\", \"maps/scenarios/serengeti\", \"maps/scenarios/ship_combat_demo\", \"maps/scenarios/siwa_oasis\", \"maps/scenarios/third_macedonian_war\"], \"scenario\", {settings:{CircularMap:false, Description:\"Springtime in Arcadia, Greece. Spring rains have gorged what would otherwise be dry creek beds throughout the rest of the year, dividing the lands between two warring tribes. \\n\\nPlayers start on either side of a mountainous region rich in resources. Extra starting buildings help players jumpstart building their new colonies.\", Keywords:[], LockTeams:false, Name:\"Arcadia\", PlayerData:[{Civ:\"spart\", Color:{b:200, g:46, r:46}, Name:\"Player 1\", Team:-1}, {Civ:\"gaul\", Color:{b:20, g:20, r:150}, Name:\"Player 2\", Team:-1}], Preview:\"arcadia.png\", RevealMap:false, VictoryConditions:[\"conquest\"]}}, \"maps/scenarios/arcadia\", (void 0)]"
+    },
+    {
+      "cycle": 0,
+      "comp": "playerAI",
+      "before": "[(void 0), [(void 0), {bot:\"petra\", difficulty:3, behavior:\"random\"}]]",
+      "after": "[(void 0), [(void 0), {bot:\"petra\", difficulty:3, behavior:\"balanced\"}]]"
+    },
+    {
+      "cycle": 0,
+      "comp": "playerName",
+      "before": "[(void 0), [\"Player 1\", \"Player 2\"]]",
+      "after": "[(void 0), [\"Phase4Human\", \"Phase4Petra\"]]"
+    },
+    {
+      "cycle": 0,
+      "comp": "playerRemoved",
+      "before": "[(void 0), [false, false]]",
+      "after": "[(void 0), [(void 0), (void 0)]]"
+    },
+    {
+      "cycle": 0,
+      "comp": "seeds",
+      "before": "[(void 0), \"random\", \"random\"]",
+      "after": "[(void 0), 12345, 54321]"
+    },
+    {
+      "cycle": 0,
+      "comp": "startingResources",
+      "before": "[(void 0), 300, (void 0), 300]",
+      "after": "[(void 0), 300, (void 0), 10000]"
+    },
+    {
+      "cycle": 1,
+      "comp": "playerName",
+      "before": "[(void 0), [\"Player 1\", \"Player 2\"]]",
+      "after": "[(void 0), [\"Phase4Human\", \"Phase4Petra\"]]"
+    },
+    {
+      "cycle": 1,
+      "comp": "startingResources",
+      "before": "[(void 0), 300, (void 0), 300]",
+      "after": "[(void 0), 300, (void 0), 10000]"
+    },
+    {
+      "cycle": 2,
+      "comp": "playerName",
+      "before": "[(void 0), [\"Player 1\", \"Player 2\"]]",
+      "after": "[(void 0), [\"Phase4Human\", \"Phase4Petra\"]]"
+    },
+    {
+      "cycle": 2,
+      "comp": "startingResources",
+      "before": "[(void 0), 300, (void 0), 300]",
+      "after": "[(void 0), 300, (void 0), 10000]"
+    }
+  ],
+  "result": "Diagnostic complete",
+  "shutdown": {
+    "samples": [
+      {
+        "seconds": 0.0027083999884780496,
+        "sdk": {
+          "running": [],
+          "pooled": [],
+          "pthreads": []
+        },
+        "workers": []
+      }
+    ],
+    "sdk": {
+      "running": [],
+      "pooled": [],
+      "pthreads": []
+    },
+    "workers": [],
+    "liveApplicationTargets": []
+  }
+}

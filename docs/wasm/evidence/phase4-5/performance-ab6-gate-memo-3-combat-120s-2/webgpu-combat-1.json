@@ -1,0 +1,1190 @@
+{
+  "passed": false,
+  "phase4Accepted": false,
+  "errors": [],
+  "console": [
+    "{\"type\":\"ready\",\"backend\":\"webgpu\",\"powerPreference\":\"high-performance\",\"owner\":\"render-worker\",\"adapter\":{\"vendor\":\"nvidia\",\"architecture\":\"ampere\",\"device\":\"\",\"description\":\"\"},\"adapterFeatures\":[\"bgra8unorm-storage\",\"clip-distances\",\"core-features-and-limits\",\"depth-clip-control\",\"depth32float-stencil8\",\"dual-source-blending\",\"float32-blendable\",\"float32-filterable\",\"indirect-first-instance\",\"primitive-index\",\"rg11b10ufloat-renderable\",\"shader-f16\",\"subgroup-size-control\",\"subgroups\",\"texture-component-swizzle\",\"texture-compression-bc\",\"texture-compression-bc-sliced-3d\",\"texture-formats-tier1\",\"texture-formats-tier2\",\"timestamp-query\"],\"adapterLimits\":{\"maxTextureDimension1D\":16384,\"maxTextureDimension2D\":16384,\"maxTextureDimension3D\":2048,\"maxTextureArrayLayers\":2048,\"maxBindGroups\":4,\"maxBindGroupsPlusVertexBuffers\":24,\"maxBindingsPerBindGroup\":1000,\"maxDynamicUniformBuffersPerPipelineLayout\":10,\"maxDynamicStorageBuffersPerPipelineLayout\":8,\"maxSampledTexturesPerShaderStage\":48,\"maxSamplersPerShaderStage\":16,\"maxStorageBuffersPerShaderStage\":16,\"maxStorageTexturesPerShaderStage\":8,\"maxUniformBuffersPerShaderStage\":12,\"maxUniformBufferBindingSize\":65536,\"maxStorageBufferBindingSize\":2147483644,\"minUniformBufferOffsetAlignment\":256,\"minStorageBufferOffsetAlignment\":256,\"maxVertexBuffers\":8,\"maxBufferSize\":2147483648,\"maxVertexAttributes\":30,\"maxVertexBufferArrayStride\":2048,\"maxInterStageShaderVariables\":28,\"maxColorAttachments\":8,\"maxColorAttachmentBytesPerSample\":128,\"maxComputeWorkgroupStorageSize\":32768,\"maxComputeInvocationsPerWorkgroup\":1024,\"maxComputeWorkgroupSizeX\":1024,\"maxComputeWorkgroupSizeY\":1024,\"maxComputeWorkgroupSizeZ\":64,\"maxComputeWorkgroupsPerDimension\":65535,\"maxImmediateSize\":64,\"maxStorageBuffersInFragmentStage\":16,\"maxStorageTexturesInFragmentStage\":8,\"maxStorageBuffersInVertexStage\":16,\"maxStorageTexturesInVertexStage\":8},\"deviceFeatures\":[\"core-features-and-limits\",\"depth32float-stencil8\",\"dual-source-blending\",\"float32-blendable\",\"float32-filterable\",\"rg11b10ufloat-renderable\",\"texture-compression-bc\"],\"deviceLimits\":{\"maxTextureDimension1D\":8192,\"maxTextureDimension2D\":8192,\"maxTextureDimension3D\":2048,\"maxTextureArrayLayers\":256,\"maxBindGroups\":4,\"maxBindGroupsPlusVertexBuffers\":24,\"maxBindingsPerBindGroup\":1000,\"maxDynamicUniformBuffersPerPipelineLayout\":8,\"maxDynamicStorageBuffersPerPipelineLayout\":4,\"maxSampledTexturesPerShaderStage\":16,\"maxSamplersPerShaderStage\":16,\"maxStorageBuffersPerShaderStage\":8,\"maxStorageTexturesPerShaderStage\":4,\"maxUniformBuffersPerShaderStage\":12,\"maxUniformBufferBindingSize\":65536,\"maxStorageBufferBindingSize\":134217728,\"minUniformBufferOffsetAlignment\":256,\"minStorageBufferOffsetAlignment\":256,\"maxVertexBuffers\":8,\"maxBufferSize\":268435456,\"maxVertexAttributes\":16,\"maxVertexBufferArrayStride\":2048,\"maxInterStageShaderVariables\":16,\"maxColorAttachments\":8,\"maxColorAttachmentBytesPerSample\":32,\"maxComputeWorkgroupStorageSize\":16384,\"maxComputeInvocationsPerWorkgroup\":256,\"maxComputeWorkgroupSizeX\":256,\"maxComputeWorkgroupSizeY\":256,\"maxComputeWorkgroupSizeZ\":64,\"maxComputeWorkgroupsPerDimension\":65535,\"maxImmediateSize\":64,\"maxStorageBuffersInFragmentStage\":8,\"maxStorageTexturesInFragmentStage\":4,\"maxStorageBuffersInVertexStage\":8,\"maxStorageTexturesInVertexStage\":4},\"unavailableOptionalFeatures\":[],\"fallbackAdapter\":null,\"format\":\"bgra8unorm\"}",
+    "Main log written to '/logs/mainlog.html'",
+    "Interesting log written to '/logs/interestinglog.html'",
+    "Sound: AlcInit success, using Emscripten OpenAL",
+    "Hardware details written to '/logs/system_info.txt'",
+    "Failed to query SDL WM info: That operation is not supportedUserReport written to '/logs/userreport_hwdetect.txt'",
+    "Failed to load resource: the server responded with a status of 404 (File not found)",
+    "JSON data written to '/data/config/matchsettings.json'",
+    "SCENE_ACTOR_QUALITY_HOOK_BEGIN",
+    "SCENE_QUALITY_GET_BEGIN",
+    "SCENE_QUALITY_GET_END 200 100",
+    "SCENE_QUALITY_INTERPOLATE_BEGIN",
+    "SCENE_QUALITY_INTERPOLATE_END",
+    "SCENE_ACTOR_QUALITY_HOOK_END",
+    "SCENE_ACTOR_VALIDATOR_BEGIN",
+    "Replay written to '/data/replays/0.29.0/2026-10-24_0001'",
+    "Setting biome generic/temperate.",
+    "Creating playerbases...",
+    "Creating bumps...",
+    "Creating mountains...",
+    "Creating forests...",
+    "Creating dirt patches...",
+    "Creating grass patches...",
+    "Creating metal mines...",
+    "Creating stone mines...",
+    "Creating decoration...",
+    "Creating food...",
+    "Creating food...",
+    "Creating straggler trees...",
+    "Map generation finished.",
+    "Total entities: 3001, Terrain entities: 1961, Textures: 10.",
+    "{\"type\":\"sampler-address-emulation\",\"label\":\"art/textures/skins/props/decal_struct_paving_aegean_large.png\",\"requested\":[3,3,0],\"effective\":\"portable border filtering in the original shader sampling path\"}",
+    "GAME STARTED, ALL INIT COMPLETE",
+    "{\"type\":\"sampler-address-emulation\",\"label\":\"art/textures/misc/territory_border.png\",\"requested\":[3,2,0],\"effective\":\"portable border filtering in the original shader sampling path\"}",
+    "Replay metadata written to '/data/replays/0.29.0/2026-10-24_0001/metadata.json'"
+  ],
+  "frames": [],
+  "samples": [],
+  "commandTrace": [],
+  "workload": "combat",
+  "warmupSeconds": 60,
+  "durationSeconds": 120,
+  "manifest": {
+    "version": 3,
+    "baseCommit": "40b8794eecb9618da69e10bacffa8814c561aa51",
+    "scope": "Full original CGame, GUI, Petra and components. Original cheat createunits is used only to prepare and replenish benchmark load; functional command tests run with cheats disabled.",
+    "settings": {
+      "mapType": "random",
+      "map": "maps/random/mainland",
+      "settings": {
+        "Size": 256,
+        "Biome": "generic/temperate",
+        "PlayerPlacement": "circle",
+        "Seed": 12345,
+        "AISeed": 54321,
+        "PopulationCap": 200,
+        "StartingResources": 10000,
+        "CheatsEnabled": true,
+        "VictoryConditions": [],
+        "PlayerData": [
+          {
+            "Civ": "athen",
+            "Name": "Phase4Human",
+            "AI": false,
+            "Team": -1,
+            "Color": {
+              "r": 10,
+              "g": 10,
+              "b": 190
+            }
+          },
+          {
+            "Civ": "mace",
+            "Name": "Phase4Petra",
+            "AI": "petra",
+            "AIDiff": 3,
+            "AIBehavior": "balanced",
+            "Team": -1,
+            "Color": {
+              "r": 230,
+              "g": 10,
+              "b": 10
+            }
+          }
+        ]
+      }
+    },
+    "resolution": [
+      1920,
+      1080
+    ],
+    "gameSpeed": 1,
+    "graphicsProfile": {
+      "vsync": "true",
+      "adaptivefps.session": "60",
+      "shadows": "true",
+      "shadowpcf": "true",
+      "shadowquality": "2",
+      "shadowscascadecount": "1",
+      "shadowscascadedistanceratio": "1.7",
+      "shadowscutoffdistance": "300.0",
+      "shadowscovermap": "false",
+      "postproc": "true",
+      "particles": "true",
+      "gpuskinning": "true",
+      "silhouettes": "true",
+      "watereffects": "true",
+      "waterfancyeffects": "false",
+      "waterrealdepth": "true",
+      "waterreflection": "true",
+      "waterrefraction": "true",
+      "textures.quality": "2",
+      "textures.maxanisotropy": "2",
+      "antialiasing": "disabled",
+      "renderactors": "true",
+      "max_actor_quality": "200",
+      "materialmgr.quality": "10.0"
+    },
+    "presentationSync": "Browser RAF/display synchronization; native comparison requests vsync=true. Both retain the original 60 FPS session cap.",
+    "minimumLiveUnits": 200,
+    "targetUnitsPerPlayer": 125,
+    "replenishToUnitsPerPlayer": 125,
+    "measurementObservation": "Samples read classCounts.Unit from GetSimulationState (checked against the UnitAI count at setup). Replenishment creates only the deficit to replenishToUnitsPerPlayer and gives the original order only to the new entities; the full per-entity observation runs only at setup and at the measurement boundaries.",
+    "preparationTemplates": [
+      "units/athen/infantry_spearman_e",
+      "units/mace/infantry_pikeman_e"
+    ],
+    "workloads": {
+      "skirmish": {
+        "camera": "human civic centre",
+        "orders": "continuous original patrol near civic centre; original Petra controls opponent",
+        "reinforcementSeconds": 30
+      },
+      "combat": {
+        "camera": "midpoint between civic centres",
+        "orders": "original attack-walk commands towards midpoint for both armies; Petra remains active",
+        "reinforcementSeconds": 5,
+        "allowCapture": false
+      }
+    },
+    "warmupSeconds": 120,
+    "durationSeconds": 900,
+    "repetitions": 3,
+    "requiredDisplayedFPS": 30,
+    "maximumP95Milliseconds": 33.4
+  },
+  "manifestSHA256": "5b7b74939e1739a406b6701aef93e7f38d0860d88c393d097ec02f9c5a9c9af5",
+  "harnessSHA256": {
+    "benchmark-phase4.py": "8fb01f91a20da07a64854a5c41106ce98309dcab0514d14c66c1c20ee7b7c647",
+    "phase4_workload.py": "0f4e2ba9f8732245a0cdb768b670616fea17a3ce4a4a05766b8d4ffac584a2c1",
+    "phase4_flow.py": "87bff7c7198dded558b73caf0fbd22eae1ce5efe1f425693ac272d15c449e92b",
+    "phase4_browser.py": "6f2b83493b129c3779b6e12a91e64104ff3f13b1747941b85af4c0d45a676ee4",
+    "phase45_window_focus.py": "8085fe8fec923abfbde45cae0fafe4f1e283d7afeca963a7b5cb6a3b9356cc15"
+  },
+  "applicationArguments": [
+    "./this.program",
+    "-writableRoot",
+    "-mod=public",
+    "-conf=windowed:true",
+    "-conf=xres:1280",
+    "-conf=yres:720",
+    "-conf=vsync:true",
+    "-conf=rendererbackend:webgpu",
+    "-conf=userreport.enabledversion:0"
+  ],
+  "frameTimeSource": "monotonic-elapsed",
+  "renderer": {
+    "backend": "webgpu",
+    "powerPreference": "high-performance",
+    "owner": "render-worker",
+    "adapter": {
+      "vendor": "nvidia",
+      "architecture": "ampere",
+      "device": "",
+      "description": ""
+    },
+    "adapterFeatures": [
+      "bgra8unorm-storage",
+      "clip-distances",
+      "core-features-and-limits",
+      "depth-clip-control",
+      "depth32float-stencil8",
+      "dual-source-blending",
+      "float32-blendable",
+      "float32-filterable",
+      "indirect-first-instance",
+      "primitive-index",
+      "rg11b10ufloat-renderable",
+      "shader-f16",
+      "subgroup-size-control",
+      "subgroups",
+      "texture-component-swizzle",
+      "texture-compression-bc",
+      "texture-compression-bc-sliced-3d",
+      "texture-formats-tier1",
+      "texture-formats-tier2",
+      "timestamp-query"
+    ],
+    "adapterLimits": {
+      "maxTextureDimension1D": 16384,
+      "maxTextureDimension2D": 16384,
+      "maxTextureDimension3D": 2048,
+      "maxTextureArrayLayers": 2048,
+      "maxBindGroups": 4,
+      "maxBindGroupsPlusVertexBuffers": 24,
+      "maxBindingsPerBindGroup": 1000,
+      "maxDynamicUniformBuffersPerPipelineLayout": 10,
+      "maxDynamicStorageBuffersPerPipelineLayout": 8,
+      "maxSampledTexturesPerShaderStage": 48,
+      "maxSamplersPerShaderStage": 16,
+      "maxStorageBuffersPerShaderStage": 16,
+      "maxStorageTexturesPerShaderStage": 8,
+      "maxUniformBuffersPerShaderStage": 12,
+      "maxUniformBufferBindingSize": 65536,
+      "maxStorageBufferBindingSize": 2147483644,
+      "minUniformBufferOffsetAlignment": 256,
+      "minStorageBufferOffsetAlignment": 256,
+      "maxVertexBuffers": 8,
+      "maxBufferSize": 2147483648,
+      "maxVertexAttributes": 30,
+      "maxVertexBufferArrayStride": 2048,
+      "maxInterStageShaderVariables": 28,
+      "maxColorAttachments": 8,
+      "maxColorAttachmentBytesPerSample": 128,
+      "maxComputeWorkgroupStorageSize": 32768,
+      "maxComputeInvocationsPerWorkgroup": 1024,
+      "maxComputeWorkgroupSizeX": 1024,
+      "maxComputeWorkgroupSizeY": 1024,
+      "maxComputeWorkgroupSizeZ": 64,
+      "maxComputeWorkgroupsPerDimension": 65535,
+      "maxImmediateSize": 64,
+      "maxStorageBuffersInFragmentStage": 16,
+      "maxStorageTexturesInFragmentStage": 8,
+      "maxStorageBuffersInVertexStage": 16,
+      "maxStorageTexturesInVertexStage": 8
+    },
+    "deviceFeatures": [
+      "core-features-and-limits",
+      "depth32float-stencil8",
+      "dual-source-blending",
+      "float32-blendable",
+      "float32-filterable",
+      "rg11b10ufloat-renderable",
+      "texture-compression-bc"
+    ],
+    "deviceLimits": {
+      "maxTextureDimension1D": 8192,
+      "maxTextureDimension2D": 8192,
+      "maxTextureDimension3D": 2048,
+      "maxTextureArrayLayers": 256,
+      "maxBindGroups": 4,
+      "maxBindGroupsPlusVertexBuffers": 24,
+      "maxBindingsPerBindGroup": 1000,
+      "maxDynamicUniformBuffersPerPipelineLayout": 8,
+      "maxDynamicStorageBuffersPerPipelineLayout": 4,
+      "maxSampledTexturesPerShaderStage": 16,
+      "maxSamplersPerShaderStage": 16,
+      "maxStorageBuffersPerShaderStage": 8,
+      "maxStorageTexturesPerShaderStage": 4,
+      "maxUniformBuffersPerShaderStage": 12,
+      "maxUniformBufferBindingSize": 65536,
+      "maxStorageBufferBindingSize": 134217728,
+      "minUniformBufferOffsetAlignment": 256,
+      "minStorageBufferOffsetAlignment": 256,
+      "maxVertexBuffers": 8,
+      "maxBufferSize": 268435456,
+      "maxVertexAttributes": 16,
+      "maxVertexBufferArrayStride": 2048,
+      "maxInterStageShaderVariables": 16,
+      "maxColorAttachments": 8,
+      "maxColorAttachmentBytesPerSample": 32,
+      "maxComputeWorkgroupStorageSize": 16384,
+      "maxComputeInvocationsPerWorkgroup": 256,
+      "maxComputeWorkgroupSizeX": 256,
+      "maxComputeWorkgroupSizeY": 256,
+      "maxComputeWorkgroupSizeZ": 64,
+      "maxComputeWorkgroupsPerDimension": 65535,
+      "maxImmediateSize": 64,
+      "maxStorageBuffersInFragmentStage": 8,
+      "maxStorageTexturesInFragmentStage": 4,
+      "maxStorageBuffersInVertexStage": 8,
+      "maxStorageTexturesInVertexStage": 4
+    },
+    "unavailableOptionalFeatures": [],
+    "fallbackAdapter": null,
+    "format": "bgra8unorm"
+  },
+  "runtimeFeatures": {
+    "simdEngine": true,
+    "allocator": "dlmalloc",
+    "aiMapKernels": true,
+    "denseAISnapshot": false,
+    "aiDeferredCapture": true,
+    "aiGuestProfiler": false,
+    "diagnosticOnly": false,
+    "fineScriptTiming": false,
+    "generatedBufferUploads": true,
+    "renderWorker": true,
+    "asyncPipelines": true,
+    "persistentArchives": true,
+    "persistentConfig": true,
+    "asyncify": false,
+    "asyncSuspension": "jspi"
+  },
+  "initialArchiveWork": {
+    "residentBytes": 25397085,
+    "peakResidentBytes": 25397085,
+    "networkBytes": 25397085,
+    "networkBlocks": 26,
+    "persistentHits": 0,
+    "memoryHits": 518,
+    "reads": 521,
+    "readBytes": 21325432,
+    "persistent": true,
+    "maxMemoryBytes": 67108864
+  },
+  "lastGUIRequest": "(()=>{\n  const observations=[];\n  for(const player of [1,2]){\n    Engine.SetViewedPlayer(player);\n    const entities=Engine.GuiInterfaceCall(\"GetPlayerEntities\",{}).map(id=>Engine.GuiInterfaceCall(\"GetEntityState\",id));\n    observations.push({player,cc:entities.find(entity=>entity.template.endsWith(\"/civil_centre\")),\n      units:entities.filter(entity=>!!entity.unitAI).map(entity=>({id:entity.id,position:entity.position,hitpoints:entity.hitpoints,state:entity.unitAI.state}))});\n  }\n  Engine.SetViewedPlayer(1);\n  return JSON.stringify({players:observations,simulation:Engine.GuiInterfaceCall(\"GetSimulationState\",{}),pendingTurns:Engine.GetPendingTurns(),rate:Engine.GetSimRate(),paused:Engine.IsPaused()});\n})()",
+  "screenshotsEnabled": false,
+  "attributes": {
+    "settings": {
+      "Biome": "generic/temperate",
+      "Ceasefire": 0,
+      "CheatsEnabled": true,
+      "CircularMap": true,
+      "DisableSpies": false,
+      "DisableTreasures": false,
+      "LastManStanding": false,
+      "LockTeams": false,
+      "RevealMap": false,
+      "ExploreMap": false,
+      "AllyView": false,
+      "mapName": "Mainland",
+      "mapPreview": "cropped:0.78125,0.5859375:session/icons/mappreview/mainland.png",
+      "Size": 256,
+      "Nomad": false,
+      "PlayerData": [
+        {
+          "AI": false,
+          "Civ": "athen",
+          "Color": {
+            "r": 10,
+            "g": 10,
+            "b": 190
+          },
+          "Name": "Phase4Human",
+          "Removed": false,
+          "Team": -1
+        },
+        {
+          "AI": "petra",
+          "AIDiff": 3,
+          "AIBehavior": "balanced",
+          "Civ": "mace",
+          "Color": {
+            "r": 230,
+            "g": 10,
+            "b": 10
+          },
+          "Name": "Phase4Petra",
+          "Removed": false,
+          "Team": -1
+        }
+      ],
+      "PlayerPlacement": "circle",
+      "PopulationCapType": "player",
+      "PopulationCap": 200,
+      "Seed": 12345,
+      "AISeed": 54321,
+      "StartingResources": 10000,
+      "TriggerScripts": [],
+      "VictoryConditions": []
+    },
+    "gameSpeed": 1,
+    "map": "maps/random/mainland",
+    "mapType": "random",
+    "script": "mainland.js"
+  },
+  "graphicsSettings": {
+    "vsync": "true",
+    "adaptivefps.session": "60",
+    "shadows": "true",
+    "shadowpcf": "true",
+    "postproc": "true",
+    "particles": "true",
+    "gpuskinning": "true",
+    "silhouettes": "true",
+    "watereffects": "true",
+    "waterfancyeffects": "false",
+    "waterrealdepth": "true",
+    "waterreflection": "true",
+    "waterrefraction": "true",
+    "textures.quality": "2",
+    "shadowquality": "2",
+    "textures.maxanisotropy": "2",
+    "antialiasing": "disabled",
+    "renderactors": "true",
+    "max_actor_quality": "200",
+    "materialmgr.quality": "10.0",
+    "shadowscascadecount": "1",
+    "shadowscascadedistanceratio": "1.7",
+    "shadowscutoffdistance": "300.0",
+    "shadowscovermap": "false"
+  },
+  "failure": "Required original unit workload not reached",
+  "failureType": "RuntimeError",
+  "runtimeFailure": null,
+  "failureFrames": [
+    {
+      "frame": 1484,
+      "tick": 0,
+      "gameStarted": true,
+      "width": 1280,
+      "height": 720,
+      "paused": false,
+      "wasmHeapBytes": 637861888,
+      "receivedMs": 47459.29999999702,
+      "updateMilliseconds": 0,
+      "clockDeltaMilliseconds": 16.685312271118164
+    },
+    {
+      "frame": 1485,
+      "tick": 0,
+      "gameStarted": true,
+      "width": 1280,
+      "height": 720,
+      "paused": false,
+      "wasmHeapBytes": 637861888,
+      "receivedMs": 47476.064999997616,
+      "updateMilliseconds": 0,
+      "clockDeltaMilliseconds": 16.665088653564453
+    },
+    {
+      "frame": 1486,
+      "tick": 0,
+      "gameStarted": true,
+      "width": 1280,
+      "height": 720,
+      "paused": false,
+      "wasmHeapBytes": 637861888,
+      "receivedMs": 47492.635000005364,
+      "updateMilliseconds": 0,
+      "clockDeltaMilliseconds": 16.609790802001953
+    },
+    {
+      "frame": 1487,
+      "tick": 0,
+      "gameStarted": true,
+      "width": 1280,
+      "height": 720,
+      "paused": false,
+      "wasmHeapBytes": 637861888,
+      "receivedMs": 47509.29000000656,
+      "updateMilliseconds": 0,
+      "clockDeltaMilliseconds": 16.69478416442871
+    },
+    {
+      "frame": 1488,
+      "tick": 0,
+      "gameStarted": true,
+      "width": 1280,
+      "height": 720,
+      "paused": false,
+      "wasmHeapBytes": 637861888,
+      "receivedMs": 47525.95499999821,
+      "updateMilliseconds": 0,
+      "clockDeltaMilliseconds": 16.670207977294922
+    },
+    {
+      "frame": 1489,
+      "tick": 0,
+      "gameStarted": true,
+      "width": 1280,
+      "height": 720,
+      "paused": false,
+      "wasmHeapBytes": 637861888,
+      "receivedMs": 47542.734999999404,
+      "updateMilliseconds": 0,
+      "clockDeltaMilliseconds": 16.69478416442871
+    },
+    {
+      "frame": 1490,
+      "tick": 0,
+      "gameStarted": true,
+      "width": 1280,
+      "height": 720,
+      "paused": false,
+      "wasmHeapBytes": 637861888,
+      "receivedMs": 47559.40500000119,
+      "updateMilliseconds": 0,
+      "clockDeltaMilliseconds": 16.670207977294922
+    },
+    {
+      "frame": 1491,
+      "tick": 0,
+      "gameStarted": true,
+      "width": 1280,
+      "height": 720,
+      "paused": false,
+      "wasmHeapBytes": 637861888,
+      "receivedMs": 47576.064999997616,
+      "updateMilliseconds": 0,
+      "clockDeltaMilliseconds": 16.76518440246582
+    },
+    {
+      "frame": 1492,
+      "tick": 0,
+      "gameStarted": true,
+      "width": 1280,
+      "height": 720,
+      "paused": false,
+      "wasmHeapBytes": 637861888,
+      "receivedMs": 47593.53000000119,
+      "updateMilliseconds": 0,
+      "clockDeltaMilliseconds": 16.639999389648438
+    },
+    {
+      "frame": 1493,
+      "tick": 0,
+      "gameStarted": true,
+      "width": 1280,
+      "height": 720,
+      "paused": false,
+      "wasmHeapBytes": 637861888,
+      "receivedMs": 47609.54000000656,
+      "updateMilliseconds": 0,
+      "clockDeltaMilliseconds": 16.679935455322266
+    }
+  ],
+  "failureClock": {
+    "running": true,
+    "address": 2002128,
+    "deadline": 47625.236666666664,
+    "timeSource": "monotonic-elapsed",
+    "raf": 2864,
+    "hiddenTimer": 5
+  },
+  "presentmonEventsLost": 0,
+  "audioAfterMeasurement": {
+    "contexts": [
+      {
+        "id": 2,
+        "state": "running",
+        "sampleRate": 48000,
+        "sources": 64,
+        "gain": 0.8999999761581421,
+        "playingSources": 2
+      }
+    ],
+    "decodedBuffers": [
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 373
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 375
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 381
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 377
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 377
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 379
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 374
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 379
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 375
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 373
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 381
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 378
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 377
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 375
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 373
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 366
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 375
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 382
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 378
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 383
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 376
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 378
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 381
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 372
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 372
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 370
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 370
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 372
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 377
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 375
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 378
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 378
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 382
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 376
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 376
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 378
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 377
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 382
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 365
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 367
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 376
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 377
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 370
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 368
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 378
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 379
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 378
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 371
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 381
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 48000,
+        "nonzeroSamples": 379
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 383
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      },
+      {
+        "frames": 24576,
+        "channels": 2,
+        "sampleRate": 44100,
+        "nonzeroSamples": 384
+      }
+    ],
+    "closed": []
+  },
+  "shutdown": {
+    "samples": [
+      {
+        "seconds": 0.0036432000051718205,
+        "sdk": {
+          "running": [],
+          "pooled": [],
+          "pthreads": []
+        },
+        "workers": [
+          "http://localhost:8097/webgpu-render-worker.mjs"
+        ]
+      },
+      {
+        "seconds": 0.26338220000616275,
+        "sdk": {
+          "running": [],
+          "pooled": [],
+          "pthreads": []
+        },
+        "workers": []
+      }
+    ],
+    "sdk": {
+      "running": [],
+      "pooled": [],
+      "pthreads": []
+    },
+    "workers": [],
+    "liveApplicationTargets": []
+  },
+  "exitCode": 0
+}
