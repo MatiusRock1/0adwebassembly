@@ -1,5 +1,20 @@
-Fork of the original OAD (Open Age of Decadence) project, focused on WebAssembly compatibility and browser-based execution. All original code, assets, copyrights, and licensing remain with their respective authors and contributors.
+## About This Project
 
+This repository is a fork of the original **OAD (Open Age of Decadence)** project.
+
+This fork is intended for experimentation, development, and community-driven improvements. It is based on the original source code created and maintained by its respective authors and contributors.
+
+### License and Attribution
+
+**All rights, copyrights, and original licensing terms belong to the original OAD project and its respective authors and contributors.**
+
+This repository does not claim ownership of the original project's source code, assets, or intellectual property.
+
+The original project's license remains applicable to all inherited code and assets. Any modifications or additional contributions made in this fork are subject to the terms of the applicable license.
+
+This fork is an independent development effort and is not officially affiliated with or endorsed by the original OAD developers.
+
+**Full credit goes to the original OAD team and contributors for their work.**
 
 
 
