@@ -10,6 +10,13 @@ export function installFullscreenPointer({ canvas, surface, getApplication, repo
   let frame = 0;
   let hotspot = [0, 0];
   let visible = false;
+  // SDL's published position trails the mouse by the engine's frames in
+  // flight. Draw the locked cursor from the browser's own movement, summed as
+  // SDL sums it, and adopt SDL's position again once the mouse rests.
+  const RESYNC_MILLISECONDS = 250;
+  let position = [0, 0];
+  let residual = [0, 0];
+  let lastMove = -Infinity;
   function updateCursor() {
     // SDL builds this data URL directly from the licensed original cursor.
     // Reuse those bytes; no replacement artwork or guessed pointer shape.
@@ -26,11 +33,30 @@ export function installFullscreenPointer({ canvas, surface, getApplication, repo
   function paint() {
     const app = getApplication();
     if (document.pointerLockElement !== canvas || !app) { frame = 0; return; }
-    const packed = app.ccall('Phase4MousePosition', 'number', [], []) >>> 0;
+    if (performance.now() - lastMove > RESYNC_MILLISECONDS) {
+      const packed = app.ccall('Phase4MousePosition', 'number', [], []) >>> 0;
+      position = [packed & 65535, packed >>> 16];
+      residual = [0, 0];
+    }
     const rect = canvas.getBoundingClientRect();
-    cursor.style.transform = `translate(${rect.left + (packed & 65535) * rect.width / canvas.width - hotspot[0]}px,${rect.top + (packed >>> 16) * rect.height / canvas.height - hotspot[1]}px)`;
+    cursor.style.transform = `translate(${rect.left + position[0] * rect.width / canvas.width - hotspot[0]}px,${rect.top + position[1] * rect.height / canvas.height - hotspot[1]}px)`;
     frame = requestAnimationFrame(paint);
   }
+  // Same arithmetic as Emscripten's SDL under Pointer Lock: movement scaled
+  // from CSS to canvas pixels, sub-pixel remainders kept, clamped to the window.
+  canvas.addEventListener('mousemove', event => {
+    if (document.pointerLockElement !== canvas) return;
+    const rect = canvas.getBoundingClientRect();
+    const size = [canvas.width, canvas.height];
+    const movement = [event.movementX * canvas.width / rect.width, event.movementY * canvas.height / rect.height];
+    for (const axis of [0, 1]) {
+      residual[axis] += movement[axis];
+      const step = Math.trunc(residual[axis]);
+      residual[axis] -= step;
+      position[axis] = Math.min(Math.max(position[axis] + step, 0), size[axis] - 1);
+    }
+    lastMove = performance.now();
+  });
   function capture() {
     try {
       const pending = canvas.requestPointerLock();
@@ -48,6 +74,7 @@ export function installFullscreenPointer({ canvas, surface, getApplication, repo
     updateCursor();
     cancelAnimationFrame(frame);
     frame = 0;
+    lastMove = -Infinity;
     if (document.pointerLockElement === canvas) frame = requestAnimationFrame(paint);
   });
   canvas.addEventListener('click', () => {

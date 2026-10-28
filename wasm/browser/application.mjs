@@ -82,7 +82,12 @@ const fullscreenPointer = installFullscreenPointer({ canvas, surface: document.q
 let rendererSession;
 let archiveService,persistentConfig,failureBoundary;
 window.applicationResult = null;
+// The log panel and console output stay off unless ?logs=1 (automation keeps
+// them for its checks); errors still reach the status line.
+const showLogs = query.get('logs') === '1' || query.get('automation') === '1';
+log.hidden = !showLogs;
 function record(message) {
+  if (!showLogs) return;
   lines.push(String(message));
   if (lines.length > 300) lines.shift();
   log.textContent = lines.join('\n');

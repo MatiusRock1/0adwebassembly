@@ -2,6 +2,15 @@
 <html lang="es">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<script>
+// Only Chromium-based browsers (Chrome, Edge, Brave, Opera, Vivaldi) and
+// desktop Firefox run this build; others go to a notice before the game's
+// scripts load. User-Agent Client Hints exist only in Chromium; iOS browsers
+// are WebKit. (window.stop() leaves WebKit's document loading forever.)
+if (!navigator.userAgentData?.brands?.some(entry => entry.brand === 'Chromium') &&
+    !/\bFirefox\/\d/.test(navigator.userAgent))
+  location.replace('unsupported.html');
+</script>
 <!-- Directory holding public.zip and mod.zip; deployments fill it in, empty means next to this page. -->
 <meta name="archive-base" content="">
 <meta name="archive-public" content="">
@@ -15,7 +24,7 @@ canvas.render-input { position: absolute; left: 50%; top: 50%; transform: transl
 canvas:fullscreen { width: 100vw; height: 100vh; }
 #game-surface:fullscreen { width: 100vw; height: 100vh; background: #111; display: flex; align-items: center; justify-content: center; }
 #game-surface:fullscreen canvas { width: min(100vw, 177.77777778vh); height: min(100vh, 56.25vw); margin: 0; flex: none; }
-.original-pointer { position: fixed; top: 0; left: 0; pointer-events: none; z-index: 1; }
+.original-pointer { position: fixed; top: 0; left: 0; pointer-events: none; z-index: 1; will-change: transform; }
 #game-surface { position: relative; }
 #loading { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; background: #111; text-align: center; padding: 16px; }
 #loading[hidden] { display: none; }
@@ -59,6 +68,6 @@ pre { white-space: pre-wrap; max-height: 160px; overflow: auto; margin: 8px; }
 <p style="margin:8px">Resolución interna en pantalla completa: 1920 × 1080; se ajusta a la pantalla conservando la proporción.</p>
 <p style="margin:8px">En pantalla completa se captura el ratón para usar los cuatro bordes con varios monitores. Escape lo libera; haz clic en el juego para volver a capturarlo.</p>
 <div id="game-surface"><div id="loading" hidden><div id="loading-text"></div><div class="bar"></div></div><canvas id="canvas" width="1280" height="720" tabindex="0"></canvas></div>
-<pre id="log"></pre>
+<pre id="log" hidden></pre>
 <script type="module" src="application.mjs"></script>
 </html>

@@ -58,7 +58,7 @@ manifest['runtimeFeatures']=dict(simdEngine=bool(link_report.get('simdEngine')),
 (target/'application-data.json').write_text(json.dumps(manifest,indent=2))
 for name in ['application.html','application.mjs','application-pointer.mjs','application-failure.mjs','renderer-session.mjs','webgpu-engine.mjs','webgpu-border.mjs','webgpu-upload.mjs','webgpu-dispatch.mjs','webgpu-upload-probe.mjs','webgpu-probe.html','webgpu-probe.mjs',
              'shared-request.mjs','webgpu-worker-bridge.mjs','webgpu-render-worker.mjs','webgpu-worker-present.mjs','webgpu-pipeline-pending.mjs','application-archives.mjs','archive-worker.mjs','archive-blocks.mjs','application-graphics.mjs',
-             'webgpu-command-ring.mjs','webgpu-pipeline-cache.mjs']:
+             'webgpu-command-ring.mjs','webgpu-pipeline-cache.mjs','unsupported.html']:
     shutil.copy2(root/'wasm/browser'/name,target/name)
 shutil.copy2(target/'application.html',target/'index.html')
 catalog=json.loads((root/'wasm/build/phase4-5/shaders/webgpu-shaders.json').read_text())

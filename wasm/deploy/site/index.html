@@ -3,6 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script>
+// Only Chromium-based browsers (Chrome, Edge, Brave, Opera, Vivaldi) and
+// desktop Firefox run the game; others go to a notice instead of the page.
+// User-Agent Client Hints exist only in Chromium; iOS browsers are WebKit.
+// (window.stop() leaves WebKit's document loading forever.)
+if (!navigator.userAgentData?.brands?.some(entry => entry.brand === 'Chromium') &&
+    !/\bFirefox\/\d/.test(navigator.userAgent))
+  location.replace('unsupported.html');
+</script>
 <title>0 A.D. in the browser</title>
 <meta name="description" content="An unofficial WebAssembly port of 0 A.D., the free real-time strategy game by Wildfire Games, running in the browser with WebGPU.">
 <style>
