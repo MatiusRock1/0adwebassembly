@@ -1,0 +1,59 @@
+diff --git a/source/soundmanager/SoundManager.cpp b/source/soundmanager/SoundManager.cpp
+index a8cc3fb1388402262b690caed1f71ab208126018..fb8f1d9e31809efd43b0198e9864c0d5728045f3 100644
+--- a/source/soundmanager/SoundManager.cpp
++++ b/source/soundmanager/SoundManager.cpp
+@@ -87,6 +87,12 @@ public:
+ 				++lstr;
+ 			}
+ 
++#if defined(WASM_AUDIO_ASYNC)
++			std::lock_guard<std::mutex> incomingLock(m_IncomingMutex);
++			for (ISoundItem* item : m_IncomingItems)
++				delete item;
++			m_IncomingItems.clear();
++#endif
+ 		}
+ 
+ 		m_WorkerThread.join();
+@@ -96,8 +102,15 @@ public:
+ 
+ 	void addItem(ISoundItem* anItem)
+ 	{
++#if defined(WASM_AUDIO_ASYNC)
++		// The worker's pass over its items queries each source on the browser's
++		// main thread. Do not wait for that pass: it takes new items first.
++		std::lock_guard<std::mutex> lock(m_IncomingMutex);
++		m_IncomingItems.push_back(anItem);
++#else
+ 		std::lock_guard<std::mutex> lock(m_WorkerMutex);
+ 		m_Items->push_back(anItem);
++#endif
+ 	}
+ 
+ 	void CleanupItems()
+@@ -139,6 +152,14 @@ private:
+ 			{
+ 				std::lock_guard<std::mutex> workerLock(m_WorkerMutex);
+ 
++#if defined(WASM_AUDIO_ASYNC)
++				{
++					std::lock_guard<std::mutex> incomingLock(m_IncomingMutex);
++					m_Items->insert(m_Items->end(), m_IncomingItems.begin(), m_IncomingItems.end());
++					m_IncomingItems.clear();
++				}
++#endif
++
+ 				ItemsList::iterator lstr = m_Items->begin();
+ 				ItemsList* nextItemList = new ItemsList;
+ 
+@@ -187,6 +208,10 @@ private:
+ 	// These variables are all protected by a mutexes
+ 	ItemsList* m_Items;
+ 	ItemsList* m_DeadItems;
++#if defined(WASM_AUDIO_ASYNC)
++	std::mutex m_IncomingMutex;
++	ItemsList m_IncomingItems;
++#endif
+ 
+ 	bool m_Shutdown;
+ 

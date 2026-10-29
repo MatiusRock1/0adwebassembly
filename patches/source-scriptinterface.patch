@@ -1,0 +1,53 @@
+diff --git a/source/scriptinterface/Engine.h b/source/scriptinterface/Engine.h
+index b56b29a736f56bbe3b350f9f2a312d8a2f022452..e2c8f8e1f32b23b8a930a6a7f26e633cbc173bca 100644
+--- a/source/scriptinterface/Engine.h
++++ b/source/scriptinterface/Engine.h
+@@ -23,6 +23,7 @@
+ 
+ #include <js/Initialization.h>
+ #include <list>
++#include <mutex>
+ 
+ #if MOZJS_MAJOR_VERSION != 128
+ #error Your compiler is trying to use an incorrect major version of the \
+@@ -59,11 +60,12 @@ public:
+ 		JS_ShutDown();
+ 	}
+ 
+-	void RegisterContext(const JSContext* cx) { m_Contexts.push_back(cx); }
+-	void UnRegisterContext(const JSContext* cx) { m_Contexts.remove(cx); }
++	void RegisterContext(const JSContext* cx) { std::lock_guard lock(m_Mutex); m_Contexts.push_back(cx); }
++	void UnRegisterContext(const JSContext* cx) { std::lock_guard lock(m_Mutex); m_Contexts.remove(cx); }
+ 
+ private:
+ 	std::list<const JSContext*> m_Contexts;
++	std::mutex m_Mutex;
+ };
+ 
+ }
+diff --git a/source/scriptinterface/ModuleLoader.cpp b/source/scriptinterface/ModuleLoader.cpp
+index 91a81285475433acf52ff3b7f309696f56b4a30e..44011e7e32e602e07d983179cf25e79f5d89dfdb 100644
+--- a/source/scriptinterface/ModuleLoader.cpp
++++ b/source/scriptinterface/ModuleLoader.cpp
+@@ -34,6 +34,9 @@
+ #include "scriptinterface/Exceptions.h"
+ #include "scriptinterface/Interface.h"
+ #include "scriptinterface/Request.h"
++#if defined(WASM_AI_MODULE_KERNELS)
++#include "scriptinterface/ModuleSourceKernels.h"
++#endif
+ 
+ #include <algorithm>
+ #include <filesystem>
+@@ -272,7 +275,11 @@ ModuleLoader::CompiledModule::CompiledModule(const Script::Request& rq, const Al
+ {
+ 	const std::vector<VfsPath> appendices{GetAppendices(filePath)};
+ 	const std::string code{std::accumulate(appendices.begin(), appendices.end(),
++#if defined(WASM_AI_MODULE_KERNELS)
++		ModuleSourceKernels::Transform(filePath.string8(), GetCode(allowModule, filePath)),
++#else
+ 		GetCode(allowModule, filePath),
++#endif
+ 		[&](std::string code, const VfsPath& fileToAppend)
+ 		{
+ 			return std::move(code) + GetCode(allowModule, fileToAppend);

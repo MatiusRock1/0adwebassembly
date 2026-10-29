@@ -1,0 +1,24 @@
+diff --git a/source/tools/entgraph/dot.exe b/source/tools/entgraph/dot.exe
+deleted file mode 100644
+index 2fa6665a52fe79af26d764253e5e064107f8f373..0000000000000000000000000000000000000000
+Binary files a/source/tools/entgraph/dot.exe and /dev/null differ
+diff --git a/source/tools/entgraph/entgraph.exe b/source/tools/entgraph/entgraph.exe
+deleted file mode 100644
+index 8237b842daba935e78ea1b30ebf4d90a04b34838..0000000000000000000000000000000000000000
+Binary files a/source/tools/entgraph/entgraph.exe and /dev/null differ
+diff --git a/source/tools/entgraph/jpeg.dll b/source/tools/entgraph/jpeg.dll
+deleted file mode 100644
+index 6206031ac14993400a6c83d03497b02af85c61de..0000000000000000000000000000000000000000
+Binary files a/source/tools/entgraph/jpeg.dll and /dev/null differ
+diff --git a/source/tools/entgraph/libexpat.dll b/source/tools/entgraph/libexpat.dll
+deleted file mode 100644
+index ae223d433b18ac741784cedbfbcfebdb7e339cb9..0000000000000000000000000000000000000000
+Binary files a/source/tools/entgraph/libexpat.dll and /dev/null differ
+diff --git a/source/tools/entgraph/png.dll b/source/tools/entgraph/png.dll
+deleted file mode 100644
+index 3580d891e4198a9c34353397e9940d7ae0ea1a7b..0000000000000000000000000000000000000000
+Binary files a/source/tools/entgraph/png.dll and /dev/null differ
+diff --git a/source/tools/entgraph/z.dll b/source/tools/entgraph/z.dll
+deleted file mode 100644
+index f905a31e80e94d78c0bd899b46b0a7312ef76f9b..0000000000000000000000000000000000000000
+Binary files a/source/tools/entgraph/z.dll and /dev/null differ

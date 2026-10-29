@@ -1,89 +1,69 @@
-## About This Project
+# 0 A.D. WebAssembly
 
-This repository is a fork of the original **OAD (Open Age of Decadence)** project.
+Capa que lleva [0 A.D.](https://play0ad.com) al navegador: el motor original (Pyrogenesis)
+compilado con Emscripten, con renderizado WebGPU/WebGL 2. Este repositorio contiene **solo la
+capa de conversión**; el juego se toma del repositorio oficial de 0 A.D., en el commit fijado en
+`BASE_COMMIT.txt`.
 
-This fork is intended for experimentation, development, and community-driven improvements. It is based on the original source code created and maintained by its respective authors and contributors.
+## Qué hay aquí
 
-### License and Attribution
+| Ruta | Contenido |
+| --- | --- |
+| `wasm/` | Código del navegador, arnés C++, Dockerfiles, scripts de compilación y despliegue |
+| `source/` | Archivos nuevos que la capa agrega al motor (backend WebGPU, ayudantes de simulación e IA) |
+| `patches/` | Cambios a archivos existentes de 0 A.D., un parche por área |
+| `docs/wasm/` | Documentación y evidencias de cada fase |
+| `plan/` | Planes de cada fase |
+| `BASE_COMMIT.txt` | Commit oficial de 0 A.D. sobre el que se aplica la capa |
+| `GUIA-CLOUDFLARE-R2.md` | Guía para alojar los archivos del juego en Cloudflare R2 |
+| `tools/assemble.py` | Arma el árbol completo y vuelca sus cambios a este repositorio |
 
-**All rights, copyrights, and original licensing terms belong to the original OAD project and its respective authors and contributors.**
+## Armar el árbol completo
 
-This repository does not claim ownership of the original project's source code, assets, or intellectual property.
+Requisitos: git, git-lfs y Python 3.
 
-The original project's license remains applicable to all inherited code and assets. Any modifications or additional contributions made in this fork are subject to the terms of the applicable license.
+```text
+git clone https://gitea.wildfiregames.com/0ad/0ad.git ../0ad
+python tools/assemble.py build
+```
 
-This fork is an independent development effort and is not officially affiliated with or endorsed by the original OAD developers.
+`build` crea `../0ad-wasm`: un worktree del clon oficial en `BASE_COMMIT`, con `patches/`
+aplicados y los archivos de esta capa copiados encima. Es el mismo árbol que tenía el fork
+completo, así que las instrucciones de compilación de `docs/wasm/` se ejecutan ahí. Otras rutas:
+`--official` y `--dest`.
 
-**Full credit goes to the original OAD team and contributors for their work.**
+## Trabajar sobre el árbol completo
 
+En `../0ad-wasm`, `git status` muestra exactamente la capa: los archivos modificados son
+cambios al motor y los no rastreados son archivos propios. Después de trabajar ahí:
 
+```text
+python tools/assemble.py export
+```
 
+`export` regenera `patches/` y copia aquí los archivos propios nuevos o modificados; luego se
+revisan y se hace commit en este repositorio. Para rehacer el árbol desde cero:
+`git -C ../0ad worktree remove --force ../0ad-wasm` y otra vez `build`.
 
+Para mover la capa a un commit más nuevo de 0 A.D., cambia `BASE_COMMIT.txt` y vuelve a armar;
+si un parche ya no encaja, `git apply` indica cuál y hay que rehacerlo en el árbol completo.
 
+## Acerca de este proyecto
 
-# 0 A.D. Introductory Information
+Este repositorio es un fork de **0 A.D.**, el juego de estrategia en tiempo real libre y de
+código abierto de [Wildfire Games](https://play0ad.com). Está pensado para experimentar,
+desarrollar y mejorar el juego con la comunidad, y se basa en el código fuente creado y
+mantenido por sus autores y colaboradores.
 
-[![FreeBSD Build Status](https://jenkins.wildfiregames.com/job/0ad-freebsd/job/main/badge/icon?subject=FreeBSD&style=plastic)](https://jenkins.wildfiregames.com/job/0ad-freebsd/job/main/)
-[![Linux Build Status](https://jenkins.wildfiregames.com/job/0ad-linux/job/main/badge/icon?subject=Linux&style=plastic)](https://jenkins.wildfiregames.com/job/0ad-linux/job/main/)
-[![macOS Build Status](https://jenkins.wildfiregames.com/job/0ad-macos/job/main/badge/icon?subject=macOS&style=plastic)](https://jenkins.wildfiregames.com/job/0ad-macos/job/main/)
-[![Windows Build Status](https://jenkins.wildfiregames.com/job/0ad-windows/job/main/badge/icon?subject=Windows&style=plastic)](https://jenkins.wildfiregames.com/job/0ad-windows/job/main/)
+### Licencia y atribución
 
-[![Game References Checks Status](https://gitea.wildfiregames.com/0ad/0ad/actions/workflows/checkrefs.yml/badge.svg?branch=main)](https://gitea.wildfiregames.com/0ad/0ad/actions?workflow=checkrefs.yml)
-[![Pre-commit Checks Status](https://gitea.wildfiregames.com/0ad/0ad/actions/workflows/pre-commit.yml/badge.svg?branch=main)](https://gitea.wildfiregames.com/0ad/0ad/actions?workflow=pre-commit.yml)
+**Todos los derechos, derechos de autor y términos de licencia originales pertenecen al
+proyecto 0 A.D. y a sus autores y colaboradores.** Este repositorio no reclama la propiedad
+del código fuente, los recursos ni la propiedad intelectual del proyecto original.
 
-[![Bi-Weekly Bundles Status](https://jenkins.wildfiregames.com/job/0ad-bundles/badge/icon?subject=Bi-Weekly%20Bundles&style=plastic)](https://jenkins.wildfiregames.com/job/0ad-bundles)
-[![Technical Docs Status](https://jenkins.wildfiregames.com/job/0ad-technical-docs/badge/icon?subject=Technical%20Docs&style=plastic)](https://docs.wildfiregames.com/)
-[![Nightly Build Status](https://jenkins.wildfiregames.com/job/0ad-nightly/badge/icon?subject=Nightly%20Build&style=plastic)](https://gitea.wildfiregames.com/0ad/0ad/wiki/NightlyBuild)
+La licencia del proyecto original sigue aplicándose a todo el código y los recursos heredados
+(ver `LICENSE.md`); las modificaciones y contribuciones de este fork quedan sujetas a la
+licencia aplicable. Este fork es un esfuerzo de desarrollo independiente, no afiliado ni
+respaldado por los desarrolladores de 0 A.D.
 
-0 A.D. (pronounced "zero ey-dee") is a free, open-source, cross-platform
-real-time strategy game of ancient warfare.
-
-This is currently an incomplete, under-development version of the game.
-We're always interested in getting more people involved, to help bring the game
-towards completion and to share the interesting experience of developing a
-project of this scope.
-
-There are several ways to contact us and find more information:
-
-- Web site: https://play0ad.com/
-- Forums: https://www.wildfiregames.com/forum/
-- Gitea (development info, bug tracker): https://gitea.wildfiregames.com/
-- IRC: #0ad on irc.quakenet.org
-
-## Running precompiled binaries on Windows
-
-A precompiled, ready-to-play development version of the game is available from
-a checkout of the `nightly-build` SVN repository. If you are using the git
-repository, you have to follow [the steps below](#compiling-the-game-from-source-code).
-
-In a checkout of the `nightly-build` SVN repository, open the "binaries\system" folder.
-
-- To launch the game: Run pyrogenesis.exe
-- To launch the map editor: Run Atlas.bat or "pyrogenesis.exe -editor"
-
-## Compiling the game from source code
-
-The instructions for compiling the game on Windows, Linux and OS X are at
-[BuildInstructions](https://gitea.wildfiregames.com/0ad/0ad/wiki/BuildInstructions).
-
-## Reporting problems
-
-Bugs should be reported on Gitea. For information on reporting problems
-and finding logs, see [ReportingErrors](https://gitea.wildfiregames.com/0ad/0ad/wiki/ReportingErrors).
-
-## Contributing Code
-
-If you want to help out programming for the game, have a look at
-[GettingStartedProgrammers](https://gitea.wildfiregames.com/0ad/0ad/wiki/GettingStartedProgrammers)
-or contact us on #0ad-dev on irc.quakenet.org
-
-## Contributing Artwork
-
-If you want to make artwork for the game, have a look at
-[For Artists](https://gitea.wildfiregames.com/0ad/0ad/wiki#for-artists)
-or visit [the forums](https://www.wildfiregames.com/forum).
-
-## Translating
-
-You can help translating the game at https://www.transifex.com/projects/p/0ad
-for more information, see [Localization](https://gitea.wildfiregames.com/0ad/0ad/wiki/Localization)
+**Todo el crédito es para el equipo de 0 A.D. y sus colaboradores.**

@@ -4,6 +4,10 @@ A container that serves a built browser package: the landing page at `/` and the
 game at `/play/`. It does not build the game; the phase 4.5 pipeline does (see
 `docs/wasm/phase-4-5-continuation-2026-10-25.md`).
 
+The Docker launcher is temporarily restricted to **WebGL 2**. WebGPU is disabled
+even for old `?renderer=webgpu` links and saved preferences. The experimental
+backend remains in the development sources. Rebuild the context and image to apply this policy.
+
 ## Build and run
 
 ```text

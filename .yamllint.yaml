@@ -1,8 +1,0 @@
----
-# https://yamllint.readthedocs.io/en/stable/index.html
-extends: default
-rules:
-  line-length:
-    max: 100
-  truthy:
-    check-keys: false

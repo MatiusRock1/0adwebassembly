@@ -1,2 +1,0 @@
-await undefined;
-await undefined;

@@ -21,7 +21,8 @@ RUN curl -fLo /tmp/rustup-init https://static.rust-lang.org/rustup/archive/1.28.
 WORKDIR /build/0ad
 
 FROM native-toolchain AS native-checkout
-ARG SOURCE_URL=https://gitea.wildfiregames.com/MatiusRock/0adwebassembly.git
+# 0 A.D. oficial: es el que tiene BASE_COMMIT y su historial completo.
+ARG SOURCE_URL=https://gitea.wildfiregames.com/0ad/0ad.git
 ARG BASE_COMMIT=40b8794eecb9618da69e10bacffa8814c561aa51
 RUN GIT_LFS_SKIP_SMUDGE=1 git clone --no-checkout "$SOURCE_URL" /build/0ad \
     && git lfs install --local \

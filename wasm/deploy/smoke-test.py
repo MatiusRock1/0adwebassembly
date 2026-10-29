@@ -1,7 +1,7 @@
 """Smoke-test a running web deployment; not a benchmark.
 
 Checks the server's isolation headers, types and Range support, then opens the
-game in a separate Chrome profile with WebGPU, requires cross-origin isolation
+game in a separate Chrome profile with WebGL 2, requires cross-origin isolation
 and waits until the original GUI answers. Needs the deployment's Playwright
 environment (wasm/.venv-phase3).
 """
@@ -72,9 +72,12 @@ def main():
             page = browser.contexts[0].new_page()
             errors = []
             page.on('pageerror', lambda error: errors.append(str(error)))
+            page.add_init_script("localStorage.setItem('0ad-renderer-backend', 'webgpu')")
             page.goto(args.base + '/play/application.html?renderer=webgpu&automation=1')
             report['crossOriginIsolated'] = page.evaluate('crossOriginIsolated')
             report['renderer'] = page.locator('#renderer-backend').input_value()
+            assert page.locator('#renderer-backend option').count() == 1
+            assert page.locator('#renderer-backend').is_disabled()
             started = time.monotonic()
             page.locator('#start').click()
             report['gui'] = None
@@ -99,7 +102,7 @@ def main():
         except subprocess.TimeoutExpired: chrome.kill()
         shutil.rmtree(profile, ignore_errors=True)
     report['passed'] = (all(check['passed'] for check in report['server'].values()) and report['crossOriginIsolated']
-        and report['renderer'] == 'webgpu' and report['gui'] == 'object' and not report['pageErrors'])
+        and report['renderer'] == 'webgl' and report['gui'] == 'object' and not report['pageErrors'])
     print(json.dumps({key: report[key] for key in report if key != 'server'}, indent=2))
     raise SystemExit(0 if report['passed'] else 1)
 

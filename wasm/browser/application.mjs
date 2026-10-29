@@ -288,7 +288,15 @@ document.querySelector('#start').addEventListener('click', async () => {
         ...(query.get('aiworker') ? [`-conf=aiworker.mode:${query.get('aiworker')}`] : []),
         ...(query.get('automation')==='1' && query.get('functional-frame-frequency')==='60' ? ['-fixed-frame-frequency=60'] : [])],
       print: record,
-      printErr: record,
+      printErr: message => {
+        // SDK errors must remain visible even when the optional log panel is off.
+        console.error(message);
+        record(message);
+        // PThread reports its original worker exception before throwing an
+        // ErrorEvent whose message/filename can be lost by window.onerror.
+        if (String(message).startsWith('worker sent an error! '))
+          failureBoundary.abort(String(message), application);
+      },
       preRun: [module => {
         module.ENV.HOME = '/data';
         module.ENV.ICU_DATA = '/data/icu';

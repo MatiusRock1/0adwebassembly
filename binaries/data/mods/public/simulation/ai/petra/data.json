@@ -1,7 +1,0 @@
-{
-  "name": "Petra Bot",
-  "description": "Petra is the default 0 A.D. AI bot. Please report issues to Wildfire Games.\n\nThe AI has six levels of difficulty: Sandbox, Very Easy, Easy, Medium, Hard, and Very Hard. Besides adjusting its strategy depending on the level, the AI also receives advantages or handicaps for certain rates, such as trade gain and efficiency of resource gathering. The AI can be quite challenging for beginners, so it is recommended to start with Very Easy or Easy until you feel confident.",
-  "constructor": "PetraBot",
-  "filename": "_petrabot.js",
-  "useShared": true
-}

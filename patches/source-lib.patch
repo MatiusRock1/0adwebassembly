@@ -1,0 +1,35 @@
+diff --git a/source/lib/file/io/io.cpp b/source/lib/file/io/io.cpp
+index e74085f5a19b6926c1f2715483e286c9a37fbaaa..29bd21c01585a1d50ae674a025107bb5d494b2b4 100644
+--- a/source/lib/file/io/io.cpp
++++ b/source/lib/file/io/io.cpp
+@@ -27,6 +27,9 @@
+ #include "lib/config2.h"
+ 
+ #include <cerrno>
++#if defined(WASM_BROWSER_ARCHIVES)
++#include "browser_archives.h"
++#endif
+ 
+ static const StatusDefinition ioStatusDefinitions[] = {
+ 	{ ERR::IO, L"Error during IO", EIO }
+@@ -41,6 +44,20 @@ namespace io {
+ 
+ Status Issue(aiocb& cb, [[maybe_unused]] size_t queueDepth)
+ {
++#if defined(WASM_BROWSER_ARCHIVES)
++	if (cb.aio_lio_opcode == LIO_READ)
++	{
++		const int bytes = ReadBrowserArchive(cb.aio_fildes, static_cast<double>(cb.aio_offset),
++			const_cast<void*>(cb.aio_buf), cb.aio_nbytes);
++		if (bytes != -2)
++		{
++			if (bytes < 0)
++				WARN_RETURN(ERR::IO);
++			cb.aio_nbytes = static_cast<size_t>(bytes);
++			return INFO::OK;
++		}
++	}
++#endif
+ #if CONFIG2_FILE_ENABLE_AIO
+ 	if(queueDepth > 1)
+ 	{

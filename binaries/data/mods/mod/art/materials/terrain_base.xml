@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<material>
-  <shader pass="main" effect="terrain_base"/>
-  <shader pass="reflections" effect="terrain_base_reflections"/>
-  <shader pass="refractions" effect="terrain_base"/>
-  <shader pass="wireframe" effect="terrain_base_wireframe"/>
-  <required_texture name="baseTex"/>
-</material>

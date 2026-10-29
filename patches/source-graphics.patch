@@ -1,0 +1,308 @@
+diff --git a/source/graphics/LOSTexture.cpp b/source/graphics/LOSTexture.cpp
+index 6d0641a9d1cf2c2dc26753067a66024498a90e5d..39df9e32b62841e709562e96013a22329b238fbd 100644
+--- a/source/graphics/LOSTexture.cpp
++++ b/source/graphics/LOSTexture.cpp
+@@ -169,7 +169,7 @@ void CLOSTexture::InterpolateLOS(Renderer::Backend::IDeviceCommandContext* devic
+ 	deviceCommandContext->SetViewports(1, &viewportRect);
+ 
+ 	const bool flip =
+-		deviceCommandContext->GetDevice()->GetBackend() == Renderer::Backend::Backend::VULKAN;
++		Renderer::Backend::UsesUpperLeftOrigin(deviceCommandContext->GetDevice()->GetBackend());
+ 	const float bottomV = flip ? 1.0 : 0.0f;
+ 	const float topV = flip ? 0.0f : 1.0f;
+ 
+diff --git a/source/graphics/MiniMapTexture.cpp b/source/graphics/MiniMapTexture.cpp
+index 29b6bc0d8752e76d4fed60bd7e5c243aec5ccc47..4e137397b48090d2db53c6aad87274b30cc755d3 100644
+--- a/source/graphics/MiniMapTexture.cpp
++++ b/source/graphics/MiniMapTexture.cpp
+@@ -264,7 +264,7 @@ CMiniMapTexture::CMiniMapTexture(Renderer::Backend::IDevice* device, CSimulation
+ 	}};
+ 	m_QuadVertexInputLayout = g_Renderer.GetVertexInputLayout(attributes);
+ 
+-	m_Flipped = device->GetBackend() == Renderer::Backend::Backend::VULKAN;
++	m_Flipped = Renderer::Backend::UsesUpperLeftOrigin(device->GetBackend());
+ 
+ 	const uint32_t stride = m_VertexArray.GetStride();
+ 	if (device->GetCapabilities().instancing)
+diff --git a/source/graphics/ObjectBase.cpp b/source/graphics/ObjectBase.cpp
+index d89b1478d72c0ffc4638e6847c09558ba80da27a..ba03a8162133a202260a9f97fd266d05127ad2e6 100644
+--- a/source/graphics/ObjectBase.cpp
++++ b/source/graphics/ObjectBase.cpp
+@@ -18,6 +18,9 @@
+ #include "precompiled.h"
+ 
+ #include "ObjectBase.h"
++#if defined(__EMSCRIPTEN__)
++#include "VisualVariantRandom.h"
++#endif
+ 
+ #include "graphics/ObjectManager.h"
+ #include "lib/debug.h"
+@@ -602,7 +605,15 @@ std::set<CStr> CObjectBase::CalculateRandomRemainingSelections(rng_t& rng, const
+ 
+ 				// Choose a random number in the interval [0..totalFreq) to choose one of the variants.
+ 				// If the diversity is "none", force 0 to return the first valid variant.
+-				int randNum = diversity == CObjectManager::VariantDiversity::NONE ? 0 : std::uniform_int_distribution<int>(0, totalFreq - 1)(rng);
++				int randNum = 0;
++				if (diversity != CObjectManager::VariantDiversity::NONE)
++				{
++#if defined(__EMSCRIPTEN__)
++					randNum = VisualVariantRandom::Index(rng, totalFreq);
++#else
++					randNum = std::uniform_int_distribution<int>(0, totalFreq - 1)(rng);
++#endif
++				}
+ 				for (size_t i = 0; i < grp->size(); ++i)
+ 				{
+ 					randNum -= (allZero ? 1 : (*grp)[i].m_Frequency);
+diff --git a/source/graphics/ObjectManager.cpp b/source/graphics/ObjectManager.cpp
+index 8a345aea232dd089f54046934f3a99cb761c0062..54db4bec91ee5cd77bf861e44cec543de1265f12 100644
+--- a/source/graphics/ObjectManager.cpp
++++ b/source/graphics/ObjectManager.cpp
+@@ -40,6 +40,18 @@
+ #include <functional>
+ #include <string>
+ 
++#if defined(WASM_UNIT_VARIATION_CACHE)
++namespace
++{
++std::uint64_t g_VariationGeneration = 0;
++}
++
++std::uint64_t CObjectManager::GetVariationGeneration()
++{
++	return g_VariationGeneration;
++}
++#endif
++
+ bool CObjectManager::ObjectKey::operator< (const CObjectManager::ObjectKey& a) const
+ {
+ 	if (ObjectBaseIdentifier < a.ObjectBaseIdentifier)
+@@ -81,6 +93,10 @@ std::pair<bool, CActorDef&> CObjectManager::FindActorDef(const CStrW& actorName)
+ 	decltype(m_ActorDefs)::iterator it = m_ActorDefs.find(actorName);
+ 	if (it != m_ActorDefs.end() && !it->second.outdated)
+ 		return { true, *it->second.obj };
++#if defined(WASM_UNIT_VARIATION_CACHE)
++	// Before loading: nested lookups may rehash the map.
++	const bool replacesOutdated = it != m_ActorDefs.end();
++#endif
+ 
+ 	std::unique_ptr<CActorDef> actor = std::make_unique<CActorDef>(*this);
+ 
+@@ -98,6 +114,11 @@ std::pair<bool, CActorDef&> CObjectManager::FindActorDef(const CStrW& actorName)
+ 		success = false;
+ 	}
+ 
++#if defined(WASM_UNIT_VARIATION_CACHE)
++	// Replacing an outdated actor frees the one a unit's memo may refer to.
++	if (replacesOutdated)
++		++g_VariationGeneration;
++#endif
+ 	return { success, *m_ActorDefs.insert_or_assign(actorName, std::move(actor)).first->second.obj };
+ }
+ 
+@@ -131,6 +152,9 @@ CObjectEntry* CObjectManager::FindObjectVariation(const std::shared_ptr<CObjectB
+ 	decltype(m_Objects)::iterator it = m_Objects.find(key);
+ 	if (it != m_Objects.end() && !it->second.outdated)
+ 		return it->second.obj.get();
++#if defined(WASM_UNIT_VARIATION_CACHE)
++	const bool replacesOutdated = it != m_Objects.end();
++#endif
+ 
+ 	// If it hasn't been loaded, load it now.
+ 
+@@ -143,6 +167,11 @@ CObjectEntry* CObjectManager::FindObjectVariation(const std::shared_ptr<CObjectB
+ 	if (!obj->BuildVariation(completeSelections, choices, *this))
+ 		return nullptr;
+ 
++#if defined(WASM_UNIT_VARIATION_CACHE)
++	// Replacing an outdated entry frees the object a unit's memo may refer to.
++	if (replacesOutdated)
++		++g_VariationGeneration;
++#endif
+ 	return m_Objects.insert_or_assign(key, std::move(obj)).first->second.obj.get();
+ }
+ 
+@@ -161,6 +190,9 @@ CObjectManager::VariantDiversity CObjectManager::GetVariantDiversity() const
+ 
+ void CObjectManager::UnloadObjects()
+ {
++#if defined(WASM_UNIT_VARIATION_CACHE)
++	++g_VariationGeneration;
++#endif
+ 	m_Objects.clear();
+ 	m_ActorDefs.clear();
+ }
+@@ -176,6 +208,10 @@ Status CObjectManager::ReloadChangedFile(const VfsPath& path)
+ 			object.second.outdated = true;
+ 			changed = true;
+ 		}
++#if defined(WASM_UNIT_VARIATION_CACHE)
++	if (changed)
++		++g_VariationGeneration;
++#endif
+ 
+ 	const CSimulation2::InterfaceListUnordered& cmps = m_Simulation.GetEntitiesWithInterfaceUnordered(IID_Visual);
+ 
+@@ -186,6 +222,9 @@ Status CObjectManager::ReloadChangedFile(const VfsPath& path)
+ 		{
+ 			actor.second.outdated = true;
+ 			changed = true;
++#if defined(WASM_UNIT_VARIATION_CACHE)
++			++g_VariationGeneration;
++#endif
+ 
+ 			// Slightly ugly hack: The graphics system doesn't preserve enough information to regenerate the
+ 			// object with all correct variations, and we don't want to waste space storing it just for the
+@@ -210,6 +249,9 @@ void CObjectManager::ActorQualityChanged()
+ 		return;
+ 
+ 	m_QualityLevel = quality > 255 ? 255 : quality < 0 ? 0 : quality;
++#if defined(WASM_UNIT_VARIATION_CACHE)
++	++g_VariationGeneration;
++#endif
+ 
+ 	// No need to reload entries or actors, but we do need to reload all units.
+ 	const CSimulation2::InterfaceListUnordered& cmps = m_Simulation.GetEntitiesWithInterfaceUnordered(IID_Visual);
+@@ -234,6 +276,9 @@ void CObjectManager::VariantDiversityChanged()
+ 		return;
+ 
+ 	m_VariantDiversity = variantDiversity;
++#if defined(WASM_UNIT_VARIATION_CACHE)
++	++g_VariationGeneration;
++#endif
+ 
+ 	// Mark old entries as outdated so we don't reload them from the cache.
+ 	for (std::pair<const ObjectKey, Hotloadable<CObjectEntry>>& object : m_Objects)
+diff --git a/source/graphics/ObjectManager.h b/source/graphics/ObjectManager.h
+index c875224118cb491b36908c090295c1735369053e..de454ef5b8f4deab14882a43e18c742f95cb1036 100644
+--- a/source/graphics/ObjectManager.h
++++ b/source/graphics/ObjectManager.h
+@@ -97,6 +97,15 @@ public:
+ 	 */
+ 	CObjectEntry* FindObjectVariation(const CActorDef* actor, const std::vector<std::set<CStr>>& selections, uint32_t seed);
+ 
++#if defined(WASM_UNIT_VARIATION_CACHE)
++	/**
++	 * Changes whenever a FindObjectVariation result for the same actor, selections
++	 * and seed could change: unloading, hotloading, quality or diversity changes,
++	 * and replacing outdated actors or objects. Shared by all object managers.
++	 */
++	static std::uint64_t GetVariationGeneration();
++#endif
++
+ 	/**
+ 	 * @see FindObjectVariation.
+ 	 * These take a complete selection. These are pointers to sets that are
+diff --git a/source/graphics/ShaderManager.cpp b/source/graphics/ShaderManager.cpp
+index 5c89a5eafa4f4c6068ead341f2fe61418e05afef..19f09e7c0b871b97c02b2aea374350b525f80110 100644
+--- a/source/graphics/ShaderManager.cpp
++++ b/source/graphics/ShaderManager.cpp
+@@ -215,7 +215,8 @@ bool CShaderManager::LoadTechnique(CShaderTechniquePtr& tech)
+ 	XMBElement root = XeroFile.GetRoot();
+ 
+ 	PS::StaticVector<std::string_view, 3> supportedShaders;
+-	if (m_Device->GetBackend() == Renderer::Backend::Backend::GL)
++	if (m_Device->GetBackend() == Renderer::Backend::Backend::GL ||
++		m_Device->GetBackend() == Renderer::Backend::Backend::WEBGPU)
+ 		supportedShaders.emplace_back("glsl");
+ 	if (m_Device->GetBackend() == Renderer::Backend::Backend::VULKAN)
+ 		supportedShaders.emplace_back("spirv");
+diff --git a/source/graphics/Unit.cpp b/source/graphics/Unit.cpp
+index 83ae079d5589550870a2aad271c7c77f67a5e928..a6356d70f7c14f8f3ef4b891d60dfe51e59f4acc 100644
+--- a/source/graphics/Unit.cpp
++++ b/source/graphics/Unit.cpp
+@@ -32,6 +32,39 @@
+ #include <utility>
+ #include <vector>
+ 
++#if defined(WASM_UNIT_VARIATION_CACHE)
++#include <algorithm>
++#include <atomic>
++#include <cstdint>
++#include <emscripten.h>
++#include <unordered_map>
++
++namespace
++{
++// Exact memo of FindObjectVariation per unit. A unit's actor and seed never
++// change, so while the object manager's variation generation is unchanged the
++// result depends only on the selections. Kept outside CUnit to leave its
++// layout, and every unit including Unit.h, unchanged.
++struct VariationMemo
++{
++	std::uint64_t generation;
++	std::vector<std::set<CStr>> selections;
++	CObjectEntry* object;
++};
++constexpr std::size_t MAX_VARIATION_MEMOS = 8;
++std::unordered_map<const CUnit*, std::vector<VariationMemo>> g_VariationMemos;
++std::atomic<std::uint64_t> g_MemoHits{0}, g_MemoMisses{0}, g_MemoVerified{0}, g_MemoMismatches{0};
++}
++
++extern "C" EMSCRIPTEN_KEEPALIVE const char* Phase45VariationMemoStats()
++{
++	static std::string result;
++	result = "{\"hits\":" + std::to_string(g_MemoHits.load()) + ",\"misses\":" + std::to_string(g_MemoMisses.load()) +
++		",\"verified\":" + std::to_string(g_MemoVerified.load()) + ",\"mismatches\":" + std::to_string(g_MemoMismatches.load()) + "}";
++	return result.c_str();
++}
++#endif
++
+ CUnit::CUnit(CObjectManager& objectManager, const CActorDef& actor, const entity_id_t id, const uint32_t seed)
+ 	: m_ObjectManager(objectManager), m_Actor(actor), m_ID(id), m_Seed(seed), m_Animation(nullptr)
+ {
+@@ -49,6 +82,9 @@ CUnit::CUnit(CObjectManager& objectManager, const CActorDef& actor, const entity
+ CUnit::~CUnit()
+ {
+ 	delete m_Animation;
++#if defined(WASM_UNIT_VARIATION_CACHE)
++	g_VariationMemos.erase(this);
++#endif
+ }
+ 
+ std::unique_ptr<CUnit> CUnit::Create(const CStrW& actorName, const entity_id_t id, const uint32_t seed, CObjectManager& objectManager)
+@@ -109,7 +145,43 @@ void CUnit::ReloadObject()
+ 
+ 	// If these selections give a different object, change this unit to use it
+ 	// Use the entity ID as randomization seed (same as when the unit was first created)
++#if defined(WASM_UNIT_VARIATION_CACHE)
++	CObjectEntry* newObject = nullptr;
++	std::vector<VariationMemo>& memos = g_VariationMemos[this];
++	for (const VariationMemo& memo : memos)
++		if (memo.generation == CObjectManager::GetVariationGeneration() && memo.selections == selections)
++		{
++			newObject = memo.object;
++			break;
++		}
++#if defined(WASM_UNIT_VARIATION_VERIFY)
++	// Diagnostic only: a hit must be what the original lookup returns now.
++	if (newObject)
++	{
++		++g_MemoVerified;
++		if (m_ObjectManager.FindObjectVariation(&m_Actor, selections, m_Seed) != newObject)
++			++g_MemoMismatches;
++	}
++#endif
++	if (newObject)
++		++g_MemoHits;
++	else
++	{
++		++g_MemoMisses;
++		newObject = m_ObjectManager.FindObjectVariation(&m_Actor, selections, m_Seed);
++		// Read the generation after the lookup, which may itself replace outdated entries.
++		const std::uint64_t generation = CObjectManager::GetVariationGeneration();
++		std::erase_if(memos, [generation](const VariationMemo& memo) { return memo.generation != generation; });
++		if (newObject)
++		{
++			if (memos.size() >= MAX_VARIATION_MEMOS)
++				memos.erase(memos.begin());
++			memos.push_back({generation, selections, newObject});
++		}
++	}
++#else
+ 	CObjectEntry* newObject = m_ObjectManager.FindObjectVariation(&m_Actor, selections, m_Seed);
++#endif
+ 	if (!newObject)
+ 	{
+ 		LOGERROR("Error loading object variation (actor: {})", m_Actor.GetPathname().string8());

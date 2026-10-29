@@ -471,7 +471,7 @@ image to publish the build.
 
 - `site/index.html`: landing page (English, text and CSS only, no artwork),
   stating that the port is unofficial; links to the port's repository
-  (`gitea.wildfiregames.com/MatiusRock/0adwebassembly`), the original repository
+  (`github.com/MatiusRock1/0adwebassembly`), the original repository
   (`gitea.wildfiregames.com/0ad/0ad`) and play0ad.com; requirements (Chrome or
   Edge 137+ for WebGPU and JSPI), the measurements above and the licenses.
 - `nginx.conf`: isolation headers on every response (needed for

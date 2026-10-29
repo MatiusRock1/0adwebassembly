@@ -19,6 +19,6 @@ Date: 2026-10-11. The local technical check passes. The plan requires publicatio
 
 The exported WASM binary also ran with Node on Windows, with exit code 0 and the same state. Every hash in wasm/dist/headless/SHA256SUMS was verified. Approximate package size: 27.5 MB. The __syscall_madvise warning persists and is recorded as a limitation; it does not invalidate the comparison of the verified scenario.
 
-Concrete review: wasm/CMakeLists.txt, wasm/harness, wasm/scripts, wasm/docker/spidermonkey.Dockerfile, .gitea/workflows/wasm-phase1.yml and docs/wasm. Confirm that the scenario's scope meets the decision to move on; review the kernel adapter that includes Simulation2.cpp and the experimental SpiderMonkey/Rust patches.
+Concrete review: wasm/CMakeLists.txt, wasm/harness, wasm/scripts, wasm/docker/spidermonkey.Dockerfile, .github/workflows/wasm-phase1.yml and docs/wasm. Confirm that the scenario's scope meets the decision to move on; review the kernel adapter that includes Simulation2.cpp and the experimental SpiderMonkey/Rust patches.
 
 AGENTS.md, rules 4 and 7: the agent does not create commits and changes must be reviewed by the operator before being submitted. That is why publishing the fork is up to the operator. After review: prepare the Windows checkout without losing changes, publish, run the manual workflow on a Linux runner with Docker and a persistent cache, and record the architectural approval. The DoD is not marked complete before those actions.

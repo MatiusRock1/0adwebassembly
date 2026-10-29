@@ -16,7 +16,7 @@ Date: 2026-10-11. The local technical delivery demonstrates scripting and a real
 | Game scripting | The nine scriptinterface units compile; the harness runs Engine, Context, Interface, conversions, bindings and JobQueue | evidence/spidermonkey/headless and parity |
 | Real simulation2 | Original CComponentManager, CSimContext, C++ components and JS wrappers; 100 turns with the original kernel CSimulation2Impl::UpdateComponents | wasm/harness/simulation.cpp; parity/*state.json |
 | Parity | Linux and WASM: builds and execution with exit code 0; identical JSON | parity/status.txt = PARITY_PASSED, state.sha256 |
-| Automation | CMake, docker-phase1.ps1 and phase1.sh; manual Gitea workflow prepared | wasm/CMakeLists.txt, .gitea/workflows/wasm-phase1.yml |
+| Automation | CMake, docker-phase1.ps1 and phase1.sh; manual GitHub Actions workflow prepared | wasm/CMakeLists.txt, .github/workflows/wasm-phase1.yml |
 
 The final state fields are:
 
@@ -58,7 +58,7 @@ Defaults: two jobs and 8 GiB per build container. The native image is built if m
 
 Local artifacts: wasm/dist/headless/pyrogenesis-wasm.js, .wasm, the Linux binary and its JS library, the original dataset, BASE_COMMIT.txt and SHA256SUMS. The CommonJS outputs are isolated from the root's ESM package.json. The artifacts are ignored by Git. The exported package takes about 27.5 MB after stripping debug symbols from the native copies. The build runs that copy again and compares its JSON before exporting it. SHA256SUMS excludes its own file.
 
-The manual CI uses a dedicated Linux runner with Docker and a persistent cache. The workflow was prepared for Gitea; it has not been published nor run remotely. The upload uses the Gitea artifact adapter given in its release documentation: https://blog.gitea.com/release-of-1.22.0/. Review the runner and actions before enabling it.
+The manual CI uses a dedicated Linux runner with Docker and a persistent cache. The workflow is prepared for GitHub Actions with a self-hosted runner; it has not been run remotely. The upload uses actions/upload-artifact. Review the runner and actions before enabling it.
 
 ## Limitations and decision
 

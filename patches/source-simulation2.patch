@@ -1,0 +1,1263 @@
+diff --git a/source/simulation2/Simulation2.cpp b/source/simulation2/Simulation2.cpp
+index 1cd834099f729e46e7df786cae7954fa3da4b1e3..53969c5978999b4058a95c6da495e0305d587c30 100644
+--- a/source/simulation2/Simulation2.cpp
++++ b/source/simulation2/Simulation2.cpp
+@@ -55,6 +55,21 @@
+ #include "simulation2/helpers/Player.h"
+ #include "simulation2/helpers/SimulationCommand.h"
+ #include "simulation2/system/Component.h"
++#if defined(WASM_AI_DEFERRED_CAPTURE)
++#include "simulation2/helpers/AIDeferredStart.h"
++#endif
++#if defined(WASM_SIM_SCRIPT_TIMING)
++#include "simulation2/helpers/SimTiming.h"
++#endif
++#if defined(WASM_SIM_KERNELS)
++#include "simulation2/helpers/SimKernels.h"
++#endif
++#if defined(WASM_SIM_GUEST_PROFILE)
++#if defined(WASM_AI_GUEST_PROFILE)
++#error "The simulation and AI guest profiles share one sample table"
++#endif
++#include "simulation2/helpers/AIGuestProfiler.h"
++#endif
+ 
+ #include <algorithm>
+ #include <cstddef>
+@@ -115,6 +130,37 @@ public:
+ 
+ 		std::ranges::for_each(scriptDirectories,
+ 			std::bind_front(LoadScripts, std::ref(m_ComponentManager), &m_LoadedScripts));
++#if defined(WASM_SIM_KERNELS)
++		{
++			const Script::Interface& scriptInterface = m_ComponentManager.GetScriptInterface();
++#if defined(WASM_SIM_KERNEL_VERIFY)
++			// Diagnostic only: every kernel call also runs the original and compares.
++			{
++				Script::Request rq(scriptInterface);
++				Script::Function::Register<&SimKernels::Verified>(rq, "SimKernelVerified");
++				Script::Function::Register<&SimKernels::Mismatch>(rq, "SimKernelMismatch");
++			}
++			ENSURE(scriptInterface.Eval("globalThis.__simKernelVerify = true;"));
++#endif
++			int installed = 0;
++			ENSURE(scriptInterface.Eval(SimKernels::Install, installed));
++			SimKernels::installed = installed;
++		}
++#endif
++#if defined(WASM_SIM_SCRIPT_TIMING)
++		// Diagnostic only: per-callback timer rows. Skipped if Timer.js changed.
++		{
++			const Script::Interface& scriptInterface = m_ComponentManager.GetScriptInterface();
++			bool original = false;
++			if (scriptInterface.Eval("typeof Timer === 'function' && Timer.prototype.OnUpdate.toString().includes("
++				"'timerTargetComponent[timer.functionName](timer.data, this.time - timer.time);')", original) && original)
++				ENSURE(scriptInterface.Eval(SimTiming::TimerPatch));
++			// After the kernels, whose source checks need the unwrapped functions.
++			int wrapped = 0;
++			ENSURE(scriptInterface.Eval(SimTiming::FunctionPatch, wrapped));
++			SimTiming::wrappedFunctions = wrapped;
++		}
++#endif
+ 	}
+ 
+ 	~CSimulation2Impl()
+@@ -389,6 +435,23 @@ void CSimulation2Impl::Update(int turnLength, const std::vector<SimulationComman
+ 	PROFILE3("sim update");
+ 	PROFILE2_ATTR("turn %d", m_TurnNumber);
+ 
++#if defined(WASM_SIM_SCRIPT_TIMING)
++	// Diagnostic only: exclusive handler and command times per turn.
++	SimTiming::Turn simTimingTurn(m_TurnNumber);
++#endif
++#if defined(WASM_SIM_GUEST_PROFILE)
++	// Diagnostic only: guest source samples per turn, on this thread's context.
++	if (!AIGuestSampling::owner)
++		AIGuestSampling::owner = std::make_unique<AIGuestSampling::Profiler>(Script::Request(m_ComponentManager.GetScriptInterface()).cx);
++	AIGuestSampling::Profiler::Computing sampling;
++#endif
++
++#if defined(WASM_AI_DEFERRED_CAPTURE)
++	// A previous turn's postponed AI capture must observe that turn's end state,
++	// e.g. when several turns run within one frame and no frame hook ran between.
++	AIDeferredStart::Run();
++#endif
++
+ 	fixed turnLengthFixed = fixed::FromInt(turnLength) / 1000;
+ 
+ 	/*
+diff --git a/source/simulation2/components/CCmpAIManager.cpp b/source/simulation2/components/CCmpAIManager.cpp
+index 4eff2302de1ab246489e2dc023588264152b33bc..80236f6047f4bbff9191ba55f85044e26bfa0f13 100644
+--- a/source/simulation2/components/CCmpAIManager.cpp
++++ b/source/simulation2/components/CCmpAIManager.cpp
+@@ -32,6 +32,7 @@
+ #include "lib/utf8.h"
+ #include "maths/FixedVector2D.h"
+ #include "ps/CLogger.h"
++#include "ps/ConfigDB.h"
+ #include "ps/Filesystem.h"
+ #include "ps/Profile.h"
+ #include "ps/Profiler2.h"
+@@ -59,6 +60,50 @@
+ #include "simulation2/helpers/PathGoal.h"
+ #include "simulation2/helpers/Pathfinding.h"
+ #include "simulation2/helpers/Player.h"
++#include "simulation2/helpers/AIWorkerMailbox.h"
++#include "simulation2/helpers/AIWorkerScript.h"
++#if defined(WASM_SIM_KERNELS)
++#include "simulation2/helpers/SimKernels.h"
++#endif
++#if defined(WASM_AI_MAP_KERNELS)
++#include "simulation2/helpers/AIMapKernels.h"
++#include <emscripten.h>
++#include <string>
++
++extern "C" EMSCRIPTEN_KEEPALIVE const char* Phase45AIKernelStats()
++{
++	// Only atomic counters; safe to read from the browser thread.
++	static std::string result;
++	result = "{\"bestTileCalls\":" + std::to_string(AIMapKernels::bestTileCalls.load()) +
++		",\"verifyFallbacks\":" + std::to_string(AIMapKernels::bestTileFallbacks.load()) +
++		",\"verified\":" + std::to_string(AIMapKernels::bestTileVerified.load()) +
++		",\"verifiedBestTile\":" + std::to_string(AIMapKernels::verifiedByKind[0].load()) +
++		",\"verifiedAddEnt\":" + std::to_string(AIMapKernels::verifiedByKind[1].load()) +
++		",\"verifiedTerritories\":" + std::to_string(AIMapKernels::verifiedByKind[2].load()) +
++		",\"verifiedObstruction\":" + std::to_string(AIMapKernels::verifiedByKind[3].load()) +
++		",\"obstructionCalls\":" + std::to_string(AIMapKernels::obstructionCalls.load()) + "}";
++	return result.c_str();
++}
++#endif
++#if defined(WASM_AI_GUEST_PROFILE) || defined(WASM_SIM_GUEST_PROFILE)
++#include "simulation2/helpers/AIGuestProfiler.h"
++#endif
++#if defined(WASM_SIM_SCRIPT_TIMING)
++#include "simulation2/helpers/SimTiming.h"
++#include <chrono>
++#endif
++#if defined(WASM_AI_DEFERRED_CAPTURE)
++#include "simulation2/helpers/AIDeferredStart.h"
++#include <iterator>
++#endif
++#if defined(WASM_AI_TURN_GATE)
++#if !defined(WASM_AI_DEFERRED_CAPTURE)
++#error "The AI turn gate needs the deferred capture's pending-task query"
++#endif
++#include "simulation2/helpers/AITurnGate.h"
++#include <chrono>
++#endif
++#include "simulation2/helpers/SimulationCommand.h"
+ #include "simulation2/serialization/DebugSerializer.h"
+ #include "simulation2/serialization/SerializeTemplates.h"
+ #include "simulation2/serialization/SerializedTypes.h"
+@@ -159,6 +204,22 @@ private:
+ 
+ 			g_ScriptContext->RunJobs();
+ 			JS::RootedValue objectWithConstructor(rq.cx, JS::ObjectValue(*result.begin()->Get()));
++#if defined(WASM_AI_MAP_KERNELS)
++			if (m_AIName == L"petra")
++			{
++				// The entry module has evaluated all Petra modules; these loads return
++				// the same cached namespaces without evaluating anything new.
++				auto hq = m_ScriptInterface->GetModuleLoader().LoadModule(rq, "simulation/ai/petra/headquarters.js");
++				auto bases = m_ScriptInterface->GetModuleLoader().LoadModule(rq, "simulation/ai/petra/basesManager.js");
++				auto masks = m_ScriptInterface->GetModuleLoader().LoadModule(rq, "simulation/ai/petra/mapMask.js");
++				g_ScriptContext->RunJobs();
++				JS::RootedValue hqModule(rq.cx, JS::ObjectValue(*hq.begin()->Get()));
++				JS::RootedValue basesModule(rq.cx, JS::ObjectValue(*bases.begin()->Get()));
++				JS::RootedValue maskModule(rq.cx, JS::ObjectValue(*masks.begin()->Get()));
++				JS::RootedValue global(rq.cx, rq.globalValue());
++				ENSURE(Script::Function::CallVoid(rq, global, "__installPetraKernels", hqModule, basesModule, maskModule));
++			}
++#endif
+ 
+ 			if (!Script::GetProperty(rq, metadata, "constructor", constructor))
+ 			{
+@@ -258,19 +319,30 @@ public:
+ 
+ 	~CAIWorker()
+ 	{
+-		// Init will always be called.
+-		JS_RemoveExtraGCRootsTracer(m_ScriptInterface->GetGeneralJSContext(), Trace, this);
++		if (m_ScriptInterface)
++			JS_RemoveExtraGCRootsTracer(m_ScriptInterface->GetGeneralJSContext(), Trace, this);
+ 	}
+ 
+ 	void Init(const Script::Interface& simInterface)
+ 	{
+ 		// Create the script interface in the same compartment as the simulation interface.
+ 		// This will allow us to directly share data from the sim to the AI (and vice versa, should the need arise).
+-		m_ScriptInterface = std::make_shared<Script::Interface>("Engine", "AI", simInterface,
++		Initialize(std::make_shared<Script::Interface>("Engine", "AI", simInterface,
+ 			[](const VfsPath& path)
+ 			{
+ 				return path.string().find(L"simulation/ai/") == 0;
+-			});
++			}), &simInterface);
++	}
++
++	void InitIsolated(Script::Context& context)
++	{
++		Initialize(std::make_shared<Script::Interface>("Engine", "AI worker", context,
++			[](const VfsPath& path) { return path.string().find(L"simulation/ai/") == 0; }), nullptr);
++	}
++
++	void Initialize(std::shared_ptr<Script::Interface> scriptInterface, const Script::Interface* simInterface)
++	{
++		m_ScriptInterface = std::move(scriptInterface);
+ 
+ 		Script::Request rq(m_ScriptInterface);
+ 
+@@ -286,14 +358,17 @@ public:
+ 
+ 		JS_AddExtraGCRootsTracer(m_ScriptInterface->GetGeneralJSContext(), Trace, this);
+ 
++		if (simInterface)
+ 		{
+-			Script::Request simrq(simInterface);
++			Script::Request simrq(*simInterface);
+ 			// Register the sim globals for easy & explicit access. Mark it replaceable for hotloading.
+ 			JS::RootedValue global(rq.cx, simrq.globalValue());
+ 			m_ScriptInterface->SetGlobal("Sim", global, true);
+ 			JS::RootedValue scope(rq.cx, JS::ObjectValue(*simrq.nativeScope.get()));
+ 			m_ScriptInterface->SetGlobal("SimEngine", scope, true);
+ 		}
++		else
++			ENSURE(m_ScriptInterface->Eval(AIWorkerInstall));
+ 
+ #define REGISTER_FUNC_NAME(func, name) \
+ 	Script::Function::Register<&CAIWorker::func, Script::Interface::ObjectFromCBData<CAIWorker>>(rq, name);
+@@ -305,6 +380,24 @@ public:
+ 
+ 		REGISTER_FUNC_NAME(DumpImage, "DumpImage");
+ 		REGISTER_FUNC_NAME(GetTemplate, "GetTemplate");
++#if defined(WASM_AI_MAP_KERNELS)
++        REGISTER_FUNC_NAME(AIMapAddInfluence, "AIMapAddInfluence");
++        REGISTER_FUNC_NAME(AIMapObstruction, "AIMapObstruction");
++        REGISTER_FUNC_NAME(AIMapBestTile, "AIMapBestTile");
++        REGISTER_FUNC_NAME(AIMapUpdateTerritories, "AIMapUpdateTerritories");
++        REGISTER_FUNC_NAME(AIMapKernelVerified, "AIMapKernelVerified");
++        REGISTER_FUNC_NAME(AIMapKernelFallback, "AIMapKernelFallback");
++#if defined(WASM_AI_KERNEL_VERIFY)
++        // Diagnostic only: every kernel call also runs the original JS and compares.
++        ENSURE(m_ScriptInterface->Eval("globalThis.__aiKernelVerify = true; globalThis.__aiKernelVerifyCount = 0;"));
++#endif
++        ENSURE(m_ScriptInterface->Eval(AIMapKernels::Install));
++        ENSURE(m_ScriptInterface->Eval(AIMapKernels::PetraInstall));
++#if defined(WASM_AI_MODULE_KERNELS)
++        REGISTER_FUNC_NAME(AIObstructionTiles, "AIObstructionTiles");
++        ENSURE(m_ScriptInterface->Eval(AIMapKernels::ObstructionInstall));
++#endif
++#endif
+ 
+ #undef REGISTER_FUNC_NAME
+ 
+@@ -313,10 +406,280 @@ public:
+ 		// Globalscripts may use VFS script functions
+ 		m_ScriptInterface->LoadGlobalScripts();
+ 
++#if defined(WASM_SIM_KERNELS)
++		// The AI's own copy of the global scripts: only the MatchesClassList kernel
++		// applies here, since the simulation components are absent.
++		{
++#if defined(WASM_SIM_KERNEL_VERIFY)
++			Script::Function::Register<&SimKernels::Verified>(rq, "SimKernelVerified");
++			Script::Function::Register<&SimKernels::Mismatch>(rq, "SimKernelMismatch");
++			ENSURE(m_ScriptInterface->Eval("globalThis.__simKernelVerify = true;"));
++#endif
++			int installed = 0;
++			ENSURE(m_ScriptInterface->Eval(SimKernels::Install, installed));
++			SimKernels::aiInstalled = installed;
++		}
++#endif
+ 	}
+ 
++#if defined(WASM_AI_MAP_KERNELS)
++    int AIMapObstruction(JS::HandleValue value, int width, int x, int y, int radius,
++        JS::HandleValue patternValue)
++    {
++        if (!value.isObject() || width <= 0 || width > 32768 || radius < 0 || radius >= width ||
++            x < radius || x >= width-radius || y < radius || y >= width-radius ||
++            !patternValue.isObject()) return -2;
++        Script::Request rq(m_ScriptInterface);
++        JS::RootedObject patternObject(rq.cx,&patternValue.toObject());
++        JS::RootedValue item(rq.cx);
++        std::vector<double> pattern; pattern.reserve(radius+1);
++        for (int dy=0; dy<=radius; ++dy)
++        {
++            if (!JS_GetElement(rq.cx,patternObject,dy,&item) || !item.isNumber()) return -2;
++            const double v = item.toNumber();
++            if (!std::isfinite(v) || v < 0 || v > radius || std::floor(v) != v) return -2;
++            if (dy == 0 && v != radius) return -2;
++            pattern.push_back(v);
++        }
++        JS::RootedObject object(rq.cx, &value.toObject());
++        if (!JS_IsUint8Array(object) || JS_GetTypedArrayLength(object) != size_t(width)*width) return -2;
++        bool shared=false;
++        JS::AutoCheckCannotGC nogc;
++        const auto* bytes=JS_GetUint8ArrayData(object,&shared,nogc);
++        if (!bytes || shared) return -2;
++        return AIMapKernels::Obstruction({bytes,size_t(width)*width},width,x,y,radius,pattern);
++    }
++
++    // Values arrive unconverted so that non-numbers fall back to the original JS,
++    // exactly as the former typeof/Number.isInteger checks in the wrapper did.
++    bool AIMapAddInfluence(JS::HandleValue value, JS::HandleValue widthValue, JS::HandleValue heightValue,
++        JS::HandleValue cxValue, JS::HandleValue cyValue, JS::HandleValue distanceValue,
++        JS::HandleValue strengthValue, JS::HandleValue maximumValue, int type)
++    {
++        for (JS::HandleValue v : {widthValue, heightValue, cxValue, cyValue, distanceValue, strengthValue, maximumValue})
++            if (!v.isNumber()) return false;
++        const double widthNumber = widthValue.toNumber(), heightNumber = heightValue.toNumber();
++        if (!std::isfinite(widthNumber) || std::floor(widthNumber) != widthNumber ||
++            !std::isfinite(heightNumber) || std::floor(heightNumber) != heightNumber ||
++            widthNumber <= 0 || widthNumber > 32768) return false;
++        const int width = widthNumber;
++        const double cx = cxValue.toNumber(), cy = cyValue.toNumber(), distance = distanceValue.toNumber();
++        const double strength = strengthValue.toNumber(), maximum = maximumValue.toNumber();
++        if (!value.isObject() ||
++            !std::isfinite(cx) || !std::isfinite(cy) || !std::isfinite(distance) ||
++            !std::isfinite(strength) || !std::isfinite(maximum) || distance <= 0 ||
++            distance < 1e-100 || distance > 32768 || std::abs(cx) > 32768 || std::abs(cy) > 32768 ||
++            std::abs(strength) > 1e12 || maximum < 0 || maximum > 255 || type < 0 || type > 2)
++            return false;
++        Script::Request rq(m_ScriptInterface);
++        JS::RootedObject object(rq.cx, &value.toObject());
++        if (!JS_IsUint8Array(object)) return false;
++        const size_t length = JS_GetTypedArrayLength(object);
++        if (widthNumber * heightNumber != double(length) || heightNumber > 32768) return false;
++        const int height = heightNumber;
++        const int x0 = std::floor(std::max(0., cx-distance));
++        const int y0 = std::floor(std::max(0., cy-distance));
++        const int x1 = std::floor(std::min(double(width-1), cx+distance));
++        const int y1 = std::floor(std::min(double(height-1), cy+distance));
++        bool shared = false;
++        JS::AutoCheckCannotGC nogc;
++        auto* bytes = JS_GetUint8ArrayData(object, &shared, nogc);
++        if (!bytes || shared) return false;
++        AIMapKernels::AddInfluence({bytes,length},width,x0,x1,y0,y1,cx,cy,distance,strength,maximum,type);
++        return true;
++    }
++
++    // InfoMap.findBestTile. Returns {found, idx, val, patternUsed}, or an empty
++    // vector so that the wrapper runs the original JS.
++    std::vector<int> AIMapBestTile(JS::HandleValue mapValue, JS::HandleValue widthValue, JS::HandleValue heightValue,
++        JS::HandleValue ratioValue, JS::HandleValue obstructionValue, JS::HandleValue obstructionWidthValue,
++        JS::HandleValue radiusValue)
++    {
++        const auto integer = [](JS::HandleValue v, double lo, double hi, int& out) {
++            if (!v.isNumber()) return false;
++            const double d = v.toNumber();
++            if (!std::isfinite(d) || std::floor(d) != d || d < lo || d > hi) return false;
++            out = int(d);
++            return true;
++        };
++        int width, height, ratio, ow, radius;
++        if (!integer(widthValue, 1, 32768, width) || !integer(heightValue, 1, 32768, height) ||
++            !integer(ratioValue, 1, 64, ratio) || !integer(obstructionWidthValue, 1, 32768, ow) ||
++            !integer(radiusValue, 0, 32768, radius) || !mapValue.isObject() || !obstructionValue.isObject())
++            return {};
++        Script::Request rq(m_ScriptInterface);
++        JS::RootedObject map(rq.cx, &mapValue.toObject()), obstruction(rq.cx, &obstructionValue.toObject());
++        if (!JS_IsUint8Array(map) || !JS_IsUint8Array(obstruction)) return {};
++        const size_t length = JS_GetTypedArrayLength(map), obstructionLength = JS_GetTypedArrayLength(obstruction);
++        if (length != size_t(width) * height || obstructionLength != size_t(ow) * ow) return {};
++        bool shared = false, obstructionShared = false;
++        JS::AutoCheckCannotGC nogc;
++        const uint8_t* bytes = JS_GetUint8ArrayData(map, &shared, nogc);
++        const uint8_t* obstructionBytes = JS_GetUint8ArrayData(obstruction, &obstructionShared, nogc);
++        if (!bytes || !obstructionBytes || shared || obstructionShared) return {};
++        const auto result = AIMapKernels::BestTile({bytes, length}, width, ratio, {obstructionBytes, obstructionLength}, ow, radius);
++        ++AIMapKernels::bestTileCalls;
++        return {int(result.found), result.idx, result.val, int(result.patternUsed)};
++    }
++    // Headquarters.updateTerritories. params (Int32Array): width, outside, fullFrontier,
++    // narrowFrontier, largeFrontier, player, alliedVictory, 16 small then 16 large offsets.
++    std::vector<int> AIMapUpdateTerritories(JS::HandleValue territoryValue, JS::HandleValue ownerValue,
++        JS::HandleValue borderValue, JS::HandleValue basesValue, JS::HandleValue paramsValue, JS::HandleValue allyValue)
++    {
++        for (JS::HandleValue v : {territoryValue, ownerValue, borderValue, basesValue, paramsValue, allyValue})
++            if (!v.isObject()) return {};
++        Script::Request rq(m_ScriptInterface);
++        JS::RootedObject territory(rq.cx, &territoryValue.toObject()), owner(rq.cx, &ownerValue.toObject()),
++            border(rq.cx, &borderValue.toObject()), bases(rq.cx, &basesValue.toObject()),
++            params(rq.cx, &paramsValue.toObject()), ally(rq.cx, &allyValue.toObject());
++        for (JSObject* o : {territory.get(), owner.get(), border.get(), bases.get(), ally.get()})
++            if (!JS_IsUint8Array(o)) return {};
++        if (!JS_IsInt32Array(params) || JS_GetTypedArrayLength(params) != 7 + 32 ||
++            JS_GetTypedArrayLength(owner) != 256 || JS_GetTypedArrayLength(ally) != 256)
++            return {};
++        bool shared = false;
++        JS::AutoCheckCannotGC nogc;
++        const int32_t* p = JS_GetInt32ArrayData(params, &shared, nogc);
++        if (!p || shared) return {};
++        const int width = p[0];
++        if (width <= 0 || width > 32768) return {};
++        const size_t length = size_t(width) * width;
++        if (JS_GetTypedArrayLength(territory) != length || JS_GetTypedArrayLength(border) != length ||
++            JS_GetTypedArrayLength(bases) != length)
++            return {};
++        const auto bytes = [&](JSObject* o) -> uint8_t* {
++            bool s = false;
++            uint8_t* data = JS_GetUint8ArrayData(o, &s, nogc);
++            return s ? nullptr : data;
++        };
++        uint8_t* t = bytes(territory), *ow = bytes(owner), *b = bytes(border), *bs = bytes(bases), *al = bytes(ally);
++        if (!t || !ow || !b || !bs || !al) return {};
++        // Aliased arrays would make the in-place frontier writes observable elsewhere.
++        if (b == t || b == bs || b == ow || b == al) return {};
++        return AIMapKernels::UpdateTerritories({t, length}, {ow, 256}, {b, length}, {bs, length}, width,
++            {p + 7, 16}, {p + 23, 16}, {p[1], p[2], p[3], p[4]}, p[5], p[6] != 0, {al, 256});
++    }
++    void AIMapKernelVerified(int kind)
++    {
++        ++AIMapKernels::bestTileVerified;
++        if (kind >= 0 && kind < 4) ++AIMapKernels::verifiedByKind[kind];
++    }
++#if defined(WASM_AI_MODULE_KERNELS)
++    // createObstructionMap's territory loop (AIMapKernels::ObstructionTiles), called by
++    // __aiObstructionTiles; false makes the module's guard run the original loop.
++    bool AIObstructionTiles(JS::HandleValue tilesValue, JS::HandleValue territoryValue, int territoryWidth,
++        JS::HandleValue passabilityValue, int passabilityWidth, JS::HandleValue accessValue, bool checkAccess,
++        double accessIndex, int obstructionMask, int ratio, int playerID, int playerMask, int blinkingMask,
++        int flags, JS::HandleValue alliesValue)
++    {
++        for (JS::HandleValue v : {tilesValue, territoryValue, passabilityValue, accessValue, alliesValue})
++            if (!v.isObject()) return false;
++        if (territoryWidth < 1 || passabilityWidth < 1 || ratio < 1 || ratio > 64) return false;
++        Script::Request rq(m_ScriptInterface);
++        JS::RootedObject tiles(rq.cx, &tilesValue.toObject()), territory(rq.cx, &territoryValue.toObject()),
++            passability(rq.cx, &passabilityValue.toObject()), access(rq.cx, &accessValue.toObject()),
++            allies(rq.cx, &alliesValue.toObject());
++        if (!JS_IsUint8Array(tiles) || !JS_IsUint8Array(territory) || !JS_IsUint8Array(allies) ||
++            JS_GetTypedArrayLength(allies) != 256)
++            return false;
++        const bool passability16 = JS_IsUint16Array(passability), access16 = JS_IsUint16Array(access);
++        if ((!passability16 && !JS_IsUint8Array(passability)) || (!access16 && !JS_IsUint8Array(access)))
++            return false;
++        const size_t length = JS_GetTypedArrayLength(passability);
++        const size_t territoryLength = JS_GetTypedArrayLength(territory), accessLength = JS_GetTypedArrayLength(access);
++        if (JS_GetTypedArrayLength(tiles) != length) return false;
++        bool shared = false;
++        JS::AutoCheckCannotGC nogc;
++        const auto bytes = [&](JSObject* o) -> uint8_t* {
++            bool s = false;
++            uint8_t* data = JS_GetUint8ArrayData(o, &s, nogc);
++            return s ? nullptr : data;
++        };
++        const auto words = [&](JSObject* o) -> uint16_t* {
++            bool s = false;
++            uint16_t* data = JS_GetUint16ArrayData(o, &s, nogc);
++            return s ? nullptr : data;
++        };
++        uint8_t* t = bytes(tiles);
++        const uint8_t* ter = bytes(territory), *al = bytes(allies);
++        if (!t || !ter || !al || shared) return false;
++        const auto run = [&](auto passabilitySpan, auto accessSpan) {
++            AIMapKernels::ObstructionTiles(std::span<uint8_t>(t, length), std::span<const uint8_t>(ter, territoryLength),
++                territoryWidth, passabilitySpan, passabilityWidth, accessSpan, checkAccess, accessIndex, obstructionMask,
++                ratio, playerID, playerMask, blinkingMask, (flags & 1) != 0, (flags & 2) != 0, (flags & 4) != 0,
++                (flags & 8) != 0, std::span<const uint8_t>(al, 256));
++        };
++        const auto withAccess = [&](auto passabilitySpan) {
++            if (access16)
++            {
++                const uint16_t* a = words(access);
++                if (!a) return false;
++                run(passabilitySpan, std::span<const uint16_t>(a, accessLength));
++            }
++            else
++            {
++                const uint8_t* a = bytes(access);
++                if (!a) return false;
++                run(passabilitySpan, std::span<const uint8_t>(a, accessLength));
++            }
++            return true;
++        };
++        bool done = false;
++        if (passability16)
++        {
++            const uint16_t* p = words(passability);
++            done = p && withAccess(std::span<const uint16_t>(p, length));
++        }
++        else
++        {
++            const uint8_t* p = bytes(passability);
++            done = p && withAccess(std::span<const uint8_t>(p, length));
++        }
++        if (done) ++AIMapKernels::obstructionCalls;
++        return done;
++    }
++#endif
++    void AIMapKernelFallback() { ++AIMapKernels::bestTileFallbacks; }
++#endif
+ 	bool HasLoadedEntityTemplates() const { return m_HasLoadedEntityTemplates; }
+ 
++	void SetSnapshot(const Script::StructuredClone& snapshot)
++	{
++		Script::Request rq(m_ScriptInterface);
++		JS::RootedValue value(rq.cx), global(rq.cx, rq.globalValue());
++		Script::ReadStructuredClone(rq, snapshot, &value);
++		if (!Script::Function::CallVoid(rq, global, "__installAIWorkerSnapshot", value))
++			throw std::runtime_error("Failed to install AI snapshot");
++	}
++
++	void UpdateGameStateClone(const Script::StructuredClone& state)
++	{
++		Script::Request rq(m_ScriptInterface);
++		JS::RootedValue value(rq.cx);
++		Script::ReadStructuredClone(rq, state, &value);
++		UpdateGameState(value);
++	}
++
++	void LoadEntityTemplatesClone(const Script::StructuredClone& templates)
++	{
++		Script::Request rq(m_ScriptInterface);
++		Script::ReadStructuredClone(rq, templates, &m_EntityTemplates);
++		m_HasLoadedEntityTemplates = true;
++	}
++
++	void AllowInitializationEffects(bool allow)
++	{
++		ENSURE(m_ScriptInterface->Eval(allow ? "__aiAllowEffects = true" : "__aiAllowEffects = false"));
++	}
++
++	Script::StructuredClone TakeInitializationEffects()
++	{
++		Script::Request rq(m_ScriptInterface);
++		JS::RootedValue value(rq.cx);
++		ENSURE(m_ScriptInterface->Eval("__aiEffects.splice(0)", &value));
++		return Script::WriteStructuredClone(rq, value);
++	}
++
+ 	void PostCommand(int playerid, JS::HandleValue cmd)
+ 	{
+ 		Script::Request rq(m_ScriptInterface);
+@@ -424,6 +787,18 @@ public:
+ 		g_ScriptContext->RunJobs();
+ 
+ 		// mainly here for the error messages
++#if defined(WASM_AI_MAP_KERNELS)
++        auto maps = m_ScriptInterface->GetModuleLoader().LoadModule(rq,
++            "simulation/ai/common-api/map-module.js");
++        g_ScriptContext->RunJobs();
++        JS::RootedValue mapModule(rq.cx, JS::ObjectValue(*maps.begin()->Get()));
++        auto collections = m_ScriptInterface->GetModuleLoader().LoadModule(rq,
++            "simulation/ai/common-api/entitycollection.js");
++        g_ScriptContext->RunJobs();
++        JS::RootedValue collectionModule(rq.cx, JS::ObjectValue(*collections.begin()->Get()));
++        JS::RootedValue global(rq.cx, rq.globalValue());
++        ENSURE(Script::Function::CallVoid(rq, global, "__installAIMapKernels", mapModule, collectionModule));
++#endif
+ 		OsPath path = L"simulation/ai/common-api/";
+ 
+ 		// Constructor name is SharedScript, it's in the module API3
+@@ -873,9 +1248,302 @@ private:
+ };
+ 
+ 
+-/**
+- * Implementation of ICmpAIManager.
+- */
++// The client alone touches simulation objects. All actor payloads are owned
++// clones/copies, except the exclusively handed-off deserialize stream while
++// the caller synchronously waits. No realm, rooting handle or component moves.
++class CAIWorkerClient
++{
++    using Commands = std::vector<CAIWorker::SCommandSets>;
++    struct Result { uint64_t generation, sequence; Commands commands; };
++    std::unique_ptr<CAIWorker> m_Local;
++    std::unique_ptr<AIWorkerMailbox<CAIWorker>> m_Mailbox;
++    const Script::Interface* m_Simulation = nullptr;
++    std::shared_future<Result> m_Result;
++    uint64_t m_Generation = 0, m_Sequence = 0;
++    bool m_Isolated = false;
++    int m_PlayerCount = 0;
++    std::vector<std::function<void(CAIWorker&)>> m_TurnUpdates;
++
++    template<class F> auto Call(F function)
++    {
++#if defined(WASM_AI_DEFERRED_CAPTURE)
++        // Keep control messages FIFO behind a postponed computation.
++        AIDeferredStart::Run(this);
++#endif
++        if (m_Mailbox) return m_Mailbox->Submit(std::move(function)).get();
++        return function(*m_Local);
++    }
++    template<class F> void PrepareTurn(F function)
++    {
++        // All inputs are owned clones/copies, captured at the original boundary.
++        // Submit them with computation once, without a handshake per field.
++        if (m_Mailbox) m_TurnUpdates.emplace_back(std::move(function));
++        else function(*m_Local);
++    }
++    Script::StructuredClone Capture()
++    {
++        PROFILE2("AI worker capture");
++        Script::Request rq(*m_Simulation);
++        JS::RootedValue value(rq.cx), global(rq.cx, rq.globalValue());
++        if (!Script::Function::Call(rq, global, "__captureAIWorkerSnapshot", &value))
++            throw std::runtime_error("Failed to capture AI simulation snapshot");
++        auto clone = Script::WriteStructuredClone(rq, value);
++        if (!clone) throw std::runtime_error("Failed to clone AI snapshot");
++        return clone;
++    }
++    static auto Computation(uint64_t generation, uint64_t sequence, std::vector<std::function<void(CAIWorker&)>> updates)
++    {
++        return [generation, sequence, updates = std::move(updates)](CAIWorker& w) {
++#if defined(WASM_AI_GUEST_PROFILE)
++            AIGuestSampling::Profiler::Computing sampling;
++#endif
++            for (const auto& update : updates) update(w);
++            w.StartComputation();
++            Result result{generation, sequence, {}};
++            w.GetCommands(result.commands);
++            g_ScriptContext->MaybeIncrementalGC();
++            return result;
++        };
++    }
++public:
++#if defined(WASM_AI_DEFERRED_CAPTURE)
++    ~CAIWorkerClient()
++    {
++#if defined(WASM_AI_TURN_GATE)
++        AITurnGate::Clear(this);
++#endif
++        AIDeferredStart::Cancel(this);
++    }
++#endif
++    void Init(const Script::Interface& simulation)
++    {
++#if defined(WASM_AI_TURN_GATE)
++        AITurnGate::Clear(this);
++#endif
++#if defined(WASM_AI_DEFERRED_CAPTURE)
++        AIDeferredStart::Cancel(this);
++#endif
++        m_Mailbox.reset(); m_Local.reset(); m_Result = {};
++        m_TurnUpdates.clear(); m_PlayerCount = 0;
++        ++m_Generation; m_Sequence = 0; m_Simulation = &simulation;
++        std::string mode = "sync";
++#if defined(WASM_AI_WORKER)
++        mode = CConfigDB::GetIfInitialised("aiworker.mode", std::string("threaded"));
++#endif
++        if (mode != "sync" && mode != "isolated-sync" && mode != "threaded")
++            throw std::runtime_error("Unknown aiworker.mode");
++        m_Isolated = mode != "sync";
++        // Preserve the helper's bytecode/ICs across turns. Only its function
++        // is reused: every call still captures fresh state at the same boundary.
++#if defined(WASM_AI_DENSE_SNAPSHOT)
++        if (m_Isolated && !simulation.Eval(AIWorkerCaptureDense))
++#else
++        if (m_Isolated && !simulation.Eval(AIWorkerCapture))
++#endif
++            throw std::runtime_error("Failed to install AI snapshot capture");
++        if (mode == "threaded")
++        {
++            m_Mailbox = std::make_unique<AIWorkerMailbox<CAIWorker>>([] {
++                g_Profiler2.RegisterCurrentThread("AI worker");
++                // Same heap policy as the original main scripting context.
++                g_ScriptContext = std::make_shared<Script::Context>(384 * 1024 * 1024, 12 * 1024 * 1024);
++                auto worker = std::make_unique<CAIWorker>();
++                worker->InitIsolated(*g_ScriptContext);
++#if defined(WASM_AI_GUEST_PROFILE)
++                AIGuestSampling::owner = std::make_unique<AIGuestSampling::Profiler>(g_ScriptContext->GetGeneralJSContext());
++#endif
++                return worker;
++            }, [] {
++#if defined(WASM_AI_GUEST_PROFILE)
++                AIGuestSampling::owner.reset();
++#endif
++                g_ScriptContext.reset(); });
++        }
++        else
++        {
++            m_Local = std::make_unique<CAIWorker>();
++            if (m_Isolated) m_Local->InitIsolated(simulation.GetContext());
++            else m_Local->Init(simulation);
++        }
++        LOGMESSAGE("AI worker mode: {}", mode);
++    }
++    bool HasLoadedEntityTemplates() { return Call([](CAIWorker& w) { return w.HasLoadedEntityTemplates(); }); }
++    int getPlayerSize() { return m_Mailbox ? m_PlayerCount : m_Local->getPlayerSize(); }
++    void SetRNGSeed(uint32_t seed) { Call([seed](CAIWorker& w) { w.SetRNGSeed(seed); }); }
++    void TryLoadSharedComponent() { Call([](CAIWorker& w) { w.TryLoadSharedComponent(); }); }
++    void AddPlayer(const std::wstring& name, player_id_t player, uint8_t difficulty, const std::wstring& behavior)
++    { m_PlayerCount = Call([=](CAIWorker& w) { w.AddPlayer(name, player, difficulty, behavior); return w.getPlayerSize(); }); }
++    void LoadEntityTemplates(const std::vector<std::pair<std::string, const CParamNode*>>& templates)
++    {
++        if (!m_Isolated) { m_Local->LoadEntityTemplates(templates); return; }
++        Script::Request rq(*m_Simulation);
++        JS::RootedValue object(rq.cx), value(rq.cx);
++        Script::CreateObject(rq, &object);
++        for (const auto& [name, node] : templates)
++        {
++            node->ToJSVal(rq, false, &value);
++            Script::SetProperty(rq, object, name.c_str(), value, true);
++        }
++        auto clone = Script::WriteStructuredClone(rq, object);
++        if (!clone) throw std::runtime_error("Failed to clone AI templates");
++        Call([clone](CAIWorker& w) { w.LoadEntityTemplatesClone(clone); });
++    }
++    void RunGamestateInit(const Script::StructuredClone& state,
++        const Grid<NavcellData>& passability, const Grid<uint8_t>& territory,
++        const std::map<std::string, pass_class_t>& nonPath, const std::map<std::string, pass_class_t>& path)
++    {
++        if (!m_Isolated) { m_Local->RunGamestateInit(state, passability, territory, nonPath, path); return; }
++        auto snapshot = Capture();
++        auto effects = Call([=](CAIWorker& w) {
++            w.SetSnapshot(snapshot); w.AllowInitializationEffects(true);
++            w.RunGamestateInit(state, passability, territory, nonPath, path);
++            w.AllowInitializationEffects(false);
++            return w.TakeInitializationEffects();
++        });
++        Script::Request rq(*m_Simulation);
++        JS::RootedValue value(rq.cx);
++        Script::ReadStructuredClone(rq, effects, &value);
++        JS::RootedValue global(rq.cx, rq.globalValue());
++        // The apply script clears this temporary slot after consuming it.
++        // SetProperty's constant=true makes it permanently read-only.
++        ENSURE(Script::SetProperty(rq, global, "__aiWorkerEffects", value, false));
++        if (!m_Simulation->Eval(AIWorkerApplyEffects))
++            throw std::runtime_error("Failed to apply AI initialization effects");
++    }
++    void UpdateGameState(JS::HandleValue state)
++    {
++        if (!m_Isolated) { m_Local->UpdateGameState(state); return; }
++        auto snapshot = Capture();
++        auto clone = Script::WriteStructuredClone(Script::Request(*m_Simulation), state);
++        if (!clone) throw std::runtime_error("Failed to clone AI state");
++        PrepareTurn([snapshot, clone](CAIWorker& w) { w.SetSnapshot(snapshot); w.UpdateGameStateClone(clone); });
++    }
++    void UpdatePathfinder(const Grid<NavcellData>& map, bool global,
++        const Grid<uint8_t>& dirty, bool deserialized,
++        const std::map<std::string, pass_class_t>& nonPath, const std::map<std::string, pass_class_t>& path)
++    { PrepareTurn([=](CAIWorker& w) { w.UpdatePathfinder(map, global, dirty, deserialized, nonPath, path); }); }
++    void UpdateTerritoryMap(const Grid<uint8_t>& map)
++    { PrepareTurn([map](CAIWorker& w) { w.UpdateTerritoryMap(map); }); }
++    void StartComputation()
++    {
++        if (!m_Mailbox) { m_Local->StartComputation(); return; }
++        const auto generation = m_Generation, sequence = ++m_Sequence;
++        m_Result = m_Mailbox->Submit(Computation(generation, sequence, std::exchange(m_TurnUpdates, {}))).share();
++    }
++#if defined(WASM_AI_DEFERRED_CAPTURE)
++    bool CanDeferCapture() const { return m_Mailbox != nullptr; }
++    // The eager updates already queued (pathfinder and territory copies) keep
++    // their original read point. captureState queues the game-state update;
++    // it is moved ahead of them, as in the original order, before submission.
++    void StartComputationDeferred(std::function<void()> captureState)
++    {
++        const auto generation = m_Generation, sequence = ++m_Sequence;
++        auto promise = std::make_shared<std::promise<Result>>();
++        m_Result = promise->get_future().share();
++        AIDeferredStart::Schedule(this, [this, generation, sequence, promise, captureState = std::move(captureState)](bool run) {
++            if (!run)
++            {
++                promise->set_exception(std::make_exception_ptr(std::runtime_error("AI computation cancelled")));
++                return;
++            }
++            try
++            {
++                PROFILE2("AI deferred capture");
++                auto eager = std::exchange(m_TurnUpdates, {});
++                captureState();
++                std::move(eager.begin(), eager.end(), std::back_inserter(m_TurnUpdates));
++                m_Mailbox->Submit([promise, compute = Computation(generation, sequence, std::exchange(m_TurnUpdates, {}))](CAIWorker& w) {
++                    try { promise->set_value(compute(w)); }
++                    catch (...) { promise->set_exception(std::current_exception()); }
++                });
++            }
++            catch (...)
++            {
++                promise->set_exception(std::current_exception());
++                throw;
++            }
++        });
++    }
++#endif
++    void GetCommands(Commands& commands)
++    {
++        if (!m_Mailbox) { m_Local->GetCommands(commands); return; }
++        if (!m_Result.valid()) return;
++        const auto& result = m_Result.get();
++        if (result.generation != m_Generation || result.sequence != m_Sequence)
++            throw std::runtime_error("AI result generation/sequence mismatch");
++        commands = result.commands;
++    }
++    bool CanDefer() const { return m_Mailbox && m_Result.valid(); }
++#if defined(WASM_AI_TURN_GATE)
++    // Publishes whether the batch DeferredResult() reads is computed. A capture
++    // still waiting for its frame hook (no frame loop, several turns in one
++    // frame) is left to the barrier, which runs it: the gate never stalls a turn
++    // on work that has not been submitted.
++    void PublishReadiness()
++    {
++        const auto result = m_Result;
++        const void* owner = this;
++        AITurnGate::Set(owner, [result, owner] {
++            return AIDeferredStart::IsPending(owner)
++                || result.wait_for(std::chrono::seconds(0)) == std::future_status::ready;
++        });
++    }
++#endif
++    std::function<std::vector<SimulationCommand>()> DeferredResult()
++    {
++        const auto result = m_Result;
++        const auto generation = m_Generation, sequence = m_Sequence;
++        const auto* simulation = m_Simulation;
++        const void* owner = this;
++        // No actor/component capture: safe even if the AI component is reset.
++        // owner is only a key; a destroyed client has cancelled its tasks.
++        return [result, generation, sequence, simulation, owner] {
++#if defined(WASM_AI_DEFERRED_CAPTURE)
++            AIDeferredStart::Run(owner);
++#else
++            (void)owner;
++#endif
++            PROFILE2("AI worker result barrier");
++#if defined(WASM_SIM_GUEST_PROFILE)
++            const auto waitStart = std::chrono::steady_clock::now();
++            result.wait();
++            AIGuestSampling::excludedMs += std::chrono::duration<double, std::milli>(std::chrono::steady_clock::now() - waitStart).count();
++#endif
++#if defined(WASM_SIM_SCRIPT_TIMING)
++            {
++                // The wait is excluded from the turn and kept as its own row.
++                SimTiming::Scope wait([] { return std::string("ai:resultWait"); });
++                const auto waitStart = std::chrono::steady_clock::now();
++                result.wait();
++                SimTiming::excludedMs += std::chrono::duration<double, std::milli>(std::chrono::steady_clock::now() - waitStart).count();
++            }
++#endif
++            const auto& completed = result.get();
++            if (completed.generation != generation || completed.sequence != sequence)
++                throw std::runtime_error("Stale AI command batch");
++            Script::Request rq(*simulation);
++            JS::RootedValue command(rq.cx);
++            std::vector<SimulationCommand> commands;
++            for (const auto& player : completed.commands)
++                for (const auto& clone : player.commands)
++                {
++                    Script::ReadStructuredClone(rq, clone, &command);
++                    commands.emplace_back(player.player, rq.cx, command);
++                }
++            return commands;
++        };
++    }
++    void Serialize(std::ostream& stream, bool debug)
++    {
++        // A control message is FIFO behind computation; no actor roots escape.
++        stream << Call([debug](CAIWorker& w) { std::ostringstream out; w.Serialize(out, debug); return out.str(); });
++    }
++    void Deserialize(std::istream& stream, uint32_t players)
++    { m_PlayerCount = Call([&stream, players](CAIWorker& w) { w.Deserialize(stream, players); return w.getPlayerSize(); }); }
++};
++
++/** Implementation of ICmpAIManager. */
+ class CCmpAIManager final : public ICmpAIManager
+ {
+ public:
+@@ -1004,16 +1672,31 @@ public:
+ 		CmpPtr<ICmpAIInterface> cmpAIInterface(GetSystemEntity());
+ 		ENSURE(cmpAIInterface);
+ 
+-		// Get the game state from AIInterface
+-		JS::RootedValue state(rq.cx);
+-		if (m_JustDeserialized)
+-			cmpAIInterface->GetFullRepresentation(&state, false);
+-		else
+-			cmpAIInterface->GetRepresentation(&state);
+-		LoadPathfinderClasses(state); // add the pathfinding classes to it
++		const bool justDeserialized = m_JustDeserialized;
++		const auto updateGameState = [this, justDeserialized] {
++			Script::Request rq(GetSimContext().GetScriptInterface());
++			CmpPtr<ICmpAIInterface> cmpAIInterface(GetSystemEntity());
++			ENSURE(cmpAIInterface);
+ 
+-		// Update the game state
+-		m_Worker.UpdateGameState(state);
++			// Get the game state from AIInterface
++			JS::RootedValue state(rq.cx);
++			if (justDeserialized)
++				cmpAIInterface->GetFullRepresentation(&state, false);
++			else
++				cmpAIInterface->GetRepresentation(&state);
++			LoadPathfinderClasses(state); // add the pathfinding classes to it
++
++			// Update the game state
++			m_Worker.UpdateGameState(state);
++		};
++#if defined(WASM_AI_DEFERRED_CAPTURE)
++		// Threaded browser candidate only; the C++ grids below are still read here.
++		const bool deferCapture = !justDeserialized && m_Worker.CanDeferCapture();
++#else
++		const bool deferCapture = false;
++#endif
++		if (!deferCapture)
++			updateGameState();
+ 
+ 		// Update the pathfinding data
+ 		CmpPtr<ICmpPathfinder> cmpPathfinder(GetSystemEntity());
+@@ -1045,6 +1728,11 @@ public:
+ 			m_Worker.UpdateTerritoryMap(territoryMap);
+ 		}
+ 
++#if defined(WASM_AI_DEFERRED_CAPTURE)
++		if (deferCapture)
++			m_Worker.StartComputationDeferred(updateGameState);
++		else
++#endif
+ 		m_Worker.StartComputation();
+ 
+ 		m_JustDeserialized = false;
+@@ -1052,6 +1740,18 @@ public:
+ 
+ 	void PushCommands() override
+ 	{
++		if (m_Worker.CanDefer())
++		{
++			CmpPtr<ICmpCommandQueue> queue(GetSystemEntity());
++			if (queue)
++			{
++				queue->PushDeferredLocalCommands(m_Worker.DeferredResult());
++#if defined(WASM_AI_TURN_GATE)
++				m_Worker.PublishReadiness();
++#endif
++			}
++			return;
++		}
+ 		std::vector<CAIWorker::SCommandSets> commands;
+ 		m_Worker.GetCommands(commands);
+ 
+@@ -1124,7 +1824,7 @@ private:
+ 		Script::SetProperty(rq, state, "passabilityClasses", classesVal, true);
+ 	}
+ 
+-	CAIWorker m_Worker;
++	CAIWorkerClient m_Worker;
+ };
+ 
+ REGISTER_COMPONENT_TYPE(AIManager)
+diff --git a/source/simulation2/components/CCmpCommandQueue.cpp b/source/simulation2/components/CCmpCommandQueue.cpp
+index 447c0359970bab788b6940397dd79942536b8b96..c58f9789d349ba793e8924b74535ed0cc109e1cc 100644
+--- a/source/simulation2/components/CCmpCommandQueue.cpp
++++ b/source/simulation2/components/CCmpCommandQueue.cpp
+@@ -27,6 +27,11 @@
+ #include "scriptinterface/Request.h"
+ #include "simulation2/helpers/Player.h"
+ #include "simulation2/helpers/SimulationCommand.h"
++#include "simulation2/helpers/DeferredCommands.h"
++#if defined(WASM_SIM_SCRIPT_TIMING)
++#include "scriptinterface/Object.h"
++#include "simulation2/helpers/SimTiming.h"
++#endif
+ #include "simulation2/system/Component.h"
+ #include "simulation2/system/TurnManager.h"
+ 
+@@ -49,6 +54,7 @@ public:
+ 	DEFAULT_COMPONENT_ALLOCATOR(CommandQueue)
+ 
+ 	std::vector<SimulationCommand> m_LocalQueue;
++	DeferredCommands<SimulationCommand> m_Deferred;
+ 
+ 	static std::string GetSchema()
+ 	{
+@@ -65,6 +71,7 @@ public:
+ 
+ 	void Serialize(ISerializer& serialize) override
+ 	{
++		m_Deferred.Resolve(m_LocalQueue);
+ 		Script::Request rq(GetSimContext().GetScriptInterface());
+ 
+ 		serialize.NumberU32_Unbounded("num commands", static_cast<std::uint32_t>(m_LocalQueue.size()));
+@@ -112,8 +119,26 @@ public:
+ 			g_Game->GetTurnManager()->PostCommand(cmd);
+ 	}
+ 
++	void PushDeferredLocalCommands(std::function<std::vector<SimulationCommand>()> producer) override
++	{
++		m_Deferred.Reserve(m_LocalQueue.size(), std::move(producer));
++	}
++
++#if defined(WASM_SIM_SCRIPT_TIMING)
++	// Diagnostic only: the command's "type" (and a cheat's "action"), read before it runs.
++	static std::string CommandType(const Script::Request& rq, JS::HandleValue data)
++	{
++		std::string type = "?", action;
++		Script::GetProperty(rq, data, "type", type);
++		if (type == "cheat" && Script::GetProperty(rq, data, "action", action))
++			type += "." + action;
++		return type;
++	}
++#endif
++
+ 	void FlushTurn(const std::vector<SimulationCommand>& commands) override
+ 	{
++		m_Deferred.Resolve(m_LocalQueue);
+ 		const Script::Interface& scriptInterface = GetSimContext().GetScriptInterface();
+ 		Script::Request rq(scriptInterface);
+ 
+@@ -123,6 +148,9 @@ public:
+ 
+ 		for (size_t i = 0; i < localCommands.size(); ++i)
+ 		{
++#if defined(WASM_SIM_SCRIPT_TIMING)
++			SimTiming::Scope simTimingScope([&] { return "cmd:local:" + CommandType(rq, localCommands[i].data); });
++#endif
+ 			bool ok = Script::Function::CallVoid(rq, global, "ProcessCommand", localCommands[i].player, localCommands[i].data);
+ 			if (!ok)
+ 				LOGERROR("Failed to call ProcessCommand() global script function");
+@@ -130,6 +158,9 @@ public:
+ 
+ 		for (size_t i = 0; i < commands.size(); ++i)
+ 		{
++#if defined(WASM_SIM_SCRIPT_TIMING)
++			SimTiming::Scope simTimingScope([&] { return "cmd:net:" + CommandType(rq, commands[i].data); });
++#endif
+ 			bool ok = Script::Function::CallVoid(rq, global, "ProcessCommand", commands[i].player, commands[i].data);
+ 			if (!ok)
+ 				LOGERROR("Failed to call ProcessCommand() global script function");
+diff --git a/source/simulation2/components/ICmpCommandQueue.h b/source/simulation2/components/ICmpCommandQueue.h
+index 230909b56869c0eee10e4fa6f95d3b36c1a8c22c..8474e784094e9237eb6f24b9ad29e691c17c4bd6 100644
+--- a/source/simulation2/components/ICmpCommandQueue.h
++++ b/source/simulation2/components/ICmpCommandQueue.h
+@@ -25,6 +25,8 @@
+ #include <js/TypeDecls.h>
+ #include <js/Value.h>
+ #include <vector>
++#include <functional>
++#include <stdexcept>
+ 
+ struct SimulationCommand;
+ 
+@@ -59,6 +61,13 @@ public:
+ 	 */
+ 	virtual void FlushTurn(const std::vector<SimulationCommand>& commands) = 0;
+ 
++	// C++ only: reserve the original batch position. Resolve before flush/save.
++	virtual void PushDeferredLocalCommands(std::function<std::vector<SimulationCommand>()> producer)
++	{
++		(void)producer;
++		throw std::logic_error("Deferred local commands unsupported");
++	}
++
+ 	DECLARE_INTERFACE_TYPE(CommandQueue)
+ };
+ 
+diff --git a/source/simulation2/helpers/VertexPathfinder.cpp b/source/simulation2/helpers/VertexPathfinder.cpp
+index 8454b485d181d1abaf1d9cc85b02f7810cd48310..990e88057fb0096cbcd85a0fb3c68f9061046c59 100644
+--- a/source/simulation2/helpers/VertexPathfinder.cpp
++++ b/source/simulation2/helpers/VertexPathfinder.cpp
+@@ -111,10 +111,8 @@ static const entity_pos_t EDGE_EXPAND_DELTA = entity_pos_t::FromInt(1)/16;
+  * Check whether a ray from 'a' to 'b' crosses any of the edges.
+  * (Edges are one-sided so it's only considered a cross if going from front to back.)
+  */
+-inline static bool CheckVisibility(const CFixedVector2D& a, const CFixedVector2D& b, const std::vector<Edge>& edges)
++inline static bool CheckVisibility(const CFixedVector2D& a, const CFixedVector2D& b, const CFixedVector2D& abn, const std::vector<Edge>& edges)
+ {
+-	CFixedVector2D abn = (b - a).Perpendicular();
+-
+ 	// Edges of general non-axis-aligned shapes
+ 	for (size_t i = 0; i < edges.size(); ++i)
+ 	{
+@@ -155,13 +153,11 @@ inline static bool CheckVisibility(const CFixedVector2D& a, const CFixedVector2D
+ // They assume the caller has already excluded edges for which 'a' is
+ // on the wrong side.)
+ 
+-inline static bool CheckVisibilityLeft(const CFixedVector2D& a, const CFixedVector2D& b, const std::vector<EdgeAA>& edges)
++inline static bool CheckVisibilityLeft(const CFixedVector2D& a, const CFixedVector2D& b, const CFixedVector2D& abn, const std::vector<EdgeAA>& edges)
+ {
+ 	if (a.X >= b.X)
+ 		return true;
+ 
+-	CFixedVector2D abn = (b - a).Perpendicular();
+-
+ 	for (size_t i = 0; i < edges.size(); ++i)
+ 	{
+ 		if (b.X < edges[i].p0.X)
+@@ -183,13 +179,11 @@ inline static bool CheckVisibilityLeft(const CFixedVector2D& a, const CFixedVect
+ 	return true;
+ }
+ 
+-inline static bool CheckVisibilityRight(const CFixedVector2D& a, const CFixedVector2D& b, const std::vector<EdgeAA>& edges)
++inline static bool CheckVisibilityRight(const CFixedVector2D& a, const CFixedVector2D& b, const CFixedVector2D& abn, const std::vector<EdgeAA>& edges)
+ {
+ 	if (a.X <= b.X)
+ 		return true;
+ 
+-	CFixedVector2D abn = (b - a).Perpendicular();
+-
+ 	for (size_t i = 0; i < edges.size(); ++i)
+ 	{
+ 		if (b.X > edges[i].p0.X)
+@@ -211,13 +205,11 @@ inline static bool CheckVisibilityRight(const CFixedVector2D& a, const CFixedVec
+ 	return true;
+ }
+ 
+-inline static bool CheckVisibilityBottom(const CFixedVector2D& a, const CFixedVector2D& b, const std::vector<EdgeAA>& edges)
++inline static bool CheckVisibilityBottom(const CFixedVector2D& a, const CFixedVector2D& b, const CFixedVector2D& abn, const std::vector<EdgeAA>& edges)
+ {
+ 	if (a.Y >= b.Y)
+ 		return true;
+ 
+-	CFixedVector2D abn = (b - a).Perpendicular();
+-
+ 	for (size_t i = 0; i < edges.size(); ++i)
+ 	{
+ 		if (b.Y < edges[i].p0.Y)
+@@ -239,13 +231,11 @@ inline static bool CheckVisibilityBottom(const CFixedVector2D& a, const CFixedVe
+ 	return true;
+ }
+ 
+-inline static bool CheckVisibilityTop(const CFixedVector2D& a, const CFixedVector2D& b, const std::vector<EdgeAA>& edges)
++inline static bool CheckVisibilityTop(const CFixedVector2D& a, const CFixedVector2D& b, const CFixedVector2D& abn, const std::vector<EdgeAA>& edges)
+ {
+ 	if (a.Y <= b.Y)
+ 		return true;
+ 
+-	CFixedVector2D abn = (b - a).Perpendicular();
+-
+ 	for (size_t i = 0; i < edges.size(); ++i)
+ 	{
+ 		if (b.Y > edges[i].p0.Y)
+@@ -848,12 +838,14 @@ WaypointPath VertexPathfinder::ComputeShortPath(const ShortPathRequest& request,
+ 					continue;
+ 			}
+ 
++			const CFixedVector2D abn = (npos - m_Vertexes[curr.id].p).Perpendicular();
++
+ 			bool visible =
+-				CheckVisibilityLeft(m_Vertexes[curr.id].p, npos, m_EdgesLeft) &&
+-				CheckVisibilityRight(m_Vertexes[curr.id].p, npos, m_EdgesRight) &&
+-				CheckVisibilityBottom(m_Vertexes[curr.id].p, npos, m_EdgesBottom) &&
+-				CheckVisibilityTop(m_Vertexes[curr.id].p, npos, m_EdgesTop) &&
+-				CheckVisibility(m_Vertexes[curr.id].p, npos, m_EdgesUnaligned);
++				CheckVisibilityLeft(m_Vertexes[curr.id].p, npos, abn, m_EdgesLeft) &&
++				CheckVisibilityRight(m_Vertexes[curr.id].p, npos, abn, m_EdgesRight) &&
++				CheckVisibilityBottom(m_Vertexes[curr.id].p, npos, abn, m_EdgesBottom) &&
++				CheckVisibilityTop(m_Vertexes[curr.id].p, npos, abn, m_EdgesTop) &&
++				CheckVisibility(m_Vertexes[curr.id].p, npos, abn, m_EdgesUnaligned);
+ 
+ 			// Render the edges that we examine.
+ 			g_VertexPathfinderDebugOverlay.DebugRenderEdges(cmpObstructionManager->GetSimContext(), visible, m_Vertexes[curr.id].p, npos);
+diff --git a/source/simulation2/system/ComponentManager.cpp b/source/simulation2/system/ComponentManager.cpp
+index 2a439e5ae7bfdea39d0a660db5baadb54e873d20..b2584785972ab4f977e12e6a01ccb8f1d3eb1140 100644
+--- a/source/simulation2/system/ComponentManager.cpp
++++ b/source/simulation2/system/ComponentManager.cpp
+@@ -47,6 +47,17 @@
+ #include <js/ValueArray.h>
+ #include <stdexcept>
+ #include <string_view>
++#if defined(WASM_SIM_SCRIPT_TIMING)
++#include "simulation2/helpers/SimTiming.h"
++// Diagnostic only: exclusive time per dispatch kind, component type and handler.
++#define SIM_TIMING_SCOPE(kind, ctId, msg, global) \
++	SimTiming::Scope simTimingScope([&] { \
++		const auto type = m_ComponentTypesById.find(ctId); \
++		return std::string(kind) + (type != m_ComponentTypesById.end() ? type->second.name : std::string("?")) + "." + \
++			((global) ? (msg).GetScriptGlobalHandlerName() : (msg).GetScriptHandlerName()); })
++#else
++#define SIM_TIMING_SCOPE(kind, ctId, msg, global)
++#endif
+ 
+ namespace Script { class Context; }
+ 
+@@ -107,6 +118,10 @@ CComponentManager::CComponentManager(CSimContext& context, Script::Context& cx,
+ 		Script::Function::Register<&CComponentManager::DestroyComponentsSoon, Getter>(rq, "DestroyEntity");
+ 		Script::Function::Register<&CComponentManager::FlushDestroyedComponents, Getter>(rq, "FlushDestroyedEntities");
+ 		Script::Function::Register<&CComponentManager::Script_GetTemplate, Getter>(rq, "GetTemplate");
++#if defined(WASM_SIM_SCRIPT_TIMING)
++		Script::Function::Register<&SimTiming::ScriptBegin>(rq, "SimTimingBegin");
++		Script::Function::Register<&SimTiming::ScriptEnd>(rq, "SimTimingEnd");
++#endif
+ 
+ 	}
+ 
+@@ -1065,7 +1080,10 @@ void CComponentManager::PostMessage(entity_id_t ent, const CMessage& msg)
+ 			// Send the message to all of them
+ 			std::map<entity_id_t, IComponent*>::const_iterator eit = emap->second.find(ent);
+ 			if (eit != emap->second.end())
++			{
++				SIM_TIMING_SCOPE("post:", *ctit, msg, false);
+ 				eit->second->HandleMessage(msg, false);
++			}
+ 		}
+ 	}
+ 
+@@ -1088,6 +1106,7 @@ void CComponentManager::BroadcastMessage(const CMessage& msg)
+ 				continue;
+ 
+ 			// Send the message to all of them
++			SIM_TIMING_SCOPE("broadcast:", *ctit, msg, false);
+ 			std::map<entity_id_t, IComponent*>::const_iterator eit = emap->second.begin();
+ 			for (; eit != emap->second.end(); ++eit)
+ 				eit->second->HandleMessage(msg, false);
+@@ -1125,6 +1144,7 @@ void CComponentManager::SendGlobalMessage(entity_id_t ent, const CMessage& msg)
+ 				continue;
+ 
+ 			// Send the message to all of them
++			SIM_TIMING_SCOPE("global:", *ctit, msg, true);
+ 			std::map<entity_id_t, IComponent*>::const_iterator eit = emap->second.begin();
+ 			for (; eit != emap->second.end(); ++eit)
+ 				eit->second->HandleMessage(msg, true);
+@@ -1137,6 +1157,9 @@ void CComponentManager::SendGlobalMessage(entity_id_t ent, const CMessage& msg)
+ 	{
+ 		dit->second.Flatten();
+ 		const std::vector<IComponent*>& dynamic = dit->second.GetComponents();
++#if defined(WASM_SIM_SCRIPT_TIMING)
++		SimTiming::Scope simTimingScope([&] { return std::string("dynamic:") + msg.GetScriptHandlerName(); });
++#endif
+ 		for (size_t i = 0; i < dynamic.size(); i++)
+ 			dynamic[i]->HandleMessage(msg, false);
+ 	}
+diff --git a/source/simulation2/system/TurnManager.cpp b/source/simulation2/system/TurnManager.cpp
+index 84ace36bf0583574f5a8483d9b93827b9a0ad202..887a3ec72020b538ab23bc0c83b7f78300a7b20f 100644
+--- a/source/simulation2/system/TurnManager.cpp
++++ b/source/simulation2/system/TurnManager.cpp
+@@ -29,6 +29,12 @@
+ #include "scriptinterface/Request.h"
+ #include "scriptinterface/StructuredClone.h"
+ #include "simulation2/Simulation2.h"
++#if defined(WASM_AI_TURN_GATE)
++#include "simulation2/helpers/AITurnGate.h"
++#endif
++#if defined(WASM_PRESENT_PACING)
++#include "simulation2/helpers/TurnTiming.h"
++#endif
+ 
+ #include <algorithm>
+ #include <iterator>
+@@ -73,6 +79,15 @@ void CTurnManager::SetPlayerID(int playerId)
+ 
+ bool CTurnManager::Update(float simFrameLength, size_t maxTurns, const UpdateCallback& sendEventToAll)
+ {
++#if defined(WASM_PRESENT_PACING)
++	// Publish the time left before the next turn on every return (TurnTiming.h).
++	struct PublishTurnTiming
++	{
++		const float& delta;
++		~PublishTurnTiming() { TurnTiming::deltaSimTime = delta; }
++	} publishTurnTiming{m_DeltaSimTime};
++#endif
++
+ 	if (m_CurrentTurn > m_FinalTurn)
+ 		return false;
+ 
+@@ -117,6 +132,17 @@ bool CTurnManager::Update(float simFrameLength, size_t maxTurns, const UpdateCal
+ 		if (m_ReadyTurn <= m_CurrentTurn && m_CommandDelay > 1)
+ 			break;
+ 
++#if defined(WASM_AI_TURN_GATE)
++		// The threaded AI is still computing commands this turn consumes. Keep
++		// rendering instead of blocking at the result barrier; m_DeltaSimTime
++		// keeps accumulating, so the turn runs on a later frame as it would
++		// after one long frame.
++		AITurnGate::held = !AITurnGate::Ready();
++		if (AITurnGate::held)
++			return i > 0;
++		AITurnGate::TurnStarted();
++#endif
++
+ 		// To avoid confusing the profiler, we need to trigger the new turn
+ 		// while we're not nested inside any PROFILE blocks
+ 		g_Profiler.Turn();

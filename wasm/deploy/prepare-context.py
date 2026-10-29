@@ -26,6 +26,38 @@ def place(source, target):
         shutil.copy2(source, target)
 
 
+def restrict_renderer(play):
+    """Pin the Docker launcher, including old links and saved preferences."""
+    module = play / 'application.mjs'
+    text = module.read_text(encoding='utf-8')
+    changes = {
+        "if (['webgl', 'webgpu'].includes(backend)) backendSelector.value = backend;":
+            "backendSelector.value = 'webgl'; // Docker: WebGL 2 only",
+        "if (query.get('renderer') === 'webgpu') backendSelector.value = 'webgpu';":
+            "backendSelector.value = 'webgl'; backendSelector.disabled = true;",
+        "const webgpu = backendSelector.value === 'webgpu';": "const webgpu = false;",
+        "backend: backendSelector.value,": "backend: 'webgl',",
+        "backendSelector.disabled = false;": "backendSelector.disabled = true;",
+    }
+    for old, new in changes.items():
+        if text.count(old) != 1:
+            raise SystemExit(f'Unsupported launcher for WebGL-only deployment: {old}')
+        text = text.replace(old, new)
+    # These files may be hard-linked to the original package. Replace the links
+    # before writing so deployment policy never changes the input package.
+    module.unlink()
+    module.write_text(text, encoding='utf-8')
+    for name in ['application.html', 'index.html']:
+        page = play / name
+        if not page.exists():
+            continue
+        html = page.read_text(encoding='utf-8')
+        html = html.replace('<option value="webgpu">WebGPU (experimental)</option>', '')
+        html = html.replace('<select id="renderer-backend">', '<select id="renderer-backend" disabled>')
+        page.unlink()
+        page.write_text(html, encoding='utf-8')
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--package', type=Path, required=True, help='Built package, e.g. wasm/dist/application-phase4-5-<name>.')
@@ -50,6 +82,7 @@ def main():
         if source.is_file() and source.suffix != '.symbols':
             place(source, output / 'play' / source.relative_to(package))
             files += 1
+    restrict_renderer(output / 'play')
     subprocess.run([sys.executable, str(DEPLOY / 'check-module-imports.py'),
                     str(output / 'play')], check=True)
     print(f'Context ready: {output} ({files} package files)')

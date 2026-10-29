@@ -1,0 +1,25 @@
+name: WASM phase 1 (experimental)
+on:
+  workflow_dispatch:
+jobs:
+  headless-parity:
+    # Dedicated Docker/BuildKit runner: retain cache; allow >=8 GiB per build.
+    runs-on: self-hosted
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          lfs: false
+      - name: Native baseline, SpiderMonkey and headless parity
+        run: bash wasm/scripts/phase1.sh
+      - name: Package evidence and executable artifacts
+        if: always()
+        run: |
+          mkdir -p ci-artifacts
+          tar -czf ci-artifacts/wasm-phase1.tar.gz docs/wasm/evidence wasm/dist
+      - uses: actions/upload-artifact@v7
+        if: always()
+        with:
+          name: wasm-phase1
+          path: ci-artifacts/wasm-phase1.tar.gz
+

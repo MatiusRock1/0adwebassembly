@@ -13,7 +13,7 @@ if (!navigator.userAgentData?.brands?.some(entry => entry.brand === 'Chromium') 
   location.replace('unsupported.html');
 </script>
 <title>0 A.D. in the browser</title>
-<meta name="description" content="An unofficial WebAssembly port of 0 A.D., the free real-time strategy game by Wildfire Games, running in the browser with WebGPU.">
+<meta name="description" content="An unofficial WebAssembly port of 0 A.D., the free real-time strategy game by Wildfire Games, running in the browser with WebGL 2.">
 <style>
   :root {
     --bg: #f6f3ee; --surface: #ffffff; --text: #1d1b18; --muted: #5d574e;
@@ -64,10 +64,10 @@ if (!navigator.userAgentData?.brands?.some(entry => entry.brand === 'Chromium') 
   <span class="tag">Unofficial community port · Experimental</span>
   <h1>0 A.D., running in your browser</h1>
   <p class="lead">The full real-time strategy game by Wildfire Games, compiled to WebAssembly:
-    the original engine, simulation, interface and AI, rendered with WebGPU. No installation.</p>
+    the original engine, simulation, interface and AI, rendered with WebGL 2. No installation.</p>
   <div class="actions">
-    <a class="button primary" href="play/application.html?renderer=webgpu">Play in the browser</a>
-    <a class="button" href="https://gitea.wildfiregames.com/MatiusRock/0adwebassembly">Source of this port</a>
+    <a class="button primary" href="play/application.html">Play in the browser</a>
+    <a class="button" href="https://github.com/MatiusRock1/0adwebassembly">Source of this port</a>
     <a class="button" href="https://gitea.wildfiregames.com/0ad/0ad">Original 0 A.D. repository</a>
   </div>
   <p class="limit"><strong>Single-player only:</strong> multiplayer (the online lobby and LAN games)
@@ -80,7 +80,7 @@ if (!navigator.userAgentData?.brands?.some(entry => entry.brand === 'Chromium') 
       <li>The original C++ engine (Pyrogenesis) built with Emscripten, with the original game data,
         simulation, GUI and Petra AI. Nothing is reimplemented in JavaScript.</li>
       <li>SpiderMonkey 128 runs the game scripts inside WebAssembly; the AI runs on its own thread.</li>
-      <li>A WebGPU renderer in a dedicated worker, with frames paced to a steady 30 FPS.</li>
+      <li>WebGL 2 rendering, with frames capped at 30 FPS.</li>
       <li>Game archives are streamed in blocks and kept in IndexedDB, so a second visit starts quickly.</li>
     </ul>
   </section>
@@ -88,10 +88,10 @@ if (!navigator.userAgentData?.brands?.some(entry => entry.brand === 'Chromium') 
   <section>
     <h2>Requirements</h2>
     <ul>
-      <li>A desktop Chromium browser with WebGPU and WebAssembly JSPI: Chrome or Edge 137 or later.</li>
+      <li>A compatible desktop browser with WebGL 2 and WebAssembly JSPI support.</li>
       <li>A desktop computer with a capable GPU, mouse and keyboard. Development and the measurements
         below used Chrome 155 on an NVIDIA RTX 3060 Laptop GPU; other GPUs are untested.</li>
-      <li>In the launcher, the <code>WebGPU (experimental)</code> renderer; the button above selects it.
+      <li>The Docker version uses <code>WebGL 2</code>; WebGPU is temporarily disabled.
         WebGL 2 is available as a fallback.</li>
     </ul>
   </section>
@@ -114,7 +114,7 @@ if (!navigator.userAgentData?.brands?.some(entry => entry.brand === 'Chromium') 
       GNU GPL version 2 or later and its art and audio under CC BY-SA 3.0 (details in
       <a href="licenses/LICENSE.md">LICENSE.md</a>); this port keeps those licenses.
       The source code of the port, including all changes to the engine, is in
-      <a href="https://gitea.wildfiregames.com/MatiusRock/0adwebassembly">its repository</a>.</p>
+      <a href="https://github.com/MatiusRock1/0adwebassembly">its repository</a>.</p>
     <p>This port is not affiliated with or endorsed by Wildfire Games. Report problems with the browser
       version to the port, not to the 0 A.D. developers.</p>
   </section>

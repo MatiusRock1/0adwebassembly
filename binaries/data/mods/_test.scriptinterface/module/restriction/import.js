@@ -1,1 +1,0 @@
-import "restriction/disallowedfile.js";

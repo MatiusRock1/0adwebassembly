@@ -1,0 +1,45 @@
+diff --git a/binaries/data/mods/public/gui/pregame/MainMenuItems.js b/binaries/data/mods/public/gui/pregame/MainMenuItems.js
+index 1066c11c15d6e65badc78b720707f2dbf55c99fe..bc713e177c9787079f2f6a294d04c9b7b2e6be32 100644
+--- a/binaries/data/mods/public/gui/pregame/MainMenuItems.js
++++ b/binaries/data/mods/public/gui/pregame/MainMenuItems.js
+@@ -217,7 +217,9 @@ export const mainMenuItems = [
+ 	},
+ 	{
+ 		"caption": translate("Multiplayer"),
+-		"tooltip": translate("Fight against one or more human players in a multiplayer game."),
++		// The browser build cannot open network connections between players.
++		"tooltip": translate("Multiplayer is not available in the browser version."),
++		"enabled": () => false,
+ 		"submenu": [
+ 			{
+ 				"caption": translate("Game Lobby"),
+diff --git a/binaries/data/mods/public/maps/random/rmgen/Area.js b/binaries/data/mods/public/maps/random/rmgen/Area.js
+index 3d16cda5f430e11bfda547ecd37d9d872b316b43..eb87f19b893eb52e8f723390a95ecc040c777cd8 100644
+--- a/binaries/data/mods/public/maps/random/rmgen/Area.js
++++ b/binaries/data/mods/public/maps/random/rmgen/Area.js
+@@ -25,17 +25,22 @@ Area.prototype.contains = function(point)
+ 
+ Area.prototype.getClosestPointTo = function(position)
+ {
+-	if (!this.points.length)
++	const points = this.points;
++	if (!points.length)
+ 		return undefined;
+ 
+-	let closestPoint = this.points[0];
++	let closestPoint = points[0];
+ 	let shortestDistance = Infinity;
+ 
+-	for (const point of this.points)
++	for (let i = 0; i < points.length; ++i)
+ 	{
++		const point = points[i];
+ 		const currentDistance = point.distanceToSquared(position);
+ 		if (currentDistance < shortestDistance)
+ 		{
++			if (currentDistance === 0)
++				return point;
++
+ 			shortestDistance = currentDistance;
+ 			closestPoint = point;
+ 		}

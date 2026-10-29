@@ -1,0 +1,127 @@
+diff --git a/source/renderer/PostprocManager.cpp b/source/renderer/PostprocManager.cpp
+index 23bc421b1d7b701ddfe249f818e4f28c8ba18259..505a3063a2a2948296c7a656b80f2fdb3b9a41c8 100644
+--- a/source/renderer/PostprocManager.cpp
++++ b/source/renderer/PostprocManager.cpp
+@@ -70,7 +70,7 @@ void DrawFullscreenQuad(
+ 		1.0f, 1.0f
+ 	};
+ 	const bool flip =
+-		deviceCommandContext->GetDevice()->GetBackend() == Renderer::Backend::Backend::VULKAN;
++		Renderer::Backend::UsesUpperLeftOrigin(deviceCommandContext->GetDevice()->GetBackend());
+ 	const float bottomV = flip ? 1.0 : 0.0f;
+ 	const float topV = flip ? 0.0f : 1.0f;
+ 	float quadTex[] =
+diff --git a/source/renderer/SceneRenderer.cpp b/source/renderer/SceneRenderer.cpp
+index 2335e245279e65152863e0573990331fd84f3f05..8732340f047504fd9f2e586cc1e354a89fe4451c 100644
+--- a/source/renderer/SceneRenderer.cpp
++++ b/source/renderer/SceneRenderer.cpp
+@@ -657,7 +657,7 @@ void CSceneRenderer::RenderReflections(
+ 
+ 	// Save the model-view-projection matrix so the shaders can use it for projective texturing
+ 	wm.m_ReflectionMatrix = m_ViewCamera.GetViewProjection();
+-	if (deviceCommandContext->GetDevice()->GetBackend() == Renderer::Backend::Backend::VULKAN)
++	if (Renderer::Backend::UsesUpperLeftOrigin(deviceCommandContext->GetDevice()->GetBackend()))
+ 	{
+ 		CMatrix3D flip;
+ 		flip.SetIdentity();
+@@ -745,7 +745,7 @@ void CSceneRenderer::RenderRefractions(
+ 	wm.m_RefractionProjInvMatrix = m_ViewCamera.GetProjection().GetInverse();
+ 	wm.m_RefractionViewInvMatrix = m_ViewCamera.GetOrientation();
+ 
+-	if (deviceCommandContext->GetDevice()->GetBackend() == Renderer::Backend::Backend::VULKAN)
++	if (Renderer::Backend::UsesUpperLeftOrigin(deviceCommandContext->GetDevice()->GetBackend()))
+ 	{
+ 		CMatrix3D flip;
+ 		flip.SetIdentity();
+diff --git a/source/renderer/ShadowMap.cpp b/source/renderer/ShadowMap.cpp
+index 97657a8a45c599ed5edd26197b34a0c240be3a9f..a50b42cf13fddefa90b3535fced1d2372db39872 100644
+--- a/source/renderer/ShadowMap.cpp
++++ b/source/renderer/ShadowMap.cpp
+@@ -477,7 +477,7 @@ void ShadowMapInternals::CalculateShadowMatrices(const int cascade)
+ 	lightToTex._34 = -shadowRenderBound[0].Z * texscalez;
+ 	lightToTex._44 = 1.0;
+ 
+-	if (Device->GetBackend() == Renderer::Backend::Backend::VULKAN)
++	if (Renderer::Backend::UsesUpperLeftOrigin(Device->GetBackend()))
+ 	{
+ 		CMatrix3D flip;
+ 		flip.SetIdentity();
+diff --git a/source/renderer/backend/Backend.h b/source/renderer/backend/Backend.h
+index 78e96f1413058d8aa798b48391f9179a211f2555..8a30671220720770f6ce14afe53efe5a27a62528 100644
+--- a/source/renderer/backend/Backend.h
++++ b/source/renderer/backend/Backend.h
+@@ -28,9 +28,16 @@ enum class Backend
+ {
+ 	GL,
+ 	VULKAN,
+-	DUMMY
++	DUMMY,
++	WEBGPU
+ };
+ 
++// Framebuffer texture coordinates follow the explicit API's upper-left origin.
++inline bool UsesUpperLeftOrigin(const Backend backend)
++{
++	return backend == Backend::VULKAN || backend == Backend::WEBGPU;
++}
++
+ } // namespace Backend
+ 
+ } // namespace Renderer
+diff --git a/source/renderer/backend/gl/ShaderProgram.cpp b/source/renderer/backend/gl/ShaderProgram.cpp
+index b11ecf59e240da0d50e2330923207218eb00bd06..c531ebff65ec22ab8e72e4cb3cf1e134a94456fb 100644
+--- a/source/renderer/backend/gl/ShaderProgram.cpp
++++ b/source/renderer/backend/gl/ShaderProgram.cpp
+@@ -16,6 +16,9 @@
+  */
+ 
+ #include "precompiled.h"
++#if defined(WASM_PARALLEL_SHADER_COMPILE)
++#include "BrowserShaderCompile.h"
++#endif
+ 
+ #include "ShaderProgram.h"
+ 
+@@ -238,6 +241,12 @@ bool CompileGLSL(GLuint shader, const VfsPath& file, const CStr& code)
+ 	glShaderSource(shader, 1, &codeString, &codeLength);
+ 
+ 	glCompileShader(shader);
++#if defined(WASM_PARALLEL_SHADER_COMPILE)
++	// Poll completion after linking, before querying any blocking status.
++	// A compile failure still makes the original link-status check fail.
++	if (BrowserParallelShaderCompileAvailable())
++		return true;
++#endif
+ 
+ 	GLint ok = 0;
+ 	glGetShaderiv(shader, GL_COMPILE_STATUS, &ok);
+@@ -380,6 +389,29 @@ bool CShaderProgram::Link(const VfsPath& path)
+ 		glBindAttribLocation(m_Program, it->second, it->first.c_str());
+ 
+ 	glLinkProgram(m_Program);
++#if defined(WASM_PARALLEL_SHADER_COMPILE)
++	if (!BrowserWaitForShaderProgram(m_Program))
++		return false;
++	{
++		// Compilation status was not queried per shader; report its log now.
++		GLint linked = 0;
++		glGetProgramiv(m_Program, GL_LINK_STATUS, &linked);
++		GLuint shaders[2];
++		GLsizei count = 0;
++		if (!linked)
++			glGetAttachedShaders(m_Program, 2, &count, shaders);
++		for (GLsizei i = 0; i < count; ++i)
++		{
++			GLint compiled = 0;
++			glGetShaderiv(shaders[i], GL_COMPILE_STATUS, &compiled);
++			if (compiled)
++				continue;
++			char infolog[4096] = {};
++			glGetShaderInfoLog(shaders[i], sizeof(infolog), nullptr, infolog);
++			LOGERROR("Failed to compile shader for program '{}':\n{}", path.string8(), infolog);
++		}
++	}
++#endif
+ 
+ 	GLint ok = 0;
+ 	glGetProgramiv(m_Program, GL_LINK_STATUS, &ok);

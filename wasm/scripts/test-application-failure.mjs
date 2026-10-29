@@ -50,3 +50,17 @@ test('startup fallback and cleanup errors still release pointer and renderer',as
   assert.deepEqual(f.calls,['stop','pointer','renderer']);
   assert.equal(f.reports.length,1);
 });
+
+
+test('fatal cleanup removes input synchronously and survives reentrant abort',async()=>{
+  let boundary, nested;
+  const calls=[];
+  ({boundary}=fixture({getApplication:()=>({stopAbortedApplication(){
+    calls.push('stop');
+    nested=boundary.abort('secondary callback failure');
+  }}),releasePointer(){calls.push('pointer');}}));
+  const cleanup=boundary.abort('original worker failure');
+  assert.deepEqual(calls,['stop','pointer']);
+  assert.equal(nested,cleanup);
+  await cleanup;
+});

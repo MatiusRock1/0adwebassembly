@@ -1,0 +1,58 @@
+diff --git a/source/ps/VideoMode.cpp b/source/ps/VideoMode.cpp
+index 92e1d57f567701810c370bdf531768f995a3fa53..8c48802448d8a92a52c9094d95503d1ea9612ba2 100644
+--- a/source/ps/VideoMode.cpp
++++ b/source/ps/VideoMode.cpp
+@@ -46,6 +46,9 @@
+ #include "renderer/backend/dummy/DeviceForward.h"
+ #include "renderer/backend/gl/DeviceForward.h"
+ #include "renderer/backend/vulkan/DeviceForward.h"
++#if defined(__EMSCRIPTEN__)
++#include "renderer/backend/webgpu/DeviceForward.h"
++#endif
+ #include "scriptinterface/Interface.h"
+ 
+ #include <SDL.h>
+@@ -94,6 +97,9 @@ Renderer::Backend::Backend GetFallbackBackend(const Renderer::Backend::Backend b
+ 		break;
+ 	case Renderer::Backend::Backend::DUMMY:
+ 		break;
++	case Renderer::Backend::Backend::WEBGPU:
++		// WebGPU acceptance must never silently downgrade to another backend.
++		break;
+ 	case Renderer::Backend::Backend::VULKAN:
+ 		fallback = Renderer::Backend::Backend::GL;
+ 		break;
+@@ -109,6 +115,9 @@ std::string_view GetBackendName(const Renderer::Backend::Backend backend)
+ 	case Renderer::Backend::Backend::GL:
+ 		name = "GL";
+ 		break;
++	case Renderer::Backend::Backend::WEBGPU:
++		name = "WebGPU";
++		break;
+ 	case Renderer::Backend::Backend::DUMMY:
+ 		name = "Dummy";
+ 		break;
+@@ -333,6 +342,8 @@ void CVideoMode::ReadConfig()
+ 	const std::string rendererBackend{g_ConfigDB.Get("rendererbackend", std::string{})};
+ 	if (rendererBackend == "dummy")
+ 		m_Backend = Renderer::Backend::Backend::DUMMY;
++	else if (rendererBackend == "webgpu")
++		m_Backend = Renderer::Backend::Backend::WEBGPU;
+ 	else if (rendererBackend == "vulkan")
+ 		m_Backend = Renderer::Backend::Backend::VULKAN;
+ 	else
+@@ -686,6 +697,14 @@ bool CVideoMode::TryCreateBackendDevice(SDL_Window* window)
+ 	case Renderer::Backend::Backend::GL:
+ 		m_BackendDevice = Renderer::Backend::GL::CreateDevice(window);
+ 		break;
++	case Renderer::Backend::Backend::WEBGPU:
++#if defined(__EMSCRIPTEN__)
++		m_BackendDevice = Renderer::Backend::WebGPU::CreateDevice(window);
++#else
++		LOGERROR("WebGPU is available only in the browser build");
++#endif
++		ENSURE(m_BackendDevice); // Explicit selection: failure stops this build.
++		break;
+ 	case Renderer::Backend::Backend::DUMMY:
+ 		m_BackendDevice = Renderer::Backend::Dummy::CreateDevice(window);
+ 		ENSURE(m_BackendDevice);

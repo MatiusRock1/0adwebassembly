@@ -1,0 +1,31 @@
+diff --git a/.gitignore b/.gitignore
+index 9a509228f33598028b37bc0897d76478d465cc82..00d85dc1e73c32c57794bee97b67f685651bf346 100644
+--- a/.gitignore
++++ b/.gitignore
+@@ -44,6 +44,15 @@ build/premake/.gccver.tmp
+ docs/doxygen/output/
+ 
+ # Build files (cpp)
++cmake-build-*/
++CMakeFiles/
++CMakeCache.txt
++*.bc
++*.dll
++*.class
++*.gch
++*.pch
++*.wasm
+ *.a
+ *.dylib
+ *.dSYM
+@@ -104,6 +113,10 @@ Thumbs.db
+ .DS_Store
+ 
+ # IDE files
++/token.md
++/.mypy_cache/
++/.pytest_cache/
++/.ruff_cache/
+ /.vs/
+ /.vscode/
+ /.idea/
