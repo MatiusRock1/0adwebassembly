@@ -49,8 +49,7 @@ o de la capa web.
 
 El clon oficial `0ad` se conserva intacto. Los archivos locales del antiguo
 worktree se trasladaron a esta raíz; las variantes diferentes quedan respaldadas
-en `.git/local-integration-backups/`. La ruta `0ad-wasm` ahora es un enlace de
-compatibilidad a esta carpeta, sin otro repositorio ni copia del motor.
+en `.git/local-integration-backups/`. La ruta duplicada `0ad-wasm` se retira; se trabaja directamente en esta carpeta.
 
 ## Recursos grandes fuera del versionado
 
@@ -108,4 +107,4 @@ fuentes, ejecutables o datos del juego.
 
 ## Limpieza de los arboles anteriores
 
-El antiguo worktree `0ad-wasm` se retira tras trasladar sus archivos locales a esta raiz. La ruta antigua queda como enlace de compatibilidad a `0adwebassembly`, sin una segunda copia del motor. Los archivos diferentes y la configuracion anterior se respaldan en `.git/local-integration-backups/`. El clon oficial `0ad` se conserva intacto.
+El antiguo worktree `0ad-wasm` se retira tras trasladar sus archivos locales a esta raiz. La ruta antigua se elimina; se usa directamente `0adwebassembly`. Los archivos diferentes y la configuracion anterior se respaldan en `.git/local-integration-backups/`. El clon oficial `0ad` se conserva intacto.
