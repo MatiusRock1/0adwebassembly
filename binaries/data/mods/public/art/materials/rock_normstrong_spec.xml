@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material>
+	<alternative material="player_trans.xml" quality="8"/>
+	<define name="USE_PARALLAX" value="1"/>
+	<required_texture name="baseTex"/>
+	<required_texture name="normTex" define="USE_NORMAL_MAP"/>
+	<required_texture name="specTex" define="USE_SPECULAR_MAP"/>
+	<shader pass="main" effect="model"/>
+	<shader pass="shadow_caster" effect="model_solid"/>
+	<shader pass="silhouette_occluder" effect="model_solid"/>
+	<shader pass="silhouette_caster" effect="model_silhouette_caster"/>
+	<shader pass="reflections" effect="model_reflections"/>
+	<shader pass="refractions" effect="model"/>
+	<shader pass="wireframe" effect="model_wireframe"/>
+	<shader pass="wireframe_solid" effect="model_wireframe_solid"/>
+	<uniform name="effectSettings" value="1.65 4.0 0.0075"/>
+</material>

@@ -1,0 +1,60 @@
+/* Copyright (C) 2026 Wildfire Games.
+ * This file is part of 0 A.D.
+ *
+ * 0 A.D. is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * 0 A.D. is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with 0 A.D.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+#ifndef INCLUDED_CINEMAMANAGER
+#define INCLUDED_CINEMAMANAGER
+
+class CCamera;
+class RNSpline;
+
+namespace Renderer::Backend { class IDeviceCommandContext; }
+
+struct CColor;
+
+/**
+ * Class for in game playing of cinematics. Should only be instantiated in CGameView.
+ */
+class CCinemaManager
+{
+public:
+	/**
+	 * Renders paths and their nodes (if enabled).
+	 */
+	void Render(Renderer::Backend::IDeviceCommandContext& deviceCommandContext) const;
+
+	bool IsPlaying() const;
+
+	/**
+	 * Updates CCinemManager and current path
+	 * @param deltaRealTime Elapsed real time since the last frame.
+	 * @param camera To which camera apply the current path is playing.
+	 */
+	void Update(const float deltaRealTime, CCamera& camera);
+
+	bool GetPathsDrawing() const;
+	void SetPathsDrawing(const bool drawPath);
+
+private:
+	void DrawPaths(Renderer::Backend::IDeviceCommandContext& deviceCommandContext) const;
+	void DrawSpline(Renderer::Backend::IDeviceCommandContext& deviceCommandContext, const RNSpline& spline, const CColor& splineColor, int smoothness) const;
+	void DrawNodes(Renderer::Backend::IDeviceCommandContext& deviceCommandContext, const RNSpline& spline, const CColor& nodesColor) const;
+
+	bool m_DrawPaths = false;
+	bool m_SmoothLosOverridden = false;
+};
+
+#endif

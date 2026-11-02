@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Entity parent="template_gaia_ruins">
+  <Footprint replace="">
+    <Circle radius="1.5"/>
+    <Height>2.0</Height>
+  </Footprint>
+  <Identity>
+    <SpecificName>Celtic Standing Stone</SpecificName>
+        <History>
+        A Celtic stone inscribed with mysterious markings. What could it be, a property marker? A monument? A secret message? Or is it just a lump of stone that you can use?
+    </History>
+  </Identity>
+  <Obstruction>
+    <Static width="2.0" depth="2.0"/>
+  </Obstruction>
+  <ResourceSupply>
+    <Max>300</Max>
+  </ResourceSupply>
+  <VisualActor>
+    <Actor>props/special/eyecandy/standing_stones.xml</Actor>
+  </VisualActor>
+</Entity>

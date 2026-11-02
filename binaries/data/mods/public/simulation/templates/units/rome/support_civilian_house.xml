@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Entity parent="units/rome/support_civilian">
+  <Cost>
+    <BuildTime>30</BuildTime>
+  </Cost>
+</Entity>

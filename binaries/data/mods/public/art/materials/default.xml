@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material>
+  <required_texture name="baseTex"/>
+  <shader pass="main" effect="model"/>
+  <shader pass="shadow_caster" effect="model_solid"/>
+  <shader pass="silhouette_occluder" effect="model_solid"/>
+  <shader pass="silhouette_caster" effect="model_silhouette_caster"/>
+  <shader pass="reflections" effect="model_reflections"/>
+  <shader pass="refractions" effect="model"/>
+  <shader pass="wireframe" effect="model_wireframe"/>
+  <shader pass="wireframe_solid" effect="model_wireframe_solid"/>
+</material>

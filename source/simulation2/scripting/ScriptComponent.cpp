@@ -1,0 +1,101 @@
+/* Copyright (C) 2026 Wildfire Games.
+ * This file is part of 0 A.D.
+ *
+ * 0 A.D. is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * 0 A.D. is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with 0 A.D.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+#include "precompiled.h"
+
+#include "ScriptComponent.h"
+
+#include "scriptinterface/FunctionWrapper.h"
+#include "scriptinterface/JSON.h"
+#include "scriptinterface/Object.h"
+#include "simulation2/system/Component.h"
+#include "simulation2/system/Message.h"
+
+#include <string>
+
+namespace Script { class Interface; }
+
+CComponentTypeScript::CComponentTypeScript(const Script::Interface& scriptInterface, JS::HandleValue instance) :
+	m_ScriptInterface(scriptInterface), m_Instance(instance)
+{}
+
+void CComponentTypeScript::Init(CComponentManager& cmpMgr, const CParamNode& paramNode, entity_id_t ent)
+{
+	cmpMgr.RegisterTrace(ent, m_Instance);
+	Script::Request rq(m_ScriptInterface);
+	Script::SetProperty(rq, GetInstance(), "entity", (int)ent, true, false);
+	Script::SetProperty(rq, GetInstance(), "template", paramNode, true, false);
+	Script::Function::CallVoid(rq, GetInstance(), "Init");
+}
+
+void CComponentTypeScript::Deinit()
+{
+	Script::Request rq(m_ScriptInterface);
+	Script::Function::CallVoid(rq, GetInstance(), "Deinit");
+}
+
+bool CComponentTypeScript::HasMessageHandler(const CMessage& msg, const bool global)
+{
+	const Script::Request rq(m_ScriptInterface);
+	return Script::HasProperty(rq, GetInstance(), global ? msg.GetScriptGlobalHandlerName() :
+		msg.GetScriptHandlerName());
+}
+
+void CComponentTypeScript::HandleMessage(const CMessage& msg, bool global)
+{
+	Script::Request rq(m_ScriptInterface);
+
+	const char* name = global ? msg.GetScriptGlobalHandlerName() : msg.GetScriptHandlerName();
+
+	JS::RootedValue msgVal(rq.cx, msg.ToJSValCached(rq));
+
+	if (!Script::Function::CallVoid(rq, GetInstance(), name, msgVal))
+		LOGERROR("Script message handler {} failed", name);
+}
+
+void CComponentTypeScript::Serialize(ISerializer& serialize)
+{
+	Script::Request rq(m_ScriptInterface);
+
+	try
+	{
+		serialize.ScriptVal("comp", GetMutInstance());
+	}
+	catch(PSERROR_Serialize& err)
+	{
+		int ent = INVALID_ENTITY;
+		Script::GetProperty(rq, GetInstance(), "entity", ent);
+		std::string name = "(error)";
+		Script::GetObjectClassName(rq, GetInstance(), name);
+		LOGERROR("Script component {} of entity {} failed to serialize: {}\nSerializing:\n{}",
+			name, ent, err.what(), Script::ToString(rq, GetMutInstance()));
+		// Rethrow now that we added more details
+		throw;
+	}
+}
+
+void CComponentTypeScript::Deserialize(CComponentManager& cmpMgr, const CParamNode& paramNode, IDeserializer& deserialize, entity_id_t ent)
+{
+	cmpMgr.RegisterTrace(ent, m_Instance);
+
+	Script::Request rq(m_ScriptInterface);
+
+	Script::SetProperty(rq, GetInstance(), "entity", (int)ent, true, false);
+	Script::SetProperty(rq, GetInstance(), "template", paramNode, true, false);
+
+	deserialize.ScriptObjectAssign("comp", GetInstance());
+}

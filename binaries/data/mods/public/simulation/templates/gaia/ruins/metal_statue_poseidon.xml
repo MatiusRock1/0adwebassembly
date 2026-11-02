@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Entity parent="template_gaia_ruins">
+  <Footprint>
+    <Circle radius="4.0"/>
+    <Height>20.0</Height>
+  </Footprint>
+  <Identity>
+    <SpecificName>Poseidon</SpecificName>
+    <Icon>gaia/geology_metal.png</Icon>
+    <History>
+        A metal statue of Poseidon, the greek god of the sea. It is a nice statue, but could be also turned into some metal for one of your own projects.
+    </History>
+  </Identity>
+  <Obstruction>
+    <Static width="7.0" depth="7.0"/>
+  </Obstruction>
+  <ResourceSupply>
+    <Max>400</Max>
+    <Type>metal.ruins</Type>
+  </ResourceSupply>
+  <VisualActor>
+    <Actor>props/special/eyecandy/statue_poseidon_covered.xml</Actor>
+  </VisualActor>
+</Entity>

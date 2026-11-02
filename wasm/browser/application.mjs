@@ -299,6 +299,11 @@ document.querySelector('#start').addEventListener('click', async () => {
       },
       preRun: [module => {
         module.ENV.HOME = '/data';
+        // SM128's experimental portable baseline interpreter traps in real matches
+        // (memory access out of bounds, null function). Like the demos, select the
+        // C++ interpreter; it must be set before the VM's static initialization.
+        module.ENV.JIT_OPTION_portableBaselineInterpreter = 'false';
+        record(JSON.stringify({type:'script-interpreter',mode:'cpp'}));
         module.ENV.ICU_DATA = '/data/icu';
         if (query.get('automation') === '1') module.ENV.PHASE4_AUTOMATION = '1';
         if (query.get('traceVFS') === '1') module.ENV.PHASE4_TRACE_VFS = '1';
