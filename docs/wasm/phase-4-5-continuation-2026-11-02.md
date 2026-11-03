@@ -9,7 +9,7 @@ stays open in PBL. The Kingdoms and Mare Nostrum launchers have used this overri
 since 29 October. The plain 0 A.D. launcher did not, and a player reported
 `memory access out of bounds` followed by `unreachable` during a match. The analysis
 and what it does not establish are in `Risk-Demo/evidence/engine-crashes.md` of the
-Demo-Game repository.
+DemosGames repository.
 
 Effect on this repository's measurements: every performance result in these documents
 was taken with PBL, so a new run is not comparable with them. `skirmish` and `combat`

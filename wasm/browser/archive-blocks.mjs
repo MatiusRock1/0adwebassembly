@@ -1,7 +1,7 @@
 // Original ZIP bytes, fetched and persisted by content hash. The engine still
 // parses/decompresses the original archives; only their storage backend changes.
 export class ArchiveBlocks {
-  constructor({manifest,baseURL,urls={},fetcher=(...args)=>globalThis.fetch(...args),storage=null,maxMemoryBytes=64*1024*1024,report=()=>{},attempts=4,retryDelayMs=500}) {
+  constructor({manifest,baseURL,urls={},fetcher=(...args)=>globalThis.fetch(...args),storage=null,maxMemoryBytes=128*1024*1024,report=()=>{},attempts=4,retryDelayMs=500}) {
     this.manifest=manifest;this.baseURL=baseURL;this.urls=urls;this.fetcher=fetcher;this.storage=storage;
     this.maxMemoryBytes=maxMemoryBytes;this.report=report;this.cache=new Map();this.pending=new Map();
     this.attempts=attempts;this.retryDelayMs=retryDelayMs;
@@ -28,24 +28,29 @@ export class ArchiveBlocks {
     this.report({type:'archive-retry',archive,start,attempt,reason});
     await new Promise(resolve=>setTimeout(resolve,this.retryDelayMs*2**(attempt-1)));
   }
-  async fetchRange(archive,start,end,total){
-    const url=new URL(this.urls[archive]||`${archive}.zip`,this.baseURL),expected=`bytes ${start}-${end}/${total}`;
+  async fetchBlock(archive,key,start,end,total){
+    // A manifest with blockFiles names one immutable object per block, <hash>.bin
+    // in the archive's directory: a CDN caches it whole and no CORS preflight runs.
+    // It sends no no-store, which could make a CDN skip its copy.
+    const files=this.manifest.blockFiles,expected=`bytes ${start}-${end}/${total}`;
+    const url=files?new URL(`${key}.bin`,this.urls[archive]||this.baseURL):new URL(this.urls[archive]||`${archive}.zip`,this.baseURL);
     for(let attempt=1;;attempt++){
       let response;
-      // Verified blocks already persist in IndexedDB. The HTTP cache would keep a
-      // second copy and can replay headers from an earlier server or CORS policy.
-      try{response=await this.fetcher(url,{headers:{Range:`bytes=${start}-${end}`},cache:'no-store'});}
+      // Verified blocks already persist in IndexedDB. For a single archive, the HTTP cache
+      // would keep a second copy and can replay headers from an earlier server or CORS policy.
+      try{response=await this.fetcher(url,files?{}:{headers:{Range:`bytes=${start}-${end}`},cache:'no-store'});}
       catch(error){
         if(attempt<this.attempts){await this.retry(archive,start,attempt,error.message);continue;}
         throw error;
       }
       const received=response.headers.get('Content-Range');
-      if(response.status===206 && received===expected)return response;
+      if(files?response.status===200:response.status===206 && received===expected)return response;
       await response.body?.cancel();
       // Object stores answer 429 and 5xx under load; other answers will not change.
       if((response.status===408||response.status===429||response.status>=500) && attempt<this.attempts){
         await this.retry(archive,start,attempt,`HTTP ${response.status}`);continue;
       }
+      if(files)throw new Error(`Archive block file ${url.href} answered HTTP ${response.status}`);
       throw new Error(`Archive server must support exact bounded HTTP ranges: ${url.pathname} bytes ${start}-${end} `+
         `answered HTTP ${response.status} with Content-Range ${received??'missing (or not exposed by CORS)'}`);
     }
@@ -60,7 +65,7 @@ export class ArchiveBlocks {
       }
     }catch(error){this.report({type:'archive-cache-warning',message:error.message});}
     if(!bytes){
-      const response=await this.fetchRange(archive,start,start+length-1,spec.bytes);
+      const response=await this.fetchBlock(archive,key,start,start+length-1,spec.bytes);
       const data=await response.arrayBuffer();
       if(data.byteLength!==length || !await this.verify(data,key))throw new Error('Original archive block integrity mismatch');
       bytes=new Uint8Array(data);this.stats.networkBlocks++;this.stats.networkBytes+=length;
@@ -92,8 +97,10 @@ export class ArchiveBlocks {
 }
 
 export async function openArchiveDatabase(factory=indexedDB) {
+  // Blocks of another size never match again: free the space of the 4 MiB cache.
+  factory.deleteDatabase('0ad-original-archive-blocks-v1');
   const database=await new Promise((resolve,reject)=>{
-    const request=factory.open('0ad-original-archive-blocks-v1',1);
+    const request=factory.open('0ad-original-archive-blocks-v2',1);
     request.onupgradeneeded=()=>request.result.createObjectStore('blocks');
     request.onsuccess=()=>resolve(request.result);request.onerror=()=>reject(request.error);
     request.onblocked=()=>reject(new Error('Archive cache database upgrade is blocked'));

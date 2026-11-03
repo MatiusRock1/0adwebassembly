@@ -1,5 +1,8 @@
 # Subir los archivos del port de 0 A.D. a Cloudflare R2
 
+> **Desactualizada para el sitio publicado.** Source Quest - Games ya no sube ZIP:
+> usa bloques inmutables y caché de Cloudflare, como explica `games/README.md`.
+
 Guía para Windows/PowerShell y un despliegue web en CasaOS.
 Fecha de consulta de la documentación: 25 de octubre de 2026.
 
